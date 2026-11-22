@@ -1,0 +1,314 @@
+{
+  "surah": 26,
+  "ruku": 9,
+  "ayah_range": [
+    123,
+    140
+  ],
+  "ayah_count": 18,
+  "word_count": 92,
+  "letter_count": 396,
+  "mushaf_pages": [
+    372,
+    373
+  ],
+  "verses": [
+    {
+      "verse_id": 3055,
+      "surah_id": 26,
+      "ayah_number": 123,
+      "verse_key": "26-123",
+      "page_number": 372,
+      "text_raw": "كَذَّبَتْ عَادٌ الْمُرْسَلِينَ",
+      "word_count": 3,
+      "letter_count": 15
+    },
+    {
+      "verse_id": 3056,
+      "surah_id": 26,
+      "ayah_number": 124,
+      "verse_key": "26-124",
+      "page_number": 372,
+      "text_raw": "إِذْ قَالَ لَهُمْ أَخُوهُمْ هُودٌ أَلَا تَتَّقُونَ",
+      "word_count": 7,
+      "letter_count": 24
+    },
+    {
+      "verse_id": 3057,
+      "surah_id": 26,
+      "ayah_number": 125,
+      "verse_key": "26-125",
+      "page_number": 372,
+      "text_raw": "إِنِّي لَكُمْ رَسُولٌ أَمِينٌ",
+      "word_count": 4,
+      "letter_count": 14
+    },
+    {
+      "verse_id": 3058,
+      "surah_id": 26,
+      "ayah_number": 126,
+      "verse_key": "26-126",
+      "page_number": 372,
+      "text_raw": "فَاتَّقُوا اللَّهَ وَأَطِيعُونِ",
+      "word_count": 3,
+      "letter_count": 17
+    },
+    {
+      "verse_id": 3059,
+      "surah_id": 26,
+      "ayah_number": 127,
+      "verse_key": "26-127",
+      "page_number": 372,
+      "text_raw": "وَمَا أَسْأَلُكُمْ عَلَيْهِ مِنْ أَجْرٍ إِنْ أَجْرِيَ إِلَّا عَلَى رَبِّ الْعَالَمِينَ",
+      "word_count": 11,
+      "letter_count": 40
+    },
+    {
+      "verse_id": 3060,
+      "surah_id": 26,
+      "ayah_number": 128,
+      "verse_key": "26-128",
+      "page_number": 372,
+      "text_raw": "أَتَبْنُونَ بِكُلِّ رِيعٍ آيَةً تَعْبَثُونَ",
+      "word_count": 5,
+      "letter_count": 21
+    },
+    {
+      "verse_id": 3061,
+      "surah_id": 26,
+      "ayah_number": 129,
+      "verse_key": "26-129",
+      "page_number": 372,
+      "text_raw": "وَتَتَّخِذُونَ مَصَانِعَ لَعَلَّكُمْ تَخْلُدُونَ",
+      "word_count": 4,
+      "letter_count": 23
+    },
+    {
+      "verse_id": 3062,
+      "surah_id": 26,
+      "ayah_number": 130,
+      "verse_key": "26-130",
+      "page_number": 372,
+      "text_raw": "وَإِذَا بَطَشْتُمْ بَطَشْتُمْ جَبَّارِينَ",
+      "word_count": 4,
+      "letter_count": 20
+    },
+    {
+      "verse_id": 3063,
+      "surah_id": 26,
+      "ayah_number": 131,
+      "verse_key": "26-131",
+      "page_number": 372,
+      "text_raw": "فَاتَّقُوا اللَّهَ وَأَطِيعُونِ",
+      "word_count": 3,
+      "letter_count": 17
+    },
+    {
+      "verse_id": 3064,
+      "surah_id": 26,
+      "ayah_number": 132,
+      "verse_key": "26-132",
+      "page_number": 372,
+      "text_raw": "وَاتَّقُوا الَّذِي أَمَدَّكُمْ بِمَا تَعْلَمُونَ",
+      "word_count": 5,
+      "letter_count": 24
+    },
+    {
+      "verse_id": 3065,
+      "surah_id": 26,
+      "ayah_number": 133,
+      "verse_key": "26-133",
+      "page_number": 372,
+      "text_raw": "أَمَدَّكُمْ بِأَنْعَامٍ وَبَنِينَ",
+      "word_count": 3,
+      "letter_count": 16
+    },
+    {
+      "verse_id": 3066,
+      "surah_id": 26,
+      "ayah_number": 134,
+      "verse_key": "26-134",
+      "page_number": 372,
+      "text_raw": "وَجَنَّاتٍ وَعُيُونٍ",
+      "word_count": 2,
+      "letter_count": 10
+    },
+    {
+      "verse_id": 3067,
+      "surah_id": 26,
+      "ayah_number": 135,
+      "verse_key": "26-135",
+      "page_number": 372,
+      "text_raw": "إِنِّي أَخَافُ عَلَيْكُمْ عَذَابَ يَوْمٍ عَظِيمٍ",
+      "word_count": 6,
+      "letter_count": 23
+    },
+    {
+      "verse_id": 3068,
+      "surah_id": 26,
+      "ayah_number": 136,
+      "verse_key": "26-136",
+      "page_number": 372,
+      "text_raw": "قَالُوا سَوَاءٌ عَلَيْنَا أَوَعَظْتَ أَمْ لَمْ تَكُنْ مِنْ الْوَاعِظِينَ",
+      "word_count": 9,
+      "letter_count": 36
+    },
+    {
+      "verse_id": 3069,
+      "surah_id": 26,
+      "ayah_number": 137,
+      "verse_key": "26-137",
+      "page_number": 373,
+      "text_raw": "إِنْ هَذَا إِلَّا خُلُقُ الْأَوَّلِينَ",
+      "word_count": 5,
+      "letter_count": 18
+    },
+    {
+      "verse_id": 3070,
+      "surah_id": 26,
+      "ayah_number": 138,
+      "verse_key": "26-138",
+      "page_number": 373,
+      "text_raw": "وَمَا نَحْنُ بِمُعَذَّبِينَ",
+      "word_count": 3,
+      "letter_count": 13
+    },
+    {
+      "verse_id": 3071,
+      "surah_id": 26,
+      "ayah_number": 139,
+      "verse_key": "26-139",
+      "page_number": 373,
+      "text_raw": "فَكَذَّبُوهُ فَأَهْلَكْنَاهُمْ إِنَّ فِي ذَلِكَ لَآيَةً وَمَا كَانَ أَكْثَرُهُمْ مُؤْمِنِينَ",
+      "word_count": 10,
+      "letter_count": 44
+    },
+    {
+      "verse_id": 3072,
+      "surah_id": 26,
+      "ayah_number": 140,
+      "verse_key": "26-140",
+      "page_number": 373,
+      "text_raw": "وَإِنَّ رَبَّكَ لَهُوَ الْعَزِيزُ الرَّحِيمُ",
+      "word_count": 5,
+      "letter_count": 21
+    }
+  ],
+  "schema_version": "2.0-raw-mcp",
+  "surah_id": 26,
+  "ruku_number": 9,
+  "bahouth_verses": [
+    {
+      "ayah_number": 123,
+      "text_raw": "كَذَّبَتْ عَادٌ الْمُرْسَلِينَ",
+      "verse_key": "26-123"
+    },
+    {
+      "ayah_number": 124,
+      "text_raw": "إِذْ قَالَ لَهُمْ أَخُوهُمْ هُودٌ أَلَا تَتَّقُونَ",
+      "verse_key": "26-124"
+    },
+    {
+      "ayah_number": 125,
+      "text_raw": "إِنِّي لَكُمْ رَسُولٌ أَمِينٌ",
+      "verse_key": "26-125"
+    },
+    {
+      "ayah_number": 126,
+      "text_raw": "فَاتَّقُوا اللَّهَ وَأَطِيعُونِ",
+      "verse_key": "26-126"
+    },
+    {
+      "ayah_number": 127,
+      "text_raw": "وَمَا أَسْأَلُكُمْ عَلَيْهِ مِنْ أَجْرٍ إِنْ أَجْرِيَ إِلَّا عَلَى رَبِّ الْعَالَمِينَ",
+      "verse_key": "26-127"
+    },
+    {
+      "ayah_number": 128,
+      "text_raw": "أَتَبْنُونَ بِكُلِّ رِيعٍ آيَةً تَعْبَثُونَ",
+      "verse_key": "26-128"
+    },
+    {
+      "ayah_number": 129,
+      "text_raw": "وَتَتَّخِذُونَ مَصَانِعَ لَعَلَّكُمْ تَخْلُدُونَ",
+      "verse_key": "26-129"
+    },
+    {
+      "ayah_number": 130,
+      "text_raw": "وَإِذَا بَطَشْتُمْ بَطَشْتُمْ جَبَّارِينَ",
+      "verse_key": "26-130"
+    },
+    {
+      "ayah_number": 131,
+      "text_raw": "فَاتَّقُوا اللَّهَ وَأَطِيعُونِ",
+      "verse_key": "26-131"
+    },
+    {
+      "ayah_number": 132,
+      "text_raw": "وَاتَّقُوا الَّذِي أَمَدَّكُمْ بِمَا تَعْلَمُونَ",
+      "verse_key": "26-132"
+    },
+    {
+      "ayah_number": 133,
+      "text_raw": "أَمَدَّكُمْ بِأَنْعَامٍ وَبَنِينَ",
+      "verse_key": "26-133"
+    },
+    {
+      "ayah_number": 134,
+      "text_raw": "وَجَنَّاتٍ وَعُيُونٍ",
+      "verse_key": "26-134"
+    },
+    {
+      "ayah_number": 135,
+      "text_raw": "إِنِّي أَخَافُ عَلَيْكُمْ عَذَابَ يَوْمٍ عَظِيمٍ",
+      "verse_key": "26-135"
+    },
+    {
+      "ayah_number": 136,
+      "text_raw": "قَالُوا سَوَاءٌ عَلَيْنَا أَوَعَظْتَ أَمْ لَمْ تَكُنْ مِنْ الْوَاعِظِينَ",
+      "verse_key": "26-136"
+    },
+    {
+      "ayah_number": 137,
+      "text_raw": "إِنْ هَذَا إِلَّا خُلُقُ الْأَوَّلِينَ",
+      "verse_key": "26-137"
+    },
+    {
+      "ayah_number": 138,
+      "text_raw": "وَمَا نَحْنُ بِمُعَذَّبِينَ",
+      "verse_key": "26-138"
+    },
+    {
+      "ayah_number": 139,
+      "text_raw": "فَكَذَّبُوهُ فَأَهْلَكْنَاهُمْ إِنَّ فِي ذَلِكَ لَآيَةً وَمَا كَانَ أَكْثَرُهُمْ مُؤْمِنِينَ",
+      "verse_key": "26-139"
+    },
+    {
+      "ayah_number": 140,
+      "text_raw": "وَإِنَّ رَبَّكَ لَهُوَ الْعَزِيزُ الرَّحِيمُ",
+      "verse_key": "26-140"
+    }
+  ],
+  "bahouth_qiraat": {
+    "26-137": {
+      "verse_key": "26-137",
+      "annotations": [
+        {
+          "word_id": 47929,
+          "word_order_in_verse": 4,
+          "position": 1,
+          "text_id": 1372,
+          "raw_text": "@أبو جعفر وَابن كثير وَأبو عمرو وَيعقوب وَالكسائي/قرأ بفتح الخاء، وسكون اللام.@باقي الرواة/قرؤوا بضم الخاء واللام."
+        },
+        {
+          "word_id": 47930,
+          "word_order_in_verse": 5,
+          "position": 1,
+          "text_id": 31,
+          "raw_text": "@ورش عن نافع/قرأ بالنقل مع ترك السكت.@خلف عن حمزة/قرأ بالسكت وصلاً، ووقف بالسكت والنقل.@خلاد عن حمزة/قرأ بالسكت وعدمه وصلاً، ووقف بالسكت والنقل.@باقي الرواة/قرؤوا بترك السكت مع تحقيق الهمزة وصلاً ووقفا."
+        }
+      ]
+    }
+  },
+  "turath_pages": []
+}

@@ -1,0 +1,29 @@
+{
+  "id": 77,
+  "id_bn": "৭৭",
+  "name_ar": "",
+  "name_bn": "আল-মুরসালাত",
+  "ayah_count": 50,
+  "ayah_count_bn": "৫০",
+  "ruku_count": 2,
+  "ruku_count_bn": "২",
+  "intro": "# সূরা আল-মুরসালাত (77) : পূর্ণাঙ্গ সূরা পরিচিতি ও রুকুর মানচিত্র\n\n## মৌলিক পরিচিতি\n- আরবী নাম: المرسلات\n- মোট আয়াত: 50\n- মোট রুকু: 2\n",
+  "rukus": [
+    {
+      "ruku_id": 1,
+      "ruku_bn": "১",
+      "ayah_start": 1,
+      "ayah_end": 40,
+      "ayah_range_bn": "১–৪০",
+      "ayah_count": 40
+    },
+    {
+      "ruku_id": 2,
+      "ruku_bn": "২",
+      "ayah_start": 41,
+      "ayah_end": 50,
+      "ayah_range_bn": "৪১–৫০",
+      "ayah_count": 10
+    }
+  ]
+}

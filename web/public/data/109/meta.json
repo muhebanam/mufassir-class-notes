@@ -1,0 +1,21 @@
+{
+  "id": 109,
+  "id_bn": "১০৯",
+  "name_ar": "",
+  "name_bn": "আল-কাফিরূন",
+  "ayah_count": 6,
+  "ayah_count_bn": "৬",
+  "ruku_count": 1,
+  "ruku_count_bn": "১",
+  "intro": "# সূরা আল-কাফিরূন (109) : পূর্ণাঙ্গ সূরা পরিচিতি ও রুকুর মানচিত্র\n\n## মৌলিক পরিচিতি\n- আরবী নাম: الكافرون\n- মোট আয়াত: 6\n- মোট রুকু: 1\n",
+  "rukus": [
+    {
+      "ruku_id": 1,
+      "ruku_bn": "১",
+      "ayah_start": 1,
+      "ayah_end": 6,
+      "ayah_range_bn": "১–৬",
+      "ayah_count": 6
+    }
+  ]
+}

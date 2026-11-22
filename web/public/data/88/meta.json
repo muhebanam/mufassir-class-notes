@@ -1,0 +1,21 @@
+{
+  "id": 88,
+  "id_bn": "৮৮",
+  "name_ar": "",
+  "name_bn": "আল-গাশিয়াহ",
+  "ayah_count": 26,
+  "ayah_count_bn": "২৬",
+  "ruku_count": 1,
+  "ruku_count_bn": "১",
+  "intro": "# সূরা আল-গাশিয়াহ (88) : পূর্ণাঙ্গ সূরা পরিচিতি ও রুকুর মানচিত্র\n\n## মৌলিক পরিচিতি\n- আরবী নাম: الغاشية\n- মোট আয়াত: 26\n- মোট রুকু: 1\n",
+  "rukus": [
+    {
+      "ruku_id": 1,
+      "ruku_bn": "১",
+      "ayah_start": 1,
+      "ayah_end": 26,
+      "ayah_range_bn": "১–২৬",
+      "ayah_count": 26
+    }
+  ]
+}

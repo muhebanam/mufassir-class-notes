@@ -1,0 +1,21 @@
+{
+  "id": 104,
+  "id_bn": "১০৪",
+  "name_ar": "",
+  "name_bn": "আল-হুমাযাহ",
+  "ayah_count": 9,
+  "ayah_count_bn": "৯",
+  "ruku_count": 1,
+  "ruku_count_bn": "১",
+  "intro": "# সূরা আল-হুমাযাহ (104) : পূর্ণাঙ্গ সূরা পরিচিতি ও রুকুর মানচিত্র\n\n## মৌলিক পরিচিতি\n- আরবী নাম: الهمزة\n- মোট আয়াত: 9\n- মোট রুকু: 1\n",
+  "rukus": [
+    {
+      "ruku_id": 1,
+      "ruku_bn": "১",
+      "ayah_start": 1,
+      "ayah_end": 9,
+      "ayah_range_bn": "১–৯",
+      "ayah_count": 9
+    }
+  ]
+}

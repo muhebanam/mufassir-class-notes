@@ -1,0 +1,21 @@
+{
+  "id": 103,
+  "id_bn": "১০৩",
+  "name_ar": "",
+  "name_bn": "আল-‘আসর",
+  "ayah_count": 3,
+  "ayah_count_bn": "৩",
+  "ruku_count": 1,
+  "ruku_count_bn": "১",
+  "intro": "# সূরা আল-‘আসর (103) : পূর্ণাঙ্গ সূরা পরিচিতি ও রুকুর মানচিত্র\n\n## মৌলিক পরিচিতি\n- আরবী নাম: العصر\n- মোট আয়াত: 3\n- মোট রুকু: 1\n",
+  "rukus": [
+    {
+      "ruku_id": 1,
+      "ruku_bn": "১",
+      "ayah_start": 1,
+      "ayah_end": 3,
+      "ayah_range_bn": "১–৩",
+      "ayah_count": 3
+    }
+  ]
+}

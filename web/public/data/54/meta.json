@@ -1,0 +1,37 @@
+{
+  "id": 54,
+  "id_bn": "৫৪",
+  "name_ar": "",
+  "name_bn": "আল-ক্বামার",
+  "ayah_count": 55,
+  "ayah_count_bn": "৫৫",
+  "ruku_count": 3,
+  "ruku_count_bn": "৩",
+  "intro": "# সূরা আল-ক্বামার (54) : পূর্ণাঙ্গ সূরা পরিচিতি ও রুকুর মানচিত্র\n\n## মৌলিক পরিচিতি\n- আরবী নাম: القمر\n- মোট আয়াত: 55\n- মোট রুকু: 3\n",
+  "rukus": [
+    {
+      "ruku_id": 1,
+      "ruku_bn": "১",
+      "ayah_start": 1,
+      "ayah_end": 22,
+      "ayah_range_bn": "১–২২",
+      "ayah_count": 22
+    },
+    {
+      "ruku_id": 2,
+      "ruku_bn": "২",
+      "ayah_start": 23,
+      "ayah_end": 40,
+      "ayah_range_bn": "২৩–৪০",
+      "ayah_count": 18
+    },
+    {
+      "ruku_id": 3,
+      "ruku_bn": "৩",
+      "ayah_start": 41,
+      "ayah_end": 55,
+      "ayah_range_bn": "৪১–৫৫",
+      "ayah_count": 15
+    }
+  ]
+}

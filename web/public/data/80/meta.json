@@ -1,0 +1,21 @@
+{
+  "id": 80,
+  "id_bn": "৮০",
+  "name_ar": "",
+  "name_bn": "‘আবাসা",
+  "ayah_count": 42,
+  "ayah_count_bn": "৪২",
+  "ruku_count": 1,
+  "ruku_count_bn": "১",
+  "intro": "# সূরা ‘আবাসা (80) : পূর্ণাঙ্গ সূরা পরিচিতি ও রুকুর মানচিত্র\n\n## মৌলিক পরিচিতি\n- আরবী নাম: عبس\n- মোট আয়াত: 42\n- মোট রুকু: 1\n",
+  "rukus": [
+    {
+      "ruku_id": 1,
+      "ruku_bn": "১",
+      "ayah_start": 1,
+      "ayah_end": 42,
+      "ayah_range_bn": "১–৪২",
+      "ayah_count": 42
+    }
+  ]
+}

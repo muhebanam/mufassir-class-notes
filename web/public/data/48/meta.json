@@ -1,0 +1,45 @@
+{
+  "id": 48,
+  "id_bn": "৪৮",
+  "name_ar": "الفتح",
+  "name_bn": "আল-ফাতহ",
+  "ayah_count": 29,
+  "ayah_count_bn": "২৯",
+  "ruku_count": 4,
+  "ruku_count_bn": "৪",
+  "intro": "# সূরা আল-ফাতহ (48) : পূর্ণাঙ্গ সূরা পরিচিতি ও রুকুর মানচিত্র\n\n## মৌলিক পরিচিতি\n- আরবী নাম: الفتح\n- মোট আয়াত: 29\n- মোট রুকু: 4\n",
+  "rukus": [
+    {
+      "ruku_id": 1,
+      "ruku_bn": "১",
+      "ayah_start": 1,
+      "ayah_end": 10,
+      "ayah_range_bn": "১–১০",
+      "ayah_count": 10
+    },
+    {
+      "ruku_id": 2,
+      "ruku_bn": "২",
+      "ayah_start": 11,
+      "ayah_end": 17,
+      "ayah_range_bn": "১১–১৭",
+      "ayah_count": 7
+    },
+    {
+      "ruku_id": 3,
+      "ruku_bn": "৩",
+      "ayah_start": 18,
+      "ayah_end": 26,
+      "ayah_range_bn": "১৮–২৬",
+      "ayah_count": 9
+    },
+    {
+      "ruku_id": 4,
+      "ruku_bn": "৪",
+      "ayah_start": 27,
+      "ayah_end": 29,
+      "ayah_range_bn": "২৭–২৯",
+      "ayah_count": 3
+    }
+  ]
+}

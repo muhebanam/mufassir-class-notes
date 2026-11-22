@@ -1,0 +1,912 @@
+[
+  {
+    "id": 24,
+    "id_bn": "২৪",
+    "name_ar": "النور",
+    "name_bn": "আন-নূর",
+    "ayah_count": 64,
+    "ayah_count_bn": "৬৪",
+    "ruku_count": 9,
+    "ruku_count_bn": "৯"
+  },
+  {
+    "id": 25,
+    "id_bn": "২৫",
+    "name_ar": "",
+    "name_bn": "আল-ফুরকান",
+    "ayah_count": 77,
+    "ayah_count_bn": "৭৭",
+    "ruku_count": 6,
+    "ruku_count_bn": "৬"
+  },
+  {
+    "id": 26,
+    "id_bn": "২৬",
+    "name_ar": "الشعراء",
+    "name_bn": "আশ-শু‘আরা",
+    "ayah_count": 227,
+    "ayah_count_bn": "২২৭",
+    "ruku_count": 13,
+    "ruku_count_bn": "১৩"
+  },
+  {
+    "id": 27,
+    "id_bn": "২৭",
+    "name_ar": "النمل",
+    "name_bn": "আন-নামল",
+    "ayah_count": 93,
+    "ayah_count_bn": "৯৩",
+    "ruku_count": 7,
+    "ruku_count_bn": "৭"
+  },
+  {
+    "id": 28,
+    "id_bn": "২৮",
+    "name_ar": "القصص",
+    "name_bn": "আল-ক্বাসাস",
+    "ayah_count": 88,
+    "ayah_count_bn": "৮৮",
+    "ruku_count": 9,
+    "ruku_count_bn": "৯"
+  },
+  {
+    "id": 29,
+    "id_bn": "২৯",
+    "name_ar": "العنكبوت",
+    "name_bn": "আল-আনকাবূত",
+    "ayah_count": 69,
+    "ayah_count_bn": "৬৯",
+    "ruku_count": 7,
+    "ruku_count_bn": "৭"
+  },
+  {
+    "id": 30,
+    "id_bn": "৩০",
+    "name_ar": "الروم",
+    "name_bn": "আর-রূম",
+    "ayah_count": 60,
+    "ayah_count_bn": "৬০",
+    "ruku_count": 6,
+    "ruku_count_bn": "৬"
+  },
+  {
+    "id": 31,
+    "id_bn": "৩১",
+    "name_ar": "لقمان",
+    "name_bn": "লুকমান",
+    "ayah_count": 34,
+    "ayah_count_bn": "৩৪",
+    "ruku_count": 4,
+    "ruku_count_bn": "৪"
+  },
+  {
+    "id": 32,
+    "id_bn": "৩২",
+    "name_ar": "السجدة",
+    "name_bn": "আস-সাজদাহ",
+    "ayah_count": 30,
+    "ayah_count_bn": "৩০",
+    "ruku_count": 3,
+    "ruku_count_bn": "৩"
+  },
+  {
+    "id": 33,
+    "id_bn": "৩৩",
+    "name_ar": "الأحزاب",
+    "name_bn": "আল-আহযাব",
+    "ayah_count": 73,
+    "ayah_count_bn": "৭৩",
+    "ruku_count": 9,
+    "ruku_count_bn": "৯"
+  },
+  {
+    "id": 34,
+    "id_bn": "৩৪",
+    "name_ar": "سبأ",
+    "name_bn": "সাবা",
+    "ayah_count": 54,
+    "ayah_count_bn": "৫৪",
+    "ruku_count": 6,
+    "ruku_count_bn": "৬"
+  },
+  {
+    "id": 35,
+    "id_bn": "৩৫",
+    "name_ar": "فاطر",
+    "name_bn": "ফাতির",
+    "ayah_count": 45,
+    "ayah_count_bn": "৪৫",
+    "ruku_count": 5,
+    "ruku_count_bn": "৫"
+  },
+  {
+    "id": 36,
+    "id_bn": "৩৬",
+    "name_ar": "يس",
+    "name_bn": "ইয়াসীন",
+    "ayah_count": 83,
+    "ayah_count_bn": "৮৩",
+    "ruku_count": 5,
+    "ruku_count_bn": "৫"
+  },
+  {
+    "id": 37,
+    "id_bn": "৩৭",
+    "name_ar": "الصافات",
+    "name_bn": "আস-সাফফাত",
+    "ayah_count": 182,
+    "ayah_count_bn": "১৮২",
+    "ruku_count": 5,
+    "ruku_count_bn": "৫"
+  },
+  {
+    "id": 38,
+    "id_bn": "৩৮",
+    "name_ar": "ص",
+    "name_bn": "সোয়াদ",
+    "ayah_count": 88,
+    "ayah_count_bn": "৮৮",
+    "ruku_count": 5,
+    "ruku_count_bn": "৫"
+  },
+  {
+    "id": 39,
+    "id_bn": "৩৯",
+    "name_ar": "الزمر",
+    "name_bn": "আয-যুমার",
+    "ayah_count": 75,
+    "ayah_count_bn": "৭৫",
+    "ruku_count": 8,
+    "ruku_count_bn": "৮"
+  },
+  {
+    "id": 40,
+    "id_bn": "৪০",
+    "name_ar": "غافر",
+    "name_bn": "গাফির",
+    "ayah_count": 85,
+    "ayah_count_bn": "৮৫",
+    "ruku_count": 9,
+    "ruku_count_bn": "৯"
+  },
+  {
+    "id": 41,
+    "id_bn": "৪১",
+    "name_ar": "فصلت",
+    "name_bn": "ফুসসিলাত",
+    "ayah_count": 54,
+    "ayah_count_bn": "৫৪",
+    "ruku_count": 6,
+    "ruku_count_bn": "৬"
+  },
+  {
+    "id": 42,
+    "id_bn": "৪২",
+    "name_ar": "الشورى",
+    "name_bn": "আশ-শূরা",
+    "ayah_count": 53,
+    "ayah_count_bn": "৫৩",
+    "ruku_count": 5,
+    "ruku_count_bn": "৫"
+  },
+  {
+    "id": 43,
+    "id_bn": "৪৩",
+    "name_ar": "الزخرف",
+    "name_bn": "আয-যুখরুফ",
+    "ayah_count": 89,
+    "ayah_count_bn": "৮৯",
+    "ruku_count": 7,
+    "ruku_count_bn": "৭"
+  },
+  {
+    "id": 44,
+    "id_bn": "৪৪",
+    "name_ar": "الدخان",
+    "name_bn": "আদ-দুখান",
+    "ayah_count": 59,
+    "ayah_count_bn": "৫৯",
+    "ruku_count": 3,
+    "ruku_count_bn": "৩"
+  },
+  {
+    "id": 45,
+    "id_bn": "৪৫",
+    "name_ar": "الجاثية",
+    "name_bn": "আল-জাসিয়াহ",
+    "ayah_count": 37,
+    "ayah_count_bn": "৩৭",
+    "ruku_count": 4,
+    "ruku_count_bn": "৪"
+  },
+  {
+    "id": 46,
+    "id_bn": "৪৬",
+    "name_ar": "الأحقاف",
+    "name_bn": "আল-আহক্বাফ",
+    "ayah_count": 35,
+    "ayah_count_bn": "৩৫",
+    "ruku_count": 4,
+    "ruku_count_bn": "৪"
+  },
+  {
+    "id": 47,
+    "id_bn": "৪৭",
+    "name_ar": "محمد",
+    "name_bn": "মুহাম্মদ",
+    "ayah_count": 38,
+    "ayah_count_bn": "৩৮",
+    "ruku_count": 4,
+    "ruku_count_bn": "৪"
+  },
+  {
+    "id": 48,
+    "id_bn": "৪৮",
+    "name_ar": "الفتح",
+    "name_bn": "আল-ফাতহ",
+    "ayah_count": 29,
+    "ayah_count_bn": "২৯",
+    "ruku_count": 4,
+    "ruku_count_bn": "৪"
+  },
+  {
+    "id": 49,
+    "id_bn": "৪৯",
+    "name_ar": "الحجرات",
+    "name_bn": "আল-হুজুরাত",
+    "ayah_count": 18,
+    "ayah_count_bn": "১৮",
+    "ruku_count": 2,
+    "ruku_count_bn": "২"
+  },
+  {
+    "id": 50,
+    "id_bn": "৫০",
+    "name_ar": "",
+    "name_bn": "ক্বাফ",
+    "ayah_count": 45,
+    "ayah_count_bn": "৪৫",
+    "ruku_count": 3,
+    "ruku_count_bn": "৩"
+  },
+  {
+    "id": 51,
+    "id_bn": "৫১",
+    "name_ar": "",
+    "name_bn": "আয-যারিয়াত",
+    "ayah_count": 60,
+    "ayah_count_bn": "৬০",
+    "ruku_count": 3,
+    "ruku_count_bn": "৩"
+  },
+  {
+    "id": 52,
+    "id_bn": "৫২",
+    "name_ar": "",
+    "name_bn": "আত-তূর",
+    "ayah_count": 49,
+    "ayah_count_bn": "৪৯",
+    "ruku_count": 2,
+    "ruku_count_bn": "২"
+  },
+  {
+    "id": 53,
+    "id_bn": "৫৩",
+    "name_ar": "",
+    "name_bn": "আন-নাজম",
+    "ayah_count": 62,
+    "ayah_count_bn": "৬২",
+    "ruku_count": 2,
+    "ruku_count_bn": "২"
+  },
+  {
+    "id": 54,
+    "id_bn": "৫৪",
+    "name_ar": "",
+    "name_bn": "আল-ক্বামার",
+    "ayah_count": 55,
+    "ayah_count_bn": "৫৫",
+    "ruku_count": 3,
+    "ruku_count_bn": "৩"
+  },
+  {
+    "id": 55,
+    "id_bn": "৫৫",
+    "name_ar": "",
+    "name_bn": "আর-রহমান",
+    "ayah_count": 78,
+    "ayah_count_bn": "৭৮",
+    "ruku_count": 3,
+    "ruku_count_bn": "৩"
+  },
+  {
+    "id": 56,
+    "id_bn": "৫৬",
+    "name_ar": "",
+    "name_bn": "আল-ওয়াক্বি‘আহ",
+    "ayah_count": 96,
+    "ayah_count_bn": "৯৬",
+    "ruku_count": 3,
+    "ruku_count_bn": "৩"
+  },
+  {
+    "id": 57,
+    "id_bn": "৫৭",
+    "name_ar": "",
+    "name_bn": "আল-হাদীদ",
+    "ayah_count": 29,
+    "ayah_count_bn": "২৯",
+    "ruku_count": 4,
+    "ruku_count_bn": "৪"
+  },
+  {
+    "id": 58,
+    "id_bn": "৫৮",
+    "name_ar": "",
+    "name_bn": "আল-মুজাদালাহ",
+    "ayah_count": 22,
+    "ayah_count_bn": "২২",
+    "ruku_count": 3,
+    "ruku_count_bn": "৩"
+  },
+  {
+    "id": 59,
+    "id_bn": "৫৯",
+    "name_ar": "",
+    "name_bn": "আল-হাশর",
+    "ayah_count": 24,
+    "ayah_count_bn": "২৪",
+    "ruku_count": 3,
+    "ruku_count_bn": "৩"
+  },
+  {
+    "id": 60,
+    "id_bn": "৬০",
+    "name_ar": "",
+    "name_bn": "আল-মুমতাহানাহ",
+    "ayah_count": 13,
+    "ayah_count_bn": "১৩",
+    "ruku_count": 2,
+    "ruku_count_bn": "২"
+  },
+  {
+    "id": 61,
+    "id_bn": "৬১",
+    "name_ar": "",
+    "name_bn": "আস-সাফ",
+    "ayah_count": 14,
+    "ayah_count_bn": "১৪",
+    "ruku_count": 2,
+    "ruku_count_bn": "২"
+  },
+  {
+    "id": 62,
+    "id_bn": "৬২",
+    "name_ar": "",
+    "name_bn": "আল-জুমু‘আহ",
+    "ayah_count": 11,
+    "ayah_count_bn": "১১",
+    "ruku_count": 2,
+    "ruku_count_bn": "২"
+  },
+  {
+    "id": 63,
+    "id_bn": "৬৩",
+    "name_ar": "",
+    "name_bn": "আল-মুনাফিকূন",
+    "ayah_count": 11,
+    "ayah_count_bn": "১১",
+    "ruku_count": 2,
+    "ruku_count_bn": "২"
+  },
+  {
+    "id": 64,
+    "id_bn": "৬৪",
+    "name_ar": "",
+    "name_bn": "আত-তাগাবুন",
+    "ayah_count": 18,
+    "ayah_count_bn": "১৮",
+    "ruku_count": 2,
+    "ruku_count_bn": "২"
+  },
+  {
+    "id": 65,
+    "id_bn": "৬৫",
+    "name_ar": "",
+    "name_bn": "আত-ত্বালাক্ব",
+    "ayah_count": 12,
+    "ayah_count_bn": "১২",
+    "ruku_count": 2,
+    "ruku_count_bn": "২"
+  },
+  {
+    "id": 66,
+    "id_bn": "৬৬",
+    "name_ar": "",
+    "name_bn": "আত-তাহরীম",
+    "ayah_count": 12,
+    "ayah_count_bn": "১২",
+    "ruku_count": 2,
+    "ruku_count_bn": "২"
+  },
+  {
+    "id": 67,
+    "id_bn": "৬৭",
+    "name_ar": "",
+    "name_bn": "আল-মুলক",
+    "ayah_count": 30,
+    "ayah_count_bn": "৩০",
+    "ruku_count": 2,
+    "ruku_count_bn": "২"
+  },
+  {
+    "id": 68,
+    "id_bn": "৬৮",
+    "name_ar": "",
+    "name_bn": "আল-ক্বলম",
+    "ayah_count": 52,
+    "ayah_count_bn": "৫২",
+    "ruku_count": 2,
+    "ruku_count_bn": "২"
+  },
+  {
+    "id": 69,
+    "id_bn": "৬৯",
+    "name_ar": "",
+    "name_bn": "আল-হা ক্বক্বাহ",
+    "ayah_count": 52,
+    "ayah_count_bn": "৫২",
+    "ruku_count": 2,
+    "ruku_count_bn": "২"
+  },
+  {
+    "id": 70,
+    "id_bn": "৭০",
+    "name_ar": "",
+    "name_bn": "আল-মা‘আরিজ",
+    "ayah_count": 44,
+    "ayah_count_bn": "৪৪",
+    "ruku_count": 2,
+    "ruku_count_bn": "২"
+  },
+  {
+    "id": 71,
+    "id_bn": "৭১",
+    "name_ar": "",
+    "name_bn": "নূহ",
+    "ayah_count": 28,
+    "ayah_count_bn": "২৮",
+    "ruku_count": 2,
+    "ruku_count_bn": "২"
+  },
+  {
+    "id": 72,
+    "id_bn": "৭২",
+    "name_ar": "",
+    "name_bn": "আল-জিন",
+    "ayah_count": 28,
+    "ayah_count_bn": "২৮",
+    "ruku_count": 2,
+    "ruku_count_bn": "২"
+  },
+  {
+    "id": 73,
+    "id_bn": "৭৩",
+    "name_ar": "",
+    "name_bn": "আল-মুযযাম্মিল",
+    "ayah_count": 20,
+    "ayah_count_bn": "২০",
+    "ruku_count": 2,
+    "ruku_count_bn": "২"
+  },
+  {
+    "id": 74,
+    "id_bn": "৭৪",
+    "name_ar": "",
+    "name_bn": "আল-মুদ্দাসসির",
+    "ayah_count": 56,
+    "ayah_count_bn": "৫৬",
+    "ruku_count": 2,
+    "ruku_count_bn": "২"
+  },
+  {
+    "id": 75,
+    "id_bn": "৭৫",
+    "name_ar": "",
+    "name_bn": "আল-ক্বিয়ামাহ",
+    "ayah_count": 40,
+    "ayah_count_bn": "৪০",
+    "ruku_count": 2,
+    "ruku_count_bn": "২"
+  },
+  {
+    "id": 76,
+    "id_bn": "৭৬",
+    "name_ar": "",
+    "name_bn": "আল-ইনসান",
+    "ayah_count": 31,
+    "ayah_count_bn": "৩১",
+    "ruku_count": 2,
+    "ruku_count_bn": "২"
+  },
+  {
+    "id": 77,
+    "id_bn": "৭৭",
+    "name_ar": "",
+    "name_bn": "আল-মুরসালাত",
+    "ayah_count": 50,
+    "ayah_count_bn": "৫০",
+    "ruku_count": 2,
+    "ruku_count_bn": "২"
+  },
+  {
+    "id": 78,
+    "id_bn": "৭৮",
+    "name_ar": "",
+    "name_bn": "আন-নাবা",
+    "ayah_count": 40,
+    "ayah_count_bn": "৪০",
+    "ruku_count": 2,
+    "ruku_count_bn": "২"
+  },
+  {
+    "id": 79,
+    "id_bn": "৭৯",
+    "name_ar": "",
+    "name_bn": "আন-নাযি‘আত",
+    "ayah_count": 46,
+    "ayah_count_bn": "৪৬",
+    "ruku_count": 2,
+    "ruku_count_bn": "২"
+  },
+  {
+    "id": 80,
+    "id_bn": "৮০",
+    "name_ar": "",
+    "name_bn": "‘আবাসা",
+    "ayah_count": 42,
+    "ayah_count_bn": "৪২",
+    "ruku_count": 1,
+    "ruku_count_bn": "১"
+  },
+  {
+    "id": 81,
+    "id_bn": "৮১",
+    "name_ar": "",
+    "name_bn": "আত-তাকবীর",
+    "ayah_count": 29,
+    "ayah_count_bn": "২৯",
+    "ruku_count": 1,
+    "ruku_count_bn": "১"
+  },
+  {
+    "id": 82,
+    "id_bn": "৮২",
+    "name_ar": "",
+    "name_bn": "আল-ইনফিতার",
+    "ayah_count": 19,
+    "ayah_count_bn": "১৯",
+    "ruku_count": 1,
+    "ruku_count_bn": "১"
+  },
+  {
+    "id": 83,
+    "id_bn": "৮৩",
+    "name_ar": "",
+    "name_bn": "আল-মুত্বাফফিফীন",
+    "ayah_count": 36,
+    "ayah_count_bn": "৩৬",
+    "ruku_count": 1,
+    "ruku_count_bn": "১"
+  },
+  {
+    "id": 84,
+    "id_bn": "৮৪",
+    "name_ar": "",
+    "name_bn": "আল-ইনশিক্বাক্ব",
+    "ayah_count": 25,
+    "ayah_count_bn": "২৫",
+    "ruku_count": 1,
+    "ruku_count_bn": "১"
+  },
+  {
+    "id": 85,
+    "id_bn": "৮৫",
+    "name_ar": "",
+    "name_bn": "আল-বুরূজ",
+    "ayah_count": 22,
+    "ayah_count_bn": "২২",
+    "ruku_count": 1,
+    "ruku_count_bn": "১"
+  },
+  {
+    "id": 86,
+    "id_bn": "৮৬",
+    "name_ar": "",
+    "name_bn": "আত-ত্বারিক্ব",
+    "ayah_count": 17,
+    "ayah_count_bn": "১৭",
+    "ruku_count": 1,
+    "ruku_count_bn": "১"
+  },
+  {
+    "id": 87,
+    "id_bn": "৮৭",
+    "name_ar": "",
+    "name_bn": "আল-আ‘লা",
+    "ayah_count": 19,
+    "ayah_count_bn": "১৯",
+    "ruku_count": 1,
+    "ruku_count_bn": "১"
+  },
+  {
+    "id": 88,
+    "id_bn": "৮৮",
+    "name_ar": "",
+    "name_bn": "আল-গাশিয়াহ",
+    "ayah_count": 26,
+    "ayah_count_bn": "২৬",
+    "ruku_count": 1,
+    "ruku_count_bn": "১"
+  },
+  {
+    "id": 89,
+    "id_bn": "৮৯",
+    "name_ar": "",
+    "name_bn": "আল-ফজর",
+    "ayah_count": 30,
+    "ayah_count_bn": "৩০",
+    "ruku_count": 1,
+    "ruku_count_bn": "১"
+  },
+  {
+    "id": 90,
+    "id_bn": "৯০",
+    "name_ar": "",
+    "name_bn": "আল-বালাদ",
+    "ayah_count": 20,
+    "ayah_count_bn": "২০",
+    "ruku_count": 1,
+    "ruku_count_bn": "১"
+  },
+  {
+    "id": 91,
+    "id_bn": "৯১",
+    "name_ar": "",
+    "name_bn": "আশ-শামস",
+    "ayah_count": 15,
+    "ayah_count_bn": "১৫",
+    "ruku_count": 1,
+    "ruku_count_bn": "১"
+  },
+  {
+    "id": 92,
+    "id_bn": "৯২",
+    "name_ar": "",
+    "name_bn": "আল-লাইল",
+    "ayah_count": 21,
+    "ayah_count_bn": "২১",
+    "ruku_count": 1,
+    "ruku_count_bn": "১"
+  },
+  {
+    "id": 93,
+    "id_bn": "৯৩",
+    "name_ar": "",
+    "name_bn": "আদ্ব-দ্বুহা",
+    "ayah_count": 11,
+    "ayah_count_bn": "১১",
+    "ruku_count": 1,
+    "ruku_count_bn": "১"
+  },
+  {
+    "id": 94,
+    "id_bn": "৯৪",
+    "name_ar": "",
+    "name_bn": "আশ-শারহ",
+    "ayah_count": 8,
+    "ayah_count_bn": "৮",
+    "ruku_count": 1,
+    "ruku_count_bn": "১"
+  },
+  {
+    "id": 95,
+    "id_bn": "৯৫",
+    "name_ar": "",
+    "name_bn": "আত-তীন",
+    "ayah_count": 8,
+    "ayah_count_bn": "৮",
+    "ruku_count": 1,
+    "ruku_count_bn": "১"
+  },
+  {
+    "id": 96,
+    "id_bn": "৯৬",
+    "name_ar": "",
+    "name_bn": "আল-‘আলাক্ব",
+    "ayah_count": 19,
+    "ayah_count_bn": "১৯",
+    "ruku_count": 1,
+    "ruku_count_bn": "১"
+  },
+  {
+    "id": 97,
+    "id_bn": "৯৭",
+    "name_ar": "",
+    "name_bn": "আল-ক্বদর",
+    "ayah_count": 5,
+    "ayah_count_bn": "৫",
+    "ruku_count": 1,
+    "ruku_count_bn": "১"
+  },
+  {
+    "id": 98,
+    "id_bn": "৯৮",
+    "name_ar": "",
+    "name_bn": "আল-বাইয়্যিনাহ",
+    "ayah_count": 8,
+    "ayah_count_bn": "৮",
+    "ruku_count": 1,
+    "ruku_count_bn": "১"
+  },
+  {
+    "id": 99,
+    "id_bn": "৯৯",
+    "name_ar": "",
+    "name_bn": "আয-যালযালাহ",
+    "ayah_count": 8,
+    "ayah_count_bn": "৮",
+    "ruku_count": 1,
+    "ruku_count_bn": "১"
+  },
+  {
+    "id": 100,
+    "id_bn": "১০০",
+    "name_ar": "",
+    "name_bn": "আল-‘আদিয়াত",
+    "ayah_count": 11,
+    "ayah_count_bn": "১১",
+    "ruku_count": 1,
+    "ruku_count_bn": "১"
+  },
+  {
+    "id": 101,
+    "id_bn": "১০১",
+    "name_ar": "",
+    "name_bn": "আল-ক্বারি‘আহ",
+    "ayah_count": 11,
+    "ayah_count_bn": "১১",
+    "ruku_count": 1,
+    "ruku_count_bn": "১"
+  },
+  {
+    "id": 102,
+    "id_bn": "১০২",
+    "name_ar": "",
+    "name_bn": "আত-তাকাসুর",
+    "ayah_count": 8,
+    "ayah_count_bn": "৮",
+    "ruku_count": 1,
+    "ruku_count_bn": "১"
+  },
+  {
+    "id": 103,
+    "id_bn": "১০৩",
+    "name_ar": "",
+    "name_bn": "আল-‘আসর",
+    "ayah_count": 3,
+    "ayah_count_bn": "৩",
+    "ruku_count": 1,
+    "ruku_count_bn": "১"
+  },
+  {
+    "id": 104,
+    "id_bn": "১০৪",
+    "name_ar": "",
+    "name_bn": "আল-হুমাযাহ",
+    "ayah_count": 9,
+    "ayah_count_bn": "৯",
+    "ruku_count": 1,
+    "ruku_count_bn": "১"
+  },
+  {
+    "id": 105,
+    "id_bn": "১০৫",
+    "name_ar": "",
+    "name_bn": "আল-ফীল",
+    "ayah_count": 5,
+    "ayah_count_bn": "৫",
+    "ruku_count": 1,
+    "ruku_count_bn": "১"
+  },
+  {
+    "id": 106,
+    "id_bn": "১০৬",
+    "name_ar": "",
+    "name_bn": "কুরাইশ",
+    "ayah_count": 4,
+    "ayah_count_bn": "৪",
+    "ruku_count": 1,
+    "ruku_count_bn": "১"
+  },
+  {
+    "id": 107,
+    "id_bn": "১০৭",
+    "name_ar": "",
+    "name_bn": "আল-মা‘ঊন",
+    "ayah_count": 7,
+    "ayah_count_bn": "৭",
+    "ruku_count": 1,
+    "ruku_count_bn": "১"
+  },
+  {
+    "id": 108,
+    "id_bn": "১০৮",
+    "name_ar": "",
+    "name_bn": "আল-কাউসার",
+    "ayah_count": 3,
+    "ayah_count_bn": "৩",
+    "ruku_count": 1,
+    "ruku_count_bn": "১"
+  },
+  {
+    "id": 109,
+    "id_bn": "১০৯",
+    "name_ar": "",
+    "name_bn": "আল-কাফিরূন",
+    "ayah_count": 6,
+    "ayah_count_bn": "৬",
+    "ruku_count": 1,
+    "ruku_count_bn": "১"
+  },
+  {
+    "id": 110,
+    "id_bn": "১১০",
+    "name_ar": "",
+    "name_bn": "আন-নাসর",
+    "ayah_count": 3,
+    "ayah_count_bn": "৩",
+    "ruku_count": 1,
+    "ruku_count_bn": "১"
+  },
+  {
+    "id": 111,
+    "id_bn": "১১১",
+    "name_ar": "",
+    "name_bn": "আল-লাহাব",
+    "ayah_count": 5,
+    "ayah_count_bn": "৫",
+    "ruku_count": 1,
+    "ruku_count_bn": "১"
+  },
+  {
+    "id": 112,
+    "id_bn": "১১২",
+    "name_ar": "",
+    "name_bn": "আল-ইখলাস",
+    "ayah_count": 4,
+    "ayah_count_bn": "৪",
+    "ruku_count": 1,
+    "ruku_count_bn": "১"
+  },
+  {
+    "id": 113,
+    "id_bn": "১১৩",
+    "name_ar": "",
+    "name_bn": "আল-ফালাক্ব",
+    "ayah_count": 5,
+    "ayah_count_bn": "৫",
+    "ruku_count": 1,
+    "ruku_count_bn": "১"
+  },
+  {
+    "id": 114,
+    "id_bn": "১১৪",
+    "name_ar": "",
+    "name_bn": "আন-নাস",
+    "ayah_count": 6,
+    "ayah_count_bn": "৬",
+    "ruku_count": 1,
+    "ruku_count_bn": "১"
+  }
+]

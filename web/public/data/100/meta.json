@@ -1,0 +1,21 @@
+{
+  "id": 100,
+  "id_bn": "১০০",
+  "name_ar": "",
+  "name_bn": "আল-‘আদিয়াত",
+  "ayah_count": 11,
+  "ayah_count_bn": "১১",
+  "ruku_count": 1,
+  "ruku_count_bn": "১",
+  "intro": "# সূরা আল-‘আদিয়াত (100) : পূর্ণাঙ্গ সূরা পরিচিতি ও রুকুর মানচিত্র\n\n## মৌলিক পরিচিতি\n- আরবী নাম: العاديات\n- মোট আয়াত: 11\n- মোট রুকু: 1\n",
+  "rukus": [
+    {
+      "ruku_id": 1,
+      "ruku_bn": "১",
+      "ayah_start": 1,
+      "ayah_end": 11,
+      "ayah_range_bn": "১–১১",
+      "ayah_count": 11
+    }
+  ]
+}

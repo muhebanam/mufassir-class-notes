@@ -1,0 +1,45 @@
+{
+  "id": 47,
+  "id_bn": "৪৭",
+  "name_ar": "محمد",
+  "name_bn": "মুহাম্মদ",
+  "ayah_count": 38,
+  "ayah_count_bn": "৩৮",
+  "ruku_count": 4,
+  "ruku_count_bn": "৪",
+  "intro": "# সূরা মুহাম্মদ (47) : পূর্ণাঙ্গ সূরা পরিচিতি ও রুকুর মানচিত্র\n\n## মৌলিক পরিচিতি\n- আরবী নাম: محمد\n- মোট আয়াত: 38\n- মোট রুকু: 4\n",
+  "rukus": [
+    {
+      "ruku_id": 1,
+      "ruku_bn": "১",
+      "ayah_start": 1,
+      "ayah_end": 11,
+      "ayah_range_bn": "১–১১",
+      "ayah_count": 11
+    },
+    {
+      "ruku_id": 2,
+      "ruku_bn": "২",
+      "ayah_start": 12,
+      "ayah_end": 19,
+      "ayah_range_bn": "১২–১৯",
+      "ayah_count": 8
+    },
+    {
+      "ruku_id": 3,
+      "ruku_bn": "৩",
+      "ayah_start": 20,
+      "ayah_end": 28,
+      "ayah_range_bn": "২০–২৮",
+      "ayah_count": 9
+    },
+    {
+      "ruku_id": 4,
+      "ruku_bn": "৪",
+      "ayah_start": 29,
+      "ayah_end": 38,
+      "ayah_range_bn": "২৯–৩৮",
+      "ayah_count": 10
+    }
+  ]
+}

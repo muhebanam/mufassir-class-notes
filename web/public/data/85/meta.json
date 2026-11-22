@@ -1,0 +1,21 @@
+{
+  "id": 85,
+  "id_bn": "৮৫",
+  "name_ar": "",
+  "name_bn": "আল-বুরূজ",
+  "ayah_count": 22,
+  "ayah_count_bn": "২২",
+  "ruku_count": 1,
+  "ruku_count_bn": "১",
+  "intro": "# সূরা আল-বুরূজ (85) : পূর্ণাঙ্গ সূরা পরিচিতি ও রুকুর মানচিত্র\n\n## মৌলিক পরিচিতি\n- আরবী নাম: البروج\n- মোট আয়াত: 22\n- মোট রুকু: 1\n",
+  "rukus": [
+    {
+      "ruku_id": 1,
+      "ruku_bn": "১",
+      "ayah_start": 1,
+      "ayah_end": 22,
+      "ayah_range_bn": "১–২২",
+      "ayah_count": 22
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": 66,
+  "id_bn": "৬৬",
+  "name_ar": "",
+  "name_bn": "আত-তাহরীম",
+  "ayah_count": 12,
+  "ayah_count_bn": "১২",
+  "ruku_count": 2,
+  "ruku_count_bn": "২",
+  "intro": "# সূরা আত-তাহরীম (66) : পূর্ণাঙ্গ সূরা পরিচিতি ও রুকুর মানচিত্র\n\n## মৌলিক পরিচিতি\n- আরবী নাম: التحريم\n- মোট আয়াত: 12\n- মোট রুকু: 2\n",
+  "rukus": [
+    {
+      "ruku_id": 1,
+      "ruku_bn": "১",
+      "ayah_start": 1,
+      "ayah_end": 7,
+      "ayah_range_bn": "১–৭",
+      "ayah_count": 7
+    },
+    {
+      "ruku_id": 2,
+      "ruku_bn": "২",
+      "ayah_start": 8,
+      "ayah_end": 12,
+      "ayah_range_bn": "৮–১২",
+      "ayah_count": 5
+    }
+  ]
+}

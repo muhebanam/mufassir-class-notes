@@ -1,0 +1,37 @@
+{
+  "id": 58,
+  "id_bn": "৫৮",
+  "name_ar": "",
+  "name_bn": "আল-মুজাদালাহ",
+  "ayah_count": 22,
+  "ayah_count_bn": "২২",
+  "ruku_count": 3,
+  "ruku_count_bn": "৩",
+  "intro": "# সূরা আল-মুজাদালাহ (58) : পূর্ণাঙ্গ সূরা পরিচিতি ও রুকুর মানচিত্র\n\n## মৌলিক পরিচিতি\n- আরবী নাম: المجادلة\n- মোট আয়াত: 22\n- মোট রুকু: 3\n",
+  "rukus": [
+    {
+      "ruku_id": 1,
+      "ruku_bn": "১",
+      "ayah_start": 1,
+      "ayah_end": 6,
+      "ayah_range_bn": "১–৬",
+      "ayah_count": 6
+    },
+    {
+      "ruku_id": 2,
+      "ruku_bn": "২",
+      "ayah_start": 7,
+      "ayah_end": 13,
+      "ayah_range_bn": "৭–১৩",
+      "ayah_count": 7
+    },
+    {
+      "ruku_id": 3,
+      "ruku_bn": "৩",
+      "ayah_start": 14,
+      "ayah_end": 22,
+      "ayah_range_bn": "১৪–২২",
+      "ayah_count": 9
+    }
+  ]
+}

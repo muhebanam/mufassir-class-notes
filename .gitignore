@@ -1,0 +1,28 @@
+# Node.js
+web/node_modules/
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Production Build Output
+web/dist/
+dist/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# Local environments
+.env
+.env.local
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Zip archives (temporary backups)
+*.zip

@@ -1,0 +1,21 @@
+{
+  "id": 92,
+  "id_bn": "৯২",
+  "name_ar": "",
+  "name_bn": "আল-লাইল",
+  "ayah_count": 21,
+  "ayah_count_bn": "২১",
+  "ruku_count": 1,
+  "ruku_count_bn": "১",
+  "intro": "# সূরা আল-লাইল (92) : পূর্ণাঙ্গ সূরা পরিচিতি ও রুকুর মানচিত্র\n\n## মৌলিক পরিচিতি\n- আরবী নাম: الليل\n- মোট আয়াত: 21\n- মোট রুকু: 1\n",
+  "rukus": [
+    {
+      "ruku_id": 1,
+      "ruku_bn": "১",
+      "ayah_start": 1,
+      "ayah_end": 21,
+      "ayah_range_bn": "১–২১",
+      "ayah_count": 21
+    }
+  ]
+}

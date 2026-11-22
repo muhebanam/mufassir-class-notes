@@ -1,0 +1,21 @@
+{
+  "id": 105,
+  "id_bn": "১০৫",
+  "name_ar": "",
+  "name_bn": "আল-ফীল",
+  "ayah_count": 5,
+  "ayah_count_bn": "৫",
+  "ruku_count": 1,
+  "ruku_count_bn": "১",
+  "intro": "# সূরা আল-ফীল (105) : পূর্ণাঙ্গ সূরা পরিচিতি ও রুকুর মানচিত্র\n\n## মৌলিক পরিচিতি\n- আরবী নাম: الفيل\n- মোট আয়াত: 5\n- মোট রুকু: 1\n",
+  "rukus": [
+    {
+      "ruku_id": 1,
+      "ruku_bn": "১",
+      "ayah_start": 1,
+      "ayah_end": 5,
+      "ayah_range_bn": "১–৫",
+      "ayah_count": 5
+    }
+  ]
+}

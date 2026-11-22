@@ -1,0 +1,29 @@
+{
+  "id": 71,
+  "id_bn": "৭১",
+  "name_ar": "",
+  "name_bn": "নূহ",
+  "ayah_count": 28,
+  "ayah_count_bn": "২৮",
+  "ruku_count": 2,
+  "ruku_count_bn": "২",
+  "intro": "# সূরা নূহ (71) : পূর্ণাঙ্গ সূরা পরিচিতি ও রুকুর মানচিত্র\n\n## মৌলিক পরিচিতি\n- আরবী নাম: نوح\n- মোট আয়াত: 28\n- মোট রুকু: 2\n",
+  "rukus": [
+    {
+      "ruku_id": 1,
+      "ruku_bn": "১",
+      "ayah_start": 1,
+      "ayah_end": 20,
+      "ayah_range_bn": "১–২০",
+      "ayah_count": 20
+    },
+    {
+      "ruku_id": 2,
+      "ruku_bn": "২",
+      "ayah_start": 21,
+      "ayah_end": 28,
+      "ayah_range_bn": "২১–২৮",
+      "ayah_count": 8
+    }
+  ]
+}

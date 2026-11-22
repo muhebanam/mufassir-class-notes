@@ -1,0 +1,29 @@
+{
+  "id": 53,
+  "id_bn": "৫৩",
+  "name_ar": "",
+  "name_bn": "আন-নাজম",
+  "ayah_count": 62,
+  "ayah_count_bn": "৬২",
+  "ruku_count": 2,
+  "ruku_count_bn": "২",
+  "intro": "# সূরা আন-নাজম (53) : পূর্ণাঙ্গ সূরা পরিচিতি ও রুকুর মানচিত্র\n\n## মৌলিক পরিচিতি\n- আরবী নাম: النجم\n- মোট আয়াত: 62\n- মোট রুকু: 2\n",
+  "rukus": [
+    {
+      "ruku_id": 1,
+      "ruku_bn": "১",
+      "ayah_start": 1,
+      "ayah_end": 32,
+      "ayah_range_bn": "১–৩২",
+      "ayah_count": 32
+    },
+    {
+      "ruku_id": 2,
+      "ruku_bn": "২",
+      "ayah_start": 33,
+      "ayah_end": 62,
+      "ayah_range_bn": "৩৩–৬২",
+      "ayah_count": 30
+    }
+  ]
+}

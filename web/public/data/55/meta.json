@@ -1,0 +1,37 @@
+{
+  "id": 55,
+  "id_bn": "৫৫",
+  "name_ar": "",
+  "name_bn": "আর-রহমান",
+  "ayah_count": 78,
+  "ayah_count_bn": "৭৮",
+  "ruku_count": 3,
+  "ruku_count_bn": "৩",
+  "intro": "# সূরা আর-রহমান (55) : পূর্ণাঙ্গ সূরা পরিচিতি ও রুকুর মানচিত্র\n\n## মৌলিক পরিচিতি\n- আরবী নাম: الرحمن\n- মোট আয়াত: 78\n- মোট রুকু: 3\n",
+  "rukus": [
+    {
+      "ruku_id": 1,
+      "ruku_bn": "১",
+      "ayah_start": 1,
+      "ayah_end": 25,
+      "ayah_range_bn": "১–২৫",
+      "ayah_count": 25
+    },
+    {
+      "ruku_id": 2,
+      "ruku_bn": "২",
+      "ayah_start": 26,
+      "ayah_end": 45,
+      "ayah_range_bn": "২৬–৪৫",
+      "ayah_count": 20
+    },
+    {
+      "ruku_id": 3,
+      "ruku_bn": "৩",
+      "ayah_start": 46,
+      "ayah_end": 78,
+      "ayah_range_bn": "৪৬–৭৮",
+      "ayah_count": 33
+    }
+  ]
+}

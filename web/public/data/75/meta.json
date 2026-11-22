@@ -1,0 +1,29 @@
+{
+  "id": 75,
+  "id_bn": "৭৫",
+  "name_ar": "",
+  "name_bn": "আল-ক্বিয়ামাহ",
+  "ayah_count": 40,
+  "ayah_count_bn": "৪০",
+  "ruku_count": 2,
+  "ruku_count_bn": "২",
+  "intro": "# সূরা আল-ক্বিয়ামাহ (75) : পূর্ণাঙ্গ সূরা পরিচিতি ও রুকুর মানচিত্র\n\n## মৌলিক পরিচিতি\n- আরবী নাম: القيامة\n- মোট আয়াত: 40\n- মোট রুকু: 2\n",
+  "rukus": [
+    {
+      "ruku_id": 1,
+      "ruku_bn": "১",
+      "ayah_start": 1,
+      "ayah_end": 30,
+      "ayah_range_bn": "১–৩০",
+      "ayah_count": 30
+    },
+    {
+      "ruku_id": 2,
+      "ruku_bn": "২",
+      "ayah_start": 31,
+      "ayah_end": 40,
+      "ayah_range_bn": "৩১–৪০",
+      "ayah_count": 10
+    }
+  ]
+}

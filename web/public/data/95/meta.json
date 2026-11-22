@@ -1,0 +1,21 @@
+{
+  "id": 95,
+  "id_bn": "৯৫",
+  "name_ar": "",
+  "name_bn": "আত-তীন",
+  "ayah_count": 8,
+  "ayah_count_bn": "৮",
+  "ruku_count": 1,
+  "ruku_count_bn": "১",
+  "intro": "# সূরা আত-তীন (95) : পূর্ণাঙ্গ সূরা পরিচিতি ও রুকুর মানচিত্র\n\n## মৌলিক পরিচিতি\n- আরবী নাম: التين\n- মোট আয়াত: 8\n- মোট রুকু: 1\n",
+  "rukus": [
+    {
+      "ruku_id": 1,
+      "ruku_bn": "১",
+      "ayah_start": 1,
+      "ayah_end": 8,
+      "ayah_range_bn": "১–৮",
+      "ayah_count": 8
+    }
+  ]
+}

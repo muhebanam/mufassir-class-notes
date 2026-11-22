@@ -1,0 +1,21 @@
+{
+  "id": 112,
+  "id_bn": "১১২",
+  "name_ar": "",
+  "name_bn": "আল-ইখলাস",
+  "ayah_count": 4,
+  "ayah_count_bn": "৪",
+  "ruku_count": 1,
+  "ruku_count_bn": "১",
+  "intro": "# সূরা আল-ইখলাস (112) : পূর্ণাঙ্গ সূরা পরিচিতি ও রুকুর মানচিত্র\n\n## মৌলিক পরিচিতি\n- আরবী নাম: الإخلاص\n- মোট আয়াত: 4\n- মোট রুকু: 1\n",
+  "rukus": [
+    {
+      "ruku_id": 1,
+      "ruku_bn": "১",
+      "ayah_start": 1,
+      "ayah_end": 4,
+      "ayah_range_bn": "১–৪",
+      "ayah_count": 4
+    }
+  ]
+}

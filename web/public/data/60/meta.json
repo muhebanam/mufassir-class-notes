@@ -1,0 +1,29 @@
+{
+  "id": 60,
+  "id_bn": "৬০",
+  "name_ar": "",
+  "name_bn": "আল-মুমতাহানাহ",
+  "ayah_count": 13,
+  "ayah_count_bn": "১৩",
+  "ruku_count": 2,
+  "ruku_count_bn": "২",
+  "intro": "# সূরা আল-মুমতাহানাহ (60) : পূর্ণাঙ্গ সূরা পরিচিতি ও রুকুর মানচিত্র\n\n## মৌলিক পরিচিতি\n- আরবী নাম: الممتحنة\n- মোট আয়াত: 13\n- মোট রুকু: 2\n",
+  "rukus": [
+    {
+      "ruku_id": 1,
+      "ruku_bn": "১",
+      "ayah_start": 1,
+      "ayah_end": 6,
+      "ayah_range_bn": "১–৬",
+      "ayah_count": 6
+    },
+    {
+      "ruku_id": 2,
+      "ruku_bn": "২",
+      "ayah_start": 7,
+      "ayah_end": 13,
+      "ayah_range_bn": "৭–১৩",
+      "ayah_count": 7
+    }
+  ]
+}

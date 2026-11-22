@@ -1,0 +1,21 @@
+{
+  "id": 90,
+  "id_bn": "৯০",
+  "name_ar": "",
+  "name_bn": "আল-বালাদ",
+  "ayah_count": 20,
+  "ayah_count_bn": "২০",
+  "ruku_count": 1,
+  "ruku_count_bn": "১",
+  "intro": "# সূরা আল-বালাদ (90) : পূর্ণাঙ্গ সূরা পরিচিতি ও রুকুর মানচিত্র\n\n## মৌলিক পরিচিতি\n- আরবী নাম: البلد\n- মোট আয়াত: 20\n- মোট রুকু: 1\n",
+  "rukus": [
+    {
+      "ruku_id": 1,
+      "ruku_bn": "১",
+      "ayah_start": 1,
+      "ayah_end": 20,
+      "ayah_range_bn": "১–২০",
+      "ayah_count": 20
+    }
+  ]
+}

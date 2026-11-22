@@ -1,0 +1,37 @@
+{
+  "id": 51,
+  "id_bn": "৫১",
+  "name_ar": "",
+  "name_bn": "আয-যারিয়াত",
+  "ayah_count": 60,
+  "ayah_count_bn": "৬০",
+  "ruku_count": 3,
+  "ruku_count_bn": "৩",
+  "intro": "# সূরা আয-যারিয়াত (51) : পূর্ণাঙ্গ সূরা পরিচিতি ও রুকুর মানচিত্র\n\n## মৌলিক পরিচিতি\n- আরবী নাম: الذاريات\n- মোট আয়াত: 60\n- মোট রুকু: 3\n",
+  "rukus": [
+    {
+      "ruku_id": 1,
+      "ruku_bn": "১",
+      "ayah_start": 1,
+      "ayah_end": 23,
+      "ayah_range_bn": "১–২৩",
+      "ayah_count": 23
+    },
+    {
+      "ruku_id": 2,
+      "ruku_bn": "২",
+      "ayah_start": 24,
+      "ayah_end": 46,
+      "ayah_range_bn": "২৪–৪৬",
+      "ayah_count": 23
+    },
+    {
+      "ruku_id": 3,
+      "ruku_bn": "৩",
+      "ayah_start": 47,
+      "ayah_end": 60,
+      "ayah_range_bn": "৪৭–৬০",
+      "ayah_count": 14
+    }
+  ]
+}

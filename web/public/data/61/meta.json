@@ -1,0 +1,29 @@
+{
+  "id": 61,
+  "id_bn": "৬১",
+  "name_ar": "",
+  "name_bn": "আস-সাফ",
+  "ayah_count": 14,
+  "ayah_count_bn": "১৪",
+  "ruku_count": 2,
+  "ruku_count_bn": "২",
+  "intro": "# সূরা আস-সাফ (61) : পূর্ণাঙ্গ সূরা পরিচিতি ও রুকুর মানচিত্র\n\n## মৌলিক পরিচিতি\n- আরবী নাম: الصف\n- মোট আয়াত: 14\n- মোট রুকু: 2\n",
+  "rukus": [
+    {
+      "ruku_id": 1,
+      "ruku_bn": "১",
+      "ayah_start": 1,
+      "ayah_end": 9,
+      "ayah_range_bn": "১–৯",
+      "ayah_count": 9
+    },
+    {
+      "ruku_id": 2,
+      "ruku_bn": "২",
+      "ayah_start": 10,
+      "ayah_end": 14,
+      "ayah_range_bn": "১০–১৪",
+      "ayah_count": 5
+    }
+  ]
+}

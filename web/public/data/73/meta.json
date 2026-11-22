@@ -1,0 +1,29 @@
+{
+  "id": 73,
+  "id_bn": "৭৩",
+  "name_ar": "",
+  "name_bn": "আল-মুযযাম্মিল",
+  "ayah_count": 20,
+  "ayah_count_bn": "২০",
+  "ruku_count": 2,
+  "ruku_count_bn": "২",
+  "intro": "# সূরা আল-মুযযাম্মিল (73) : পূর্ণাঙ্গ সূরা পরিচিতি ও রুকুর মানচিত্র\n\n## মৌলিক পরিচিতি\n- আরবী নাম: المزمل\n- মোট আয়াত: 20\n- মোট রুকু: 2\n",
+  "rukus": [
+    {
+      "ruku_id": 1,
+      "ruku_bn": "১",
+      "ayah_start": 1,
+      "ayah_end": 19,
+      "ayah_range_bn": "১–১৯",
+      "ayah_count": 19
+    },
+    {
+      "ruku_id": 2,
+      "ruku_bn": "২",
+      "ayah_start": 20,
+      "ayah_end": 20,
+      "ayah_range_bn": "২০–২০",
+      "ayah_count": 1
+    }
+  ]
+}

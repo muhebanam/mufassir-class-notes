@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-bengali text-gray-900 dark:text-gray-100 dark:bg-gray-900 transition-colors duration-200;
+  }
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.4);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(156, 163, 175, 0.7);
+}
+
+/* Hide scrollbar for horizontal ayah jumper */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Sepia Theme overrides */
+body.sepia-theme {
+  background-color: #f7f3e8;
+  color: #2c251e;
+}
+.sepia-theme .bg-white {
+  background-color: #fffdf9 !important;
+}
+.sepia-theme .bg-gray-50 {
+  background-color: #f4eee1 !important;
+}
+.sepia-theme .bg-gray-100 {
+  background-color: #ede2cf !important;
+}
+.sepia-theme .border-gray-200 {
+  border-color: #e4d7c0 !important;
+}
+.sepia-theme .text-gray-600 {
+  color: #635343 !important;
+}
+.sepia-theme .text-gray-500 {
+  color: #7d6b58 !important;
+}
+
+/* Uthmani text styling */
+.uthmani-text {
+  font-family: 'Amiri Quran', 'Scheherazade New', serif;
+  direction: rtl;
+  text-align: right;
+  word-spacing: 0.1em;
+}
+
+/* Ayah end circle */
+.ayah-end-symbol {
+  font-family: 'Amiri Quran', serif;
+  color: #059669;
+  display: inline-block;
+  padding: 0 4px;
+}

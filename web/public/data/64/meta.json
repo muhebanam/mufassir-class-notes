@@ -1,0 +1,29 @@
+{
+  "id": 64,
+  "id_bn": "৬৪",
+  "name_ar": "",
+  "name_bn": "আত-তাগাবুন",
+  "ayah_count": 18,
+  "ayah_count_bn": "১৮",
+  "ruku_count": 2,
+  "ruku_count_bn": "২",
+  "intro": "# সূরা আত-তাগাবুন (64) : পূর্ণাঙ্গ সূরা পরিচিতি ও রুকুর মানচিত্র\n\n## মৌলিক পরিচিতি\n- আরবী নাম: التغابن\n- মোট আয়াত: 18\n- মোট রুকু: 2\n",
+  "rukus": [
+    {
+      "ruku_id": 1,
+      "ruku_bn": "১",
+      "ayah_start": 1,
+      "ayah_end": 9,
+      "ayah_range_bn": "১–৯",
+      "ayah_count": 9
+    },
+    {
+      "ruku_id": 2,
+      "ruku_bn": "২",
+      "ayah_start": 10,
+      "ayah_end": 18,
+      "ayah_range_bn": "১০–১৮",
+      "ayah_count": 9
+    }
+  ]
+}

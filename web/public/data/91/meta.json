@@ -1,0 +1,21 @@
+{
+  "id": 91,
+  "id_bn": "৯১",
+  "name_ar": "",
+  "name_bn": "আশ-শামস",
+  "ayah_count": 15,
+  "ayah_count_bn": "১৫",
+  "ruku_count": 1,
+  "ruku_count_bn": "১",
+  "intro": "# সূরা আশ-শামস (91) : পূর্ণাঙ্গ সূরা পরিচিতি ও রুকুর মানচিত্র\n\n## মৌলিক পরিচিতি\n- আরবী নাম: الشمس\n- মোট আয়াত: 15\n- মোট রুকু: 1\n",
+  "rukus": [
+    {
+      "ruku_id": 1,
+      "ruku_bn": "১",
+      "ayah_start": 1,
+      "ayah_end": 15,
+      "ayah_range_bn": "১–১৫",
+      "ayah_count": 15
+    }
+  ]
+}

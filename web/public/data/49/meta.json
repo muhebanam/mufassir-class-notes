@@ -1,0 +1,29 @@
+{
+  "id": 49,
+  "id_bn": "৪৯",
+  "name_ar": "الحجرات",
+  "name_bn": "আল-হুজুরাত",
+  "ayah_count": 18,
+  "ayah_count_bn": "১৮",
+  "ruku_count": 2,
+  "ruku_count_bn": "২",
+  "intro": "# সূরা আল-হুজুরাত (49) : পূর্ণাঙ্গ সূরা পরিচিতি ও রুকুর মানচিত্র\n\n## মৌলিক পরিচিতি\n- আরবী নাম: الحجرات\n- মোট আয়াত: 18\n- মোট রুকু: 2\n",
+  "rukus": [
+    {
+      "ruku_id": 1,
+      "ruku_bn": "১",
+      "ayah_start": 1,
+      "ayah_end": 10,
+      "ayah_range_bn": "১–১০",
+      "ayah_count": 10
+    },
+    {
+      "ruku_id": 2,
+      "ruku_bn": "২",
+      "ayah_start": 11,
+      "ayah_end": 18,
+      "ayah_range_bn": "১১–১৮",
+      "ayah_count": 8
+    }
+  ]
+}

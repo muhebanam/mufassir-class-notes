@@ -1,0 +1,29 @@
+{
+  "id": 52,
+  "id_bn": "৫২",
+  "name_ar": "",
+  "name_bn": "আত-তূর",
+  "ayah_count": 49,
+  "ayah_count_bn": "৪৯",
+  "ruku_count": 2,
+  "ruku_count_bn": "২",
+  "intro": "# সূরা আত-তূর (52) : পূর্ণাঙ্গ সূরা পরিচিতি ও রুকুর মানচিত্র\n\n## মৌলিক পরিচিতি\n- আরবী নাম: الطور\n- মোট আয়াত: 49\n- মোট রুকু: 2\n",
+  "rukus": [
+    {
+      "ruku_id": 1,
+      "ruku_bn": "১",
+      "ayah_start": 1,
+      "ayah_end": 28,
+      "ayah_range_bn": "১–২৮",
+      "ayah_count": 28
+    },
+    {
+      "ruku_id": 2,
+      "ruku_bn": "২",
+      "ayah_start": 29,
+      "ayah_end": 49,
+      "ayah_range_bn": "২৯–৪৯",
+      "ayah_count": 21
+    }
+  ]
+}

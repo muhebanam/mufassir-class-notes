@@ -1,0 +1,328 @@
+{
+  "surah": 26,
+  "ruku": 10,
+  "ayah_range": [
+    141,
+    159
+  ],
+  "ayah_count": 19,
+  "word_count": 108,
+  "letter_count": 456,
+  "mushaf_pages": [
+    373
+  ],
+  "verses": [
+    {
+      "verse_id": 3073,
+      "surah_id": 26,
+      "ayah_number": 141,
+      "verse_key": "26-141",
+      "page_number": 373,
+      "text_raw": "كَذَّبَتْ ثَمُودُ الْمُرْسَلِينَ",
+      "word_count": 3,
+      "letter_count": 16
+    },
+    {
+      "verse_id": 3074,
+      "surah_id": 26,
+      "ayah_number": 142,
+      "verse_key": "26-142",
+      "page_number": 373,
+      "text_raw": "إِذْ قَالَ لَهُمْ أَخُوهُمْ صَالِحٌ أَلَا تَتَّقُونَ",
+      "word_count": 7,
+      "letter_count": 25
+    },
+    {
+      "verse_id": 3075,
+      "surah_id": 26,
+      "ayah_number": 143,
+      "verse_key": "26-143",
+      "page_number": 373,
+      "text_raw": "إِنِّي لَكُمْ رَسُولٌ أَمِينٌ",
+      "word_count": 4,
+      "letter_count": 14
+    },
+    {
+      "verse_id": 3076,
+      "surah_id": 26,
+      "ayah_number": 144,
+      "verse_key": "26-144",
+      "page_number": 373,
+      "text_raw": "فَاتَّقُوا اللَّهَ وَأَطِيعُونِ",
+      "word_count": 3,
+      "letter_count": 17
+    },
+    {
+      "verse_id": 3077,
+      "surah_id": 26,
+      "ayah_number": 145,
+      "verse_key": "26-145",
+      "page_number": 373,
+      "text_raw": "وَمَا أَسْأَلُكُمْ عَلَيْهِ مِنْ أَجْرٍ إِنْ أَجْرِيَ إِلَّا عَلَى رَبِّ الْعَالَمِينَ",
+      "word_count": 11,
+      "letter_count": 40
+    },
+    {
+      "verse_id": 3078,
+      "surah_id": 26,
+      "ayah_number": 146,
+      "verse_key": "26-146",
+      "page_number": 373,
+      "text_raw": "أَتُتْرَكُونَ فِي مَا هَاهُنَا آمِنِينَ",
+      "word_count": 5,
+      "letter_count": 21
+    },
+    {
+      "verse_id": 3079,
+      "surah_id": 26,
+      "ayah_number": 147,
+      "verse_key": "26-147",
+      "page_number": 373,
+      "text_raw": "فِي جَنَّاتٍ وَعُيُونٍ",
+      "word_count": 3,
+      "letter_count": 11
+    },
+    {
+      "verse_id": 3080,
+      "surah_id": 26,
+      "ayah_number": 148,
+      "verse_key": "26-148",
+      "page_number": 373,
+      "text_raw": "وَزُرُوعٍ وَنَخْلٍ طَلْعُهَا هَضِيمٌ",
+      "word_count": 4,
+      "letter_count": 18
+    },
+    {
+      "verse_id": 3081,
+      "surah_id": 26,
+      "ayah_number": 149,
+      "verse_key": "26-149",
+      "page_number": 373,
+      "text_raw": "وَتَنْحِتُونَ مِنْ الْجِبَالِ بُيُوتًا فَارِهِينَ",
+      "word_count": 5,
+      "letter_count": 26
+    },
+    {
+      "verse_id": 3082,
+      "surah_id": 26,
+      "ayah_number": 150,
+      "verse_key": "26-150",
+      "page_number": 373,
+      "text_raw": "فَاتَّقُوا اللَّهَ وَأَطِيعُونِ",
+      "word_count": 3,
+      "letter_count": 17
+    },
+    {
+      "verse_id": 3083,
+      "surah_id": 26,
+      "ayah_number": 151,
+      "verse_key": "26-151",
+      "page_number": 373,
+      "text_raw": "وَلَا تُطِيعُوا أَمْرَ الْمُسْرِفِينَ",
+      "word_count": 4,
+      "letter_count": 20
+    },
+    {
+      "verse_id": 3084,
+      "surah_id": 26,
+      "ayah_number": 152,
+      "verse_key": "26-152",
+      "page_number": 373,
+      "text_raw": "الَّذِينَ يُفْسِدُونَ فِي الْأَرْضِ وَلَا يُصْلِحُونَ",
+      "word_count": 6,
+      "letter_count": 27
+    },
+    {
+      "verse_id": 3085,
+      "surah_id": 26,
+      "ayah_number": 153,
+      "verse_key": "26-153",
+      "page_number": 373,
+      "text_raw": "قَالُوا إِنَّمَا أَنْتَ مِنْ الْمُسَحَّرِينَ",
+      "word_count": 5,
+      "letter_count": 22
+    },
+    {
+      "verse_id": 3086,
+      "surah_id": 26,
+      "ayah_number": 154,
+      "verse_key": "26-154",
+      "page_number": 373,
+      "text_raw": "مَا أَنْتَ إِلَّا بَشَرٌ مِثْلُنَا فَأْتِ بِآيَةٍ إِنْ كُنْتَ مِنْ الصَّادِقِينَ",
+      "word_count": 11,
+      "letter_count": 38
+    },
+    {
+      "verse_id": 3087,
+      "surah_id": 26,
+      "ayah_number": 155,
+      "verse_key": "26-155",
+      "page_number": 373,
+      "text_raw": "قَالَ هَذِهِ نَاقَةٌ لَهَا شِرْبٌ وَلَكُمْ شِرْبُ يَوْمٍ مَعْلُومٍ",
+      "word_count": 9,
+      "letter_count": 31
+    },
+    {
+      "verse_id": 3088,
+      "surah_id": 26,
+      "ayah_number": 156,
+      "verse_key": "26-156",
+      "page_number": 373,
+      "text_raw": "وَلَا تَمَسُّوهَا بِسُوءٍ فَيَأْخُذَكُمْ عَذَابُ يَوْمٍ عَظِيمٍ",
+      "word_count": 7,
+      "letter_count": 31
+    },
+    {
+      "verse_id": 3089,
+      "surah_id": 26,
+      "ayah_number": 157,
+      "verse_key": "26-157",
+      "page_number": 373,
+      "text_raw": "فَعَقَرُوهَا فَأَصْبَحُوا نَادِمِينَ",
+      "word_count": 3,
+      "letter_count": 20
+    },
+    {
+      "verse_id": 3090,
+      "surah_id": 26,
+      "ayah_number": 158,
+      "verse_key": "26-158",
+      "page_number": 373,
+      "text_raw": "فَأَخَذَهُمْ الْعَذَابُ إِنَّ فِي ذَلِكَ لَآيَةً وَمَا كَانَ أَكْثَرُهُمْ مُؤْمِنِينَ",
+      "word_count": 10,
+      "letter_count": 41
+    },
+    {
+      "verse_id": 3091,
+      "surah_id": 26,
+      "ayah_number": 159,
+      "verse_key": "26-159",
+      "page_number": 373,
+      "text_raw": "وَإِنَّ رَبَّكَ لَهُوَ الْعَزِيزُ الرَّحِيمُ",
+      "word_count": 5,
+      "letter_count": 21
+    }
+  ],
+  "schema_version": "2.0-raw-mcp",
+  "surah_id": 26,
+  "ruku_number": 10,
+  "bahouth_verses": [
+    {
+      "ayah_number": 141,
+      "text_raw": "كَذَّبَتْ ثَمُودُ الْمُرْسَلِينَ",
+      "verse_key": "26-141"
+    },
+    {
+      "ayah_number": 142,
+      "text_raw": "إِذْ قَالَ لَهُمْ أَخُوهُمْ صَالِحٌ أَلَا تَتَّقُونَ",
+      "verse_key": "26-142"
+    },
+    {
+      "ayah_number": 143,
+      "text_raw": "إِنِّي لَكُمْ رَسُولٌ أَمِينٌ",
+      "verse_key": "26-143"
+    },
+    {
+      "ayah_number": 144,
+      "text_raw": "فَاتَّقُوا اللَّهَ وَأَطِيعُونِ",
+      "verse_key": "26-144"
+    },
+    {
+      "ayah_number": 145,
+      "text_raw": "وَمَا أَسْأَلُكُمْ عَلَيْهِ مِنْ أَجْرٍ إِنْ أَجْرِيَ إِلَّا عَلَى رَبِّ الْعَالَمِينَ",
+      "verse_key": "26-145"
+    },
+    {
+      "ayah_number": 146,
+      "text_raw": "أَتُتْرَكُونَ فِي مَا هَاهُنَا آمِنِينَ",
+      "verse_key": "26-146"
+    },
+    {
+      "ayah_number": 147,
+      "text_raw": "فِي جَنَّاتٍ وَعُيُونٍ",
+      "verse_key": "26-147"
+    },
+    {
+      "ayah_number": 148,
+      "text_raw": "وَزُرُوعٍ وَنَخْلٍ طَلْعُهَا هَضِيمٌ",
+      "verse_key": "26-148"
+    },
+    {
+      "ayah_number": 149,
+      "text_raw": "وَتَنْحِتُونَ مِنْ الْجِبَالِ بُيُوتًا فَارِهِينَ",
+      "verse_key": "26-149"
+    },
+    {
+      "ayah_number": 150,
+      "text_raw": "فَاتَّقُوا اللَّهَ وَأَطِيعُونِ",
+      "verse_key": "26-150"
+    },
+    {
+      "ayah_number": 151,
+      "text_raw": "وَلَا تُطِيعُوا أَمْرَ الْمُسْرِفِينَ",
+      "verse_key": "26-151"
+    },
+    {
+      "ayah_number": 152,
+      "text_raw": "الَّذِينَ يُفْسِدُونَ فِي الْأَرْضِ وَلَا يُصْلِحُونَ",
+      "verse_key": "26-152"
+    },
+    {
+      "ayah_number": 153,
+      "text_raw": "قَالُوا إِنَّمَا أَنْتَ مِنْ الْمُسَحَّرِينَ",
+      "verse_key": "26-153"
+    },
+    {
+      "ayah_number": 154,
+      "text_raw": "مَا أَنْتَ إِلَّا بَشَرٌ مِثْلُنَا فَأْتِ بِآيَةٍ إِنْ كُنْتَ مِنْ الصَّادِقِينَ",
+      "verse_key": "26-154"
+    },
+    {
+      "ayah_number": 155,
+      "text_raw": "قَالَ هَذِهِ نَاقَةٌ لَهَا شِرْبٌ وَلَكُمْ شِرْبُ يَوْمٍ مَعْلُومٍ",
+      "verse_key": "26-155"
+    },
+    {
+      "ayah_number": 156,
+      "text_raw": "وَلَا تَمَسُّوهَا بِسُوءٍ فَيَأْخُذَكُمْ عَذَابُ يَوْمٍ عَظِيمٍ",
+      "verse_key": "26-156"
+    },
+    {
+      "ayah_number": 157,
+      "text_raw": "فَعَقَرُوهَا فَأَصْبَحُوا نَادِمِينَ",
+      "verse_key": "26-157"
+    },
+    {
+      "ayah_number": 158,
+      "text_raw": "فَأَخَذَهُمْ الْعَذَابُ إِنَّ فِي ذَلِكَ لَآيَةً وَمَا كَانَ أَكْثَرُهُمْ مُؤْمِنِينَ",
+      "verse_key": "26-158"
+    },
+    {
+      "ayah_number": 159,
+      "text_raw": "وَإِنَّ رَبَّكَ لَهُوَ الْعَزِيزُ الرَّحِيمُ",
+      "verse_key": "26-159"
+    }
+  ],
+  "bahouth_qiraat": {
+    "26-149": {
+      "verse_key": "26-149",
+      "annotations": [
+        {
+          "word_id": 47992,
+          "word_order_in_verse": 4,
+          "position": 1,
+          "text_id": 209,
+          "raw_text": "@ورش عن نافع وَأبو جعفر وَأبو عمرو وَيعقوب وَحفص عن عاصم/قرأ بضم الباء.@باقي الرواة/قرؤوا بكسر الباء."
+        },
+        {
+          "word_id": 47993,
+          "word_order_in_verse": 5,
+          "position": 1,
+          "text_id": 1373,
+          "raw_text": "@ابن عامر وَعاصم وَحمزة وَالكسائي وَخلف العاشر/قرأ بألف بعد الفاء.@باقي الرواة/قرؤوا بحذف الألف."
+        }
+      ]
+    }
+  },
+  "turath_pages": []
+}

@@ -1,0 +1,21 @@
+{
+  "id": 107,
+  "id_bn": "১০৭",
+  "name_ar": "",
+  "name_bn": "আল-মা‘ঊন",
+  "ayah_count": 7,
+  "ayah_count_bn": "৭",
+  "ruku_count": 1,
+  "ruku_count_bn": "১",
+  "intro": "# সূরা আল-মা‘ঊন (107) : পূর্ণাঙ্গ সূরা পরিচিতি ও রুকুর মানচিত্র\n\n## মৌলিক পরিচিতি\n- আরবী নাম: الماعون\n- মোট আয়াত: 7\n- মোট রুকু: 1\n",
+  "rukus": [
+    {
+      "ruku_id": 1,
+      "ruku_bn": "১",
+      "ayah_start": 1,
+      "ayah_end": 7,
+      "ayah_range_bn": "১–৭",
+      "ayah_count": 7
+    }
+  ]
+}

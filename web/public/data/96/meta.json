@@ -1,0 +1,21 @@
+{
+  "id": 96,
+  "id_bn": "৯৬",
+  "name_ar": "",
+  "name_bn": "আল-‘আলাক্ব",
+  "ayah_count": 19,
+  "ayah_count_bn": "১৯",
+  "ruku_count": 1,
+  "ruku_count_bn": "১",
+  "intro": "# সূরা আল-‘আলাক্ব (96) : পূর্ণাঙ্গ সূরা পরিচিতি ও রুকুর মানচিত্র\n\n## মৌলিক পরিচিতি\n- আরবী নাম: العلق\n- মোট আয়াত: 19\n- মোট রুকু: 1\n",
+  "rukus": [
+    {
+      "ruku_id": 1,
+      "ruku_bn": "১",
+      "ayah_start": 1,
+      "ayah_end": 19,
+      "ayah_range_bn": "১–১৯",
+      "ayah_count": 19
+    }
+  ]
+}
