@@ -279,8 +279,8 @@ export default function App() {
         </div>
       )}
 
-      {/* Horizontal Ayah Jumper Bar (When in Study View and Ayah/Mushaf mode) */}
-      {activeView === 'study' && rukuData && (
+      {/* Horizontal Ayah Jumper Bar (When in Ayah Study or Mushaf mode) */}
+      {activeView === 'study' && studyMode !== 'thematic' && rukuData && (
         <AyahJumper
           ayahs={rukuData.ayahs}
           selectedAyah={selectedAyahNum}

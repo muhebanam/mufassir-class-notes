@@ -143,6 +143,20 @@ body.sepia-theme {
   font-weight: 700;
 }
 
+/* Inverted prose for dark containers */
+.prose-invert,
+.prose.prose-invert {
+  --ink: #f9fafb;
+  color: #f9fafb;
+}
+
+.prose-invert p,
+.prose-invert h1, .prose-invert h2, .prose-invert h3, .prose-invert h4,
+.prose-invert strong,
+.prose-invert li {
+  color: #f9fafb;
+}
+
 /* Arabic typography inside prose */
 .ar {
   font-family: 'Amiri Quran', 'Amiri', 'Noto Naskh Arabic', serif;

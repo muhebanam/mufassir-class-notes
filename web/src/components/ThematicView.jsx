@@ -9,9 +9,7 @@ import MarkdownContent from './MarkdownContent';
 import MasalaCard from './MasalaCard';
 
 export default function ThematicView({ rukuData, surahInfo }) {
-  const [activeTab, setActiveTab] = useState('ahkam');
-  // Default to true so research makasid is never hidden on mobile
-  const [showFullMakasid, setShowFullMakasid] = useState(true);
+  const [activeTab, setActiveTab] = useState('makasid');
   const [viewAllChapters, setViewAllChapters] = useState(false);
 
   if (!rukuData || !rukuData.thematic_topics) {
@@ -46,47 +44,28 @@ export default function ThematicView({ rukuData, surahInfo }) {
   return (
     <div className="max-w-7xl mx-auto px-3 sm:px-4 py-4 space-y-5">
       {/* Ruku Header & Summary Card */}
-      <div className="bg-gradient-to-r from-emerald-800 via-teal-850 to-teal-900 text-white rounded-2xl p-5 sm:p-7 shadow-md">
-        <div className="flex items-center gap-2 text-emerald-200 text-xs font-semibold uppercase tracking-wider mb-1.5">
+      <div className="bg-gradient-to-br from-emerald-800 via-teal-900 to-emerald-950 text-white rounded-2xl p-4 sm:p-6 shadow-sm border border-emerald-700/50">
+        <div className="flex items-center gap-2 text-emerald-200 text-xs font-semibold uppercase tracking-wider mb-1">
           <span>সূরা {surahInfo?.name_bn}</span>
           <span>•</span>
           <span>রুকু {toBn(rukuData.ruku_id)}</span>
           <span>•</span>
           <span>আয়াত {rukuData.ayah_range_bn}</span>
         </div>
-        <h2 className="text-xl sm:text-2xl font-bold font-bengali tracking-tight">
+        <h2 className="text-lg sm:text-2xl font-bold font-bengali tracking-tight text-white">
           {topics.makasid?.title || `রুকু ${toBn(rukuData.ruku_id)}-এর সার্বিক শাস্ত্রীয় বিশ্লেষণ`}
         </h2>
 
-        {/* Clean First-Paragraph Summary */}
+        {/* 1-paragraph Clean Overview Summary */}
         {topics.makasid?.summary ? (
-          <div className="mt-3.5 text-sm sm:text-base text-emerald-50/95 leading-relaxed font-bengali">
-            <p>{topics.makasid.summary}</p>
-          </div>
+          <p className="mt-2 text-xs sm:text-sm text-emerald-100/95 leading-relaxed font-bengali">
+            {topics.makasid.summary}
+          </p>
         ) : topics.makasid?.content ? (
-          <div className="mt-3.5 text-sm text-emerald-100/90 leading-relaxed font-bengali">
-            <p>{topics.makasid.content.split('\n\n')[0]}</p>
-          </div>
+          <p className="mt-2 text-xs sm:text-sm text-emerald-100/95 leading-relaxed font-bengali">
+            {topics.makasid.content.split('\n\n')[0].replace(/^#+\s*/, '')}
+          </p>
         ) : null}
-
-        {/* Expandable Full Makasid Section */}
-        {topics.makasid?.content && (
-          <div className="mt-4 pt-3 border-t border-emerald-700/60">
-            <button
-              onClick={() => setShowFullMakasid(!showFullMakasid)}
-              className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-emerald-200 hover:text-white transition"
-            >
-              <span>{showFullMakasid ? "মাকাসিদ সংক্ষেপ করুন" : "সম্পূর্ণ ভূমিকা ও মাকাসিদ বিস্তারিত পড়ুন"}</span>
-              {showFullMakasid ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
-            </button>
-
-            {showFullMakasid && (
-              <div className="mt-4 p-4 rounded-xl bg-black/20 text-emerald-100 text-sm leading-relaxed">
-                <MarkdownContent content={topics.makasid.content} className="text-emerald-100 dark:text-emerald-100" />
-              </div>
-            )}
-          </div>
-        )}
       </div>
 
       {/* Main Layout: Desktop Sidebar (Left) + Content (Center/Right) */}
