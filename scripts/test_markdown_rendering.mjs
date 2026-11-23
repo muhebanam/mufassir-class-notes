@@ -39,24 +39,45 @@ for (const s of surahs) {
     const rukuData = JSON.parse(fs.readFileSync(path.join(sDir, rf), 'utf-8'));
     const topics = rukuData.thematic_topics || {};
 
-    // Test each thematic topic's content
+    // Test each thematic topic's content and ahkam cards
     for (const [key, topic] of Object.entries(topics)) {
       if (!topic || typeof topic !== 'object') continue;
       const content = topic.content || '';
-      if (!content || typeof content !== 'string') continue;
+      if (content && typeof content === 'string') {
+        const html = marked.parse(content);
+        for (const rule of FORBIDDEN_PATTERNS) {
+          if (rule.regex.test(html)) {
+            totalFailures++;
+            failureDetails.push({
+              surah: surahId,
+              ruku: rf,
+              topic: key,
+              rule: rule.name,
+              snippet: html.match(rule.regex)[0]
+            });
+          }
+        }
+      }
 
-      const html = marked.parse(content);
-
-      for (const rule of FORBIDDEN_PATTERNS) {
-        if (rule.regex.test(html)) {
-          totalFailures++;
-          failureDetails.push({
-            surah: surahId,
-            ruku: rf,
-            topic: key,
-            rule: rule.name,
-            snippet: html.match(rule.regex)[0]
-          });
+      // Audit MasalaCard items in Ahkam
+      if (key === 'ahkam' && Array.isArray(topic.cards)) {
+        for (const card of topic.cards) {
+          const cardTexts = [card.title, card.hanafi, card.shafii, card.maliki, card.hanbali].filter(Boolean);
+          for (const cText of cardTexts) {
+            const html = marked.parseInline(cText);
+            for (const rule of FORBIDDEN_PATTERNS) {
+              if (rule.regex.test(html)) {
+                totalFailures++;
+                failureDetails.push({
+                  surah: surahId,
+                  ruku: rf,
+                  topic: `ahkam-card-${card.title?.slice(0, 20)}`,
+                  rule: rule.name,
+                  snippet: html.match(rule.regex)[0]
+                });
+              }
+            }
+          }
         }
       }
     }
