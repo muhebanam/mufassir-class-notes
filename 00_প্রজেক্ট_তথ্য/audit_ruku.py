@@ -72,6 +72,8 @@ def to_ascii_int(s: str) -> int:
 
 def normalize_arabic(text: str) -> str:
     text = text.replace("\u0640", "")  # remove tatweel
+    # Remove bidi control characters, zero-width spaces/formatters, BOM
+    text = re.sub(r"[\u200B-\u200F\u202A-\u202E\u2066-\u2069\uFEFF]", "", text)
     text = re.sub(r"\s+", " ", text).strip()
     return text
 

@@ -8,6 +8,25 @@
   }
 }
 
+/* Typography & Theme Variables */
+:root {
+  --ink: #1c2b27;
+  --muted: #5b6b66;
+  --accent: #0f766e;
+  --quote-bg: #f1f8f6;
+  --card: #ffffff;
+  --line: #e3ece9;
+}
+
+.dark {
+  --ink: #e6efec;
+  --muted: #9ab0aa;
+  --accent: #34d3be;
+  --quote-bg: #12201d;
+  --card: #0f1a18;
+  --line: #243532;
+}
+
 /* Custom Scrollbars */
 ::-webkit-scrollbar {
   width: 6px;
@@ -37,6 +56,12 @@
 body.sepia-theme {
   background-color: #f7f3e8;
   color: #2c251e;
+  --ink: #2c251e;
+  --muted: #635343;
+  --accent: #8b5e34;
+  --quote-bg: #ede2cf;
+  --card: #fffdf9;
+  --line: #e4d7c0;
 }
 .sepia-theme .bg-white {
   background-color: #fffdf9 !important;
@@ -71,4 +96,94 @@ body.sepia-theme {
   color: #059669;
   display: inline-block;
   padding: 0 4px;
+}
+
+/* Rich Prose & Markdown Typography */
+.prose {
+  max-width: 70ch;
+  font-size: 1.06rem;
+  line-height: 1.9;
+  color: var(--ink);
+}
+
+.prose p {
+  margin-bottom: 1.15em;
+}
+
+.prose h1, .prose h2, .prose h3, .prose h4 {
+  color: var(--ink);
+}
+
+.prose h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 1.8em 0 0.6em;
+  padding-left: 0.7em;
+  border-left: 4px solid var(--accent);
+}
+
+.prose h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 1.3em 0 0.4em;
+  color: var(--accent);
+}
+
+.prose ul, .prose ol {
+  margin: 1em 0;
+  padding-left: 1.5em;
+}
+
+.prose li {
+  margin-bottom: 0.45em;
+}
+
+.prose strong {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+/* Arabic typography inside prose */
+.ar {
+  font-family: 'Amiri Quran', 'Amiri', 'Noto Naskh Arabic', serif;
+  font-size: 1.25em;
+  line-height: 2.1;
+  direction: rtl;
+  unicode-bidi: isolate;
+  display: inline;
+}
+
+/* Blockquote & Hadith / Ayah citation styling */
+.prose blockquote {
+  margin: 1.2em 0;
+  padding: 0.9em 1.2em;
+  background: var(--quote-bg);
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+}
+
+.prose blockquote > p:first-child .ar {
+  display: block;
+  text-align: right;
+  margin-bottom: 0.4em;
+}
+
+/* Markdown tables */
+.prose table {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+  margin: 1.5em 0;
+}
+
+.prose th, .prose td {
+  border: 1px solid var(--line);
+  padding: 8px 12px;
+  text-align: left;
+}
+
+.prose th {
+  background-color: var(--quote-bg);
+  font-weight: 700;
 }

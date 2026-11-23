@@ -5,6 +5,7 @@ import {
   FileText, Tag, ArrowLeft, ArrowRight, Share2 
 } from 'lucide-react';
 import { toBn, copyToClipboard } from '../utils/helpers';
+import MarkdownContent from './MarkdownContent';
 import { saveAyahNote, getAyahNote, toggleBookmark, isBookmarked } from '../utils/db';
 
 export default function AyahStudyView({
@@ -179,11 +180,11 @@ export default function AyahStudyView({
           </button>
 
           {openDrawers.jalalayn && (
-            <div className="p-4 sm:p-5 space-y-3 text-gray-800 dark:text-gray-200 text-sm sm:text-base leading-relaxed border-t border-gray-100 dark:border-gray-700 whitespace-pre-line font-bengali">
+            <div className="p-4 sm:p-5 border-t border-gray-100 dark:border-gray-700">
               {ayah.jalalayn ? (
-                ayah.jalalayn
+                <MarkdownContent content={ayah.jalalayn} />
               ) : (
-                <div className="text-gray-500 italic py-2">
+                <div className="text-gray-500 italic py-2 font-bengali">
                   এই আয়াতের জালালাইন তাফসীর অন্তর্ভুক্ত করা হচ্ছে...
                 </div>
               )}
@@ -250,8 +251,8 @@ export default function AyahStudyView({
             </button>
 
             {openDrawers.irab && (
-              <div className="p-4 sm:p-5 border-t border-gray-100 dark:border-gray-700 text-sm leading-relaxed whitespace-pre-line text-gray-800 dark:text-gray-200">
-                {ayah.irab}
+              <div className="p-4 sm:p-5 border-t border-gray-100 dark:border-gray-700">
+                <MarkdownContent content={ayah.irab} />
               </div>
             )}
           </div>
@@ -306,8 +307,8 @@ export default function AyahStudyView({
             </button>
 
             {openDrawers.nuzul && (
-              <div className="p-4 sm:p-5 border-t border-gray-100 dark:border-gray-700 text-sm leading-relaxed whitespace-pre-line text-gray-800 dark:text-gray-200">
-                {ayah.shane_nuzul}
+              <div className="p-4 sm:p-5 border-t border-gray-100 dark:border-gray-700">
+                <MarkdownContent content={ayah.shane_nuzul} />
               </div>
             )}
           </div>

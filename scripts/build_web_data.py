@@ -58,6 +58,40 @@ def load_ruku_map():
     with open(p, "r", encoding="utf-8") as f:
         return json.load(f)["surahs"]
 
+def normalize_markdown_table_delimiters(text):
+    """
+    Normalizes malformed GFM table delimiter rows (e.g. containing spaces inside cells like ':--- :---:').
+    Ensures standard GFM markdown parsers (like marked) parse them cleanly as <table> elements.
+    """
+    lines = text.splitlines()
+    new_lines = []
+    for line in lines:
+        if line.strip().startswith('|') and '--' in line:
+            cols = line.strip().split('|')
+            non_empty = [c.strip() for c in cols if c.strip()]
+            if non_empty and all(re.search(r'^-+|-+:|:-+|-+:$|:-+:', c) for c in non_empty):
+                cleaned_cols = []
+                for c in cols:
+                    stripped = c.strip()
+                    if not stripped:
+                        cleaned_cols.append('')
+                        continue
+                    has_left = stripped.startswith(':')
+                    has_right = stripped.endswith(':')
+                    if has_left and has_right:
+                        cleaned_cols.append(' :---: ')
+                    elif has_left:
+                        cleaned_cols.append(' :--- ')
+                    elif has_right:
+                        cleaned_cols.append(' ---: ')
+                    else:
+                        cleaned_cols.append(' --- ')
+                new_lines.append('|'.join(cleaned_cols))
+                continue
+        new_lines.append(line)
+    return '\n'.join(new_lines)
+
+
 def parse_markdown_table(table_text):
     lines = [l.strip() for l in table_text.strip().splitlines() if l.strip()]
     if len(lines) < 2:
@@ -100,7 +134,7 @@ def parse_ruku_markdown(md_text, surah_id, ruku_idx, ayah_start, ayah_end, tanzi
         end_pos = matches[i+1].start() if i + 1 < len(matches) else len(md_text)
         sections[sec_num] = {
             "title": sec_title,
-            "body": md_text[start_pos:end_pos].strip()
+            "body": normalize_markdown_table_delimiters(md_text[start_pos:end_pos].strip())
         }
 
     # 2. Extract Ayahs from Section 1 (Translation Table)
@@ -250,12 +284,61 @@ def parse_ruku_markdown(md_text, surah_id, ruku_idx, ayah_start, ayah_end, tanzi
         }
         ayahs.append(ayah_obj)
 
+    # Extract Section 0 Summary (First non-empty clean paragraph)
+    sec0_text = sections.get(0, {}).get("body", "")
+    sec0_paras = [p.strip() for p in re.split(r"\n\s*\n", sec0_text) if p.strip() and not p.strip().startswith("#")]
+    sec0_summary = sec0_paras[0] if sec0_paras else ""
+
+    # Extract Section 8 Ahkam Mas'ala Cards
+    sec8_text = sections.get(8, {}).get("body", "")
+    sec8_intro = sec8_text
+    ahkam_cards = []
+    t8_idx = sec8_text.find("|")
+    if t8_idx != -1:
+        sec8_intro = sec8_text[:t8_idx].strip()
+        table_text = sec8_text[t8_idx:]
+        table_lines = [l.strip() for l in table_text.strip().splitlines() if l.strip().startswith("|")]
+        if len(table_lines) >= 3:
+            for row_line in table_lines[2:]:
+                cols = [c.strip() for c in row_line.strip("|").split("|")]
+                if len(cols) >= 5:
+                    title = cols[0]
+                    h = cols[1]
+                    m_op = cols[2]
+                    s = cols[3]
+                    han = cols[4]
+                    ev = cols[5] if len(cols) > 5 else ""
+
+                    ev_parts = re.split(r"<br\s*/?>|\n", ev)
+                    sources = []
+                    daleels = []
+                    for part in ev_parts:
+                        part = part.strip()
+                        if not part:
+                            continue
+                        if part.startswith("উৎস:") or "উৎস:" in part:
+                            src_str = re.sub(r"^.*?উৎস:\s*", "", part)
+                            sources.extend([src.strip() for src in src_str.split(";") if src.strip()])
+                        else:
+                            daleels.append(part)
+
+                    ahkam_cards.append({
+                        "title": title,
+                        "hanafi": h,
+                        "maliki": m_op,
+                        "shafii": s,
+                        "hanbali": han,
+                        "daleel": daleels,
+                        "sources": sources
+                    })
+
     # 8. Assemble Ruku-level thematic topics
     thematic_topics = {
         "makasid": {
             "sec_id": 0,
             "title": sections.get(0, {}).get("title", "ভূমিকা ও মাকাসিদ"),
-            "content": sections.get(0, {}).get("body", "")
+            "summary": sec0_summary,
+            "content": sec0_text
         },
         "irab_full": {
             "sec_id": 3,
@@ -286,7 +369,9 @@ def parse_ruku_markdown(md_text, surah_id, ruku_idx, ayah_start, ayah_end, tanzi
         "ahkam": {
             "sec_id": 8,
             "title": sections.get(8, {}).get("title", "আহকাম ও চার মাযহাবের ফিকহ"),
-            "content": sections.get(8, {}).get("body", "")
+            "intro": sec8_intro,
+            "cards": ahkam_cards,
+            "content": sec8_text
         },
         "ulumul_quran": {
             "sec_id": 9,

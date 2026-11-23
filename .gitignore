@@ -26,3 +26,6 @@ desktop.ini
 
 # Zip archives (temporary backups)
 *.zip
+*.bak
+.backup_formatting/
+

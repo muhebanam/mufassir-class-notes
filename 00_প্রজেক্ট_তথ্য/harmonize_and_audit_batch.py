@@ -18,6 +18,8 @@ to_ascii_int = lambda s: int("".join(str(bn_digits.index(c)) if c in bn_digits e
 
 def normalize_arabic(text: str) -> str:
     text = text.replace("\u0640", "")
+    # Remove bidi control characters, zero-width spaces/formatters, BOM
+    text = re.sub(r"[\u200B-\u200F\u202A-\u202E\u2066-\u2069\uFEFF]", "", text)
     text = re.sub(r"\s+", " ", text).strip()
     return text
 
