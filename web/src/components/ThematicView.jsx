@@ -43,16 +43,16 @@ export default function ThematicView({ rukuData, surahInfo }) {
 
   return (
     <div className="max-w-7xl mx-auto px-3 sm:px-4 py-4 space-y-5">
-      {/* Ruku Header & Summary Card */}
-      <div className="bg-gradient-to-br from-emerald-800 via-teal-900 to-emerald-950 text-white rounded-2xl p-4 sm:p-6 shadow-sm border border-emerald-700/50">
-        <div className="flex items-center gap-2 text-emerald-200 text-xs font-semibold uppercase tracking-wider mb-1">
+      {/* Ruku Header & Overview Card */}
+      <div className="bg-white dark:bg-gray-800 rounded-2xl p-4 sm:p-5 shadow-xs border border-gray-200 dark:border-gray-700 border-l-4 border-l-emerald-600 transition-colors">
+        <div className="flex items-center gap-2 text-emerald-700 dark:text-emerald-400 text-xs font-bold uppercase tracking-wider mb-1">
           <span>সূরা {surahInfo?.name_bn}</span>
           <span>•</span>
           <span>রুকু {toBn(rukuData.ruku_id)}</span>
           <span>•</span>
           <span>আয়াত {rukuData.ayah_range_bn}</span>
         </div>
-        <h2 className="text-lg sm:text-2xl font-bold font-bengali tracking-tight text-white">
+        <h2 className="text-base sm:text-xl font-bold font-bengali tracking-tight text-gray-900 dark:text-gray-100">
           {topics.makasid?.title || `রুকু ${toBn(rukuData.ruku_id)}-এর সার্বিক শাস্ত্রীয় বিশ্লেষণ`}
         </h2>
 
@@ -61,7 +61,7 @@ export default function ThematicView({ rukuData, surahInfo }) {
           const rawText = topics.makasid?.summary || topics.makasid?.content || '';
           const firstLine = rawText.split('\n')[0].replace(/^#+\s*/, '').trim();
           return firstLine ? (
-            <p className="mt-2 text-xs sm:text-sm text-white/95 leading-relaxed font-bengali font-normal">
+            <p className="mt-1.5 text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed font-bengali">
               {firstLine}
             </p>
           ) : null;

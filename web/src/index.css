@@ -147,14 +147,14 @@ body.sepia-theme {
 .prose-invert,
 .prose.prose-invert {
   --ink: #f9fafb;
-  color: #f9fafb;
+  color: #f9fafb !important;
 }
 
 .prose-invert p,
 .prose-invert h1, .prose-invert h2, .prose-invert h3, .prose-invert h4,
 .prose-invert strong,
 .prose-invert li {
-  color: #f9fafb;
+  color: #f9fafb !important;
 }
 
 /* Arabic typography inside prose */
