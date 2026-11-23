@@ -56,16 +56,16 @@ export default function ThematicView({ rukuData, surahInfo }) {
           {topics.makasid?.title || `রুকু ${toBn(rukuData.ruku_id)}-এর সার্বিক শাস্ত্রীয় বিশ্লেষণ`}
         </h2>
 
-        {/* 1-paragraph Clean Overview Summary */}
-        {topics.makasid?.summary ? (
-          <p className="mt-2 text-xs sm:text-sm text-emerald-100/95 leading-relaxed font-bengali">
-            {topics.makasid.summary}
-          </p>
-        ) : topics.makasid?.content ? (
-          <p className="mt-2 text-xs sm:text-sm text-emerald-100/95 leading-relaxed font-bengali">
-            {topics.makasid.content.split('\n\n')[0].replace(/^#+\s*/, '')}
-          </p>
-        ) : null}
+        {/* 1-line Clean Overview Summary */}
+        {(() => {
+          const rawText = topics.makasid?.summary || topics.makasid?.content || '';
+          const firstLine = rawText.split('\n')[0].replace(/^#+\s*/, '').trim();
+          return firstLine ? (
+            <p className="mt-2 text-xs sm:text-sm text-white/95 leading-relaxed font-bengali font-normal">
+              {firstLine}
+            </p>
+          ) : null;
+        })()}
       </div>
 
       {/* Main Layout: Desktop Sidebar (Left) + Content (Center/Right) */}
