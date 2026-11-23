@@ -12,6 +12,7 @@
     {
       "ruku_id": 1,
       "ruku_bn": "১",
+      "status": "needs_work",
       "ayah_start": 1,
       "ayah_end": 10,
       "ayah_range_bn": "১–১০",
@@ -20,6 +21,7 @@
     {
       "ruku_id": 2,
       "ruku_bn": "২",
+      "status": "needs_work",
       "ayah_start": 11,
       "ayah_end": 20,
       "ayah_range_bn": "১১–২০",
@@ -28,6 +30,7 @@
     {
       "ruku_id": 3,
       "ruku_bn": "৩",
+      "status": "needs_work",
       "ayah_start": 21,
       "ayah_end": 26,
       "ayah_range_bn": "২১–২৬",
@@ -36,6 +39,7 @@
     {
       "ruku_id": 4,
       "ruku_bn": "৪",
+      "status": "needs_work",
       "ayah_start": 27,
       "ayah_end": 35,
       "ayah_range_bn": "২৭–৩৫",

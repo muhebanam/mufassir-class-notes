@@ -12,6 +12,7 @@
     {
       "ruku_id": 1,
       "ruku_bn": "১",
+      "status": "gold",
       "ayah_start": 1,
       "ayah_end": 38,
       "ayah_range_bn": "১–৩৮",
@@ -20,6 +21,7 @@
     {
       "ruku_id": 2,
       "ruku_bn": "২",
+      "status": "gold",
       "ayah_start": 39,
       "ayah_end": 74,
       "ayah_range_bn": "৩৯–৭৪",
@@ -28,6 +30,7 @@
     {
       "ruku_id": 3,
       "ruku_bn": "৩",
+      "status": "gold",
       "ayah_start": 75,
       "ayah_end": 96,
       "ayah_range_bn": "৭৫–৯৬",

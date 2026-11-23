@@ -12,6 +12,7 @@
     {
       "ruku_id": 1,
       "ruku_bn": "১",
+      "status": "gold",
       "ayah_start": 1,
       "ayah_end": 12,
       "ayah_range_bn": "১–১২",
@@ -20,6 +21,7 @@
     {
       "ruku_id": 2,
       "ruku_bn": "২",
+      "status": "gold",
       "ayah_start": 13,
       "ayah_end": 32,
       "ayah_range_bn": "১৩–৩২",
@@ -28,6 +30,7 @@
     {
       "ruku_id": 3,
       "ruku_bn": "৩",
+      "status": "gold",
       "ayah_start": 33,
       "ayah_end": 50,
       "ayah_range_bn": "৩৩–৫০",
@@ -36,6 +39,7 @@
     {
       "ruku_id": 4,
       "ruku_bn": "৪",
+      "status": "gold",
       "ayah_start": 51,
       "ayah_end": 67,
       "ayah_range_bn": "৫১–৬৭",
@@ -44,6 +48,7 @@
     {
       "ruku_id": 5,
       "ruku_bn": "৫",
+      "status": "gold",
       "ayah_start": 68,
       "ayah_end": 83,
       "ayah_range_bn": "৬৮–৮৩",

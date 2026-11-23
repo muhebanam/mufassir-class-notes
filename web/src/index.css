@@ -176,21 +176,26 @@ body.sepia-theme {
   border-radius: 8px;
 }
 
-.prose blockquote > p:first-child .ar {
+/* Standalone Arabic block */
+.ar-block {
   display: block;
   text-align: right;
-  margin-bottom: 0.4em;
+  direction: rtl;
+  font-size: 1.3em;
+  line-height: 2.1;
+  margin: 0.4em 0;
 }
 
-/* Markdown tables */
-.prose table {
-  display: block;
-  width: 100%;
-  max-width: 100%;
+/* Markdown tables inside responsive wrapper */
+.prose .table-wrap {
   overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  border-collapse: collapse;
   margin: 1.25em 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
 .prose th, .prose td {

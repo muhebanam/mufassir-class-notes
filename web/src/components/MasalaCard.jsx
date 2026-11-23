@@ -9,26 +9,19 @@ export default function MasalaCard({ card, index }) {
 
   if (!card) return null;
 
-  // Determine agreement badge
-  let badgeText = "৪ মাযহাবের তুলনামূলক ফতোয়া";
-  let badgeColor = "bg-teal-100 text-teal-800 dark:bg-teal-950 dark:text-teal-300 border-teal-200 dark:border-teal-800";
+  // Determine agreement badge from explicit card data or defaults
+  let badgeText = null;
+  let badgeColor = "";
 
-  const h = (card.hanafi || "").trim();
-  const m = (card.maliki || "").trim();
-  const s = (card.shafii || "").trim();
-  const han = (card.hanbali || "").trim();
-
-  if (h && m && s && han) {
-    if (h === m && m === s && s === han) {
-      badgeText = "চার মাযহাবে একমত (ইজমা/সর্বসম্মত)";
-      badgeColor = "bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800";
-    } else if (m === s && s === han && h !== m) {
-      badgeText = "জমহুর বনাম হানাফী";
-      badgeColor = "bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-300 border-amber-200 dark:border-amber-800";
-    } else if (h === m && m === s && han !== s) {
-      badgeText = "জমহুর বনাম হাম্বলী";
-      badgeColor = "bg-indigo-100 text-indigo-800 dark:bg-indigo-950 dark:text-indigo-300 border-indigo-200 dark:border-indigo-800";
-    }
+  if (card.consensus) {
+    badgeText = "চার মাযহাবে একমত (ইজমা/সর্বসম্মত)";
+    badgeColor = "bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800";
+  } else if (card.badge) {
+    badgeText = card.badge;
+    badgeColor = "bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-300 border-amber-200 dark:border-amber-800";
+  } else {
+    badgeText = "৪ মাযহাবের তুলনামূলক ফতোয়া";
+    badgeColor = "bg-teal-100 text-teal-800 dark:bg-teal-950 dark:text-teal-300 border-teal-200 dark:border-teal-800";
   }
 
   // Clean title
@@ -43,12 +36,14 @@ export default function MasalaCard({ card, index }) {
             <Scale className="w-4 h-4" />
           </div>
           <h4 className="text-base sm:text-lg font-bold text-gray-900 dark:text-gray-100 font-bengali leading-snug">
-            {cleanTitle}
+            <MarkdownContent inline content={cleanTitle} />
           </h4>
         </div>
-        <span className={`text-xs px-2.5 py-1 rounded-full border font-semibold shrink-0 self-start sm:self-auto ${badgeColor}`}>
-          {badgeText}
-        </span>
+        {badgeText && (
+          <span className={`text-xs px-2.5 py-1 rounded-full border font-semibold shrink-0 self-start sm:self-auto ${badgeColor}`}>
+            {badgeText}
+          </span>
+        )}
       </div>
 
       {/* 2x2 Madhhab Grid */}
@@ -60,9 +55,9 @@ export default function MasalaCard({ card, index }) {
               হানাফী মাযহাব (الحنفية)
             </span>
           </div>
-          <p className="text-sm text-gray-800 dark:text-gray-200 font-bengali leading-relaxed">
-            {card.hanafi || "—"}
-          </p>
+          <div className="text-sm text-gray-800 dark:text-gray-200 font-bengali leading-relaxed">
+            <MarkdownContent inline content={card.hanafi || "—"} />
+          </div>
         </div>
 
         {/* Maliki */}
@@ -72,9 +67,9 @@ export default function MasalaCard({ card, index }) {
               মালিকী মাযহাব (المالكية)
             </span>
           </div>
-          <p className="text-sm text-gray-800 dark:text-gray-200 font-bengali leading-relaxed">
-            {card.maliki || "—"}
-          </p>
+          <div className="text-sm text-gray-800 dark:text-gray-200 font-bengali leading-relaxed">
+            <MarkdownContent inline content={card.maliki || "—"} />
+          </div>
         </div>
 
         {/* Shafi'i */}
@@ -84,9 +79,9 @@ export default function MasalaCard({ card, index }) {
               শাফিঈ মাযহাব (الشافعية)
             </span>
           </div>
-          <p className="text-sm text-gray-800 dark:text-gray-200 font-bengali leading-relaxed">
-            {card.shafii || "—"}
-          </p>
+          <div className="text-sm text-gray-800 dark:text-gray-200 font-bengali leading-relaxed">
+            <MarkdownContent inline content={card.shafii || "—"} />
+          </div>
         </div>
 
         {/* Hanbali */}
@@ -96,9 +91,9 @@ export default function MasalaCard({ card, index }) {
               হাম্বলী মাযহাব (الحنابلة)
             </span>
           </div>
-          <p className="text-sm text-gray-800 dark:text-gray-200 font-bengali leading-relaxed">
-            {card.hanbali || "—"}
-          </p>
+          <div className="text-sm text-gray-800 dark:text-gray-200 font-bengali leading-relaxed">
+            <MarkdownContent inline content={card.hanbali || "—"} />
+          </div>
         </div>
       </div>
 
