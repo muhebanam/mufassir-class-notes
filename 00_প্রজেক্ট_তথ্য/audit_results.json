@@ -1,0 +1,2354 @@
+{
+  "summary": {
+    "total_rukus": 259,
+    "gold": 255,
+    "needs_work": 4
+  },
+  "rukus": {
+    "24_1": {
+      "surah_id": 24,
+      "ruku_id": 1,
+      "file": "২৪_সূরা_আন-নূর/রুকু-০১_আয়াত_১-১০.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "24_2": {
+      "surah_id": 24,
+      "ruku_id": 2,
+      "file": "২৪_সূরা_আন-নূর/রুকু-০২_আয়াত_১১-২০.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "24_3": {
+      "surah_id": 24,
+      "ruku_id": 3,
+      "file": "২৪_সূরা_আন-নূর/রুকু-০৩_আয়াত_২১-২৬.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "24_4": {
+      "surah_id": 24,
+      "ruku_id": 4,
+      "file": "২৪_সূরা_আন-নূর/রুকু-০৪_আয়াত_২৭-৩৪.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "24_5": {
+      "surah_id": 24,
+      "ruku_id": 5,
+      "file": "২৪_সূরা_আন-নূর/রুকু-০৫_আয়াত_৩৫-৪৩.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "24_6": {
+      "surah_id": 24,
+      "ruku_id": 6,
+      "file": "২৪_সূরা_আন-নূর/রুকু-০৬_আয়াত_৪৪-৫২.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": [
+        "WARNING A-05: আরবী পাঠে 'হরকতযুক্ত সাধারণ বানান; পূর্ণ উসমানী রসম নয়' ডিসক্লেইমার নিশ্চিত করুন।"
+      ]
+    },
+    "24_7": {
+      "surah_id": 24,
+      "ruku_id": 7,
+      "file": "২৪_সূরা_আন-নূর/রুকু-০৭_আয়াত_৫৩-৫৮.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "24_8": {
+      "surah_id": 24,
+      "ruku_id": 8,
+      "file": "২৪_সূরা_আন-নূর/রুকু-০৮_আয়াত_৫৯-৬২.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "24_9": {
+      "surah_id": 24,
+      "ruku_id": 9,
+      "file": "২৪_সূরা_আন-নূর/রুকু-০৯_আয়াত_৬৩-৬৪.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "25_1": {
+      "surah_id": 25,
+      "ruku_id": 1,
+      "file": "২৫_সূরা_আল-ফুরকান/রুকু-০১_আয়াত_১-৯.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "25_2": {
+      "surah_id": 25,
+      "ruku_id": 2,
+      "file": "২৫_সূরা_আল-ফুরকান/রুকু-০২_আয়াত_১০-২০.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "25_3": {
+      "surah_id": 25,
+      "ruku_id": 3,
+      "file": "২৫_সূরা_আল-ফুরকান/রুকু-০৩_আয়াত_২১-৩৪.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "25_4": {
+      "surah_id": 25,
+      "ruku_id": 4,
+      "file": "২৫_সূরা_আল-ফুরকান/রুকু-০৪_আয়াত_৩৫-৪৪.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "25_5": {
+      "surah_id": 25,
+      "ruku_id": 5,
+      "file": "২৫_সূরা_আল-ফুরকান/রুকু-০৫_আয়াত_৪৫-৬০.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "25_6": {
+      "surah_id": 25,
+      "ruku_id": 6,
+      "file": "২৫_সূরা_আল-ফুরকান/রুকু-০৬_আয়াত_৬১-৭৭.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "26_1": {
+      "surah_id": 26,
+      "ruku_id": 1,
+      "file": "২৬_সূরা_আশ-শুআরা/রুকু-০১_আয়াত_১-৯.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "26_2": {
+      "surah_id": 26,
+      "ruku_id": 2,
+      "file": "২৬_সূরা_আশ-শুআরা/রুকু-০২_আয়াত_১০-২০.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "26_3": {
+      "surah_id": 26,
+      "ruku_id": 3,
+      "file": "২৬_সূরা_আশ-শুআরা/রুকু-০৩_আয়াত_২১-৩৪.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "26_4": {
+      "surah_id": 26,
+      "ruku_id": 4,
+      "file": "২৬_সূরা_আশ-শুআরা/রুকু-০৪_আয়াত_৩৫-৪৪.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "26_5": {
+      "surah_id": 26,
+      "ruku_id": 5,
+      "file": "২৬_সূরা_আশ-শুআরা/রুকু-০৫_আয়াত_৪৫-৬০.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "26_6": {
+      "surah_id": 26,
+      "ruku_id": 6,
+      "file": "২৬_সূরা_আশ-শুআরা/রুকু-০৬_আয়াত_৬১-৬৮.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "26_7": {
+      "surah_id": 26,
+      "ruku_id": 7,
+      "file": "২৬_সূরা_আশ-শুআরা/রুকু-০৭_আয়াত_৬৯-১০৪.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "26_8": {
+      "surah_id": 26,
+      "ruku_id": 8,
+      "file": "২৬_সূরা_আশ-শুআরা/রুকু-০৮_আয়াত_১০৫-১২২.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "26_9": {
+      "surah_id": 26,
+      "ruku_id": 9,
+      "file": "২৬_সূরা_আশ-শুআরা/রুকু-০৯_আয়াত_১২৩-১৪০.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "26_10": {
+      "surah_id": 26,
+      "ruku_id": 10,
+      "file": "২৬_সূরা_আশ-শুআরা/রুকু-১০_আয়াত_১৪১-১৫৯.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "26_11": {
+      "surah_id": 26,
+      "ruku_id": 11,
+      "file": "২৬_সূরা_আশ-শুআরা/রুকু-১১_আয়াত_১৬০-১৭৫.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "26_12": {
+      "surah_id": 26,
+      "ruku_id": 12,
+      "file": "২৬_সূরা_আশ-শুআরা/রুকু-১২_আয়াত_১৭৬-১৯১.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "26_13": {
+      "surah_id": 26,
+      "ruku_id": 13,
+      "file": "২৬_সূরা_আশ-শুআরা/রুকু-১৩_আয়াত_১৯২-২২৭.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "27_1": {
+      "surah_id": 27,
+      "ruku_id": 1,
+      "file": "২৭_সূরা_আন-নামল/রুকু-০১_আয়াত_১-১৪.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "27_2": {
+      "surah_id": 27,
+      "ruku_id": 2,
+      "file": "২৭_সূরা_আন-নামল/রুকু-০২_আয়াত_১৫-১৯.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "27_3": {
+      "surah_id": 27,
+      "ruku_id": 3,
+      "file": "২৭_সূরা_আন-নামল/রুকু-০৩_আয়াত_২০-৩১.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "27_4": {
+      "surah_id": 27,
+      "ruku_id": 4,
+      "file": "২৭_সূরা_আন-নামল/রুকু-০৪_আয়াত_৩২-৪৪.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "27_5": {
+      "surah_id": 27,
+      "ruku_id": 5,
+      "file": "২৭_সূরা_আন-নামল/রুকু-০৫_আয়াত_৪৫-৫৮.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "27_6": {
+      "surah_id": 27,
+      "ruku_id": 6,
+      "file": "২৭_সূরা_আন-নামল/রুকু-০৬_আয়াত_৫৯-৬৬.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "27_7": {
+      "surah_id": 27,
+      "ruku_id": 7,
+      "file": "২৭_সূরা_আন-নামল/রুকু-০৭_আয়াত_৬৭-৯৩.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "28_1": {
+      "surah_id": 28,
+      "ruku_id": 1,
+      "file": "২৮_সূরা_আল-ক্বাসাস/রুকু-০১_আয়াত_১-১৩.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "28_2": {
+      "surah_id": 28,
+      "ruku_id": 2,
+      "file": "২৮_সূরা_আল-ক্বাসাস/রুকু-০২_আয়াত_১৪-২১.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "28_3": {
+      "surah_id": 28,
+      "ruku_id": 3,
+      "file": "২৮_সূরা_আল-ক্বাসাস/রুকু-০৩_আয়াত_২২-২৮.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "28_4": {
+      "surah_id": 28,
+      "ruku_id": 4,
+      "file": "২৮_সূরা_আল-ক্বাসাস/রুকু-০৪_আয়াত_২৯-৩৫.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "28_5": {
+      "surah_id": 28,
+      "ruku_id": 5,
+      "file": "২৮_সূরা_আল-ক্বাসাস/রুকু-০৫_আয়াত_৩৬-৪২.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "28_6": {
+      "surah_id": 28,
+      "ruku_id": 6,
+      "file": "২৮_সূরা_আল-ক্বাসাস/রুকু-০৬_আয়াত_৪৩-৫০.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "28_7": {
+      "surah_id": 28,
+      "ruku_id": 7,
+      "file": "২৮_সূরা_আল-ক্বাসাস/রুকু-০৭_আয়াত_৫১-৬০.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "28_8": {
+      "surah_id": 28,
+      "ruku_id": 8,
+      "file": "২৮_সূরা_আল-ক্বাসাস/রুকু-০৮_আয়াত_৬১-৭৫.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "28_9": {
+      "surah_id": 28,
+      "ruku_id": 9,
+      "file": "২৮_সূরা_আল-ক্বাসাস/রুকু-০৯_আয়াত_৭৬-৮৮.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "29_1": {
+      "surah_id": 29,
+      "ruku_id": 1,
+      "file": "২৯_সূরা_আল-আনকাবূত/রুকু-০১_আয়াত_১-১৩.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "29_2": {
+      "surah_id": 29,
+      "ruku_id": 2,
+      "file": "২৯_সূরা_আল-আনকাবূত/রুকু-০২_আয়াত_১৪-২২.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "29_3": {
+      "surah_id": 29,
+      "ruku_id": 3,
+      "file": "২৯_সূরা_আল-আনকাবূত/রুকু-০৩_আয়াত_২৩-৩৫.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "29_4": {
+      "surah_id": 29,
+      "ruku_id": 4,
+      "file": "২৯_সূরা_আল-আনকাবূত/রুকু-০৪_আয়াত_৩৬-৪৪.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "29_5": {
+      "surah_id": 29,
+      "ruku_id": 5,
+      "file": "২৯_সূরা_আল-আনকাবূত/রুকু-০৫_আয়াত_৪৫-৫১.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "29_6": {
+      "surah_id": 29,
+      "ruku_id": 6,
+      "file": "২৯_সূরা_আল-আনকাবূত/রুকু-০৬_আয়াত_৫২-৬৩.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "29_7": {
+      "surah_id": 29,
+      "ruku_id": 7,
+      "file": "২৯_সূরা_আল-আনকাবূত/রুকু-০৭_আয়াত_৬৪-৬৯.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "30_1": {
+      "surah_id": 30,
+      "ruku_id": 1,
+      "file": "৩০_সূরা_আর-রূম/রুকু-০১_আয়াত_১-১০.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "30_2": {
+      "surah_id": 30,
+      "ruku_id": 2,
+      "file": "৩০_সূরা_আর-রূম/রুকু-০২_আয়াত_১১-১৯.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "30_3": {
+      "surah_id": 30,
+      "ruku_id": 3,
+      "file": "৩০_সূরা_আর-রূম/রুকু-০৩_আয়াত_২০-২৭.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "30_4": {
+      "surah_id": 30,
+      "ruku_id": 4,
+      "file": "৩০_সূরা_আর-রূম/রুকু-০৪_আয়াত_২৮-৪০.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "30_5": {
+      "surah_id": 30,
+      "ruku_id": 5,
+      "file": "৩০_সূরা_আর-রূম/রুকু-০৫_আয়াত_৪১-৫৩.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "30_6": {
+      "surah_id": 30,
+      "ruku_id": 6,
+      "file": "৩০_সূরা_আর-রূম/রুকু-০৬_আয়াত_৫৪-৬০.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "31_1": {
+      "surah_id": 31,
+      "ruku_id": 1,
+      "file": "৩১_সূরা_লুকমান/রুকু-০১_আয়াত_১-১১.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "31_2": {
+      "surah_id": 31,
+      "ruku_id": 2,
+      "file": "৩১_সূরা_লুকমান/রুকু-০২_আয়াত_১২-১৯.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "31_3": {
+      "surah_id": 31,
+      "ruku_id": 3,
+      "file": "৩১_সূরা_লুকমান/রুকু-০৩_আয়াত_২০-৩০.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "31_4": {
+      "surah_id": 31,
+      "ruku_id": 4,
+      "file": "৩১_সূরা_লুকমান/রুকু-০৪_আয়াত_৩১-৩৪.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "32_1": {
+      "surah_id": 32,
+      "ruku_id": 1,
+      "file": "৩২_সূরা_আস-সাজদাহ/রুকু-০১_আয়াত_১-১১.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "32_2": {
+      "surah_id": 32,
+      "ruku_id": 2,
+      "file": "৩২_সূরা_আস-সাজদাহ/রুকু-০২_আয়াত_১২-২২.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "32_3": {
+      "surah_id": 32,
+      "ruku_id": 3,
+      "file": "৩২_সূরা_আস-সাজদাহ/রুকু-০৩_আয়াত_২৩-৩০.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "33_1": {
+      "surah_id": 33,
+      "ruku_id": 1,
+      "file": "৩৩_সূরা_আল-আহযাব/রুকু-০১_আয়াত_১-৮.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "33_2": {
+      "surah_id": 33,
+      "ruku_id": 2,
+      "file": "৩৩_সূরা_আল-আহযাব/রুকু-০২_আয়াত_৯-২০.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "33_3": {
+      "surah_id": 33,
+      "ruku_id": 3,
+      "file": "৩৩_সূরা_আল-আহযাব/রুকু-০৩_আয়াত_২১-২৭.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "33_4": {
+      "surah_id": 33,
+      "ruku_id": 4,
+      "file": "৩৩_সূরা_আল-আহযাব/রুকু-০৪_আয়াত_২৮-৩৪.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "33_5": {
+      "surah_id": 33,
+      "ruku_id": 5,
+      "file": "৩৩_সূরা_আল-আহযাব/রুকু-০৫_আয়াত_৩৫-৪০.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "33_6": {
+      "surah_id": 33,
+      "ruku_id": 6,
+      "file": "৩৩_সূরা_আল-আহযাব/রুকু-০৬_আয়াত_৪১-৫২.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "33_7": {
+      "surah_id": 33,
+      "ruku_id": 7,
+      "file": "৩৩_সূরা_আল-আহযাব/রুকু-০৭_আয়াত_৫৩-৫৮.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "33_8": {
+      "surah_id": 33,
+      "ruku_id": 8,
+      "file": "৩৩_সূরা_আল-আহযাব/রুকু-০৮_আয়াত_৫৯-৬৮.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "33_9": {
+      "surah_id": 33,
+      "ruku_id": 9,
+      "file": "৩৩_সূরা_আল-আহযাব/রুকু-০৯_আয়াত_৬৯-৭৩.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "34_1": {
+      "surah_id": 34,
+      "ruku_id": 1,
+      "file": "৩৪_সূরা_সাবা/রুকু-০১_আয়াত_১-৯.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "34_2": {
+      "surah_id": 34,
+      "ruku_id": 2,
+      "file": "৩৪_সূরা_সাবা/রুকু-০২_আয়াত_১০-২১.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "34_3": {
+      "surah_id": 34,
+      "ruku_id": 3,
+      "file": "৩৪_সূরা_সাবা/রুকু-০৩_আয়াত_২২-৩০.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "34_4": {
+      "surah_id": 34,
+      "ruku_id": 4,
+      "file": "৩৪_সূরা_সাবা/রুকু-০৪_আয়াত_৩১-৩৬.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "34_5": {
+      "surah_id": 34,
+      "ruku_id": 5,
+      "file": "৩৪_সূরা_সাবা/রুকু-০৫_আয়াত_৩৭-৪৫.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "34_6": {
+      "surah_id": 34,
+      "ruku_id": 6,
+      "file": "৩৪_সূরা_সাবা/রুকু-০৬_আয়াত_৪৬-৫৪.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "35_1": {
+      "surah_id": 35,
+      "ruku_id": 1,
+      "file": "৩৫_সূরা_ফাতির/রুকু-০১_আয়াত_১-৭.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "35_2": {
+      "surah_id": 35,
+      "ruku_id": 2,
+      "file": "৩৫_সূরা_ফাতির/রুকু-০২_আয়াত_৮-১৪.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "35_3": {
+      "surah_id": 35,
+      "ruku_id": 3,
+      "file": "৩৫_সূরা_ফাতির/রুকু-০৩_আয়াত_১৫-২৬.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "35_4": {
+      "surah_id": 35,
+      "ruku_id": 4,
+      "file": "৩৫_সূরা_ফাতির/রুকু-০৪_আয়াত_২৭-৩৭.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "35_5": {
+      "surah_id": 35,
+      "ruku_id": 5,
+      "file": "৩৫_সূরা_ফাতির/রুকু-০৫_আয়াত_৩৮-৪৫.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "36_1": {
+      "surah_id": 36,
+      "ruku_id": 1,
+      "file": "৩৬_সূরা_ইয়াসীন/রুকু-০১_আয়াত_১-১২.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "36_2": {
+      "surah_id": 36,
+      "ruku_id": 2,
+      "file": "৩৬_সূরা_ইয়াসীন/রুকু-০২_আয়াত_১৩-৩২.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "36_3": {
+      "surah_id": 36,
+      "ruku_id": 3,
+      "file": "৩৬_সূরা_ইয়াসীন/রুকু-০৩_আয়াত_৩৩-৫০.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "36_4": {
+      "surah_id": 36,
+      "ruku_id": 4,
+      "file": "৩৬_সূরা_ইয়াসীন/রুকু-০৪_আয়াত_৫১-৬৭.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "36_5": {
+      "surah_id": 36,
+      "ruku_id": 5,
+      "file": "৩৬_সূরা_ইয়াসীন/রুকু-০৫_আয়াত_৬৮-৮৩.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "37_1": {
+      "surah_id": 37,
+      "ruku_id": 1,
+      "file": "৩৭_সূরা_আস-সাফফাত/রুকু-০১_আয়াত_১-৩৬.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "37_2": {
+      "surah_id": 37,
+      "ruku_id": 2,
+      "file": "৩৭_সূরা_আস-সাফফাত/রুকু-০২_আয়াত_৩৭-৭৪.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "37_3": {
+      "surah_id": 37,
+      "ruku_id": 3,
+      "file": "৩৭_সূরা_আস-সাফফাত/রুকু-০৩_আয়াত_৭৫-১১৩.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "37_4": {
+      "surah_id": 37,
+      "ruku_id": 4,
+      "file": "৩৭_সূরা_আস-সাফফাত/রুকু-০৪_আয়াত_১১৪-১৩৮.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "37_5": {
+      "surah_id": 37,
+      "ruku_id": 5,
+      "file": "৩৭_সূরা_আস-সাফফাত/রুকু-০৫_আয়াত_১৩৯-১৮২.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "38_1": {
+      "surah_id": 38,
+      "ruku_id": 1,
+      "file": "৩৮_সূরা_সোয়াদ/রুকু-০১_আয়াত_১-১৪.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "38_2": {
+      "surah_id": 38,
+      "ruku_id": 2,
+      "file": "৩৮_সূরা_সোয়াদ/রুকু-০২_আয়াত_১৫-২৬.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "38_3": {
+      "surah_id": 38,
+      "ruku_id": 3,
+      "file": "৩৮_সূরা_সোয়াদ/রুকু-০৩_আয়াত_২৭-৪০.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "38_4": {
+      "surah_id": 38,
+      "ruku_id": 4,
+      "file": "৩৮_সূরা_সোয়াদ/রুকু-০৪_আয়াত_৪১-৬৪.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "38_5": {
+      "surah_id": 38,
+      "ruku_id": 5,
+      "file": "৩৮_সূরা_সোয়াদ/রুকু-০৫_আয়াত_৬৫-৮৮.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "39_1": {
+      "surah_id": 39,
+      "ruku_id": 1,
+      "file": "৩৯_সূরা_আয-যুমার/রুকু-০১_আয়াত_১-৯.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "39_2": {
+      "surah_id": 39,
+      "ruku_id": 2,
+      "file": "৩৯_সূরা_আয-যুমার/রুকু-০২_আয়াত_১০-২১.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "39_3": {
+      "surah_id": 39,
+      "ruku_id": 3,
+      "file": "৩৯_সূরা_আয-যুমার/রুকু-০৩_আয়াত_২২-৩১.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "39_4": {
+      "surah_id": 39,
+      "ruku_id": 4,
+      "file": "৩৯_সূরা_আয-যুমার/রুকু-০৪_আয়াত_৩২-৪১.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "39_5": {
+      "surah_id": 39,
+      "ruku_id": 5,
+      "file": "৩৯_সূরা_আয-যুমার/রুকু-০৫_আয়াত_৪২-৫২.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "39_6": {
+      "surah_id": 39,
+      "ruku_id": 6,
+      "file": "৩৯_সূরা_আয-যুমার/রুকু-০৬_আয়াত_৫৩-৬৩.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "39_7": {
+      "surah_id": 39,
+      "ruku_id": 7,
+      "file": "৩৯_সূরা_আয-যুমার/রুকু-০৭_আয়াত_৬৪-৭০.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "39_8": {
+      "surah_id": 39,
+      "ruku_id": 8,
+      "file": "৩৯_সূরা_আয-যুমার/রুকু-০৮_আয়াত_৭১-৭৫.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "40_1": {
+      "surah_id": 40,
+      "ruku_id": 1,
+      "file": "৪০_সূরা_গাফির/রুকু-০১_আয়াত_১-৯.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "40_2": {
+      "surah_id": 40,
+      "ruku_id": 2,
+      "file": "৪০_সূরা_গাফির/রুকু-০২_আয়াত_১০-২০.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "40_3": {
+      "surah_id": 40,
+      "ruku_id": 3,
+      "file": "৪০_সূরা_গাফির/রুকু-০৩_আয়াত_২১-২৭.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "40_4": {
+      "surah_id": 40,
+      "ruku_id": 4,
+      "file": "৪০_সূরা_গাফির/রুকু-০৪_আয়াত_২৮-৩৭.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "40_5": {
+      "surah_id": 40,
+      "ruku_id": 5,
+      "file": "৪০_সূরা_গাফির/রুকু-০৫_আয়াত_৩৮-৫০.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "40_6": {
+      "surah_id": 40,
+      "ruku_id": 6,
+      "file": "৪০_সূরা_গাফির/রুকু-০৬_আয়াত_৫১-৬০.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "40_7": {
+      "surah_id": 40,
+      "ruku_id": 7,
+      "file": "৪০_সূরা_গাফির/রুকু-০৭_আয়াত_৬১-৬৮.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "40_8": {
+      "surah_id": 40,
+      "ruku_id": 8,
+      "file": "৪০_সূরা_গাফির/রুকু-০৮_আয়াত_৬৯-৭৮.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "40_9": {
+      "surah_id": 40,
+      "ruku_id": 9,
+      "file": "৪০_সূরা_গাফির/রুকু-০৯_আয়াত_৭৯-৮৫.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "41_1": {
+      "surah_id": 41,
+      "ruku_id": 1,
+      "file": "৪১_সূরা_ফুসসিলাত/রুকু-০১_আয়াত_১-৮.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "41_2": {
+      "surah_id": 41,
+      "ruku_id": 2,
+      "file": "৪১_সূরা_ফুসসিলাত/রুকু-০২_আয়াত_৯-১৮.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "41_3": {
+      "surah_id": 41,
+      "ruku_id": 3,
+      "file": "৪১_সূরা_ফুসসিলাত/রুকু-০৩_আয়াত_১৯-২৫.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "41_4": {
+      "surah_id": 41,
+      "ruku_id": 4,
+      "file": "৪১_সূরা_ফুসসিলাত/রুকু-০৪_আয়াত_২৬-৩২.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "41_5": {
+      "surah_id": 41,
+      "ruku_id": 5,
+      "file": "৪১_সূরা_ফুসসিলাত/রুকু-০৫_আয়াত_৩৩-৪৬.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "41_6": {
+      "surah_id": 41,
+      "ruku_id": 6,
+      "file": "৪১_সূরা_ফুসসিলাত/রুকু-০৬_আয়াত_৪৭-৫৪.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "42_1": {
+      "surah_id": 42,
+      "ruku_id": 1,
+      "file": "৪২_সূরা_আশ-শূরা/রুকু-০১_আয়াত_১-৯.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "42_2": {
+      "surah_id": 42,
+      "ruku_id": 2,
+      "file": "৪২_সূরা_আশ-শূরা/রুকু-০২_আয়াত_১০-১৯.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "42_3": {
+      "surah_id": 42,
+      "ruku_id": 3,
+      "file": "৪২_সূরা_আশ-শূরা/রুকু-০৩_আয়াত_২০-২৯.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "42_4": {
+      "surah_id": 42,
+      "ruku_id": 4,
+      "file": "৪২_সূরা_আশ-শূরা/রুকু-০৪_আয়াত_৩০-৪৩.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "42_5": {
+      "surah_id": 42,
+      "ruku_id": 5,
+      "file": "৪২_সূরা_আশ-শূরা/রুকু-০৫_আয়াত_৪৪-৫৩.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "43_1": {
+      "surah_id": 43,
+      "ruku_id": 1,
+      "file": "৪৩_সূরা_আয-যুখরুফ/রুকু-০১_আয়াত_১-১৫.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "43_2": {
+      "surah_id": 43,
+      "ruku_id": 2,
+      "file": "৪৩_সূরা_আয-যুখরুফ/রুকু-০২_আয়াত_১৬-২৫.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "43_3": {
+      "surah_id": 43,
+      "ruku_id": 3,
+      "file": "৪৩_সূরা_আয-যুখরুফ/রুকু-০৩_আয়াত_২৬-৩৫.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "43_4": {
+      "surah_id": 43,
+      "ruku_id": 4,
+      "file": "৪৩_সূরা_আয-যুখরুফ/রুকু-০৪_আয়াত_৩৬-৪৫.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "43_5": {
+      "surah_id": 43,
+      "ruku_id": 5,
+      "file": "৪৩_সূরা_আয-যুখরুফ/রুকু-০৫_আয়াত_৪৬-৫৬.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "43_6": {
+      "surah_id": 43,
+      "ruku_id": 6,
+      "file": "৪৩_সূরা_আয-যুখরুফ/রুকু-০৬_আয়াত_৫৭-৬৭.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "43_7": {
+      "surah_id": 43,
+      "ruku_id": 7,
+      "file": "৪৩_সূরা_আয-যুখরুফ/রুকু-০৭_আয়াত_৬৮-৮৯.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "44_1": {
+      "surah_id": 44,
+      "ruku_id": 1,
+      "file": "৪৪_সূরা_আদ-দুখান/রুকু-০১_আয়াত_১-২৯.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "44_2": {
+      "surah_id": 44,
+      "ruku_id": 2,
+      "file": "৪৪_সূরা_আদ-দুখান/রুকু-০২_আয়াত_৩০-৪২.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "44_3": {
+      "surah_id": 44,
+      "ruku_id": 3,
+      "file": "৪৪_সূরা_আদ-দুখান/রুকু-০৩_আয়াত_৪৩-৫৯.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "45_1": {
+      "surah_id": 45,
+      "ruku_id": 1,
+      "file": "৪৫_সূরা_আল-জাসিয়াহ/রুকু-০১_আয়াত_১-১১.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "45_2": {
+      "surah_id": 45,
+      "ruku_id": 2,
+      "file": "৪৫_সূরা_আল-জাসিয়াহ/রুকু-০২_আয়াত_১২-২১.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "45_3": {
+      "surah_id": 45,
+      "ruku_id": 3,
+      "file": "৪৫_সূরা_আল-জাসিয়াহ/রুকু-০৩_আয়াত_২২-২৬.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "45_4": {
+      "surah_id": 45,
+      "ruku_id": 4,
+      "file": "৪৫_সূরা_আল-জাসিয়াহ/রুকু-০৪_আয়াত_২৭-৩৭.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "46_1": {
+      "surah_id": 46,
+      "ruku_id": 1,
+      "file": "৪৬_সূরা_আল-আহক্বাফ/রুকু-০১_আয়াত_১-১০.md",
+      "passed": false,
+      "status": "needs_work",
+      "errors": [
+        "STUB ERROR: অনুবাদ সারণিতে বঙ্গানুবাদের প্লেসহোল্ডার ট্যাগ পাওয়া গেছে!",
+        "STUB ERROR: মুফরাদাত সারণিতে প্লেসহোল্ডার কলাম/শিরোনাম পাওয়া গেছে!"
+      ],
+      "warnings": []
+    },
+    "46_2": {
+      "surah_id": 46,
+      "ruku_id": 2,
+      "file": "৪৬_সূরা_আল-আহক্বাফ/রুকু-০২_আয়াত_১১-২০.md",
+      "passed": false,
+      "status": "needs_work",
+      "errors": [
+        "STUB ERROR: অনুবাদ সারণিতে বঙ্গানুবাদের প্লেসহোল্ডার ট্যাগ পাওয়া গেছে!",
+        "STUB ERROR: মুফরাদাত সারণিতে প্লেসহোল্ডার কলাম/শিরোনাম পাওয়া গেছে!"
+      ],
+      "warnings": []
+    },
+    "46_3": {
+      "surah_id": 46,
+      "ruku_id": 3,
+      "file": "৪৬_সূরা_আল-আহক্বাফ/রুকু-০৩_আয়াত_২১-২৬.md",
+      "passed": false,
+      "status": "needs_work",
+      "errors": [
+        "STUB ERROR: অনুবাদ সারণিতে বঙ্গানুবাদের প্লেসহোল্ডার ট্যাগ পাওয়া গেছে!",
+        "STUB ERROR: মুফরাদাত সারণিতে প্লেসহোল্ডার কলাম/শিরোনাম পাওয়া গেছে!"
+      ],
+      "warnings": []
+    },
+    "46_4": {
+      "surah_id": 46,
+      "ruku_id": 4,
+      "file": "৪৬_সূরা_আল-আহক্বাফ/রুকু-০৪_আয়াত_২৭-৩৫.md",
+      "passed": false,
+      "status": "needs_work",
+      "errors": [
+        "STUB ERROR: অনুবাদ সারণিতে বঙ্গানুবাদের প্লেসহোল্ডার ট্যাগ পাওয়া গেছে!",
+        "STUB ERROR: মুফরাদাত সারণিতে প্লেসহোল্ডার কলাম/শিরোনাম পাওয়া গেছে!"
+      ],
+      "warnings": []
+    },
+    "47_1": {
+      "surah_id": 47,
+      "ruku_id": 1,
+      "file": "47_সূরা_মুহাম্মদ/রুকু-01_আয়াত_1-11.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "47_2": {
+      "surah_id": 47,
+      "ruku_id": 2,
+      "file": "47_সূরা_মুহাম্মদ/রুকু-02_আয়াত_12-19.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "47_3": {
+      "surah_id": 47,
+      "ruku_id": 3,
+      "file": "47_সূরা_মুহাম্মদ/রুকু-03_আয়াত_20-28.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "47_4": {
+      "surah_id": 47,
+      "ruku_id": 4,
+      "file": "47_সূরা_মুহাম্মদ/রুকু-04_আয়াত_29-38.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "48_1": {
+      "surah_id": 48,
+      "ruku_id": 1,
+      "file": "48_সূরা_আল-ফাতহ/রুকু-01_আয়াত_1-10.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "48_2": {
+      "surah_id": 48,
+      "ruku_id": 2,
+      "file": "48_সূরা_আল-ফাতহ/রুকু-02_আয়াত_11-17.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "48_3": {
+      "surah_id": 48,
+      "ruku_id": 3,
+      "file": "48_সূরা_আল-ফাতহ/রুকু-03_আয়াত_18-26.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "48_4": {
+      "surah_id": 48,
+      "ruku_id": 4,
+      "file": "48_সূরা_আল-ফাতহ/রুকু-04_আয়াত_27-29.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "49_1": {
+      "surah_id": 49,
+      "ruku_id": 1,
+      "file": "49_সূরা_আল-হুজুরাত/রুকু-01_আয়াত_1-10.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "49_2": {
+      "surah_id": 49,
+      "ruku_id": 2,
+      "file": "49_সূরা_আল-হুজুরাত/রুকু-02_আয়াত_11-18.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "50_1": {
+      "surah_id": 50,
+      "ruku_id": 1,
+      "file": "50_সূরা_ক্বাফ/রুকু-01_আয়াত_1-15.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "50_2": {
+      "surah_id": 50,
+      "ruku_id": 2,
+      "file": "50_সূরা_ক্বাফ/রুকু-02_আয়াত_16-29.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "50_3": {
+      "surah_id": 50,
+      "ruku_id": 3,
+      "file": "50_সূরা_ক্বাফ/রুকু-03_আয়াত_30-45.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "51_1": {
+      "surah_id": 51,
+      "ruku_id": 1,
+      "file": "51_সূরা_আয-যারিয়াত/রুকু-01_আয়াত_1-23.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "51_2": {
+      "surah_id": 51,
+      "ruku_id": 2,
+      "file": "51_সূরা_আয-যারিয়াত/রুকু-02_আয়াত_24-46.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "51_3": {
+      "surah_id": 51,
+      "ruku_id": 3,
+      "file": "51_সূরা_আয-যারিয়াত/রুকু-03_আয়াত_47-60.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "52_1": {
+      "surah_id": 52,
+      "ruku_id": 1,
+      "file": "52_সূরা_আত-তূর/রুকু-01_আয়াত_1-28.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "52_2": {
+      "surah_id": 52,
+      "ruku_id": 2,
+      "file": "52_সূরা_আত-তূর/রুকু-02_আয়াত_29-49.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "53_1": {
+      "surah_id": 53,
+      "ruku_id": 1,
+      "file": "53_সূরা_আন-নাজম/রুকু-01_আয়াত_1-32.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "53_2": {
+      "surah_id": 53,
+      "ruku_id": 2,
+      "file": "53_সূরা_আন-নাজম/রুকু-02_আয়াত_33-62.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "54_1": {
+      "surah_id": 54,
+      "ruku_id": 1,
+      "file": "54_সূরা_আল-ক্বামার/রুকু-01_আয়াত_1-22.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "54_2": {
+      "surah_id": 54,
+      "ruku_id": 2,
+      "file": "54_সূরা_আল-ক্বামার/রুকু-02_আয়াত_23-40.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "54_3": {
+      "surah_id": 54,
+      "ruku_id": 3,
+      "file": "54_সূরা_আল-ক্বামার/রুকু-03_আয়াত_41-55.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "55_1": {
+      "surah_id": 55,
+      "ruku_id": 1,
+      "file": "55_সূরা_আর-রহমান/রুকু-01_আয়াত_1-25.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "55_2": {
+      "surah_id": 55,
+      "ruku_id": 2,
+      "file": "55_সূরা_আর-রহমান/রুকু-02_আয়াত_26-45.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "55_3": {
+      "surah_id": 55,
+      "ruku_id": 3,
+      "file": "55_সূরা_আর-রহমান/রুকু-03_আয়াত_46-78.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "56_1": {
+      "surah_id": 56,
+      "ruku_id": 1,
+      "file": "56_সূরা_আল-ওয়াক্বি‘আহ/রুকু-01_আয়াত_1-38.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "56_2": {
+      "surah_id": 56,
+      "ruku_id": 2,
+      "file": "56_সূরা_আল-ওয়াক্বি‘আহ/রুকু-02_আয়াত_39-74.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "56_3": {
+      "surah_id": 56,
+      "ruku_id": 3,
+      "file": "56_সূরা_আল-ওয়াক্বি‘আহ/রুকু-03_আয়াত_75-96.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "57_1": {
+      "surah_id": 57,
+      "ruku_id": 1,
+      "file": "57_সূরা_আল-হাদীদ/রুকু-01_আয়াত_1-10.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "57_2": {
+      "surah_id": 57,
+      "ruku_id": 2,
+      "file": "57_সূরা_আল-হাদীদ/রুকু-02_আয়াত_11-19.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "57_3": {
+      "surah_id": 57,
+      "ruku_id": 3,
+      "file": "57_সূরা_আল-হাদীদ/রুকু-03_আয়াত_20-25.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "57_4": {
+      "surah_id": 57,
+      "ruku_id": 4,
+      "file": "57_সূরা_আল-হাদীদ/রুকু-04_আয়াত_26-29.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "58_1": {
+      "surah_id": 58,
+      "ruku_id": 1,
+      "file": "58_সূরা_আল-মুজাদালাহ/রুকু-01_আয়াত_1-6.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "58_2": {
+      "surah_id": 58,
+      "ruku_id": 2,
+      "file": "58_সূরা_আল-মুজাদালাহ/রুকু-02_আয়াত_7-13.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "58_3": {
+      "surah_id": 58,
+      "ruku_id": 3,
+      "file": "58_সূরা_আল-মুজাদালাহ/রুকু-03_আয়াত_14-22.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "59_1": {
+      "surah_id": 59,
+      "ruku_id": 1,
+      "file": "59_সূরা_আল-হাশর/রুকু-01_আয়াত_1-10.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "59_2": {
+      "surah_id": 59,
+      "ruku_id": 2,
+      "file": "59_সূরা_আল-হাশর/রুকু-02_আয়াত_11-17.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "59_3": {
+      "surah_id": 59,
+      "ruku_id": 3,
+      "file": "59_সূরা_আল-হাশর/রুকু-03_আয়াত_18-24.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "60_1": {
+      "surah_id": 60,
+      "ruku_id": 1,
+      "file": "60_সূরা_আল-মুমতাহানাহ/রুকু-01_আয়াত_1-6.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "60_2": {
+      "surah_id": 60,
+      "ruku_id": 2,
+      "file": "60_সূরা_আল-মুমতাহানাহ/রুকু-02_আয়াত_7-13.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "61_1": {
+      "surah_id": 61,
+      "ruku_id": 1,
+      "file": "61_সূরা_আস-সাফ/রুকু-01_আয়াত_1-9.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "61_2": {
+      "surah_id": 61,
+      "ruku_id": 2,
+      "file": "61_সূরা_আস-সাফ/রুকু-02_আয়াত_10-14.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "62_1": {
+      "surah_id": 62,
+      "ruku_id": 1,
+      "file": "62_সূরা_আল-জুমু‘আহ/রুকু-01_আয়াত_1-8.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "62_2": {
+      "surah_id": 62,
+      "ruku_id": 2,
+      "file": "62_সূরা_আল-জুমু‘আহ/রুকু-02_আয়াত_9-11.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "63_1": {
+      "surah_id": 63,
+      "ruku_id": 1,
+      "file": "63_সূরা_আল-মুনাফিকূন/রুকু-01_আয়াত_1-8.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "63_2": {
+      "surah_id": 63,
+      "ruku_id": 2,
+      "file": "63_সূরা_আল-মুনাফিকূন/রুকু-02_আয়াত_9-11.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "64_1": {
+      "surah_id": 64,
+      "ruku_id": 1,
+      "file": "64_সূরা_আত-তাগাবুন/রুকু-01_আয়াত_1-9.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "64_2": {
+      "surah_id": 64,
+      "ruku_id": 2,
+      "file": "64_সূরা_আত-তাগাবুন/রুকু-02_আয়াত_10-18.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "65_1": {
+      "surah_id": 65,
+      "ruku_id": 1,
+      "file": "65_সূরা_আত-ত্বালাক্ব/রুকু-01_আয়াত_1-7.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "65_2": {
+      "surah_id": 65,
+      "ruku_id": 2,
+      "file": "65_সূরা_আত-ত্বালাক্ব/রুকু-02_আয়াত_8-12.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "66_1": {
+      "surah_id": 66,
+      "ruku_id": 1,
+      "file": "66_সূরা_আত-তাহরীম/রুকু-01_আয়াত_1-7.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "66_2": {
+      "surah_id": 66,
+      "ruku_id": 2,
+      "file": "66_সূরা_আত-তাহরীম/রুকু-02_আয়াত_8-12.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "67_1": {
+      "surah_id": 67,
+      "ruku_id": 1,
+      "file": "67_সূরা_আল-মুলক/রুকু-01_আয়াত_1-14.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "67_2": {
+      "surah_id": 67,
+      "ruku_id": 2,
+      "file": "67_সূরা_আল-মুলক/রুকু-02_আয়াত_15-30.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "68_1": {
+      "surah_id": 68,
+      "ruku_id": 1,
+      "file": "68_সূরা_আল-ক্বলম/রুকু-01_আয়াত_1-33.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "68_2": {
+      "surah_id": 68,
+      "ruku_id": 2,
+      "file": "68_সূরা_আল-ক্বলম/রুকু-02_আয়াত_34-52.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "69_1": {
+      "surah_id": 69,
+      "ruku_id": 1,
+      "file": "69_সূরা_আল-হা ক্বক্বাহ/রুকু-01_আয়াত_1-37.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "69_2": {
+      "surah_id": 69,
+      "ruku_id": 2,
+      "file": "69_সূরা_আল-হা ক্বক্বাহ/রুকু-02_আয়াত_38-52.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "70_1": {
+      "surah_id": 70,
+      "ruku_id": 1,
+      "file": "70_সূরা_আল-মা‘আরিজ/রুকু-01_আয়াত_1-35.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "70_2": {
+      "surah_id": 70,
+      "ruku_id": 2,
+      "file": "70_সূরা_আল-মা‘আরিজ/রুকু-02_আয়াত_36-44.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "71_1": {
+      "surah_id": 71,
+      "ruku_id": 1,
+      "file": "71_সূরা_নূহ/রুকু-01_আয়াত_1-20.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "71_2": {
+      "surah_id": 71,
+      "ruku_id": 2,
+      "file": "71_সূরা_নূহ/রুকু-02_আয়াত_21-28.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "72_1": {
+      "surah_id": 72,
+      "ruku_id": 1,
+      "file": "72_সূরা_আল-জিন/রুকু-01_আয়াত_1-19.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "72_2": {
+      "surah_id": 72,
+      "ruku_id": 2,
+      "file": "72_সূরা_আল-জিন/রুকু-02_আয়াত_20-28.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "73_1": {
+      "surah_id": 73,
+      "ruku_id": 1,
+      "file": "73_সূরা_আল-মুযযাম্মিল/রুকু-01_আয়াত_1-19.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "73_2": {
+      "surah_id": 73,
+      "ruku_id": 2,
+      "file": "73_সূরা_আল-মুযযাম্মিল/রুকু-02_আয়াত_20-20.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "74_1": {
+      "surah_id": 74,
+      "ruku_id": 1,
+      "file": "74_সূরা_আল-মুদ্দাসসির/রুকু-01_আয়াত_1-31.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "74_2": {
+      "surah_id": 74,
+      "ruku_id": 2,
+      "file": "74_সূরা_আল-মুদ্দাসসির/রুকু-02_আয়াত_32-56.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "75_1": {
+      "surah_id": 75,
+      "ruku_id": 1,
+      "file": "75_সূরা_আল-ক্বিয়ামাহ/রুকু-01_আয়াত_1-30.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "75_2": {
+      "surah_id": 75,
+      "ruku_id": 2,
+      "file": "75_সূরা_আল-ক্বিয়ামাহ/রুকু-02_আয়াত_31-40.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "76_1": {
+      "surah_id": 76,
+      "ruku_id": 1,
+      "file": "76_সূরা_আল-ইনসান/রুকু-01_আয়াত_1-22.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "76_2": {
+      "surah_id": 76,
+      "ruku_id": 2,
+      "file": "76_সূরা_আল-ইনসান/রুকু-02_আয়াত_23-31.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "77_1": {
+      "surah_id": 77,
+      "ruku_id": 1,
+      "file": "77_সূরা_আল-মুরসালাত/রুকু-01_আয়াত_1-40.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "77_2": {
+      "surah_id": 77,
+      "ruku_id": 2,
+      "file": "77_সূরা_আল-মুরসালাত/রুকু-02_আয়াত_41-50.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "78_1": {
+      "surah_id": 78,
+      "ruku_id": 1,
+      "file": "78_সূরা_আন-নাবা/রুকু-01_আয়াত_1-30.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "78_2": {
+      "surah_id": 78,
+      "ruku_id": 2,
+      "file": "78_সূরা_আন-নাবা/রুকু-02_আয়াত_31-40.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "79_1": {
+      "surah_id": 79,
+      "ruku_id": 1,
+      "file": "79_সূরা_আন-নাযি‘আত/রুকু-01_আয়াত_1-26.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "79_2": {
+      "surah_id": 79,
+      "ruku_id": 2,
+      "file": "79_সূরা_আন-নাযি‘আত/রুকু-02_আয়াত_27-46.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "80_1": {
+      "surah_id": 80,
+      "ruku_id": 1,
+      "file": "80_সূরা_‘আবাসা/রুকু-01_আয়াত_1-42.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "81_1": {
+      "surah_id": 81,
+      "ruku_id": 1,
+      "file": "81_সূরা_আত-তাকবীর/রুকু-01_আয়াত_1-29.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "82_1": {
+      "surah_id": 82,
+      "ruku_id": 1,
+      "file": "82_সূরা_আল-ইনফিতার/রুকু-01_আয়াত_1-19.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "83_1": {
+      "surah_id": 83,
+      "ruku_id": 1,
+      "file": "83_সূরা_আল-মুত্বাফফিফীন/রুকু-01_আয়াত_1-36.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "84_1": {
+      "surah_id": 84,
+      "ruku_id": 1,
+      "file": "84_সূরা_আল-ইনশিক্বাক্ব/রুকু-01_আয়াত_1-25.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "85_1": {
+      "surah_id": 85,
+      "ruku_id": 1,
+      "file": "85_সূরা_আল-বুরূজ/রুকু-01_আয়াত_1-22.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "86_1": {
+      "surah_id": 86,
+      "ruku_id": 1,
+      "file": "86_সূরা_আত-ত্বারিক্ব/রুকু-01_আয়াত_1-17.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "87_1": {
+      "surah_id": 87,
+      "ruku_id": 1,
+      "file": "87_সূরা_আল-আ‘লা/রুকু-01_আয়াত_1-19.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "88_1": {
+      "surah_id": 88,
+      "ruku_id": 1,
+      "file": "88_সূরা_আল-গাশিয়াহ/রুকু-01_আয়াত_1-26.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "89_1": {
+      "surah_id": 89,
+      "ruku_id": 1,
+      "file": "89_সূরা_আল-ফজর/রুকু-01_আয়াত_1-30.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "90_1": {
+      "surah_id": 90,
+      "ruku_id": 1,
+      "file": "90_সূরা_আল-বালাদ/রুকু-01_আয়াত_1-20.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "91_1": {
+      "surah_id": 91,
+      "ruku_id": 1,
+      "file": "91_সূরা_আশ-শামস/রুকু-01_আয়াত_1-15.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "92_1": {
+      "surah_id": 92,
+      "ruku_id": 1,
+      "file": "92_সূরা_আল-লাইল/রুকু-01_আয়াত_1-21.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "93_1": {
+      "surah_id": 93,
+      "ruku_id": 1,
+      "file": "93_সূরা_আদ্ব-দ্বুহা/রুকু-01_আয়াত_1-11.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "94_1": {
+      "surah_id": 94,
+      "ruku_id": 1,
+      "file": "94_সূরা_আশ-শারহ/রুকু-01_আয়াত_1-8.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "95_1": {
+      "surah_id": 95,
+      "ruku_id": 1,
+      "file": "95_সূরা_আত-তীন/রুকু-01_আয়াত_1-8.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "96_1": {
+      "surah_id": 96,
+      "ruku_id": 1,
+      "file": "96_সূরা_আল-‘আলাক্ব/রুকু-01_আয়াত_1-19.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "97_1": {
+      "surah_id": 97,
+      "ruku_id": 1,
+      "file": "97_সূরা_আল-ক্বদর/রুকু-01_আয়াত_1-5.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "98_1": {
+      "surah_id": 98,
+      "ruku_id": 1,
+      "file": "98_সূরা_আল-বাইয়্যিনাহ/রুকু-01_আয়াত_1-8.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "99_1": {
+      "surah_id": 99,
+      "ruku_id": 1,
+      "file": "99_সূরা_আয-যালযালাহ/রুকু-01_আয়াত_1-8.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "100_1": {
+      "surah_id": 100,
+      "ruku_id": 1,
+      "file": "100_সূরা_আল-‘আদিয়াত/রুকু-01_আয়াত_1-11.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "101_1": {
+      "surah_id": 101,
+      "ruku_id": 1,
+      "file": "101_সূরা_আল-ক্বারি‘আহ/রুকু-01_আয়াত_1-11.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "102_1": {
+      "surah_id": 102,
+      "ruku_id": 1,
+      "file": "102_সূরা_আত-তাকাসুর/রুকু-01_আয়াত_1-8.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "103_1": {
+      "surah_id": 103,
+      "ruku_id": 1,
+      "file": "103_সূরা_আল-‘আসর/রুকু-01_আয়াত_1-3.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "104_1": {
+      "surah_id": 104,
+      "ruku_id": 1,
+      "file": "104_সূরা_আল-হুমাযাহ/রুকু-01_আয়াত_1-9.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "105_1": {
+      "surah_id": 105,
+      "ruku_id": 1,
+      "file": "105_সূরা_আল-ফীল/রুকু-01_আয়াত_1-5.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "106_1": {
+      "surah_id": 106,
+      "ruku_id": 1,
+      "file": "106_সূরা_কুরাইশ/রুকু-01_আয়াত_1-4.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "107_1": {
+      "surah_id": 107,
+      "ruku_id": 1,
+      "file": "107_সূরা_আল-মা‘ঊন/রুকু-01_আয়াত_1-7.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "108_1": {
+      "surah_id": 108,
+      "ruku_id": 1,
+      "file": "108_সূরা_আল-কাউসার/রুকু-01_আয়াত_1-3.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "109_1": {
+      "surah_id": 109,
+      "ruku_id": 1,
+      "file": "109_সূরা_আল-কাফিরূন/রুকু-01_আয়াত_1-6.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "110_1": {
+      "surah_id": 110,
+      "ruku_id": 1,
+      "file": "110_সূরা_আন-নাসর/রুকু-01_আয়াত_1-3.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "111_1": {
+      "surah_id": 111,
+      "ruku_id": 1,
+      "file": "111_সূরা_আল-লাহাব/রুকু-01_আয়াত_1-5.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "112_1": {
+      "surah_id": 112,
+      "ruku_id": 1,
+      "file": "112_সূরা_আল-ইখলাস/রুকু-01_আয়াত_1-4.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "113_1": {
+      "surah_id": 113,
+      "ruku_id": 1,
+      "file": "113_সূরা_আল-ফালাক্ব/রুকু-01_আয়াত_1-5.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    },
+    "114_1": {
+      "surah_id": 114,
+      "ruku_id": 1,
+      "file": "114_সূরা_আন-নাস/রুকু-01_আয়াত_1-6.md",
+      "passed": true,
+      "status": "gold",
+      "errors": [],
+      "warnings": []
+    }
+  }
+}

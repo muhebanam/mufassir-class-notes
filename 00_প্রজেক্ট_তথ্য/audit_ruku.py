@@ -256,6 +256,27 @@ def audit_file(file_path: Path, json_report: bool = False):
                             "SCRIPT_GENERATED_QIRAAT ERROR: এই রুকুতে কোনো কিরাআত পাঠভেদ নেই; ## ৪.-এ 'প্রযোজ্য নয়' ঘোষণা থাকতে হবে।"
                         )
 
+    # ৭. কঠোর প্লেসহোল্ডার ও স্টাব চেক
+    if re.search(r'\(আয়াত [০-৯\d]+-এর প্রামাণ্য বঙ্গানুবাদ\)', content):
+        errors.append("STUB ERROR: অনুবাদ সারণিতে বঙ্গানুবাদের প্লেসহোল্ডার ট্যাগ পাওয়া গেছে!")
+    if "কুরআনিক শব্দরূপ ও আভিধানিক অর্থ" in content:
+        errors.append("STUB ERROR: মুফরাদাত সারণিতে প্লেসহোল্ডার কলাম/শিরোনাম পাওয়া গেছে!")
+    if "প্রযোজ্য নয় — এই রুকুর আয়াতসমূহের" in content or "এই রুকুর আয়াতসমূহের মৌলিক বাক্যগঠন সুস্পষ্ট" in content:
+        errors.append("STUB ERROR: ই'রাব অধ্যায়ে জেনেরিক স্টাব বাক্য পাওয়া গেছে!")
+
+    # ৮. শাস্ত্রীয় তাফসীরুল জালালাইন গ্রন্থকার নির্ভুলতা যাচাই
+    # সূরা ১৮ থেকে ১১৪: ইমাম জালালুদ্দীন আল-মহাল্লী (রহ.)
+    # সূরা ২ থেকে ১৭: ইমাম জালালুদ্দীন আস-সুয়ূতী (রহ.)
+    m_surah = re.search(r"(\d+)_সূরা_", str(file_path.parent))
+    if not m_surah:
+        m_surah = re.search(r"([০-৯0-9]+)_সূরা_", str(file_path.parent))
+    if m_surah:
+        sid = to_ascii_int(m_surah.group(1))
+        sec5 = extract_section(content, "## ৫.", "## ৬.")
+        if sid >= 18 or sid == 1:
+            if ("ইমাম সুয়ূতী" in sec5 or "আস-সুয়ূতী" in sec5) and "অপর লেখক" not in sec5:
+                errors.append(f"AUTHORSHIP ERROR: সূরা {sid}-এর জালালাইন অংশ ইমাম আল-মহাল্লীর (রহ.), সুয়ূতীর নয়!")
+
     if not json_report:
         print(f"[*] ফাইল নিরীক্ষা শুরু হচ্ছে (v3.0): {file_path.parent.name}/{file_path.name}")
         print("\n--- নিরীক্ষা ফলাফল (v3.0) ---")
@@ -273,10 +294,97 @@ def audit_file(file_path: Path, json_report: bool = False):
     return len(errors) == 0, errors, warnings
 
 
+def audit_all_rukus(base_dir: Path | None = None) -> dict:
+    if base_dir is None:
+        base_dir = Path(__file__).resolve().parent.parent
+    ruku_map_path = base_dir / "00_প্রজেক্ট_তথ্য" / "ruku_map.json"
+    with open(ruku_map_path, "r", encoding="utf-8") as f:
+        ruku_map = json.load(f)["surahs"]
+
+    results = {
+        "summary": {
+            "total_rukus": 0,
+            "gold": 0,
+            "needs_work": 0,
+        },
+        "rukus": {},
+    }
+
+    total = 0
+    passed = 0
+    failed = 0
+
+    for sid in range(24, 115):
+        s_info = ruku_map[str(sid)]
+        s_dir = base_dir / s_info["dir_name"]
+        num_r = len(s_info["rukus"])
+        for r_idx in range(1, num_r + 1):
+            total += 1
+            bn_str = "".join(BENGALI_DIGITS[int(c)] for c in f"{r_idx:02d}")
+            patterns = [
+                f"রুকু-{bn_str}_*.md",
+                f"রুকু-{r_idx:02d}_*.md",
+                f"রুকু-{r_idx}_*.md",
+                f"ruku-{r_idx:02d}*.md",
+                f"ruku_{r_idx:02d}*.md",
+            ]
+            matched_file = None
+            for pat in patterns:
+                files = list(s_dir.glob(pat))
+                if files:
+                    matched_file = files[0]
+                    break
+
+            r_key = f"{sid}_{r_idx}"
+            if not matched_file:
+                failed += 1
+                results["rukus"][r_key] = {
+                    "surah_id": sid,
+                    "ruku_id": r_idx,
+                    "file": None,
+                    "passed": False,
+                    "status": "needs_work",
+                    "errors": ["File not found"],
+                    "warnings": [],
+                }
+                continue
+
+            ok, errs, warns = audit_file(matched_file, json_report=True)
+            if ok:
+                passed += 1
+                status = "gold"
+            else:
+                failed += 1
+                status = "needs_work"
+
+            results["rukus"][r_key] = {
+                "surah_id": sid,
+                "ruku_id": r_idx,
+                "file": str(matched_file.relative_to(base_dir)).replace("\\", "/"),
+                "passed": ok,
+                "status": status,
+                "errors": errs,
+                "warnings": warns,
+            }
+
+    results["summary"]["total_rukus"] = total
+    results["summary"]["gold"] = passed
+    results["summary"]["needs_work"] = failed
+
+    out_p = base_dir / "00_প্রজেক্ট_তথ্য" / "audit_results.json"
+    with open(out_p, "w", encoding="utf-8") as f:
+        json.dump(results, f, ensure_ascii=False, indent=2)
+
+    return results
+
+
 if __name__ == "__main__":
-    if len(sys.argv) > 1:
+    if len(sys.argv) > 1 and sys.argv[1] == "--all":
+        res = audit_all_rukus()
+        print(f"Audit Complete: Total={res['summary']['total_rukus']}, Gold={res['summary']['gold']}, Needs Work={res['summary']['needs_work']}")
+    elif len(sys.argv) > 1:
         target = Path(sys.argv[1])
         success, _, _ = audit_file(target)
         sys.exit(0 if success else 1)
     else:
-        print("ব্যবহার: python audit_ruku.py <file_path>")
+        print("ব্যবহার: python audit_ruku.py <file_path> অথবা python audit_ruku.py --all")

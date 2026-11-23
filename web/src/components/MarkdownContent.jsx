@@ -1,32 +1,12 @@
 import React, { useMemo } from 'react';
 import { marked } from 'marked';
 import DOMPurify from 'dompurify';
+import { AR } from '../utils/arabicRegex';
 
 marked.setOptions({
   gfm: true,
   breaks: true,
 });
-
-// Arabic characters and diacritics
-const A = '\\u0600-\\u06FF\\u0750-\\u077F\\uFB50-\\uFDFF\\uFE70-\\uFEFF';
-const MARK = '\\u064B-\\u065F\\u0670';
-const DIGITS = '0-9\\u0660-\\u0669\\u06F0-\\u06F9';
-const AR_CHAR = `[${A}${MARK}]`;
-const AR_INNER = `[${A}${MARK}${DIGITS}\\s،؟:؛\\-–—«»“”﴿﴾]*`;
-
-// Paired Arabic expressions to prevent mismatched/swallowed closing brackets
-const PAIRS = [
-  `«${AR_INNER}${AR_CHAR}${AR_INNER}»`,
-  `“${AR_INNER}${AR_CHAR}${AR_INNER}”`,
-  `﴿${AR_INNER}${AR_CHAR}${AR_INNER}﴾`,
-  `\\(${AR_INNER}${AR_CHAR}${AR_INNER}\\)`,
-  `\\[${AR_INNER}${AR_CHAR}${AR_INNER}\\]`
-].join('|');
-
-// Bare Arabic runs (not already enclosed in paired delimiters)
-const BARE = `${AR_CHAR}[${A}${MARK}${DIGITS}\\s،؟:؛\\-–—]*${AR_CHAR}|${AR_CHAR}`;
-
-const AR = new RegExp(`(?:${PAIRS})|(?:${BARE})`, 'g');
 
 function wrapArabic(root) {
   if (!root) return;

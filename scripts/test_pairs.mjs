@@ -1,21 +1,6 @@
-const A = '\\u0600-\\u06FF\\u0750-\\u077F\\uFB50-\\uFDFF\\uFE70-\\uFEFF';
-const MARK = '\\u064B-\\u065F\\u0670';
-const DIGITS = '0-9\\u0660-\\u0669\\u06F0-\\u06F9';
-const AR_CHAR = `[${A}${MARK}]`;
-// Content inside Arabic delimiter: strictly Arabic letters, diacritics, numbers, spaces, and Arabic punctuation
-const AR_INNER = `[${A}${MARK}${DIGITS}\\s،؟:؛\\-–—«»“”﴿﴾]*`;
+import { getArabicRegex } from '../web/src/utils/arabicRegex.js';
 
-const PAIRS = [
-  `«${AR_INNER}${AR_CHAR}${AR_INNER}»`,
-  `“${AR_INNER}${AR_CHAR}${AR_INNER}”`,
-  `﴿${AR_INNER}${AR_CHAR}${AR_INNER}﴾`,
-  `\\(${AR_INNER}${AR_CHAR}${AR_INNER}\\)`,
-  `\\[${AR_INNER}${AR_CHAR}${AR_INNER}\\]`
-].join('|');
-
-const BARE = `${AR_CHAR}[${A}${MARK}${DIGITS}\\s،؟:؛\\-–—]*${AR_CHAR}|${AR_CHAR}`;
-
-const REGEX = new RegExp(`(?:${PAIRS})|(?:${BARE})`, 'g');
+const REGEX = getArabicRegex();
 
 const samples = [
   'আসার: “لَيْسَ فِي دِينِنَا تَجْرِيدٌ” (আমাদের দ্বীনে)',
@@ -29,6 +14,7 @@ const samples = [
 ];
 
 for (const s of samples) {
+  REGEX.lastIndex = 0;
   console.log('INPUT :', s);
   console.log('MATCH :', s.match(REGEX) || []);
   console.log('---');
