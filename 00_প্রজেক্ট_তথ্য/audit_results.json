@@ -1,8 +1,8 @@
 {
   "summary": {
     "total_rukus": 259,
-    "gold": 255,
-    "needs_work": 4
+    "gold": 259,
+    "needs_work": 0
   },
   "rukus": {
     "24_1": {
@@ -1280,48 +1280,36 @@
       "surah_id": 46,
       "ruku_id": 1,
       "file": "৪৬_সূরা_আল-আহক্বাফ/রুকু-০১_আয়াত_১-১০.md",
-      "passed": false,
-      "status": "needs_work",
-      "errors": [
-        "STUB ERROR: অনুবাদ সারণিতে বঙ্গানুবাদের প্লেসহোল্ডার ট্যাগ পাওয়া গেছে!",
-        "STUB ERROR: মুফরাদাত সারণিতে প্লেসহোল্ডার কলাম/শিরোনাম পাওয়া গেছে!"
-      ],
+      "passed": true,
+      "status": "gold",
+      "errors": [],
       "warnings": []
     },
     "46_2": {
       "surah_id": 46,
       "ruku_id": 2,
       "file": "৪৬_সূরা_আল-আহক্বাফ/রুকু-০২_আয়াত_১১-২০.md",
-      "passed": false,
-      "status": "needs_work",
-      "errors": [
-        "STUB ERROR: অনুবাদ সারণিতে বঙ্গানুবাদের প্লেসহোল্ডার ট্যাগ পাওয়া গেছে!",
-        "STUB ERROR: মুফরাদাত সারণিতে প্লেসহোল্ডার কলাম/শিরোনাম পাওয়া গেছে!"
-      ],
+      "passed": true,
+      "status": "gold",
+      "errors": [],
       "warnings": []
     },
     "46_3": {
       "surah_id": 46,
       "ruku_id": 3,
       "file": "৪৬_সূরা_আল-আহক্বাফ/রুকু-০৩_আয়াত_২১-২৬.md",
-      "passed": false,
-      "status": "needs_work",
-      "errors": [
-        "STUB ERROR: অনুবাদ সারণিতে বঙ্গানুবাদের প্লেসহোল্ডার ট্যাগ পাওয়া গেছে!",
-        "STUB ERROR: মুফরাদাত সারণিতে প্লেসহোল্ডার কলাম/শিরোনাম পাওয়া গেছে!"
-      ],
+      "passed": true,
+      "status": "gold",
+      "errors": [],
       "warnings": []
     },
     "46_4": {
       "surah_id": 46,
       "ruku_id": 4,
       "file": "৪৬_সূরা_আল-আহক্বাফ/রুকু-০৪_আয়াত_২৭-৩৫.md",
-      "passed": false,
-      "status": "needs_work",
-      "errors": [
-        "STUB ERROR: অনুবাদ সারণিতে বঙ্গানুবাদের প্লেসহোল্ডার ট্যাগ পাওয়া গেছে!",
-        "STUB ERROR: মুফরাদাত সারণিতে প্লেসহোল্ডার কলাম/শিরোনাম পাওয়া গেছে!"
-      ],
+      "passed": true,
+      "status": "gold",
+      "errors": [],
       "warnings": []
     },
     "47_1": {

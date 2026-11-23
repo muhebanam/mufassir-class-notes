@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, UserCheck, ShieldCheck, BookOpen, MapPin, Mail, Award, CheckCircle } from 'lucide-react';
+import { X, UserCheck, ShieldCheck, BookOpen, MapPin, Award, CheckCircle } from 'lucide-react';
 
 export default function AuthorModal({ isOpen, onClose }) {
   if (!isOpen) return null;
@@ -54,11 +54,6 @@ export default function AuthorModal({ isOpen, onClose }) {
               <div>
                 <strong>মুহাদ্দীস:</strong> জামিয়া দারুল উলূম নূরবাগ, খিলগাঁও, তালতলা, ঢাকা
               </div>
-            </div>
-
-            <div className="flex items-center gap-2">
-              <Mail className="w-4 h-4 text-emerald-600 shrink-0" />
-              <span>ইমেইল: <code className="font-mono text-emerald-700 dark:text-emerald-300">md.muheb@gmail.com</code></span>
             </div>
           </div>
         </div>

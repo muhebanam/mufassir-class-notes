@@ -100,10 +100,17 @@ body.sepia-theme {
 
 /* Rich Prose & Markdown Typography */
 .prose {
-  max-width: 70ch;
+  width: 100%;
   font-size: 1.06rem;
   line-height: 1.9;
   color: var(--ink);
+}
+
+.prose p,
+.prose ul,
+.prose ol,
+.prose blockquote {
+  max-width: 72ch;
 }
 
 .prose p {
@@ -218,4 +225,43 @@ body.sepia-theme {
 .prose th {
   background-color: var(--quote-bg);
   font-weight: 700;
+}
+
+/* Arabic inside inline code */
+code.ar-code, .ar-code {
+  font-family: 'Amiri Quran', 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  unicode-bidi: isolate;
+  background-color: var(--quote-bg);
+  color: var(--accent);
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+}
+
+/* Print optimization for Dars notes & handouts */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  header, nav, aside, button, .no-print {
+    display: none !important;
+  }
+  main {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .prose {
+    font-size: 12pt !important;
+    line-height: 1.6 !important;
+  }
+  .table-wrap {
+    overflow: visible !important;
+  }
+  table {
+    page-break-inside: avoid;
+    font-size: 10pt !important;
+  }
 }

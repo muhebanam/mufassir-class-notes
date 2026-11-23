@@ -88,7 +88,7 @@ export default function MasalaCard({ card, index }) {
         <div className="p-3.5 rounded-xl bg-emerald-50/50 dark:bg-emerald-950/20 border-l-4 border-emerald-500 border-t border-r border-b border-gray-200/60 dark:border-gray-700/60 space-y-1.5">
           <div className="flex items-center justify-between">
             <span className="text-xs font-bold uppercase tracking-wider text-emerald-800 dark:text-emerald-300 font-bengali">
-              হাম্বলী মাযহাব (الحنابلة)
+              হাম্বলী মাযহাব (الحনাبلة)
             </span>
           </div>
           <div className="text-sm text-gray-800 dark:text-gray-200 font-bengali leading-relaxed">
@@ -102,6 +102,7 @@ export default function MasalaCard({ card, index }) {
         <div className="border-t border-gray-200 dark:border-gray-700">
           <button
             onClick={() => setShowDaleel(!showDaleel)}
+            aria-expanded={showDaleel}
             className="w-full px-4 sm:px-5 py-2.5 bg-gray-50/70 dark:bg-gray-800/80 hover:bg-gray-100 dark:hover:bg-gray-700/60 flex items-center justify-between text-left text-xs sm:text-sm font-semibold text-gray-700 dark:text-gray-300 transition"
           >
             <div className="flex items-center gap-2">
@@ -126,19 +127,19 @@ export default function MasalaCard({ card, index }) {
       {/* Sources Tags / Chips */}
       {card.sources && card.sources.length > 0 && (
         <div className="px-4 sm:px-5 py-3 bg-gray-50/50 dark:bg-gray-800/50 border-t border-gray-100 dark:border-gray-700/60 flex flex-wrap items-center gap-1.5 text-xs">
-          <span className="flex items-center gap-1 text-gray-500 dark:text-gray-400 font-semibold mr-1">
+          <span className="flex items-center gap-1 text-gray-500 dark:text-gray-400 font-semibold mr-1 font-bengali">
             <BookOpen className="w-3.5 h-3.5 text-gray-400" />
             <span>প্রামাণ্য উৎস:</span>
           </span>
           {card.sources.map((src, sIdx) => {
-            const cleanSrc = src.replace(/\*+/g, "").replace(/।$/, "").trim();
+            const cleanSrc = src.replace(/।$/, "").trim();
             if (!cleanSrc) return null;
             return (
               <span
                 key={sIdx}
-                className="px-2 py-0.5 rounded-md bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-medium font-bengali shadow-2xs"
+                className="px-2 py-0.5 rounded-md bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-medium font-bengali shadow-sm"
               >
-                {cleanSrc}
+                <MarkdownContent inline content={cleanSrc} />
               </span>
             );
           })}

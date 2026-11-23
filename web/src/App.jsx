@@ -303,7 +303,11 @@ export default function App() {
             <p className="text-gray-500 text-sm font-semibold">সূরা ও রুকুর ডাটা লোড হচ্ছে...</p>
           </div>
         ) : studyMode === 'thematic' ? (
-          <ThematicView rukuData={rukuData} surahInfo={currentSurah} />
+          <ThematicView 
+            rukuData={rukuData} 
+            surahInfo={currentSurah} 
+            onSwitchToAyahStudy={() => setStudyMode('ayah')} 
+          />
         ) : studyMode === 'mushaf' ? (
           <MushafView
             rukuData={rukuData}

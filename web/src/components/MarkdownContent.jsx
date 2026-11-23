@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import { marked } from 'marked';
 import DOMPurify from 'dompurify';
-import { AR } from '../utils/arabicRegex';
+import { getArabicRegex } from '../utils/arabicRegex';
 
 marked.setOptions({
   gfm: true,
@@ -10,6 +10,33 @@ marked.setOptions({
 
 function wrapArabic(root) {
   if (!root) return;
+
+  // 1. Style inline code tags containing Arabic text
+  root.querySelectorAll('code').forEach(cd => {
+    const text = cd.textContent || '';
+    const arReg = getArabicRegex();
+    const m = text.match(arReg);
+    if (m && m.join('').replace(/\s+/g, '').length >= text.replace(/\s+/g, '').length * 0.6) {
+      cd.dir = 'rtl';
+      cd.lang = 'ar';
+      cd.classList.add('ar-code', 'font-amiri');
+    }
+  });
+
+  // 2. Automatically apply .ar-block to paragraphs or blockquotes consisting primarily of Arabic
+  root.querySelectorAll('p, blockquote').forEach(el => {
+    const t = el.textContent || '';
+    if (!t.trim()) return;
+    const arMatches = t.match(getArabicRegex()) || [];
+    const arLen = arMatches.join('').replace(/\s+/g, '').length;
+    const totalLen = t.replace(/\s+/g, '').length;
+    if (totalLen > 0 && arLen / totalLen >= 0.75) {
+      el.classList.add('ar-block');
+      el.dir = 'rtl';
+    }
+  });
+
+  // 3. TreeWalker for text nodes to isolate Arabic inside <bdi class="ar">
   const w = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
   const nodes = [];
   while (w.nextNode()) nodes.push(w.currentNode);
@@ -18,7 +45,7 @@ function wrapArabic(root) {
     if (n.parentElement?.closest('bdi.ar, code, pre')) continue;
     const t = n.nodeValue;
     if (!t) continue;
-    AR.lastIndex = 0;
+    const AR = getArabicRegex();
     if (!AR.test(t)) continue;
     AR.lastIndex = 0;
 
@@ -62,7 +89,7 @@ export function renderMarkdown(src, { inline = false } = {}) {
   if (typeof document !== 'undefined') {
     const frag = DOMPurify.sanitize(html, {
       RETURN_DOM_FRAGMENT: true,
-      ADD_TAGS: ['bdi', 'span', 'br', 'table', 'thead', 'tbody', 'tr', 'th', 'td', 'blockquote', 'div'],
+      ADD_TAGS: ['bdi', 'span', 'br', 'table', 'thead', 'tbody', 'tr', 'th', 'td', 'blockquote', 'div', 'code'],
       ADD_ATTR: ['dir', 'lang', 'class', 'target', 'rel', 'href'],
     });
     const box = document.createElement('div');
@@ -73,7 +100,7 @@ export function renderMarkdown(src, { inline = false } = {}) {
   }
 
   return DOMPurify.sanitize(html, {
-    ADD_TAGS: ['bdi', 'span', 'br', 'table', 'thead', 'tbody', 'tr', 'th', 'td', 'blockquote', 'div'],
+    ADD_TAGS: ['bdi', 'span', 'br', 'table', 'thead', 'tbody', 'tr', 'th', 'td', 'blockquote', 'div', 'code'],
     ADD_ATTR: ['dir', 'lang', 'class', 'target', 'rel', 'href'],
   });
 }

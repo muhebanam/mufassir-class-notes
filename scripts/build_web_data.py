@@ -2,7 +2,20 @@ import json
 import re
 import os
 import sys
+import unicodedata
 from pathlib import Path
+
+# Ensure local script directory is on sys.path
+SCRIPT_DIR = Path(__file__).resolve().parent
+if str(SCRIPT_DIR) not in sys.path:
+    sys.path.insert(0, str(SCRIPT_DIR))
+
+from utils import (
+    BASE_DIR, DATA_DIR, to_bn, to_en, strip_basmala,
+    clean_arabic, clean_arabic_for_matching, arabic_token_match,
+    rewrite_markdown_links, replace_backtick_arabic, load_tanzil, load_ruku_map,
+    load_audit_results, load_author_meta
+)
 
 # Ensure UTF-8 output
 if sys.stdout.encoding != 'utf-8':
@@ -12,20 +25,6 @@ if sys.stdout.encoding != 'utf-8':
     except Exception:
         pass
 
-BASE_DIR = Path(r"d:\আমার গবেষণা\জালালাইন")
-DATA_DIR = BASE_DIR / "web" / "public" / "data"
-
-bn_digits = "০১২৩৪৫৬৭৮৯"
-en_digits = "0123456789"
-bn2en_trans = str.maketrans(bn_digits, en_digits)
-en2bn_trans = str.maketrans(en_digits, bn_digits)
-
-def to_en(s):
-    return str(s).translate(bn2en_trans)
-
-def to_bn(s):
-    return str(s).translate(en2bn_trans)
-
 def clean_str(s):
     if not s:
         return ""
@@ -34,40 +33,18 @@ def clean_str(s):
 def plain_markdown(md, limit=280):
     if not md:
         return ""
-    # Remove images and markdown links but keep text
     t = re.sub(r"!\[.*?\]\(.*?\)", "", str(md))
     t = re.sub(r"\[(.*?)\]\(.*?\)", r"\1", t)
-    # Remove bold, italic, inline code, headings, blockquotes
     t = re.sub(r"[*_`>#]", "", t)
-    # Clean extra whitespace
     t = re.sub(r"\s+", " ", t).strip()
     if len(t) <= limit:
         return t
     return t[:limit].rsplit(" ", 1)[0] + "…"
 
-def strip_basmala(t, sid, a):
-    """
-    Strips prepended Basmala from Ayah 1 of all surahs except Surah 1 and Surah 9.
-    """
-    if a == 1 and sid not in (1, 9):
-        w = t.split()
-        if len(w) > 4:
-            b_check = [re.sub(r'[\u064B-\u065F\u0670\u06D6-\u06EDٱـ]', '', x) for x in w[:4]]
-            if b_check[0] == 'بسم' and 'لله' in b_check[1] and 'رحمن' in b_check[2] and 'رحيم' in b_check[3]:
-                return ' '.join(w[4:])
-    return t
-
-def clean_arabic_for_matching(text):
-    text = text.replace('\u0670', 'ا')  # dagger alif -> alif
-    text = text.replace('ـ', '')        # tatweel
-    text = re.sub(r'[\u064B-\u065F\u06D6-\u06ED\*\_\`\s]', '', text)
-    text = re.sub(r'[ٱآإأءؤئ]', 'ا', text)
-    text = text.replace('ة', 'ه').replace('ى', 'ي')
-    return text
-
 def parse_section_ayah_subsections(sec_text, ruku_ayah_texts):
     """
     Maps ### subsections in Irab or Shan-e-Nuzul to specific Ayahs.
+    Supports single ayahs, ranges (১–৫), and disjoint lists (১ ও ৩, ২, ৫).
     Does NOT match generic serials like '### (১)' as Ayah 1 unless marked with আয়াত or Quranic quote.
     """
     subsections = re.split(r'(?m)^###\s+', sec_text)
@@ -79,35 +56,41 @@ def parse_section_ayah_subsections(sec_text, ruku_ayah_texts):
         if not body:
             continue
         target_ayahs = []
-        m_ayah = re.search(r'(?:আ[য়য]়?াত|আয়াত)\s*([০-৯0-9\s–—\-]+)', heading)
+
+        # 1. Match explicit Ayah numbers, ranges or lists
+        m_ayah = re.search(r'(?:আ[য়য]়?াত|আয়াত)\s*([০-৯0-9\s–—\-,ও]+)', heading)
         if m_ayah:
             raw_nums = m_ayah.group(1).strip()
-            bn_to_en = str.maketrans('০১২৩৪৫৬৭৮৯', '0123456789')
-            en_nums = raw_nums.translate(bn_to_en)
+            en_nums = to_en(raw_nums)
             m_range = re.search(r'(\d+)\s*[–—\-]\s*(\d+)', en_nums)
             if m_range:
                 start, end = int(m_range.group(1)), int(m_range.group(2))
                 target_ayahs = list(range(start, end + 1))
             else:
-                m_single = re.search(r'\d+', en_nums)
-                if m_single:
-                    target_ayahs = [int(m_single.group(0))]
+                digits = [int(d) for d in re.findall(r'\d+', en_nums)]
+                if digits:
+                    target_ayahs = digits
+
+        # 2. Match Quranic quote in heading
         if not target_ayahs:
             m_quote = re.search(r'﴿([^﴾]+)﴾', heading)
             if m_quote and ruku_ayah_texts:
                 q_text = m_quote.group(1)
-                q_clean = clean_arabic_for_matching(q_text)
+                q_clean = clean_arabic(q_text)
                 if len(q_clean) >= 3:
                     for a_num, a_text in ruku_ayah_texts.items():
-                        a_clean = clean_arabic_for_matching(a_text)
-                        if q_clean[:12] in a_clean:
+                        a_clean = clean_arabic(a_text)
+                        if q_clean in a_clean or (len(q_clean) >= 16 and q_clean[:16] in a_clean):
                             target_ayahs.append(a_num)
+
+        # 3. Add to map with range prefix if multiple ayahs
         if len(target_ayahs) > 1:
             start, end = min(target_ayahs), max(target_ayahs)
             range_prefix = f"*[উৎস: আয়াত {to_bn(start)}–{to_bn(end)}-এর যৌথ আলোচনা]*\n\n"
             sec_body = range_prefix + body
         else:
             sec_body = body
+
         for ta in target_ayahs:
             if ta in ayah_content_map:
                 ayah_content_map[ta] += '\n\n---\n\n' + sec_body
@@ -115,45 +98,9 @@ def parse_section_ayah_subsections(sec_text, ruku_ayah_texts):
                 ayah_content_map[ta] = sec_body
     return ayah_content_map
 
-def load_tanzil():
-    tanzil_file = BASE_DIR / "00_প্রজেক্ট_তথ্য" / "quran-uthmani.txt"
-    tanzil = {}
-    if not tanzil_file.exists():
-        print(f"Warning: Tanzil file not found at {tanzil_file}")
-        return tanzil
-    with open(tanzil_file, "r", encoding="utf-8") as f:
-        for line in f:
-            parts = line.strip().split("|")
-            if len(parts) >= 3:
-                s_id, a_id = int(parts[0]), int(parts[1])
-                tanzil[(s_id, a_id)] = strip_basmala(parts[2], s_id, a_id)
-    print(f"Loaded {len(tanzil)} Tanzil verses (with Basmala cleanly stripped from Ayah 1).")
-    return tanzil
-
-def load_audit_results():
-    p = BASE_DIR / "00_প্রজেক্ট_তথ্য" / "audit_results.json"
-    if p.exists():
-        with open(p, "r", encoding="utf-8") as f:
-            return json.load(f)
-    return {}
-
-def load_author_meta():
-    p = BASE_DIR / "00_প্রজেক্ট_তথ্য" / "author_metadata.json"
-    if p.exists():
-        with open(p, "r", encoding="utf-8") as f:
-            return json.load(f)
-    return {}
-
-def load_ruku_map():
-    p = BASE_DIR / "00_প্রজেক্ট_তথ্য" / "ruku_map.json"
-    with open(p, "r", encoding="utf-8") as f:
-        return json.load(f)["surahs"]
-
 def normalize_markdown_table_delimiters(text):
     """
     Normalizes malformed GFM table delimiter rows.
-    Safely matches delimiter cells composed of colons, dashes, and spaces.
-    Handles duplicate or spaced delimiter typos like ':--- :---:' or ':-- --:'.
     """
     lines = text.splitlines()
     new_lines = []
@@ -183,12 +130,10 @@ def normalize_markdown_table_delimiters(text):
         new_lines.append(line)
     return '\n'.join(new_lines)
 
-
 def parse_markdown_table(table_text):
     lines = [l.strip() for l in table_text.strip().splitlines() if l.strip()]
     if len(lines) < 2:
         return []
-    # Find header line (first line containing |)
     h_idx = 0
     for idx, l in enumerate(lines):
         if "|" in l:
@@ -214,6 +159,10 @@ def parse_markdown_table(table_text):
     return rows
 
 def parse_ruku_markdown(md_text, surah_id, ruku_idx, ayah_start, ayah_end, tanzil, s_dir=None, audit_results=None):
+    # 0. Clean redundant backticks surrounding purely Arabic phrases and rewrite links
+    md_text = replace_backtick_arabic(md_text)
+    md_text = rewrite_markdown_links(md_text, surah_id)
+
     # 1. Parse Top-level sections (0 to 15)
     pattern = r"(?m)^##\s+([০-৯\d]+)\.\s+(.+?)$"
     matches = list(re.finditer(pattern, md_text))
@@ -278,20 +227,34 @@ def parse_ruku_markdown(md_text, surah_id, ruku_idx, ayah_start, ayah_end, tanzi
 
     # 4. Extract Section 4 (Qiraat Table) - Authentic Bahouth table from _sources
     sec4_text = sections.get(4, {}).get("body", "")
+    sec4_table_raw = ""
     qiraat_rows = []
     if s_dir:
         qp = s_dir / "_sources" / f"ruku_{ruku_idx:02d}_qiraat_table.md"
         if qp.exists():
-            qiraat_rows = parse_markdown_table(qp.read_text(encoding="utf-8"))
+            sec4_table_raw = qp.read_text(encoding="utf-8").strip()
+            qiraat_rows = parse_markdown_table(sec4_table_raw)
+
     if not qiraat_rows and sec4_text:
         t4_start = sec4_text.find("|")
         if t4_start != -1:
             qiraat_rows = parse_markdown_table(sec4_text[t4_start:])
 
-    # 5. Extract Section 5 (Jalalayn)
+    # Embed authentic Bahouth table into sec4_content so the markdown field is also authentic
+    if sec4_table_raw:
+        t4_start = sec4_text.find("|")
+        intro4 = sec4_text[:t4_start].strip() if t4_start != -1 else ""
+        if intro4:
+            sec4_content = intro4 + "\n\n" + sec4_table_raw
+        else:
+            sec4_content = sec4_table_raw
+    else:
+        sec4_content = sec4_text
+
+    # 5. Extract Section 5 (Jalalayn) with hardened lookahead preventing swallow of comparative tafsir
     sec5_text = sections.get(5, {}).get("body", "")
     jalalayn_map = {}
-    j_matches = list(re.finditer(r"(?m)^[\s\-*]+\*\*আয়াত\s+([০-৯\d\s–—\-]+)[^:]*:\*\*\s*\n+([\s\S]*?)(?=^[\s\-*]+\*\*আয়াত|\Z)", sec5_text))
+    j_matches = list(re.finditer(r"(?m)^[\s\-*]+\*\*আয়াত\s+([০-৯\d\s–—\-]+)[^:]*:\*\*\s*(?:[^\n]*\n+)?([\s\S]*?)(?=^[\s\-*]+\*\*আয়াত|^#{2,4}\s|^---|\Z)", sec5_text))
     for jm in j_matches:
         range_str = to_en(jm.group(1)).strip()
         content = jm.group(2).strip()
@@ -315,15 +278,15 @@ def parse_ruku_markdown(md_text, surah_id, ruku_idx, ayah_start, ayah_end, tanzi
         a_info = ayah_map.get(a_num, {})
         text_uthmani = tanzil.get((surah_id, a_num), a_info.get("text_simple", ""))
         
-        # Match mufradat rows strictly matching this ayah by Arabic word or explicit ayah index
+        # Match mufradat rows strictly matching this ayah by Arabic word tokens or explicit ayah index
+        ayah_tokens = clean_arabic_for_matching(text_uthmani + " " + a_info.get("text_simple", "")).split()
         a_mufradat = []
         for mr in mufradat_rows:
             w = mr.get('শব্দ') or mr.get('শব্দ (মূল)') or ''
             w_clean = clean_arabic_for_matching(w)
             mr_str = json.dumps(mr, ensure_ascii=False)
             has_explicit = f"{surah_id}:{a_num}" in mr_str or f"{surah_id}:{to_bn(a_num)}" in mr_str
-            text_for_match = clean_arabic_for_matching(text_uthmani) or clean_arabic_for_matching(a_info.get("text_simple", ""))
-            if has_explicit or (len(w_clean) >= 2 and w_clean in text_for_match):
+            if has_explicit or arabic_token_match(w_clean, ayah_tokens):
                 a_mufradat.append(mr)
 
         # Match qiraat rows for this ayah from authentic Bahouth rows
@@ -349,7 +312,7 @@ def parse_ruku_markdown(md_text, surah_id, ruku_idx, ayah_start, ayah_end, tanzi
             "word_translation": a_info.get("word_translation", ""),
             "translation": a_info.get("translation", ""),
             "jalalayn": jalalayn_map.get(a_num, ""),
-            "mufradat": a_mufradat,   # Strict matching, no misleading fallback
+            "mufradat": a_mufradat,
             "qiraat": a_qiraat,
             "irab": a_irab,
             "shane_nuzul": a_nuzul
@@ -360,7 +323,7 @@ def parse_ruku_markdown(md_text, surah_id, ruku_idx, ayah_start, ayah_end, tanzi
     sec0_text = sections.get(0, {}).get("body", "")
     sec0_summary = plain_markdown(sec0_text, limit=280)
 
-    # Extract Section 8 Ahkam Mas'ala Cards
+    # Extract Section 8 Ahkam Mas'ala Cards with multi-table safety and negative-consensus filtering
     sec8_text = sections.get(8, {}).get("body", "")
     sec8_intro = sec8_text
     ahkam_cards = []
@@ -368,7 +331,18 @@ def parse_ruku_markdown(md_text, surah_id, ruku_idx, ayah_start, ayah_end, tanzi
     if t8_idx != -1:
         sec8_intro = sec8_text[:t8_idx].strip()
         table_text = sec8_text[t8_idx:]
-        table_lines = [l.strip() for l in table_text.strip().splitlines() if l.strip().startswith("|")]
+        table_lines = []
+        for l in table_text.splitlines():
+            line_str = l.strip()
+            if not line_str:
+                if table_lines:
+                    break
+                continue
+            if line_str.startswith("|"):
+                table_lines.append(line_str)
+            elif table_lines:
+                break
+
         if len(table_lines) >= 3:
             for row_line in table_lines[2:]:
                 cols = [c.strip() for c in row_line.strip("|").split("|")]
@@ -393,8 +367,10 @@ def parse_ruku_markdown(md_text, surah_id, ruku_idx, ayah_start, ayah_end, tanzi
                         else:
                             daleels.append(part)
 
-                    # Scholarly consensus detection from card content
-                    is_consensus = bool(re.search(r"\(?(?:ইজমা|সর্বসম্মত|একমত|ঐক্যমত)\)?", title + " " + ev))
+                    # Scholarly consensus detection with negative phrase filtering
+                    has_consensus_keyword = bool(re.search(r"\(?(?:ইজমা|সর্বসম্মত|একমত|ঐক্যমত)\)?", title + " " + ev))
+                    has_negative = bool(re.search(r"(?:নেই|নয়|নয়|ভিন্নমত|মতভেদ|একমত\s+ন[য়যই])", title + " " + ev))
+                    is_consensus = has_consensus_keyword and not has_negative
 
                     ahkam_cards.append({
                         "title": title,
@@ -424,7 +400,7 @@ def parse_ruku_markdown(md_text, surah_id, ruku_idx, ayah_start, ayah_end, tanzi
             "sec_id": 4,
             "title": sections.get(4, {}).get("title", "১০ মুতাওয়াতির কিরাআত সারণি"),
             "table": qiraat_rows,
-            "content": sec4_text
+            "content": sec4_content
         },
         "tafsir_comparative": {
             "sec_id": 5,
@@ -523,16 +499,30 @@ def build_all_web_data(limit_surahs=None):
     audit_results = load_audit_results()
     ruku_map = load_ruku_map()
 
-    surahs_summary = []
-    search_index = []
-
-    surah_ids = range(24, 115)
+    # Load existing global indexes ONLY if performing selective update (--surah)
+    existing_surahs = {}
+    existing_search_index = []
     if limit_surahs:
         surah_ids = limit_surahs
+        surahs_f = DATA_DIR / "surahs.json"
+        if surahs_f.exists():
+            try:
+                for s in json.loads(surahs_f.read_text(encoding="utf-8")):
+                    if s["id"] not in limit_surahs:
+                        existing_surahs[s["id"]] = s
+            except Exception:
+                pass
+        search_f = DATA_DIR / "search_index.json"
+        if search_f.exists():
+            try:
+                existing_search_index = [item for item in json.loads(search_f.read_text(encoding="utf-8")) if item["surah"] not in limit_surahs]
+            except Exception:
+                pass
+    else:
+        surah_ids = range(24, 115)
 
-    total_gold = 0
-    total_needs_work = 0
-    total_rukus_count = 0
+    new_search_items = []
+    updated_surahs_summary = []
 
     for sid in surah_ids:
         s_info = ruku_map[str(sid)]
@@ -543,7 +533,9 @@ def build_all_web_data(limit_surahs=None):
         intro_file = s_dir / "00_সূরা-পরিচিতি.md"
         intro_content = ""
         if intro_file.exists():
-            intro_content = intro_file.read_text(encoding="utf-8")
+            intro_raw = unicodedata.normalize('NFC', intro_file.read_text(encoding="utf-8"))
+            intro_raw = replace_backtick_arabic(intro_raw)
+            intro_content = rewrite_markdown_links(intro_raw, sid)
 
         surah_data_dir = DATA_DIR / str(sid)
         surah_data_dir.mkdir(parents=True, exist_ok=True)
@@ -605,14 +597,8 @@ def build_all_web_data(limit_surahs=None):
                 print(f"Warning: Ruku file not found for Surah {sid} Ruku {r_idx}")
                 continue
 
-            md_text = r_file.read_text(encoding="utf-8")
+            md_text = unicodedata.normalize('NFC', r_file.read_text(encoding="utf-8"))
             ruku_obj = parse_ruku_markdown(md_text, sid, r_idx, a_start, a_end, tanzil, s_dir=s_dir, audit_results=audit_results)
-
-            total_rukus_count += 1
-            if ruku_obj["status"] == "gold":
-                total_gold += 1
-            else:
-                total_needs_work += 1
 
             # Save ruku json
             ruku_json_path = surah_data_dir / f"ruku-{r_idx}.json"
@@ -630,14 +616,15 @@ def build_all_web_data(limit_surahs=None):
                 "ayah_count": a_end - a_start + 1
             })
 
-            # Add to search index (cleaned of raw markdown syntax)
+            # Add to search index (with harakat-free text_plain for smart instant search)
             for ayah in ruku_obj["ayahs"]:
-                search_index.append({
+                new_search_items.append({
                     "surah": sid,
                     "surah_name": s_info["name_bn"],
                     "ruku": r_idx,
                     "ayah": ayah["ayah"],
                     "text_uthmani": ayah["text_uthmani"][:150],
+                    "text_plain": clean_arabic(ayah["text_uthmani"][:150]),
                     "translation": plain_markdown(ayah["translation"], limit=180),
                     "jalalayn": plain_markdown(ayah["jalalayn"], limit=180)
                 })
@@ -646,7 +633,7 @@ def build_all_web_data(limit_surahs=None):
         with open(surah_data_dir / "meta.json", "w", encoding="utf-8") as smf:
             json.dump(surah_meta, smf, ensure_ascii=False, indent=2)
 
-        surahs_summary.append({
+        s_entry = {
             "id": sid,
             "id_bn": to_bn(sid),
             "name_ar": s_info.get("name_ar", ""),
@@ -655,19 +642,43 @@ def build_all_web_data(limit_surahs=None):
             "ayah_count_bn": to_bn(ayah_count),
             "ruku_count": num_r,
             "ruku_count_bn": to_bn(num_r)
-        })
+        }
+        existing_surahs[sid] = s_entry
+
+    # Combine full search index and surahs list
+    final_surahs = [existing_surahs[k] for k in sorted(existing_surahs.keys())]
+    final_search_index = existing_search_index + new_search_items
+    final_search_index.sort(key=lambda x: (x["surah"], x["ayah"]))
 
     # Save surahs.json
     with open(DATA_DIR / "surahs.json", "w", encoding="utf-8") as sf:
-        json.dump(surahs_summary, sf, ensure_ascii=False, indent=2)
-    print(f"Saved surahs.json with {len(surahs_summary)} surahs.")
+        json.dump(final_surahs, sf, ensure_ascii=False, indent=2)
+    print(f"Saved surahs.json with {len(final_surahs)} surahs.")
 
     # Save search_index.json
     with open(DATA_DIR / "search_index.json", "w", encoding="utf-8") as sif:
-        json.dump(search_index, sif, ensure_ascii=False)
-    print(f"Saved search_index.json with {len(search_index)} items.")
+        json.dump(final_search_index, sif, ensure_ascii=False)
+    print(f"Saved search_index.json with {len(final_search_index)} items.")
 
-    # Save dynamic and honest site_meta.json (guaranteeing zero private email leak)
+    # Calculate global totals across all surahs
+    total_gold = 0
+    total_needs_work = 0
+    total_rukus = 0
+    for s in final_surahs:
+        m_file = DATA_DIR / str(s["id"]) / "meta.json"
+        if m_file.exists():
+            try:
+                m_data = json.loads(m_file.read_text(encoding="utf-8"))
+                for r in m_data.get("rukus", []):
+                    total_rukus += 1
+                    if r.get("status") == "gold":
+                        total_gold += 1
+                    else:
+                        total_needs_work += 1
+            except Exception:
+                pass
+
+    # Save dynamic and honest site_meta.json
     safe_author = {k: v for k, v in author_meta.get("author", {}).items() if k != "email"}
     safe_pub = {k: v for k, v in author_meta.get("publication", {}).items() if k != "email"}
     site_meta = {
@@ -675,9 +686,9 @@ def build_all_web_data(limit_surahs=None):
         "subtitle": "কুরআনুল কারীমের প্রামাণ্য তাহকীক, ১০ কিরাআত, ৪ মাযহাবের ফিকহ ও দরস-সহায়িকা",
         "author": safe_author,
         "publication": safe_pub,
-        "total_surahs": len(surahs_summary),
-        "total_rukus": total_rukus_count,
-        "total_ayahs": 3445,
+        "total_surahs": len(final_surahs),
+        "total_rukus": total_rukus,
+        "total_ayahs": len(final_search_index),
         "status_counts": {
             "gold": total_gold,
             "needs_work": total_needs_work
@@ -685,7 +696,7 @@ def build_all_web_data(limit_surahs=None):
     }
     with open(DATA_DIR / "site_meta.json", "w", encoding="utf-8") as f:
         json.dump(site_meta, f, ensure_ascii=False, indent=2)
-    print(f"Saved site_meta.json: {total_gold} Gold Standard, {total_needs_work} Needs Work.")
+    print(f"Saved site_meta.json: {total_gold} Gold Standard, {total_needs_work} Needs Work, {len(final_search_index)} total ayahs.")
 
 if __name__ == "__main__":
     import argparse
