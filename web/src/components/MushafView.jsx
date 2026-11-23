@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { toBn } from '../utils/helpers';
 import { BookOpen, X, Bookmark, FileText } from 'lucide-react';
+import MarkdownContent from './MarkdownContent';
 
 export default function MushafView({
   rukuData,
@@ -89,8 +90,12 @@ export default function MushafView({
                 <BookOpen className="w-4 h-4" />
                 <span>তাফসীরুল জালালাইন (ইবারত ও ব্যাখ্যা):</span>
               </span>
-              <div className="text-xs sm:text-sm text-gray-700 dark:text-gray-300 bg-emerald-50/40 dark:bg-emerald-950/20 p-3 rounded-xl leading-relaxed whitespace-pre-line border border-emerald-100 dark:border-emerald-900/40 font-bengali max-h-48 overflow-y-auto">
-                {activeSheetAyah.jalalayn || "জালালাইন তাফসীর লোড হচ্ছে..."}
+              <div className="text-xs sm:text-sm text-gray-700 dark:text-gray-300 bg-emerald-50/40 dark:bg-emerald-950/20 p-3.5 rounded-xl border border-emerald-100 dark:border-emerald-900/40 font-bengali max-h-72 overflow-y-auto">
+                {activeSheetAyah.jalalayn ? (
+                  <MarkdownContent content={activeSheetAyah.jalalayn} />
+                ) : (
+                  "জালালাইন তাফসীর লোড হচ্ছে..."
+                )}
               </div>
             </div>
 

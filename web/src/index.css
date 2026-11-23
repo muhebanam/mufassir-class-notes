@@ -172,15 +172,28 @@ body.sepia-theme {
 .prose table {
   display: block;
   width: 100%;
+  max-width: 100%;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   border-collapse: collapse;
-  margin: 1.5em 0;
+  margin: 1.25em 0;
 }
 
 .prose th, .prose td {
   border: 1px solid var(--line);
   padding: 8px 12px;
   text-align: left;
+}
+
+@media (max-width: 640px) {
+  .prose table {
+    font-size: 0.88em;
+  }
+  .prose th, .prose td {
+    padding: 6px 8px;
+    white-space: normal;
+    word-break: break-word;
+  }
 }
 
 .prose th {

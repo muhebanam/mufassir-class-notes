@@ -21,15 +21,29 @@ export default function AyahStudyView({
   const [copied, setCopied] = useState(false);
   const [bookmarked, setBookmarked] = useState(false);
   
-  // Accordion drawer states
+  // Accordion drawer states - all open by default so no research text is hidden on mobile
   const [openDrawers, setOpenDrawers] = useState({
     jalalayn: true,
-    mufradat: false,
-    irab: false,
-    qiraat: false,
-    nuzul: false,
+    mufradat: true,
+    irab: true,
+    qiraat: true,
+    nuzul: true,
     notes: true
   });
+
+  const areAllDrawersOpen = Object.values(openDrawers).every(Boolean);
+
+  const toggleAllDrawers = () => {
+    const nextState = !areAllDrawersOpen;
+    setOpenDrawers({
+      jalalayn: nextState,
+      mufradat: nextState,
+      irab: nextState,
+      qiraat: nextState,
+      nuzul: nextState,
+      notes: nextState
+    });
+  };
 
   // Note state
   const [noteText, setNoteText] = useState("");
@@ -165,6 +179,18 @@ export default function AyahStudyView({
       </div>
 
       {/* Section Drawers (Accordions) */}
+      <div className="flex items-center justify-between px-1 pt-1 pb-0.5">
+        <span className="text-xs sm:text-sm font-bold text-gray-700 dark:text-gray-300 font-bengali">
+          তাহকীক ও শাস্ত্রীয় বিশ্লেষণ (সব শাখা দৃশ্যমান):
+        </span>
+        <button
+          onClick={toggleAllDrawers}
+          className="text-xs px-2.5 py-1 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-emerald-50 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-200 font-semibold transition border border-gray-200 dark:border-gray-600 shadow-2xs"
+        >
+          {areAllDrawersOpen ? "সবগুলো সংক্ষেপ করুন" : "সবগুলো উন্মুক্ত করুন"}
+        </button>
+      </div>
+
       <div className="space-y-3">
         {/* 1. Tafsir al-Jalalayn Drawer */}
         <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden shadow-sm transition">

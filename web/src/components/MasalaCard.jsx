@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp, BookOpen, Scale, Sparkles } from 'lucide-react';
 import MarkdownContent from './MarkdownContent';
+import { toBn } from '../utils/helpers';
 
 export default function MasalaCard({ card, index }) {
-  const [showDaleel, setShowDaleel] = useState(false);
+  // Default to true so research daleel is immediately visible on mobile
+  const [showDaleel, setShowDaleel] = useState(true);
 
   if (!card) return null;
 
@@ -109,7 +111,7 @@ export default function MasalaCard({ card, index }) {
           >
             <div className="flex items-center gap-2">
               <Sparkles className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
-              <span>প্রধান দলীল ও শাস্ত্রীয় পর্যালোচনা</span>
+              <span>প্রধান দলীল ও শাস্ত্রীয় পর্যালোচনা ({toBn(card.daleel.length)}টি দলীল)</span>
             </div>
             {showDaleel ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
           </button>

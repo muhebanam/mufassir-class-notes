@@ -243,7 +243,43 @@ export default function App() {
         setTheme={setTheme}
       />
 
-      {/* Horizontal Ayah Jumper Bar (When in Study View) */}
+      {/* Mobile Study Mode Tabs (front and center on phone screens) */}
+      {activeView === 'study' && (
+        <div className="md:hidden bg-white/95 dark:bg-gray-800/95 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 px-3 py-1.5 flex items-center justify-between gap-1.5 shadow-2xs">
+          <button
+            onClick={() => setStudyMode('ayah')}
+            className={`flex-1 py-1.5 px-2 rounded-lg text-xs font-bold text-center transition flex items-center justify-center gap-1 ${
+              studyMode === 'ayah'
+                ? 'bg-emerald-600 text-white shadow-2xs'
+                : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
+            }`}
+          >
+            <span>আয়াত দরস</span>
+          </button>
+          <button
+            onClick={() => setStudyMode('thematic')}
+            className={`flex-1 py-1.5 px-2 rounded-lg text-xs font-bold text-center transition flex items-center justify-center gap-1 ${
+              studyMode === 'thematic'
+                ? 'bg-emerald-600 text-white shadow-2xs'
+                : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
+            }`}
+          >
+            <span>রুকু শাস্ত্র-আলোচনা</span>
+          </button>
+          <button
+            onClick={() => setStudyMode('mushaf')}
+            className={`flex-1 py-1.5 px-2 rounded-lg text-xs font-bold text-center transition flex items-center justify-center gap-1 ${
+              studyMode === 'mushaf'
+                ? 'bg-emerald-600 text-white shadow-2xs'
+                : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
+            }`}
+          >
+            <span>মুসহাফ</span>
+          </button>
+        </div>
+      )}
+
+      {/* Horizontal Ayah Jumper Bar (When in Study View and Ayah/Mushaf mode) */}
       {activeView === 'study' && rukuData && (
         <AyahJumper
           ayahs={rukuData.ayahs}
@@ -294,6 +330,8 @@ export default function App() {
       <BottomNav
         activeView={activeView}
         setActiveView={setActiveView}
+        studyMode={studyMode}
+        setStudyMode={setStudyMode}
         onOpenNotes={() => setIsNotesOpen(true)}
         onOpenSettings={() => setIsSettingsOpen(true)}
         onGoHome={() => setActiveView('dashboard')}
