@@ -8,6 +8,14 @@ export default function QiraatTable({ tableData = [], title = "১০ মুত�
     return String(num).replace(/[0-9]/g, d => bn[d]);
   };
 
+  const toAr = (str) => {
+    if (str === null || str === undefined) return '';
+    const arDigits = ['٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩'];
+    return String(str)
+      .replace(/\s*-\s*(?:Dammah|Kasrah)\b/gi, '')
+      .replace(/[0-9]/g, d => arDigits[Number(d)]);
+  };
+
   if (!tableData || tableData.length === 0) {
     return (
       <div className="text-gray-500 italic py-6 text-center font-bengali text-sm">
@@ -44,15 +52,21 @@ export default function QiraatTable({ tableData = [], title = "১০ মুত�
           </thead>
           <tbody className="divide-y divide-gray-100 dark:divide-gray-700/60 bg-white dark:bg-gray-800">
             {tableData.map((row, rIdx) => {
-              const ayahNum = row['আয়াত'] || '';
-              const wordStr = row['শব্দ (ক্রম)'] || row['শব্দ'] || '';
-              const qariStr = row['ক্বারী / রাবী (বাহাউথ)'] || row['ক্বারী / রাবী'] || row['ক্বারী'] || '';
-              const ruleStr = row['কিরাআতের পাঠভেদ ও নিয়ম (অবিকৃত মূল পাঠ)'] || row['নিয়ম'] || row['পাঠভেদ'] || '';
+              const ayahNum = toAr(row['আয়াত'] || '');
+              const wordStr = toAr(row['শব্দ (ক্রম)'] || row['শব্দ'] || '');
+              const qariStr = toAr(row['ক্বারী / রাবী (বাহাউথ)'] || row['ক্বারী / রাবী'] || row['ক্বারী'] || '');
+              const ruleStr = toAr(
+                row['কিরাআতের পাঠভেদ ও নিয়ম (অবিকৃত মূল পাঠ)'] ||
+                row['কিরাআতের বিশুদ্ধ মূল পাঠ ও নিয়ম'] ||
+                row['কিরাআত রূপ'] ||
+                row['নিয়ম'] ||
+                row['পাঠভেদ'] || ''
+              );
 
               return (
                 <tr key={rIdx} className="hover:bg-emerald-50/30 dark:hover:bg-gray-700/30 transition-colors">
                   {/* Ayah number */}
-                  <td className="px-3.5 py-3 text-center font-mono font-bold text-emerald-700 dark:text-emerald-400 whitespace-nowrap">
+                  <td className="px-3.5 py-3 text-center font-arabic font-bold text-emerald-700 dark:text-emerald-400 whitespace-nowrap text-base" dir="rtl">
                     <MarkdownContent inline content={ayahNum} />
                   </td>
 
@@ -86,10 +100,16 @@ export default function QiraatTable({ tableData = [], title = "১০ মুত�
       {/* MOBILE VIEW: Mobile Card Stack (<640px) */}
       <div className="sm:hidden space-y-2.5">
         {tableData.map((row, rIdx) => {
-          const ayahNum = row['আয়াত'] || '';
-          const wordStr = row['শব্দ (ক্রম)'] || row['শব্দ'] || '';
-          const qariStr = row['ক্বারী / রাবী (বাহাউথ)'] || row['ক্বারী / রাবী'] || row['ক্বারী'] || '';
-          const ruleStr = row['কিরাআতের পাঠভেদ ও নিয়ম (অবিকৃত মূল পাঠ)'] || row['নিয়ম'] || row['পাঠভেদ'] || '';
+          const ayahNum = toAr(row['আয়াত'] || '');
+          const wordStr = toAr(row['শব্দ (ক্রম)'] || row['শব্দ'] || '');
+          const qariStr = toAr(row['ক্বারী / রাবী (বাহাউথ)'] || row['ক্বারী / রাবী'] || row['ক্বারী'] || '');
+          const ruleStr = toAr(
+            row['কিরাআতের পাঠভেদ ও নিয়ম (অবিকৃত মূল পাঠ)'] ||
+            row['কিরাআতের বিশুদ্ধ মূল পাঠ ও নিয়ম'] ||
+            row['কিরাআত রূপ'] ||
+            row['নিয়ম'] ||
+            row['পাঠভেদ'] || ''
+          );
 
           return (
             <div
@@ -97,8 +117,8 @@ export default function QiraatTable({ tableData = [], title = "১০ মুত�
               className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-3 shadow-2xs space-y-2 font-bengali"
             >
               <div className="flex items-center justify-between gap-2 border-b border-gray-100 dark:border-gray-700/60 pb-1.5">
-                <span className="px-2 py-0.5 rounded bg-emerald-100 dark:bg-emerald-900/40 text-emerald-800 dark:text-emerald-300 font-mono text-xs font-bold">
-                  আয়াত {ayahNum.replace(/\*/g, '')}
+                <span className="px-2 py-0.5 rounded bg-emerald-100 dark:bg-emerald-900/40 text-emerald-800 dark:text-emerald-300 font-arabic text-xs font-bold" dir="rtl">
+                  آية {toAr(ayahNum.replace(/\*/g, ''))}
                 </span>
                 <span className="font-arabic font-bold text-sm text-emerald-800 dark:text-emerald-300 table-cell-arabic" dir="rtl">
                   {normalizeQuranBrackets(wordStr)}
