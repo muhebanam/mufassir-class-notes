@@ -191,7 +191,7 @@ computing gzip size...
 [2mdist/[22m[36massets/markdown-BJsf1fhI.js  [39m[1m[2m 84.84 kB[22m[1m[22m[2m │ gzip: 28.14 kB[22m
 [2mdist/[22m[36massets/vendor-wGYtyqgO.js    [39m[1m[2m134.66 kB[22m[1m[22m[2m │ gzip: 43.22 kB[22m
 [2mdist/[22m[36massets/index-QQz_y0R7.js     [39m[1m[2m195.09 kB[22m[1m[22m[2m │ gzip: 54.84 kB[22m
-[32m✓ built in 4.09s[39m
+[32m✓ built in 3.92s[39m
 ```
 
 ---

@@ -1,0 +1,1880 @@
+{
+  "24": {
+    "name_bn": "আন-নূর",
+    "num_rukus": 9,
+    "ruku_stats": [
+      {
+        "ruku_id": 1,
+        "ayah_range": "1-10",
+        "file": "রুকু-০১_আয়াত_১-১০.md",
+        "line_count": 969,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      },
+      {
+        "ruku_id": 2,
+        "ayah_range": "11-20",
+        "file": "রুকু-০২_আয়াত_১১-২০.md",
+        "line_count": 740,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      },
+      {
+        "ruku_id": 3,
+        "ayah_range": "21-26",
+        "file": "রুকু-০৩_আয়াত_২১-২৬.md",
+        "line_count": 1004,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 4,
+        "ayah_range": "27-34",
+        "file": "রুকু-০৪_আয়াত_২৭-৩৪.md",
+        "line_count": 982,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 5,
+        "ayah_range": "35-43",
+        "file": "রুকু-০৫_আয়াত_৩৫-৪৩.md",
+        "line_count": 865,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 6,
+        "ayah_range": "44-52",
+        "file": "রুকু-০৬_আয়াত_৪৪-৫২.md",
+        "line_count": 567,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 7,
+        "ayah_range": "53-58",
+        "file": "রুকু-০৭_আয়াত_৫৩-৫৮.md",
+        "line_count": 532,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 8,
+        "ayah_range": "59-62",
+        "file": "রুকু-০৮_আয়াত_৫৯-৬২.md",
+        "line_count": 520,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 9,
+        "ayah_range": "63-64",
+        "file": "রুকু-০৯_আয়াত_৬৩-৬৪.md",
+        "line_count": 481,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      }
+    ]
+  },
+  "25": {
+    "name_bn": "আল-ফুরকান",
+    "num_rukus": 6,
+    "ruku_stats": [
+      {
+        "ruku_id": 1,
+        "ayah_range": "1-9",
+        "file": "রুকু-০১_আয়াত_১-৯.md",
+        "line_count": 713,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 2,
+        "ayah_range": "10-20",
+        "file": "রুকু-০২_আয়াত_১০-২০.md",
+        "line_count": 420,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 3,
+        "ayah_range": "21-34",
+        "file": "রুকু-০৩_আয়াত_২১-৩৪.md",
+        "line_count": 429,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 4,
+        "ayah_range": "35-44",
+        "file": "রুকু-০৪_আয়াত_৩৫-৪৪.md",
+        "line_count": 394,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 5,
+        "ayah_range": "45-60",
+        "file": "রুকু-০৫_আয়াত_৪৫-৬০.md",
+        "line_count": 412,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 6,
+        "ayah_range": "61-77",
+        "file": "রুকু-০৬_আয়াত_৬১-৭৭.md",
+        "line_count": 433,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      }
+    ]
+  },
+  "26": {
+    "name_bn": "আশ-শু‘আরা",
+    "num_rukus": 13,
+    "ruku_stats": [
+      {
+        "ruku_id": 1,
+        "ayah_range": "1-9",
+        "file": "রুকু-০১_আয়াত_১-৯.md",
+        "line_count": 342,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 2,
+        "ayah_range": "10-20",
+        "file": "রুকু-০২_আয়াত_১০-২০.md",
+        "line_count": 360,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 3,
+        "ayah_range": "21-34",
+        "file": "রুকু-০৩_আয়াত_২১-৩৪.md",
+        "line_count": 324,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 4,
+        "ayah_range": "35-44",
+        "file": "রুকু-০৪_আয়াত_৩৫-৪৪.md",
+        "line_count": 333,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 5,
+        "ayah_range": "45-60",
+        "file": "রুকু-০৫_আয়াত_৪৫-৬০.md",
+        "line_count": 386,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 6,
+        "ayah_range": "61-68",
+        "file": "রুকু-০৬_আয়াত_৬১-৬৮.md",
+        "line_count": 330,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 7,
+        "ayah_range": "69-104",
+        "file": "রুকু-০৭_আয়াত_৬৯-১০৪.md",
+        "line_count": 378,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 8,
+        "ayah_range": "105-122",
+        "file": "রুকু-০৮_আয়াত_১০৫-১২২.md",
+        "line_count": 359,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 9,
+        "ayah_range": "123-140",
+        "file": "রুকু-০৯_আয়াত_১২৩-১৪০.md",
+        "line_count": 342,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 10,
+        "ayah_range": "141-159",
+        "file": "রুকু-১০_আয়াত_১৪১-১৫৯.md",
+        "line_count": 334,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 11,
+        "ayah_range": "160-175",
+        "file": "রুকু-১১_আয়াত_১৬০-১৭৫.md",
+        "line_count": 326,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 12,
+        "ayah_range": "176-191",
+        "file": "রুকু-১২_আয়াত_১৭৬-১৯১.md",
+        "line_count": 354,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 13,
+        "ayah_range": "192-227",
+        "file": "রুকু-১৩_আয়াত_১৯২-২২৭.md",
+        "line_count": 401,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      }
+    ]
+  },
+  "27": {
+    "name_bn": "আন-নামল",
+    "num_rukus": 7,
+    "ruku_stats": [
+      {
+        "ruku_id": 1,
+        "ayah_range": "1-14",
+        "file": "রুকু-০১_আয়াত_১-১৪.md",
+        "line_count": 439,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 2,
+        "ayah_range": "15-19",
+        "file": "রুকু-০২_আয়াত_১৫-১৯.md",
+        "line_count": 390,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 3,
+        "ayah_range": "20-31",
+        "file": "রুকু-০৩_আয়াত_২০-৩১.md",
+        "line_count": 402,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 4,
+        "ayah_range": "32-44",
+        "file": "রুকু-০৪_আয়াত_৩২-৪৪.md",
+        "line_count": 455,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 5,
+        "ayah_range": "45-58",
+        "file": "রুকু-০৫_আয়াত_৪৫-৫৮.md",
+        "line_count": 408,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 6,
+        "ayah_range": "59-66",
+        "file": "রুকু-০৬_আয়াত_৫৯-৬৬.md",
+        "line_count": 407,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 7,
+        "ayah_range": "67-93",
+        "file": "রুকু-০৭_আয়াত_৬৭-৯৩.md",
+        "line_count": 522,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      }
+    ]
+  },
+  "28": {
+    "name_bn": "আল-ক্বাসাস",
+    "num_rukus": 9,
+    "ruku_stats": [
+      {
+        "ruku_id": 1,
+        "ayah_range": "1-13",
+        "file": "রুকু-০১_আয়াত_১-১৩.md",
+        "line_count": 555,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 2,
+        "ayah_range": "14-21",
+        "file": "রুকু-০২_আয়াত_১৪-২১.md",
+        "line_count": 458,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 3,
+        "ayah_range": "22-28",
+        "file": "রুকু-০৩_আয়াত_২২-২৮.md",
+        "line_count": 459,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 4,
+        "ayah_range": "29-35",
+        "file": "রুকু-০৪_আয়াত_২৯-৩৫.md",
+        "line_count": 504,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 5,
+        "ayah_range": "36-42",
+        "file": "রুকু-০৫_আয়াত_৩৬-৪২.md",
+        "line_count": 455,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 6,
+        "ayah_range": "43-50",
+        "file": "রুকু-০৬_আয়াত_৪৩-৫০.md",
+        "line_count": 473,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 7,
+        "ayah_range": "51-60",
+        "file": "রুকু-০৭_আয়াত_৫১-৬০.md",
+        "line_count": 508,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 8,
+        "ayah_range": "61-75",
+        "file": "রুকু-০৮_আয়াত_৬১-৭৫.md",
+        "line_count": 599,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 9,
+        "ayah_range": "76-88",
+        "file": "রুকু-০৯_আয়াত_৭৬-৮৮.md",
+        "line_count": 597,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      }
+    ]
+  },
+  "29": {
+    "name_bn": "আল-আনকাবূত",
+    "num_rukus": 7,
+    "ruku_stats": [
+      {
+        "ruku_id": 1,
+        "ayah_range": "1-13",
+        "file": "রুকু-০১_আয়াত_১-১৩.md",
+        "line_count": 640,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      },
+      {
+        "ruku_id": 2,
+        "ayah_range": "14-22",
+        "file": "রুকু-০২_আয়াত_১৪-২২.md",
+        "line_count": 490,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      },
+      {
+        "ruku_id": 3,
+        "ayah_range": "23-35",
+        "file": "রুকু-০৩_আয়াত_২৩-৩৫.md",
+        "line_count": 578,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      },
+      {
+        "ruku_id": 4,
+        "ayah_range": "36-44",
+        "file": "রুকু-০৪_আয়াত_৩৬-৪৪.md",
+        "line_count": 491,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      },
+      {
+        "ruku_id": 5,
+        "ayah_range": "45-51",
+        "file": "রুকু-০৫_আয়াত_৪৫-৫১.md",
+        "line_count": 471,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      },
+      {
+        "ruku_id": 6,
+        "ayah_range": "52-63",
+        "file": "রুকু-০৬_আয়াত_৫২-৬৩.md",
+        "line_count": 534,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      },
+      {
+        "ruku_id": 7,
+        "ayah_range": "64-69",
+        "file": "রুকু-০৭_আয়াত_৬৪-৬৯.md",
+        "line_count": 449,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      }
+    ]
+  },
+  "30": {
+    "name_bn": "আর-রূম",
+    "num_rukus": 6,
+    "ruku_stats": [
+      {
+        "ruku_id": 1,
+        "ayah_range": "1-10",
+        "file": "রুকু-০১_আয়াত_১-১০.md",
+        "line_count": 348,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      },
+      {
+        "ruku_id": 2,
+        "ayah_range": "11-19",
+        "file": "রুকু-০২_আয়াত_১১-১৯.md",
+        "line_count": 354,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      },
+      {
+        "ruku_id": 3,
+        "ayah_range": "20-27",
+        "file": "রুকু-০৩_আয়াত_২০-২৭.md",
+        "line_count": 344,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      },
+      {
+        "ruku_id": 4,
+        "ayah_range": "28-40",
+        "file": "রুকু-০৪_আয়াত_২৮-৪০.md",
+        "line_count": 353,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      },
+      {
+        "ruku_id": 5,
+        "ayah_range": "41-53",
+        "file": "রুকু-০৫_আয়াত_৪১-৫৩.md",
+        "line_count": 353,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      },
+      {
+        "ruku_id": 6,
+        "ayah_range": "54-60",
+        "file": "রুকু-০৬_আয়াত_৫৪-৬০.md",
+        "line_count": 491,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      }
+    ]
+  },
+  "31": {
+    "name_bn": "লুকমান",
+    "num_rukus": 4,
+    "ruku_stats": [
+      {
+        "ruku_id": 1,
+        "ayah_range": "1-11",
+        "file": "রুকু-০১_আয়াত_১-১১.md",
+        "line_count": 530,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      },
+      {
+        "ruku_id": 2,
+        "ayah_range": "12-19",
+        "file": "রুকু-০২_আয়াত_১২-১৯.md",
+        "line_count": 541,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      },
+      {
+        "ruku_id": 3,
+        "ayah_range": "20-30",
+        "file": "রুকু-০৩_আয়াত_২০-৩০.md",
+        "line_count": 604,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      },
+      {
+        "ruku_id": 4,
+        "ayah_range": "31-34",
+        "file": "রুকু-০৪_আয়াত_৩১-৩৪.md",
+        "line_count": 447,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      }
+    ]
+  },
+  "32": {
+    "name_bn": "আস-সাজদাহ",
+    "num_rukus": 3,
+    "ruku_stats": [
+      {
+        "ruku_id": 1,
+        "ayah_range": "1-11",
+        "file": "রুকু-০১_আয়াত_১-১১.md",
+        "line_count": 550,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 2,
+        "ayah_range": "12-22",
+        "file": "রুকু-০২_আয়াত_১২-২২.md",
+        "line_count": 569,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 3,
+        "ayah_range": "23-30",
+        "file": "রুকু-০৩_আয়াত_২৩-৩০.md",
+        "line_count": 512,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      }
+    ]
+  },
+  "33": {
+    "name_bn": "আল-আহযাব",
+    "num_rukus": 9,
+    "ruku_stats": [
+      {
+        "ruku_id": 1,
+        "ayah_range": "1-8",
+        "file": "রুকু-০১_আয়াত_১-৮.md",
+        "line_count": 571,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 2,
+        "ayah_range": "9-20",
+        "file": "রুকু-০২_আয়াত_৯-২০.md",
+        "line_count": 729,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 3,
+        "ayah_range": "21-27",
+        "file": "রুকু-০৩_আয়াত_২১-২৭.md",
+        "line_count": 517,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 4,
+        "ayah_range": "28-34",
+        "file": "রুকু-০৪_আয়াত_২৮-৩৪.md",
+        "line_count": 544,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      },
+      {
+        "ruku_id": 5,
+        "ayah_range": "35-40",
+        "file": "রুকু-০৫_আয়াত_৩৫-৪০.md",
+        "line_count": 533,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      },
+      {
+        "ruku_id": 6,
+        "ayah_range": "41-52",
+        "file": "রুকু-০৬_আয়াত_৪১-৫২.md",
+        "line_count": 565,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      },
+      {
+        "ruku_id": 7,
+        "ayah_range": "53-58",
+        "file": "রুকু-০৭_আয়াত_৫৩-৫৮.md",
+        "line_count": 496,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      },
+      {
+        "ruku_id": 8,
+        "ayah_range": "59-68",
+        "file": "রুকু-০৮_আয়াত_৫৯-৬৮.md",
+        "line_count": 405,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      },
+      {
+        "ruku_id": 9,
+        "ayah_range": "69-73",
+        "file": "রুকু-০৯_আয়াত_৬৯-৭৩.md",
+        "line_count": 395,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      }
+    ]
+  },
+  "34": {
+    "name_bn": "সাবা",
+    "num_rukus": 6,
+    "ruku_stats": [
+      {
+        "ruku_id": 1,
+        "ayah_range": "1-9",
+        "file": "রুকু-০১_আয়াত_১-৯.md",
+        "line_count": 375,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      },
+      {
+        "ruku_id": 2,
+        "ayah_range": "10-21",
+        "file": "রুকু-০২_আয়াত_১০-২১.md",
+        "line_count": 347,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      },
+      {
+        "ruku_id": 3,
+        "ayah_range": "22-30",
+        "file": "রুকু-০৩_আয়াত_২২-৩০.md",
+        "line_count": 322,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      },
+      {
+        "ruku_id": 4,
+        "ayah_range": "31-36",
+        "file": "রুকু-০৪_আয়াত_৩১-৩৬.md",
+        "line_count": 295,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      },
+      {
+        "ruku_id": 5,
+        "ayah_range": "37-45",
+        "file": "রুকু-০৫_আয়াত_৩৭-৪৫.md",
+        "line_count": 402,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      },
+      {
+        "ruku_id": 6,
+        "ayah_range": "46-54",
+        "file": "রুকু-০৬_আয়াত_৪৬-৫৪.md",
+        "line_count": 328,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      }
+    ]
+  },
+  "35": {
+    "name_bn": "ফাতির",
+    "num_rukus": 5,
+    "ruku_stats": [
+      {
+        "ruku_id": 1,
+        "ayah_range": "1-7",
+        "file": "রুকু-০১_আয়াত_১-৭.md",
+        "line_count": 394,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      },
+      {
+        "ruku_id": 2,
+        "ayah_range": "8-14",
+        "file": "রুকু-০২_আয়াত_৮-১৪.md",
+        "line_count": 397,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      },
+      {
+        "ruku_id": 3,
+        "ayah_range": "15-26",
+        "file": "রুকু-০৩_আয়াত_১৫-২৬.md",
+        "line_count": 374,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      },
+      {
+        "ruku_id": 4,
+        "ayah_range": "27-37",
+        "file": "রুকু-০৪_আয়াত_২৭-৩৭.md",
+        "line_count": 384,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      },
+      {
+        "ruku_id": 5,
+        "ayah_range": "38-45",
+        "file": "রুকু-০৫_আয়াত_৩৮-৪৫.md",
+        "line_count": 439,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      }
+    ]
+  },
+  "36": {
+    "name_bn": "ইয়াসীন",
+    "num_rukus": 5,
+    "ruku_stats": [
+      {
+        "ruku_id": 1,
+        "ayah_range": "1-12",
+        "file": "রুকু-০১_আয়াত_১-১২.md",
+        "line_count": 332,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      },
+      {
+        "ruku_id": 2,
+        "ayah_range": "13-32",
+        "file": "রুকু-০২_আয়াত_১৩-৩২.md",
+        "line_count": 429,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      },
+      {
+        "ruku_id": 3,
+        "ayah_range": "33-50",
+        "file": "রুকু-০৩_আয়াত_৩৩-৫০.md",
+        "line_count": 355,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      },
+      {
+        "ruku_id": 4,
+        "ayah_range": "51-67",
+        "file": "রুকু-০৪_আয়াত_৫১-৬৭.md",
+        "line_count": 339,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      },
+      {
+        "ruku_id": 5,
+        "ayah_range": "68-83",
+        "file": "রুকু-০৫_আয়াত_৬৮-৮৩.md",
+        "line_count": 327,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      }
+    ]
+  },
+  "37": {
+    "name_bn": "আস-সাফফাত",
+    "num_rukus": 5,
+    "ruku_stats": [
+      {
+        "ruku_id": 1,
+        "ayah_range": "1-36",
+        "file": "রুকু-০১_আয়াত_১-৩৬.md",
+        "line_count": 349,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      },
+      {
+        "ruku_id": 2,
+        "ayah_range": "37-74",
+        "file": "রুকু-০২_আয়াত_৩৭-৭৪.md",
+        "line_count": 344,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      },
+      {
+        "ruku_id": 3,
+        "ayah_range": "75-113",
+        "file": "রুকু-০৩_আয়াত_৭৫-১১৩.md",
+        "line_count": 359,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      },
+      {
+        "ruku_id": 4,
+        "ayah_range": "114-138",
+        "file": "রুকু-০৪_আয়াত_১১৪-১৩৮.md",
+        "line_count": 315,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      },
+      {
+        "ruku_id": 5,
+        "ayah_range": "139-182",
+        "file": "রুকু-০৫_আয়াত_১৩৯-১৮২.md",
+        "line_count": 352,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      }
+    ]
+  },
+  "38": {
+    "name_bn": "সোয়াদ",
+    "num_rukus": 5,
+    "ruku_stats": [
+      {
+        "ruku_id": 1,
+        "ayah_range": "1-14",
+        "file": "রুকু-০১_আয়াত_১-১৪.md",
+        "line_count": 312,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      },
+      {
+        "ruku_id": 2,
+        "ayah_range": "15-26",
+        "file": "রুকু-০২_আয়াত_১৫-২৬.md",
+        "line_count": 408,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      },
+      {
+        "ruku_id": 3,
+        "ayah_range": "27-40",
+        "file": "রুকু-০৩_আয়াত_২৭-৪০.md",
+        "line_count": 336,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      },
+      {
+        "ruku_id": 4,
+        "ayah_range": "41-64",
+        "file": "রুকু-০৪_আয়াত_৪১-৬৪.md",
+        "line_count": 390,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      },
+      {
+        "ruku_id": 5,
+        "ayah_range": "65-88",
+        "file": "রুকু-০৫_আয়াত_৬৫-৮৮.md",
+        "line_count": 361,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      }
+    ]
+  },
+  "39": {
+    "name_bn": "আয-যুমার",
+    "num_rukus": 8,
+    "ruku_stats": [
+      {
+        "ruku_id": 1,
+        "ayah_range": "1-9",
+        "file": "রুকু-০১_আয়াত_১-৯.md",
+        "line_count": 405,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      },
+      {
+        "ruku_id": 2,
+        "ayah_range": "10-21",
+        "file": "রুকু-০২_আয়াত_১০-২১.md",
+        "line_count": 419,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      },
+      {
+        "ruku_id": 3,
+        "ayah_range": "22-31",
+        "file": "রুকু-০৩_আয়াত_২২-৩১.md",
+        "line_count": 348,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      },
+      {
+        "ruku_id": 4,
+        "ayah_range": "32-41",
+        "file": "রুকু-০৪_আয়াত_৩২-৪১.md",
+        "line_count": 366,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      },
+      {
+        "ruku_id": 5,
+        "ayah_range": "42-52",
+        "file": "রুকু-০৫_আয়াত_৪২-৫২.md",
+        "line_count": 361,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      },
+      {
+        "ruku_id": 6,
+        "ayah_range": "53-63",
+        "file": "রুকু-০৬_আয়াত_৫৩-৬৩.md",
+        "line_count": 347,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      },
+      {
+        "ruku_id": 7,
+        "ayah_range": "64-70",
+        "file": "রুকু-০৭_আয়াত_৬৪-৭০.md",
+        "line_count": 341,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      },
+      {
+        "ruku_id": 8,
+        "ayah_range": "71-75",
+        "file": "রুকু-০৮_আয়াত_৭১-৭৫.md",
+        "line_count": 394,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      }
+    ]
+  },
+  "40": {
+    "name_bn": "গাফির",
+    "num_rukus": 9,
+    "ruku_stats": [
+      {
+        "ruku_id": 1,
+        "ayah_range": "1-9",
+        "file": "রুকু-০১_আয়াত_১-৯.md",
+        "line_count": 379,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      },
+      {
+        "ruku_id": 2,
+        "ayah_range": "10-20",
+        "file": "রুকু-০২_আয়াত_১০-২০.md",
+        "line_count": 353,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      },
+      {
+        "ruku_id": 3,
+        "ayah_range": "21-27",
+        "file": "রুকু-০৩_আয়াত_২১-২৭.md",
+        "line_count": 376,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      },
+      {
+        "ruku_id": 4,
+        "ayah_range": "28-37",
+        "file": "রুকু-০৪_আয়াত_২৮-৩৭.md",
+        "line_count": 352,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      },
+      {
+        "ruku_id": 5,
+        "ayah_range": "38-50",
+        "file": "রুকু-০৫_আয়াত_৩৮-৫০.md",
+        "line_count": 365,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      },
+      {
+        "ruku_id": 6,
+        "ayah_range": "51-60",
+        "file": "রুকু-০৬_আয়াত_৫১-৬০.md",
+        "line_count": 331,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      },
+      {
+        "ruku_id": 7,
+        "ayah_range": "61-68",
+        "file": "রুকু-০৭_আয়াত_৬১-৬৮.md",
+        "line_count": 351,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      },
+      {
+        "ruku_id": 8,
+        "ayah_range": "69-78",
+        "file": "রুকু-০৮_আয়াত_৬৯-৭৮.md",
+        "line_count": 331,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      },
+      {
+        "ruku_id": 9,
+        "ayah_range": "79-85",
+        "file": "রুকু-০৯_আয়াত_৭৯-৮৫.md",
+        "line_count": 356,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      }
+    ]
+  },
+  "41": {
+    "name_bn": "ফুসসিলাত",
+    "num_rukus": 6,
+    "ruku_stats": [
+      {
+        "ruku_id": 1,
+        "ayah_range": "1-8",
+        "file": "রুকু-০১_আয়াত_১-৮.md",
+        "line_count": 399,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      },
+      {
+        "ruku_id": 2,
+        "ayah_range": "9-18",
+        "file": "রুকু-০২_আয়াত_৯-১৮.md",
+        "line_count": 511,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      },
+      {
+        "ruku_id": 3,
+        "ayah_range": "19-25",
+        "file": "রুকু-০৩_আয়াত_১৯-২৫.md",
+        "line_count": 472,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": false
+      },
+      {
+        "ruku_id": 4,
+        "ayah_range": "26-32",
+        "file": "রুকু-০৪_আয়াত_২৬-৩২.md",
+        "line_count": 374,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 5,
+        "ayah_range": "33-46",
+        "file": "রুকু-০৫_আয়াত_৩৩-৪৬.md",
+        "line_count": 572,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 6,
+        "ayah_range": "47-54",
+        "file": "রুকু-০৬_আয়াত_৪৭-৫৪.md",
+        "line_count": 458,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      }
+    ]
+  },
+  "42": {
+    "name_bn": "আশ-শূরা",
+    "num_rukus": 5,
+    "ruku_stats": [
+      {
+        "ruku_id": 1,
+        "ayah_range": "1-9",
+        "file": "রুকু-০১_আয়াত_১-৯.md",
+        "line_count": 384,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 2,
+        "ayah_range": "10-19",
+        "file": "রুকু-০২_আয়াত_১০-১৯.md",
+        "line_count": 485,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 3,
+        "ayah_range": "20-29",
+        "file": "রুকু-০৩_আয়াত_২০-২৯.md",
+        "line_count": 469,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 4,
+        "ayah_range": "30-43",
+        "file": "রুকু-০৪_আয়াত_৩০-৪৩.md",
+        "line_count": 460,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 5,
+        "ayah_range": "44-53",
+        "file": "রুকু-০৫_আয়াত_৪৪-৫৩.md",
+        "line_count": 495,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      }
+    ]
+  },
+  "43": {
+    "name_bn": "আয-যুখরুফ",
+    "num_rukus": 7,
+    "ruku_stats": [
+      {
+        "ruku_id": 1,
+        "ayah_range": "1-15",
+        "file": "রুকু-০১_আয়াত_১-১৫.md",
+        "line_count": 437,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 2,
+        "ayah_range": "16-25",
+        "file": "রুকু-০২_আয়াত_১৬-২৫.md",
+        "line_count": 425,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 3,
+        "ayah_range": "26-35",
+        "file": "রুকু-০৩_আয়াত_২৬-৩৫.md",
+        "line_count": 392,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 4,
+        "ayah_range": "36-45",
+        "file": "রুকু-০৪_আয়াত_৩৬-৪৫.md",
+        "line_count": 353,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 5,
+        "ayah_range": "46-56",
+        "file": "রুকু-০৫_আয়াত_৪৬-৫৬.md",
+        "line_count": 390,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 6,
+        "ayah_range": "57-67",
+        "file": "রুকু-০৬_আয়াত_৫৭-৬৭.md",
+        "line_count": 419,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 7,
+        "ayah_range": "68-89",
+        "file": "রুকু-০৭_আয়াত_৬৮-৮৯.md",
+        "line_count": 507,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      }
+    ]
+  },
+  "44": {
+    "name_bn": "আদ-দুখান",
+    "num_rukus": 3,
+    "ruku_stats": [
+      {
+        "ruku_id": 1,
+        "ayah_range": "1-29",
+        "file": "রুকু-০১_আয়াত_১-২৯.md",
+        "line_count": 661,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 2,
+        "ayah_range": "30-42",
+        "file": "রুকু-০২_আয়াত_৩০-৪২.md",
+        "line_count": 417,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 3,
+        "ayah_range": "43-59",
+        "file": "রুকু-০৩_আয়াত_৪৩-৫৯.md",
+        "line_count": 438,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      }
+    ]
+  },
+  "45": {
+    "name_bn": "আল-জাসিয়াহ",
+    "num_rukus": 4,
+    "ruku_stats": [
+      {
+        "ruku_id": 1,
+        "ayah_range": "1-11",
+        "file": "রুকু-০১_আয়াত_১-১১.md",
+        "line_count": 450,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 2,
+        "ayah_range": "12-21",
+        "file": "রুকু-০২_আয়াত_১২-২১.md",
+        "line_count": 451,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 3,
+        "ayah_range": "22-26",
+        "file": "রুকু-০৩_আয়াত_২২-২৬.md",
+        "line_count": 352,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 4,
+        "ayah_range": "27-37",
+        "file": "রুকু-০৪_আয়াত_২৭-৩৭.md",
+        "line_count": 468,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      }
+    ]
+  },
+  "46": {
+    "name_bn": "আল-আহক্বাফ",
+    "num_rukus": 4,
+    "ruku_stats": [
+      {
+        "ruku_id": 1,
+        "ayah_range": "1-10",
+        "file": "রুকু-০১_আয়াত_১-১০.md",
+        "line_count": 482,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 2,
+        "ayah_range": "11-20",
+        "file": "রুকু-০২_আয়াত_১১-২০.md",
+        "line_count": 506,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 3,
+        "ayah_range": "21-26",
+        "file": "রুকু-০৩_আয়াত_২১-২৬.md",
+        "line_count": 407,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      },
+      {
+        "ruku_id": 4,
+        "ayah_range": "27-35",
+        "file": "রুকু-০৪_আয়াত_২৭-৩৫.md",
+        "line_count": 442,
+        "sections_found": 16,
+        "missing_sections": [],
+        "has_mufradat_table": true,
+        "has_qiraat_table": true,
+        "has_ahkam_cards": true,
+        "has_irab": true
+      }
+    ]
+  }
+}
