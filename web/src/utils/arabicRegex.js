@@ -21,8 +21,10 @@ export const PAIRS = [
   `\\[[${IN_COMMON}«»“”\\(\\)]*?${AR_CHAR}[${IN_COMMON}«»“”\\(\\)]*?\\]`
 ].join('|');
 
-// Bare Arabic runs (not already enclosed in paired delimiters)
-export const BARE = `${AR_CHAR}[${IN_COMMON}]*?${AR_CHAR}|${AR_CHAR}`;
+// Bare Arabic runs (not already enclosed in paired delimiters):
+// Greedily matches entire Arabic words, phrases, or sentences, including intra-phrase spaces,
+// Arabic diacritics, and optional trailing Arabic punctuation or ayah numbers.
+export const BARE = `${AR_CHAR}(?:[${IN_COMMON}]*${AR_CHAR})?(?:[،؛؟.]|\\s*(?:۝\\s*[০-৯0-9\\u0660-\\u0669]+|\\([০-৯0-9\\u0660-\\u0669]+\\)))?`;
 
 export const AR_REGEX_PATTERN = `(?:${PAIRS})|(?:${BARE})`;
 

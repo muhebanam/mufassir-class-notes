@@ -90,13 +90,13 @@ export default function ThematicView({ rukuData, surahInfo, onSwitchToAyahStudy 
                     <td className="px-3.5 py-2.5 text-center font-mono font-semibold text-emerald-700 dark:text-emerald-400 whitespace-nowrap">
                       <MarkdownContent inline content={row['আয়াত'] || ''} />
                     </td>
-                    <td className="px-3.5 py-2.5 whitespace-nowrap">
+                    <td className="px-3.5 py-2.5 whitespace-nowrap text-right font-arabic" dir="rtl">
                       <MarkdownContent inline content={row['শব্দ (ক্রম)'] || ''} />
                     </td>
-                    <td className="px-3.5 py-2.5 font-medium whitespace-nowrap">
+                    <td className="px-3.5 py-2.5 font-medium whitespace-nowrap text-right font-arabic" dir="rtl">
                       <MarkdownContent inline content={row['ক্বারী / রাবী (বাহাউথ)'] || ''} />
                     </td>
-                    <td className="px-3.5 py-2.5 leading-relaxed font-arabic" dir="auto">
+                    <td className="px-3.5 py-2.5 leading-relaxed font-arabic text-right" dir="rtl">
                       <MarkdownContent inline content={row['কিরাআতের পাঠভেদ ও নিয়ম (অবিকৃত মূল পাঠ)'] || ''} />
                     </td>
                   </tr>

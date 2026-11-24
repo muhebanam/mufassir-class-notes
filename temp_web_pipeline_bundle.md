@@ -158,8 +158,20 @@ INPUT : বিপরীত ব্র্যাকেট ﴾سُورَةٌ أَن�
 MATCH : [ '﴾سُورَةٌ أَنزَلْنَاهَا﴿' ]
 STATUS: ✓ PASSED
 ---
+INPUT : ক্বারী: الكسائي
+MATCH : [ 'الكسائي' ]
+STATUS: ✓ PASSED
+---
+INPUT : রাবী: ورش عن نافع (মাদীনা)
+MATCH : [ 'ورش عن نافع' ]
+STATUS: ✓ PASSED
+---
+INPUT : নিয়ম: قرأ بإمالة هاء التأنيث بخلف عنه وقفا.
+MATCH : [ 'قرأ بإمالة هاء التأنيث بخلف عنه وقفا.' ]
+STATUS: ✓ PASSED
+---
 
-All 13 test cases passed strict assertions with 100% accuracy.
+All 16 test cases passed strict assertions with 100% accuracy.
 ```
 
 <a id='audit-build'></a>
@@ -173,13 +185,13 @@ transforming...
 [32m✓[39m 1594 modules transformed.
 rendering chunks...
 computing gzip size...
-[2mdist/[22m[32mindex.html                   [39m[1m[2m  1.88 kB[22m[1m[22m[2m │ gzip:  0.96 kB[22m
+[2mdist/[22m[32mindex.html                   [39m[1m[2m  1.88 kB[22m[1m[22m[2m │ gzip:  0.97 kB[22m
 [2mdist/[22m[35massets/index-B4lfgJFV.css    [39m[1m[2m 47.20 kB[22m[1m[22m[2m │ gzip:  8.64 kB[22m
 [2mdist/[22m[36massets/icons-BDdk__Lx.js     [39m[1m[2m 22.71 kB[22m[1m[22m[2m │ gzip:  6.30 kB[22m
 [2mdist/[22m[36massets/markdown-BJsf1fhI.js  [39m[1m[2m 84.84 kB[22m[1m[22m[2m │ gzip: 28.14 kB[22m
 [2mdist/[22m[36massets/vendor-wGYtyqgO.js    [39m[1m[2m134.66 kB[22m[1m[22m[2m │ gzip: 43.22 kB[22m
-[2mdist/[22m[36massets/index-nuHGrktt.js     [39m[1m[2m194.93 kB[22m[1m[22m[2m │ gzip: 54.80 kB[22m
-[32m✓ built in 3.92s[39m
+[2mdist/[22m[36massets/index-QQz_y0R7.js     [39m[1m[2m195.09 kB[22m[1m[22m[2m │ gzip: 54.84 kB[22m
+[32m✓ built in 4.09s[39m
 ```
 
 ---
@@ -216,8 +228,10 @@ export const PAIRS = [
   `\\[[${IN_COMMON}«»“”\\(\\)]*?${AR_CHAR}[${IN_COMMON}«»“”\\(\\)]*?\\]`
 ].join('|');
 
-// Bare Arabic runs (not already enclosed in paired delimiters)
-export const BARE = `${AR_CHAR}[${IN_COMMON}]*?${AR_CHAR}|${AR_CHAR}`;
+// Bare Arabic runs (not already enclosed in paired delimiters):
+// Greedily matches entire Arabic words, phrases, or sentences, including intra-phrase spaces,
+// Arabic diacritics, and optional trailing Arabic punctuation or ayah numbers.
+export const BARE = `${AR_CHAR}(?:[${IN_COMMON}]*${AR_CHAR})?(?:[،؛؟.]|\\s*(?:۝\\s*[০-৯0-9\\u0660-\\u0669]+|\\([০-৯0-9\\u0660-\\u0669]+\\)))?`;
 
 export const AR_REGEX_PATTERN = `(?:${PAIRS})|(?:${BARE})`;
 
@@ -989,13 +1003,13 @@ export default function ThematicView({ rukuData, surahInfo, onSwitchToAyahStudy 
                     <td className="px-3.5 py-2.5 text-center font-mono font-semibold text-emerald-700 dark:text-emerald-400 whitespace-nowrap">
                       <MarkdownContent inline content={row['আয়াত'] || ''} />
                     </td>
-                    <td className="px-3.5 py-2.5 whitespace-nowrap">
+                    <td className="px-3.5 py-2.5 whitespace-nowrap text-right font-arabic" dir="rtl">
                       <MarkdownContent inline content={row['শব্দ (ক্রম)'] || ''} />
                     </td>
-                    <td className="px-3.5 py-2.5 font-medium whitespace-nowrap">
+                    <td className="px-3.5 py-2.5 font-medium whitespace-nowrap text-right font-arabic" dir="rtl">
                       <MarkdownContent inline content={row['ক্বারী / রাবী (বাহাউথ)'] || ''} />
                     </td>
-                    <td className="px-3.5 py-2.5 leading-relaxed font-arabic" dir="auto">
+                    <td className="px-3.5 py-2.5 leading-relaxed font-arabic text-right" dir="rtl">
                       <MarkdownContent inline content={row['কিরাআতের পাঠভেদ ও নিয়ম (অবিকৃত মূল পাঠ)'] || ''} />
                     </td>
                   </tr>
@@ -2797,6 +2811,18 @@ const tests = [
   {
     input: 'বিপরীত ব্র্যাকেট ﴾سُورَةٌ أَنزَلْنَاهَا﴿ স্বয়ংক্রিয়ভাবে ধরা পড়ে',
     expected: ['﴾سُورَةٌ أَنزَلْنَاهَا﴿']
+  },
+  {
+    input: 'ক্বারী: الكسائي',
+    expected: ['الكسائي']
+  },
+  {
+    input: 'রাবী: ورش عن نافع (মাদীনা)',
+    expected: ['ورش عن نافع']
+  },
+  {
+    input: 'নিয়ম: قرأ بإمالة هاء التأنيث بخلف عنه وقفا.',
+    expected: ['قرأ بإمالة هاء التأنيث بخلف عنه وقفا.']
   }
 ];
 
