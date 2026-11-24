@@ -38,8 +38,9 @@ export default {
         }
       },
       fontFamily: {
-        amiri: ['"Amiri Quran"', '"Amiri"', '"Scheherazade New"', 'serif'],
-        arabic: ['"Amiri Quran"', '"Amiri"', '"Scheherazade New"', 'serif'],
+        quran: ['"Amiri Quran"', '"Scheherazade New"', '"Amiri"', 'serif'],
+        amiri: ['"Amiri"', '"Scheherazade New"', '"Traditional Arabic"', '"Segoe UI"', 'serif'],
+        arabic: ['"Amiri"', '"Scheherazade New"', '"Traditional Arabic"', '"Segoe UI"', 'serif'],
         bengali: ['"Noto Serif Bengali"', '"Hind Siliguri"', 'serif'],
         sans: ['"Hind Siliguri"', '"Noto Sans Bengali"', 'sans-serif'],
       },

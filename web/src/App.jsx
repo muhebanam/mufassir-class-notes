@@ -5,6 +5,9 @@ import AyahJumper from './components/AyahJumper';
 import AyahStudyView from './components/AyahStudyView';
 import ThematicView from './components/ThematicView';
 import MushafView from './components/MushafView';
+import SurahScopeView from './components/SurahScopeView';
+import RukuScopeView from './components/RukuScopeView';
+import AyahScopeView from './components/AyahScopeView';
 import SurahDashboard from './components/SurahDashboard';
 import SearchModal from './components/SearchModal';
 import SettingsModal, { QURAN_COLOR_OPTIONS } from './components/SettingsModal';
@@ -145,11 +148,12 @@ export default function App() {
       .catch((err) => console.error('Failed to load initial data', err));
   }, []);
 
-  // 2. Load Surah Meta when currentSurahId changes
+  // 2. Load Surah Meta when currentSurahId changes (With AbortController)
   useEffect(() => {
     if (!currentSurahId) return;
+    const controller = new AbortController();
     setLoading(true);
-    fetch(`/data/${currentSurahId}/meta.json`)
+    fetch(`/data/${currentSurahId}/meta.json`, { signal: controller.signal })
       .then((r) => r.json())
       .then((meta) => {
         setSurahMeta(meta);
@@ -168,18 +172,29 @@ export default function App() {
         }
         setCurrentRukuId(targetRuku);
       })
-      .catch((err) => console.error('Failed to load surah meta', err));
+      .catch((err) => {
+        if (err.name !== 'AbortError') {
+          console.error('Failed to load surah meta', err);
+        }
+      });
+
+    return () => controller.abort();
   }, [currentSurahId]);
 
-  // 3. Load Ruku Data when currentSurahId or currentRukuId changes
+  // 3. Load Ruku Data when currentSurahId or currentRukuId changes (With AbortController & Zero Leakage)
   useEffect(() => {
     if (!currentSurahId || !currentRukuId) return;
+    const controller = new AbortController();
     setLoading(true);
-    fetch(`/data/${currentSurahId}/ruku-${currentRukuId}.json`)
+    setRukuData(null); // Clear previous ruku data immediately to prevent leakage
+
+    fetch(`/data/${currentSurahId}/ruku-${currentRukuId}.json`, { signal: controller.signal })
       .then((r) => r.json())
       .then((data) => {
         setRukuData(data);
         setLoading(false);
+        // Reset scroll position to top
+        window.scrollTo({ top: 0, behavior: 'instant' });
         // Ensure selected ayah is within this ruku's range
         if (data.ayahs && data.ayahs.length > 0) {
           const exists = data.ayahs.some((a) => a.ayah === selectedAyahNum);
@@ -189,9 +204,13 @@ export default function App() {
         }
       })
       .catch((err) => {
-        console.error('Failed to load ruku data', err);
-        setLoading(false);
+        if (err.name !== 'AbortError') {
+          console.error('Failed to load ruku data', err);
+          setLoading(false);
+        }
       });
+
+    return () => controller.abort();
   }, [currentSurahId, currentRukuId]);
 
   // 4. Update URL Hash for Permanent Deep Linking
@@ -295,44 +314,44 @@ export default function App() {
         isHidden={isHeaderHidden}
       />
 
-      {/* Mobile Study Mode Tabs (front and center on phone screens) */}
+      {/* Mobile 3-Tier Switcher Tabs (Front and center on phone screens) */}
       {activeView === 'study' && (
-        <div className="md:hidden bg-white/95 dark:bg-gray-800/95 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 px-3 py-1.5 flex items-center justify-between gap-1.5 shadow-2xs">
+        <div className="md:hidden bg-white/95 dark:bg-gray-800/95 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 px-3 py-1.5 flex items-center justify-between gap-1.5 shadow-2xs font-bengali">
           <button
-            onClick={() => setStudyMode('mushaf')}
+            onClick={() => setStudyMode('surah')}
             className={`flex-1 py-1.5 px-1.5 rounded-xl text-xs font-bold text-center transition flex items-center justify-center gap-1 ${
-              studyMode === 'mushaf'
+              studyMode === 'surah'
                 ? 'bg-emerald-600 text-white shadow-xs'
                 : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
             }`}
           >
-            <span>📖 মুসহাফ</span>
+            <span>🏛️ সূরা</span>
+          </button>
+          <button
+            onClick={() => setStudyMode('ruku')}
+            className={`flex-1 py-1.5 px-1.5 rounded-xl text-xs font-bold text-center transition flex items-center justify-center gap-1 ${
+              studyMode === 'ruku' || studyMode === 'thematic'
+                ? 'bg-emerald-600 text-white shadow-xs'
+                : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
+            }`}
+          >
+            <span>📑 রুকু</span>
           </button>
           <button
             onClick={() => setStudyMode('ayah')}
             className={`flex-1 py-1.5 px-1.5 rounded-xl text-xs font-bold text-center transition flex items-center justify-center gap-1 ${
-              studyMode === 'ayah'
+              studyMode === 'ayah' || studyMode === 'mushaf'
                 ? 'bg-emerald-600 text-white shadow-xs'
                 : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
             }`}
           >
-            <span>🔍 আয়াত স্টাডি</span>
-          </button>
-          <button
-            onClick={() => setStudyMode('thematic')}
-            className={`flex-1 py-1.5 px-1.5 rounded-xl text-xs font-bold text-center transition flex items-center justify-center gap-1 ${
-              studyMode === 'thematic'
-                ? 'bg-emerald-600 text-white shadow-xs'
-                : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
-            }`}
-          >
-            <span>🏛️ শাস্ত্র-আলোচনা</span>
+            <span>📖 আয়াত</span>
           </button>
         </div>
       )}
 
       {/* Horizontal Ayah Jumper Bar (When in Ayah Study or Mushaf mode) */}
-      {activeView === 'study' && studyMode !== 'thematic' && rukuData && (
+      {activeView === 'study' && (studyMode === 'ayah' || studyMode === 'mushaf') && rukuData && (
         <AyahJumper
           ayahs={rukuData.ayahs}
           selectedAyah={selectedAyahNum}
@@ -340,7 +359,7 @@ export default function App() {
         />
       )}
 
-      {/* Main Content Area */}
+      {/* Main Content Area: Strict 3-Tier Isolation */}
       <main className="flex-1">
         {activeView === 'dashboard' ? (
           <SurahDashboard
@@ -354,14 +373,32 @@ export default function App() {
             <div className="w-10 h-10 border-4 border-emerald-600 border-t-transparent rounded-full animate-spin mx-auto"></div>
             <p className="text-gray-500 text-sm font-semibold">সূরা ও রুকুর প্রামাণ্য তাহকীক ডাটা লোড হচ্ছে...</p>
           </div>
-        ) : studyMode === 'thematic' ? (
-          <ThematicView 
-            rukuData={rukuData} 
-            surahInfo={currentSurah} 
-            onSwitchToAyahStudy={() => setStudyMode('ayah')} 
+        ) : studyMode === 'surah' ? (
+          <SurahScopeView
+            key={`surah-scope-${currentSurahId}`}
+            surahMeta={surahMeta}
+            surahInfo={currentSurah}
+            onSelectRuku={(rId) => {
+              handleSelectRuku(rId);
+              setStudyMode('ruku');
+            }}
+            onSwitchToRukuScope={() => setStudyMode('ruku')}
+            onSwitchToAyahScope={() => setStudyMode('ayah')}
+          />
+        ) : (studyMode === 'ruku' || studyMode === 'thematic') ? (
+          <RukuScopeView
+            key={`ruku-scope-${currentSurahId}-${currentRukuId}`}
+            rukuData={rukuData}
+            surahInfo={currentSurah}
+            onSelectAyah={(aNum) => {
+              setSelectedAyahNum(aNum);
+              setStudyMode('ayah');
+            }}
+            onSwitchToAyahScope={() => setStudyMode('ayah')}
           />
         ) : studyMode === 'mushaf' ? (
           <MushafView
+            key={`mushaf-scope-${currentSurahId}-${currentRukuId}`}
             rukuData={rukuData}
             surahInfo={currentSurah}
             onSelectAyah={(aNum) => {
@@ -372,7 +409,8 @@ export default function App() {
             arabicLineHeight={arabicLineHeight}
           />
         ) : (
-          <AyahStudyView
+          <AyahScopeView
+            key={`ayah-scope-${currentSurahId}-${currentRukuId}-${selectedAyahNum}`}
             ayah={currentAyah}
             surahInfo={currentSurah}
             rukuInfo={rukuData}

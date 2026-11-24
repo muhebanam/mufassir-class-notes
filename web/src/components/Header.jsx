@@ -84,42 +84,42 @@ export default function Header({
           )}
         </div>
 
-        {/* Center: Top Segmented Control (3 Distinct Academic Modes) */}
-        <div className="hidden md:flex items-center bg-gray-100/90 dark:bg-gray-700/70 p-1 rounded-2xl text-xs font-bold border border-gray-200/50 dark:border-gray-600/50 shadow-2xs">
+        {/* Center: Strict 3-Tier Switcher (সূরা আলোচনা | রুকু আলোচনা | আয়াত স্টাডি) */}
+        <div className="hidden md:flex items-center bg-gray-100/90 dark:bg-gray-700/70 p-1 rounded-2xl text-xs font-bold border border-gray-200/50 dark:border-gray-600/50 shadow-2xs font-bengali">
           <button
-            onClick={() => setStudyMode('mushaf')}
+            onClick={() => setStudyMode('surah')}
             className={`px-3 py-1.5 rounded-xl transition flex items-center gap-1.5 ${
-              studyMode === 'mushaf'
-                ? 'bg-white dark:bg-gray-800 text-emerald-800 dark:text-emerald-300 shadow-xs font-bold'
+              studyMode === 'surah'
+                ? 'bg-emerald-600 text-white shadow-xs font-bold'
                 : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'
             }`}
           >
-            <span>📖</span>
-            <span>মুসহাফ রিডিং</span>
+            <span>🏛️</span>
+            <span>সূরা আলোচনা</span>
+          </button>
+
+          <button
+            onClick={() => setStudyMode('ruku')}
+            className={`px-3 py-1.5 rounded-xl transition flex items-center gap-1.5 ${
+              studyMode === 'ruku'
+                ? 'bg-emerald-600 text-white shadow-xs font-bold'
+                : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'
+            }`}
+          >
+            <span>📑</span>
+            <span>রুকু আলোচনা</span>
           </button>
 
           <button
             onClick={() => setStudyMode('ayah')}
             className={`px-3 py-1.5 rounded-xl transition flex items-center gap-1.5 ${
-              studyMode === 'ayah'
-                ? 'bg-white dark:bg-gray-800 text-emerald-800 dark:text-emerald-300 shadow-xs font-bold'
+              studyMode === 'ayah' || studyMode === 'mushaf'
+                ? 'bg-emerald-600 text-white shadow-xs font-bold'
                 : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'
             }`}
           >
-            <span>🔍</span>
-            <span>আয়াত স্টাডি</span>
-          </button>
-
-          <button
-            onClick={() => setStudyMode('thematic')}
-            className={`px-3 py-1.5 rounded-xl transition flex items-center gap-1.5 ${
-              studyMode === 'thematic'
-                ? 'bg-white dark:bg-gray-800 text-emerald-800 dark:text-emerald-300 shadow-xs font-bold'
-                : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'
-            }`}
-          >
-            <span>🏛️</span>
-            <span>রুকু শাস্ত্র-আলোচনা</span>
+            <span>📖</span>
+            <span>আয়াত স্টাডি</span>
           </button>
         </div>
 

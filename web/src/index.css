@@ -109,20 +109,22 @@ body.dark {
    3. Arabic & Quranic Typography (Unbroken Ligatures & Responsive Direction)
    ========================================================================== */
 .uthmani-text {
-  font-family: 'Amiri Quran', 'Scheherazade New', 'Amiri', serif;
+  font-family: 'Amiri Quran', 'Scheherazade New', 'Amiri', 'Traditional Arabic', serif;
   color: var(--quran-color, var(--ink));
   direction: rtl;
   text-align: right;
   word-spacing: 0.12em;
+  line-height: 2.2 !important;
   word-break: normal !important;
   overflow-wrap: break-word !important;
   hyphens: none !important;
   -webkit-hyphens: none !important;
+  font-variant-ligatures: normal;
 }
 
 /* Traditional Ayah End Circle */
 .ayah-end-symbol {
-  font-family: 'Amiri Quran', serif;
+  font-family: 'Amiri Quran', 'Scheherazade New', serif;
   color: var(--accent);
   display: inline-block;
   padding: 0 4px;
@@ -149,9 +151,9 @@ body.dark {
 
 /* Arabic typography inside prose & inline components */
 .ar, bdi.ar {
-  font-family: 'Amiri Quran', 'Amiri', 'Scheherazade New', serif !important;
+  font-family: 'Amiri', 'Scheherazade New', 'Traditional Arabic', 'Simplified Arabic', 'Segoe UI', serif !important;
   font-size: 1.25em;
-  line-height: 2.1;
+  line-height: 2.2;
   direction: rtl;
   unicode-bidi: isolate;
   display: inline;
@@ -160,8 +162,7 @@ body.dark {
   hyphens: none !important;
   -webkit-hyphens: none !important;
   text-rendering: optimizeLegibility;
-  font-feature-settings: "liga" 1, "calt" 1, "mkmk" 1;
-  -webkit-font-feature-settings: "liga" 1, "calt" 1, "mkmk" 1;
+  font-variant-ligatures: normal;
 }
 
 /* Standalone Arabic block - strictly right aligned and RTL */
@@ -175,16 +176,15 @@ h1.ar-block, h2.ar-block, h3.ar-block, h4.ar-block, h5.ar-block, h6.ar-block,
   display: block;
   text-align: right !important;
   direction: rtl !important;
-  font-family: 'Amiri Quran', 'Amiri', 'Scheherazade New', serif !important;
-  font-size: 1.28em;
-  line-height: 2.2;
+  font-family: 'Amiri', 'Scheherazade New', 'Traditional Arabic', 'Simplified Arabic', 'Segoe UI', serif !important;
+  font-size: 1.25em;
+  line-height: 2.25;
   margin: 0.6em 0;
   word-break: normal !important;
   overflow-wrap: break-word !important;
   hyphens: none !important;
   -webkit-hyphens: none !important;
-  font-feature-settings: "liga" 1, "calt" 1, "mkmk" 1;
-  -webkit-font-feature-settings: "liga" 1, "calt" 1, "mkmk" 1;
+  font-variant-ligatures: normal;
 }
 
 blockquote.ar-block {
@@ -204,17 +204,20 @@ blockquote.ar-block {
   overflow-wrap: break-word !important;
   hyphens: none !important;
   -webkit-hyphens: none !important;
-  font-feature-settings: "liga" 1, "calt" 1, "mkmk" 1;
-  -webkit-font-feature-settings: "liga" 1, "calt" 1, "mkmk" 1;
+  font-variant-ligatures: normal;
 }
 
 .font-arabic {
-  font-family: 'Amiri Quran', 'Amiri', 'Scheherazade New', serif !important;
+  font-family: 'Amiri', 'Scheherazade New', 'Traditional Arabic', 'Simplified Arabic', 'Segoe UI', serif !important;
+}
+
+.font-quran {
+  font-family: 'Amiri Quran', 'Scheherazade New', 'Amiri', 'Traditional Arabic', serif !important;
 }
 
 /* Arabic inside inline code */
 code.ar-code, .ar-code {
-  font-family: 'Amiri Quran', 'Amiri', serif;
+  font-family: 'Amiri', 'Scheherazade New', 'Traditional Arabic', serif;
   font-size: 1.15em;
   direction: rtl;
   unicode-bidi: isolate;
@@ -383,3 +386,20 @@ code.ar-code, .ar-code {
     font-size: 10pt !important;
   }
 }
+
+/* Zero-breakage layout safety */
+.layout-safe {
+  min-width: 0;
+  overflow-x: hidden;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.table-cell-arabic {
+  font-family: 'Amiri', 'Scheherazade New', 'Traditional Arabic', 'Segoe UI', serif !important;
+  direction: rtl;
+  text-align: right;
+  line-height: 2.1 !important;
+  font-variant-ligatures: normal;
+}
+
