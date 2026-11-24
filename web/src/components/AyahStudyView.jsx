@@ -100,7 +100,7 @@ export default function AyahStudyView({
 
   const tabs = [
     { id: 'jalalayn', label: 'জালালাইন তাফসীর', icon: BookOpen, count: null, available: !!ayah.jalalayn },
-    { id: 'mufradat', label: 'মুফরাদাত ও সরফ', icon: Languages, count: ayah.mufradat?.length, available: !!(ayah.mufradat && ayah.mufradat.length > 0) },
+    { id: 'mufradat', label: 'মুফরাদাত ও সরফ', icon: Languages, count: (ayah.tahqeeq?.length || ayah.mufradat?.length), available: !!((ayah.tahqeeq && ayah.tahqeeq.length > 0) || (ayah.mufradat && ayah.mufradat.length > 0)) },
     { id: 'irab', label: 'ই\'রাব ও তারকীব', icon: Compass, count: null, available: !!ayah.irab },
     { id: 'qiraat', label: '১০ কিরাআত পাঠভেদ', icon: Volume2, count: ayah.qiraat?.length, available: !!(ayah.qiraat && ayah.qiraat.length > 0) },
     { id: 'nuzul', label: 'শানে নুযূল ও তাখরীজ', icon: Sparkles, count: null, available: !!ayah.nuzul },
@@ -436,36 +436,182 @@ export default function AyahStudyView({
             </div>
           )}
 
-          {/* TAB 2: Mufradat */}
-          {(expandAll || activeTab === 'mufradat') && ayah.mufradat && ayah.mufradat.length > 0 && (
-            <div className="space-y-3 mb-6 last:mb-0">
-              <div className="flex items-center gap-2 pb-2 border-b border-gray-100 dark:border-gray-700 font-bold text-blue-900 dark:text-blue-300 text-sm sm:text-base">
-                <Languages className="w-4 h-4 text-blue-600" />
-                <span>শব্দার্থ, সরফ ও মুফরাদাত ({toBn(ayah.mufradat.length)}টি শব্দ)</span>
+          {/* TAB 2: Mufradat & Tahqeeq */}
+          {(expandAll || activeTab === 'mufradat') && ((ayah.tahqeeq && ayah.tahqeeq.length > 0) || (ayah.mufradat && ayah.mufradat.length > 0)) && (
+            <div className="space-y-4 mb-6 last:mb-0">
+              <div className="flex flex-wrap items-center justify-between gap-2 pb-2 border-b border-gray-100 dark:border-gray-700 font-bold text-blue-900 dark:text-blue-300 text-sm sm:text-base">
+                <div className="flex items-center gap-2">
+                  <Languages className="w-4 h-4 text-blue-600" />
+                  <span>শব্দার্থ, সরফ ও শাব্দিক তাহকীক ({toBn(ayah.tahqeeq?.length || ayah.mufradat?.length)}টি শব্দ)</span>
+                </div>
+                {ayah.tahqeeq && ayah.tahqeeq.length > 0 && (
+                  <span className="text-[10px] sm:text-xs font-semibold bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-300 px-2.5 py-0.5 rounded-full border border-emerald-200 dark:border-emerald-800">
+                    মুকাম্মাল লুগাতুল কুরআন মানদণ্ড
+                  </span>
+                )}
               </div>
-              <div className="grid gap-3 sm:grid-cols-2">
-                {ayah.mufradat.map((m, idx) => (
-                  <div key={idx} className="bg-gray-50 dark:bg-gray-700/40 p-3.5 rounded-xl border border-gray-200/80 dark:border-gray-600 text-xs sm:text-sm space-y-1.5">
-                    <div className="flex items-center justify-between font-bold text-emerald-800 dark:text-emerald-300">
-                      <span className="text-base font-amiri font-bold">{m['শব্দ'] || m['শব্দ (মূল)'] || 'শব্দ'}</span>
-                      <span className="text-xs font-mono bg-emerald-100 dark:bg-emerald-900/60 px-2 py-0.5 rounded text-emerald-900 dark:text-emerald-200">
-                        ধাতু: {m['মূলধাতু'] || '—'}
-                      </span>
-                    </div>
-                    <div className="text-gray-600 dark:text-gray-300">
-                      <span className="font-semibold text-gray-700 dark:text-gray-200">সীগা / ওযন:</span> {m['সীগা / ওযন'] || m['সীগা'] || '—'}
-                    </div>
-                    <div className="text-gray-700 dark:text-gray-300">
-                      <span className="font-semibold text-gray-800 dark:text-gray-200">আভিধানিক অর্থ:</span> {m['আভিধানিক অর্থ ও ভাষাতাত্ত্বিক সূত্র'] || m['অর্থ'] || '—'}
-                    </div>
-                    {m['কুরআনিক পরিভাষাগত অর্থ'] && (
-                      <div className="text-gray-700 dark:text-gray-300 text-xs bg-white dark:bg-gray-800 p-2 rounded-lg border border-gray-100 dark:border-gray-600">
-                        <span className="font-bold text-emerald-700 dark:text-emerald-400">কুরআনিক তাৎপর্য:</span> {m['কুরআনিক পরিভাষাগত অর্থ']}
+
+              {ayah.tahqeeq && ayah.tahqeeq.length > 0 ? (
+                /* Advanced Academic Tahqeeq Cards */
+                <div className="space-y-3.5">
+                  {ayah.tahqeeq.map((t, idx) => (
+                    <div
+                      key={idx}
+                      className="bg-gray-50/80 dark:bg-gray-700/40 p-4 rounded-2xl border border-gray-200/90 dark:border-gray-600/80 text-xs sm:text-sm space-y-3"
+                    >
+                      {/* Top Bar: Word, Word Type Badge, Meaning */}
+                      <div className="flex flex-wrap items-center justify-between gap-2 pb-2.5 border-b border-gray-200/80 dark:border-gray-600">
+                        <div className="flex items-center gap-2.5">
+                          <span className="font-amiri text-2xl font-bold text-emerald-900 dark:text-emerald-300" dir="rtl">
+                            {t.word}
+                          </span>
+                          <span className="px-2 py-0.5 rounded-md text-[11px] font-bold bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 font-arabic">
+                            {t.word_type}
+                          </span>
+                          {t.prefix_suffix_note && (
+                            <span className="text-[11px] text-gray-500 dark:text-gray-400 font-bengali">
+                              ({t.prefix_suffix_note})
+                            </span>
+                          )}
+                        </div>
+                        <div className="font-bold text-gray-800 dark:text-gray-100 font-bengali text-sm sm:text-base">
+                          {t.meaning_bn}
+                        </div>
                       </div>
-                    )}
-                  </div>
-                ))}
-              </div>
+
+                      {/* Middle Grid: Dars-e-Nizami Morphology Attributes */}
+                      {t.morphology && (
+                        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs">
+                          {t.morphology.root && (
+                            <div className="bg-white dark:bg-gray-800 p-2.5 rounded-xl border border-gray-100 dark:border-gray-700">
+                              <span className="text-[10px] text-gray-400 block font-bengali">মূলবর্ণ (মাদ্দাহ):</span>
+                              <span className="font-bold text-emerald-800 dark:text-emerald-300 font-mono text-sm">
+                                {t.morphology.root}
+                              </span>
+                            </div>
+                          )}
+                          {t.morphology.jins && (
+                            <div className="bg-white dark:bg-gray-800 p-2.5 rounded-xl border border-gray-100 dark:border-gray-700">
+                              <span className="text-[10px] text-gray-400 block font-bengali">জিনস (সাত প্রকার):</span>
+                              <span className="font-semibold text-gray-800 dark:text-gray-200 font-arabic text-xs">
+                                {t.morphology.jins}
+                              </span>
+                            </div>
+                          )}
+                          {t.morphology.bab && (
+                            <div className="bg-white dark:bg-gray-800 p-2.5 rounded-xl border border-gray-100 dark:border-gray-700">
+                              <span className="text-[10px] text-gray-400 block font-bengali">বাব:</span>
+                              <span className="font-semibold text-gray-800 dark:text-gray-200 font-arabic text-xs">
+                                {t.morphology.bab}
+                              </span>
+                            </div>
+                          )}
+                          {t.morphology.sighah && (
+                            <div className="bg-white dark:bg-gray-800 p-2.5 rounded-xl border border-gray-100 dark:border-gray-700">
+                              <span className="text-[10px] text-gray-400 block font-bengali">সীগাহ ও বহছ:</span>
+                              <span className="font-semibold text-gray-800 dark:text-gray-200 font-arabic text-xs">
+                                {t.morphology.sighah} • {t.morphology.bahas}
+                              </span>
+                            </div>
+                          )}
+                          {t.morphology.masdar && (
+                            <div className="bg-white dark:bg-gray-800 p-2.5 rounded-xl border border-gray-100 dark:border-gray-700 col-span-2">
+                              <span className="text-[10px] text-gray-400 block font-bengali">মাসদার ও মৌলিক অর্থ:</span>
+                              <span className="font-semibold text-gray-800 dark:text-gray-200 font-arabic">
+                                {t.morphology.masdar}
+                              </span>
+                              <span className="text-gray-500 dark:text-gray-400 text-[11px] ml-1.5 font-bengali">
+                                ({t.morphology.masdar_meaning})
+                              </span>
+                            </div>
+                          )}
+                          {t.morphology.singular_plural && (
+                            <div className="bg-white dark:bg-gray-800 p-2.5 rounded-xl border border-gray-100 dark:border-gray-700 col-span-2">
+                              <span className="text-[10px] text-gray-400 block font-bengali">বচন রূপ (মুফরাদ ও জমা):</span>
+                              <span className="font-semibold text-gray-800 dark:text-gray-200 font-arabic">
+                                {t.morphology.singular_plural}
+                              </span>
+                            </div>
+                          )}
+                        </div>
+                      )}
+
+                      {/* Taleel or Irab */}
+                      {t.taleel_or_irab && (
+                        <div className="bg-amber-50/70 dark:bg-amber-950/30 p-2.5 rounded-xl border border-amber-200/70 dark:border-amber-800/40 text-xs space-y-1">
+                          <span className="font-bold text-amber-900 dark:text-amber-300 block font-bengali">
+                            তালীল ও তারকীব / ই'রাব:
+                          </span>
+                          <p className="text-gray-800 dark:text-gray-200 leading-relaxed font-bengali">
+                            {t.taleel_or_irab}
+                          </p>
+                        </div>
+                      )}
+
+                      {/* Lexical Depth */}
+                      {t.lexical_depth_bn && (
+                        <div className="bg-white dark:bg-gray-800 p-2.5 rounded-xl border border-gray-100 dark:border-gray-700 text-xs space-y-1">
+                          <span className="font-bold text-emerald-800 dark:text-emerald-400 block font-bengali">
+                            লুগাত ও ব্যুৎপত্তিগত তাৎপর্য:
+                          </span>
+                          <p className="text-gray-700 dark:text-gray-300 leading-relaxed font-bengali">
+                            {t.lexical_depth_bn}
+                          </p>
+                        </div>
+                      )}
+
+                      {/* Classical Notes Accordion */}
+                      {t.classical_notes && t.classical_notes.length > 0 && (
+                        <div className="space-y-1.5 pt-1">
+                          <span className="text-[11px] font-bold text-gray-500 dark:text-gray-400 block uppercase tracking-wide font-bengali">
+                            ক্লাসিক্যাল ভাষাতাত্ত্বিক উদ্ধৃতি:
+                          </span>
+                          <div className="space-y-1.5">
+                            {t.classical_notes.map((cn, cIdx) => (
+                              <div
+                                key={cIdx}
+                                className="bg-blue-50/70 dark:bg-blue-950/30 p-3 rounded-xl border border-blue-100 dark:border-blue-900/40 text-xs"
+                              >
+                                <span className="font-bold text-blue-900 dark:text-blue-300 block font-bengali">
+                                  📖 {cn.scholar_or_book}
+                                </span>
+                                <p className="text-gray-800 dark:text-gray-200 mt-1 leading-relaxed italic font-bengali">
+                                  "{cn.note}"
+                                </p>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              ) : ayah.mufradat && ayah.mufradat.length > 0 ? (
+                /* Traditional Mufradat fallback */
+                <div className="grid gap-3 sm:grid-cols-2">
+                  {ayah.mufradat.map((m, idx) => (
+                    <div key={idx} className="bg-gray-50 dark:bg-gray-700/40 p-3.5 rounded-xl border border-gray-200/80 dark:border-gray-600 text-xs sm:text-sm space-y-1.5">
+                      <div className="flex items-center justify-between font-bold text-emerald-800 dark:text-emerald-300">
+                        <span className="text-base font-amiri font-bold">{m['শব্দ'] || m['শব্দ (মূল)'] || 'শব্দ'}</span>
+                        <span className="text-xs font-mono bg-emerald-100 dark:bg-emerald-900/60 px-2 py-0.5 rounded text-emerald-900 dark:text-emerald-200">
+                          ধাতু: {m['মূলধাতু'] || '—'}
+                        </span>
+                      </div>
+                      <div className="text-gray-600 dark:text-gray-300">
+                        <span className="font-semibold text-gray-700 dark:text-gray-200">সীগা / ওযন:</span> {m['সীগা / ওযন'] || m['সীগা'] || '—'}
+                      </div>
+                      <div className="text-gray-700 dark:text-gray-300">
+                        <span className="font-semibold text-gray-800 dark:text-gray-200">আভিধানিক অর্থ:</span> {m['আভিধানিক অর্থ ও ভাষাতাত্ত্বিক সূত্র'] || m['অর্থ'] || '—'}
+                      </div>
+                      {m['কুরআনিক পরিভাষাগত অর্থ'] && (
+                        <div className="text-gray-700 dark:text-gray-300 text-xs bg-white dark:bg-gray-800 p-2 rounded-lg border border-gray-100 dark:border-gray-600">
+                          <span className="font-bold text-emerald-700 dark:text-emerald-400">কুরআনিক তাৎপর্য:</span> {m['কুরআনিক পরিভাষাগত অর্থ']}
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              ) : null}
             </div>
           )}
 
