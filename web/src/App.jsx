@@ -36,8 +36,15 @@ export default function App() {
   const [isNotesOpen, setIsNotesOpen] = useState(false);
   const [isAuthorOpen, setIsAuthorOpen] = useState(false);
 
-  // Typography & Theme Settings (persisted in localStorage)
-  const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'light');
+  // Typography & Theme Settings (persisted in localStorage, defaults to system preference)
+  const [theme, setTheme] = useState(() => {
+    const saved = localStorage.getItem('theme');
+    if (saved) return saved;
+    if (typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      return 'dark';
+    }
+    return 'light';
+  });
   const [arabicFontSize, setArabicFontSize] = useState(() => Number(localStorage.getItem('arFontSize')) || 28);
   const [bengaliFontSize, setBengaliFontSize] = useState(() => Number(localStorage.getItem('bnFontSize')) || 16);
   const [arabicLineHeight, setArabicLineHeight] = useState(() => Number(localStorage.getItem('arLineHeight')) || 2.2);

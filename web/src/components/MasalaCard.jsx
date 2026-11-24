@@ -88,7 +88,7 @@ export default function MasalaCard({ card, index }) {
         <div className="p-3.5 rounded-xl bg-emerald-50/50 dark:bg-emerald-950/20 border-l-4 border-emerald-500 border-t border-r border-b border-gray-200/60 dark:border-gray-700/60 space-y-1.5">
           <div className="flex items-center justify-between">
             <span className="text-xs font-bold uppercase tracking-wider text-emerald-800 dark:text-emerald-300 font-bengali">
-              হাম্বলী মাযহাব (الحনাبلة)
+              হাম্বলী মাযহাব (الحنابلة)
             </span>
           </div>
           <div className="text-sm text-gray-800 dark:text-gray-200 font-bengali leading-relaxed">

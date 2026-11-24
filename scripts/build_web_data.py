@@ -13,8 +13,8 @@ if str(SCRIPT_DIR) not in sys.path:
 from utils import (
     BASE_DIR, DATA_DIR, to_bn, to_en, strip_basmala,
     clean_arabic, clean_arabic_for_matching, arabic_token_match,
-    rewrite_markdown_links, replace_backtick_arabic, load_tanzil, load_ruku_map,
-    load_audit_results, load_author_meta
+    rewrite_markdown_links, replace_backtick_arabic, normalize_quran_brackets,
+    load_tanzil, load_ruku_map, load_audit_results, load_author_meta
 )
 
 # Ensure UTF-8 output
@@ -159,8 +159,9 @@ def parse_markdown_table(table_text):
     return rows
 
 def parse_ruku_markdown(md_text, surah_id, ruku_idx, ayah_start, ayah_end, tanzil, s_dir=None, audit_results=None):
-    # 0. Clean redundant backticks surrounding purely Arabic phrases and rewrite links
+    # 0. Clean redundant backticks surrounding purely Arabic phrases and normalize brackets and links
     md_text = replace_backtick_arabic(md_text)
+    md_text = normalize_quran_brackets(md_text)
     md_text = rewrite_markdown_links(md_text, surah_id)
 
     # 1. Parse Top-level sections (0 to 15)
@@ -534,8 +535,7 @@ def build_all_web_data(limit_surahs=None):
         intro_content = ""
         if intro_file.exists():
             intro_raw = unicodedata.normalize('NFC', intro_file.read_text(encoding="utf-8"))
-            intro_raw = replace_backtick_arabic(intro_raw)
-            intro_content = rewrite_markdown_links(intro_raw, sid)
+            intro_content = rewrite_markdown_links(normalize_quran_brackets(replace_backtick_arabic(intro_raw)), sid)
 
         surah_data_dir = DATA_DIR / str(sid)
         surah_data_dir.mkdir(parents=True, exist_ok=True)

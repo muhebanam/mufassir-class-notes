@@ -150,8 +150,16 @@ INPUT : «كلمة أولى» ও «كلمة ثانية» পাশাপাশ�
 MATCH : [ '«كلمة أولى»', '«كلمة ثانية»' ]
 STATUS: ✓ PASSED
 ---
+INPUT : যেমন ﴿سُورَةٌ﴾ ﴿الزَّانِيَةُ﴾ (1)
+MATCH : [ '﴿سُورَةٌ﴾', '﴿الزَّانِيَةُ﴾ (1)' ]
+STATUS: ✓ PASSED
+---
+INPUT : বিপরীত ব্র্যাকেট ﴾سُورَةٌ أَنزَلْنَاهَا﴿ স্বয়ংক্রিয়ভাবে ধরা পড়ে
+MATCH : [ '﴾سُورَةٌ أَنزَلْنَاهَا﴿' ]
+STATUS: ✓ PASSED
+---
 
-All 11 test cases passed strict assertions with 100% accuracy.
+All 13 test cases passed strict assertions with 100% accuracy.
 ```
 
 <a id='audit-build'></a>
@@ -165,13 +173,13 @@ transforming...
 [32m✓[39m 1594 modules transformed.
 rendering chunks...
 computing gzip size...
-[2mdist/[22m[32mindex.html                   [39m[1m[2m  1.93 kB[22m[1m[22m[2m │ gzip:  0.98 kB[22m
-[2mdist/[22m[35massets/index-BTfrqfkl.css    [39m[1m[2m 45.99 kB[22m[1m[22m[2m │ gzip:  8.45 kB[22m
+[2mdist/[22m[32mindex.html                   [39m[1m[2m  1.88 kB[22m[1m[22m[2m │ gzip:  0.96 kB[22m
+[2mdist/[22m[35massets/index-B4lfgJFV.css    [39m[1m[2m 47.20 kB[22m[1m[22m[2m │ gzip:  8.64 kB[22m
 [2mdist/[22m[36massets/icons-BDdk__Lx.js     [39m[1m[2m 22.71 kB[22m[1m[22m[2m │ gzip:  6.30 kB[22m
 [2mdist/[22m[36massets/markdown-BJsf1fhI.js  [39m[1m[2m 84.84 kB[22m[1m[22m[2m │ gzip: 28.14 kB[22m
 [2mdist/[22m[36massets/vendor-wGYtyqgO.js    [39m[1m[2m134.66 kB[22m[1m[22m[2m │ gzip: 43.22 kB[22m
-[2mdist/[22m[36massets/index-Bv9SgSBI.js     [39m[1m[2m193.80 kB[22m[1m[22m[2m │ gzip: 54.42 kB[22m
-[32m✓ built in 3.93s[39m
+[2mdist/[22m[36massets/index-nuHGrktt.js     [39m[1m[2m194.93 kB[22m[1m[22m[2m │ gzip: 54.80 kB[22m
+[32m✓ built in 3.92s[39m
 ```
 
 ---
@@ -197,10 +205,13 @@ export const AR_PUNCT = '\\s،؟:؛!\\.\\-–—';
 const IN_COMMON = `${A}${MARK}${DIGITS}${AR_PUNCT}`;
 
 // Paired Arabic expressions: each pair prevents swallowing its own closing delimiter.
+// Supports ornate ayah brackets ﴿...﴾ as well as reversed brackets ﴾...﴿ and standard quotes.
+// Trailing ayah references like (1) or (১) stay bound to the verse in Quranic font.
 export const PAIRS = [
   `«[${IN_COMMON}“”( )[\\]]*?${AR_CHAR}[${IN_COMMON}“”( )[\\]]*?»`,
   `“[${IN_COMMON}«»( )[\\]]*?${AR_CHAR}[${IN_COMMON}«»( )[\\]]*?”`,
-  `﴿[${IN_COMMON}«»“”\\(\\)\\[\\]]*?${AR_CHAR}[${IN_COMMON}«»“”\\(\\)\\[\\]]*?﴾`,
+  `﴿[${IN_COMMON}«»“”\\(\\)\\[\\]]*?${AR_CHAR}[${IN_COMMON}«»“”\\(\\)\\[\\]]*?﴾(?:\\s*(?:۝\\s*[০-৯0-9\\u0660-\\u0669]+|\\([০-৯0-9\\u0660-\\u0669]+\\)))?`,
+  `﴾[${IN_COMMON}«»“”\\(\\)\\[\\]]*?${AR_CHAR}[${IN_COMMON}«»“”\\(\\)\\[\\]]*?﴿(?:\\s*(?:۝\\s*[০-৯0-9\\u0660-\\u0669]+|\\([০-৯0-9\\u0660-\\u0669]+\\)))?`,
   `\\([${IN_COMMON}«»“”\\[\\]]*?${AR_CHAR}[${IN_COMMON}«»“”\\[\\]]*?\\)`,
   `\\[[${IN_COMMON}«»“”\\(\\)]*?${AR_CHAR}[${IN_COMMON}«»“”\\(\\)]*?\\]`
 ].join('|');
@@ -239,6 +250,19 @@ marked.setOptions({
   breaks: true,
 });
 
+/**
+ * Normalizes Quranic ayah brackets:
+ * Ensures opening bracket on the right is \ufd3f (﴿) and closing bracket on the left is \ufd3e (﴾).
+ * Corrects any inverted brackets \ufd3e...\ufd3f -> \ufd3f...\ufd3e.
+ */
+export function normalizeQuranBrackets(text) {
+  if (!text || typeof text !== 'string') return text;
+  return text.replace(
+    /\uFD3E([^\uFD3E\uFD3F\r\n]*?[\u0600-\u06FF\u0750-\u077F\uFB50-\uFDFF\uFE70-\uFEFF][^\uFD3E\uFD3F\r\n]*?)\uFD3F/g,
+    '\uFD3F$1\uFD3E'
+  );
+}
+
 function wrapArabic(root) {
   if (!root) return;
 
@@ -254,16 +278,38 @@ function wrapArabic(root) {
     }
   });
 
-  // 2. Automatically apply .ar-block to paragraphs or blockquotes consisting primarily of Arabic
-  root.querySelectorAll('p, blockquote').forEach(el => {
+  // 2. Automatically apply .ar-block, dir="rtl", and text-right to paragraphs, lists, headings, and quotes
+  // consisting primarily or purely of Arabic text so they start from the right
+  const blockSelectors = 'p, blockquote, li, div, h1, h2, h3, h4, h5, h6, td, th';
+  root.querySelectorAll(blockSelectors).forEach(el => {
+    if (el.tagName === 'DIV' && el.querySelector('p, blockquote, table, ul, ol')) return;
     const t = el.textContent || '';
     if (!t.trim()) return;
-    const arMatches = t.match(getArabicRegex()) || [];
-    const arLen = arMatches.join('').replace(/\s+/g, '').length;
-    const totalLen = t.replace(/\s+/g, '').length;
-    if (totalLen > 0 && arLen / totalLen >= 0.75) {
-      el.classList.add('ar-block');
+
+    const arLetters = (t.match(/[\u0600-\u06FF\u0750-\u077F\uFB50-\uFDFF\uFE70-\uFEFF]/g) || []).length;
+    const bnLetters = (t.match(/[\u0980-\u09FF]/g) || []).length;
+    const enLetters = (t.match(/[a-zA-Z]/g) || []).length;
+    const nonWsLen = t.replace(/\s+/g, '').length;
+
+    // Purely or primarily Arabic:
+    // Has >= 3 Arabic letters, Arabic letters exceed Bengali + English, and Arabic >= 35% of non-whitespace
+    if (arLetters >= 3 && arLetters > (bnLetters + enLetters) && (arLetters / nonWsLen >= 0.35)) {
+      el.classList.add('ar-block', 'text-right');
       el.dir = 'rtl';
+      el.lang = 'ar';
+      el.style.textAlign = 'right';
+      el.style.direction = 'rtl';
+    }
+  });
+
+  // Orient entire lists where list items are Arabic
+  root.querySelectorAll('ul, ol').forEach(list => {
+    const items = list.querySelectorAll(':scope > li');
+    if (items.length > 0 && Array.from(items).every(li => li.classList.contains('ar-block'))) {
+      list.dir = 'rtl';
+      list.classList.add('ar-block', 'text-right');
+      list.style.textAlign = 'right';
+      list.style.direction = 'rtl';
     }
   });
 
@@ -315,7 +361,8 @@ function wrapTables(root) {
 
 export function renderMarkdown(src, { inline = false } = {}) {
   if (!src) return '';
-  const html = inline ? marked.parseInline(src) : marked.parse(src);
+  const normalized = normalizeQuranBrackets(src);
+  const html = inline ? marked.parseInline(normalized) : marked.parse(normalized);
 
   if (typeof document !== 'undefined') {
     const frag = DOMPurify.sanitize(html, {
@@ -372,6 +419,7 @@ export default function MarkdownContent({ content, inline = false, className = "
 
 /* Typography & Theme Variables */
 :root {
+  color-scheme: light;
   --ink: #1c2b27;
   --muted: #5b6b66;
   --accent: #0f766e;
@@ -381,6 +429,7 @@ export default function MarkdownContent({ content, inline = false, className = "
 }
 
 .dark {
+  color-scheme: dark;
   --ink: #e6efec;
   --muted: #9ab0aa;
   --accent: #34d3be;
@@ -416,6 +465,7 @@ export default function MarkdownContent({ content, inline = false, className = "
 
 /* Sepia Theme overrides */
 body.sepia-theme {
+  color-scheme: light;
   background-color: #f7f3e8;
   color: #2c251e;
   --ink: #2c251e;
@@ -446,10 +496,14 @@ body.sepia-theme {
 
 /* Uthmani text styling */
 .uthmani-text {
-  font-family: 'Amiri Quran', 'Scheherazade New', serif;
+  font-family: 'Amiri Quran', 'Scheherazade New', 'Amiri', serif;
   direction: rtl;
   text-align: right;
   word-spacing: 0.1em;
+  word-break: normal !important;
+  overflow-wrap: break-word !important;
+  hyphens: none !important;
+  -webkit-hyphens: none !important;
 }
 
 /* Ayah end circle */
@@ -526,14 +580,19 @@ body.sepia-theme {
   color: #f9fafb !important;
 }
 
-/* Arabic typography inside prose */
-.ar {
-  font-family: 'Amiri Quran', 'Amiri', 'Noto Naskh Arabic', serif;
+/* Arabic typography inside prose & inline components */
+.ar, bdi.ar {
+  font-family: 'Amiri Quran', 'Scheherazade New', 'Amiri', serif !important;
   font-size: 1.25em;
   line-height: 2.1;
   direction: rtl;
   unicode-bidi: isolate;
   display: inline;
+  word-break: normal !important;
+  overflow-wrap: break-word !important;
+  hyphens: none !important;
+  -webkit-hyphens: none !important;
+  text-rendering: optimizeLegibility;
 }
 
 /* Blockquote & Hadith / Ayah citation styling */
@@ -545,14 +604,44 @@ body.sepia-theme {
   border-radius: 8px;
 }
 
-/* Standalone Arabic block */
-.ar-block {
+/* Standalone Arabic block - strictly right aligned and RTL */
+.ar-block,
+p.ar-block,
+blockquote.ar-block,
+li.ar-block,
+div.ar-block,
+h1.ar-block, h2.ar-block, h3.ar-block, h4.ar-block, h5.ar-block, h6.ar-block,
+[dir="rtl"].ar-block {
   display: block;
-  text-align: right;
-  direction: rtl;
-  font-size: 1.3em;
-  line-height: 2.1;
-  margin: 0.4em 0;
+  text-align: right !important;
+  direction: rtl !important;
+  font-family: 'Amiri Quran', 'Scheherazade New', 'Amiri', serif !important;
+  font-size: 1.28em;
+  line-height: 2.2;
+  margin: 0.6em 0;
+  word-break: normal !important;
+  overflow-wrap: break-word !important;
+  hyphens: none !important;
+  -webkit-hyphens: none !important;
+}
+
+blockquote.ar-block {
+  border-left: none !important;
+  border-right: 4px solid var(--accent) !important;
+  padding: 0.9em 1.2em 0.9em 0.6em !important;
+  text-align: right !important;
+  direction: rtl !important;
+}
+
+/* All Arabic elements & containers must never break cursive letters mid-word */
+[lang="ar"],
+[dir="rtl"],
+.font-amiri,
+.font-arabic {
+  word-break: normal !important;
+  overflow-wrap: break-word !important;
+  hyphens: none !important;
+  -webkit-hyphens: none !important;
 }
 
 /* Markdown tables inside responsive wrapper */
@@ -580,7 +669,16 @@ body.sepia-theme {
   .prose th, .prose td {
     padding: 6px 8px;
     white-space: normal;
-    word-break: break-word;
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+  .prose th.font-arabic,
+  .prose td.font-arabic,
+  .prose th .ar,
+  .prose td .ar,
+  .prose th[dir="rtl"],
+  .prose td[dir="rtl"] {
+    word-break: normal !important;
   }
 }
 
@@ -728,7 +826,7 @@ export default function MasalaCard({ card, index }) {
         <div className="p-3.5 rounded-xl bg-emerald-50/50 dark:bg-emerald-950/20 border-l-4 border-emerald-500 border-t border-r border-b border-gray-200/60 dark:border-gray-700/60 space-y-1.5">
           <div className="flex items-center justify-between">
             <span className="text-xs font-bold uppercase tracking-wider text-emerald-800 dark:text-emerald-300 font-bengali">
-              হাম্বলী মাযহাব (الحনাبلة)
+              হাম্বলী মাযহাব (الحنابلة)
             </span>
           </div>
           <div className="text-sm text-gray-800 dark:text-gray-200 font-bengali leading-relaxed">
@@ -1311,6 +1409,24 @@ def arabic_token_match(word_clean, ayah_tokens):
                 return True
     return False
 
+def normalize_quran_brackets(text: str) -> str:
+    """
+    Standardizes Quranic ayah quotes to authentic ornate brackets:
+    Opening on right: \ufd3f (﴿)
+    Closing on left: \ufd3e (﴾)
+    Replaces reversed ornate brackets: \ufd3e...\ufd3f (﴾...﴿) -> \ufd3f...\ufd3e (﴿...﴾)
+    Ensures brackets and Arabic verses stay beautifully paired.
+    """
+    if not text or not isinstance(text, str):
+        return text
+
+    # Convert reversed \ufd3e...\ufd3f -> \ufd3f...\ufd3e when enclosing Arabic characters
+    return re.sub(
+        r'\uFD3E([^\uFD3E\uFD3F\r\n]*?[\u0600-\u06FF\u0750-\u077F\uFB50-\uFDFF\uFE70-\uFEFF][^\uFD3E\uFD3F\r\n]*?)\uFD3F',
+        r'﴿\g<1>﴾',
+        text
+    )
+
 def replace_backtick_arabic(text: str) -> str:
     """
     Replaces backticks surrounding Arabic text with guillemets «...»
@@ -1414,8 +1530,8 @@ if str(SCRIPT_DIR) not in sys.path:
 from utils import (
     BASE_DIR, DATA_DIR, to_bn, to_en, strip_basmala,
     clean_arabic, clean_arabic_for_matching, arabic_token_match,
-    rewrite_markdown_links, replace_backtick_arabic, load_tanzil, load_ruku_map,
-    load_audit_results, load_author_meta
+    rewrite_markdown_links, replace_backtick_arabic, normalize_quran_brackets,
+    load_tanzil, load_ruku_map, load_audit_results, load_author_meta
 )
 
 # Ensure UTF-8 output
@@ -1560,8 +1676,9 @@ def parse_markdown_table(table_text):
     return rows
 
 def parse_ruku_markdown(md_text, surah_id, ruku_idx, ayah_start, ayah_end, tanzil, s_dir=None, audit_results=None):
-    # 0. Clean redundant backticks surrounding purely Arabic phrases and rewrite links
+    # 0. Clean redundant backticks surrounding purely Arabic phrases and normalize brackets and links
     md_text = replace_backtick_arabic(md_text)
+    md_text = normalize_quran_brackets(md_text)
     md_text = rewrite_markdown_links(md_text, surah_id)
 
     # 1. Parse Top-level sections (0 to 15)
@@ -1935,8 +2052,7 @@ def build_all_web_data(limit_surahs=None):
         intro_content = ""
         if intro_file.exists():
             intro_raw = unicodedata.normalize('NFC', intro_file.read_text(encoding="utf-8"))
-            intro_raw = replace_backtick_arabic(intro_raw)
-            intro_content = rewrite_markdown_links(intro_raw, sid)
+            intro_content = rewrite_markdown_links(normalize_quran_brackets(replace_backtick_arabic(intro_raw)), sid)
 
         surah_data_dir = DATA_DIR / str(sid)
         surah_data_dir.mkdir(parents=True, exist_ok=True)
@@ -2673,6 +2789,14 @@ const tests = [
   {
     input: '«كلمة أولى» ও «كلمة ثانية» পাশাপাশি',
     expected: ['«كلمة أولى»', '«كلمة ثانية»']
+  },
+  {
+    input: 'যেমন ﴿سُورَةٌ﴾ ﴿الزَّانِيَةُ﴾ (1)',
+    expected: ['﴿سُورَةٌ﴾', '﴿الزَّانِيَةُ﴾ (1)']
+  },
+  {
+    input: 'বিপরীত ব্র্যাকেট ﴾سُورَةٌ أَنزَلْنَاهَا﴿ স্বয়ংক্রিয়ভাবে ধরা পড়ে',
+    expected: ['﴾سُورَةٌ أَنزَلْنَاهَا﴿']
   }
 ];
 

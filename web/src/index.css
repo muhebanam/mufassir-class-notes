@@ -10,6 +10,7 @@
 
 /* Typography & Theme Variables */
 :root {
+  color-scheme: light;
   --ink: #1c2b27;
   --muted: #5b6b66;
   --accent: #0f766e;
@@ -19,6 +20,7 @@
 }
 
 .dark {
+  color-scheme: dark;
   --ink: #e6efec;
   --muted: #9ab0aa;
   --accent: #34d3be;
@@ -54,6 +56,7 @@
 
 /* Sepia Theme overrides */
 body.sepia-theme {
+  color-scheme: light;
   background-color: #f7f3e8;
   color: #2c251e;
   --ink: #2c251e;
@@ -84,10 +87,14 @@ body.sepia-theme {
 
 /* Uthmani text styling */
 .uthmani-text {
-  font-family: 'Amiri Quran', 'Scheherazade New', serif;
+  font-family: 'Amiri Quran', 'Scheherazade New', 'Amiri', serif;
   direction: rtl;
   text-align: right;
   word-spacing: 0.1em;
+  word-break: normal !important;
+  overflow-wrap: break-word !important;
+  hyphens: none !important;
+  -webkit-hyphens: none !important;
 }
 
 /* Ayah end circle */
@@ -164,14 +171,19 @@ body.sepia-theme {
   color: #f9fafb !important;
 }
 
-/* Arabic typography inside prose */
-.ar {
-  font-family: 'Amiri Quran', 'Amiri', 'Noto Naskh Arabic', serif;
+/* Arabic typography inside prose & inline components */
+.ar, bdi.ar {
+  font-family: 'Amiri Quran', 'Scheherazade New', 'Amiri', serif !important;
   font-size: 1.25em;
   line-height: 2.1;
   direction: rtl;
   unicode-bidi: isolate;
   display: inline;
+  word-break: normal !important;
+  overflow-wrap: break-word !important;
+  hyphens: none !important;
+  -webkit-hyphens: none !important;
+  text-rendering: optimizeLegibility;
 }
 
 /* Blockquote & Hadith / Ayah citation styling */
@@ -183,14 +195,44 @@ body.sepia-theme {
   border-radius: 8px;
 }
 
-/* Standalone Arabic block */
-.ar-block {
+/* Standalone Arabic block - strictly right aligned and RTL */
+.ar-block,
+p.ar-block,
+blockquote.ar-block,
+li.ar-block,
+div.ar-block,
+h1.ar-block, h2.ar-block, h3.ar-block, h4.ar-block, h5.ar-block, h6.ar-block,
+[dir="rtl"].ar-block {
   display: block;
-  text-align: right;
-  direction: rtl;
-  font-size: 1.3em;
-  line-height: 2.1;
-  margin: 0.4em 0;
+  text-align: right !important;
+  direction: rtl !important;
+  font-family: 'Amiri Quran', 'Scheherazade New', 'Amiri', serif !important;
+  font-size: 1.28em;
+  line-height: 2.2;
+  margin: 0.6em 0;
+  word-break: normal !important;
+  overflow-wrap: break-word !important;
+  hyphens: none !important;
+  -webkit-hyphens: none !important;
+}
+
+blockquote.ar-block {
+  border-left: none !important;
+  border-right: 4px solid var(--accent) !important;
+  padding: 0.9em 1.2em 0.9em 0.6em !important;
+  text-align: right !important;
+  direction: rtl !important;
+}
+
+/* All Arabic elements & containers must never break cursive letters mid-word */
+[lang="ar"],
+[dir="rtl"],
+.font-amiri,
+.font-arabic {
+  word-break: normal !important;
+  overflow-wrap: break-word !important;
+  hyphens: none !important;
+  -webkit-hyphens: none !important;
 }
 
 /* Markdown tables inside responsive wrapper */
@@ -218,7 +260,16 @@ body.sepia-theme {
   .prose th, .prose td {
     padding: 6px 8px;
     white-space: normal;
-    word-break: break-word;
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+  .prose th.font-arabic,
+  .prose td.font-arabic,
+  .prose th .ar,
+  .prose td .ar,
+  .prose th[dir="rtl"],
+  .prose td[dir="rtl"] {
+    word-break: normal !important;
   }
 }
 

@@ -79,6 +79,24 @@ def arabic_token_match(word_clean, ayah_tokens):
                 return True
     return False
 
+def normalize_quran_brackets(text: str) -> str:
+    """
+    Standardizes Quranic ayah quotes to authentic ornate brackets:
+    Opening on right: \ufd3f (﴿)
+    Closing on left: \ufd3e (﴾)
+    Replaces reversed ornate brackets: \ufd3e...\ufd3f (﴾...﴿) -> \ufd3f...\ufd3e (﴿...﴾)
+    Ensures brackets and Arabic verses stay beautifully paired.
+    """
+    if not text or not isinstance(text, str):
+        return text
+
+    # Convert reversed \ufd3e...\ufd3f -> \ufd3f...\ufd3e when enclosing Arabic characters
+    return re.sub(
+        r'\uFD3E([^\uFD3E\uFD3F\r\n]*?[\u0600-\u06FF\u0750-\u077F\uFB50-\uFDFF\uFE70-\uFEFF][^\uFD3E\uFD3F\r\n]*?)\uFD3F',
+        r'﴿\g<1>﴾',
+        text
+    )
+
 def replace_backtick_arabic(text: str) -> str:
     """
     Replaces backticks surrounding Arabic text with guillemets «...»

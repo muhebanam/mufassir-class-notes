@@ -8,6 +8,19 @@ marked.setOptions({
   breaks: true,
 });
 
+/**
+ * Normalizes Quranic ayah brackets:
+ * Ensures opening bracket on the right is \ufd3f (﴿) and closing bracket on the left is \ufd3e (﴾).
+ * Corrects any inverted brackets \ufd3e...\ufd3f -> \ufd3f...\ufd3e.
+ */
+export function normalizeQuranBrackets(text) {
+  if (!text || typeof text !== 'string') return text;
+  return text.replace(
+    /\uFD3E([^\uFD3E\uFD3F\r\n]*?[\u0600-\u06FF\u0750-\u077F\uFB50-\uFDFF\uFE70-\uFEFF][^\uFD3E\uFD3F\r\n]*?)\uFD3F/g,
+    '\uFD3F$1\uFD3E'
+  );
+}
+
 function wrapArabic(root) {
   if (!root) return;
 
@@ -23,16 +36,38 @@ function wrapArabic(root) {
     }
   });
 
-  // 2. Automatically apply .ar-block to paragraphs or blockquotes consisting primarily of Arabic
-  root.querySelectorAll('p, blockquote').forEach(el => {
+  // 2. Automatically apply .ar-block, dir="rtl", and text-right to paragraphs, lists, headings, and quotes
+  // consisting primarily or purely of Arabic text so they start from the right
+  const blockSelectors = 'p, blockquote, li, div, h1, h2, h3, h4, h5, h6, td, th';
+  root.querySelectorAll(blockSelectors).forEach(el => {
+    if (el.tagName === 'DIV' && el.querySelector('p, blockquote, table, ul, ol')) return;
     const t = el.textContent || '';
     if (!t.trim()) return;
-    const arMatches = t.match(getArabicRegex()) || [];
-    const arLen = arMatches.join('').replace(/\s+/g, '').length;
-    const totalLen = t.replace(/\s+/g, '').length;
-    if (totalLen > 0 && arLen / totalLen >= 0.75) {
-      el.classList.add('ar-block');
+
+    const arLetters = (t.match(/[\u0600-\u06FF\u0750-\u077F\uFB50-\uFDFF\uFE70-\uFEFF]/g) || []).length;
+    const bnLetters = (t.match(/[\u0980-\u09FF]/g) || []).length;
+    const enLetters = (t.match(/[a-zA-Z]/g) || []).length;
+    const nonWsLen = t.replace(/\s+/g, '').length;
+
+    // Purely or primarily Arabic:
+    // Has >= 3 Arabic letters, Arabic letters exceed Bengali + English, and Arabic >= 35% of non-whitespace
+    if (arLetters >= 3 && arLetters > (bnLetters + enLetters) && (arLetters / nonWsLen >= 0.35)) {
+      el.classList.add('ar-block', 'text-right');
       el.dir = 'rtl';
+      el.lang = 'ar';
+      el.style.textAlign = 'right';
+      el.style.direction = 'rtl';
+    }
+  });
+
+  // Orient entire lists where list items are Arabic
+  root.querySelectorAll('ul, ol').forEach(list => {
+    const items = list.querySelectorAll(':scope > li');
+    if (items.length > 0 && Array.from(items).every(li => li.classList.contains('ar-block'))) {
+      list.dir = 'rtl';
+      list.classList.add('ar-block', 'text-right');
+      list.style.textAlign = 'right';
+      list.style.direction = 'rtl';
     }
   });
 
@@ -84,7 +119,8 @@ function wrapTables(root) {
 
 export function renderMarkdown(src, { inline = false } = {}) {
   if (!src) return '';
-  const html = inline ? marked.parseInline(src) : marked.parse(src);
+  const normalized = normalizeQuranBrackets(src);
+  const html = inline ? marked.parseInline(normalized) : marked.parse(normalized);
 
   if (typeof document !== 'undefined') {
     const frag = DOMPurify.sanitize(html, {

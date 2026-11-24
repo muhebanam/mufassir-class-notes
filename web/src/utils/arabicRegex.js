@@ -10,10 +10,13 @@ export const AR_PUNCT = '\\s،؟:؛!\\.\\-–—';
 const IN_COMMON = `${A}${MARK}${DIGITS}${AR_PUNCT}`;
 
 // Paired Arabic expressions: each pair prevents swallowing its own closing delimiter.
+// Supports ornate ayah brackets ﴿...﴾ as well as reversed brackets ﴾...﴿ and standard quotes.
+// Trailing ayah references like (1) or (১) stay bound to the verse in Quranic font.
 export const PAIRS = [
   `«[${IN_COMMON}“”( )[\\]]*?${AR_CHAR}[${IN_COMMON}“”( )[\\]]*?»`,
   `“[${IN_COMMON}«»( )[\\]]*?${AR_CHAR}[${IN_COMMON}«»( )[\\]]*?”`,
-  `﴿[${IN_COMMON}«»“”\\(\\)\\[\\]]*?${AR_CHAR}[${IN_COMMON}«»“”\\(\\)\\[\\]]*?﴾`,
+  `﴿[${IN_COMMON}«»“”\\(\\)\\[\\]]*?${AR_CHAR}[${IN_COMMON}«»“”\\(\\)\\[\\]]*?﴾(?:\\s*(?:۝\\s*[০-৯0-9\\u0660-\\u0669]+|\\([০-৯0-9\\u0660-\\u0669]+\\)))?`,
+  `﴾[${IN_COMMON}«»“”\\(\\)\\[\\]]*?${AR_CHAR}[${IN_COMMON}«»“”\\(\\)\\[\\]]*?﴿(?:\\s*(?:۝\\s*[০-৯0-9\\u0660-\\u0669]+|\\([০-৯0-9\\u0660-\\u0669]+\\)))?`,
   `\\([${IN_COMMON}«»“”\\[\\]]*?${AR_CHAR}[${IN_COMMON}«»“”\\[\\]]*?\\)`,
   `\\[[${IN_COMMON}«»“”\\(\\)]*?${AR_CHAR}[${IN_COMMON}«»“”\\(\\)]*?\\]`
 ].join('|');

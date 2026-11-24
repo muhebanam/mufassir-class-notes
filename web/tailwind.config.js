@@ -24,6 +24,7 @@ export default {
       },
       fontFamily: {
         amiri: ['"Amiri Quran"', '"Scheherazade New"', 'serif'],
+        arabic: ['"Amiri Quran"', '"Scheherazade New"', 'serif'],
         bengali: ['"Noto Serif Bengali"', '"Hind Siliguri"', 'sans-serif'],
       }
     },
