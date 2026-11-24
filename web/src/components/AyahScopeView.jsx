@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { 
   BookOpen, ChevronLeft, ChevronRight, Copy, Check, 
   Columns, AlignLeft, Volume2, Sparkles, Scale, Maximize2, Minimize2,
-  Bookmark, Share2
+  Bookmark, Share2, Languages
 } from 'lucide-react';
 import MarkdownContent, { normalizeQuranBrackets } from './MarkdownContent';
 import TahqeeqTable from './TahqeeqTable';
@@ -21,13 +21,10 @@ export default function AyahScopeView({
   splitView = true,
   onToggleSplitView
 }) {
-  const [activeTab, setActiveTab] = useState('jalalayn'); // 'jalalayn', 'tahqeeq', 'translation', 'qiraat', 'nuzul'
-  const [expandAll, setExpandAll] = useState(false);
   const [copied, setCopied] = useState(false);
 
-  // Reset local tab state whenever ayah changes (Prevent state leakage)
+  // Reset local state whenever ayah changes
   useEffect(() => {
-    setActiveTab('jalalayn');
     setCopied(false);
   }, [ayah?.surah, ayah?.ruku, ayah?.ayah]);
 
@@ -74,21 +71,13 @@ export default function AyahScopeView({
   const tahqeeqWords = ayah.tahqeeq || ayah.mufradat || [];
   const qiraatList = ayah.qiraat || [];
 
-  const tabs = [
-    { id: 'jalalayn', label: 'তাফসীরুল জালালাইন', icon: BookOpen },
-    { id: 'tahqeeq', label: 'শাব্দিক তাহকীক', icon: Sparkles, count: tahqeeqWords.length },
-    { id: 'translation', label: 'অনুবাদ ও শব্দার্থ', icon: AlignLeft },
-    { id: 'qiraat', label: '১০ কিরাআত পাঠভেদ', icon: Volume2, count: qiraatList.length },
-    { id: 'nuzul', label: 'শানে নুযূল', icon: Bookmark, available: !!ayah.shane_nuzul }
-  ];
-
   const hasPrev = ayah.ayah > (rukuInfo.ayah_start || 1);
   const hasNext = ayah.ayah < (rukuInfo.ayah_end || 64);
 
   return (
     <div 
       key={`${ayah.surah}-${ayah.ruku}-${ayah.ayah}`} 
-      className="w-full max-w-6xl mx-auto px-3 sm:px-6 py-4 sm:py-6 space-y-4 sm:space-y-6 layout-safe"
+      className="w-full max-w-6xl mx-auto px-3 sm:px-6 py-4 sm:py-6 space-y-5 sm:space-y-6 layout-safe"
     >
       {/* 1. Ayah Action & Navigation Top Bar */}
       <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-3 sm:p-4 shadow-2xs flex flex-wrap items-center justify-between gap-3">
@@ -158,8 +147,8 @@ export default function AyahScopeView({
         </div>
       </div>
 
-      {/* 2. Main Ayah Display Block (Uthmani Text strictly intact) */}
-      <div className="bg-white dark:bg-gray-800 rounded-2xl sm:rounded-3xl border border-gray-200 dark:border-gray-700 p-5 sm:p-8 shadow-xs space-y-4">
+      {/* 2. Main Ayah Display Block (Uthmani Text + বঙ্গানুবাদ + শব্দানুগ অনুবাদ সেকশন) */}
+      <div className="bg-white dark:bg-gray-800 rounded-2xl sm:rounded-3xl border border-gray-200 dark:border-gray-700 p-5 sm:p-7 shadow-xs space-y-5">
         {/* Arabic Ayah with End Symbol */}
         <div 
           className="uthmani-text leading-loose text-right font-quran select-text" 
@@ -175,10 +164,74 @@ export default function AyahScopeView({
           </span>
         </div>
 
-        {/* Simple Ayah Text if needed */}
+        {/* Simple Ayah Text if available */}
         {ayah.text_simple && (
           <div className="text-right font-arabic text-sm text-gray-500 dark:text-gray-400 pt-2 border-t border-gray-100 dark:border-gray-700/60" dir="rtl">
             {ayah.text_simple}
+          </div>
+        )}
+
+        {/* সহজি ও প্রামাণিক বঙ্গানুবাদ (Fluent Bengali Translation) */}
+        <div className="bg-emerald-50/50 dark:bg-emerald-950/20 p-4 rounded-xl border border-emerald-100 dark:border-emerald-900/40 text-gray-900 dark:text-gray-100 font-bengali leading-relaxed">
+          <div className="flex items-center gap-1.5 text-xs font-bold text-emerald-800 dark:text-emerald-400 mb-1">
+            <AlignLeft className="w-3.5 h-3.5" />
+            <span>সহজ ও প্রামাণিক বঙ্গানুবাদ:</span>
+          </div>
+          <div className="text-sm sm:text-base font-medium">
+            <span className="text-emerald-700 dark:text-emerald-400 font-bold mr-1.5">({toBn(ayah.ayah)})</span>
+            {ayah.translation || "অনুবাদ প্রস্তুত করা হচ্ছে..."}
+          </div>
+        </div>
+
+        {/* শব্দানুগ অনুবাদ সেকশন (Word-by-Word Translation Section) */}
+        {ayah.word_translation && (
+          <div className="bg-gradient-to-r from-amber-50/60 via-emerald-50/40 to-teal-50/60 dark:from-gray-800 dark:via-gray-800/90 dark:to-gray-850 p-4 sm:p-5 rounded-2xl border border-amber-200/60 dark:border-amber-800/40 space-y-3 font-bengali shadow-2xs">
+            <div className="flex items-center justify-between gap-2 pb-2 border-b border-amber-200/50 dark:border-gray-700">
+              <div className="flex items-center gap-2">
+                <Languages className="w-4 h-4 text-amber-700 dark:text-amber-400" />
+                <h4 className="font-bold text-sm sm:text-base text-gray-900 dark:text-gray-100">
+                  শব্দানুগ অনুবাদ (শব্দে শব্দে অর্থ)
+                </h4>
+              </div>
+              <span className="text-[11px] font-semibold text-amber-800 dark:text-amber-300 bg-amber-100/70 dark:bg-amber-950/60 px-2.5 py-0.5 rounded-full border border-amber-200/80 dark:border-amber-800/60 font-mono">
+                {toBn(tahqeeqWords.length || 0)}টি শব্দ
+              </span>
+            </div>
+
+            {/* Word by word formatted markdown text */}
+            <div className="text-xs sm:text-sm text-gray-800 dark:text-gray-200 leading-loose">
+              <MarkdownContent content={ayah.word_translation} />
+            </div>
+
+            {/* Interactive Word Chips (Quick Word-Meaning Badges) */}
+            {tahqeeqWords && tahqeeqWords.length > 0 && (
+              <div className="pt-2 border-t border-amber-200/40 dark:border-gray-700/60">
+                <span className="text-[11px] font-semibold text-gray-500 dark:text-gray-400 block mb-2">
+                  প্রতিটি শব্দের সরাসরি অর্থ-কার্ড:
+                </span>
+                <div className="flex flex-wrap gap-2">
+                  {tahqeeqWords.map((w, idx) => {
+                    const arabicWord = w.word || w['শব্দ'] || '';
+                    const meaningText = w.meaning_bn || w['কুরআনিক পরিভাষাগত অর্থ'] || w['আভিধানিক অর্থ ও ভাষাতাত্ত্বিক সূত্র'] || '';
+
+                    return (
+                      <div 
+                        key={idx} 
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white dark:bg-gray-750 border border-emerald-200/80 dark:border-emerald-700/60 shadow-2xs text-xs"
+                      >
+                        <span className="font-arabic font-bold text-emerald-800 dark:text-emerald-300 text-sm sm:text-base" dir="rtl">
+                          {arabicWord}
+                        </span>
+                        <span className="text-gray-400 text-xs">→</span>
+                        <span className="font-medium text-gray-800 dark:text-gray-200">
+                          {meaningText}
+                        </span>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
           </div>
         )}
       </div>
@@ -209,34 +262,21 @@ export default function AyahScopeView({
             </div>
           </div>
 
-          {/* Bengali Translation & Word-by-Word */}
-          <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-5 sm:p-6 shadow-xs space-y-3">
-            <div className="flex items-center gap-2 pb-2.5 border-b border-gray-100 dark:border-gray-700">
-              <AlignLeft className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-              <h3 className="font-bold text-sm sm:text-base text-gray-900 dark:text-gray-100 font-bengali">
-                অনুবাদ ও শব্দভিত্তিক বিশ্লেষণ
-              </h3>
-            </div>
-
-            <div className="space-y-3 font-bengali">
-              {/* Full Translation */}
-              <div className="bg-emerald-50/40 dark:bg-emerald-950/20 p-3.5 rounded-xl border border-emerald-100 dark:border-emerald-900/40 text-emerald-950 dark:text-emerald-100 font-medium text-sm sm:text-base leading-relaxed">
-                <strong className="text-emerald-800 dark:text-emerald-300">অনুবাদ: </strong>
-                {ayah.translation}
+          {/* Shan-e-Nuzul if exists */}
+          {ayah.shane_nuzul && (
+            <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-4 sm:p-5 shadow-xs space-y-2 font-bengali">
+              <div className="flex items-center gap-2 pb-2 border-b border-gray-100 dark:border-gray-700 text-teal-800 dark:text-teal-300 font-bold text-sm">
+                <Bookmark className="w-4 h-4 text-teal-600" />
+                <span>শানে নুযূল ও সংশ্লিষ্ট হাদীসের তাখরীজ</span>
               </div>
-
-              {/* Word by word */}
-              {ayah.word_translation && (
-                <div className="text-xs sm:text-sm text-gray-700 dark:text-gray-300 leading-loose pt-1">
-                  <span className="font-bold text-gray-900 dark:text-gray-100 block mb-1">শব্দভিত্তিক অর্থ:</span>
-                  <MarkdownContent content={ayah.word_translation} />
-                </div>
-              )}
+              <div className="prose text-xs sm:text-sm leading-relaxed text-gray-700 dark:text-gray-300">
+                <MarkdownContent content={ayah.shane_nuzul} />
+              </div>
             </div>
-          </div>
+          )}
         </div>
 
-        {/* Right Column: Tahqeeq Table & Qiraat */}
+        {/* Right Column: Comprehensive Tahqeeq Table & Qiraat */}
         <div className={`space-y-4 ${splitView ? 'lg:col-span-6' : ''}`}>
           {/* Tahqeeq Table Card */}
           <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-4 sm:p-5 shadow-xs">
@@ -253,19 +293,6 @@ export default function AyahScopeView({
                 tableData={qiraatList} 
                 title={`আয়াত ${toBn(ayah.ayah)}-এর ১০ কিরাআত পাঠভেদ`}
               />
-            </div>
-          )}
-
-          {/* Shan-e-Nuzul if exists */}
-          {ayah.shane_nuzul && (
-            <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-4 sm:p-5 shadow-xs space-y-2 font-bengali">
-              <div className="flex items-center gap-2 pb-2 border-b border-gray-100 dark:border-gray-700 text-teal-800 dark:text-teal-300 font-bold text-sm">
-                <Bookmark className="w-4 h-4 text-teal-600" />
-                <span>শানে নুযূল ও সংশ্লিষ্ট হাদীস</span>
-              </div>
-              <div className="prose text-xs sm:text-sm leading-relaxed text-gray-700 dark:text-gray-300">
-                <MarkdownContent content={ayah.shane_nuzul} />
-              </div>
             </div>
           )}
         </div>

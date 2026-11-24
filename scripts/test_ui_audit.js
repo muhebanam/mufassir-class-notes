@@ -353,14 +353,16 @@ async function runAudit() {
         const hasUthmani = !!document.querySelector('.uthmani-text');
         const hasJalalayn = text.includes('তাফসীরুল জালালাইন') || text.includes('আল-মাহাল্লী');
         const hasTahqeeqTable = text.includes('শাব্দিক তাহকীক') || !!document.querySelector('table');
-        const hasTranslation = text.includes('অনুবাদ ও শব্দভিত্তিক');
+        const hasTranslation = text.includes('বঙ্গানুবাদ');
+        const hasWordTranslation = text.includes('শব্দানুগ অনুবাদ');
 
         return {
           tier: 'ayah',
           hasUthmani,
           hasJalalayn,
           hasTahqeeqTable,
-          hasTranslation
+          hasTranslation,
+          hasWordTranslation
         };
       })()
     `);
