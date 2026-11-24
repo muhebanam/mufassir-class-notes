@@ -52,7 +52,7 @@ function wrapArabic(root) {
     // Purely or primarily Arabic:
     // Has >= 3 Arabic letters, Arabic letters exceed Bengali + English, and Arabic >= 35% of non-whitespace
     if (arLetters >= 3 && arLetters > (bnLetters + enLetters) && (arLetters / nonWsLen >= 0.35)) {
-      el.classList.add('ar-block', 'text-right');
+      el.classList.add('ar-block', 'font-arabic', 'text-right');
       el.dir = 'rtl';
       el.lang = 'ar';
       el.style.textAlign = 'right';
@@ -65,19 +65,21 @@ function wrapArabic(root) {
     const items = list.querySelectorAll(':scope > li');
     if (items.length > 0 && Array.from(items).every(li => li.classList.contains('ar-block'))) {
       list.dir = 'rtl';
-      list.classList.add('ar-block', 'text-right');
+      list.classList.add('ar-block', 'font-arabic', 'text-right');
       list.style.textAlign = 'right';
       list.style.direction = 'rtl';
     }
   });
 
   // 3. TreeWalker for text nodes to isolate Arabic inside <bdi class="ar">
+  // ONLY for Arabic text embedded inside non-RTL (Bengali/English) contexts.
+  // If the parent is already an RTL or pure Arabic block, do NOT fragment text into <bdi> isolates.
   const w = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
   const nodes = [];
   while (w.nextNode()) nodes.push(w.currentNode);
 
   for (const n of nodes) {
-    if (n.parentElement?.closest('bdi.ar, code, pre')) continue;
+    if (n.parentElement?.closest('bdi.ar, code, pre, [dir="rtl"], .ar-block, .uthmani-text, .font-arabic')) continue;
     const t = n.nodeValue;
     if (!t) continue;
     const AR = getArabicRegex();
@@ -147,9 +149,11 @@ export default function MarkdownContent({ content, inline = false, className = "
   if (!content) return null;
 
   const Tag = inline ? 'span' : 'div';
+  const hasArabicFont = /font-(arabic|amiri)|uthmani-text/.test(className);
+  const fontClass = hasArabicFont ? '' : 'font-bengali';
   return (
     <Tag
-      className={`prose font-bengali leading-relaxed transition-colors ${className}`}
+      className={`prose ${fontClass} leading-relaxed transition-colors ${className}`}
       dangerouslySetInnerHTML={{ __html: html }}
     />
   );

@@ -6,7 +6,7 @@ import {
   Sparkles, Layers
 } from 'lucide-react';
 import { toBn, copyToClipboard } from '../utils/helpers';
-import MarkdownContent from './MarkdownContent';
+import MarkdownContent, { normalizeQuranBrackets } from './MarkdownContent';
 import CornerOrnament from './CornerOrnament';
 import { saveAyahNote, getAyahNote, toggleBookmark, isBookmarked } from '../utils/db';
 
@@ -493,7 +493,7 @@ export default function AyahStudyView({
                           {t.morphology.jins && (
                             <div className="bg-white dark:bg-gray-800 p-2.5 rounded-xl border border-gray-100 dark:border-gray-700">
                               <span className="text-[10px] text-gray-400 block font-bengali">জিনস (সাত প্রকার):</span>
-                              <span className="font-semibold text-gray-800 dark:text-gray-200 font-arabic text-xs">
+                              <span className="font-semibold text-gray-800 dark:text-gray-200 font-arabic text-xs" dir="rtl">
                                 {t.morphology.jins}
                               </span>
                             </div>
@@ -501,7 +501,7 @@ export default function AyahStudyView({
                           {t.morphology.bab && (
                             <div className="bg-white dark:bg-gray-800 p-2.5 rounded-xl border border-gray-100 dark:border-gray-700">
                               <span className="text-[10px] text-gray-400 block font-bengali">বাব:</span>
-                              <span className="font-semibold text-gray-800 dark:text-gray-200 font-arabic text-xs">
+                              <span className="font-semibold text-gray-800 dark:text-gray-200 font-arabic text-xs" dir="rtl">
                                 {t.morphology.bab}
                               </span>
                             </div>
@@ -509,7 +509,7 @@ export default function AyahStudyView({
                           {t.morphology.sighah && (
                             <div className="bg-white dark:bg-gray-800 p-2.5 rounded-xl border border-gray-100 dark:border-gray-700">
                               <span className="text-[10px] text-gray-400 block font-bengali">সীগাহ ও বহছ:</span>
-                              <span className="font-semibold text-gray-800 dark:text-gray-200 font-arabic text-xs">
+                              <span className="font-semibold text-gray-800 dark:text-gray-200 font-arabic text-xs" dir="rtl">
                                 {t.morphology.sighah} • {t.morphology.bahas}
                               </span>
                             </div>
@@ -517,7 +517,7 @@ export default function AyahStudyView({
                           {t.morphology.masdar && (
                             <div className="bg-white dark:bg-gray-800 p-2.5 rounded-xl border border-gray-100 dark:border-gray-700 col-span-2">
                               <span className="text-[10px] text-gray-400 block font-bengali">মাসদার ও মৌলিক অর্থ:</span>
-                              <span className="font-semibold text-gray-800 dark:text-gray-200 font-arabic">
+                              <span className="font-semibold text-gray-800 dark:text-gray-200 font-arabic" dir="rtl">
                                 {t.morphology.masdar}
                               </span>
                               <span className="text-gray-500 dark:text-gray-400 text-[11px] ml-1.5 font-bengali">
@@ -528,7 +528,7 @@ export default function AyahStudyView({
                           {t.morphology.singular_plural && (
                             <div className="bg-white dark:bg-gray-800 p-2.5 rounded-xl border border-gray-100 dark:border-gray-700 col-span-2">
                               <span className="text-[10px] text-gray-400 block font-bengali">বচন রূপ (মুফরাদ ও জমা):</span>
-                              <span className="font-semibold text-gray-800 dark:text-gray-200 font-arabic">
+                              <span className="font-semibold text-gray-800 dark:text-gray-200 font-arabic" dir="rtl">
                                 {t.morphology.singular_plural}
                               </span>
                             </div>
@@ -648,13 +648,19 @@ export default function AyahStudyView({
                     {ayah.qiraat.map((q, qIdx) => (
                       <tr key={qIdx} className="hover:bg-amber-50/40 dark:hover:bg-gray-700/30">
                         <td className="px-3 py-2 font-arabic text-right whitespace-nowrap" dir="rtl">
-                          <MarkdownContent inline content={q['শব্দ (ক্রম)'] || q['শব্দ'] || ''} />
+                          <span className="font-arabic text-sm sm:text-base leading-relaxed" dir="rtl">
+                            {normalizeQuranBrackets(q['শব্দ (ক্রম)'] || q['শব্দ'] || '')}
+                          </span>
                         </td>
                         <td className="px-3 py-2 font-medium font-arabic text-right whitespace-nowrap" dir="rtl">
-                          <MarkdownContent inline content={q['ক্বারী / রাবী (বাহাউথ)'] || q['ক্বারী'] || ''} />
+                          <span className="font-arabic text-sm sm:text-base" dir="rtl">
+                            {q['ক্বারী / রাবী (বাহাউথ)'] || q['ক্বারী'] || ''}
+                          </span>
                         </td>
                         <td className="px-3 py-2 font-arabic text-right leading-relaxed" dir="rtl">
-                          <MarkdownContent inline content={q['কিরাআতের পাঠভেদ ও নিয়ম (অবিকৃত মূল পাঠ)'] || q['নিয়ম'] || ''} />
+                          <span className="font-arabic text-sm sm:text-base leading-loose" dir="rtl">
+                            {q['কিরাআতের পাঠভেদ ও নিয়ম (অবিকৃত মূল পাঠ)'] || q['নিয়ম'] || ''}
+                          </span>
                         </td>
                       </tr>
                     ))}

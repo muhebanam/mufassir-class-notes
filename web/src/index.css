@@ -149,7 +149,7 @@ body.dark {
 
 /* Arabic typography inside prose & inline components */
 .ar, bdi.ar {
-  font-family: 'Amiri Quran', 'Scheherazade New', 'Amiri', serif !important;
+  font-family: 'Amiri Quran', 'Amiri', 'Scheherazade New', serif !important;
   font-size: 1.25em;
   line-height: 2.1;
   direction: rtl;
@@ -160,6 +160,8 @@ body.dark {
   hyphens: none !important;
   -webkit-hyphens: none !important;
   text-rendering: optimizeLegibility;
+  font-feature-settings: "liga" 1, "calt" 1, "mkmk" 1;
+  -webkit-font-feature-settings: "liga" 1, "calt" 1, "mkmk" 1;
 }
 
 /* Standalone Arabic block - strictly right aligned and RTL */
@@ -173,7 +175,7 @@ h1.ar-block, h2.ar-block, h3.ar-block, h4.ar-block, h5.ar-block, h6.ar-block,
   display: block;
   text-align: right !important;
   direction: rtl !important;
-  font-family: 'Amiri Quran', 'Scheherazade New', 'Amiri', serif !important;
+  font-family: 'Amiri Quran', 'Amiri', 'Scheherazade New', serif !important;
   font-size: 1.28em;
   line-height: 2.2;
   margin: 0.6em 0;
@@ -181,6 +183,8 @@ h1.ar-block, h2.ar-block, h3.ar-block, h4.ar-block, h5.ar-block, h6.ar-block,
   overflow-wrap: break-word !important;
   hyphens: none !important;
   -webkit-hyphens: none !important;
+  font-feature-settings: "liga" 1, "calt" 1, "mkmk" 1;
+  -webkit-font-feature-settings: "liga" 1, "calt" 1, "mkmk" 1;
 }
 
 blockquote.ar-block {
@@ -200,6 +204,12 @@ blockquote.ar-block {
   overflow-wrap: break-word !important;
   hyphens: none !important;
   -webkit-hyphens: none !important;
+  font-feature-settings: "liga" 1, "calt" 1, "mkmk" 1;
+  -webkit-font-feature-settings: "liga" 1, "calt" 1, "mkmk" 1;
+}
+
+.font-arabic {
+  font-family: 'Amiri Quran', 'Amiri', 'Scheherazade New', serif !important;
 }
 
 /* Arabic inside inline code */

@@ -5,7 +5,7 @@ import {
   Compass, FileText, ArrowRight, List, BookCheck, Bookmark
 } from 'lucide-react';
 import { toBn } from '../utils/helpers';
-import MarkdownContent from './MarkdownContent';
+import MarkdownContent, { normalizeQuranBrackets } from './MarkdownContent';
 import MasalaCard from './MasalaCard';
 
 export default function ThematicView({ rukuData, surahInfo, onSwitchToAyahStudy }) {
@@ -97,13 +97,19 @@ export default function ThematicView({ rukuData, surahInfo, onSwitchToAyahStudy 
                       <MarkdownContent inline content={row['আয়াত'] || ''} />
                     </td>
                     <td className="px-3.5 py-2.5 whitespace-nowrap text-right font-arabic" dir="rtl">
-                      <MarkdownContent inline content={row['শব্দ (ক্রম)'] || ''} />
+                      <span className="font-arabic text-sm sm:text-base leading-relaxed" dir="rtl">
+                        {normalizeQuranBrackets(row['শব্দ (ক্রম)'] || '')}
+                      </span>
                     </td>
                     <td className="px-3.5 py-2.5 font-medium whitespace-nowrap text-right font-arabic" dir="rtl">
-                      <MarkdownContent inline content={row['ক্বারী / রাবী (বাহাউথ)'] || ''} />
+                      <span className="font-arabic text-sm sm:text-base" dir="rtl">
+                        {row['ক্বারী / রাবী (বাহাউথ)'] || ''}
+                      </span>
                     </td>
                     <td className="px-3.5 py-2.5 leading-relaxed font-arabic text-right" dir="rtl">
-                      <MarkdownContent inline content={row['কিরাআতের পাঠভেদ ও নিয়ম (অবিকৃত মূল পাঠ)'] || ''} />
+                      <span className="font-arabic text-sm sm:text-base leading-loose" dir="rtl">
+                        {row['কিরাআতের পাঠভেদ ও নিয়ম (অবিকৃত মূল পাঠ)'] || ''}
+                      </span>
                     </td>
                   </tr>
                 ))}
