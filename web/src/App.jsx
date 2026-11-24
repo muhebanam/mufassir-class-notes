@@ -222,6 +222,39 @@ export default function App() {
     }
   }, [activeView, currentSurahId, selectedAyahNum]);
 
+  // Listen for hashchange events dynamically
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash.replace('#/', '').replace('#', '');
+      if (!hash) return;
+      const parts = hash.split('/');
+      const sId = parseInt(parts[0]);
+      if (!isNaN(sId) && sId >= 24 && sId <= 114) {
+        if (sId !== currentSurahId) setCurrentSurahId(sId);
+        setActiveView('study');
+        if (parts[1]) {
+          if (parts[1].startsWith('ruku-')) {
+            const rId = parseInt(parts[1].replace('ruku-', ''));
+            if (!isNaN(rId)) handleSelectRuku(rId);
+          } else {
+            const aId = parseInt(parts[1]);
+            if (!isNaN(aId)) {
+              setSelectedAyahNum(aId);
+              if (surahMeta?.rukus) {
+                const match = surahMeta.rukus.find(r => aId >= r.ayah_start && aId <= r.ayah_end);
+                if (match && match.ruku_id !== currentRukuId) {
+                  setCurrentRukuId(match.ruku_id);
+                }
+              }
+            }
+          }
+        }
+      }
+    };
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, [currentSurahId, currentRukuId, surahMeta]);
+
   // 5. Navigation Handlers
   const handleSelectSurah = (sId) => {
     if (sId === null) {
