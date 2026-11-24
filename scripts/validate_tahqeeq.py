@@ -127,7 +127,12 @@ def validate_word_entry(
                 key = f"{surah}:{ayah}"
                 expected_roots = qac_index.get(key)
                 norm_root = normalize_root(root)
-                if expected_roots and norm_root not in expected_roots:
+                matches_qac = (
+                    norm_root in expected_roots
+                    or ("ا" + norm_root) in expected_roots
+                    or (norm_root.lstrip("ا") in expected_roots)
+                )
+                if expected_roots and not matches_qac:
                     warnings.append(
                         f"{loc} ({word}) মূলবর্ণ '{root}' QAC ডেটাসেটে আয়াত {key}-এর মূলবর্ণ তালিকায় পাওয়া যায়নি।"
                     )
