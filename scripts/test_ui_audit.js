@@ -374,6 +374,71 @@ async function runAudit() {
       tier3_ayah: tier3State
     };
 
+    // =========================================================================
+    // TEST 4: INTERLINEAR WORD TILES & CLICK-TO-TAHQEEQ INSPECTOR
+    // =========================================================================
+    console.log('\n--- 4. Testing Interlinear Word Tiles & Word Inspector ---');
+    
+    // Switch to Ayah 1 of Ruku 1
+    await cdp.evaluate(`
+      (() => {
+        const select = document.querySelector('select[aria-label="রুকু নির্বাচন করুন"]');
+        if (select) {
+          select.value = '1';
+          select.dispatchEvent(new Event('change', { bubbles: true }));
+        }
+      })()
+    `);
+    await sleep(1500);
+
+    const wordTilesState = await cdp.evaluate(`
+      (() => {
+        const tiles = Array.from(document.querySelectorAll('.font-quran')).filter(el => !el.classList.contains('uthmani-text'));
+        const tileTexts = tiles.map(t => t.innerText.trim());
+        
+        // Click the first word tile (e.g. سُورَةٌ)
+        if (tiles.length > 0) {
+          tiles[0].click();
+        }
+
+        return {
+          tileCount: tiles.length,
+          sampleTiles: tileTexts.slice(0, 5)
+        };
+      })()
+    `);
+    console.log('Word tiles count:', wordTilesState.tileCount, wordTilesState.sampleTiles);
+    await sleep(1000);
+
+    // Capture screenshot of Word Inspector Modal
+    await cdp.captureScreenshot('screenshot_word_inspector_modal.png');
+
+    // Check if Word Inspector Modal opened
+    const modalState = await cdp.evaluate(`
+      (() => {
+        const hasModalTitle = document.body.innerText.includes('শাব্দিক তাহকীক ও রূপতত্ত্ব');
+        const text = document.body.innerText;
+        const hasRoot = text.includes('মূলবর্ণ (মাদ্দাহ)');
+        const hasSighah = text.includes('সীগাহ ও বহছ') || text.includes('সীগা');
+        
+        // Close modal
+        const closeBtn = Array.from(document.querySelectorAll('button')).find(b => b.innerText.includes('বন্ধ করুন') || b.title?.includes('বন্ধ'));
+        if (closeBtn) closeBtn.click();
+
+        return {
+          isModalOpened: hasModalTitle,
+          hasRoot,
+          hasSighah
+        };
+      })()
+    `);
+    console.log('Word Inspector Modal state:', modalState);
+    auditResults.wordInspector = {
+      ...wordTilesState,
+      ...modalState,
+      screenshot: 'screenshot_word_inspector_modal.png'
+    };
+
     // Save audit results to JSON
     fs.writeFileSync(
       path.join(ARTIFACT_DIR, 'audit_report.json'),

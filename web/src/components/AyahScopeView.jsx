@@ -7,6 +7,7 @@ import {
 import MarkdownContent, { normalizeQuranBrackets } from './MarkdownContent';
 import TahqeeqTable from './TahqeeqTable';
 import QiraatTable from './QiraatTable';
+import WordByWordSection from './WordByWordSection';
 
 export default function AyahScopeView({
   ayah,
@@ -183,57 +184,13 @@ export default function AyahScopeView({
           </div>
         </div>
 
-        {/* শব্দানুগ অনুবাদ সেকশন (Word-by-Word Translation Section) */}
-        {ayah.word_translation && (
-          <div className="bg-gradient-to-r from-amber-50/60 via-emerald-50/40 to-teal-50/60 dark:from-gray-800 dark:via-gray-800/90 dark:to-gray-850 p-4 sm:p-5 rounded-2xl border border-amber-200/60 dark:border-amber-800/40 space-y-3 font-bengali shadow-2xs">
-            <div className="flex items-center justify-between gap-2 pb-2 border-b border-amber-200/50 dark:border-gray-700">
-              <div className="flex items-center gap-2">
-                <Languages className="w-4 h-4 text-amber-700 dark:text-amber-400" />
-                <h4 className="font-bold text-sm sm:text-base text-gray-900 dark:text-gray-100">
-                  শব্দানুগ অনুবাদ (শব্দে শব্দে অর্থ)
-                </h4>
-              </div>
-              <span className="text-[11px] font-semibold text-amber-800 dark:text-amber-300 bg-amber-100/70 dark:bg-amber-950/60 px-2.5 py-0.5 rounded-full border border-amber-200/80 dark:border-amber-800/60 font-mono">
-                {toBn(tahqeeqWords.length || 0)}টি শব্দ
-              </span>
-            </div>
-
-            {/* Word by word formatted markdown text */}
-            <div className="text-xs sm:text-sm text-gray-800 dark:text-gray-200 leading-loose">
-              <MarkdownContent content={ayah.word_translation} />
-            </div>
-
-            {/* Interactive Word Chips (Quick Word-Meaning Badges) */}
-            {tahqeeqWords && tahqeeqWords.length > 0 && (
-              <div className="pt-2 border-t border-amber-200/40 dark:border-gray-700/60">
-                <span className="text-[11px] font-semibold text-gray-500 dark:text-gray-400 block mb-2">
-                  প্রতিটি শব্দের সরাসরি অর্থ-কার্ড:
-                </span>
-                <div className="flex flex-wrap gap-2">
-                  {tahqeeqWords.map((w, idx) => {
-                    const arabicWord = w.word || w['শব্দ'] || '';
-                    const meaningText = w.meaning_bn || w['কুরআনিক পরিভাষাগত অর্থ'] || w['আভিধানিক অর্থ ও ভাষাতাত্ত্বিক সূত্র'] || '';
-
-                    return (
-                      <div 
-                        key={idx} 
-                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white dark:bg-gray-750 border border-emerald-200/80 dark:border-emerald-700/60 shadow-2xs text-xs"
-                      >
-                        <span className="font-arabic font-bold text-emerald-800 dark:text-emerald-300 text-sm sm:text-base" dir="rtl">
-                          {arabicWord}
-                        </span>
-                        <span className="text-gray-400 text-xs">→</span>
-                        <span className="font-medium text-gray-800 dark:text-gray-200">
-                          {meaningText}
-                        </span>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-            )}
-          </div>
-        )}
+        {/* শব্দানুগ ইন্টারলিনিয়ার অনুবাদ সেকশন (Word-by-Word Interlinear Section) */}
+        <WordByWordSection
+          ayah={ayah}
+          arabicFontSize={arabicFontSize}
+          bengaliFontSize={bengaliFontSize}
+          arabicLineHeight={arabicLineHeight}
+        />
       </div>
 
       {/* 3. Detailed Academic Layer (Split View on Desktop or Stacked View) */}
