@@ -4,32 +4,83 @@
 
 @layer base {
   body {
-    @apply font-bengali text-gray-900 dark:text-gray-100 dark:bg-gray-900 transition-colors duration-200;
+    background-color: var(--bg-page);
+    color: var(--ink);
+    @apply font-bengali antialiased transition-colors duration-200;
   }
 }
 
-/* Typography & Theme Variables */
-:root {
+/* ==========================================================================
+   1. Theme Variables (Paper Light, Warm Sepia, Academic Dark)
+   ========================================================================== */
+
+/* Paper Light (Default: #FAF9F6, #1F2933, #0F5132, #B45309) */
+:root,
+body.light-theme,
+body {
   color-scheme: light;
-  --ink: #1c2b27;
-  --muted: #5b6b66;
-  --accent: #0f766e;
-  --quote-bg: #f1f8f6;
+  --bg-page: #faf9f6;
+  --ink: #1f2933;
+  --muted: #52606d;
+  --accent: #0f5132;
+  --accent-secondary: #b45309;
+  --quote-bg: #f3f1ea;
   --card: #ffffff;
-  --line: #e3ece9;
+  --line: #e5e7eb;
 }
 
-.dark {
+/* Warm Sepia (#F4ECD8, #3E3529, #8B5E34, #EDE2CF) */
+body.sepia-theme {
+  color-scheme: light;
+  --bg-page: #f4ecd8;
+  --ink: #3e3529;
+  --muted: #6b5e4f;
+  --accent: #8b5e34;
+  --accent-secondary: #b45309;
+  --quote-bg: #e7dcbf;
+  --card: #ede2cf;
+  --line: #dccdb4;
+}
+
+body.sepia-theme .bg-white {
+  background-color: #ede2cf !important;
+}
+body.sepia-theme .bg-gray-50 {
+  background-color: #f1e7d2 !important;
+}
+body.sepia-theme .bg-gray-100 {
+  background-color: #e4d7bf !important;
+}
+body.sepia-theme .border-gray-100,
+body.sepia-theme .border-gray-200 {
+  border-color: #dccdb4 !important;
+}
+body.sepia-theme .text-gray-900,
+body.sepia-theme .text-gray-800 {
+  color: #3e3529 !important;
+}
+body.sepia-theme .text-gray-600,
+body.sepia-theme .text-gray-500 {
+  color: #6b5e4f !important;
+}
+
+/* Academic Dark (#121518, #1B2026, #E2E8F0, #34D3BE) */
+.dark,
+body.dark {
   color-scheme: dark;
-  --ink: #e6efec;
-  --muted: #9ab0aa;
+  --bg-page: #121518;
+  --ink: #e2e8f0;
+  --muted: #94a3b8;
   --accent: #34d3be;
-  --quote-bg: #12201d;
-  --card: #0f1a18;
-  --line: #243532;
+  --accent-secondary: #fbbf24;
+  --quote-bg: #161d22;
+  --card: #1b2026;
+  --line: #2d3748;
 }
 
-/* Custom Scrollbars */
+/* ==========================================================================
+   2. Custom Scrollbars & Layout Utilities
+   ========================================================================== */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -45,7 +96,6 @@
   background: rgba(156, 163, 175, 0.7);
 }
 
-/* Hide scrollbar for horizontal ayah jumper */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
@@ -54,58 +104,124 @@
   scrollbar-width: none;
 }
 
-/* Sepia Theme overrides */
-body.sepia-theme {
-  color-scheme: light;
-  background-color: #f7f3e8;
-  color: #2c251e;
-  --ink: #2c251e;
-  --muted: #635343;
-  --accent: #8b5e34;
-  --quote-bg: #ede2cf;
-  --card: #fffdf9;
-  --line: #e4d7c0;
-}
-.sepia-theme .bg-white {
-  background-color: #fffdf9 !important;
-}
-.sepia-theme .bg-gray-50 {
-  background-color: #f4eee1 !important;
-}
-.sepia-theme .bg-gray-100 {
-  background-color: #ede2cf !important;
-}
-.sepia-theme .border-gray-200 {
-  border-color: #e4d7c0 !important;
-}
-.sepia-theme .text-gray-600 {
-  color: #635343 !important;
-}
-.sepia-theme .text-gray-500 {
-  color: #7d6b58 !important;
-}
-
-/* Uthmani text styling */
+/* ==========================================================================
+   3. Arabic & Quranic Typography (Unbroken Ligatures & Responsive Direction)
+   ========================================================================== */
 .uthmani-text {
   font-family: 'Amiri Quran', 'Scheherazade New', 'Amiri', serif;
   direction: rtl;
   text-align: right;
-  word-spacing: 0.1em;
+  word-spacing: 0.12em;
   word-break: normal !important;
   overflow-wrap: break-word !important;
   hyphens: none !important;
   -webkit-hyphens: none !important;
 }
 
-/* Ayah end circle */
+/* Traditional Ayah End Circle */
 .ayah-end-symbol {
   font-family: 'Amiri Quran', serif;
-  color: #059669;
+  color: var(--accent);
   display: inline-block;
   padding: 0 4px;
 }
 
-/* Rich Prose & Markdown Typography */
+/* Traditional Ruku Margin Marker 'ع' */
+.mushaf-ruku-marker {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.8em;
+  height: 1.8em;
+  margin: 0 0.5em;
+  border-radius: 9999px;
+  border: 1.5px solid var(--accent);
+  background-color: var(--quote-bg);
+  color: var(--accent);
+  font-family: 'Amiri Quran', 'Scheherazade New', serif;
+  font-weight: bold;
+  font-size: 0.9em;
+  vertical-align: middle;
+  user-select: none;
+}
+
+/* Arabic typography inside prose & inline components */
+.ar, bdi.ar {
+  font-family: 'Amiri Quran', 'Scheherazade New', 'Amiri', serif !important;
+  font-size: 1.25em;
+  line-height: 2.1;
+  direction: rtl;
+  unicode-bidi: isolate;
+  display: inline;
+  word-break: normal !important;
+  overflow-wrap: break-word !important;
+  hyphens: none !important;
+  -webkit-hyphens: none !important;
+  text-rendering: optimizeLegibility;
+}
+
+/* Standalone Arabic block - strictly right aligned and RTL */
+.ar-block,
+p.ar-block,
+blockquote.ar-block,
+li.ar-block,
+div.ar-block,
+h1.ar-block, h2.ar-block, h3.ar-block, h4.ar-block, h5.ar-block, h6.ar-block,
+[dir="rtl"].ar-block {
+  display: block;
+  text-align: right !important;
+  direction: rtl !important;
+  font-family: 'Amiri Quran', 'Scheherazade New', 'Amiri', serif !important;
+  font-size: 1.28em;
+  line-height: 2.2;
+  margin: 0.6em 0;
+  word-break: normal !important;
+  overflow-wrap: break-word !important;
+  hyphens: none !important;
+  -webkit-hyphens: none !important;
+}
+
+blockquote.ar-block {
+  border-left: none !important;
+  border-right: 4px solid var(--accent) !important;
+  padding: 0.9em 1.2em 0.9em 0.6em !important;
+  text-align: right !important;
+  direction: rtl !important;
+}
+
+/* Prevent cursive letters breaking mid-word across all containers */
+[lang="ar"],
+[dir="rtl"],
+.font-amiri,
+.font-arabic {
+  word-break: normal !important;
+  overflow-wrap: break-word !important;
+  hyphens: none !important;
+  -webkit-hyphens: none !important;
+}
+
+/* Arabic inside inline code */
+code.ar-code, .ar-code {
+  font-family: 'Amiri Quran', 'Amiri', serif;
+  font-size: 1.15em;
+  direction: rtl;
+  unicode-bidi: isolate;
+  background-color: var(--quote-bg);
+  color: var(--accent);
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+}
+
+/* ==========================================================================
+   4. Rich Prose & Academic Typography (65ch–72ch Reading Column)
+   ========================================================================== */
+.reading-column {
+  width: 100%;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .prose {
   width: 100%;
   font-size: 1.06rem;
@@ -157,33 +273,14 @@ body.sepia-theme {
   font-weight: 700;
 }
 
-/* Inverted prose for dark containers */
-.prose-invert,
-.prose.prose-invert {
-  --ink: #f9fafb;
-  color: #f9fafb !important;
-}
-
-.prose-invert p,
-.prose-invert h1, .prose-invert h2, .prose-invert h3, .prose-invert h4,
-.prose-invert strong,
-.prose-invert li {
-  color: #f9fafb !important;
-}
-
-/* Arabic typography inside prose & inline components */
-.ar, bdi.ar {
-  font-family: 'Amiri Quran', 'Scheherazade New', 'Amiri', serif !important;
-  font-size: 1.25em;
-  line-height: 2.1;
-  direction: rtl;
-  unicode-bidi: isolate;
-  display: inline;
-  word-break: normal !important;
-  overflow-wrap: break-word !important;
-  hyphens: none !important;
-  -webkit-hyphens: none !important;
-  text-rendering: optimizeLegibility;
+/* Academic Callout / Abstract Box */
+.academic-callout {
+  background-color: var(--quote-bg);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--accent);
+  border-radius: 12px;
+  padding: 1.1em 1.3em;
+  margin: 1.2em 0;
 }
 
 /* Blockquote & Hadith / Ayah citation styling */
@@ -193,46 +290,14 @@ body.sepia-theme {
   background: var(--quote-bg);
   border-left: 4px solid var(--accent);
   border-radius: 8px;
+  font-style: normal;
 }
 
-/* Standalone Arabic block - strictly right aligned and RTL */
-.ar-block,
-p.ar-block,
-blockquote.ar-block,
-li.ar-block,
-div.ar-block,
-h1.ar-block, h2.ar-block, h3.ar-block, h4.ar-block, h5.ar-block, h6.ar-block,
-[dir="rtl"].ar-block {
-  display: block;
-  text-align: right !important;
-  direction: rtl !important;
-  font-family: 'Amiri Quran', 'Scheherazade New', 'Amiri', serif !important;
-  font-size: 1.28em;
-  line-height: 2.2;
-  margin: 0.6em 0;
-  word-break: normal !important;
-  overflow-wrap: break-word !important;
-  hyphens: none !important;
-  -webkit-hyphens: none !important;
-}
-
-blockquote.ar-block {
-  border-left: none !important;
-  border-right: 4px solid var(--accent) !important;
-  padding: 0.9em 1.2em 0.9em 0.6em !important;
-  text-align: right !important;
-  direction: rtl !important;
-}
-
-/* All Arabic elements & containers must never break cursive letters mid-word */
-[lang="ar"],
-[dir="rtl"],
-.font-amiri,
-.font-arabic {
-  word-break: normal !important;
-  overflow-wrap: break-word !important;
-  hyphens: none !important;
-  -webkit-hyphens: none !important;
+/* Inverted prose for dark containers */
+.prose-invert,
+.prose.prose-invert {
+  --ink: #e2e8f0;
+  color: #e2e8f0 !important;
 }
 
 /* Markdown tables inside responsive wrapper */
@@ -278,19 +343,9 @@ blockquote.ar-block {
   font-weight: 700;
 }
 
-/* Arabic inside inline code */
-code.ar-code, .ar-code {
-  font-family: 'Amiri Quran', 'Amiri', serif;
-  font-size: 1.15em;
-  direction: rtl;
-  unicode-bidi: isolate;
-  background-color: var(--quote-bg);
-  color: var(--accent);
-  padding: 0.1em 0.35em;
-  border-radius: 4px;
-}
-
-/* Print optimization for Dars notes & handouts */
+/* ==========================================================================
+   5. Print optimization for Dars notes & handouts
+   ========================================================================== */
 @media print {
   body {
     background: #ffffff !important;

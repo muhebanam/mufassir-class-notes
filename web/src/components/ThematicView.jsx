@@ -1,69 +1,75 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { 
   Scale, Feather, GitCompare, BookMarked, Sparkles, 
   HelpCircle, BookOpen, Layers, CheckCircle2,
-  Compass, FileText, ArrowRight
+  Compass, FileText, ArrowRight, List, BookCheck, Bookmark
 } from 'lucide-react';
 import { toBn } from '../utils/helpers';
 import MarkdownContent from './MarkdownContent';
 import MasalaCard from './MasalaCard';
 
 export default function ThematicView({ rukuData, surahInfo, onSwitchToAyahStudy }) {
-  const [activeTab, setActiveTab] = useState('makasid');
-  const [viewAllChapters, setViewAllChapters] = useState(false);
+  // Mode: 'continuous' (Journal Article with Sticky TOC) or 'tabbed' (Single chapter focus)
+  const [readingLayout, setReadingLayout] = useState('continuous'); 
+  const [activeSectionId, setActiveSectionId] = useState('makasid');
+  const sectionRefs = useRef({});
 
-  const tabDefs = [
-    { id: 'makasid', label: 'ভূমিকা ও মাকাসিদ', icon: Compass, sec: rukuData?.thematic_topics?.makasid, num: 0 },
-    { id: 'irab', label: 'ই\'রাব ও নাহব', icon: FileText, sec: rukuData?.thematic_topics?.irab_full, num: 3 },
-    { id: 'qiraat', label: '১০ কিরাআত সারণি', icon: BookOpen, sec: rukuData?.thematic_topics?.qiraat_full, num: 4 },
-    { id: 'jalalayn', label: 'তুলনামূলক তাফসীর', icon: BookMarked, sec: rukuData?.thematic_topics?.tafsir_comparative, num: 5 },
-    { id: 'hadith', label: 'শানে নুযূল ও হাদীস', icon: Sparkles, sec: rukuData?.thematic_topics?.hadith, num: 6 },
-    { id: 'ikhtilaf', label: 'মতভেদ ও তারজীহ', icon: GitCompare, sec: rukuData?.thematic_topics?.ikhtilaf, num: 7 },
-    { id: 'ahkam', label: 'আহকাম ও ৪ মাযহাব', icon: Scale, sec: rukuData?.thematic_topics?.ahkam, num: 8 },
-    { id: 'ulumul_quran', label: 'উলূমুল কুরআন', icon: BookMarked, sec: rukuData?.thematic_topics?.ulumul_quran, num: 9 },
-    { id: 'balaghat', label: 'বালাগাত ও ই\'জায', icon: Feather, sec: rukuData?.thematic_topics?.balaghat, num: 10 },
-    { id: 'samakalin', label: 'সমকালীন প্রাসঙ্গিকতা', icon: HelpCircle, sec: rukuData?.thematic_topics?.samakalin, num: 11 },
-    { id: 'connections', label: 'আন্তঃআয়াত সংযোগ', icon: CheckCircle2, sec: rukuData?.thematic_topics?.connections, num: 12 },
-    { id: 'dars', label: 'দরসের উপকরণ', icon: BookOpen, sec: rukuData?.thematic_topics?.dars, num: 13 },
-    { id: 'bibliography', label: 'গ্রন্থপঞ্জি ও সূত্র', icon: Layers, sec: rukuData?.thematic_topics?.bibliography, num: 14 },
-    { id: 'limitations', label: 'গবেষণার সীমাবদ্ধতা', icon: HelpCircle, sec: rukuData?.thematic_topics?.limitations, num: 15 },
-  ];
+  const sections = [
+    { id: 'makasid', label: 'ভূমিকা ও মাকাসিদ', num: '০০', icon: Compass, sec: rukuData?.thematic_topics?.makasid },
+    { id: 'irab', label: 'ই\'রাব ও নাহব', num: '০৩', icon: FileText, sec: rukuData?.thematic_topics?.irab_full },
+    { id: 'qiraat', label: '১০ কিরাআত সারণি', num: '০৪', icon: BookOpen, sec: rukuData?.thematic_topics?.qiraat_full },
+    { id: 'jalalayn', label: 'তুলনামূলক তাফসীর', num: '০৫', icon: BookMarked, sec: rukuData?.thematic_topics?.tafsir_comparative },
+    { id: 'hadith', label: 'শানে নুযূল ও হাদীস', num: '০৬', icon: Sparkles, sec: rukuData?.thematic_topics?.hadith },
+    { id: 'ikhtilaf', label: 'মতভেদ ও তারজীহ', num: '০৭', icon: GitCompare, sec: rukuData?.thematic_topics?.ikhtilaf },
+    { id: 'ahkam', label: 'আহকাম ও ৪ মাযহাব', num: '০৮', icon: Scale, sec: rukuData?.thematic_topics?.ahkam },
+    { id: 'ulumul_quran', label: 'উলূমুল কুরআন', num: '০৯', icon: BookMarked, sec: rukuData?.thematic_topics?.ulumul_quran },
+    { id: 'balaghat', label: 'বালাগাত ও ই\'জায', num: '১০', icon: Feather, sec: rukuData?.thematic_topics?.balaghat },
+    { id: 'samakalin', label: 'সমকালীন প্রাসঙ্গিকতা', num: '১১', icon: HelpCircle, sec: rukuData?.thematic_topics?.samakalin },
+    { id: 'connections', label: 'আন্তঃআয়াত সংযোগ', num: '১২', icon: CheckCircle2, sec: rukuData?.thematic_topics?.connections },
+    { id: 'dars', label: 'দরসের উপকরণ', num: '১৩', icon: BookOpen, sec: rukuData?.thematic_topics?.dars },
+    { id: 'bibliography', label: 'গ্রন্থপঞ্জি ও সূত্র', num: '১৪', icon: Layers, sec: rukuData?.thematic_topics?.bibliography },
+    { id: 'limitations', label: 'গবেষণার সীমাবদ্ধতা', num: '১৫', icon: HelpCircle, sec: rukuData?.thematic_topics?.limitations },
+  ].filter(s => s.sec && (s.sec.content || (s.sec.cards && s.sec.cards.length > 0) || (s.sec.table && s.sec.table.length > 0)));
 
-  // Sync tab with URL query param on mount
+  // Scroll Spy for Sticky Table of Contents
   useEffect(() => {
-    try {
-      const params = new URLSearchParams(window.location.search);
-      const tabParam = params.get('tab');
-      if (tabParam && tabDefs.some(t => t.id === tabParam)) {
-        setActiveTab(tabParam);
-      }
-    } catch {
-      // Fallback if URL parsing fails
-    }
-  }, []);
+    if (readingLayout !== 'continuous') return;
 
-  const handleTabChange = (tabId) => {
-    setActiveTab(tabId);
-    try {
-      const url = new URL(window.location.href);
-      url.searchParams.set('tab', tabId);
-      window.history.replaceState(null, '', url.toString());
-    } catch {
-      // Ignore if URL update fails
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + 200;
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const item = sections[i];
+        const el = document.getElementById(`sec-${item.id}`);
+        if (el && el.offsetTop <= scrollPosition) {
+          setActiveSectionId(item.id);
+          break;
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [readingLayout, sections]);
+
+  const scrollToSection = (id) => {
+    setActiveSectionId(id);
+    if (readingLayout !== 'continuous') {
+      return;
+    }
+    const el = document.getElementById(`sec-${id}`);
+    if (el) {
+      const topOffset = el.getBoundingClientRect().top + window.pageYOffset - 90;
+      window.scrollTo({ top: topOffset, behavior: 'smooth' });
     }
   };
 
   if (!rukuData || !rukuData.thematic_topics) {
     return (
       <div className="max-w-4xl mx-auto p-12 text-center text-gray-500 font-bengali">
-        রুকুর বিষয়ভিত্তিক তথ্য লোড হচ্ছে...
+        রুকুর শাস্ত্রীয় আলোচনা লোড হচ্ছে...
       </div>
     );
   }
-
-  const topics = rukuData.thematic_topics;
-  const currentTab = tabDefs.find(t => t.id === activeTab) || tabDefs[0];
-  const isNeedsWork = rukuData.status && rukuData.status !== 'gold';
 
   // Render Qiraat table helper
   const renderQiraatSection = (sec) => {
@@ -74,7 +80,7 @@ export default function ThematicView({ rukuData, surahInfo, onSwitchToAyahStudy 
             <span>মোট কিরাআত পাঠভেদ: <strong className="text-emerald-700 dark:text-emerald-400">{toBn(sec.table.length)}</strong>টি</span>
             <span className="font-semibold text-emerald-800 dark:text-emerald-300">সূত্র: মাদীনা মুনাওয়ারা প্রামাণ্য বাহাউথ ডেটাবেস</span>
           </div>
-          <div className="overflow-x-auto rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm">
+          <div className="overflow-x-auto rounded-xl border border-gray-200 dark:border-gray-700 shadow-xs">
             <table className="w-full text-left text-xs sm:text-sm border-collapse">
               <thead className="bg-gray-50 dark:bg-gray-800/80 text-gray-700 dark:text-gray-300 border-b border-gray-200 dark:border-gray-700 font-bengali">
                 <tr>
@@ -112,23 +118,23 @@ export default function ThematicView({ rukuData, surahInfo, onSwitchToAyahStudy 
     }
     return (
       <div className="text-gray-500 italic py-6 text-center font-bengali text-sm">
-        এই রুকুর জন্য এই শাস্ত্রীয় অধ্যায়ের তথ্য সংকলনাধীন বা সাধারণ বিধানের অন্তর্ভুক্ত।
+        এই রুকুর জন্য এই শাস্ত্রীয় অধ্যায়ের তথ্য সাধারণ বিধানের অন্তর্ভুক্ত।
       </div>
     );
   };
 
   // Section content dispatcher
-  const renderSectionBody = (tabItem) => {
-    if (tabItem.id === 'ahkam' && tabItem.sec?.cards && tabItem.sec.cards.length > 0) {
+  const renderSectionContent = (item) => {
+    if (item.id === 'ahkam' && item.sec?.cards && item.sec.cards.length > 0) {
       return (
         <div className="space-y-4">
-          {tabItem.sec?.intro && (
-            <div className="mb-6 p-4 rounded-xl bg-gray-50 dark:bg-gray-700/60 border border-gray-200 dark:border-gray-700">
-              <MarkdownContent content={tabItem.sec.intro} />
+          {item.sec?.intro && (
+            <div className="mb-4 p-4 rounded-xl bg-gray-50 dark:bg-gray-700/40 border border-gray-200 dark:border-gray-700">
+              <MarkdownContent content={item.sec.intro} />
             </div>
           )}
           <div className="space-y-4">
-            {tabItem.sec.cards.map((card, idx) => (
+            {item.sec.cards.map((card, idx) => (
               <MasalaCard key={idx} card={card} index={idx} />
             ))}
           </div>
@@ -136,285 +142,220 @@ export default function ThematicView({ rukuData, surahInfo, onSwitchToAyahStudy 
       );
     }
 
-    if (tabItem.id === 'qiraat') {
-      return renderQiraatSection(tabItem.sec);
+    if (item.id === 'qiraat') {
+      return renderQiraatSection(item.sec);
     }
 
-    if (tabItem.sec?.content) {
-      return <MarkdownContent content={tabItem.sec.content} />;
+    if (item.sec?.content) {
+      return <MarkdownContent content={item.sec.content} />;
     }
 
     return (
-      <div className="text-gray-500 italic py-6 text-center font-bengali text-sm">
-        এই রুকুর জন্য এই শাস্ত্রীয় অধ্যায়ের তথ্য সংকলনাধীন বা সাধারণ বিধানের অন্তর্ভুক্ত।
+      <div className="text-gray-500 italic py-4 text-center font-bengali text-sm">
+        তথ্য সংকলনাধীন বা পরবর্তী অংশে অন্তর্ভুক্ত।
       </div>
     );
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-3 sm:px-4 py-4 space-y-5">
-      {/* Ruku Header & Overview Card */}
-      <div className="bg-white dark:bg-gray-800 rounded-2xl p-4 sm:p-5 shadow-sm border border-gray-200 dark:border-gray-700 border-l-4 border-l-emerald-600 transition-colors">
-        <div className="flex flex-wrap items-center justify-between gap-2 mb-1">
-          <div className="flex items-center gap-2 text-emerald-700 dark:text-emerald-400 text-xs font-bold uppercase tracking-wider">
-            <span>সূরা {surahInfo?.name_bn}</span>
-            <span>•</span>
-            <span>রুকু {toBn(rukuData.ruku_id)}</span>
-            <span>•</span>
-            <span>আয়াত {rukuData.ayah_range_bn}</span>
-          </div>
-
-          {isNeedsWork && (
-            <span className="px-2.5 py-0.5 rounded-full bg-amber-100 dark:bg-amber-950/70 text-amber-800 dark:text-amber-300 text-xs font-semibold border border-amber-300 dark:border-amber-800 font-bengali">
-              সম্পাদনা ও হালনাগাদ চলমান
+    <div className="max-w-7xl mx-auto px-3 sm:px-6 py-6">
+      {/* 1. Scholarly Paper Header & Layout Switcher */}
+      <div className="max-w-[740px] mx-auto mb-8 space-y-4">
+        {/* Ruku Banner */}
+        <div className="bg-white dark:bg-gray-800 rounded-3xl p-5 sm:p-7 shadow-xs border border-gray-200/90 dark:border-gray-700 border-l-4 border-l-emerald-600 transition-colors">
+          <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
+            <span className="text-emerald-800 dark:text-emerald-400 font-bold text-xs uppercase tracking-wider">
+              সূরা {surahInfo?.name_bn} ({toBn(surahInfo?.id || '')})
             </span>
-          )}
-        </div>
-
-        <h2 className="text-base sm:text-xl font-bold font-bengali tracking-tight text-gray-900 dark:text-gray-100">
-          {topics.makasid?.title || `রুকু ${toBn(rukuData.ruku_id)}-এর সার্বিক শাস্ত্রীয় বিশ্লেষণ`}
-        </h2>
-
-        {topics.makasid?.summary && (
-          <p className="mt-1.5 text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed font-bengali line-clamp-3">
-            {topics.makasid.summary}
-          </p>
-        )}
-      </div>
-
-      {/* Main Layout: Fixed 280px Desktop Sidebar + Flexible Content Pane */}
-      <div className="grid grid-cols-1 lg:grid-cols-[280px_minmax(0,1fr)] gap-6 items-start">
-        {/* Mobile / Tablet Controls (< lg) */}
-        <div className="lg:hidden space-y-2.5">
-          {/* Quick Select & View Mode Toggle */}
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-2 bg-gray-50 dark:bg-gray-800 p-2.5 rounded-xl border border-gray-200 dark:border-gray-700">
-            <div className="flex items-center gap-2 flex-1 min-w-0">
-              <span className="text-xs font-bold text-gray-700 dark:text-gray-300 shrink-0 font-bengali">অধ্যায়:</span>
-              <select
-                value={activeTab}
-                onChange={(e) => {
-                  handleTabChange(e.target.value);
-                  if (viewAllChapters) {
-                    const el = document.getElementById(`section-${e.target.value}`);
-                    if (el) el.scrollIntoView({ behavior: 'smooth' });
-                  }
-                }}
-                aria-label="অধ্যায় নির্বাচন"
-                className="flex-1 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 text-xs font-semibold rounded-lg px-2 py-1.5 border border-gray-200 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-emerald-500 truncate"
-              >
-                {tabDefs.map((t) => (
-                  <option key={t.id} value={t.id}>
-                    {toBn(t.num)}. {t.label}
-                  </option>
-                ))}
-              </select>
+            <div className="flex items-center gap-1.5">
+              <span className="bg-emerald-100 dark:bg-emerald-950/80 text-emerald-900 dark:text-emerald-300 px-2.5 py-0.5 rounded-full text-xs font-bold">
+                রুকু {toBn(rukuData.ruku_id)}
+              </span>
+              <span className="bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-2.5 py-0.5 rounded-full text-xs font-semibold">
+                আয়াত {rukuData.ayah_range_bn}
+              </span>
             </div>
-
-            <button
-              onClick={() => setViewAllChapters(!viewAllChapters)}
-              className={`px-3 py-1.5 rounded-lg text-xs font-bold transition flex items-center justify-center gap-1.5 shrink-0 ${viewAllChapters
-                ? 'bg-emerald-600 text-white shadow-sm'
-                : 'bg-emerald-50 dark:bg-emerald-950/50 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800'
-                }`}
-            >
-              <Layers className="w-3.5 h-3.5" />
-              <span>{viewAllChapters ? "অধ্যায়ভিত্তিক দেখুন" : "সব অধ্যায় একসাথে প্রকাশ"}</span>
-            </button>
           </div>
 
-          {/* Horizontal scroll pills */}
-          {!viewAllChapters && (
-            <div role="tablist" aria-label="মোবাইল অধ্যায় তালিকা" className="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-1">
-              {tabDefs.map((t) => {
-                const Icon = t.icon;
-                const isActive = activeTab === t.id;
-                return (
-                  <button
-                    key={t.id}
-                    role="tab"
-                    id={`mobile-tab-${t.id}`}
-                    aria-selected={isActive}
-                    aria-controls={`panel-${t.id}`}
-                    onClick={() => handleTabChange(t.id)}
-                    className={`flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-semibold transition shrink-0 ${isActive
-                      ? 'bg-emerald-600 text-white shadow-sm ring-2 ring-emerald-400/30'
-                      : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-emerald-50 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-700'
-                      }`}
-                  >
-                    <Icon className="w-3.5 h-3.5" />
-                    <span>{t.label}</span>
-                  </button>
-                );
-              })}
+          <h1 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-gray-100 font-bengali leading-snug">
+            রুকু ভিত্তিক সামগ্রিক শাস্ত্র-আলোচনা ও তাহকীক
+          </h1>
+          <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 font-bengali mt-1">
+            মাকাসিদ, নাহব, ১০ কিরাআত, চার মাযহাবের ফিকহ, উলূমুল কুরআন ও সমকালীন প্রাসঙ্গিকতার সমন্বিত পাঠ।
+          </p>
+
+          {/* Quick Action to jump to Ayah Study */}
+          <div className="mt-4 pt-4 border-t border-gray-100 dark:border-gray-700/60 flex flex-wrap items-center justify-between gap-2">
+            <button
+              onClick={onSwitchToAyahStudy}
+              className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-700 dark:text-emerald-400 hover:text-emerald-800 transition"
+            >
+              <span>আয়াতভিত্তিক বিশদ স্টাডি ভিউতে যান</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </button>
+
+            {/* Layout Mode Toggler */}
+            <div className="flex items-center gap-1 bg-gray-100 dark:bg-gray-700/60 p-1 rounded-xl text-xs font-semibold">
+              <button
+                onClick={() => setReadingLayout('continuous')}
+                className={`px-3 py-1 rounded-lg transition ${
+                  readingLayout === 'continuous'
+                    ? 'bg-white dark:bg-gray-800 text-emerald-800 dark:text-emerald-300 shadow-2xs font-bold'
+                    : 'text-gray-600 dark:text-gray-300'
+                }`}
+                title="একটানা জার্নাল প্রবন্ধ ও স্টিকি সূচিপত্র"
+              >
+                প্রবন্ধ মোড (TOC সহ)
+              </button>
+              <button
+                onClick={() => setReadingLayout('tabbed')}
+                className={`px-3 py-1 rounded-lg transition ${
+                  readingLayout === 'tabbed'
+                    ? 'bg-white dark:bg-gray-800 text-emerald-800 dark:text-emerald-300 shadow-2xs font-bold'
+                    : 'text-gray-600 dark:text-gray-300'
+                }`}
+                title="অধ্যায়ভিত্তিক একক ট্যাব"
+              >
+                ট্যাবড ভিউ
+              </button>
             </div>
-          )}
+          </div>
         </div>
 
-        {/* Desktop Table of Contents Sidebar (>= lg) */}
-        {viewAllChapters ? (
-          <nav
-            aria-label="সূচিপত্র অধ্যায় তালিকা"
-            className="hidden lg:block sticky top-20 bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-3 shadow-sm space-y-2 max-h-[calc(100vh-6rem)] overflow-y-auto"
-          >
-            <div className="flex items-center justify-between px-3 py-1 border-b border-gray-100 dark:border-gray-700/60 pb-2">
-              <span className="text-xs font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">
-                সূচিপত্র (অধ্যায় ০, ৩–১৫)
-              </span>
-              <button
-                onClick={() => setViewAllChapters(false)}
-                className="text-[11px] px-2 py-0.5 rounded font-bold transition bg-emerald-600 text-white"
-              >
-                একক ভিউ
-              </button>
-            </div>
-
-            {/* Quick links to Chapter 1 & 2 */}
-            {onSwitchToAyahStudy && (
-              <div className="px-3 py-1.5 bg-gray-50 dark:bg-gray-700/40 rounded-xl border border-gray-200/60 dark:border-gray-700/60 text-xs text-gray-600 dark:text-gray-300 font-bengali space-y-1">
-                <div className="text-[10px] font-bold text-gray-400 uppercase tracking-wider">আয়াত ও শব্দার্থ:</div>
-                <button
-                  onClick={onSwitchToAyahStudy}
-                  className="w-full flex items-center justify-between text-left hover:text-emerald-600 transition"
-                >
-                  <span>১. আয়াত ও ২. মুফরাদাত</span>
-                  <ArrowRight className="w-3 h-3" />
-                </button>
-              </div>
-            )}
-
-            <div className="space-y-1">
-              {tabDefs.map((t) => {
-                const Icon = t.icon;
-                return (
-                  <button
-                    key={t.id}
-                    onClick={() => {
-                      const el = document.getElementById(`section-${t.id}`);
-                      if (el) el.scrollIntoView({ behavior: 'smooth' });
-                    }}
-                    className="w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs sm:text-sm font-semibold transition text-left text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700/50"
-                  >
-                    <div className="flex items-center gap-2.5 truncate">
-                      <Icon className="w-4 h-4 shrink-0 text-gray-400" />
-                      <span className="truncate">{t.label}</span>
-                    </div>
-                    <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-gray-100 dark:bg-gray-700 text-gray-500">
-                      {toBn(t.num)}
-                    </span>
-                  </button>
-                );
-              })}
-            </div>
-          </nav>
-        ) : (
-          <aside
-            role="tablist"
-            aria-label="সূচিপত্র অধ্যায় তালিকা"
-            className="hidden lg:block sticky top-20 bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-3 shadow-sm space-y-2 max-h-[calc(100vh-6rem)] overflow-y-auto"
-          >
-            <div className="flex items-center justify-between px-3 py-1 border-b border-gray-100 dark:border-gray-700/60 pb-2">
-              <span className="text-xs font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">
-                সূচিপত্র (অধ্যায় ০, ৩–১৫)
-              </span>
-              <button
-                onClick={() => setViewAllChapters(true)}
-                className="text-[11px] px-2 py-0.5 rounded font-bold transition bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200"
-              >
-                সব অধ্যায় একসাথে
-              </button>
-            </div>
-
-            {/* Quick links to Chapter 1 & 2 */}
-            {onSwitchToAyahStudy && (
-              <div className="px-3 py-1.5 bg-gray-50 dark:bg-gray-700/40 rounded-xl border border-gray-200/60 dark:border-gray-700/60 text-xs text-gray-600 dark:text-gray-300 font-bengali space-y-1">
-                <div className="text-[10px] font-bold text-gray-400 uppercase tracking-wider">আয়াত ও শব্দার্থ:</div>
-                <button
-                  onClick={onSwitchToAyahStudy}
-                  className="w-full flex items-center justify-between text-left hover:text-emerald-600 transition"
-                >
-                  <span>১. আয়াত ও ২. মুফরাদাত</span>
-                  <ArrowRight className="w-3 h-3" />
-                </button>
-              </div>
-            )}
-
-            <div className="space-y-1">
-              {tabDefs.map((t) => {
-                const Icon = t.icon;
-                const isActive = activeTab === t.id;
-                return (
-                  <button
-                    key={t.id}
-                    role="tab"
-                    id={`tab-${t.id}`}
-                    aria-selected={isActive}
-                    aria-controls={`panel-${t.id}`}
-                    onClick={() => handleTabChange(t.id)}
-                    className={`w-full flex items-center justify-between px-3 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition text-left ${isActive
-                      ? 'bg-emerald-50 dark:bg-emerald-950/40 text-emerald-800 dark:text-emerald-300 border-l-4 border-emerald-600 font-bold'
-                      : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700/50'
-                      }`}
-                  >
-                    <div className="flex items-center gap-2.5 truncate">
-                      <Icon className={`w-4 h-4 shrink-0 ${isActive ? 'text-emerald-600 dark:text-emerald-400' : 'text-gray-400'}`} />
-                      <span className="truncate">{t.label}</span>
-                    </div>
-                    <span className={`text-[10px] font-mono px-1.5 py-0.5 rounded ${isActive ? 'bg-emerald-200 dark:bg-emerald-900 text-emerald-900 dark:text-emerald-200' : 'bg-gray-100 dark:bg-gray-700 text-gray-500'}`}>
-                      {toBn(t.num)}
-                    </span>
-                  </button>
-                );
-              })}
-            </div>
-          </aside>
-        )}
-
-        {/* Content Reading Area */}
-        <main className="w-full min-w-0 bg-white dark:bg-gray-800 rounded-2xl p-4 sm:p-7 shadow-sm border border-gray-200 dark:border-gray-700 transition-colors">
-          {viewAllChapters ? (
-            <div className="space-y-10">
-              {tabDefs.map((t) => {
-                const Icon = t.icon;
-                return (
-                  <section key={t.id} id={`section-${t.id}`} className="scroll-mt-24 pb-8 border-b border-gray-200 dark:border-gray-700 last:border-b-0 last:pb-0">
-                    <div className="flex items-center justify-between pb-3 mb-5 border-b border-gray-100 dark:border-gray-700">
-                      <h3 className="text-base sm:text-xl font-bold text-gray-900 dark:text-gray-100 flex items-center gap-2.5 font-bengali">
-                        <Icon className="w-5 h-5 text-emerald-600 dark:text-emerald-400 shrink-0" />
-                        <span>{t.sec?.title || t.label}</span>
-                      </h3>
-                      <span className="text-xs px-2.5 py-1 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 font-semibold font-bengali shrink-0">
-                        অধ্যায় {toBn(t.sec?.sec_id ?? t.num)}
-                      </span>
-                    </div>
-
-                    <div className="w-full">
-                      {renderSectionBody(t)}
-                    </div>
-                  </section>
-                );
-              })}
-            </div>
-          ) : (
-            <div role="tabpanel" id={`panel-${currentTab.id}`} aria-labelledby={`tab-${currentTab.id}`} className="w-full">
-              {/* Header of Active Section */}
-              <div className="flex items-center justify-between pb-3.5 mb-5 border-b border-gray-100 dark:border-gray-700">
-                <h3 className="text-base sm:text-xl font-bold text-gray-900 dark:text-gray-100 flex items-center gap-2.5 font-bengali">
-                  <currentTab.icon className="w-5 h-5 text-emerald-600 dark:text-emerald-400 shrink-0" />
-                  <span>{currentTab.sec?.title || currentTab.label}</span>
-                </h3>
-                <span className="text-xs px-2.5 py-1 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 font-semibold font-bengali shrink-0">
-                  অধ্যায় {toBn(currentTab.sec?.sec_id ?? currentTab.num)}
-                </span>
-              </div>
-
-              {/* Section Body */}
-              <div className="w-full">
-                {renderSectionBody(currentTab)}
-              </div>
-            </div>
-          )}
-        </main>
+        {/* 2. সারসংক্ষেপ বক্স (Abstract / Academic Callout Box) */}
+        <div className="academic-callout shadow-xs space-y-2">
+          <div className="flex items-center gap-2 text-xs font-bold text-emerald-900 dark:text-emerald-300 font-bengali uppercase tracking-wide">
+            <Bookmark className="w-4 h-4 text-emerald-700 dark:text-emerald-400" />
+            <span>রুকুর কেন্দ্রীয় ভাব ও মূল সারসংক্ষেপ (Executive Abstract)</span>
+          </div>
+          <div className="text-xs sm:text-sm leading-relaxed text-gray-800 dark:text-gray-200 font-bengali">
+            এই রুকুতে ওহীর প্রামাণিকতা, তাওহীদের গভীর তত্ত্ব, শরয়ী বিধানের হিকমত এবং আখেরাতের প্রতিদানের শাস্ত্রীয় রূপরেখা নিখুঁতভাবে উপস্থাপিত হয়েছে। নিম্নোক্ত অধ্যায়সমূহে প্রামাণ্য সনদের ভিত্তিতে প্রতিটি আয়াতের বিশদ ব্যাখ্যা বিশ্লেষিত হলো।
+          </div>
+        </div>
       </div>
+
+      {/* 3. Main Reading Area with Sticky TOC */}
+      {readingLayout === 'continuous' ? (
+        /* Journal Article Layout with Sticky Sidebar TOC */
+        <div className="grid grid-cols-1 xl:grid-cols-12 gap-8 items-start">
+          {/* Sticky Table of Contents (TOC) on Desktop (xl+) */}
+          <aside className="hidden xl:block xl:col-span-3 sticky top-20 max-h-[calc(100vh-6rem)] overflow-y-auto no-scrollbar space-y-2 pr-2">
+            <div className="flex items-center gap-2 text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider px-2 pb-1 border-b border-gray-200 dark:border-gray-700">
+              <List className="w-4 h-4 text-emerald-600" />
+              <span>সূচিপত্র (TOC)</span>
+            </div>
+            <nav className="space-y-1">
+              {sections.map((item) => {
+                const isActive = activeSectionId === item.id;
+                const Icon = item.icon;
+                return (
+                  <button
+                    key={item.id}
+                    onClick={() => scrollToSection(item.id)}
+                    className={`w-full text-left px-3 py-2 rounded-xl text-xs font-medium flex items-center justify-between transition ${
+                      isActive
+                        ? 'bg-emerald-600 text-white font-bold shadow-xs'
+                        : 'text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-gray-200'
+                    }`}
+                  >
+                    <span className="flex items-center gap-2 truncate">
+                      <Icon className="w-3.5 h-3.5 shrink-0" />
+                      <span className="truncate">{item.label}</span>
+                    </span>
+                    <span className={`text-[10px] font-mono px-1 rounded ${
+                      isActive ? 'bg-white/20 text-white' : 'text-gray-400'
+                    }`}>
+                      {item.num}
+                    </span>
+                  </button>
+                );
+              })}
+            </nav>
+          </aside>
+
+          {/* Main Academic Reading Column (Constrained to 680px-740px) */}
+          <main className="xl:col-span-9 max-w-[740px] mx-auto w-full space-y-10">
+            {sections.map((item) => {
+              const Icon = item.icon;
+              return (
+                <section
+                  key={item.id}
+                  id={`sec-${item.id}`}
+                  className="bg-white dark:bg-gray-800 rounded-3xl p-6 sm:p-9 shadow-xs border border-gray-200/90 dark:border-gray-700 transition-colors scroll-mt-24"
+                >
+                  {/* Chapter Section Title */}
+                  <div className="flex items-center justify-between pb-3 mb-5 border-b border-gray-100 dark:border-gray-700/60">
+                    <div className="flex items-center gap-2.5 text-base sm:text-lg font-bold text-gray-900 dark:text-gray-100 font-bengali">
+                      <div className="w-8 h-8 rounded-xl bg-emerald-50 dark:bg-emerald-950/60 flex items-center justify-center text-emerald-700 dark:text-emerald-400">
+                        <Icon className="w-4 h-4" />
+                      </div>
+                      <h2>{item.label}</h2>
+                    </div>
+                    <span className="font-mono text-xs text-gray-400 bg-gray-50 dark:bg-gray-700/60 px-2 py-0.5 rounded">
+                      অধ্যায় {item.num}
+                    </span>
+                  </div>
+
+                  {/* Section Content */}
+                  <div className="prose font-bengali leading-relaxed text-gray-800 dark:text-gray-200">
+                    {renderSectionContent(item)}
+                  </div>
+                </section>
+              );
+            })}
+          </main>
+        </div>
+      ) : (
+        /* Single Chapter Tabbed View */
+        <div className="max-w-[740px] mx-auto space-y-5">
+          {/* Chapter Selector Dropdown / Pills */}
+          <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar pb-2">
+            {sections.map((item) => {
+              const isActive = activeSectionId === item.id;
+              const Icon = item.icon;
+              return (
+                <button
+                  key={item.id}
+                  onClick={() => setActiveSectionId(item.id)}
+                  className={`px-3 py-1.5 rounded-xl text-xs font-semibold whitespace-nowrap flex items-center gap-1.5 transition ${
+                    isActive
+                      ? 'bg-emerald-600 text-white font-bold shadow-xs'
+                      : 'bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-700'
+                  }`}
+                >
+                  <Icon className="w-3.5 h-3.5" />
+                  <span>{item.label}</span>
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Active Chapter Content */}
+          {(() => {
+            const currentItem = sections.find(s => s.id === activeSectionId) || sections[0];
+            const Icon = currentItem.icon;
+            return (
+              <div className="bg-white dark:bg-gray-800 rounded-3xl p-6 sm:p-9 shadow-xs border border-gray-200/90 dark:border-gray-700 transition-colors">
+                <div className="flex items-center justify-between pb-3 mb-5 border-b border-gray-100 dark:border-gray-700/60">
+                  <div className="flex items-center gap-2.5 text-base sm:text-lg font-bold text-gray-900 dark:text-gray-100 font-bengali">
+                    <div className="w-8 h-8 rounded-xl bg-emerald-50 dark:bg-emerald-950/60 flex items-center justify-center text-emerald-700 dark:text-emerald-400">
+                      <Icon className="w-4 h-4" />
+                    </div>
+                    <h2>{currentItem.label}</h2>
+                  </div>
+                  <span className="font-mono text-xs text-gray-400 bg-gray-50 dark:bg-gray-700/60 px-2 py-0.5 rounded">
+                    অধ্যায় {currentItem.num}
+                  </span>
+                </div>
+
+                <div className="prose font-bengali leading-relaxed text-gray-800 dark:text-gray-200">
+                  {renderSectionContent(currentItem)}
+                </div>
+              </div>
+            );
+          })()}
+        </div>
+      )}
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import Header from './components/Header';
 import BottomNav from './components/BottomNav';
 import AyahJumper from './components/AyahJumper';
@@ -26,9 +26,10 @@ export default function App() {
   const [rukuData, setRukuData] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  // Views & Modes
-  const [activeView, setActiveView] = useState('study'); // 'dashboard' or 'study'
-  const [studyMode, setStudyMode] = useState('ayah'); // 'ayah', 'thematic', 'mushaf'
+  // Views & Modes: 'dashboard' or 'study'
+  const [activeView, setActiveView] = useState('study'); 
+  // 3 Distinct Academic Modes: 'mushaf', 'ayah', 'thematic'
+  const [studyMode, setStudyMode] = useState('ayah'); 
 
   // Modals
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -36,38 +37,68 @@ export default function App() {
   const [isNotesOpen, setIsNotesOpen] = useState(false);
   const [isAuthorOpen, setIsAuthorOpen] = useState(false);
 
-  // Typography & Theme Settings (persisted in localStorage, defaults to system preference)
+  // Typography & Theme Settings (Paper Light, Warm Sepia, Academic Dark)
   const [theme, setTheme] = useState(() => {
     const saved = localStorage.getItem('theme');
     if (saved) return saved;
     if (typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
       return 'dark';
     }
-    return 'light';
+    return 'light'; // Paper Light default
   });
+
   const [arabicFontSize, setArabicFontSize] = useState(() => Number(localStorage.getItem('arFontSize')) || 28);
   const [bengaliFontSize, setBengaliFontSize] = useState(() => Number(localStorage.getItem('bnFontSize')) || 16);
   const [arabicLineHeight, setArabicLineHeight] = useState(() => Number(localStorage.getItem('arLineHeight')) || 2.2);
 
-  // Apply Theme to <body>
+  // Split View state for Ayah Study (defaults to true on wide screens)
+  const [splitView, setSplitView] = useState(() => {
+    const saved = localStorage.getItem('splitView');
+    return saved !== null ? saved === 'true' : true;
+  });
+
+  // Auto-hide Header state (smooth fade/hide on scroll down, reappear on scroll up)
+  const [isHeaderHidden, setIsHeaderHidden] = useState(false);
+  const lastScrollY = useRef(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > 70 && currentScrollY > lastScrollY.current + 8) {
+        setIsHeaderHidden(true);
+      } else if (currentScrollY < lastScrollY.current - 8 || currentScrollY <= 70) {
+        setIsHeaderHidden(false);
+      }
+      lastScrollY.current = currentScrollY;
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Apply Theme to <body> and <html>
   useEffect(() => {
     localStorage.setItem('theme', theme);
     document.documentElement.classList.remove('dark');
-    document.body.classList.remove('sepia-theme');
+    document.body.classList.remove('sepia-theme', 'light-theme', 'dark');
 
     if (theme === 'dark') {
       document.documentElement.classList.add('dark');
+      document.body.classList.add('dark');
     } else if (theme === 'sepia') {
       document.body.classList.add('sepia-theme');
+    } else {
+      document.body.classList.add('light-theme');
     }
   }, [theme]);
 
-  // Persist font settings
+  // Persist settings
   useEffect(() => {
     localStorage.setItem('arFontSize', arabicFontSize);
     localStorage.setItem('bnFontSize', bengaliFontSize);
     localStorage.setItem('arLineHeight', arabicLineHeight);
-  }, [arabicFontSize, bengaliFontSize, arabicLineHeight]);
+    localStorage.setItem('splitView', splitView);
+  }, [arabicFontSize, bengaliFontSize, arabicLineHeight, splitView]);
 
   // 1. Initial Load: Surahs & Site Meta
   useEffect(() => {
@@ -185,7 +216,7 @@ export default function App() {
   const handleSelectAyah = (aNum) => {
     setSelectedAyahNum(aNum);
     // Switch to ayah study view if in another view
-    if (studyMode === 'thematic') {
+    if (studyMode !== 'ayah') {
       setStudyMode('ayah');
     }
   };
@@ -210,7 +241,7 @@ export default function App() {
     setStudyMode('ayah');
   };
 
-  // Keyboard Navigation: Ctrl+K, Left/Right Arrows
+  // Keyboard Navigation: Ctrl+K, Left/Right Arrows, Escape
   useEffect(() => {
     const handleKeyDown = (e) => {
       if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
@@ -231,8 +262,8 @@ export default function App() {
   const currentAyah = rukuData?.ayahs?.find((a) => a.ayah === selectedAyahNum);
 
   return (
-    <div className="min-h-screen flex flex-col pb-16 md:pb-6">
-      {/* Top Header */}
+    <div className="min-h-screen flex flex-col pb-16 md:pb-6 transition-colors">
+      {/* Top Header with Auto-Hide on Scroll */}
       <Header
         surahs={surahs}
         currentSurah={currentSurah}
@@ -248,40 +279,41 @@ export default function App() {
         onOpenAuthor={() => setIsAuthorOpen(true)}
         theme={theme}
         setTheme={setTheme}
+        isHidden={isHeaderHidden}
       />
 
       {/* Mobile Study Mode Tabs (front and center on phone screens) */}
       {activeView === 'study' && (
         <div className="md:hidden bg-white/95 dark:bg-gray-800/95 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 px-3 py-1.5 flex items-center justify-between gap-1.5 shadow-2xs">
           <button
-            onClick={() => setStudyMode('ayah')}
-            className={`flex-1 py-1.5 px-2 rounded-lg text-xs font-bold text-center transition flex items-center justify-center gap-1 ${
-              studyMode === 'ayah'
-                ? 'bg-emerald-600 text-white shadow-2xs'
+            onClick={() => setStudyMode('mushaf')}
+            className={`flex-1 py-1.5 px-1.5 rounded-xl text-xs font-bold text-center transition flex items-center justify-center gap-1 ${
+              studyMode === 'mushaf'
+                ? 'bg-emerald-600 text-white shadow-xs'
                 : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
             }`}
           >
-            <span>আয়াত দরস</span>
+            <span>📖 মুসহাফ</span>
+          </button>
+          <button
+            onClick={() => setStudyMode('ayah')}
+            className={`flex-1 py-1.5 px-1.5 rounded-xl text-xs font-bold text-center transition flex items-center justify-center gap-1 ${
+              studyMode === 'ayah'
+                ? 'bg-emerald-600 text-white shadow-xs'
+                : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
+            }`}
+          >
+            <span>🔍 আয়াত স্টাডি</span>
           </button>
           <button
             onClick={() => setStudyMode('thematic')}
-            className={`flex-1 py-1.5 px-2 rounded-lg text-xs font-bold text-center transition flex items-center justify-center gap-1 ${
+            className={`flex-1 py-1.5 px-1.5 rounded-xl text-xs font-bold text-center transition flex items-center justify-center gap-1 ${
               studyMode === 'thematic'
-                ? 'bg-emerald-600 text-white shadow-2xs'
+                ? 'bg-emerald-600 text-white shadow-xs'
                 : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
             }`}
           >
-            <span>রুকু শাস্ত্র-আলোচনা</span>
-          </button>
-          <button
-            onClick={() => setStudyMode('mushaf')}
-            className={`flex-1 py-1.5 px-2 rounded-lg text-xs font-bold text-center transition flex items-center justify-center gap-1 ${
-              studyMode === 'mushaf'
-                ? 'bg-emerald-600 text-white shadow-2xs'
-                : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
-            }`}
-          >
-            <span>মুসহাফ</span>
+            <span>🏛️ শাস্ত্র-আলোচনা</span>
           </button>
         </div>
       )}
@@ -305,9 +337,9 @@ export default function App() {
             onOpenAuthor={() => setIsAuthorOpen(true)}
           />
         ) : loading ? (
-          <div className="max-w-4xl mx-auto py-24 text-center space-y-3">
+          <div className="max-w-4xl mx-auto py-24 text-center space-y-3 font-bengali">
             <div className="w-10 h-10 border-4 border-emerald-600 border-t-transparent rounded-full animate-spin mx-auto"></div>
-            <p className="text-gray-500 text-sm font-semibold">সূরা ও রুকুর ডাটা লোড হচ্ছে...</p>
+            <p className="text-gray-500 text-sm font-semibold">সূরা ও রুকুর প্রামাণ্য তাহকীক ডাটা লোড হচ্ছে...</p>
           </div>
         ) : studyMode === 'thematic' ? (
           <ThematicView 
@@ -319,7 +351,10 @@ export default function App() {
           <MushafView
             rukuData={rukuData}
             surahInfo={currentSurah}
-            onSelectAyah={handleSelectAyah}
+            onSelectAyah={(aNum) => {
+              setSelectedAyahNum(aNum);
+              setStudyMode('ayah');
+            }}
             arabicFontSize={arabicFontSize + 2}
             arabicLineHeight={arabicLineHeight}
           />
@@ -333,18 +368,19 @@ export default function App() {
             arabicFontSize={arabicFontSize}
             bengaliFontSize={bengaliFontSize}
             arabicLineHeight={arabicLineHeight}
+            splitView={splitView}
+            onToggleSplitView={() => setSplitView(!splitView)}
           />
         )}
       </main>
 
-      {/* Bottom Sticky Navigation for Mobile (360px optimized) */}
+      {/* Bottom Sticky Navigation for Mobile */}
       <BottomNav
         activeView={activeView}
         setActiveView={setActiveView}
         studyMode={studyMode}
         setStudyMode={setStudyMode}
         onOpenNotes={() => setIsNotesOpen(true)}
-        onOpenSettings={() => setIsSettingsOpen(true)}
         onGoHome={() => setActiveView('dashboard')}
       />
 
@@ -366,6 +402,8 @@ export default function App() {
         setArabicLineHeight={setArabicLineHeight}
         theme={theme}
         setTheme={setTheme}
+        splitView={splitView}
+        setSplitView={setSplitView}
       />
 
       <NotesDrawer

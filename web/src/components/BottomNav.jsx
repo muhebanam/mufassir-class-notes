@@ -1,5 +1,5 @@
 import React from 'react';
-import { Home, BookOpen, Layers, FileText, Settings, Sparkles } from 'lucide-react';
+import { Home, BookOpen, Layers, FileText, Sparkles } from 'lucide-react';
 
 export default function BottomNav({
   activeView,
@@ -7,7 +7,6 @@ export default function BottomNav({
   studyMode,
   setStudyMode,
   onOpenNotes,
-  onOpenSettings,
   onGoHome
 }) {
   return (
@@ -26,39 +25,7 @@ export default function BottomNav({
           <span className="text-[10px] truncate max-w-full font-bengali">সূরা সূচি</span>
         </button>
 
-        {/* 2. Ayah Study */}
-        <button
-          onClick={() => {
-            setActiveView('study');
-            setStudyMode('ayah');
-          }}
-          className={`flex flex-col items-center justify-center py-1 transition ${
-            activeView === 'study' && studyMode === 'ayah'
-              ? 'text-emerald-700 dark:text-emerald-400 font-bold'
-              : 'text-gray-500 dark:text-gray-400 hover:text-gray-900'
-          }`}
-        >
-          <BookOpen className="w-4 h-4 mb-0.5" />
-          <span className="text-[10px] truncate max-w-full font-bengali">আয়াত দরস</span>
-        </button>
-
-        {/* 3. Thematic / Shastriya Alochona */}
-        <button
-          onClick={() => {
-            setActiveView('study');
-            setStudyMode('thematic');
-          }}
-          className={`flex flex-col items-center justify-center py-1 transition ${
-            activeView === 'study' && studyMode === 'thematic'
-              ? 'text-emerald-700 dark:text-emerald-400 font-bold'
-              : 'text-gray-500 dark:text-gray-400 hover:text-gray-900'
-          }`}
-        >
-          <Layers className="w-4 h-4 mb-0.5" />
-          <span className="text-[10px] truncate max-w-full font-bengali">শাস্ত্রীয় আলোচনা</span>
-        </button>
-
-        {/* 4. Mushaf View */}
+        {/* 2. Mushaf Reading */}
         <button
           onClick={() => {
             setActiveView('study');
@@ -74,13 +41,45 @@ export default function BottomNav({
           <span className="text-[10px] truncate max-w-full font-bengali">মুসহাফ</span>
         </button>
 
+        {/* 3. Ayah Study */}
+        <button
+          onClick={() => {
+            setActiveView('study');
+            setStudyMode('ayah');
+          }}
+          className={`flex flex-col items-center justify-center py-1 transition ${
+            activeView === 'study' && studyMode === 'ayah'
+              ? 'text-emerald-700 dark:text-emerald-400 font-bold'
+              : 'text-gray-500 dark:text-gray-400 hover:text-gray-900'
+          }`}
+        >
+          <BookOpen className="w-4 h-4 mb-0.5" />
+          <span className="text-[10px] truncate max-w-full font-bengali">আয়াত স্টাডি</span>
+        </button>
+
+        {/* 4. Thematic / Ruku Scholarly Discussion */}
+        <button
+          onClick={() => {
+            setActiveView('study');
+            setStudyMode('thematic');
+          }}
+          className={`flex flex-col items-center justify-center py-1 transition ${
+            activeView === 'study' && studyMode === 'thematic'
+              ? 'text-emerald-700 dark:text-emerald-400 font-bold'
+              : 'text-gray-500 dark:text-gray-400 hover:text-gray-900'
+          }`}
+        >
+          <Layers className="w-4 h-4 mb-0.5" />
+          <span className="text-[10px] truncate max-w-full font-bengali">রুকু আলোচনা</span>
+        </button>
+
         {/* 5. Notes */}
         <button
           onClick={onOpenNotes}
           className="flex flex-col items-center justify-center py-1 text-gray-500 dark:text-gray-400 hover:text-gray-900 transition"
         >
           <FileText className="w-4 h-4 mb-0.5" />
-          <span className="text-[10px] truncate max-w-full font-bengali">ক্লাস নোটস</span>
+          <span className="text-[10px] truncate max-w-full font-bengali">নোটস</span>
         </button>
       </div>
     </nav>
