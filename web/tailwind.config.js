@@ -8,24 +8,45 @@ export default {
   theme: {
     extend: {
       colors: {
+        paper: {
+          bg: '#faf9f6',
+          ink: '#1f2933',
+          card: '#ffffff',
+          line: '#e5e7eb',
+          accent: '#0f5132',
+          amber: '#b45309',
+        },
         sepia: {
-          50: '#faf8f5',
-          100: '#f5f0e6',
-          200: '#ede0cc',
-          300: '#e3ceb0',
-          800: '#4a3b2c',
-          900: '#2e2419',
+          bg: '#f4ecd8',
+          ink: '#3e3529',
+          card: '#ede2cf',
+          line: '#dccdb4',
+          accent: '#8b5e34',
+          muted: '#6b5e4f',
+        },
+        academicDark: {
+          bg: '#121518',
+          card: '#1b2026',
+          ink: '#e2e8f0',
+          line: '#2d3748',
+          accent: '#34d3be',
         },
         islamic: {
-          green: '#1b5e20',
-          gold: '#c59b27',
+          emerald: '#0f5132',
+          gold: '#b45309',
           teal: '#004d40',
         }
       },
       fontFamily: {
         amiri: ['"Amiri Quran"', '"Scheherazade New"', 'serif'],
         arabic: ['"Amiri Quran"', '"Scheherazade New"', 'serif'],
-        bengali: ['"Noto Serif Bengali"', '"Hind Siliguri"', 'sans-serif'],
+        bengali: ['"Noto Serif Bengali"', '"Hind Siliguri"', 'serif'],
+        sans: ['"Hind Siliguri"', '"Noto Sans Bengali"', 'sans-serif'],
+      },
+      maxWidth: {
+        'reading': '740px',
+        'study': '1100px',
+        'mushaf': '800px',
       }
     },
   },

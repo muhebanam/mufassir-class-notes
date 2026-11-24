@@ -1,5 +1,5 @@
 import React from 'react';
-import { BookOpen, Search, FileText, UserCheck, Moon, Sun, Sparkles } from 'lucide-react';
+import { BookOpen, Search, FileText, UserCheck, Moon, Sun, Sparkles, Compass } from 'lucide-react';
 import { toBn } from '../utils/helpers';
 
 export default function Header({
@@ -11,6 +11,7 @@ export default function Header({
   setStudyMode,
   onSelectSurah,
   onSelectRuku,
+  onOpenSidebar,
   onOpenSearch,
   onOpenSettings,
   onOpenNotes,
@@ -41,18 +42,29 @@ export default function Header({
 
           {/* Surah Selector Dropdown */}
           {surahs && surahs.length > 0 && (
-            <select
-              value={currentSurah?.id || ""}
-              onChange={(e) => onSelectSurah(Number(e.target.value))}
-              aria-label="সূরা নির্বাচন করুন"
-              className="bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100 text-xs sm:text-sm font-semibold rounded-xl px-2 sm:px-3 py-1.5 border border-transparent hover:border-gray-300 dark:hover:border-gray-600 focus:outline-none focus:ring-2 focus:ring-emerald-500 max-w-[110px] sm:max-w-[170px] truncate shrink-0 transition"
-            >
-              {surahs.map((s) => (
-                <option key={s.id} value={s.id}>
-                  {toBn(s.id)}. {s.name_bn} ({s.name_ar})
-                </option>
-              ))}
-            </select>
+            <div className="flex items-center gap-1 shrink-0">
+              <select
+                value={currentSurah?.id || ""}
+                onChange={(e) => onSelectSurah(Number(e.target.value))}
+                aria-label="সূরা নির্বাচন করুন"
+                className="bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100 text-xs sm:text-sm font-semibold rounded-xl px-2 sm:px-3 py-1.5 border border-transparent hover:border-gray-300 dark:hover:border-gray-600 focus:outline-hidden focus:ring-2 focus:ring-emerald-500 max-w-[110px] sm:max-w-[170px] truncate shrink-0 transition"
+              >
+                {surahs.map((s) => (
+                  <option key={s.id} value={s.id}>
+                    {toBn(s.id)}. {s.name_bn} ({s.name_ar})
+                  </option>
+                ))}
+              </select>
+              {onOpenSidebar && (
+                <button
+                  onClick={onOpenSidebar}
+                  className="p-1.5 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-emerald-50 dark:hover:bg-emerald-950 hover:text-emerald-700 dark:hover:text-emerald-300 transition shrink-0"
+                  title="সূরা ক্যাটালগ সূচিপত্র"
+                >
+                  <Compass className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+                </button>
+              )}
+            </div>
           )}
 
           {/* Ruku Selector Dropdown */}

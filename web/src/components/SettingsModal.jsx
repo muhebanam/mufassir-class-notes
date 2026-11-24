@@ -1,6 +1,13 @@
 import React from 'react';
-import { X, Sliders, Sun, Moon, Sparkles, Columns, Rows } from 'lucide-react';
+import { X, Sliders, Sun, Moon, Sparkles, Columns, Rows, Palette } from 'lucide-react';
 import { toBn } from '../utils/helpers';
+
+export const QURAN_COLOR_OPTIONS = [
+  { id: 'emerald', label: 'পান্না সবুজ', swatch: '#0F5132', dark: '#34D399' },
+  { id: 'navy', label: 'গভীর নীল', swatch: '#0B2A3B', dark: '#38BDF8' },
+  { id: 'indigo', label: 'রয়্যাল ইন্ডিগো', swatch: '#1E3A8A', dark: '#818CF8' },
+  { id: 'ink', label: 'ক্লাসিক কালি', swatch: '#1F2937', dark: '#F1F5F9' }
+];
 
 export default function SettingsModal({
   isOpen,
@@ -14,13 +21,15 @@ export default function SettingsModal({
   theme,
   setTheme,
   splitView,
-  setSplitView
+  setSplitView,
+  quranColor = 'emerald',
+  setQuranColor
 }) {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 animate-in fade-in duration-150">
-      <div className="bg-white dark:bg-gray-800 rounded-2xl max-w-md w-full shadow-2xl p-5 sm:p-6 border border-gray-200 dark:border-gray-700 space-y-5">
+    <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4 animate-in fade-in duration-150">
+      <div className="bg-white dark:bg-gray-800 rounded-2xl max-w-md w-full shadow-2xl p-5 sm:p-6 border border-gray-200 dark:border-gray-700 space-y-4 max-h-[90vh] overflow-y-auto">
         {/* Header */}
         <div className="flex items-center justify-between pb-3 border-b border-gray-200 dark:border-gray-700">
           <div className="flex items-center gap-2">
@@ -84,9 +93,48 @@ export default function SettingsModal({
           </div>
         </div>
 
+        {/* Quran Text Color Options */}
+        {setQuranColor && (
+          <div className="space-y-2 pt-2 border-t border-gray-100 dark:border-gray-700/60">
+            <div className="flex items-center justify-between text-xs font-bold text-gray-700 dark:text-gray-300">
+              <span className="flex items-center gap-1.5">
+                <Palette className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
+                কুরআনিক আরবি লেখার রঙ:
+              </span>
+              <span className="text-gray-500 font-normal">
+                {QURAN_COLOR_OPTIONS.find(c => c.id === quranColor)?.label || 'পান্না সবুজ'}
+              </span>
+            </div>
+            <div className="grid grid-cols-4 gap-2">
+              {QURAN_COLOR_OPTIONS.map((col) => {
+                const isSelected = quranColor === col.id;
+                return (
+                  <button
+                    key={col.id}
+                    onClick={() => setQuranColor(col.id)}
+                    className={`py-2 px-2 rounded-xl border text-xs font-medium flex flex-col items-center justify-center gap-1.5 transition ${
+                      isSelected
+                        ? 'border-emerald-600 ring-2 ring-emerald-500/30 bg-emerald-50/50 dark:bg-emerald-950/30 font-bold'
+                        : 'border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700/50'
+                    }`}
+                  >
+                    <span
+                      className="w-5 h-5 rounded-full border border-black/10 shadow-xs"
+                      style={{ backgroundColor: col.swatch }}
+                    />
+                    <span className="text-[11px] text-gray-800 dark:text-gray-200 truncate w-full text-center">
+                      {col.label}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        )}
+
         {/* Layout View Mode (Split View vs Stacked View) */}
         {setSplitView && (
-          <div className="space-y-2 pt-1 border-t border-gray-100 dark:border-gray-700/60">
+          <div className="space-y-2 pt-2 border-t border-gray-100 dark:border-gray-700/60">
             <label className="text-xs font-bold text-gray-700 dark:text-gray-300">
               আয়াত স্টাডি লেআউট (বড় স্ক্রিনে):
             </label>
@@ -119,7 +167,7 @@ export default function SettingsModal({
         )}
 
         {/* Arabic Font Size Slider */}
-        <div className="space-y-1.5 pt-1 border-t border-gray-100 dark:border-gray-700/60">
+        <div className="space-y-1.5 pt-2 border-t border-gray-100 dark:border-gray-700/60">
           <div className="flex items-center justify-between text-xs font-bold text-gray-700 dark:text-gray-300">
             <span>আরবি ফন্ট সাইজ (উসমানী রসম):</span>
             <span className="text-emerald-700 dark:text-emerald-400 font-mono font-bold">{toBn(arabicFontSize)} px</span>
@@ -175,6 +223,7 @@ export default function SettingsModal({
               setBengaliFontSize(16);
               setArabicLineHeight(2.2);
               setTheme('light');
+              if (setQuranColor) setQuranColor('emerald');
               if (setSplitView) setSplitView(true);
             }}
             className="w-full py-2 rounded-xl text-xs font-semibold text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition"

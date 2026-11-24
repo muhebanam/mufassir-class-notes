@@ -7,9 +7,10 @@ import ThematicView from './components/ThematicView';
 import MushafView from './components/MushafView';
 import SurahDashboard from './components/SurahDashboard';
 import SearchModal from './components/SearchModal';
-import SettingsModal from './components/SettingsModal';
+import SettingsModal, { QURAN_COLOR_OPTIONS } from './components/SettingsModal';
 import NotesDrawer from './components/NotesDrawer';
 import AuthorModal from './components/AuthorModal';
+import SurahSidebar from './components/SurahSidebar';
 
 export default function App() {
   // Global Data
@@ -31,7 +32,8 @@ export default function App() {
   // 3 Distinct Academic Modes: 'mushaf', 'ayah', 'thematic'
   const [studyMode, setStudyMode] = useState('ayah'); 
 
-  // Modals
+  // Modals & Sidebar
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [isNotesOpen, setIsNotesOpen] = useState(false);
@@ -46,6 +48,8 @@ export default function App() {
     }
     return 'light'; // Paper Light default
   });
+
+  const [quranColor, setQuranColor] = useState(() => localStorage.getItem('quranColor') || 'emerald');
 
   const [arabicFontSize, setArabicFontSize] = useState(() => Number(localStorage.getItem('arFontSize')) || 28);
   const [bengaliFontSize, setBengaliFontSize] = useState(() => Number(localStorage.getItem('bnFontSize')) || 16);
@@ -91,6 +95,14 @@ export default function App() {
       document.body.classList.add('light-theme');
     }
   }, [theme]);
+
+  // Apply Quran text color dynamically to CSS variable --quran-color
+  useEffect(() => {
+    localStorage.setItem('quranColor', quranColor);
+    const colObj = QURAN_COLOR_OPTIONS.find(c => c.id === quranColor) || QURAN_COLOR_OPTIONS[0];
+    const val = theme === 'dark' ? colObj.dark : colObj.swatch;
+    document.documentElement.style.setProperty('--quran-color', val);
+  }, [quranColor, theme]);
 
   // Persist settings
   useEffect(() => {
@@ -273,6 +285,7 @@ export default function App() {
         setStudyMode={setStudyMode}
         onSelectSurah={handleSelectSurah}
         onSelectRuku={handleSelectRuku}
+        onOpenSidebar={() => setIsSidebarOpen(true)}
         onOpenSearch={() => setIsSearchOpen(true)}
         onOpenSettings={() => setIsSettingsOpen(true)}
         onOpenNotes={() => setIsNotesOpen(true)}
@@ -365,6 +378,7 @@ export default function App() {
             rukuInfo={rukuData}
             onPrevAyah={handlePrevAyah}
             onNextAyah={handleNextAyah}
+            onSelectAyah={(aNum) => setSelectedAyahNum(aNum)}
             arabicFontSize={arabicFontSize}
             bengaliFontSize={bengaliFontSize}
             arabicLineHeight={arabicLineHeight}
@@ -385,6 +399,14 @@ export default function App() {
       />
 
       {/* Modals & Drawers */}
+      <SurahSidebar
+        isOpen={isSidebarOpen}
+        onClose={() => setIsSidebarOpen(false)}
+        surahs={surahs}
+        currentSurahId={currentSurahId}
+        onSelectSurah={handleSelectSurah}
+      />
+
       <SearchModal
         isOpen={isSearchOpen}
         onClose={() => setIsSearchOpen(false)}
@@ -404,6 +426,8 @@ export default function App() {
         setTheme={setTheme}
         splitView={splitView}
         setSplitView={setSplitView}
+        quranColor={quranColor}
+        setQuranColor={setQuranColor}
       />
 
       <NotesDrawer

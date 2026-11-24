@@ -27,6 +27,7 @@ body {
   --quote-bg: #f3f1ea;
   --card: #ffffff;
   --line: #e5e7eb;
+  --quran-color: #0f5132;
 }
 
 /* Warm Sepia (#F4ECD8, #3E3529, #8B5E34, #EDE2CF) */
@@ -109,6 +110,7 @@ body.dark {
    ========================================================================== */
 .uthmani-text {
   font-family: 'Amiri Quran', 'Scheherazade New', 'Amiri', serif;
+  color: var(--quran-color, var(--ink));
   direction: rtl;
   text-align: right;
   word-spacing: 0.12em;

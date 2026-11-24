@@ -7,6 +7,7 @@ import {
 } from 'lucide-react';
 import { toBn, copyToClipboard } from '../utils/helpers';
 import MarkdownContent from './MarkdownContent';
+import CornerOrnament from './CornerOrnament';
 import { saveAyahNote, getAyahNote, toggleBookmark, isBookmarked } from '../utils/db';
 
 export default function AyahStudyView({
@@ -15,6 +16,7 @@ export default function AyahStudyView({
   rukuInfo,
   onPrevAyah,
   onNextAyah,
+  onSelectAyah,
   arabicFontSize = 28,
   bengaliFontSize = 16,
   arabicLineHeight = 2.2,
@@ -25,6 +27,7 @@ export default function AyahStudyView({
   const [bookmarked, setBookmarked] = useState(false);
   const [activeTab, setActiveTab] = useState('jalalayn'); // 'jalalayn', 'mufradat', 'irab', 'qiraat', 'nuzul', 'notes'
   const [expandAll, setExpandAll] = useState(false);
+  const [viewMode, setViewMode] = useState('card'); // 'card' or 'kitab'
 
   // Note state
   const [noteText, setNoteText] = useState("");
@@ -123,7 +126,7 @@ export default function AyahStudyView({
         {/* Action Controls */}
         <div className="flex items-center gap-1 sm:gap-1.5">
           {/* Split / Stacked View Toggle (Visible on lg+) */}
-          {onToggleSplitView && (
+          {onToggleSplitView && viewMode === 'card' && (
             <button
               onClick={onToggleSplitView}
               className="hidden lg:flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-semibold bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-200 transition"
@@ -133,6 +136,20 @@ export default function AyahStudyView({
               <span>{splitView ? "ডুয়াল স্প্লিট" : "স্ট্যাকড ভিউ"}</span>
             </button>
           )}
+
+          {/* Kitab Mode / Card Mode Toggle */}
+          <button
+            onClick={() => setViewMode(viewMode === 'card' ? 'kitab' : 'card')}
+            className={`flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-semibold transition ${
+              viewMode === 'kitab'
+                ? 'bg-amber-100 dark:bg-amber-950/70 text-amber-900 dark:text-amber-300 font-bold border border-amber-300 dark:border-amber-700 shadow-2xs'
+                : 'bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-200'
+            }`}
+            title="ধারাবাহিক কিতাব মোড ও কার্ড ভিউ টগল করুন"
+          >
+            <BookOpen className="w-3.5 h-3.5 text-amber-600" />
+            <span className="hidden sm:inline">{viewMode === 'kitab' ? "কিতাব পাঠ" : "কার্ড ভিউ"}</span>
+          </button>
 
           {/* Copy with Reference */}
           <button
@@ -189,112 +206,170 @@ export default function AyahStudyView({
         </div>
       </div>
 
-      {/* 2. Primary Verse Card (Dual-Column Split View vs Stacked View) */}
-      <div className="bg-white dark:bg-gray-800 rounded-3xl p-5 sm:p-7 shadow-xs border border-gray-200/90 dark:border-gray-700/80 transition-colors">
-        {splitView ? (
-          /* Dual-Column Split View on large screens */
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-            {/* Right Column (RTL): Uthmani Arabic Text & Jalalayn Matan */}
-            <div className="lg:col-span-7 space-y-4 lg:border-l lg:border-gray-100 dark:lg:border-gray-700/60 lg:pl-6 order-1 lg:order-2">
-              <div className="flex items-center justify-between text-xs font-bold text-gray-500 dark:text-gray-400 pb-1 border-b border-gray-100 dark:border-gray-700/50">
-                <span className="font-arabic font-bold text-emerald-800 dark:text-emerald-400">النَّصُّ الْقُرْآنِيُّ الْمُبَارَكُ</span>
-                <span className="font-mono text-[11px] bg-emerald-50 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 px-2 py-0.5 rounded">
-                  আয়াত {toBn(ayah.ayah)}
+      {/* 2. Primary Verse Card or Continuous Kitab Mode */}
+      {viewMode === 'kitab' && rukuInfo?.ayahs && rukuInfo.ayahs.length > 0 ? (
+        <div className="relative bg-white dark:bg-gray-800 rounded-3xl p-6 sm:p-8 shadow-xs border border-gray-200/90 dark:border-gray-700/80 transition-colors space-y-6 overflow-hidden">
+          <CornerOrnament className="absolute top-2 left-2 text-emerald-600/30 dark:text-emerald-400/20" />
+          <CornerOrnament className="absolute bottom-2 right-2 rotate-180 text-emerald-600/30 dark:text-emerald-400/20" />
+
+          <div className="flex items-center justify-between pb-2 border-b border-gray-100 dark:border-gray-700/60">
+            <span className="text-xs font-bold text-amber-800 dark:text-amber-400 flex items-center gap-1.5 font-bengali">
+              <BookOpen className="w-4 h-4 text-amber-600" />
+              <span>ধারাবাহিক কিতাব মোড • রুকু {toBn(rukuInfo.ruku_id || ayah.ruku)} ({toBn(rukuInfo.ayahs.length)}টি আয়াত)</span>
+            </span>
+            <span className="text-[11px] text-gray-500 dark:text-gray-400 hidden sm:inline">
+              যেকোনো আয়াতে ক্লিক করে নির্বাচিত করুন
+            </span>
+          </div>
+
+          {/* Continuous Flowing Manuscript Text */}
+          <div
+            className="uthmani-text text-gray-950 dark:text-gray-50 text-justify leading-loose selection:bg-amber-100 dark:selection:bg-amber-900/60"
+            style={{ fontSize: `${arabicFontSize + 2}px`, lineHeight: arabicLineHeight + 0.3 }}
+            dir="rtl"
+          >
+            {rukuInfo.ayahs.map((a) => {
+              const isActive = a.ayah === ayah.ayah;
+              return (
+                <span
+                  key={a.ayah}
+                  onClick={() => onSelectAyah && onSelectAyah(a.ayah)}
+                  className={`cursor-pointer rounded-xl px-1.5 py-0.5 transition inline-block m-0.5 ${
+                    isActive
+                      ? 'bg-amber-100/90 dark:bg-amber-950/70 ring-2 ring-amber-500/70 text-amber-950 dark:text-amber-100 font-bold shadow-2xs'
+                      : 'hover:bg-emerald-50 dark:hover:bg-emerald-950/40'
+                  }`}
+                  title={`আয়াত ${toBn(a.ayah)} নির্বাচন করুন`}
+                >
+                  {a.text_uthmani}
+                  <span className="ayah-end-symbol text-emerald-700 dark:text-emerald-400 font-normal mx-1 select-none">
+                    ۝{toBn(a.ayah)}
+                  </span>
                 </span>
+              );
+            })}
+          </div>
+
+          {/* Active Ayah Quick Summary Drawer */}
+          <div className="bg-emerald-50/50 dark:bg-emerald-950/30 rounded-2xl p-4 border border-emerald-100 dark:border-emerald-800/40 space-y-2">
+            <div className="flex items-center justify-between text-xs font-bold text-emerald-900 dark:text-emerald-300">
+              <span>নির্বাচিত আয়াত {toBn(ayah.ayah)}-এর বঙ্গানুবাদ:</span>
+              <span className="text-[10px] text-gray-500 dark:text-gray-400">নিচে শাস্ত্রীয় গবেষণা ট্যাবসমূহ দেখুন</span>
+            </div>
+            <p className="text-xs sm:text-sm text-gray-800 dark:text-gray-200 font-bengali leading-relaxed">
+              {ayah.translation}
+            </p>
+          </div>
+        </div>
+      ) : (
+        <div className="relative bg-white dark:bg-gray-800 rounded-3xl p-5 sm:p-7 shadow-xs border border-gray-200/90 dark:border-gray-700/80 transition-colors overflow-hidden">
+          <CornerOrnament className="absolute top-2 left-2 text-emerald-600/30 dark:text-emerald-400/20" />
+          <CornerOrnament className="absolute bottom-2 right-2 rotate-180 text-emerald-600/30 dark:text-emerald-400/20" />
+          {splitView ? (
+            /* Dual-Column Split View on large screens */
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+              {/* Right Column (RTL): Uthmani Arabic Text & Jalalayn Matan */}
+              <div className="lg:col-span-7 space-y-4 lg:border-l lg:border-gray-100 dark:lg:border-gray-700/60 lg:pl-6 order-1 lg:order-2">
+                <div className="flex items-center justify-between text-xs font-bold text-gray-500 dark:text-gray-400 pb-1 border-b border-gray-100 dark:border-gray-700/50">
+                  <span className="font-arabic font-bold text-emerald-800 dark:text-emerald-400">النَّصُّ الْقُرْآنِيُّ الْمُبَارَكُ</span>
+                  <span className="font-mono text-[11px] bg-emerald-50 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 px-2 py-0.5 rounded">
+                    আয়াত {toBn(ayah.ayah)}
+                  </span>
+                </div>
+
+                {/* Quranic Arabic Verse */}
+                <div 
+                  className="uthmani-text text-gray-950 dark:text-gray-50 font-bold selection:bg-emerald-100 dark:selection:bg-emerald-900/60"
+                  style={{ fontSize: `${arabicFontSize}px`, lineHeight: arabicLineHeight }}
+                >
+                  {ayah.text_uthmani}
+                  <span className="ayah-end-symbol text-emerald-700 dark:text-emerald-400 font-normal mr-1.5 select-none">
+                    ۝{toBn(ayah.ayah)}
+                  </span>
+                </div>
+
+                {/* Jalalayn Classical Matan Accent Box */}
+                {ayah.jalalayn && (
+                  <div className="bg-emerald-50/50 dark:bg-emerald-950/20 rounded-2xl p-4 border border-emerald-100 dark:border-emerald-900/30 text-xs sm:text-sm space-y-2">
+                    <div className="flex items-center justify-between font-bold text-emerald-900 dark:text-emerald-300 text-xs font-bengali">
+                      <span className="flex items-center gap-1.5">
+                        <BookOpen className="w-3.5 h-3.5 text-emerald-600" />
+                        <span>জালালাইনের মূল পাঠ ও ব্যাখ্যা সংক্ষেপ</span>
+                      </span>
+                      <span className="text-[10px] text-emerald-700/80 dark:text-emerald-400">ইমাম মাহাল্লী / সুয়ূতী</span>
+                    </div>
+                    <div className="prose text-gray-800 dark:text-gray-200 font-bengali text-xs sm:text-sm leading-relaxed max-h-48 overflow-y-auto">
+                      <MarkdownContent content={ayah.jalalayn} />
+                    </div>
+                  </div>
+                )}
               </div>
 
-              {/* Quranic Arabic Verse */}
+              {/* Left Column (LTR): Fluent Bengali Translation & Word Breakdown */}
+              <div className="lg:col-span-5 space-y-4 order-2 lg:order-1">
+                <div className="flex items-center justify-between text-xs font-bold text-gray-500 dark:text-gray-400 pb-1 border-b border-gray-100 dark:border-gray-700/50">
+                  <span className="font-bengali text-emerald-800 dark:text-emerald-400 font-bold">সহজ ও প্রামাণিক বঙ্গানুবাদ</span>
+                  <span className="text-[11px] font-mono text-gray-400">বাংলা</span>
+                </div>
+
+                {/* Fluent Bengali Translation */}
+                <div 
+                  className="text-gray-800 dark:text-gray-100 font-medium leading-relaxed font-bengali"
+                  style={{ fontSize: `${bengaliFontSize}px` }}
+                >
+                  <span className="text-emerald-700 dark:text-emerald-400 font-bold mr-1.5">
+                    ({toBn(ayah.ayah)})
+                  </span>
+                  {ayah.translation || "অনুবাদ প্রস্তুত করা হচ্ছে..."}
+                </div>
+
+                {/* Word-by-word Mufradat preview */}
+                {ayah.word_translation && (
+                  <div className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 bg-gray-50 dark:bg-gray-700/40 p-3 rounded-xl border border-gray-100 dark:border-gray-700 space-y-1">
+                    <span className="font-bold text-gray-800 dark:text-gray-200 block text-xs font-bengali">
+                      শব্দানুগ অনুবাদ:
+                    </span>
+                    <div className="leading-relaxed font-bengali text-xs">
+                      {ayah.word_translation}
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          ) : (
+            /* Stacked View: Traditional vertical layering */
+            <div className="space-y-4">
+              {/* Arabic Uthmani Text */}
               <div 
-                className="uthmani-text text-gray-950 dark:text-gray-50 font-bold selection:bg-emerald-100 dark:selection:bg-emerald-900/60"
+                className="uthmani-text leading-loose text-gray-950 dark:text-gray-50 font-bold mb-3 selection:bg-emerald-100 dark:selection:bg-emerald-900/60"
                 style={{ fontSize: `${arabicFontSize}px`, lineHeight: arabicLineHeight }}
               >
                 {ayah.text_uthmani}
-                <span className="ayah-end-symbol text-emerald-700 dark:text-emerald-400 font-normal mr-1.5 select-none">
+                <span className="ayah-end-symbol text-emerald-700 dark:text-emerald-400 text-[0.85em] font-normal mr-1.5 select-none">
                   ۝{toBn(ayah.ayah)}
                 </span>
               </div>
 
-              {/* Jalalayn Classical Matan Accent Box */}
-              {ayah.jalalayn && (
-                <div className="bg-emerald-50/50 dark:bg-emerald-950/20 rounded-2xl p-4 border border-emerald-100 dark:border-emerald-900/30 text-xs sm:text-sm space-y-2">
-                  <div className="flex items-center justify-between font-bold text-emerald-900 dark:text-emerald-300 text-xs font-bengali">
-                    <span className="flex items-center gap-1.5">
-                      <BookOpen className="w-3.5 h-3.5 text-emerald-600" />
-                      <span>জালালাইনের মূল পাঠ ও ব্যাখ্যা সংক্ষেপ</span>
-                    </span>
-                    <span className="text-[10px] text-emerald-700/80 dark:text-emerald-400">ইমাম মাহাল্লী / সুয়ূতী</span>
-                  </div>
-                  <div className="prose text-gray-800 dark:text-gray-200 font-bengali text-xs sm:text-sm leading-relaxed max-h-48 overflow-y-auto">
-                    <MarkdownContent content={ayah.jalalayn} />
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {/* Left Column (LTR): Fluent Bengali Translation & Word Breakdown */}
-            <div className="lg:col-span-5 space-y-4 order-2 lg:order-1">
-              <div className="flex items-center justify-between text-xs font-bold text-gray-500 dark:text-gray-400 pb-1 border-b border-gray-100 dark:border-gray-700/50">
-                <span className="font-bengali text-emerald-800 dark:text-emerald-400 font-bold">সহজ ও প্রামাণিক বঙ্গানুবাদ</span>
-                <span className="text-[11px] font-mono text-gray-400">বাংলা</span>
-              </div>
-
-              {/* Fluent Bengali Translation */}
+              {/* Fluent Translation */}
               <div 
-                className="text-gray-800 dark:text-gray-100 font-medium leading-relaxed font-bengali"
+                className="text-gray-800 dark:text-gray-100 font-medium leading-relaxed pt-3 border-t border-gray-100 dark:border-gray-700/60 font-bengali"
                 style={{ fontSize: `${bengaliFontSize}px` }}
               >
-                <span className="text-emerald-700 dark:text-emerald-400 font-bold mr-1.5">
-                  ({toBn(ayah.ayah)})
-                </span>
+                <span className="text-emerald-700 dark:text-emerald-400 font-bold mr-1.5">({toBn(ayah.ayah)})</span>
                 {ayah.translation || "অনুবাদ প্রস্তুত করা হচ্ছে..."}
               </div>
 
-              {/* Word-by-word Mufradat preview */}
+              {/* Word-by-word translation */}
               {ayah.word_translation && (
-                <div className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 bg-gray-50 dark:bg-gray-700/40 p-3 rounded-xl border border-gray-100 dark:border-gray-700 space-y-1">
-                  <span className="font-bold text-gray-800 dark:text-gray-200 block text-xs font-bengali">
-                    শব্দানুগ অনুবাদ:
-                  </span>
-                  <div className="leading-relaxed font-bengali text-xs">
-                    {ayah.word_translation}
-                  </div>
+                <div className="mt-3 text-xs sm:text-sm text-gray-600 dark:text-gray-300 bg-gray-50 dark:bg-gray-700/40 p-3 rounded-xl border border-gray-100 dark:border-gray-700">
+                  <span className="font-bold text-gray-800 dark:text-gray-200 block mb-1 text-xs">শব্দানুগ অর্থ:</span>
+                  {ayah.word_translation}
                 </div>
               )}
             </div>
-          </div>
-        ) : (
-          /* Stacked View: Traditional vertical layering */
-          <div className="space-y-4">
-            {/* Arabic Uthmani Text */}
-            <div 
-              className="uthmani-text leading-loose text-gray-950 dark:text-gray-50 font-bold mb-3 selection:bg-emerald-100 dark:selection:bg-emerald-900/60"
-              style={{ fontSize: `${arabicFontSize}px`, lineHeight: arabicLineHeight }}
-            >
-              {ayah.text_uthmani}
-              <span className="ayah-end-symbol text-emerald-700 dark:text-emerald-400 text-[0.85em] font-normal mr-1.5 select-none">
-                ۝{toBn(ayah.ayah)}
-              </span>
-            </div>
-
-            {/* Fluent Translation */}
-            <div 
-              className="text-gray-800 dark:text-gray-100 font-medium leading-relaxed pt-3 border-t border-gray-100 dark:border-gray-700/60 font-bengali"
-              style={{ fontSize: `${bengaliFontSize}px` }}
-            >
-              <span className="text-emerald-700 dark:text-emerald-400 font-bold mr-1.5">({toBn(ayah.ayah)})</span>
-              {ayah.translation || "অনুবাদ প্রস্তুত করা হচ্ছে..."}
-            </div>
-
-            {/* Word-by-word translation */}
-            {ayah.word_translation && (
-              <div className="mt-3 text-xs sm:text-sm text-gray-600 dark:text-gray-300 bg-gray-50 dark:bg-gray-700/40 p-3 rounded-xl border border-gray-100 dark:border-gray-700">
-                <span className="font-bold text-gray-800 dark:text-gray-200 block mb-1 text-xs">শব্দানুগ অর্থ:</span>
-                {ayah.word_translation}
-              </div>
-            )}
-          </div>
-        )}
-      </div>
+          )}
+        </div>
+      )}
 
       {/* 3. Layered Scholarly Analysis Tabs (শানে নুযূল, ব্যাকরণ, কিরাআত, জালালাইন) */}
       <div className="space-y-3">
