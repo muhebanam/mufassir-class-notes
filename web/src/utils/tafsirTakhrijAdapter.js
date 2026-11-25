@@ -91,11 +91,12 @@ export function parseHadithTakhrij(rawText) {
     });
   }
 
-  // Check if content has structured bullet blocks: `- **Title**` or `### (n) Title`
+  // Check if content has structured bullet blocks: `- **Title**`, numbered `১. **Title**`, or `### (n) Title`
   const hasBullets = /(?:^|\n)-\s+\*\*([^*]+)\*\*/.test(fullText);
+  const hasNumbered = /(?:^|\n)[০-৯0-9]+\.\s+\*\*([^*]+)\*\*/.test(fullText);
   const hasSections = /(?:^|\n)###\s+([^\n]+)/.test(fullText);
 
-  if (!hasBullets && !hasSections) {
+  if (!hasBullets && !hasNumbered && !hasSections) {
     // Return as single narrative block
     return {
       isEmpty: false,
@@ -108,13 +109,17 @@ export function parseHadithTakhrij(rawText) {
   const hadiths = [];
   let narrativeIntro = '';
 
-  // Split into bullet-based or heading-based chunks
-  // If bullets exist, split on `\n- **`
+  // Split into bullet-based, numbered, or heading-based chunks
   let chunks = [];
   if (hasBullets) {
     const parts = fullText.split(/\n(?=-\s+\*\*)/);
-    // If the first part does not start with `- **`, it's an intro narrative
     if (!parts[0].trim().startsWith('- **')) {
+      narrativeIntro = parts.shift().trim();
+    }
+    chunks = parts;
+  } else if (hasNumbered) {
+    const parts = fullText.split(/\n(?=[০-৯0-9]+\.\s+\*\*)/);
+    if (!/^[০-৯0-9]+\.\s+\*\*/.test(parts[0].trim())) {
       narrativeIntro = parts.shift().trim();
     }
     chunks = parts;
@@ -132,7 +137,7 @@ export function parseHadithTakhrij(rawText) {
 
     // 1. Title / Narrator
     let title = `হাদীস ও শানে নুযূল #${idx + 1}`;
-    const titleMatch = cleanChunk.match(/^(?:-\s+\*\*|###\s+)([^*#\n]+)(?:\*\*|:)/);
+    const titleMatch = cleanChunk.match(/^(?:-\s+\*\*|[০-৯0-9]+\.\s+\*\*|###\s+)([^*#\n]+)(?:\*\*|:)/);
     if (titleMatch && titleMatch[1]) {
       title = titleMatch[1].replace(/[:\-–]/g, '').trim();
     }
@@ -192,6 +197,16 @@ export function parseHadithTakhrij(rawText) {
     const expMatch = cleanChunk.match(/-\s+\*\*(?:ব্যাখ্যা|প্রেক্ষাপট|ঐতিহাসিক পটভূমি):\*\*\s*([^\n]+(?:\n(?!\s*-\s*\*\*)[^\n]+)*)/);
     if (expMatch && expMatch[1]) {
       explanation = expMatch[1].trim();
+    } else {
+      // If no explicit `**ব্যাখ্যা:**`, use the remaining body lines as explanation
+      const bodyLines = cleanChunk
+        .replace(/^(?:-\s+\*\*|[০-৯0-9]+\.\s+\*\*|###\s+)[^\n]+/, '')
+        .split('\n')
+        .map(l => l.replace(/^\s*[-*]+\s*/, '').trim())
+        .filter(l => l && !l.startsWith('>') && !l.startsWith('---') && !l.startsWith('**তাখরীজ') && !l.startsWith('**মুহাদ্দিস'));
+      if (bodyLines.length > 0) {
+        explanation = bodyLines.join(' ');
+      }
     }
 
     hadiths.push({
