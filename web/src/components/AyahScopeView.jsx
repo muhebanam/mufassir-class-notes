@@ -8,6 +8,8 @@ import MarkdownContent, { normalizeQuranBrackets } from './MarkdownContent';
 import TahqeeqTable from './TahqeeqTable';
 import QiraatTable from './QiraatTable';
 import WordByWordSection from './WordByWordSection';
+import JalalaynView from './JalalaynView';
+import HadithTakhrijSection from './HadithTakhrijSection';
 
 export default function AyahScopeView({
   ayah,
@@ -197,39 +199,19 @@ export default function AyahScopeView({
       <div className={`grid gap-4 sm:gap-6 ${splitView ? 'lg:grid-cols-12' : 'grid-cols-1'}`}>
         {/* Left Column: Jalalayn Commentary & Matin */}
         <div className={`space-y-4 ${splitView ? 'lg:col-span-6' : ''}`}>
-          {/* Jalalayn Card */}
-          <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-5 sm:p-6 shadow-xs space-y-3">
-            <div className="flex items-center justify-between pb-2.5 border-b border-gray-100 dark:border-gray-700">
-              <div className="flex items-center gap-2">
-                <BookOpen className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-                <h3 className="font-bold text-sm sm:text-base text-gray-900 dark:text-gray-100 font-bengali">
-                  তাফসীরুল জালালাইন (মতন ও ব্যাখ্যা)
-                </h3>
-              </div>
-              <span className="text-[11px] font-semibold text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/40 px-2 py-0.5 rounded-full font-bengali">
-                ইমাম জালালুদ্দীন আল-মাহাল্লী ও আস-সুয়ূতী
-              </span>
-            </div>
+          {/* 1. Jalalayn 3-Tier Layered View with View Toggles */}
+          <JalalaynView 
+            ayah={ayah} 
+            bengaliFontSize={bengaliFontSize} 
+            arabicFontSize={arabicFontSize - 2}
+          />
 
-            <div 
-              className="prose font-bengali leading-relaxed text-gray-800 dark:text-gray-200"
-              style={{ fontSize: `${bengaliFontSize}px` }}
-            >
-              <MarkdownContent content={ayah.jalalayn} />
-            </div>
-          </div>
-
-          {/* Shan-e-Nuzul if exists */}
+          {/* 2. Shan-e-Nuzul & Hadith Takhrij (Cards / Table) */}
           {ayah.shane_nuzul && (
-            <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-4 sm:p-5 shadow-xs space-y-2 font-bengali">
-              <div className="flex items-center gap-2 pb-2 border-b border-gray-100 dark:border-gray-700 text-teal-800 dark:text-teal-300 font-bold text-sm">
-                <Bookmark className="w-4 h-4 text-teal-600" />
-                <span>শানে নুযূল ও সংশ্লিষ্ট হাদীসের তাখরীজ</span>
-              </div>
-              <div className="prose text-xs sm:text-sm leading-relaxed text-gray-700 dark:text-gray-300">
-                <MarkdownContent content={ayah.shane_nuzul} />
-              </div>
-            </div>
+            <HadithTakhrijSection 
+              content={ayah.shane_nuzul} 
+              title="এই আয়াতের শানে নুযূল ও সংশ্লিষ্ট হাদীসের তাখরীজ" 
+            />
           )}
         </div>
 

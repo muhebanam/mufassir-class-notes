@@ -136,10 +136,16 @@ export default function App() {
             if (parts[1]) {
               if (parts[1].startsWith('ruku-')) {
                 const rId = parseInt(parts[1].replace('ruku-', ''));
-                if (!isNaN(rId)) setCurrentRukuId(rId);
+                if (!isNaN(rId)) {
+                  setCurrentRukuId(rId);
+                  setStudyMode('ruku');
+                }
               } else {
                 const aId = parseInt(parts[1]);
-                if (!isNaN(aId)) setSelectedAyahNum(aId);
+                if (!isNaN(aId)) {
+                  setSelectedAyahNum(aId);
+                  setStudyMode('ayah');
+                }
               }
             }
           }
@@ -235,11 +241,15 @@ export default function App() {
         if (parts[1]) {
           if (parts[1].startsWith('ruku-')) {
             const rId = parseInt(parts[1].replace('ruku-', ''));
-            if (!isNaN(rId)) handleSelectRuku(rId);
+            if (!isNaN(rId)) {
+              handleSelectRuku(rId);
+              setStudyMode('ruku');
+            }
           } else {
             const aId = parseInt(parts[1]);
             if (!isNaN(aId)) {
               setSelectedAyahNum(aId);
+              setStudyMode('ayah');
               if (surahMeta?.rukus) {
                 const match = surahMeta.rukus.find(r => aId >= r.ayah_start && aId <= r.ayah_end);
                 if (match && match.ruku_id !== currentRukuId) {
