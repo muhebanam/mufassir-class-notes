@@ -6,87 +6,103 @@
   },
   "rukus": {
     "24_1": {
-      "surah_id": 24,
-      "ruku_id": 1,
-      "file": "২৪_সূরা_আন-নূর/রুকু-০১_আয়াত_১-১০.md",
-      "passed": true,
       "status": "gold",
       "errors": [],
-      "warnings": []
+      "warnings": [],
+      "checked_at": "2026-11-25T15:31:48Z",
+      "pipeline": "jp-audit/1",
+      "md_sha256": "64b29339230df9aa8c3ea0677e2d657be2bb7257f00c05004d4c31e643b998fa",
+      "approved_by": "মুফতী মুহাম্মাদ মুহিব্বুল্লাহ",
+      "approved_at": "2026-11-25T15:31:48Z",
+      "approved_md_sha256": "64b29339230df9aa8c3ea0677e2d657be2bb7257f00c05004d4c31e643b998fa"
     },
     "24_2": {
-      "surah_id": 24,
-      "ruku_id": 2,
-      "file": "২৪_সূরা_আন-নূর/রুকু-০২_আয়াত_১১-২০.md",
-      "passed": true,
       "status": "gold",
       "errors": [],
-      "warnings": []
+      "warnings": [],
+      "checked_at": "2026-11-25T15:31:48Z",
+      "pipeline": "jp-audit/1",
+      "md_sha256": "8fe403715937e6c84f62079e50a5607747f01ea01d64104db1b8185afde49f63",
+      "approved_by": "মুফতী মুহাম্মাদ মুহিব্বুল্লাহ",
+      "approved_at": "2026-11-25T15:31:48Z",
+      "approved_md_sha256": "8fe403715937e6c84f62079e50a5607747f01ea01d64104db1b8185afde49f63"
     },
     "24_3": {
-      "surah_id": 24,
-      "ruku_id": 3,
-      "file": "২৪_সূরা_আন-নূর/রুকু-০৩_আয়াত_২১-২৬.md",
-      "passed": true,
       "status": "gold",
       "errors": [],
-      "warnings": []
+      "warnings": [],
+      "checked_at": "2026-11-25T15:31:48Z",
+      "pipeline": "jp-audit/1",
+      "md_sha256": "6601b62054fd310c875ad22ba9f06d6f44eff19d5e3c80f6a1ced8e7b4961309",
+      "approved_by": "মুফতী মুহাম্মাদ মুহিব্বুল্লাহ",
+      "approved_at": "2026-11-25T15:31:48Z",
+      "approved_md_sha256": "6601b62054fd310c875ad22ba9f06d6f44eff19d5e3c80f6a1ced8e7b4961309"
     },
     "24_4": {
-      "surah_id": 24,
-      "ruku_id": 4,
-      "file": "২৪_সূরা_আন-নূর/রুকু-০৪_আয়াত_২৭-৩৪.md",
-      "passed": true,
       "status": "gold",
       "errors": [],
-      "warnings": []
+      "warnings": [],
+      "checked_at": "2026-11-25T15:31:49Z",
+      "pipeline": "jp-audit/1",
+      "md_sha256": "dd00aa9161e03c241deddd1054c913b5966f73878a1a4d0b998ca88e561d4b45",
+      "approved_by": "মুফতী মুহাম্মাদ মুহিব্বুল্লাহ",
+      "approved_at": "2026-11-25T15:31:49Z",
+      "approved_md_sha256": "dd00aa9161e03c241deddd1054c913b5966f73878a1a4d0b998ca88e561d4b45"
     },
     "24_5": {
-      "surah_id": 24,
-      "ruku_id": 5,
-      "file": "২৪_সূরা_আন-নূর/রুকু-০৫_আয়াত_৩৫-৪৩.md",
-      "passed": true,
       "status": "gold",
       "errors": [],
-      "warnings": []
+      "warnings": [],
+      "checked_at": "2026-11-25T15:31:49Z",
+      "pipeline": "jp-audit/1",
+      "md_sha256": "c3d13d502548b06ad80d6006e149450539c8748db19bad4c28f44e1f26d5655d",
+      "approved_by": "মুফতী মুহাম্মাদ মুহিব্বুল্লাহ",
+      "approved_at": "2026-11-25T15:31:49Z",
+      "approved_md_sha256": "c3d13d502548b06ad80d6006e149450539c8748db19bad4c28f44e1f26d5655d"
     },
     "24_6": {
-      "surah_id": 24,
-      "ruku_id": 6,
-      "file": "২৪_সূরা_আন-নূর/রুকু-০৬_আয়াত_৪৪-৫২.md",
-      "passed": true,
       "status": "gold",
       "errors": [],
-      "warnings": [
-        "WARNING A-05: আরবী পাঠে 'হরকতযুক্ত সাধারণ বানান; পূর্ণ উসমানী রসম নয়' ডিসক্লেইমার নিশ্চিত করুন।"
-      ]
+      "warnings": [],
+      "checked_at": "2026-11-25T15:31:49Z",
+      "pipeline": "jp-audit/1",
+      "md_sha256": "95f0f126fe5ef733d043f986cbdfe0fa16f08949bdd3ddc54d8e477f1c1a3598",
+      "approved_by": "মুফতী মুহাম্মাদ মুহিব্বুল্লাহ",
+      "approved_at": "2026-11-25T15:31:49Z",
+      "approved_md_sha256": "95f0f126fe5ef733d043f986cbdfe0fa16f08949bdd3ddc54d8e477f1c1a3598"
     },
     "24_7": {
-      "surah_id": 24,
-      "ruku_id": 7,
-      "file": "২৪_সূরা_আন-নূর/রুকু-০৭_আয়াত_৫৩-৫৮.md",
-      "passed": true,
       "status": "gold",
       "errors": [],
-      "warnings": []
+      "warnings": [],
+      "checked_at": "2026-11-25T15:31:50Z",
+      "pipeline": "jp-audit/1",
+      "md_sha256": "a322c58b4960164cbe1d14e621f978c76a808aff059bcb89d8edf29c7edbfc28",
+      "approved_by": "মুফতী মুহাম্মাদ মুহিব্বুল্লাহ",
+      "approved_at": "2026-11-25T15:31:50Z",
+      "approved_md_sha256": "a322c58b4960164cbe1d14e621f978c76a808aff059bcb89d8edf29c7edbfc28"
     },
     "24_8": {
-      "surah_id": 24,
-      "ruku_id": 8,
-      "file": "২৪_সূরা_আন-নূর/রুকু-০৮_আয়াত_৫৯-৬২.md",
-      "passed": true,
       "status": "gold",
       "errors": [],
-      "warnings": []
+      "warnings": [],
+      "checked_at": "2026-11-25T15:31:50Z",
+      "pipeline": "jp-audit/1",
+      "md_sha256": "b47926ae7fdbb2df310a215269f41171598d3e8de9233a795fb380b92e3a8b19",
+      "approved_by": "মুফতী মুহাম্মাদ মুহিব্বুল্লাহ",
+      "approved_at": "2026-11-25T15:31:50Z",
+      "approved_md_sha256": "b47926ae7fdbb2df310a215269f41171598d3e8de9233a795fb380b92e3a8b19"
     },
     "24_9": {
-      "surah_id": 24,
-      "ruku_id": 9,
-      "file": "২৪_সূরা_আন-নূর/রুকু-০৯_আয়াত_৬৩-৬৪.md",
-      "passed": true,
       "status": "gold",
       "errors": [],
-      "warnings": []
+      "warnings": [],
+      "checked_at": "2026-11-25T15:31:50Z",
+      "pipeline": "jp-audit/1",
+      "md_sha256": "045f2b8d99ccf054ac060690d4726ab5a3ab12fcca83ae02fe5b9c164a643ddd",
+      "approved_by": "মুফতী মুহাম্মাদ মুহিব্বুল্লাহ",
+      "approved_at": "2026-11-25T15:31:50Z",
+      "approved_md_sha256": "045f2b8d99ccf054ac060690d4726ab5a3ab12fcca83ae02fe5b9c164a643ddd"
     },
     "25_1": {
       "surah_id": 25,
@@ -2312,13 +2328,15 @@
       "warnings": []
     },
     "112_1": {
-      "surah_id": 112,
-      "ruku_id": 1,
-      "file": "112_সূরা_আল-ইখলাস/রুকু-01_আয়াত_1-4.md",
-      "passed": true,
       "status": "gold",
       "errors": [],
-      "warnings": []
+      "warnings": [],
+      "checked_at": "2026-11-25T14:30:59Z",
+      "pipeline": "jp-audit/1",
+      "md_sha256": "033346bdaedf6fabd2b125bcfec140052cc1df448118b7e8124930b2be6900ce",
+      "approved_by": "মুফতী মুহাম্মাদ মুহিব্বুল্লাহ",
+      "approved_at": "2026-11-25T14:30:59Z",
+      "approved_md_sha256": "033346bdaedf6fabd2b125bcfec140052cc1df448118b7e8124930b2be6900ce"
     },
     "113_1": {
       "surah_id": 113,

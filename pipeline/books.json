@@ -1,0 +1,20 @@
+{
+  "_note": "অনুমোদিত Turath বই-আইডি। ইনজেস্ট শুধু এই তালিকার আইডি নেয়। role: jalalayn | sharh | tafsir | qiraat | fiqh। ফিকহ-গ্রন্থ যোগ করতে একই কাঠামোয় role=fiqh এন্ট্রি দিন। আইডিগুলো আপনার মাস্টার_সার্ভার_রেজিস্ট্রি থেকে নেওয়া — Turath-এ নিজে খুলে মিলিয়ে নিন (আমি যাচাই করিনি)।",
+  "blocked": ["21543"],
+  "allowed": {
+    "12876": {"name_bn": "তাফসীরুল জালালাইন", "author_bn": "জালালুদ্দীন আল-মহাল্লী (মৃ. ৮৬৪ হি.) ও জালালুদ্দীন আস-সুয়ূতী (মৃ. ৯১১ হি.)", "death_hijri": null, "role": "jalalayn"},
+    "23842": {"name_bn": "শরহ তাফসীরিল জালালাইন (খুদাইর)", "author_bn": "আব্দুল করীম আল-খুদাইর", "death_hijri": null, "role": "sharh"},
+    "288": {"name_bn": "শরহ তাফসীরিল জালালাইন (আইডি ২৮৮)", "author_bn": null, "death_hijri": null, "role": "sharh"},
+    "7798": {"name_bn": "জামিউল বায়ান (তাফসীরে তাবারী)", "author_bn": "ইবনে জারীর আত-তাবারী", "death_hijri": 310, "role": "tafsir"},
+    "8473": {"name_bn": "তাফসীরুল কুরআনিল আযীম", "author_bn": "হাফেয ইবনে কাসীর", "death_hijri": 774, "role": "tafsir"},
+    "20855": {"name_bn": "আল-জামি' লি-আহকামিল কুরআন", "author_bn": "ইমাম আল-কুরতুবী", "death_hijri": 671, "role": "tafsir"},
+    "23635": {"name_bn": "মাফাতিহুল গায়েব (তাফসীরে কাবীর)", "author_bn": "ইমাম ফখরুদ্দীন আর-রাযী", "death_hijri": 606, "role": "tafsir"},
+    "22835": {"name_bn": "রূহুল মা'আনী", "author_bn": "শিহাবুদ্দীন আল-আলূসী", "death_hijri": 1270, "role": "tafsir"},
+    "9776": {"name_bn": "আত-তাহরীর ওয়াত-তানবীর", "author_bn": "শায়খ মুহাম্মাদ আত-তাহির ইবনে আশূর", "death_hijri": 1393, "role": "tafsir"},
+    "22915": {"name_bn": "আত-তাফসীরুল মুনীর", "author_bn": "ড. ওয়াহবাহ আয-যুহাইলী", "death_hijri": 1436, "role": "tafsir"},
+    "639": {"name_bn": "মাওসূ'আতুত তাফসীর আল-মা'ছূর", "author_bn": null, "death_hijri": null, "role": "tafsir"},
+    "29909": {"name_bn": "ফারীদাতুদ দাহর ফী জাম'ইল কিরাআত", "author_bn": "মুহাম্মাদ ইবরাহীম সালিম", "death_hijri": null, "role": "qiraat"},
+    "5531": {"name_bn": "হুজ্জাতুল কিরাআত", "author_bn": "ইবনে যানযালাহ", "death_hijri": null, "role": "qiraat"},
+    "1464": {"name_bn": "আহকামুল কুরআন (ইবনুল আরাবী)", "author_bn": "ইবনুল আরাবী আল-মালেকী", "death_hijri": 543, "role": "fiqh"}
+  }
+}

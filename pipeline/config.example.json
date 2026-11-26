@@ -1,0 +1,21 @@
+{
+  "llm": {
+    "provider": "litellm",
+    "model": "",
+    "temperature": 0.2,
+    "max_tokens": 8000
+  },
+  "run": {
+    "concurrency": 4,
+    "rpm": 30,
+    "max_attempts": 3,
+    "abort_after_failed_tasks": 3,
+    "batch_max_ayat": 4,
+    "batch_max_words": 36,
+    "unit_max_ayat": 6
+  },
+  "validation": {
+    "strict_numbers": true,
+    "min_quote_letters": 6
+  }
+}

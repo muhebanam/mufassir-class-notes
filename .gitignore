@@ -27,5 +27,11 @@ desktop.ini
 # Zip archives (temporary backups)
 *.zip
 *.bak
+*.backup/
+*_backup/
 .backup_formatting/
+
+# Pipeline temporary work directories
+_work/
+
 
