@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { 
   BookOpen, Layers, Sparkles, Scale, Volume2, Compass, ArrowRight, ChevronRight,
-  FileText, BookMarked, GitCompare, Feather, HelpCircle, CheckCircle2, Info, List
+  FileText, BookMarked, GitCompare, Feather, HelpCircle, CheckCircle2, Info, List, ExternalLink
 } from 'lucide-react';
 import MarkdownContent from './MarkdownContent';
 import QiraatTable from './QiraatTable';
@@ -196,6 +196,18 @@ export default function RukuScopeView({
                 প্রবন্ধ মোড (TOC)
               </button>
             </div>
+
+            {/* External Tafsir.app Link */}
+            <a
+              href={`https://tafsir.app/${surahInfo?.id || 24}/${rukuData.ayah_start || 1}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              title="الباحث القرآني (tafsir.app)-এ এই রুকুর মূল তাফসীরসমূহ দেখুন"
+              className="px-3 py-1.5 rounded-xl bg-white/15 hover:bg-white/25 text-white border border-white/20 text-xs font-semibold backdrop-blur-xs flex items-center justify-center gap-1.5 transition"
+            >
+              <ExternalLink className="w-3.5 h-3.5 text-emerald-300" />
+              <span className="font-arabic text-sm leading-none" dir="rtl">الباحث القرآني</span>
+            </a>
 
             {/* Jump to Ayah Study */}
             <button

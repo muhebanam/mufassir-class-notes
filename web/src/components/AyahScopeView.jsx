@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { 
   BookOpen, ChevronLeft, ChevronRight, Copy, Check, 
   Columns, AlignLeft, Volume2, Sparkles, Scale, Maximize2, Minimize2,
-  Bookmark, Share2, Languages
+  Bookmark, Share2, Languages, ExternalLink
 } from 'lucide-react';
 import MarkdownContent, { normalizeQuranBrackets } from './MarkdownContent';
 import TahqeeqTable from './TahqeeqTable';
@@ -122,6 +122,19 @@ export default function AyahScopeView({
           >
             {copied ? <Check className="w-4 h-4 text-emerald-600" /> : <Copy className="w-4 h-4" />}
           </button>
+
+          {/* External Tafsir.app Link */}
+          <a
+            href={`https://tafsir.app/${ayah.surah}/${ayah.ayah}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            title="الباحث القرآني (tafsir.app)-এ এই আয়াতের পূর্ণাঙ্গ তাফসীর, ই'রাব ও কিরাআত দেখুন"
+            className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl border border-emerald-300 dark:border-emerald-700 bg-emerald-50 dark:bg-emerald-950/50 hover:bg-emerald-100 dark:hover:bg-emerald-900/60 text-xs font-semibold text-emerald-800 dark:text-emerald-300 shadow-2xs transition"
+          >
+            <ExternalLink className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
+            <span className="font-arabic text-sm leading-none" dir="rtl">الباحث القرآني</span>
+            <span className="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 hidden sm:inline">(tafsir.app)</span>
+          </a>
 
           {/* Prev Ayah */}
           <button
