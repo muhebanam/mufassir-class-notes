@@ -7,15 +7,17 @@
 
 const KNOWN_HADITH_BOOKS = [
   { key: 'bukhari', name_bn: 'সহীহ বুখারী', regex: /সহীহ\s+বুখারী|বুখারী/i, badgeColor: 'emerald' },
-  { key: 'muslim', name_bn: 'সহীহ মুসলিম', regex: /সহীহ\s+মুসলিম|মুসলিম/i, badgeColor: 'teal' },
-  { key: 'tirmidhi', name_bn: 'সুনান আত-তিরমিযী', regex: /সুনান[েএ]?\s+তিরমিযী|তিরমিযী/i, badgeColor: 'blue' },
-  { key: 'abu_dawood', name_bn: 'সুনানে আবী দাউদ', regex: /সুনান[েএ]?\s+আব[ূী]\s+দাউদ/i, badgeColor: 'indigo' },
-  { key: 'nasai', name_bn: 'সুনানে নাসাঈ', regex: /সুনান[েএ]?\s+নাসাঈ|নাসাঈ/i, badgeColor: 'sky' },
-  { key: 'ibn_majah', name_bn: 'সুনানে ইবনে মাজাহ', regex: /সুনান[েএ]?\s+ইবনে\s+মাজাহ|ইবনে\s+মাজাহ/i, badgeColor: 'cyan' },
+  { key: 'muslim', name_bn: 'সহীহ মুসলিম', regex: /সহীহ\s+মুসলিম|মুসলিমে/i, badgeColor: 'teal' },
+  { key: 'tirmidhi', name_bn: 'সুনান আত-তিরমিযী', regex: /তিরমিযী/i, badgeColor: 'blue' },
+  { key: 'abu_dawood', name_bn: 'সুনানে আবী দাউদ', regex: /আব[ূী]\s+দাউদ/i, badgeColor: 'indigo' },
+  { key: 'nasai', name_bn: 'সুনানে নাসাঈ', regex: /নাসাঈ/i, badgeColor: 'sky' },
+  { key: 'ibn_majah', name_bn: 'সুনানে ইবনে মাজাহ', regex: /ইবনে\s+মাজাহ/i, badgeColor: 'cyan' },
   { key: 'ahmad', name_bn: 'মুসনাদে আহমাদ', regex: /মুসনাদ[েএ]?\s+আহমাদ|আহমাদ/i, badgeColor: 'amber' },
   { key: 'malik', name_bn: 'মুয়াত্তা ইমাম মালিক', regex: /মুয়াত্তা\s+মালিক|মুয়াত্তা/i, badgeColor: 'purple' },
-  { key: 'hakim', name_bn: 'মুস্তাদরাক হাকিম', regex: /মুস্তাদরাক\s+হাকিম|আল-হাকিম/i, badgeColor: 'rose' },
-  { key: 'bayhaqi', name_bn: 'সুনানে কুবরা লিল-বাইহাকী', regex: /বাইহাকী/i, badgeColor: 'slate' },
+  { key: 'hakim', name_bn: 'মুস্তাদরাক হাকিম', regex: /মুস্তাদরাক[েএ]?\s+হাকিম|হাকিম/i, badgeColor: 'rose' },
+  { key: 'bayhaqi', name_bn: 'সুনানে কুবরা লিল-বাইহাকী', regex: /বায়হাকী|বাইহাকী/i, badgeColor: 'slate' },
+  { key: 'shafii', name_bn: 'কিতাবুল উম্ম (ইমাম শাফিঈ)', regex: /আল-উম্ম|ইমাম\s+শাফিঈ/i, badgeColor: 'emerald' },
+  { key: 'ibn_abi_shaybah', name_bn: 'মুসান্নাফে ইবনে আবি শাইবাহ', regex: /ইবনে\s+আবি\s+শাইবাহ/i, badgeColor: 'slate' },
 ];
 
 /**
@@ -166,14 +168,17 @@ export function parseHadithTakhrij(rawText) {
       inlineContent = (titleMatch[2] || '').trim();
     }
 
-    // 2. Arabic Matn (inside quotes, blockquote, or raw block)
+    // 2. Arabic Matn (capture entire blockquote line/multi-line including colons, ﷺ, and Quran brackets)
     let arabicMatn = '';
-    const matnMatch = cleanChunk.match(/>\s*[“"']?([\u0600-\u06FF\s،؛ـ؟().0-9٠-٩«»]{8,})[”"']?/);
-    if (matnMatch && matnMatch[1]) {
-      arabicMatn = matnMatch[1].trim();
+    const bqMatch = cleanChunk.match(/(?:^|\n)\s*>\s*([^\n]+(?:\n\s*>\s*[^\n]+)*)/);
+    if (bqMatch && bqMatch[1]) {
+      const bqText = bqMatch[1].replace(/\n\s*>\s*/g, ' ').trim();
+      if (/[\u0600-\u06FF]{6,}/.test(bqText)) {
+        arabicMatn = bqText;
+      }
     } else {
       // Check inline Arabic quote
-      const inlineArabic = cleanChunk.match(/[“"']([\u0600-\u06FF\s،؛ـ؟().0-9٠-٩«»]{12,})[”"']/);
+      const inlineArabic = cleanChunk.match(/[“"']([\u0600-\u06FF\s،؛ـ؟().0-9٠-٩«»ﷺ:﴿﴾\-]{12,})[”"']/);
       if (inlineArabic && inlineArabic[1]) {
         arabicMatn = inlineArabic[1].trim();
       }
@@ -181,18 +186,20 @@ export function parseHadithTakhrij(rawText) {
 
     // 3. Takhrij Sources & Raw string
     let rawTakhrij = '';
-    const takhrijMatch = cleanChunk.match(/-\s+\*\*তাখরীজ:\*\*\s*([^\n]+)/);
+    const takhrijMatch = cleanChunk.match(/-\s+\*\*(?:তাখরীজ|উৎস ও প্রামাণ্য গ্রন্থসূত্র|উৎস):\*\*\s*([^\n]+)/);
     if (takhrijMatch && takhrijMatch[1]) {
       rawTakhrij = takhrijMatch[1].trim();
     }
 
-    // Detect individual known books
+    // Detect individual known books strictly from the takhrij/source metadata line (never from narrative story text)
     const detectedSources = [];
-    KNOWN_HADITH_BOOKS.forEach(b => {
-      if (b.regex.test(cleanChunk)) {
-        detectedSources.push(b.name_bn);
-      }
-    });
+    if (rawTakhrij) {
+      KNOWN_HADITH_BOOKS.forEach(b => {
+        if (b.regex.test(rawTakhrij)) {
+          detectedSources.push(b.name_bn);
+        }
+      });
+    }
 
     // Extract Hadith Numbers or Vol/Page
     let numbers = '';
@@ -207,7 +214,7 @@ export function parseHadithTakhrij(rawText) {
     const hukmMatch = cleanChunk.match(/-\s+\*\*(?:মুহাদ্দিসদের হুকুম|মান):\*\*\s*([^\n]+)/);
     if (hukmMatch && hukmMatch[1]) {
       hukm = hukmMatch[1].trim();
-      if (/সহীহ|صحيح/i.test(hukm)) {
+      if (/সহীহ|মুত্তাফাকুন|صحيح|متفق عليه/i.test(hukm)) {
         hukmGrade = 'sahih';
       } else if (/হাসান|حسن/i.test(hukm)) {
         hukmGrade = 'hasan';
@@ -218,7 +225,7 @@ export function parseHadithTakhrij(rawText) {
 
     // 5. Explanation / Context
     let explanation = '';
-    const expMatch = cleanChunk.match(/-\s+\*\*(?:অনুবাদ|অনুবাদ ও তাৎপর্য|অনুবাদ ও ঐতিহাসিক প্রেক্ষাপট|অনুবাদ ও লি‘আনের পদ্ধতি|অনুবাদ ও বিশ্লেষণ|অনুবাদ ও পটভূমি|ব্যাখ্যা|প্রেক্ষাপট|ঐতিহাসিক প্রেক্ষাপট):\*\*\s*([^\n]+(?:\n(?!\s*-\s*\*\*)[^\n]+)*)/);
+    const expMatch = cleanChunk.match(/-\s+\*\*(?:অনুবাদ ও শানে নুযূল|অনুবাদ ও তাৎপর্য|অনুবাদ ও ঐতিহাসিক প্রেক্ষাপট|অনুবাদ ও লি‘আনের পদ্ধতি|অনুবাদ ও বিশ্লেষণ|অনুবাদ ও পটভূমি|অনুবাদ|ব্যাখ্যা|প্রেক্ষাপট|ঐতিহাসিক প্রেক্ষাপট):\*\*\s*([^\n]+(?:\n(?!\s*-\s*\*\*)[^\n]+)*)/);
     if (expMatch && expMatch[1]) {
       explanation = expMatch[1].trim();
     } else if (inlineContent && !inlineContent.startsWith('- **') && !inlineContent.startsWith('>')) {
@@ -229,7 +236,7 @@ export function parseHadithTakhrij(rawText) {
         .replace(/^(?:-\s+\*\*|[০-৯0-9]+\.\s+\*\*|###\s+)[^\n]+/, '')
         .split('\n')
         .map(l => l.replace(/^\s*[-*]+\s*/, '').trim())
-        .filter(l => l && !l.startsWith('>') && !l.startsWith('---') && !l.startsWith('**তাখরীজ') && !l.startsWith('**মুহাদ্দিস'));
+        .filter(l => l && !l.startsWith('>') && !l.startsWith('---') && !l.startsWith('**তাখরীজ') && !l.startsWith('**মুহাদ্দিস') && !l.startsWith('**উৎস'));
       if (bodyLines.length > 0) {
         explanation = bodyLines.join('\n\n');
       }

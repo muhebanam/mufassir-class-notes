@@ -15,10 +15,22 @@ marked.setOptions({
  */
 export function normalizeQuranBrackets(text) {
   if (!text || typeof text !== 'string') return text;
-  return text.replace(
-    /\uFD3E([^\uFD3E\uFD3F\r\n]*?[\u0600-\u06FF\u0750-\u077F\uFB50-\uFDFF\uFE70-\uFEFF][^\uFD3E\uFD3F\r\n]*?)\uFD3F/g,
-    '\uFD3F$1\uFD3E'
-  );
+  return text
+    .split('\n')
+    .map(line => {
+      if (!line.includes('\uFD3E') && !line.includes('\uFD3F')) return line;
+      const parts = line.split(/(\uFD3F[^\uFD3E\uFD3F]*?\uFD3E)/g);
+      return parts
+        .map((part, idx) => {
+          if (idx % 2 === 1) return part;
+          return part.replace(
+            /\uFD3E([^\uFD3E\uFD3F]*?[\u0600-\u06FF\u0750-\u077F\uFB50-\uFDFF\uFE70-\uFEFF][^\uFD3E\uFD3F]*?)\uFD3F/g,
+            '\uFD3F$1\uFD3E'
+          );
+        })
+        .join('');
+    })
+    .join('\n');
 }
 
 function wrapArabic(root) {

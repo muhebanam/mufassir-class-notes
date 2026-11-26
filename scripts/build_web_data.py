@@ -639,10 +639,12 @@ def parse_ruku_markdown(md_text, surah_id, ruku_idx, ayah_start, ayah_end, tanzi
                         else:
                             daleels.append(part)
 
-                    # Scholarly consensus detection with negative phrase filtering
-                    has_consensus_keyword = bool(re.search(r"\(?(?:ইজমা|সর্বসম্মত|একমত|ঐক্যমত)\)?", title + " " + ev))
-                    has_negative = bool(re.search(r"(?:নেই|নয়|নয়|ভিন্নমত|মতভেদ|একমত\s+ন[য়যই])", title + " " + ev))
-                    is_consensus = has_consensus_keyword and not has_negative
+                    # Scholarly consensus detection with negative phrase and madhhab conflict filtering
+                    has_consensus_keyword = bool(re.search(r"(?:\(\s*ইজমা\s*\)|ঐকমত্য\s*\(ইজমা\)|চার\s+মাযহাবই?\s+একমত|সর্বসম্মত\s+(?:মাসআলা|সিদ্ধান্ত|ফতোয়া|ফতোয়া))", title + " " + ev))
+                    has_negative = bool(re.search(r"(?:নেই|নয়|নয়|ভিন্নমত|মতভেদ|তারজীহ|একমত\s+ন[য়যই])", title + " " + ev[:100]))
+                    madhhab_blob = f"{h} || {m_op} || {s} || {han}"
+                    has_madhhab_conflict = bool(re.search(r"(?:সহীহ|বৈধ)", madhhab_blob) and re.search(r"(?:বাতিল|হারাম|ফাসিদ)", madhhab_blob))
+                    is_consensus = has_consensus_keyword and not has_negative and not has_madhhab_conflict
 
                     ahkam_cards.append({
                         "title": title,

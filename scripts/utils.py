@@ -84,18 +84,28 @@ def normalize_quran_brackets(text: str) -> str:
     Standardizes Quranic ayah quotes to authentic ornate brackets:
     Opening on right: \ufd3f (﴿)
     Closing on left: \ufd3e (﴾)
-    Replaces reversed ornate brackets: \ufd3e...\ufd3f (﴾...﴿) -> \ufd3f...\ufd3e (﴿...﴾)
-    Ensures brackets and Arabic verses stay beautifully paired.
+    Protects already valid \ufd3f...\ufd3e pairs and only fixes genuinely reversed \ufd3e...\ufd3f pairs.
     """
     if not text or not isinstance(text, str):
         return text
 
-    # Convert reversed \ufd3e...\ufd3f -> \ufd3f...\ufd3e when enclosing Arabic characters
-    return re.sub(
-        r'\uFD3E([^\uFD3E\uFD3F\r\n]*?[\u0600-\u06FF\u0750-\u077F\uFB50-\uFDFF\uFE70-\uFEFF][^\uFD3E\uFD3F\r\n]*?)\uFD3F',
-        r'﴿\g<1>﴾',
-        text
-    )
+    def _fix_line(line: str) -> str:
+        if '\uFD3E' not in line and '\uFD3F' not in line:
+            return line
+        parts = re.split(r'(\uFD3F[^\uFD3E\uFD3F]*?\uFD3E)', line)
+        out = []
+        for idx, part in enumerate(parts):
+            if idx % 2 == 1:
+                out.append(part)
+            else:
+                out.append(re.sub(
+                    r'\uFD3E([^\uFD3E\uFD3F]*?[\u0600-\u06FF\u0750-\u077F\uFB50-\uFDFF\uFE70-\uFEFF][^\uFD3E\uFD3F]*?)\uFD3F',
+                    '\uFD3F\\g<1>\uFD3E',
+                    part
+                ))
+        return ''.join(out)
+
+    return '\n'.join(_fix_line(l) for l in text.split('\n'))
 
 def replace_backtick_arabic(text: str) -> str:
     """
