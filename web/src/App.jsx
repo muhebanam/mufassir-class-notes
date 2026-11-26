@@ -34,6 +34,13 @@ export default function App() {
   const [activeView, setActiveView] = useState('study'); 
   // 3 Distinct Academic Modes: 'mushaf', 'ayah', 'thematic'
   const [studyMode, setStudyMode] = useState('ayah'); 
+  const [initialThematicTab, setInitialThematicTab] = useState(() => {
+    if (typeof window !== 'undefined') {
+      const p = new URLSearchParams(window.location.search);
+      return p.get('tab') || 'makasid';
+    }
+    return 'makasid';
+  }); 
 
   // Modals & Sidebar
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -125,6 +132,15 @@ export default function App() {
         setSurahs(surahsList);
         setSiteMeta(meta);
 
+        // Parse URL search params (e.g. ?tab=ulumul_quran)
+        const urlParams = new URLSearchParams(window.location.search);
+        const tabParam = urlParams.get('tab');
+        if (tabParam) {
+          setInitialThematicTab(tabParam);
+          setStudyMode('ruku');
+          setActiveView('study');
+        }
+
         // Parse initial hash (e.g. #/24/35 or #/24/ruku-5)
         const hash = window.location.hash.replace('#/', '').replace('#', '');
         if (hash) {
@@ -144,7 +160,10 @@ export default function App() {
                 const aId = parseInt(parts[1]);
                 if (!isNaN(aId)) {
                   setSelectedAyahNum(aId);
-                  setStudyMode('ayah');
+                  // Only set studyMode to ayah if no tab query parameter was supplied
+                  if (!tabParam) {
+                    setStudyMode('ayah');
+                  }
                 }
               }
             }
@@ -433,6 +452,7 @@ export default function App() {
             key={`ruku-scope-${currentSurahId}-${currentRukuId}`}
             rukuData={rukuData}
             surahInfo={currentSurah}
+            initialTab={initialThematicTab}
             onSelectAyah={(aNum) => {
               setSelectedAyahNum(aNum);
               setStudyMode('ayah');

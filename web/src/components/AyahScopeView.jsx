@@ -72,7 +72,9 @@ export default function AyahScopeView({
     });
   };
 
-  const tahqeeqWords = ayah.tahqeeq || ayah.mufradat || [];
+  const tahqeeqWords = (Array.isArray(ayah.tahqeeq) && ayah.tahqeeq.length > 0)
+    ? ayah.tahqeeq
+    : (ayah.mufradat || []);
   const qiraatList = ayah.qiraat || [];
 
   const hasPrev = ayah.ayah > (rukuInfo.ayah_start || 1);

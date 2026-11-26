@@ -12,11 +12,18 @@ export default function RukuScopeView({
   rukuData, 
   surahInfo, 
   onSelectAyah,
-  onSwitchToAyahScope 
+  onSwitchToAyahScope,
+  initialTab
 }) {
   // Reading Mode: 'tabbed' (single chapter) or 'continuous' (journal article with sticky TOC)
   const [readingLayout, setReadingLayout] = useState('tabbed');
-  const [activeTab, setActiveTab] = useState('makasid');
+  const [activeTab, setActiveTab] = useState(initialTab || 'makasid');
+
+  useEffect(() => {
+    if (initialTab) {
+      setActiveTab(initialTab);
+    }
+  }, [initialTab]);
 
   const toBn = (num) => {
     const bn = ['০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯'];

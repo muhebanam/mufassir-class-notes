@@ -103,6 +103,7 @@ const SURAH_24_THEMATIC_NODES = [
 
 export default function MindMap({ 
   surahInfo, 
+  surahMeta,
   currentRuku = 1, 
   onSelectRuku, 
   onSelectAyah,
@@ -123,6 +124,38 @@ export default function MindMap({
     return String(num).replace(/[0-9]/g, d => bn[d]);
   };
 
+  const colors = ['emerald', 'blue', 'teal', 'indigo', 'amber', 'cyan', 'rose', 'violet'];
+
+  // Dynamic nodes: If Surah 24, use detailed curated nodes; otherwise generate from surahMeta/surahInfo rukus
+  const isSurah24 = (surahInfo?.id === 24 || (!surahInfo && !surahMeta));
+  const rawRukus = surahMeta?.rukus || surahInfo?.rukus || [];
+
+  const thematicNodes = isSurah24
+    ? SURAH_24_THEMATIC_NODES
+    : (rawRukus.length > 0
+        ? rawRukus.map((r, idx) => {
+            const rId = r.ruku_id || (idx + 1);
+            const aStart = r.ayah_start || (Array.isArray(r) ? r[0] : 1);
+            const aEnd = r.ayah_end || (Array.isArray(r) ? r[1] : 1);
+            const aRangeBn = r.ayah_range_bn || `${toBn(aStart)}–${toBn(aEnd)}`;
+            return {
+              ruku_id: rId,
+              title: `রুকু ${toBn(rId)}: আয়াত ${aRangeBn}`,
+              ayah_range: aRangeBn,
+              color: colors[idx % colors.length],
+              subtopics: [
+                { text: `আয়াত ${aRangeBn}-এর বিষয়বস্তু ও পর্যালোচনা`, ayahs: aRangeBn }
+              ]
+            };
+          })
+        : SURAH_24_THEMATIC_NODES
+      );
+
+  const surahName = surahInfo?.name_bn || surahMeta?.name_bn || 'আন-নূর';
+  const surahId = surahInfo?.id || surahMeta?.id || 24;
+  const rukuCount = surahInfo?.ruku_count || surahMeta?.ruku_count || thematicNodes.length;
+  const ayahCount = surahInfo?.ayah_count || surahMeta?.ayah_count || 0;
+
   return (
     <div className="w-full bg-white dark:bg-gray-800/90 rounded-2xl border border-gray-200 dark:border-gray-700 p-4 sm:p-6 shadow-xs layout-safe">
       {/* Header */}
@@ -133,18 +166,18 @@ export default function MindMap({
           </div>
           <div>
             <h3 className="text-base sm:text-lg font-bold text-gray-900 dark:text-gray-100 font-bengali">
-              {mode === 'surah' ? 'সূরা আন-নূরের পূর্ণাঙ্গ বিষয়ভিত্তিক মাইন্ড ম্যাপ' : `রুকু ${toBn(currentRuku)}-এর বিষয়ভিত্তিক সংযোগ রেখা`}
+              {mode === 'surah' ? `সূরা ${surahName}-এর পূর্ণাঙ্গ বিষয়ভিত্তিক মাইন্ড ম্যাপ` : `রুকু ${toBn(currentRuku)}-এর বিষয়ভিত্তিক সংযোগ রেখা`}
             </h3>
             <p className="text-xs text-gray-500 dark:text-gray-400 font-bengali">
               {mode === 'surah' 
-                ? '৯টি রুকু ও ৬৪টি আয়াতের বিষয়ভিত্তিক পারস্পরিক সম্পর্ক ও প্রাসঙ্গিকতা' 
+                ? `${toBn(rukuCount)}টি রুকু ও ${toBn(ayahCount)}টি আয়াতের বিষয়ভিত্তিক পারস্পরিক সম্পর্ক ও প্রাসঙ্গিকতা` 
                 : 'বর্তমান রুকুর শাখা-প্রশাখা ও মূল বক্তব্যের প্রবাহ'}
             </p>
           </div>
         </div>
         <div className="flex items-center gap-2 text-xs font-bengali">
           <span className="px-2.5 py-1 rounded-full bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 font-medium border border-emerald-200 dark:border-emerald-800">
-            {toBn(SURAH_24_THEMATIC_NODES.length)}টি রুকু থিম
+            {toBn(thematicNodes.length)}টি রুকু থিম
           </span>
         </div>
       </div>
@@ -156,9 +189,9 @@ export default function MindMap({
           <div className="flex items-center justify-center mb-8">
             <div className="relative px-6 py-3.5 rounded-2xl bg-gradient-to-r from-emerald-700 to-teal-800 text-white shadow-md text-center max-w-md border-2 border-emerald-500/30">
               <span className="text-xs uppercase tracking-wider text-emerald-200 font-mono">Surah Structure</span>
-              <h4 className="text-xl font-bold font-bengali">সূরা আন-নূর (২৪)</h4>
+              <h4 className="text-xl font-bold font-bengali">সূরা {surahName} ({toBn(surahId)})</h4>
               <p className="text-xs text-emerald-100 font-bengali mt-0.5">
-                মাক্কী/মাদানী: মাদানী • রুকু: ৯টি • মোট আয়াত: ৬৪টি
+                রুকু: {toBn(rukuCount)}টি • মোট আয়াত: {toBn(ayahCount)}টি
               </p>
             </div>
           </div>
@@ -172,7 +205,7 @@ export default function MindMap({
 
           {/* 3-Column Thematic Grid of Rukus */}
           <div className="grid grid-cols-3 gap-4">
-            {SURAH_24_THEMATIC_NODES.map((r) => {
+            {thematicNodes.map((r) => {
               const isActive = r.ruku_id === currentRuku;
               return (
                 <div
@@ -234,7 +267,7 @@ export default function MindMap({
 
       {/* MOBILE & TABLET VIEW: Collapsible Vertical Accordion Tree (<1024px) */}
       <div className="lg:hidden space-y-2.5">
-        {SURAH_24_THEMATIC_NODES.map((r) => {
+        {thematicNodes.map((r) => {
           const isExpanded = !!expandedRukus[r.ruku_id];
           const isActive = r.ruku_id === currentRuku;
 

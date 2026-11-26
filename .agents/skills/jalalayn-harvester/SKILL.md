@@ -20,7 +20,7 @@ description: >-
 2. **ক্রস-সার্ভার আইডি বিচ্ছিন্নতা (Cross-Server ID Isolation):**
    - কখনো এক সার্ভারের `book_id` অন্য সার্ভারে ব্যবহার করবে না (যেমন: Turath-এর তাবারী `7798` আর Shamela-র তাবারী আইডি ভিন্ন)। যে সার্ভার থেকে টেক্সট নেবে, কেবল সেই সার্ভারের নিজস্ব `kind` ও `id` ব্যবহার করবে।
 3. **স্নিপেট নয়, পূর্ণ পৃষ্ঠা ও প্রসঙ্গ পাঠ (Full Context Over Snippets):**
-   - `turath:retrieve`, `shamela:search_text` বা `hadith-mcp:search_hadith`-এর খণ্ডিত স্নিপেট দেখে থেমে যাবে না। মুফাসসিরের পূর্বপক্ষ (`قيل/فإن قيل`) ও চূড়ান্ত তারজীহ (`والصواب عندنا`) নিশ্চিত করতে অবশ্যই `turath:get_context(bookId, pageId=internalPage, pagesBefore=0, pagesAfter=1)`, `shamela:get_page` অথবা `hadith-mcp:fetch_hadith` দিয়ে পূর্ণ ইবারত আনবে।
+   - `turath:retrieve`, `shamela-qg:shamela_search` বা `hadith-mcp:search_hadith`-এর খণ্ডিত স্নিপেট দেখে থেমে যাবে না। মুফাসসিরের পূর্বপক্ষ (`قيل/فإن قيل`) ও চূড়ান্ত তারজীহ (`والصواب عندنا`) নিশ্চিত করতে অবশ্যই `turath:get_context(bookId, pageId=internalPage, pagesBefore=0, pagesAfter=1)`, `shamela-qg:shamela_read` অথবা `hadith-mcp:fetch_hadith` দিয়ে পূর্ণ ইবারত আনবে।
    - **জরুরি (`turath:get_context`):** `pageId` প্যারামিটারে সর্বদা `internalPage` দেবে, কখনো `printedPage` নয়; তবে JSON-এ মুদ্রিত খণ্ড/পৃষ্ঠা (`internal_page: "<vol>/<printedPage>"`) অবশ্যই সংরক্ষণ করবে।
 4. **অনুমোদিত ও নিষিদ্ধ Turath বই-আইডি (`pipeline/books.json`):**
    - **জালালাইন ও শরহ:** `12876` (জালালাইন), `23842` (খুদাইর), `288` (বাররাক)
@@ -66,7 +66,7 @@ description: >-
 - **সার্ভার:** `tafsir-center`, `quran-mcp`, `shamela-qg`, `turath` (`9776`, `22915`)
 - **ধাপসমূহ:**
   1. প্রতিটি আয়াতের জন্য `tafsir-center:analyze_word(surah, ayah)` → `save_tafsir_mcp(..., subtype="word_analysis", role="lughah")`।
-  2. `quran-mcp:analyze_morphology` → `save_quran_mcp(..., subtype="morphology", role="morphology")`।
+  2. `quran-mcp:fetch_word_morphology` → `save_quran_mcp(..., subtype="morphology", role="morphology")`।
   3. জটিল শব্দ ও ই'রাবের জন্য `shamela-qg` থেকে ইমাম রাগিবের *আল-মুফরাদাত*, সামীন হালাবীর *আদ-দুররুল মাসূন* বা নাহহাসের *ই'রাবুল কুরআন* → `save_shamela_page(..., role="lughah")` / `role="irab"`।
   4. বালাগাত ও ই'জাযের জন্য `shamela-qg` (*আল-কাশশাফ*) বা `turath` (`9776` ইবনে আশূর) → `role="balaghat"`।
 

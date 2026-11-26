@@ -102,7 +102,7 @@ HARVESTER_SPECIALISTS = [
         "instructions": (
             "তোমার দায়িত্ব (অধ্যায় ২, ৩, ৯ ও ১০-এর ভাষাতাত্ত্বিক ও বালাগাতী ডেটা):\n"
             "১. প্রতিটি আয়াতের জন্য tafsir-center:analyze_word(surah, ayah) চালিয়ে save_tafsir_mcp(..., subtype='word_analysis', role='lughah')-এ সেভ করো।\n"
-            "২. quran-mcp:analyze_morphology চালিয়ে save_quran_mcp(..., subtype='morphology', role='morphology')-এ সেভ করো।\n"
+            "২. quran-mcp:fetch_word_morphology চালিয়ে save_quran_mcp(..., subtype='morphology', role='morphology')-এ সেভ করো।\n"
             "৩. জটিল শব্দ ও ই'রাবের জন্য shamela-qg থেকে মুফরাদাতুল কুরআন (রাগিব), আদ-দুররুল মাসূন (সামীন হালাবী) বা ই'রাবুল কুরআন (নাহহাস) save_shamela_page(..., role='lughah'/'irab')-এ সেভ করো।\n"
             "৪. বালাগাতের জন্য আল-কাশশাফ/ইবনে আশূরের বালাগাতী অংশ role='balaghat' হিসেবে সেভ করো।"
         ),

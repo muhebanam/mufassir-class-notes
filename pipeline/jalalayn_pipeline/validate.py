@@ -231,6 +231,11 @@ def validate_task(skill: str, blocks: dict, v: VCtx, keys: list) -> list:
     return errs
 
 
+BOILERPLATE_PATTERNS = [
+    r"এই রুকুর আয়াতসমূহের মৌলিক বাক্যগঠন সুস্পষ্ট",
+    r"\(আয়াত \d+-এর প্রামাণ্য বঙ্গানুবাদ\)",
+]
+
 def _collisions(blocks: dict) -> list:
     errs, seen = [], {}
     for k, parts in blocks.items():
@@ -238,6 +243,9 @@ def _collisions(blocks: dict) -> list:
             body = parts.get(p)
             if not body or body.strip().upper() == "NONE":
                 continue
+            for bp in BOILERPLATE_PATTERNS:
+                if re.search(bp, body):
+                    errs.append(f"{p}: অর্থহীন টেমপ্লেট বয়লারপ্লেট শনাক্ত হয়েছে — সুনির্দিষ্ট প্রামাণ্য একাডেমিক বিশ্লেষণ দিন")
             core = "\n".join(body.splitlines()[1:]).strip()
             if len(core) > 40 and (p, core) in seen:
                 errs.append(f"{p}: BLOCK:{k} ও BLOCK:{seen[(p, core)]}-এর বিষয়বস্তু হুবহু এক (ক্রস-আয়াত অনুলিপি)")

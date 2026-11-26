@@ -99,8 +99,17 @@ class Config:
     def is_blocked_book(self, book_id) -> bool:
         return str(book_id) in set(map(str, self.books.get("blocked", [])))
 
+    def roles_of(self, book_id) -> list[str]:
+        b = self.book(book_id)
+        if "roles" in b:
+            return list(b["roles"])
+        if "role" in b:
+            return [b["role"]]
+        return ["unknown"]
+
     def role_of(self, book_id) -> str:
-        return self.book(book_id).get("role", "unknown")
+        r = self.roles_of(book_id)
+        return r[0] if r else "unknown"
 
     def rules_text(self) -> str:
         return (PIPE_DIR / "rules" / "00-global-rules.md").read_text(encoding="utf-8")

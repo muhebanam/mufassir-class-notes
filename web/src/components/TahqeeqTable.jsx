@@ -129,7 +129,10 @@ export default function TahqeeqTable({ words = [], ayahNumber = null, compact = 
             const rootDisplay = morph.root || item['মূলধাতু'] || '—';
             const babDisplay = morph.bab || item['কুরআনিক রূপ ও আবওয়াব'] || '—';
             const jinsDisplay = morph.jins || '—';
-            const sighahDisplay = morph.sighah ? `${morph.sighah} • ${morph.bahas}` : (item['সীগা / ওযন'] || item['ব্যুৎপত্তি ও সিগাহ'] || morph.singular_plural || '—');
+            const sighahParts = [morph.sighah, morph.bahas].filter(Boolean);
+            const sighahDisplay = sighahParts.length > 0
+              ? sighahParts.join(' • ')
+              : (item['সীগা / ওযন'] || item['ব্যুৎপত্তি ও সিগাহ'] || morph.singular_plural || '—');
             const hasNotes = (item.classical_notes && item.classical_notes.length > 0) || item.taleel_or_irab || item['আভিধানিক অর্থ ও ভাষাতাত্ত্বিক সূত্র'];
 
             return (
@@ -282,7 +285,10 @@ export default function TahqeeqTable({ words = [], ayahNumber = null, compact = 
                 const meaningDisplay = item.meaning_bn || item['কুরআনিক পরিভাষাগত অর্থ'] || item['মূল অর্থ'] || item['আভিধানিক অর্থ ও ভাষাতাত্ত্বিক সূত্র'];
                 const rootDisplay = morph.root || item['মূলধাতু'] || '—';
                 const babDisplay = morph.bab || item['কুরআনিক রূপ ও আবওয়াব'] || '';
-                const sighahDisplay = morph.sighah ? `${morph.sighah} • ${morph.bahas}` : (item['সীগা / ওযন'] || item['ব্যুৎপত্তি ও সিগাহ'] || morph.singular_plural || '—');
+                const tableSighahParts = [morph.sighah, morph.bahas].filter(Boolean);
+                const sighahDisplay = tableSighahParts.length > 0
+                  ? tableSighahParts.join(' • ')
+                  : (item['সীগা / ওযন'] || item['ব্যুৎপত্তি ও সিগাহ'] || morph.singular_plural || '—');
 
                 return (
                   <tr key={idx} className="hover:bg-emerald-50/30 dark:hover:bg-gray-700/30 transition-colors">

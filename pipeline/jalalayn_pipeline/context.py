@@ -20,23 +20,25 @@ def select_sources(proj: Project, sid: int, rid: int, task: Task, caps: dict) ->
     ruku_range = range(a0, a1 + 1)
     picked = []
     for cid, c in sorted(caps.items()):
-        role = rl[cid]
+        b_roles = set(proj.cfg.roles_of(c.get("book_id"))) if c.get("kind") == "turath_page" else {rl.get(cid, "")}
+        if "role" in c:
+            b_roles.add(c["role"])
         kind = c.get("kind")
-        if sk == "ayah-translation-jalalayn" and (role in ("jalalayn", "sharh") or kind == "quran_mcp") and covers(c, task.ayat):
+        if sk == "ayah-translation-jalalayn" and (b_roles & {"jalalayn", "sharh"} or kind == "quran_mcp") and covers(c, task.ayat):
             picked.append(c)
-        elif sk == "ayah-lughah-irab" and (kind in ("bahouth_root", "quran_mcp") or role in ("lughah", "irab", "morphology")):
+        elif sk == "ayah-lughah-irab" and (kind in ("bahouth_root", "quran_mcp") or b_roles & {"lughah", "irab", "morphology"}):
             picked.append(c)
-        elif sk == "ayah-qiraat-note" and (role == "qiraat" or kind in ("bahouth_qiraat", "tafsir_mcp")) and covers(c, task.ayat):
+        elif sk == "ayah-qiraat-note" and (b_roles & {"qiraat"} or kind in ("bahouth_qiraat", "tafsir_mcp")) and covers(c, task.ayat):
             picked.append(c)
-        elif sk == "tafsir-hadith-unit" and (role in ("tafsir", "jalalayn", "sharh", "hadith", "nuzul") or kind in ("hadith_mcp", "maher_hadith", "tafsir_mcp", "shamela_page")) and covers(c, task.ayat):
+        elif sk == "tafsir-hadith-unit" and (b_roles & {"tafsir", "jalalayn", "sharh", "hadith", "nuzul"} or kind in ("hadith_mcp", "maher_hadith", "tafsir_mcp", "shamela_page")) and covers(c, task.ayat):
             picked.append(c)
-        elif sk == "ruku-makasid-connections" and (role in ("makasid", "topics") or kind == "bahouth_topics"):
+        elif sk == "ruku-makasid-connections" and (b_roles & {"makasid", "topics"} or kind == "bahouth_topics"):
             picked.append(c)
-        elif sk == "ruku-ikhtilaf-ahkam" and role in ("fiqh", "fatwa") and covers(c, ruku_range):
+        elif sk == "ruku-ikhtilaf-ahkam" and (b_roles & {"fiqh", "fatwa"}) and covers(c, ruku_range):
             picked.append(c)
-        elif sk == "ruku-ulum-balaghat" and role in ("ulum", "balaghat") and covers(c, ruku_range):
+        elif sk == "ruku-ulum-balaghat" and (b_roles & {"ulum", "balaghat"}) and covers(c, ruku_range):
             picked.append(c)
-        elif sk == "ruku-samakalin-dars" and role in ("contemporary", "fatwa") and covers(c, ruku_range):
+        elif sk == "ruku-samakalin-dars" and (b_roles & {"contemporary", "fatwa"}) and covers(c, ruku_range):
             picked.append(c)
     return picked
 

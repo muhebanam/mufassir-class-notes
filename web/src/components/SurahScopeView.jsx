@@ -36,10 +36,10 @@ export default function SurahScopeView({
               সূরা নং {toBn(surahMeta.id || surahInfo?.id || 24)}
             </span>
             <span className="px-2.5 py-1 rounded-full bg-teal-500/20 text-teal-200 border border-teal-400/30 font-bengali">
-              মাদানী সূরা
+              {surahMeta.revelation_type || surahInfo?.revelation_type || (surahMeta.id === 24 ? 'মাদানী সূরা' : 'মাক্কী/মাদানী')}
             </span>
             <span className="px-2.5 py-1 rounded-full bg-white/10 text-gray-200 font-bengali">
-              {toBn(surahMeta.ruku_count || 9)}টি রুকু • {toBn(surahMeta.ayah_count || 64)}টি আয়াত
+              {toBn(surahMeta.ruku_count || surahInfo?.ruku_count || 1)}টি রুকু • {toBn(surahMeta.ayah_count || surahInfo?.ayah_count || 1)}টি আয়াত
             </span>
           </div>
 
@@ -49,12 +49,14 @@ export default function SurahScopeView({
                 সূরা {surahMeta.name_bn || surahInfo?.name_bn || 'আন-নূর'}
               </h1>
               <p className="text-sm text-emerald-100 font-bengali mt-1">
-                সামাজিক ও পারিবারিক পবিত্রতা, অপবাদ প্রতিরোধ ও আল্লাহর নূর সম্পর্কিত সুমহান ঐশী সংবিধান
+                {surahMeta.id === 24
+                  ? 'সামাজিক ও পারিবারিক পবিত্রতা, অপবাদ প্রতিরোধ ও আল্লাহর নূর সম্পর্কিত সুমহান ঐশী সংবিধান'
+                  : `কুরআনুল কারীমের ${toBn(surahMeta.id || surahInfo?.id || 1)}তম পবিত্র সূরা`}
               </p>
             </div>
             <div className="text-right sm:text-left">
               <span className="font-arabic text-3xl sm:text-5xl font-bold text-emerald-300 drop-shadow-xs" dir="rtl">
-                سُورَةُ {surahMeta.name_ar || 'النُّورِ'}
+                سُورَةُ {surahMeta.name_ar || surahInfo?.name_ar || ''}
               </span>
             </div>
           </div>
@@ -78,7 +80,7 @@ export default function SurahScopeView({
             <MarkdownContent content={surahMeta.intro} />
           ) : (
             <p>
-              সূরা আন-নূর পবিত্র কুরআনের ২৪তম সূরা। এটি মদীনা মুনাওয়ারায় নাযিলকৃত। সূরার ৩৫তম আয়াতে আল্লাহ তাআলার পরিচয় হিসেবে ‘আল্লাহ আসমান ও জমিনের জ্যোতি (নূর)’ উপমা বর্ণিত হওয়ায় এর নাম ‘সূরা আন-নূর’ রাখা হয়েছে। সূরার মূল আলোচ্য বিষয় হলো মুসলিম সমাজের পবিত্রতা রক্ষা, ব্যভিচারের মূলোৎপাটন, সতী নারীর ওপর মিথ্যা অপবাদ প্রতিরোধ (ইফক), পর্দা ও দৃষ্টি সংযমের বিধান এবং পারিবারিক ও সামাজিক শিষ্টাচার প্রতিষ্ঠা।
+              সূরা {surahMeta.name_bn || surahInfo?.name_bn} পবিত্র কুরআনের {toBn(surahMeta.id || surahInfo?.id || 24)}তম সূরা। এতে মোট {toBn(surahMeta.ruku_count || surahInfo?.ruku_count || 1)}টি রুকু এবং {toBn(surahMeta.ayah_count || surahInfo?.ayah_count || 1)}টি আয়াত রয়েছে।
             </p>
           )}
         </div>
@@ -88,6 +90,7 @@ export default function SurahScopeView({
       <div className="space-y-3">
         <MindMap 
           surahInfo={surahInfo} 
+          surahMeta={surahMeta}
           currentRuku={1}
           onSelectRuku={onSelectRuku}
           mode="surah"
