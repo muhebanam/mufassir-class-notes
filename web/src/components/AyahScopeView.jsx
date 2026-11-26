@@ -9,6 +9,7 @@ import TahqeeqTable from './TahqeeqTable';
 import QiraatTable from './QiraatTable';
 import WordByWordSection from './WordByWordSection';
 import JalalaynView from './JalalaynView';
+import ComparativeTafsirSection from './ComparativeTafsirSection';
 import HadithTakhrijSection from './HadithTakhrijSection';
 import MunasabatSection from './MunasabatSection';
 
@@ -221,6 +222,16 @@ export default function AyahScopeView({
             bengaliFontSize={bengaliFontSize} 
             arabicFontSize={arabicFontSize - 2}
           />
+
+          {/* 2. Comparative Tafsir (Tafsir al-Kabir, Tabari, Ibn Kathir, Qurtubi) */}
+          {ayah.comparative_tafsir && (
+            <ComparativeTafsirSection 
+              content={ayah.comparative_tafsir}
+              surah={ayah.surah}
+              ayahNumber={ayah.ayah}
+              bengaliFontSize={bengaliFontSize}
+            />
+          )}
 
           {/* 2. Shan-e-Nuzul & Hadith Takhrij (Cards / Table) */}
           {ayah.shane_nuzul && (

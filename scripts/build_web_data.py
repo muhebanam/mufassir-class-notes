@@ -292,14 +292,27 @@ def parse_ruku_markdown(md_text, surah_id, ruku_idx, ayah_start, ayah_end, tanzi
     # 5. Extract Section 5 (Jalalayn & Comparative Tafsir)
     sec5_text = sections.get(5, {}).get("body", "")
     jalalayn_map = {}
+    comparative_map = {}
     ruku_ayah_texts = {a: tanzil.get((surah_id, a), "") for a in range(ayah_start, ayah_end + 1)}
 
-    # 5a. First try granular per-ayah subsection extraction (handles #### আয়াত N, ### আয়াত N, 1. **আয়াত N:**, etc.)
-    j_subsections = parse_section_ayah_subsections(sec5_text, ruku_ayah_texts, ayah_start=ayah_start, ayah_end=ayah_end, fallback_to_whole=False)
-    jalalayn_map.update(j_subsections)
+    # Check if section 5 is split into Comparative and Jalalayn subsections
+    # Common pattern: ### ক. তুলনামূলক তাফসীর ... ### খ. তাফসীরুল জালালাইন ...
+    parts = re.split(r"(?m)^###\s*.*জালালাইন[^\n]*\n", sec5_text)
+    if len(parts) >= 2:
+        comp_part = parts[0]
+        jalal_part = parts[1]
+    else:
+        # Check reverse order: ### ক. জালালাইন ... ### খ. তুলনামূলক তাফসীর ...
+        parts_rev = re.split(r"(?m)^###\s*.*তুলনামূলক[^\n]*\n", sec5_text)
+        if len(parts_rev) >= 2:
+            jalal_part = parts_rev[0]
+            comp_part = parts_rev[1]
+        else:
+            comp_part = sec5_text
+            jalal_part = sec5_text
 
-    # 5b. Also check classic bullet-bold pattern (- **আয়াত N:** ...)
-    j_matches = list(re.finditer(r"(?m)^[\s\-*]+\*\*আয়াত\s+([০-৯\d\s–—\-]+)[^:]*:\*\*\s*(?:[^\n]*\n+)?([\s\S]*?)(?=^[\s\-*]+\*\*আয়াত|^#{2,4}\s|^---|\Z)", sec5_text))
+    # 5a. Extract Jalalayn map from jalal_part
+    j_matches = list(re.finditer(r"(?m)^[\s\-*]+\*\*আয়াত\s+([০-৯\d\s–—\-]+)[^:]*:\*\*\s*(?:[^\n]*\n+)?([\s\S]*?)(?=^[\s\-*]+\*\*আয়াত|^#{2,4}\s|^---|\Z)", jalal_part))
     for jm in j_matches:
         range_str = to_en(jm.group(1)).strip()
         content = clean_pipeline_artifacts(jm.group(2).strip())
@@ -310,7 +323,33 @@ def parse_ruku_markdown(md_text, surah_id, ruku_idx, ayah_start, ayah_end, tanzi
             for n in range(nums[0], nums[1] + 1):
                 jalalayn_map[n] = f"*[উৎস: আয়াত {to_bn(nums[0])}–{to_bn(nums[1])}-এর যৌথ আলোচনা]*\n\n" + content
 
-    # 5c. For any ayahs still missing, check for dedicated Jalalayn block (e.g. ### ক. জালালাইন...)
+    missing_jalal = [a for a in range(ayah_start, ayah_end + 1) if a not in jalalayn_map or not jalalayn_map[a].strip()]
+    if missing_jalal:
+        j_subs = parse_section_ayah_subsections(jalal_part, ruku_ayah_texts, ayah_start=ayah_start, ayah_end=ayah_end, fallback_to_whole=False)
+        for ma in missing_jalal:
+            if ma in j_subs:
+                jalalayn_map[ma] = j_subs[ma]
+
+    # 5b. Extract Comparative Tafsir map from comp_part
+    c_matches = list(re.finditer(r"(?m)^#{3,4}\s+আয়াত\s+([০-৯\d\s–—\-]+)[^\n]*\n+([\s\S]*?)(?=^#{3,4}\s+আয়াত|^#{2,3}\s|^---|\Z)", comp_part))
+    for cm in c_matches:
+        range_str = to_en(cm.group(1)).strip()
+        content = clean_pipeline_artifacts(cm.group(2).strip())
+        nums = [int(n) for n in re.findall(r"\d+", range_str)]
+        if len(nums) == 1:
+            comparative_map[nums[0]] = content
+        elif len(nums) >= 2:
+            for n in range(nums[0], nums[1] + 1):
+                comparative_map[n] = f"*[উৎস: আয়াত {to_bn(nums[0])}–{to_bn(nums[1])}-এর যৌথ আলোচনা]*\n\n" + content
+
+    missing_comp = [a for a in range(ayah_start, ayah_end + 1) if a not in comparative_map or not comparative_map[a].strip()]
+    if missing_comp:
+        c_subs = parse_section_ayah_subsections(comp_part, ruku_ayah_texts, ayah_start=ayah_start, ayah_end=ayah_end, fallback_to_whole=False)
+        for ma in missing_comp:
+            if ma in c_subs:
+                comparative_map[ma] = c_subs[ma]
+
+    # Fallbacks for missing jalalayn
     missing_ayahs = [a for a in range(ayah_start, ayah_end + 1) if a not in jalalayn_map or not jalalayn_map[a].strip()]
     if missing_ayahs and sec5_text:
         m_jalal = re.search(r"(?m)^###\s+[ক\w\.\s]*জালালাইন[^\n]*\n([\s\S]*?)(?=^###\s+|\Z)", sec5_text)
@@ -371,6 +410,7 @@ def parse_ruku_markdown(md_text, surah_id, ruku_idx, ayah_start, ayah_end, tanzi
             "word_translation": a_info.get("word_translation", ""),
             "translation": a_info.get("translation", ""),
             "jalalayn": jalalayn_map.get(a_num, ""),
+            "comparative_tafsir": comparative_map.get(a_num, ""),
             "mufradat": a_mufradat,
             "qiraat": a_qiraat,
             "irab": a_irab,
@@ -678,6 +718,8 @@ def build_all_web_data(limit_surahs=None):
                                 a["shane_nuzul"] = old_a["shane_nuzul"]
                             if not a.get("jalalayn") and old_a.get("jalalayn"):
                                 a["jalalayn"] = old_a["jalalayn"]
+                            if not a.get("comparative_tafsir") and old_a.get("comparative_tafsir"):
+                                a["comparative_tafsir"] = old_a["comparative_tafsir"]
                             if not a.get("irab") and old_a.get("irab"):
                                 a["irab"] = old_a["irab"]
                 except Exception:
