@@ -19,6 +19,12 @@ __pycache__/
 .env
 .env.local
 
+# Local pipeline config (copy from config.example.json)
+pipeline/config.json
+
+# Large local MCP cache
+00_প্রজেক্ট_তথ্য/master_mcp_cache.json
+
 # OS files
 .DS_Store
 Thumbs.db

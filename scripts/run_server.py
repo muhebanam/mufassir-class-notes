@@ -25,7 +25,7 @@ class CustomHandler(http.server.SimpleHTTPRequestHandler):
 
     def end_headers(self):
         # Enable CORS and UTF-8
-        self.send_header('Access-Control-Allow-Origin', '*')
+        self.send_header('Access-Control-Allow-Origin', 'http://127.0.0.1:5173')
         self.send_header('Cache-Control', 'no-cache')
         super().end_headers()
 
@@ -35,15 +35,16 @@ def main():
     print(f"অনুবাদ ও তাহকীক: মুফতী মুহাম্মাদ মুহিব্বুল্লাহ")
     print(f"প্রকাশক: মাকতাবাতুল ইসহাক, ঢাকা")
     print("=" * 60)
-    print(f"লোকাল সার্ভার চালু হচ্ছে: http://localhost:{PORT}")
+    print(f"লোকাল সার্ভার চালু হচ্ছে: http://127.0.0.1:{PORT}")
     print("ব্রাউজারে ওয়েবসাইট ওপেন করা হচ্ছে...")
     print("সার্ভার বন্ধ করতে Ctrl + C চাপুন।")
     print("=" * 60)
 
     # Open browser automatically
-    webbrowser.open(f"http://localhost:{PORT}")
+    webbrowser.open(f"http://127.0.0.1:{PORT}")
 
-    with socketserver.TCPServer(("", PORT), CustomHandler) as httpd:
+    socketserver.TCPServer.allow_reuse_address = True
+    with socketserver.TCPServer(("127.0.0.1", PORT), CustomHandler) as httpd:
         try:
             httpd.serve_forever()
         except KeyboardInterrupt:

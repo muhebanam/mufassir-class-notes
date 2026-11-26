@@ -101,8 +101,8 @@
   "total_rukus_completed": 259,
   "total_rukus_remaining": 0,
   "total_surahs_remaining": 0,
-  "active_surah": 114,
-  "active_ruku": 1,
+  "active_surah": null,
+  "active_ruku": null,
   "global_audit_result": "TOTAL RUKUS AUDITED: 259 | RAW VALID: 259 | QIRAAT MDS: 259 | AUDIT PASSED: 259 (100%)",
   "phases": {
     "পর্যায় ১": "সূরা ২৪ (আন-নূর) — ৯ রুকু (১০০% সম্পন্ন ও নিরীক্ষিত)",
