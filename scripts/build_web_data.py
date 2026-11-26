@@ -53,20 +53,22 @@ def plain_markdown(md, limit=280):
         return t
     return t[:limit].rsplit(" ", 1)[0] + "…"
 
-def parse_section_ayah_subsections(sec_text, ruku_ayah_texts, ayah_start=None, ayah_end=None, fallback_to_whole=False):
+def parse_section_ayah_subsections(sec_text, ruku_ayah_texts, ayah_start=None, ayah_end=None, fallback_to_whole=False, return_covers=False):
     """
     Universal Ayah Subsection Mapper.
     Supports ###, ####, bullet points (- **আয়াত...**, * **আয়াত...**), numbered lists (1. **আয়াত...**, 1. আয়াত...),
     and Quranic quotes.
     If fallback_to_whole is True and no individual ayahs matched, maps whole-section content to all ayahs in ruku.
+    If return_covers is True, returns (ayah_content_map, ayah_covers_map).
     """
     if not sec_text or not sec_text.strip():
-        return {}
+        return ({}, {}) if return_covers else {}
 
     # Delimiter for subsections
     delim_pattern = r'(?m)^(?:#{3,4}\s+|[\s\-*]+\*\*(?:আ[য়য]়?াত|আয়াত)|\d+\.\s+(?:\*\*)?(?:আ[য়য]়?াত|আয়াত))'
     splits = list(re.finditer(delim_pattern, sec_text))
     ayah_content_map = {}
+    ayah_covers_map = {}
 
     if splits:
         sections_found = []
@@ -113,12 +115,15 @@ def parse_section_ayah_subsections(sec_text, ruku_ayah_texts, ayah_start=None, a
                 continue
 
             content_to_add = clean_pipeline_artifacts(chunk)
+            covers_val = None
             if len(target_ayahs) > 1:
                 s_min, s_max = min(target_ayahs), max(target_ayahs)
+                covers_val = [s_min, s_max]
                 range_prefix = f"*[উৎস: আয়াত {to_bn(s_min)}–{to_bn(s_max)}-এর যৌথ আলোচনা]*\n\n"
                 content_to_add = range_prefix + content_to_add
 
             for ta in target_ayahs:
+                ayah_covers_map[ta] = covers_val
                 if ta in ayah_content_map:
                     ayah_content_map[ta] += '\n\n---\n\n' + content_to_add
                 else:
@@ -132,7 +137,10 @@ def parse_section_ayah_subsections(sec_text, ruku_ayah_texts, ayah_start=None, a
             for a_num in range(ayah_start, ayah_end + 1):
                 if a_num not in ayah_content_map or not ayah_content_map[a_num].strip():
                     ayah_content_map[a_num] = whole_prefix + clean_sec
+                    ayah_covers_map[a_num] = [ayah_start, ayah_end]
 
+    if return_covers:
+        return ayah_content_map, ayah_covers_map
     return ayah_content_map
 
 def normalize_markdown_table_delimiters(text):
@@ -292,7 +300,9 @@ def parse_ruku_markdown(md_text, surah_id, ruku_idx, ayah_start, ayah_end, tanzi
     # 5. Extract Section 5 (Jalalayn & Comparative Tafsir)
     sec5_text = sections.get(5, {}).get("body", "")
     jalalayn_map = {}
+    jalalayn_covers_map = {}
     comparative_map = {}
+    comparative_covers_map = {}
     ruku_ayah_texts = {a: tanzil.get((surah_id, a), "") for a in range(ayah_start, ayah_end + 1)}
 
     # Check if section 5 is split into Comparative and Jalalayn subsections
@@ -319,16 +329,20 @@ def parse_ruku_markdown(md_text, surah_id, ruku_idx, ayah_start, ayah_end, tanzi
         nums = [int(n) for n in re.findall(r"\d+", range_str)]
         if len(nums) == 1:
             jalalayn_map[nums[0]] = content
+            jalalayn_covers_map[nums[0]] = None
         elif len(nums) >= 2:
-            for n in range(nums[0], nums[1] + 1):
-                jalalayn_map[n] = f"*[উৎস: আয়াত {to_bn(nums[0])}–{to_bn(nums[1])}-এর যৌথ আলোচনা]*\n\n" + content
+            s_min, s_max = min(nums[0], nums[1]), max(nums[0], nums[1])
+            for n in range(s_min, s_max + 1):
+                jalalayn_map[n] = content
+                jalalayn_covers_map[n] = [s_min, s_max]
 
     missing_jalal = [a for a in range(ayah_start, ayah_end + 1) if a not in jalalayn_map or not jalalayn_map[a].strip()]
     if missing_jalal:
-        j_subs = parse_section_ayah_subsections(jalal_part, ruku_ayah_texts, ayah_start=ayah_start, ayah_end=ayah_end, fallback_to_whole=False)
+        j_subs, j_covs = parse_section_ayah_subsections(jalal_part, ruku_ayah_texts, ayah_start=ayah_start, ayah_end=ayah_end, fallback_to_whole=False, return_covers=True)
         for ma in missing_jalal:
             if ma in j_subs:
                 jalalayn_map[ma] = j_subs[ma]
+                jalalayn_covers_map[ma] = j_covs.get(ma)
 
     # 5b. Extract Comparative Tafsir map from comp_part
     c_matches = list(re.finditer(r"(?m)^#{3,4}\s+আয়াত\s+([০-৯\d\s–—\-]+)[^\n]*\n+([\s\S]*?)(?=^#{3,4}\s+আয়াত|^#{2,3}\s|^---|\Z)", comp_part))
@@ -338,16 +352,20 @@ def parse_ruku_markdown(md_text, surah_id, ruku_idx, ayah_start, ayah_end, tanzi
         nums = [int(n) for n in re.findall(r"\d+", range_str)]
         if len(nums) == 1:
             comparative_map[nums[0]] = content
+            comparative_covers_map[nums[0]] = None
         elif len(nums) >= 2:
-            for n in range(nums[0], nums[1] + 1):
-                comparative_map[n] = f"*[উৎস: আয়াত {to_bn(nums[0])}–{to_bn(nums[1])}-এর যৌথ আলোচনা]*\n\n" + content
+            s_min, s_max = min(nums[0], nums[1]), max(nums[0], nums[1])
+            for n in range(s_min, s_max + 1):
+                comparative_map[n] = content
+                comparative_covers_map[n] = [s_min, s_max]
 
     missing_comp = [a for a in range(ayah_start, ayah_end + 1) if a not in comparative_map or not comparative_map[a].strip()]
     if missing_comp:
-        c_subs = parse_section_ayah_subsections(comp_part, ruku_ayah_texts, ayah_start=ayah_start, ayah_end=ayah_end, fallback_to_whole=False)
+        c_subs, c_covs = parse_section_ayah_subsections(comp_part, ruku_ayah_texts, ayah_start=ayah_start, ayah_end=ayah_end, fallback_to_whole=False, return_covers=True)
         for ma in missing_comp:
             if ma in c_subs:
                 comparative_map[ma] = c_subs[ma]
+                comparative_covers_map[ma] = c_covs.get(ma)
 
     # Fallbacks for missing jalalayn
     missing_ayahs = [a for a in range(ayah_start, ayah_end + 1) if a not in jalalayn_map or not jalalayn_map[a].strip()]
@@ -358,17 +376,19 @@ def parse_ruku_markdown(md_text, surah_id, ruku_idx, ayah_start, ayah_end, tanzi
             if jalal_text:
                 for ma in missing_ayahs:
                     jalalayn_map[ma] = f"*[উৎস: রুকুর জালালাইন সারসংক্ষেপ]*\n\n" + jalal_text
+                    jalalayn_covers_map[ma] = [ayah_start, ayah_end]
         else:
             sec5_clean = clean_pipeline_artifacts(sec5_text)
             if sec5_clean:
                 for ma in missing_ayahs:
                     jalalayn_map[ma] = f"*[উৎস: রুকুর তুলনামূলক তাফসীর ও সারসংক্ষেপ]*\n\n" + sec5_clean
+                    jalalayn_covers_map[ma] = [ayah_start, ayah_end]
 
     # 6. Extract Section 3 (Irab) & Section 6 (Shaan-e-Nuzul) via Ayah mapper
     sec3_text = sections.get(3, {}).get("body", "")
     sec6_text = sections.get(6, {}).get("body", "")
-    irab_subsections = parse_section_ayah_subsections(sec3_text, ruku_ayah_texts, ayah_start=ayah_start, ayah_end=ayah_end, fallback_to_whole=False)
-    nuzul_subsections = parse_section_ayah_subsections(sec6_text, ruku_ayah_texts, ayah_start=ayah_start, ayah_end=ayah_end, fallback_to_whole=True)
+    irab_map, irab_covers_map = parse_section_ayah_subsections(sec3_text, ruku_ayah_texts, ayah_start=ayah_start, ayah_end=ayah_end, fallback_to_whole=False, return_covers=True)
+    nuzul_map, nuzul_covers_map = parse_section_ayah_subsections(sec6_text, ruku_ayah_texts, ayah_start=ayah_start, ayah_end=ayah_end, fallback_to_whole=False, return_covers=True)
 
     # Build Ayah List
     ayahs = []
@@ -397,8 +417,8 @@ def parse_ruku_markdown(md_text, surah_id, ruku_idx, ayah_start, ayah_end, tanzi
                         a_qiraat.append(qr)
                         break
 
-        a_irab = irab_subsections.get(a_num, "")
-        a_nuzul = nuzul_subsections.get(a_num, "")
+        a_irab = irab_map.get(a_num, "")
+        a_nuzul = nuzul_map.get(a_num, "")
 
         ayah_obj = {
             "surah": surah_id,
@@ -410,11 +430,15 @@ def parse_ruku_markdown(md_text, surah_id, ruku_idx, ayah_start, ayah_end, tanzi
             "word_translation": a_info.get("word_translation", ""),
             "translation": a_info.get("translation", ""),
             "jalalayn": jalalayn_map.get(a_num, ""),
+            "jalalayn_covers": jalalayn_covers_map.get(a_num),
             "comparative_tafsir": comparative_map.get(a_num, ""),
+            "comparative_tafsir_covers": comparative_covers_map.get(a_num),
             "mufradat": a_mufradat,
             "qiraat": a_qiraat,
             "irab": a_irab,
-            "shane_nuzul": a_nuzul
+            "irab_covers": irab_covers_map.get(a_num),
+            "shane_nuzul": a_nuzul,
+            "shane_nuzul_covers": nuzul_covers_map.get(a_num)
         }
         ayahs.append(ayah_obj)
 
@@ -567,13 +591,7 @@ def parse_ruku_markdown(md_text, surah_id, ruku_idx, ayah_start, ayah_end, tanzi
         r_audit = audit_results.get("rukus", {}).get(ruku_key, {})
         status = r_audit.get("status", "needs_work")
     else:
-        is_gold = (
-            not bool(re.search(r"\(আয়াত \d+-এর প্রামাণ্য বঙ্গানুবাদ\)", md_text))
-            and "কুরআনিক শব্দরূপ ও আভিধানিক অর্থ" not in md_text
-            and "এই রুকুর আয়াতসমূহের মৌলিক বাক্যগঠন সুস্পষ্ট" not in md_text
-            and all(re.search(rf"(?m)^##\s+(?:{s}|{to_bn(s)})\.", md_text) for s in range(16))
-        )
-        status = "gold" if is_gold else "needs_work"
+        status = "needs_work"
 
     ruku_data = {
         "surah_id": surah_id,
@@ -722,6 +740,14 @@ def build_all_web_data(limit_surahs=None):
                                 a["comparative_tafsir"] = old_a["comparative_tafsir"]
                             if not a.get("irab") and old_a.get("irab"):
                                 a["irab"] = old_a["irab"]
+                            if a.get("comparative_tafsir_covers") is None and old_a.get("comparative_tafsir_covers"):
+                                a["comparative_tafsir_covers"] = old_a["comparative_tafsir_covers"]
+                            if a.get("shane_nuzul_covers") is None and old_a.get("shane_nuzul_covers"):
+                                a["shane_nuzul_covers"] = old_a["shane_nuzul_covers"]
+                            if a.get("jalalayn_covers") is None and old_a.get("jalalayn_covers"):
+                                a["jalalayn_covers"] = old_a["jalalayn_covers"]
+                            if a.get("irab_covers") is None and old_a.get("irab_covers"):
+                                a["irab_covers"] = old_a["irab_covers"]
                 except Exception:
                     pass
             with open(ruku_json_path, "w", encoding="utf-8") as rf:

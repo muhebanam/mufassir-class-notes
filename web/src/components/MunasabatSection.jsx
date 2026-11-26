@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { GitCommit, ArrowUpRight, ArrowDownRight, Compass, BookMarked, ChevronDown, ChevronUp, Sparkles } from 'lucide-react';
+import { toBn } from '../utils/helpers';
 
 export default function MunasabatSection({ munasabat, ayahNumber = null, prevAyah = null, nextAyah = null }) {
   const [isExpanded, setIsExpanded] = useState(true);
@@ -8,13 +9,12 @@ export default function MunasabatSection({ munasabat, ayahNumber = null, prevAya
     return null;
   }
 
-  const toBn = (num) => {
-    const bn = ['০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯'];
-    return String(num).replace(/[0-9]/g, d => bn[d]);
-  };
+  // Check if source explicitly mentions Imam Razi or Tafsir al-Kabir
+  const sourceText = munasabat.source || '';
+  const isRaziSource = /রাযী|رازي|كبير|মাফাতীহ|مفاتيح/i.test(sourceText);
 
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-2xl border border-indigo-100 dark:border-indigo-900/50 p-4 sm:p-5 shadow-xs space-y-3 font-bengali transition-colors">
+    <div id="sec-02-munasabat" className="scroll-mt-36 sm:scroll-mt-44 bg-white dark:bg-gray-800 rounded-2xl border border-indigo-100 dark:border-indigo-900/50 p-4 sm:p-5 shadow-xs space-y-3 font-bengali transition-colors">
       {/* Header bar */}
       <div className="flex items-center justify-between pb-2.5 border-b border-indigo-50 dark:border-indigo-950">
         <div className="flex items-center gap-2">
@@ -23,10 +23,16 @@ export default function MunasabatSection({ munasabat, ayahNumber = null, prevAya
           </div>
           <div>
             <h4 className="font-bold text-sm sm:text-base text-gray-900 dark:text-gray-100 flex items-center gap-1.5">
-              <span>আন্তঃআয়াত সংযোগ ও মুনাসাবাত</span>
-              <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-indigo-50 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 border border-indigo-200/50 dark:border-indigo-800/40">
-                তাফসীরে কাবীর (ইমাম রাযী)
-              </span>
+              <span>০২. আন্তঃআয়াত সংযোগ ও মুনাসাবাত</span>
+              {isRaziSource ? (
+                <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-indigo-50 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 border border-indigo-200/50 dark:border-indigo-800/40">
+                  তাফসীরে কাবীর (ইমাম রাযী)
+                </span>
+              ) : sourceText ? (
+                <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-slate-100 dark:bg-gray-700 text-slate-700 dark:text-gray-300 border border-slate-200 dark:border-gray-600">
+                  {sourceText}
+                </span>
+              ) : null}
             </h4>
             <p className="text-[11px] text-gray-500 dark:text-gray-400">
               কুরআনিক নাযম (نظم القرآن) অনুসারে পূর্বাপর আয়াতের কার্যকারণ ও বিষয়গত সম্পর্ক
@@ -92,8 +98,14 @@ export default function MunasabatSection({ munasabat, ayahNumber = null, prevAya
 
           {/* Source Citation Footer */}
           <div className="text-[10px] text-gray-400 dark:text-gray-500 flex items-center justify-between pt-1">
-            <span>উৎস: তাফসীরে কাবীর (মাফাতীহুল গায়েব) — ইমাম ফখরুদ্দীন আর-রাযী (র.)</span>
-            <span className="italic">ইলমুল মুনাসাবাত ও নাযমুত দুরার</span>
+            <span>
+              {isRaziSource 
+                ? 'উৎস: তাফসীরে কাবীর (মাফাতীহুল গায়েব) — ইমাম ফখরুদ্দীন আর-রাযী (র.)' 
+                : sourceText 
+                  ? `উৎস: ${sourceText}` 
+                  : 'ইলমুল মুনাসাবাত ও নাযমুত তানযীল'}
+            </span>
+            <span className="italic">ইলমুল মুনাসাবাত</span>
           </div>
         </div>
       )}

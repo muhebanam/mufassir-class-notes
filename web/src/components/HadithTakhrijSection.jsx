@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
-import { Bookmark, BookCheck, ShieldCheck, Sparkles, LayoutGrid, Table, Info, BookOpen } from 'lucide-react';
+import { Bookmark, BookCheck, ShieldCheck, Sparkles, LayoutGrid, Table, Info, BookOpen, Layers } from 'lucide-react';
 import MarkdownContent from './MarkdownContent';
 import { parseHadithTakhrij } from '../utils/tafsirTakhrijAdapter';
+import { toBn } from '../utils/helpers';
 
 export default function HadithTakhrijSection({ 
   content, 
   title = null,
   ayahNumber = null,
+  covers = null,
   defaultLayout = 'cards'
 }) {
   const [layoutMode, setLayoutMode] = useState(defaultLayout); // 'cards' or 'table'
@@ -17,15 +19,14 @@ export default function HadithTakhrijSection({
     return null;
   }
 
-  const toBn = (num) => {
-    const bn = ['০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯'];
-    return String(num).replace(/[0-9]/g, d => bn[d]);
-  };
+  // Format covers range badge (e.g., [২, ৩] -> "আয়াত ২–৩-এর যৌথ আলোচনা")
+  const isMultiAyahCover = Array.isArray(covers) && covers.length === 2 && covers[0] !== covers[1];
+  const coversLabel = isMultiAyahCover ? `আয়াত ${toBn(covers[0])}–${toBn(covers[1])}-এর যৌথ আলোচনা` : null;
 
   const dynamicTitle = title || (
     parsed.hasHadith 
-      ? (ayahNumber ? `আয়াত ${toBn(ayahNumber)}-এর শানে নুযূল ও সংশ্লিষ্ট হাদীসের তাখরীজ` : 'শানে নুযূল ও সংশ্লিষ্ট হাদীসের তাখরীজ')
-      : (ayahNumber ? `আয়াত ${toBn(ayahNumber)}-এর শানে নুযূল (নাযিলের ঐতিহাসিক প্রেক্ষাপট)` : 'শানে নুযূল (নাযিলের ঐতিহাসিক প্রেক্ষাপট)')
+      ? (ayahNumber ? `০৬. আয়াত ${toBn(ayahNumber)}-এর শানে নুযূল ও হাদীস তাখরীজ` : '০৬. শানে নুযূল ও সংশ্লিষ্ট হাদীসের তাখরীজ')
+      : (ayahNumber ? `০৬. আয়াত ${toBn(ayahNumber)}-এর শানে নুযূল (নাযিলের ঐতিহাসিক প্রেক্ষাপট)` : '০৬. শানে নুযূল (নাযিলের ঐতিহাসিক প্রেক্ষাপট)')
   );
 
   const getHukmBadge = (grade, rawHukm) => {
@@ -68,15 +69,26 @@ export default function HadithTakhrijSection({
   };
 
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-4 sm:p-6 shadow-xs space-y-4 font-bengali transition-colors">
+    <div 
+      id="sec-06-hadith"
+      className="scroll-mt-36 sm:scroll-mt-44 bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-4 sm:p-6 shadow-xs space-y-4 font-bengali transition-colors"
+    >
       {/* Header bar */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-gray-100 dark:border-gray-700">
         <div className="flex items-center gap-2">
           <Bookmark className="w-5 h-5 text-teal-600 dark:text-teal-400" />
           <div>
-            <h3 className="font-bold text-sm sm:text-base text-gray-900 dark:text-gray-100">
-              {dynamicTitle}
-            </h3>
+            <div className="flex flex-wrap items-center gap-2">
+              <h3 className="font-bold text-sm sm:text-base text-gray-900 dark:text-gray-100">
+                {dynamicTitle}
+              </h3>
+              {coversLabel && (
+                <span className="inline-flex items-center gap-1 text-[11px] font-semibold px-2 py-0.5 rounded-full bg-indigo-50 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 shadow-2xs">
+                  <Layers className="w-3 h-3 text-indigo-500" />
+                  <span>{coversLabel}</span>
+                </span>
+              )}
+            </div>
             {parsed.hasHadith && parsed.realHadiths?.length > 0 && (
               <span className="text-xs text-teal-700 dark:text-teal-400 font-semibold">
                 {toBn(parsed.realHadiths.length)}টি প্রামাণ্য হাদীসের তাখরীজ ও সনদ বিশ্লেষণ
@@ -119,164 +131,100 @@ export default function HadithTakhrijSection({
         )}
       </div>
 
-      {/* Narrative Intro / Context (if present) */}
-      {parsed.narrativeIntro && (
-        <div className="p-3.5 sm:p-4 rounded-xl bg-teal-50/50 dark:bg-teal-950/20 border border-teal-100 dark:border-teal-900/40 text-xs sm:text-sm text-gray-800 dark:text-gray-200 leading-relaxed">
-          <MarkdownContent content={parsed.narrativeIntro} />
+      {/* Narrative Lead Text (আসবাবুন নুযূল / প্রেক্ষাপট বর্ণনা) */}
+      {parsed.narrative && (
+        <div className="prose dark:prose-invert text-xs sm:text-sm text-gray-800 dark:text-gray-200 leading-relaxed bg-teal-50/40 dark:bg-teal-950/20 p-4 rounded-xl border border-teal-100/70 dark:border-teal-900/40">
+          <MarkdownContent content={parsed.narrative} />
         </div>
       )}
 
-      {/* Main Content Area: Cards or Table */}
-      {parsed.hadiths.length > 0 ? (
-        layoutMode === 'cards' ? (
-          /* Cards View */
-          <div className="space-y-4">
-            {parsed.hadiths.map((hItem, idx) => (
-              <div 
-                key={hItem.id || idx}
-                className="rounded-xl border border-gray-200 dark:border-gray-700 p-4 bg-gray-50/40 dark:bg-gray-800/60 shadow-2xs space-y-3"
-              >
-                {/* Card Title & Hukm Badge */}
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-2 border-b border-gray-100 dark:border-gray-700/60">
-                  <h4 className="font-bold text-sm sm:text-base text-gray-900 dark:text-gray-100 flex items-center gap-2">
-                    <span className="w-5 h-5 rounded-full bg-teal-100 dark:bg-teal-900/60 text-teal-800 dark:text-teal-300 text-xs flex items-center justify-center font-mono font-bold">
-                      {toBn(idx + 1)}
-                    </span>
-                    <span>{hItem.title}</span>
-                  </h4>
-                  {getHukmBadge(hItem.hukmGrade, hItem.hukm)}
-                </div>
-
-                {/* Arabic Matn Box */}
-                {hItem.arabicMatn && (
-                  <div 
-                    className="p-3.5 rounded-xl bg-white dark:bg-gray-800 border border-teal-100 dark:border-teal-900/50 text-right leading-[2.2] font-arabic text-base sm:text-lg text-gray-900 dark:text-gray-100 select-text"
-                    dir="rtl"
-                  >
-                    “{hItem.arabicMatn}”
-                  </div>
-                )}
-
-                {/* Takhrij Sources & Book Badges */}
-                <div className="flex flex-wrap items-center gap-1.5 pt-1">
-                  <span className="text-xs font-semibold text-gray-500 dark:text-gray-400">উৎস গ্রন্থ:</span>
-                  {hItem.sources.length > 0 ? (
-                    hItem.sources.map((src, sIdx) => (
-                      <span 
-                        key={sIdx}
-                        className="px-2 py-0.5 rounded-md bg-teal-50 dark:bg-teal-950/40 text-teal-800 dark:text-teal-300 border border-teal-200 dark:border-teal-800 text-xs font-medium"
-                      >
-                        {src}
+      {/* Main Hadith Section: Cards Mode or Table Mode */}
+      {parsed.hadiths.length > 0 && (
+        <>
+          {layoutMode === 'cards' ? (
+            <div className="space-y-4">
+              {parsed.hadiths.map((h, i) => (
+                <div 
+                  key={i} 
+                  className="rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-800/60 p-4 sm:p-5 space-y-3 transition hover:shadow-xs"
+                >
+                  {/* Hadith Top Info */}
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-2.5 border-b border-gray-200/70 dark:border-gray-700/60">
+                    <div className="flex items-center gap-2">
+                      <span className="w-6 h-6 rounded-full bg-teal-600 text-white text-xs font-bold flex items-center justify-center font-mono">
+                        {toBn(i + 1)}
                       </span>
-                    ))
-                  ) : (
-                    <span className="text-xs text-gray-600 dark:text-gray-400 italic">
-                      {hItem.rawTakhrij || 'প্রামাণ্য হাদিস গ্রন্থ'}
-                    </span>
-                  )}
-                  {hItem.numbers && (
-                    <span className="px-2 py-0.5 rounded-md bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs font-mono font-bold">
-                      হাদীস নং {hItem.numbers}
-                    </span>
+                      <h4 className="font-bold text-sm text-gray-900 dark:text-gray-100">
+                        {h.cleanTitle || `হাদীস ${toBn(i + 1)}`}
+                      </h4>
+                    </div>
+
+                    <div className="flex items-center gap-2">
+                      {h.hukm && getHukmBadge(h.grade, h.hukm)}
+                    </div>
+                  </div>
+
+                  {/* Main text & takhrij notes */}
+                  <div className="prose dark:prose-invert text-xs sm:text-sm text-gray-800 dark:text-gray-200 leading-relaxed">
+                    <MarkdownContent content={h.body} />
+                  </div>
+
+                  {/* Hadith Metadata Grid */}
+                  {(h.sourceBook || h.takhrijNote) && (
+                    <div className="pt-2.5 border-t border-gray-200/60 dark:border-gray-700/50 grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                      {h.sourceBook && (
+                        <div className="flex items-center gap-1.5 text-gray-600 dark:text-gray-400">
+                          <BookOpen className="w-3.5 h-3.5 text-teal-600 dark:text-teal-400 shrink-0" />
+                          <span><strong>উৎস:</strong> {h.sourceBook}</span>
+                        </div>
+                      )}
+                      {h.takhrijNote && (
+                        <div className="flex items-center gap-1.5 text-gray-600 dark:text-gray-400">
+                          <BookCheck className="w-3.5 h-3.5 text-teal-600 dark:text-teal-400 shrink-0" />
+                          <span><strong>তাখরীজ:</strong> {h.takhrijNote}</span>
+                        </div>
+                      )}
+                    </div>
                   )}
                 </div>
-
-                {/* Full Takhrij details line if distinct */}
-                {hItem.rawTakhrij && (
-                  <div className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed pt-1 border-t border-gray-100 dark:border-gray-700/40">
-                    <span className="font-semibold text-gray-700 dark:text-gray-300">তাখরীজ বিবরণ: </span>
-                    <MarkdownContent inline content={hItem.rawTakhrij} />
-                  </div>
-                )}
-
-                {/* Explanation / Context */}
-                {hItem.explanation && (
-                  <div className="text-xs sm:text-sm text-gray-800 dark:text-gray-200 leading-relaxed bg-white/70 dark:bg-gray-800/80 p-3 rounded-lg border border-gray-100 dark:border-gray-700">
-                    <span className="font-semibold text-teal-800 dark:text-teal-300">তাৎপর্য ও ব্যাখ্যা: </span>
-                    <MarkdownContent inline content={hItem.explanation} />
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        ) : (
-          /* Structured Table View (Desktop/Tablet) */
-          <div className="overflow-x-auto rounded-xl border border-gray-200 dark:border-gray-700 shadow-2xs">
-            <table className="w-full text-left text-xs sm:text-sm border-collapse">
-              <thead className="bg-teal-50/70 dark:bg-gray-800/90 text-gray-700 dark:text-gray-300 border-b border-gray-200 dark:border-gray-700 font-bengali">
-                <tr>
-                  <th className="px-3 py-2.5 font-bold w-44">শিরোনাম / বর্ণনাকারী</th>
-                  <th className="px-3 py-2.5 font-bold w-48">উৎস কিতাব ও হাদিস নং</th>
-                  <th className="px-3 py-2.5 font-bold text-center w-28">সনদ / হুকুম</th>
-                  <th className="px-3.5 py-2.5 font-bold text-right">হাদীসের মূল পাঠ ও ব্যাখ্যা</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-gray-100 dark:divide-gray-700/60 bg-white dark:bg-gray-800">
-                {parsed.hadiths.map((hItem, idx) => (
-                  <tr key={idx} className="hover:bg-teal-50/30 dark:hover:bg-gray-700/30 transition-colors">
-                    {/* Title */}
-                    <td className="px-3 py-3 align-top font-bold text-gray-900 dark:text-gray-100 font-bengali">
-                      <div className="flex items-center gap-1.5">
-                        <span className="w-4 h-4 rounded-full bg-teal-100 dark:bg-teal-900 text-teal-800 dark:text-teal-300 text-[10px] flex items-center justify-center font-mono">
-                          {toBn(idx + 1)}
-                        </span>
-                        <span>{hItem.title}</span>
-                      </div>
-                    </td>
-
-                    {/* Sources & Numbers */}
-                    <td className="px-3 py-3 align-top text-xs space-y-1 font-bengali">
-                      <div className="flex flex-wrap gap-1">
-                        {hItem.sources.map((s, si) => (
-                          <span key={si} className="px-1.5 py-0.2 rounded bg-teal-50 dark:bg-teal-950/40 text-teal-800 dark:text-teal-300 text-[11px] font-semibold border border-teal-200 dark:border-teal-800">
-                            {s}
-                          </span>
-                        ))}
-                      </div>
-                      {hItem.numbers && (
-                        <div className="font-mono text-gray-600 dark:text-gray-400 text-[11px]">
-                          নং: {hItem.numbers}
-                        </div>
-                      )}
-                    </td>
-
-                    {/* Hukm */}
-                    <td className="px-3 py-3 align-top text-center whitespace-nowrap">
-                      {getHukmBadge(hItem.hukmGrade, hItem.hukm)}
-                    </td>
-
-                    {/* Arabic Text & Explanation */}
-                    <td className="px-3.5 py-3 align-top space-y-2">
-                      {hItem.arabicMatn && (
-                        <div className="font-arabic text-sm text-right leading-relaxed text-gray-900 dark:text-gray-100" dir="rtl">
-                          “{hItem.arabicMatn}”
-                        </div>
-                      )}
-                      {hItem.explanation && (
-                        <div className="text-xs text-gray-700 dark:text-gray-300 leading-relaxed font-bengali border-t border-gray-100 dark:border-gray-700/40 pt-1.5">
-                          {hItem.explanation}
-                        </div>
-                      )}
-                    </td>
+              ))}
+            </div>
+          ) : (
+            /* Table Mode */
+            <div className="overflow-x-auto rounded-xl border border-gray-200 dark:border-gray-700">
+              <table className="w-full text-left text-xs sm:text-sm border-collapse">
+                <thead>
+                  <tr className="bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 font-bold border-b border-gray-200 dark:border-gray-600">
+                    <th className="py-2.5 px-3 w-12 text-center">নং</th>
+                    <th className="py-2.5 px-3 w-40">উৎস গ্রন্থ</th>
+                    <th className="py-2.5 px-3">হাদীস বিবরণ ও সারসংক্ষেপ</th>
+                    <th className="py-2.5 px-3 w-32">হুকুম / মান</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        )
-      ) : null}
-
-      {/* Turath Citation tags footer */}
-      {parsed.citations.length > 0 && (
-        <div className="pt-2 border-t border-gray-100 dark:border-gray-700/60 flex flex-wrap items-center gap-1.5 text-[11px] text-gray-500 dark:text-gray-400">
-          <BookOpen className="w-3.5 h-3.5 text-gray-400" />
-          <span>প্রামাণ্য রেফারেন্স কোড:</span>
-          {parsed.citations.map((c, ci) => (
-            <span key={ci} className="px-1.5 py-0.5 rounded bg-gray-100 dark:bg-gray-700 font-mono text-[10px]">
-              turath:{c.id}{c.page ? ` (পৃ. ${c.page})` : ''}
-            </span>
-          ))}
-        </div>
+                </thead>
+                <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
+                  {parsed.hadiths.map((h, idx) => (
+                    <tr key={idx} className="hover:bg-gray-50/70 dark:hover:bg-gray-750/50 transition">
+                      <td className="py-2.5 px-3 text-center font-mono font-bold text-gray-500">
+                        {toBn(idx + 1)}
+                      </td>
+                      <td className="py-2.5 px-3 font-semibold text-gray-800 dark:text-gray-200">
+                        {h.sourceBook || h.cleanTitle || '—'}
+                      </td>
+                      <td className="py-2.5 px-3 text-gray-700 dark:text-gray-300">
+                        <div className="prose dark:prose-invert line-clamp-3 text-xs">
+                          <MarkdownContent content={h.body} />
+                        </div>
+                      </td>
+                      <td className="py-2.5 px-3">
+                        {getHukmBadge(h.grade, h.hukm)}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+        </>
       )}
     </div>
   );

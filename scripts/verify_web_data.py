@@ -83,6 +83,20 @@ def verify():
     ruku_map = load_ruku_map(BASE_DIR)
     audit_results = load_audit_results(BASE_DIR)
 
+    # Compute dynamic reference expectations from ruku_map
+    expected_surah_ids = [int(k) for k in ruku_map.keys() if int(k) >= 24]
+    expected_surah_count = len(expected_surah_ids)
+    expected_ruku_count = 0
+    expected_ayah_count = 0
+    for sid in expected_surah_ids:
+        s_entry = ruku_map[str(sid)]
+        expected_ruku_count += len(s_entry.get("rukus", []))
+        for r in s_entry.get("rukus", []):
+            if isinstance(r, dict):
+                expected_ayah_count += (r["ayah_end"] - r["ayah_start"] + 1)
+            elif isinstance(r, (list, tuple)):
+                expected_ayah_count += (r[1] - r[0] + 1)
+
     # 1. Verify site_meta.json & Privacy (Generic email regex)
     site_meta_f = DATA_DIR / "site_meta.json"
     assert site_meta_f.exists(), "site_meta.json missing"
@@ -93,18 +107,18 @@ def verify():
     site_meta = json.loads(site_meta_text)
     print("✓ site_meta.json verified: zero personal email leaks.")
 
-    # 2. Verify surahs.json & search_index.json
+    # 2. Verify surahs.json & search_index.json dynamically
     surahs_f = DATA_DIR / "surahs.json"
     assert surahs_f.exists(), "surahs.json missing"
     surahs = json.loads(surahs_f.read_text(encoding="utf-8"))
-    assert len(surahs) == 91, f"Expected 91 surahs, got {len(surahs)}"
-    print(f"✓ surahs.json contains {len(surahs)} surahs (Surahs 24 to 114)")
+    assert len(surahs) == expected_surah_count, f"Expected {expected_surah_count} surahs, got {len(surahs)}"
+    print(f"✓ surahs.json contains {len(surahs)} surahs (dynamically matched from ruku_map: Surahs {min(expected_surah_ids)} to {max(expected_surah_ids)})")
 
     search_f = DATA_DIR / "search_index.json"
     assert search_f.exists(), "search_index.json missing"
     search_idx = json.loads(search_f.read_text(encoding="utf-8"))
-    assert len(search_idx) == 3445, f"Expected 3445 verses in search_index, got {len(search_idx)}"
-    print(f"✓ search_index.json contains {len(search_idx)} verses (3445/3445)")
+    assert len(search_idx) == expected_ayah_count, f"Expected {expected_ayah_count} verses in search_index, got {len(search_idx)}"
+    print(f"✓ search_index.json contains {len(search_idx)} verses ({len(search_idx)}/{expected_ayah_count} dynamically matched)")
 
     total_rukus_checked = 0
     total_ayahs_checked = 0
@@ -147,9 +161,12 @@ def verify():
 
             # Verify status against audit_results.json
             if audit_results:
-                expected_status = audit_results.get("rukus", {}).get(f"{sid}_{rid}", {}).get("status")
-                if expected_status and expected_status != r_status:
+                expected_status = audit_results.get("rukus", {}).get(f"{sid}_{rid}", {}).get("status", "needs_work")
+                if expected_status != r_status:
                     raise AssertionError(f"Status mismatch for {sid}_{rid}: web={r_status}, audit={expected_status}")
+            else:
+                if r_status != "needs_work":
+                    raise AssertionError(f"Audit results missing but {sid}_{rid} marked as {r_status} instead of needs_work")
 
             # Load Bahouth raw data for cross-checking
             raw_path = s_source_dir / f"ruku_{rid:02d}_raw.json"

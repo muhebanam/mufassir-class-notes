@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
-import { BookMarked, ExternalLink, ChevronDown, ChevronUp, Sparkles, BookOpen } from 'lucide-react';
+import { BookMarked, ChevronDown, ChevronUp, Layers } from 'lucide-react';
 import MarkdownContent from './MarkdownContent';
+import TafsirAppMenu from './TafsirAppMenu';
+import { toBn } from '../utils/helpers';
 
 export default function ComparativeTafsirSection({ 
   content, 
   surah = 24, 
   ayahNumber = 1, 
+  covers = null,
   bengaliFontSize = 16 
 }) {
   const [isExpanded, setIsExpanded] = useState(true);
@@ -14,13 +17,15 @@ export default function ComparativeTafsirSection({
     return null;
   }
 
-  const toBn = (num) => {
-    const bn = ['০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯'];
-    return String(num).replace(/[0-9]/g, d => bn[d]);
-  };
+  // Format covers range badge (e.g., [২, ৩] -> "আয়াত ২–৩-এর যৌথ আলোচনা")
+  const isMultiAyahCover = Array.isArray(covers) && covers.length === 2 && covers[0] !== covers[1];
+  const coversLabel = isMultiAyahCover ? `আয়াত ${toBn(covers[0])}–${toBn(covers[1])}-এর যৌথ আলোচনা` : null;
 
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-2xl border border-amber-200/80 dark:border-amber-800/60 p-4 sm:p-5 shadow-xs space-y-3 font-bengali transition-colors">
+    <div 
+      id="sec-05-tafsir"
+      className="scroll-mt-36 sm:scroll-mt-44 bg-white dark:bg-gray-800 rounded-2xl border border-amber-200/80 dark:border-amber-800/60 p-4 sm:p-5 shadow-xs space-y-3 font-bengali transition-colors"
+    >
       {/* Header bar */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 pb-3 border-b border-amber-100 dark:border-amber-900/40">
         <div className="flex items-start sm:items-center gap-2.5">
@@ -30,11 +35,19 @@ export default function ComparativeTafsirSection({
           <div>
             <div className="flex flex-wrap items-center gap-2">
               <h4 className="font-bold text-sm sm:text-base text-gray-900 dark:text-gray-100 flex items-center gap-1.5">
-                <span>তুলনামূলক তাফসীর ও বিশ্লেষণ</span>
+                <span>০৫. তুলনামূলক তাফসীর ও বিশ্লেষণ</span>
                 <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-amber-100/70 dark:bg-amber-950 text-amber-800 dark:text-amber-300 font-bold border border-amber-300/40 dark:border-amber-800/50">
                   আয়াত {toBn(ayahNumber)}
                 </span>
               </h4>
+
+              {/* Multi-Ayah Joint Coverage Badge */}
+              {coversLabel && (
+                <span className="inline-flex items-center gap-1 text-[11px] font-semibold px-2 py-0.5 rounded-full bg-indigo-50 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 shadow-2xs animate-fadeIn">
+                  <Layers className="w-3 h-3 text-indigo-500" />
+                  <span>{coversLabel}</span>
+                </span>
+              )}
             </div>
             <p className="text-[11px] text-gray-500 dark:text-gray-400">
               তাফসীরে কবীর (ইমাম রাযী), জামিউল বায়ান (তাবারী), তাফসীর ইবনে কাসীর ও কুরতুবী
@@ -42,19 +55,9 @@ export default function ComparativeTafsirSection({
           </div>
         </div>
 
-        {/* Right Action: External Tafsir.app Link & Expand Toggle */}
+        {/* Right Action: Enhanced Tafsir.app Dropdown Menu & Expand Toggle */}
         <div className="flex items-center gap-2 self-end sm:self-center">
-          <a
-            href={`https://tafsir.app/${surah}/${ayahNumber}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-1.5 px-2.5 py-1 rounded-xl text-xs font-semibold bg-emerald-50 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 hover:bg-emerald-100 transition shadow-2xs"
-            title="الباحث القرآني (tafsir.app)-এ এই আয়াতের ২৫+ আরবি তাফসীর দেখুন"
-          >
-            <ExternalLink className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
-            <span>الباحث القرآني</span>
-            <span className="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 hidden sm:inline">(tafsir.app)</span>
-          </a>
+          <TafsirAppMenu surah={surah} ayahNumber={ayahNumber} />
 
           <button
             onClick={() => setIsExpanded(!isExpanded)}
