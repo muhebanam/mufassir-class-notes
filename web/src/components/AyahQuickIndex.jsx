@@ -39,12 +39,16 @@ export default function AyahQuickIndex({
 }) {
   const scrollRef = useRef(null);
 
-  // Auto scroll active pill into horizontal view
+  // Auto scroll active pill into horizontal view ONLY (never vertically scroll sticky parent!)
   useEffect(() => {
-    if (scrollRef.current && activeSection) {
-      const activeBtn = scrollRef.current.querySelector(`[data-section="${activeSection}"]`);
+    const container = scrollRef.current;
+    if (container && activeSection) {
+      const activeBtn = container.querySelector(`[data-section="${activeSection}"]`);
       if (activeBtn) {
-        activeBtn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+        const containerRect = container.getBoundingClientRect();
+        const btnRect = activeBtn.getBoundingClientRect();
+        const delta = (btnRect.left - containerRect.left) - (containerRect.width / 2) + (btnRect.width / 2);
+        container.scrollTo({ left: Math.max(0, container.scrollLeft + delta), behavior: 'smooth' });
       }
     }
   }, [activeSection]);

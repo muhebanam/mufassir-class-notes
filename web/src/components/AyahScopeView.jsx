@@ -83,9 +83,11 @@ export default function AyahScopeView({
       setTimeout(() => {
         const el = document.getElementById(sectionId);
         if (el) {
-          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          const offset = window.innerWidth >= 640 ? 195 : 185;
+          const top = el.getBoundingClientRect().top + window.scrollY - offset;
+          window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
         }
-      }, 50);
+      }, 60);
     }
   };
 

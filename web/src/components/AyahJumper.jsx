@@ -5,10 +5,14 @@ export default function AyahJumper({ ayahs, selectedAyah, onSelectAyah }) {
   const scrollRef = useRef(null);
 
   useEffect(() => {
-    if (scrollRef.current && selectedAyah) {
-      const activeEl = scrollRef.current.querySelector(`[data-ayah="${selectedAyah}"]`);
+    const container = scrollRef.current;
+    if (container && selectedAyah) {
+      const activeEl = container.querySelector(`[data-ayah="${selectedAyah}"]`);
       if (activeEl) {
-        activeEl.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+        const containerRect = container.getBoundingClientRect();
+        const elRect = activeEl.getBoundingClientRect();
+        const delta = (elRect.left - containerRect.left) - (containerRect.width / 2) + (elRect.width / 2);
+        container.scrollTo({ left: Math.max(0, container.scrollLeft + delta), behavior: 'smooth' });
       }
     }
   }, [selectedAyah]);
