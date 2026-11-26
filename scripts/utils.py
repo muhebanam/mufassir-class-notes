@@ -47,10 +47,10 @@ def clean_arabic_for_matching(text):
     """
     text = text.replace('\u0670', 'ا')
     text = text.replace('ـ', '')
-    text = re.sub(r'[\u064B-\u065F\u06D6-\u06ED\*\_\`]', '', text)
+    text = re.sub(r'[\u064B-\u065F\u06D6-\u06ED\*\_\`«»"\'\(\)\[\]\{\}]', '', text)
     text = re.sub(r'[ٱآإأءؤئ]', 'ا', text)
     text = text.replace('ة', 'ه').replace('ى', 'ي')
-    return text
+    return text.strip()
 
 def arabic_token_match(word_clean, ayah_tokens):
     """

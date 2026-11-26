@@ -283,7 +283,7 @@ def parse_ruku_markdown(md_text, surah_id, ruku_idx, ayah_start, ayah_end, tanzi
         ayah_tokens = clean_arabic_for_matching(text_uthmani + " " + a_info.get("text_simple", "")).split()
         a_mufradat = []
         for mr in mufradat_rows:
-            w = mr.get('শব্দ') or mr.get('শব্দ (মূল)') or ''
+            w = mr.get('শব্দ') or mr.get('শব্দ (মূল)') or mr.get('আরবি শব্দ') or mr.get('শব্দ / পরিভাষা') or ''
             w_clean = clean_arabic_for_matching(w)
             mr_str = json.dumps(mr, ensure_ascii=False)
             has_explicit = f"{surah_id}:{a_num}" in mr_str or f"{surah_id}:{to_bn(a_num)}" in mr_str

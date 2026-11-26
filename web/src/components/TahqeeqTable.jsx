@@ -10,10 +10,11 @@ export default function TahqeeqTable({ words = [], ayahNumber = null, compact = 
   const filteredWords = useMemo(() => {
     if (!words || !Array.isArray(words)) return [];
     return words.filter(item => {
-      const wText = item.word || item['শব্দ'] || '';
-      const mText = item.meaning_bn || item['আভিধানিক অর্থ ও ভাষাতাত্ত্বিক সূত্র'] || '';
+      const wText = item.word || item['শব্দ'] || item['আরবি শব্দ'] || '';
+      const mText = item.meaning_bn || item['কুরআনিক পরিভাষাগত অর্থ'] || item['মূল অর্থ'] || item['আভিধানিক অর্থ ও ভাষাতাত্ত্বিক সূত্র'] || '';
       const rootText = item.morphology?.root || item['মূলধাতু'] || '';
-      const type = item.word_type || '';
+      const sText = item['সীগা / ওযন'] || item['ব্যুৎপত্তি ও সিগাহ'] || '';
+      const type = item.word_type || (sText.includes('فعل') ? 'فعل' : sText.includes('اسم') ? 'اسم' : sText.includes('حرف') ? 'حرف' : '');
 
       const matchesSearch = !searchTerm || 
         wText.includes(searchTerm) || 
@@ -34,7 +35,7 @@ export default function TahqeeqTable({ words = [], ayahNumber = null, compact = 
   if (!words || words.length === 0) {
     return (
       <div className="text-center py-6 text-gray-500 dark:text-gray-400 font-bengali text-sm italic">
-        এই আয়াতের জন্য বিস্তারিত শাব্দিক তাহকীক লোড হচ্ছে...
+        এই আয়াতের জন্য স্বতন্ত্র শাব্দিক তাহকীক সারণি প্রযোজ্য নয় বা সংকলিত হয়নি।
       </div>
     );
   }
@@ -108,7 +109,7 @@ export default function TahqeeqTable({ words = [], ayahNumber = null, compact = 
                   {/* Arabic Word */}
                   <td className="px-3.5 py-2.5 text-right font-arabic text-base sm:text-lg font-bold text-emerald-800 dark:text-emerald-300 whitespace-nowrap" dir="rtl">
                     <span className="font-arabic leading-relaxed" dir="rtl">
-                      {item.word || item['শব্দ']}
+                      {item.word || item['শব্দ'] || item['আরবি শব্দ']}
                     </span>
                     {item.prefix_suffix_note && (
                       <div className="text-[11px] font-normal text-gray-500 dark:text-gray-400 font-bengali" dir="ltr">
@@ -120,7 +121,7 @@ export default function TahqeeqTable({ words = [], ayahNumber = null, compact = 
                   {/* Meaning & Word Type */}
                   <td className="px-3.5 py-2.5">
                     <div className="font-semibold text-gray-900 dark:text-gray-100">
-                      {item.meaning_bn || item['কুরআনিক পরিভাষাগত অর্থ'] || item['আভিধানিক অর্থ ও ভাষাতাত্ত্বিক সূত্র']}
+                      {item.meaning_bn || item['কুরআনিক পরিভাষাগত অর্থ'] || item['মূল অর্থ'] || item['আভিধানিক অর্থ ও ভাষাতাত্ত্বিক সূত্র']}
                     </div>
                     {item.word_type && (
                       <span className="inline-block mt-1 px-2 py-0.5 rounded text-[11px] font-medium bg-emerald-100 dark:bg-emerald-900/40 text-emerald-800 dark:text-emerald-300 font-arabic" dir="rtl">
@@ -131,7 +132,11 @@ export default function TahqeeqTable({ words = [], ayahNumber = null, compact = 
 
                   {/* Morphology: Sighah, Bahas, Bab */}
                   <td className="px-3.5 py-2.5 text-xs">
-                    {isVerb ? (
+                    {(item['সীগা / ওযন'] || item['ব্যুৎপত্তি ও সিগাহ'] || item['কুরআনিক রূপ ও আবওয়াব']) ? (
+                      <div className="font-arabic text-emerald-800 dark:text-emerald-300 font-semibold text-xs leading-relaxed" dir="rtl">
+                        {item['সীগা / ওযন'] || item['ব্যুৎপত্তি ও সিগাহ'] || item['কুরআনিক রূপ ও আবওয়াব']}
+                      </div>
+                    ) : isVerb ? (
                       <div className="space-y-0.5">
                         <div className="font-arabic text-emerald-700 dark:text-emerald-300 font-semibold" dir="rtl">
                           {morph.sighah} • {morph.bahas}
@@ -168,6 +173,11 @@ export default function TahqeeqTable({ words = [], ayahNumber = null, compact = 
                         {morph.masdar}
                       </div>
                     )}
+                    {(item['কুরআনে মূলধাতুর মোট প্রয়োগ'] || item['কুরআনে পুনরাবৃত্তি (সূরা/কুরআন)']) && (
+                      <div className="text-[10px] text-gray-500 dark:text-gray-400 mt-1 font-mono">
+                        প্রয়োগ: {toBn(item['কুরআনে মূলধাতুর মোট প্রয়োগ'] || item['কুরআনে পুনরাবৃত্তি (সূরা/কুরআন)'])} বার
+                      </div>
+                    )}
                   </td>
 
                   {/* Taleel / Irab / Classical Notes */}
@@ -175,6 +185,11 @@ export default function TahqeeqTable({ words = [], ayahNumber = null, compact = 
                     {item.taleel_or_irab && (
                       <div className="leading-relaxed">
                         {item.taleel_or_irab}
+                      </div>
+                    )}
+                    {item['আভিধানিক অর্থ ও ভাষাতাত্ত্বিক সূত্র'] && (
+                      <div className="text-[11px] text-gray-600 dark:text-gray-300 leading-relaxed">
+                        {item['আভিধানিক অর্থ ও ভাষাতাত্ত্বিক সূত্র']}
                       </div>
                     )}
                     {hasNotes && (
@@ -212,7 +227,7 @@ export default function TahqeeqTable({ words = [], ayahNumber = null, compact = 
               <div className="flex items-start justify-between gap-2">
                 <div>
                   <span className="font-arabic text-lg font-bold text-emerald-800 dark:text-emerald-300" dir="rtl">
-                    {item.word || item['শব্দ']}
+                    {item.word || item['শব্দ'] || item['আরবি শব্দ']}
                   </span>
                   {item.word_type && (
                     <span className="ml-2 px-1.5 py-0.5 rounded text-[10px] font-medium bg-emerald-100 dark:bg-emerald-900/40 text-emerald-800 dark:text-emerald-300 font-arabic" dir="rtl">
@@ -220,7 +235,7 @@ export default function TahqeeqTable({ words = [], ayahNumber = null, compact = 
                     </span>
                   )}
                   <p className="text-xs font-semibold text-gray-900 dark:text-gray-100 mt-0.5">
-                    {item.meaning_bn || item['কুরআনিক পরিভাষাগত অর্থ'] || item['আভিধানিক অর্থ ও ভাষাতাত্ত্বিক সূত্র']}
+                    {item.meaning_bn || item['কুরআনিক পরিভাষাগত অর্থ'] || item['মূল অর্থ'] || item['আভিধানিক অর্থ ও ভাষাতাত্ত্বিক সূত্র']}
                   </p>
                 </div>
                 <span className="w-5 h-5 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-500 text-[10px] font-mono flex items-center justify-center shrink-0">
@@ -235,6 +250,11 @@ export default function TahqeeqTable({ words = [], ayahNumber = null, compact = 
                     মূলবর্ণ: {morph.root || item['মূলধাতু']}
                   </span>
                 )}
+                {(item['সীগা / ওযন'] || item['ব্যুৎপত্তি ও সিগাহ'] || item['কুরআনিক রূপ ও আবওয়াব']) && (
+                  <span className="px-2 py-0.5 rounded-md bg-emerald-50 dark:bg-emerald-950/40 text-emerald-800 dark:text-emerald-300 font-arabic font-medium" dir="rtl">
+                    {item['সীগা / ওযন'] || item['ব্যুৎপত্তি ও সিগাহ'] || item['কুরআনিক রূপ ও আবওয়াব']}
+                  </span>
+                )}
                 {morph.bab && (
                   <span className="px-2 py-0.5 rounded-md bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300">
                     বাব: <strong className="font-arabic">{morph.bab}</strong>
@@ -243,6 +263,11 @@ export default function TahqeeqTable({ words = [], ayahNumber = null, compact = 
                 {morph.jins && (
                   <span className="px-2 py-0.5 rounded-md bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300">
                     জিনস: <strong className="font-arabic">{morph.jins}</strong>
+                  </span>
+                )}
+                {(item['কুরআনে মূলধাতুর মোট প্রয়োগ'] || item['কুরআনে পুনরাবৃত্তি (সূরা/কুরআন)']) && (
+                  <span className="px-2 py-0.5 rounded-md bg-gray-100 dark:bg-gray-700 text-gray-500 font-mono text-[10px]">
+                    প্রয়োগ: {toBn(item['কুরআনে মূলধাতুর মোট প্রয়োগ'] || item['কুরআনে পুনরাবৃত্তি (সূরা/কুরআন)'])} বার
                   </span>
                 )}
               </div>
@@ -262,13 +287,13 @@ export default function TahqeeqTable({ words = [], ayahNumber = null, compact = 
               )}
 
               {/* Taleel & Classical Notes Toggle */}
-              {(item.taleel_or_irab || hasNotes) && (
+              {(item.taleel_or_irab || item['আভিধানিক অর্থ ও ভাষাতাত্ত্বিক সূত্র'] || hasNotes) && (
                 <div>
                   <button
                     onClick={() => setExpandedWordIdx(isExpanded ? null : idx)}
                     className="text-xs font-semibold text-emerald-700 dark:text-emerald-400 flex items-center gap-1 hover:underline"
                   >
-                    <span>{isExpanded ? 'বিশদ ব্যাখ্যা সংক্ষেপ করুন' : 'তালীল ও ক্লাসিক্যাল উদ্ধৃতি দেখুন'}</span>
+                    <span>{isExpanded ? 'বিশদ ব্যাখ্যা সংক্ষেপ করুন' : 'ভাষাতাত্ত্বিক ও ক্লাসিক্যাল তথ্য দেখুন'}</span>
                     {isExpanded ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
                   </button>
 
@@ -278,6 +303,11 @@ export default function TahqeeqTable({ words = [], ayahNumber = null, compact = 
                         <p className="leading-relaxed bg-gray-50 dark:bg-gray-700/40 p-2 rounded">
                           {item.taleel_or_irab}
                         </p>
+                      )}
+                      {item['আভিধানিক অর্থ ও ভাষাতাত্ত্বিক সূত্র'] && (
+                        <div className="bg-gray-50 dark:bg-gray-700/40 p-2 rounded leading-relaxed text-[11px]">
+                          <strong>ভাষাতাত্ত্বিক সূত্র:</strong> {item['আভিধানিক অর্থ ও ভাষাতাত্ত্বিক সূত্র']}
+                        </div>
                       )}
                       {hasNotes && item.classical_notes.map((cn, cIdx) => (
                         <div key={cIdx} className="bg-amber-50/60 dark:bg-amber-950/20 p-2 rounded border border-amber-200/50 dark:border-amber-800/30 text-[11px]">
