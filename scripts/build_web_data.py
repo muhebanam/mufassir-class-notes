@@ -53,6 +53,150 @@ def plain_markdown(md, limit=280):
         return t
     return t[:limit].rsplit(" ", 1)[0] + "…"
 
+
+def parse_surah_intro_metadata(intro_raw, first_ruku_md=""):
+    """
+    Extracts revelation_type, subtitle, and ruku_map_table (ruku_id -> topic summary)
+    from 00_সূরা-পরিচিতি.md (and fallback from ruku-1 header if missing).
+    """
+    revelation_type = ""
+    subtitle = ""
+    ruku_topics_map = {}
+
+    combined_header = (intro_raw[:1500] if intro_raw else "") + "\n" + (first_ruku_md[:1000] if first_ruku_md else "")
+    m_rev = re.search(r'\*\*(?:অবতীর্ণের স্থান|ধরন|সূরার ধরন|নুযূল)\s*:\*\*\s*([^|\n]+)', combined_header)
+    if m_rev:
+        revelation_type = clean_str(re.sub(r'[*`]', '', m_rev.group(1)))
+    else:
+        m_rev2 = re.search(r'(?m)(?:মাক্কী\s*/\s*মাদানী(?:\s*\([^)]+\))?|মাক্কী(?:\s*সূরা)?|মাদানী(?:\s*সূরা)?)', combined_header)
+        if m_rev2:
+            revelation_type = clean_str(m_rev2.group(0))
+
+    if intro_raw:
+        # Extract Section 6 (মাকাসিদুস সূরা) first concise sentence for subtitle
+        m_sec6 = re.search(r'(?m)^##\s*[৬6]\.\s*[^\n]+\n+([\s\S]*?)(?=^##\s*[৭7]\.|\Z)', intro_raw)
+        if m_sec6:
+            sec6_clean = plain_markdown(m_sec6.group(1), limit=180)
+            first_sent = re.split(r'[।\.!?]\s*', sec6_clean)[0].strip()
+            if len(first_sent) >= 20:
+                subtitle = first_sent[:160] + ("…" if len(first_sent) > 160 else "")
+
+        # Extract Section 7 table (রুকুভিত্তিক বিষয়বস্তুর পূর্ণাঙ্গ মানচিত্র)
+        m_sec7 = re.search(r'(?m)^##\s*[৭7]\.\s*[^\n]+\n+([\s\S]*?)(?=^##\s*[৮8]\.|\Z)', intro_raw)
+        if m_sec7:
+            t_start = m_sec7.group(1).find("|")
+            if t_start != -1:
+                rows = parse_markdown_table(m_sec7.group(1)[t_start:])
+                for r in rows:
+                    r_id = None
+                    topic_txt = ""
+                    for k, v in r.items():
+                        if "রুকু" in k and "লিংক" not in k and "ফাইল" not in k:
+                            digits = re.findall(r"\d+", to_en(v))
+                            if digits:
+                                r_id = int(digits[0])
+                        elif "বিষয়" in k or "বিধান" in k or "আলোচ্য" in k:
+                            topic_txt = clean_str(re.sub(r'[*`]', '', v))
+                    if r_id is not None and topic_txt:
+                        ruku_topics_map[r_id] = topic_txt
+
+    return revelation_type, subtitle, ruku_topics_map
+
+
+def extract_ruku_outline(ruku_obj, sec0_raw="", intro_ruku_desc="", ayahs_list=None):
+    """
+    Extracts concise title, summary, and subtopics [{text, ayahs}] for MindMap and SurahScopeView
+    across ANY surah (24-114) without relying on hardcoded Surah 24 data.
+    """
+    ayah_range_bn = ruku_obj.get("ayah_range_bn", "")
+    tt = ruku_obj.get("thematic_topics", {})
+    makasid_content = sec0_raw or tt.get("makasid", {}).get("content", "")
+    makasid_summary = tt.get("makasid", {}).get("summary", "")
+
+    # 1. Summary
+    summary = intro_ruku_desc if (intro_ruku_desc and len(intro_ruku_desc) >= 25) else makasid_summary
+    if not summary:
+        summary = plain_markdown(makasid_content, limit=220)
+
+    # 2. Subtopics from Section 0 bullets (before সিয়াক-সিবাক / নাযম)
+    subtopics = []
+    sec0_pre = re.split(r'(?m)^###\s+.*(?:সিয়াক|নাযম|সংযোগ)', makasid_content)[0]
+    for line in sec0_pre.splitlines():
+        s_line = line.strip()
+        m_item = re.match(r'^(?:[-*]|\d+\.)\s+(?:\*\*([^*]+)\*\*:?\s*(.*)|([^:]+):\s*(.*))$', s_line)
+        if not m_item:
+            continue
+        if m_item.group(1) is not None:
+            head = plain_markdown(m_item.group(1), limit=100).rstrip(':').strip()
+            rest = plain_markdown(m_item.group(2), limit=120)
+        else:
+            head = plain_markdown(m_item.group(3), limit=100).rstrip(':').strip()
+            rest = plain_markdown(m_item.group(4), limit=120)
+
+        if not head or head.startswith(("পূর্ববর্তী", "পরবর্তী", "সূত্র", "নাযমুল")):
+            continue
+        if head in ("কেন্দ্রীয় বক্তব্য", "সারসংক্ষেপ"):
+            continue
+
+        am = re.search(r'\(?\s*(?:আ[য়য]়?াত|آية)\s*([০-৯0-9]+(?:\s*[–—\-ও,]\s*[০-৯0-9]+)*)\s*\)?', head + " " + rest)
+        ayahs_ref = am.group(1).strip() if am else ayah_range_bn
+        clean_head = re.sub(r'\s*\((?:আ[য়য]়?াত|آية)[^)]*\)', '', head).strip()
+        if len(clean_head) < 10 and rest:
+            clean_head = (clean_head + ": " + rest)[:75]
+        subtopics.append({"text": clean_head, "ayahs": ayahs_ref})
+        if len(subtopics) >= 5:
+            break
+
+    # Fallback 2a: from munasabat current_ayah_focus if available
+    if not subtopics and ayahs_list:
+        for a in ayahs_list:
+            mun = a.get("munasabat") or {}
+            focus = mun.get("current_ayah_focus", "")
+            if focus:
+                short_f = re.split(r'[।—\.]', focus)[0].strip()[:75]
+                if short_f:
+                    subtopics.append({"text": short_f, "ayahs": to_bn(a.get("ayah", ""))})
+            if len(subtopics) >= 4:
+                break
+
+    # Fallback 2b: from connections table (sec12)
+    if not subtopics:
+        conn_content = tt.get("connections", {}).get("content", "")
+        t_idx = conn_content.find("|")
+        if t_idx != -1:
+            for row in parse_markdown_table(conn_content[t_idx:]):
+                vals = list(row.values())
+                if vals and vals[0] and "প্রযোজ্য" not in vals[0]:
+                    col0 = plain_markdown(vals[0], limit=80)
+                    am = re.search(r'(?:আ[য়য]়?াত)\s*([০-৯0-9]+(?:\s*[–—\-]\s*[০-৯0-9]+)?)', col0)
+                    a_ref = am.group(1) if am else ayah_range_bn
+                    txt = re.sub(r'\s*\(?(?:আ[য়য]়?াত)\s*[০-৯0-9–—\-]+\)?', '', col0).strip()
+                    if txt:
+                        subtopics.append({"text": txt, "ayahs": a_ref})
+                if len(subtopics) >= 4:
+                    break
+
+    # Fallback 2c: split prose summary into concise thematic clauses
+    if not subtopics and summary:
+        clauses = [c.strip() for c in re.split(r'[।;]', summary) if len(c.strip()) >= 12]
+        for cl in clauses[:3]:
+            subtopics.append({"text": cl[:85] + ("…" if len(cl) > 85 else ""), "ayahs": ayah_range_bn})
+
+    # 3. Title: concise phrase from intro_ruku_desc or summary or first subtopic
+    title_src = intro_ruku_desc or summary or (subtopics[0]["text"] if subtopics else "")
+    # Strip boilerplate prefix like "সূরা আন-নাস (৬ আয়াত...)"
+    title_clean = re.sub(r'^সূরা\s+\S+(?:\s+\([^)]+\))?(?:-এর|-এ|-তে|\s+হলো)?\s*', '', title_src).strip()
+    if len(title_clean) < 15:
+        title_clean = title_src
+    # Split only on sentence/major clause boundaries (not commas inside parentheses)
+    first_clause = re.split(r'[।;—:]', title_clean)[0].strip()
+    if len(first_clause) > 68:
+        first_clause = first_clause[:68].rsplit(" ", 1)[0].rstrip(",، ") + "…"
+    if len(first_clause) < 12 and subtopics:
+        first_clause = subtopics[0]["text"][:68]
+
+    return first_clause, summary, subtopics
+
 def parse_section_ayah_subsections(sec_text, ruku_ayah_texts, ayah_start=None, ayah_end=None, fallback_to_whole=False, return_covers=False):
     """
     Universal Ayah Subsection Mapper.
@@ -306,20 +450,25 @@ def parse_ruku_markdown(md_text, surah_id, ruku_idx, ayah_start, ayah_end, tanzi
     ruku_ayah_texts = {a: tanzil.get((surah_id, a), "") for a in range(ayah_start, ayah_end + 1)}
 
     # Check if section 5 is split into Comparative and Jalalayn subsections
-    # Common pattern: ### ক. তুলনামূলক তাফসীর ... ### খ. তাফসীরুল জালালাইন ...
-    parts = re.split(r"(?m)^###\s*.*জালালাইন[^\n]*\n", sec5_text)
-    if len(parts) >= 2:
-        comp_part = parts[0]
-        jalal_part = parts[1]
+    # Handles both orders: Comparative -> Jalalayn AND Jalalayn -> Comparative
+    h3_chunks = re.split(r"(?m)(?=^###\s+)", sec5_text)
+    jalal_chunks = []
+    comp_chunks = []
+    has_h3 = any(c.lstrip().startswith("### ") for c in h3_chunks)
+    if has_h3:
+        for chunk in h3_chunks:
+            if not chunk.strip():
+                continue
+            first_line = chunk.splitlines()[0]
+            if first_line.startswith("### ") and "জালালাইন" in first_line:
+                jalal_chunks.append(chunk)
+            elif first_line.startswith("### "):
+                comp_chunks.append(chunk)
+        jalal_part = "\n\n".join(jalal_chunks) if jalal_chunks else sec5_text
+        comp_part = "\n\n".join(comp_chunks) if comp_chunks else sec5_text
     else:
-        # Check reverse order: ### ক. জালালাইন ... ### খ. তুলনামূলক তাফসীর ...
-        parts_rev = re.split(r"(?m)^###\s*.*তুলনামূলক[^\n]*\n", sec5_text)
-        if len(parts_rev) >= 2:
-            jalal_part = parts_rev[0]
-            comp_part = parts_rev[1]
-        else:
-            comp_part = sec5_text
-            jalal_part = sec5_text
+        comp_part = sec5_text
+        jalal_part = sec5_text
 
     # 5a. Extract Jalalayn map from jalal_part
     j_matches = list(re.finditer(r"(?m)^[\s\-*]+\*\*আয়াত\s+([০-৯\d\s–—\-]+)[^:]*:\*\*\s*(?:[^\n]*\n+)?([\s\S]*?)(?=^[\s\-*]+\*\*আয়াত|^#{2,4}\s|^---|\Z)", jalal_part))
@@ -648,6 +797,7 @@ def build_all_web_data(limit_surahs=None):
         num_r = len(rukus)
 
         intro_file = s_dir / "00_সূরা-পরিচিতি.md"
+        intro_raw = ""
         intro_content = ""
         if intro_file.exists():
             intro_raw = unicodedata.normalize('NFC', intro_file.read_text(encoding="utf-8"))
@@ -666,11 +816,23 @@ def build_all_web_data(limit_surahs=None):
             else:
                 ayah_count = 0
 
+        # Peek first ruku markdown for header fallback if intro_raw lacks revelation_type/subtitle
+        first_ruku_md = ""
+        for p_pat in [f"রুকু-০১_*.md", f"রুকু-01_*.md", f"রুকু-1_*.md"]:
+            m_f = list(s_dir.glob(p_pat))
+            if m_f:
+                first_ruku_md = unicodedata.normalize('NFC', m_f[0].read_text(encoding="utf-8"))
+                break
+
+        revelation_type, subtitle, ruku_topics_map = parse_surah_intro_metadata(intro_raw, first_ruku_md)
+
         surah_meta = {
             "id": sid,
             "id_bn": to_bn(sid),
             "name_ar": s_info.get("name_ar", ""),
             "name_bn": s_info.get("name_bn", ""),
+            "revelation_type": revelation_type,
+            "subtitle": subtitle,
             "ayah_count": ayah_count,
             "ayah_count_bn": to_bn(ayah_count),
             "ruku_count": num_r,
@@ -717,41 +879,76 @@ def build_all_web_data(limit_surahs=None):
             ruku_obj = parse_ruku_markdown(md_text, sid, r_idx, a_start, a_end, tanzil, s_dir=s_dir, audit_results=audit_results)
 
             # Save ruku json with non-destructive preservation of enriched academic data
+            # Also load durable enrichments from _sources/ruku_XX_enrichments.json if present
+            enrichments_path = s_dir / "_sources" / f"ruku_{r_idx:02d}_enrichments.json"
+            source_enrich_map = {}
+            if enrichments_path.exists():
+                try:
+                    enrich_data = json.loads(enrichments_path.read_text(encoding="utf-8"))
+                    for ea in enrich_data.get("ayahs", []):
+                        enum = ea.get("ayah") or ea.get("number")
+                        if enum is not None:
+                            source_enrich_map[int(enum)] = ea
+                except Exception:
+                    pass
+
             ruku_json_path = surah_data_dir / f"ruku-{r_idx}.json"
+            old_ayah_map = {}
             if ruku_json_path.exists():
                 try:
                     old_data = json.loads(ruku_json_path.read_text(encoding="utf-8"))
                     old_ayah_map = {a.get("ayah") or a.get("number"): a for a in old_data.get("ayahs", [])}
-                    for a in ruku_obj["ayahs"]:
-                        num = a.get("ayah") or a.get("number")
-                        if num in old_ayah_map:
-                            old_a = old_ayah_map[num]
-                            if "tahqeeq" in old_a and old_a["tahqeeq"] and isinstance(old_a["tahqeeq"], list):
-                                a["tahqeeq"] = old_a["tahqeeq"]
-                            if "munasabat" in old_a and old_a["munasabat"]:
-                                a["munasabat"] = old_a["munasabat"]
-                            if not a.get("translation") and old_a.get("translation"):
-                                a["translation"] = old_a["translation"]
-                            if not a.get("shane_nuzul") and old_a.get("shane_nuzul"):
-                                a["shane_nuzul"] = old_a["shane_nuzul"]
-                            if not a.get("jalalayn") and old_a.get("jalalayn"):
-                                a["jalalayn"] = old_a["jalalayn"]
-                            if not a.get("comparative_tafsir") and old_a.get("comparative_tafsir"):
-                                a["comparative_tafsir"] = old_a["comparative_tafsir"]
-                            if not a.get("irab") and old_a.get("irab"):
-                                a["irab"] = old_a["irab"]
-                            if a.get("comparative_tafsir_covers") is None and old_a.get("comparative_tafsir_covers"):
-                                a["comparative_tafsir_covers"] = old_a["comparative_tafsir_covers"]
-                            if a.get("shane_nuzul_covers") is None and old_a.get("shane_nuzul_covers"):
-                                a["shane_nuzul_covers"] = old_a["shane_nuzul_covers"]
-                            if a.get("jalalayn_covers") is None and old_a.get("jalalayn_covers"):
-                                a["jalalayn_covers"] = old_a["jalalayn_covers"]
-                            if a.get("irab_covers") is None and old_a.get("irab_covers"):
-                                a["irab_covers"] = old_a["irab_covers"]
                 except Exception:
                     pass
+
+            for a in ruku_obj["ayahs"]:
+                num = a.get("ayah") or a.get("number")
+                enrich_a = source_enrich_map.get(num, {})
+                old_a = old_ayah_map.get(num, {})
+                if enrich_a.get("tahqeeq") and isinstance(enrich_a["tahqeeq"], list):
+                    a["tahqeeq"] = enrich_a["tahqeeq"]
+                elif "tahqeeq" in old_a and old_a["tahqeeq"] and isinstance(old_a["tahqeeq"], list):
+                    a["tahqeeq"] = old_a["tahqeeq"]
+                if enrich_a.get("munasabat"):
+                    a["munasabat"] = enrich_a["munasabat"]
+                elif "munasabat" in old_a and old_a["munasabat"]:
+                    a["munasabat"] = old_a["munasabat"]
+                if not a.get("translation") and old_a.get("translation"):
+                    a["translation"] = old_a["translation"]
+                if not a.get("shane_nuzul") and old_a.get("shane_nuzul"):
+                    a["shane_nuzul"] = old_a["shane_nuzul"]
+                if not a.get("jalalayn") and old_a.get("jalalayn"):
+                    a["jalalayn"] = old_a["jalalayn"]
+                if not a.get("comparative_tafsir") and old_a.get("comparative_tafsir"):
+                    a["comparative_tafsir"] = old_a["comparative_tafsir"]
+                if not a.get("irab") and old_a.get("irab"):
+                    a["irab"] = old_a["irab"]
+                if a.get("comparative_tafsir_covers") is None and old_a.get("comparative_tafsir_covers"):
+                    a["comparative_tafsir_covers"] = old_a["comparative_tafsir_covers"]
+                if a.get("shane_nuzul_covers") is None and old_a.get("shane_nuzul_covers"):
+                    a["shane_nuzul_covers"] = old_a["shane_nuzul_covers"]
+                if a.get("jalalayn_covers") is None and old_a.get("jalalayn_covers"):
+                    a["jalalayn_covers"] = old_a["jalalayn_covers"]
+                if a.get("irab_covers") is None and old_a.get("irab_covers"):
+                    a["irab_covers"] = old_a["irab_covers"]
             with open(ruku_json_path, "w", encoding="utf-8") as rf:
                 json.dump(ruku_obj, rf, ensure_ascii=False, indent=2)
+
+            # Extract structured title, summary & subtopics for SurahScopeView + MindMap
+            m_sec0_raw = re.search(r'(?m)^##\s*[০0]\.\s*[^\n]+\n+([\s\S]*?)(?=^##\s*[১1]\.|\Z)', md_text)
+            sec0_raw_text = m_sec0_raw.group(1).strip() if m_sec0_raw else ""
+            r_title, r_summary, r_subtopics = extract_ruku_outline(
+                ruku_obj,
+                sec0_raw=sec0_raw_text,
+                intro_ruku_desc=ruku_topics_map.get(r_idx, ""),
+                ayahs_list=ruku_obj.get("ayahs", [])
+            )
+
+            # Fallback surah subtitle from Ruku 1 summary if Section 6 was missing
+            if r_idx == 1 and not surah_meta.get("subtitle") and r_summary:
+                first_s = re.split(r'[।\.!?]\s*', r_summary)[0].strip()
+                if len(first_s) >= 20:
+                    surah_meta["subtitle"] = first_s[:160] + ("…" if len(first_s) > 160 else "")
 
             # Record in surah_meta
             surah_meta["rukus"].append({
@@ -761,7 +958,10 @@ def build_all_web_data(limit_surahs=None):
                 "ayah_start": a_start,
                 "ayah_end": a_end,
                 "ayah_range_bn": f"{to_bn(a_start)}–{to_bn(a_end)}",
-                "ayah_count": a_end - a_start + 1
+                "ayah_count": a_end - a_start + 1,
+                "title": r_title,
+                "summary": r_summary,
+                "subtopics": r_subtopics
             })
 
             # Add to search index (with harakat-free text_plain for smart instant search)

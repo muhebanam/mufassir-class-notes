@@ -126,35 +126,47 @@ export default function MindMap({
 
   const colors = ['emerald', 'blue', 'teal', 'indigo', 'amber', 'cyan', 'rose', 'violet'];
 
-  // Dynamic nodes: If Surah 24, use detailed curated nodes; otherwise generate from surahMeta/surahInfo rukus
-  const isSurah24 = (surahInfo?.id === 24 || (!surahInfo && !surahMeta));
-  const rawRukus = surahMeta?.rukus || surahInfo?.rukus || [];
-
-  const thematicNodes = isSurah24
-    ? SURAH_24_THEMATIC_NODES
-    : (rawRukus.length > 0
-        ? rawRukus.map((r, idx) => {
-            const rId = r.ruku_id || (idx + 1);
-            const aStart = r.ayah_start || (Array.isArray(r) ? r[0] : 1);
-            const aEnd = r.ayah_end || (Array.isArray(r) ? r[1] : 1);
-            const aRangeBn = r.ayah_range_bn || `${toBn(aStart)}–${toBn(aEnd)}`;
-            return {
-              ruku_id: rId,
-              title: `রুকু ${toBn(rId)}: আয়াত ${aRangeBn}`,
-              ayah_range: aRangeBn,
-              color: colors[idx % colors.length],
-              subtopics: [
-                { text: `আয়াত ${aRangeBn}-এর বিষয়বস্তু ও পর্যালোচনা`, ayahs: aRangeBn }
-              ]
-            };
-          })
-        : SURAH_24_THEMATIC_NODES
-      );
-
   const surahName = surahInfo?.name_bn || surahMeta?.name_bn || 'আন-নূর';
   const surahId = surahInfo?.id || surahMeta?.id || 24;
+  const rawRukus = surahMeta?.rukus || surahInfo?.rukus || [];
+  const isSurah24 = (surahId === 24);
+
+  const thematicNodes = rawRukus.length > 0
+    ? rawRukus.map((r, idx) => {
+        const rId = r.ruku_id || (idx + 1);
+        const aStart = r.ayah_start || (Array.isArray(r) ? r[0] : 1);
+        const aEnd = r.ayah_end || (Array.isArray(r) ? r[1] : 1);
+        const aRangeBn = r.ayah_range_bn || `${toBn(aStart)}–${toBn(aEnd)}`;
+
+        // For Surah 24, keep curated nodes as rich enhancement if present
+        const curated24 = isSurah24 ? SURAH_24_THEMATIC_NODES.find(n => n.ruku_id === rId) : null;
+        const subtopics = curated24?.subtopics
+          ? curated24.subtopics
+          : ((Array.isArray(r.subtopics) && r.subtopics.length > 0)
+              ? r.subtopics
+              : [{ text: r.summary || `আয়াত ${aRangeBn}-এর বিষয়বস্তু ও পর্যালোচনা`, ayahs: aRangeBn }]);
+
+        const title = curated24?.title || r.title || `রুকু ${toBn(rId)}: আয়াত ${aRangeBn}`;
+
+        return {
+          ruku_id: rId,
+          title,
+          ayah_range: curated24?.ayah_range || aRangeBn,
+          color: curated24?.color || colors[idx % colors.length],
+          subtopics
+        };
+      })
+    : (isSurah24 ? SURAH_24_THEMATIC_NODES : []);
+
   const rukuCount = surahInfo?.ruku_count || surahMeta?.ruku_count || thematicNodes.length;
   const ayahCount = surahInfo?.ayah_count || surahMeta?.ayah_count || 0;
+
+  // Responsive desktop grid columns based on ruku count
+  const desktopGridClass = thematicNodes.length === 1
+    ? 'grid-cols-1 max-w-xl mx-auto'
+    : thematicNodes.length === 2
+      ? 'grid-cols-2 max-w-4xl mx-auto'
+      : 'grid-cols-3';
 
   return (
     <div className="w-full bg-white dark:bg-gray-800/90 rounded-2xl border border-gray-200 dark:border-gray-700 p-4 sm:p-6 shadow-xs layout-safe">
@@ -198,13 +210,24 @@ export default function MindMap({
 
           {/* SVG Connector Lines */}
           <svg className="w-full h-12 -my-4 pointer-events-none" viewBox="0 0 900 48" preserveAspectRatio="none">
-            <path d="M 450,0 C 450,24 150,24 150,48" fill="none" stroke="currentColor" strokeWidth="2" className="text-emerald-300 dark:text-emerald-700/60" strokeDasharray="4 4" />
-            <path d="M 450,0 C 450,24 450,24 450,48" fill="none" stroke="currentColor" strokeWidth="2" className="text-emerald-500 dark:text-emerald-600" />
-            <path d="M 450,0 C 450,24 750,24 750,48" fill="none" stroke="currentColor" strokeWidth="2" className="text-emerald-300 dark:text-emerald-700/60" strokeDasharray="4 4" />
+            {thematicNodes.length >= 3 && (
+              <>
+                <path d="M 450,0 C 450,24 150,24 150,48" fill="none" stroke="currentColor" strokeWidth="2" className="text-emerald-300 dark:text-emerald-700/60" strokeDasharray="4 4" />
+                <path d="M 450,0 C 450,24 750,24 750,48" fill="none" stroke="currentColor" strokeWidth="2" className="text-emerald-300 dark:text-emerald-700/60" strokeDasharray="4 4" />
+              </>
+            )}
+            {thematicNodes.length === 2 ? (
+              <>
+                <path d="M 450,0 C 450,24 270,24 270,48" fill="none" stroke="currentColor" strokeWidth="2" className="text-emerald-400 dark:text-emerald-700" strokeDasharray="4 4" />
+                <path d="M 450,0 C 450,24 630,24 630,48" fill="none" stroke="currentColor" strokeWidth="2" className="text-emerald-400 dark:text-emerald-700" strokeDasharray="4 4" />
+              </>
+            ) : (
+              <path d="M 450,0 C 450,24 450,24 450,48" fill="none" stroke="currentColor" strokeWidth="2" className="text-emerald-500 dark:text-emerald-600" />
+            )}
           </svg>
 
-          {/* 3-Column Thematic Grid of Rukus */}
-          <div className="grid grid-cols-3 gap-4">
+          {/* Thematic Grid of Rukus */}
+          <div className={`grid gap-4 ${desktopGridClass}`}>
             {thematicNodes.map((r) => {
               const isActive = r.ruku_id === currentRuku;
               return (
@@ -252,9 +275,11 @@ export default function MindMap({
                       <div key={sIdx} className="flex items-start gap-1.5 leading-snug">
                         <span className="text-emerald-600 dark:text-emerald-400 mt-0.5">•</span>
                         <span className="flex-1">{st.text}</span>
-                        <span className="text-[11px] font-mono text-gray-400 dark:text-gray-500 whitespace-nowrap">
-                          [{st.ayahs}]
-                        </span>
+                        {st.ayahs && (
+                          <span className="text-[11px] font-mono text-gray-400 dark:text-gray-500 whitespace-nowrap">
+                            [{st.ayahs}]
+                          </span>
+                        )}
                       </div>
                     ))}
                   </div>
@@ -331,9 +356,11 @@ export default function MindMap({
                     {r.subtopics.map((st, sIdx) => (
                       <div key={sIdx} className="text-xs font-bengali text-gray-700 dark:text-gray-300 flex items-start justify-between gap-2">
                         <span>{st.text}</span>
-                        <span className="font-mono text-[11px] text-gray-400 shrink-0">
-                          (আয়াত {st.ayahs})
-                        </span>
+                        {st.ayahs && (
+                          <span className="font-mono text-[11px] text-gray-400 shrink-0">
+                            (আয়াত {st.ayahs})
+                          </span>
+                        )}
                       </div>
                     ))}
                   </div>
