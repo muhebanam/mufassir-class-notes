@@ -112,8 +112,8 @@ export function parseWordByWord(ayah) {
   if (tahqeeqList.length > 0) {
     const words = tahqeeqList.map((t, i) => ({
       id: i + 1,
-      arabic: t.word || t['শব্দ'] || '',
-      meaning_bn: t.meaning_bn || t['কুরআনিক পরিভাষাগত অর্থ'] || t['আভিধানিক অর্থ ও ভাষাতাত্ত্বিক সূত্র'] || '',
+      arabic: (t.word || t['শব্দ'] || t['আরবি শব্দ'] || '').replace(/\*/g, '').trim(),
+      meaning_bn: t.meaning_bn || t['কুরআনিক পরিভাষাগত অর্থ'] || t['মূল অর্থ'] || t['আভিধানিক অর্থ ও ভাষাতাত্ত্বিক সূত্র'] || '',
       pos: t.word_type || null,
       root: t.morphology?.root || null,
       hasDeepTahqeeq: true,

@@ -26,6 +26,8 @@ export function parseJalalayn(rawText, ayahText = '') {
     return {
       hasContent: false,
       scholar: 'ইমাম জালালুদ্দীন আল-মাহাল্লী ও আস-সুয়ূতী',
+      arabicMatn: '',
+      bengaliSharh: '',
       arabicTerms: [],
       cleanSharh: '',
       rawContent: ''
@@ -42,26 +44,43 @@ export function parseJalalayn(rawText, ayahText = '') {
     scholar = 'ইমাম জালালুদ্দীন আস-সুয়ূতী (র.)';
   }
 
-  // 2. Extract Classical Arabic Terms enclosed in «...» or brackets
-  const arabicTerms = [];
-  const bracketMatches = str.matchAll(/«([^»]+)»/g);
-  for (const m of bracketMatches) {
-    if (m[1] && m[1].trim() && !arabicTerms.includes(m[1].trim())) {
-      arabicTerms.push(m[1].trim());
-    }
+  // 2. Extract Authentic Arabic Matn of Tafsir al-Jalalayn
+  let arabicMatn = '';
+  const matnMatch = str.match(/«([\s\S]*?)»/);
+  if (matnMatch) {
+    arabicMatn = matnMatch[1].replace(/\[src:[^\]]+\]/g, '').trim();
   }
 
-  // 3. Clean Sharh (strip leading label if redundant, preserve markdown)
-  let cleanSharh = str
-    .replace(/^>\s*\*\*ব্যাখ্যা:\*\*\s*/, '')
-    .replace(/^-\s*\*শরহ:\*\s*/, '')
-    .trim();
+  // 3. Extract Bengali Translation & Commentary (Sharh)
+  let bengaliSharh = '';
+  const bnMatch = str.match(/(?:-\s+\*\*(?:বঙ্গানুবাদ|টীকা|ব্যাখ্যা|অনুবাদ)[^*]*\*\*[:\s]*)([\s\S]+)/);
+  if (bnMatch) {
+    bengaliSharh = bnMatch[1].replace(/\[src:[^\]]+\]/g, '').trim();
+  } else {
+    bengaliSharh = str.replace(/>\s*«[\s\S]*?»(?:\s*\[src:[^\]]+\])?/, '').trim();
+  }
+
+  // 4. Extract individual terms if any
+  const arabicTerms = [];
+  if (arabicMatn) {
+    const terms = arabicMatn.match(/﴿([^﴾]+)﴾/g);
+    if (terms) {
+      terms.forEach(t => {
+        const cleanT = t.replace(/[﴿﴾]/g, '').trim();
+        if (cleanT && !arabicTerms.includes(cleanT)) {
+          arabicTerms.push(cleanT);
+        }
+      });
+    }
+  }
 
   return {
     hasContent: true,
     scholar,
+    arabicMatn,
+    bengaliSharh,
     arabicTerms,
-    cleanSharh,
+    cleanSharh: bengaliSharh || str,
     rawContent: str
   };
 }
@@ -209,6 +228,9 @@ export function parseHadithTakhrij(rawText) {
       }
     }
 
+    const isRealHadith = !!(arabicMatn || rawTakhrij || detectedSources.length > 0 || numbers || hukm);
+    const isNuzul = cleanChunk.includes('শানে নুযূল') || cleanChunk.includes('নাযিল') || cleanChunk.includes('প্রেক্ষাপট') || cleanChunk.includes('আসবাব');
+
     hadiths.push({
       id: `hadith-${idx}`,
       title,
@@ -219,14 +241,23 @@ export function parseHadithTakhrij(rawText) {
       hukm,
       hukmGrade,
       explanation,
+      isRealHadith,
+      isNuzul,
       rawItem: cleanChunk
     });
   });
+
+  const realHadiths = hadiths.filter(h => h.isRealHadith);
+  const nuzulItems = hadiths.filter(h => h.isNuzul || !h.isRealHadith);
 
   return {
     isEmpty: false,
     narrativeIntro,
     hadiths,
+    realHadiths,
+    nuzulItems,
+    hasHadith: realHadiths.length > 0,
+    hasNuzul: nuzulItems.length > 0 || !!narrativeIntro,
     citations
   };
 }

@@ -97,30 +97,38 @@ export default function JalalaynView({
         </div>
       )}
 
-      {/* 3. Layer 2: Jalalayn Arabic Keywords & Terminology Chips */}
-      {(viewMode === 'combined' || viewMode === 'jalalayn_only') && parsed.arabicTerms.length > 0 && (
-        <div className="flex flex-wrap items-center gap-2 p-2.5 rounded-xl bg-amber-50/50 dark:bg-amber-950/20 border border-amber-200/60 dark:border-amber-800/40">
-          <span className="text-xs font-bold text-amber-900 dark:text-amber-300 flex items-center gap-1">
-            <Sparkles className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400" />
-            <span>জালালাইনে আলোচিত মূল আরবি শব্দাবলি:</span>
-          </span>
-          <div className="flex flex-wrap gap-1.5" dir="rtl">
-            {parsed.arabicTerms.map((term, tIdx) => (
-              <span 
-                key={tIdx}
-                className="font-arabic font-bold text-sm px-2.5 py-0.5 rounded-lg bg-white dark:bg-gray-800 text-amber-900 dark:text-amber-200 border border-amber-200 dark:border-amber-700 shadow-2xs"
-                dir="rtl"
-              >
-                «{term}»
-              </span>
-            ))}
+      {/* 3. Layer 2: Tafsir al-Jalalayn Authentic Arabic Matn (متن تفسير الجلالين) */}
+      {(viewMode === 'combined' || viewMode === 'jalalayn_only') && parsed.arabicMatn && (
+        <div className="p-4 sm:p-5 rounded-2xl bg-amber-50/50 dark:bg-amber-950/20 border border-amber-200/70 dark:border-amber-800/50 space-y-2.5">
+          <div className="flex items-center justify-between text-xs font-semibold text-amber-900 dark:text-amber-300 pb-2 border-b border-amber-200/50 dark:border-amber-800/40">
+            <span className="flex items-center gap-1.5 font-bengali">
+              <BookMarked className="w-4 h-4 text-amber-600 dark:text-amber-400" />
+              <span>তাফসীরুল জালালাইন: মূল আরবি ইবারত (متن تفسير الجلالين)</span>
+            </span>
+            <span className="text-[11px] font-arabic font-bold" dir="rtl">
+              {parsed.scholar}
+            </span>
+          </div>
+
+          {/* Right-to-Left Authentic Arabic Text with Quranic Typography */}
+          <div 
+            className="font-quran text-right leading-[2.3] text-gray-900 dark:text-gray-100 select-text p-1 tracking-wide"
+            dir="rtl"
+            style={{ fontSize: `${arabicFontSize - 2}px` }}
+          >
+            {normalizeQuranBrackets(parsed.arabicMatn)}
           </div>
         </div>
       )}
 
-      {/* 4. Layer 3: Jalalayn Bengali Explanation & Sharh */}
+      {/* 4. Layer 3: Jalalayn Full Bengali Translation & Sharh (পূর্ণাঙ্গ বঙ্গানুবাদ ও ব্যাখ্যা) */}
       {(viewMode === 'combined' || viewMode === 'jalalayn_only') && (
-        <div>
+        <div className="p-4 sm:p-5 rounded-2xl bg-white dark:bg-gray-800/90 border border-gray-200 dark:border-gray-700 shadow-2xs space-y-3">
+          <div className="flex items-center gap-2 pb-2 border-b border-gray-100 dark:border-gray-700 text-xs font-bold text-gray-900 dark:text-gray-100 font-bengali">
+            <Sparkles className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+            <span>জালালাইন ইবারতের পূর্ণাঙ্গ বঙ্গানুবাদ ও বিশ্লেষণ:</span>
+          </div>
+
           {parsed.hasContent ? (
             <div 
               className="prose font-bengali leading-relaxed text-gray-800 dark:text-gray-200 space-y-2"

@@ -602,6 +602,18 @@ def build_all_web_data(limit_surahs=None):
 
             # Save ruku json
             ruku_json_path = surah_data_dir / f"ruku-{r_idx}.json"
+            if ruku_json_path.exists():
+                try:
+                    old_data = json.loads(ruku_json_path.read_text(encoding="utf-8"))
+                    old_ayah_map = {a.get("ayah") or a.get("number"): a for a in old_data.get("ayahs", [])}
+                    for a in ruku_obj["ayahs"]:
+                        num = a.get("ayah") or a.get("number")
+                        if num in old_ayah_map and "tahqeeq" in old_ayah_map[num] and old_ayah_map[num]["tahqeeq"]:
+                            a["tahqeeq"] = old_ayah_map[num]["tahqeeq"]
+                        if num in old_ayah_map and "munasabat" in old_ayah_map[num] and old_ayah_map[num]["munasabat"]:
+                            a["munasabat"] = old_ayah_map[num]["munasabat"]
+                except Exception:
+                    pass
             with open(ruku_json_path, "w", encoding="utf-8") as rf:
                 json.dump(ruku_obj, rf, ensure_ascii=False, indent=2)
 

@@ -5,7 +5,8 @@ import { parseHadithTakhrij } from '../utils/tafsirTakhrijAdapter';
 
 export default function HadithTakhrijSection({ 
   content, 
-  title = "শানে নুযূল ও সংশ্লিষ্ট হাদীসের তাখরীজ",
+  title = null,
+  ayahNumber = null,
   defaultLayout = 'cards'
 }) {
   const [layoutMode, setLayoutMode] = useState(defaultLayout); // 'cards' or 'table'
@@ -20,6 +21,12 @@ export default function HadithTakhrijSection({
     const bn = ['০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯'];
     return String(num).replace(/[0-9]/g, d => bn[d]);
   };
+
+  const dynamicTitle = title || (
+    parsed.hasHadith 
+      ? (ayahNumber ? `আয়াত ${toBn(ayahNumber)}-এর শানে নুযূল ও সংশ্লিষ্ট হাদীসের তাখরীজ` : 'শানে নুযূল ও সংশ্লিষ্ট হাদীসের তাখরীজ')
+      : (ayahNumber ? `আয়াত ${toBn(ayahNumber)}-এর শানে নুযূল (নাযিলের ঐতিহাসিক প্রেক্ষাপট)` : 'শানে নুযূল (নাযিলের ঐতিহাসিক প্রেক্ষাপট)')
+  );
 
   const getHukmBadge = (grade, rawHukm) => {
     if (grade === 'sahih') {
@@ -68,11 +75,16 @@ export default function HadithTakhrijSection({
           <Bookmark className="w-5 h-5 text-teal-600 dark:text-teal-400" />
           <div>
             <h3 className="font-bold text-sm sm:text-base text-gray-900 dark:text-gray-100">
-              {title}
+              {dynamicTitle}
             </h3>
-            {parsed.hadiths.length > 0 && (
+            {parsed.hasHadith && parsed.realHadiths?.length > 0 && (
               <span className="text-xs text-teal-700 dark:text-teal-400 font-semibold">
-                {toBn(parsed.hadiths.length)}টি প্রামাণ্য হাদীস ও ঐতিহাসিক বিবরণ
+                {toBn(parsed.realHadiths.length)}টি প্রামাণ্য হাদীসের তাখরীজ ও সনদ বিশ্লেষণ
+              </span>
+            )}
+            {!parsed.hasHadith && (
+              <span className="text-xs text-teal-700 dark:text-teal-400 font-semibold">
+                আসবাবুন নুযূল ও আয়াত নাযিলের ঐতিহাসিক পটভূমি
               </span>
             )}
           </div>

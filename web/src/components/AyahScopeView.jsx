@@ -10,6 +10,7 @@ import QiraatTable from './QiraatTable';
 import WordByWordSection from './WordByWordSection';
 import JalalaynView from './JalalaynView';
 import HadithTakhrijSection from './HadithTakhrijSection';
+import MunasabatSection from './MunasabatSection';
 
 export default function AyahScopeView({
   ayah,
@@ -210,7 +211,17 @@ export default function AyahScopeView({
           {ayah.shane_nuzul && (
             <HadithTakhrijSection 
               content={ayah.shane_nuzul} 
-              title="এই আয়াতের শানে নুযূল ও সংশ্লিষ্ট হাদীসের তাখরীজ" 
+              ayahNumber={ayah.ayah} 
+            />
+          )}
+
+          {/* 3. Tafsir al-Kabir: Munasabat between Ayahs */}
+          {ayah.munasabat && (
+            <MunasabatSection 
+              munasabat={ayah.munasabat}
+              ayahNumber={ayah.ayah}
+              prevAyah={ayah.ayah > (rukuInfo.ayah_start || 1) ? ayah.ayah - 1 : (ayah.ayah > 1 ? ayah.ayah - 1 : null)}
+              nextAyah={ayah.ayah < (rukuInfo.ayah_end || 64) ? ayah.ayah + 1 : null}
             />
           )}
         </div>
