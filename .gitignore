@@ -33,5 +33,6 @@ desktop.ini
 
 # Pipeline temporary work directories
 _work/
+.kilo/
 
 

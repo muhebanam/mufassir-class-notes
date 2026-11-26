@@ -128,26 +128,29 @@ export function parseHadithTakhrij(rawText) {
   const hadiths = [];
   let narrativeIntro = '';
 
-  // Split into bullet-based, numbered, or heading-based chunks
+  // Smart splitting:
+  // Split on section headers `### ` OR top-level item bullets `- **` that are NOT metadata tags
+  const itemSplitRegex = /\n(?=###\s+|-\s+\*\*(?!(?:তাখরীজ|মুহাদ্দিস|হুকুম|মান|উৎস|গ্রন্থসূত্র|অনুবাদ|তাৎপর্য|ব্যাখ্যা|সনদ|গ্রন্থ|নোট)\b))/i;
+
+  let rawChunks = fullText.split(itemSplitRegex);
   let chunks = [];
-  if (hasBullets) {
-    const parts = fullText.split(/\n(?=-\s+\*\*)/);
-    if (!parts[0].trim().startsWith('- **')) {
-      narrativeIntro = parts.shift().trim();
+
+  for (const rc of rawChunks) {
+    const t = rc.trim();
+    if (!t) continue;
+    // If it is just a section heading or source tag with no items or quotes
+    if (!t.includes('- **') && !t.includes('>') && (/^###\s+/.test(t) || /^[*_]+\s*\[উৎস:/.test(t))) {
+      if (!narrativeIntro) {
+        narrativeIntro = t.replace(/^[*_]+\s*\[উৎস:[^\]]+\]\s*[*_]*/, '').replace(/^###\s+/, '').trim();
+      }
+      continue;
     }
-    chunks = parts;
-  } else if (hasNumbered) {
-    const parts = fullText.split(/\n(?=[০-৯0-9]+\.\s+\*\*)/);
-    if (!/^[০-৯0-9]+\.\s+\*\*/.test(parts[0].trim())) {
-      narrativeIntro = parts.shift().trim();
-    }
-    chunks = parts;
-  } else if (hasSections) {
-    const parts = fullText.split(/\n(?=###\s+)/);
-    if (!parts[0].trim().startsWith('###')) {
-      narrativeIntro = parts.shift().trim();
-    }
-    chunks = parts;
+    chunks.push(t);
+  }
+
+  // If no chunks were extracted, fallback to full text
+  if (chunks.length === 0 && fullText) {
+    chunks = [fullText];
   }
 
   chunks.forEach((chunk, idx) => {
@@ -156,12 +159,14 @@ export function parseHadithTakhrij(rawText) {
 
     // 1. Title / Narrator
     let title = `হাদীস ও শানে নুযূল #${idx + 1}`;
-    const titleMatch = cleanChunk.match(/^(?:-\s+\*\*|[০-৯0-9]+\.\s+\*\*|###\s+)([^*#\n]+)(?:\*\*|:)/);
+    let inlineContent = '';
+    const titleMatch = cleanChunk.match(/^(?:-\s+\*\*|[০-৯0-9]+\.\s+\*\*|###\s+)([^*#\n]+)(?:\*\*|:)\s*(.*)/);
     if (titleMatch && titleMatch[1]) {
-      title = titleMatch[1].replace(/[:\-–]/g, '').trim();
+      title = titleMatch[1].replace(/^[:\s]+|[:\s]+$/g, '').trim();
+      inlineContent = (titleMatch[2] || '').trim();
     }
 
-    // 2. Arabic Matn (inside quotes or blockquote)
+    // 2. Arabic Matn (inside quotes, blockquote, or raw block)
     let arabicMatn = '';
     const matnMatch = cleanChunk.match(/>\s*[“"']?([\u0600-\u06FF\s،؛ـ؟().0-9٠-٩«»]{8,})[”"']?/);
     if (matnMatch && matnMatch[1]) {
@@ -213,34 +218,59 @@ export function parseHadithTakhrij(rawText) {
 
     // 5. Explanation / Context
     let explanation = '';
-    const expMatch = cleanChunk.match(/-\s+\*\*(?:ব্যাখ্যা|প্রেক্ষাপট|ঐতিহাসিক পটভূমি):\*\*\s*([^\n]+(?:\n(?!\s*-\s*\*\*)[^\n]+)*)/);
+    const expMatch = cleanChunk.match(/-\s+\*\*(?:অনুবাদ|অনুবাদ ও তাৎপর্য|অনুবাদ ও ঐতিহাসিক প্রেক্ষাপট|অনুবাদ ও লি‘আনের পদ্ধতি|অনুবাদ ও বিশ্লেষণ|অনুবাদ ও পটভূমি|ব্যাখ্যা|প্রেক্ষাপট|ঐতিহাসিক প্রেক্ষাপট):\*\*\s*([^\n]+(?:\n(?!\s*-\s*\*\*)[^\n]+)*)/);
     if (expMatch && expMatch[1]) {
       explanation = expMatch[1].trim();
+    } else if (inlineContent && !inlineContent.startsWith('- **') && !inlineContent.startsWith('>')) {
+      explanation = inlineContent;
     } else {
-      // If no explicit `**ব্যাখ্যা:**`, use the remaining body lines as explanation
+      // If no explicit translation/context heading, use the remaining body lines as explanation
       const bodyLines = cleanChunk
         .replace(/^(?:-\s+\*\*|[০-৯0-9]+\.\s+\*\*|###\s+)[^\n]+/, '')
         .split('\n')
         .map(l => l.replace(/^\s*[-*]+\s*/, '').trim())
         .filter(l => l && !l.startsWith('>') && !l.startsWith('---') && !l.startsWith('**তাখরীজ') && !l.startsWith('**মুহাদ্দিস'));
       if (bodyLines.length > 0) {
-        explanation = bodyLines.join(' ');
+        explanation = bodyLines.join('\n\n');
       }
+    }
+
+    // If inlineContent exists and wasn't captured, prepend it
+    if (inlineContent && !inlineContent.startsWith('- **') && !inlineContent.startsWith('>') && !explanation.includes(inlineContent)) {
+      explanation = inlineContent + (explanation ? '\n\n' + explanation : '');
     }
 
     const isRealHadith = !!(arabicMatn || rawTakhrij || detectedSources.length > 0 || numbers || hukm);
     const isNuzul = cleanChunk.includes('শানে নুযূল') || cleanChunk.includes('নাযিল') || cleanChunk.includes('প্রেক্ষাপট') || cleanChunk.includes('আসবাব');
 
+    // Filter out empty ghost items with no substance
+    if (!arabicMatn && !explanation && !rawTakhrij && !hukm && cleanChunk.length < 30) {
+      return;
+    }
+
+    const cleanTitle = title.replace(/^[\s\-–—:]+|[\s\-–—:]+$/g, '').trim();
+    const grade = hukmGrade;
+    const takhrijNote = rawTakhrij;
+    const sourceBook = detectedSources.length > 0 
+      ? detectedSources.join(', ') 
+      : (rawTakhrij ? rawTakhrij.split(/[,;(]/)[0].trim() : '');
+    const body = explanation || cleanChunk.replace(/^(?:-\s+\*\*|[০-৯0-9]+\.\s+\*\*|###\s+)[^\n]+/, '').trim();
+
     hadiths.push({
       id: `hadith-${idx}`,
       title,
+      cleanTitle,
       arabicMatn,
       rawTakhrij,
+      takhrijNote,
       sources: detectedSources,
+      sourceBook,
       numbers,
       hukm,
+      grade,
       hukmGrade,
       explanation,
+      body,
       isRealHadith,
       isNuzul,
       rawItem: cleanChunk

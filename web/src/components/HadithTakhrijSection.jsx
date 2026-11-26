@@ -155,33 +155,43 @@ export default function HadithTakhrijSection({
                         {toBn(i + 1)}
                       </span>
                       <h4 className="font-bold text-sm text-gray-900 dark:text-gray-100">
-                        {h.cleanTitle || `হাদীস ${toBn(i + 1)}`}
+                        {h.cleanTitle || h.title || `হাদীস ${toBn(i + 1)}`}
                       </h4>
                     </div>
 
                     <div className="flex items-center gap-2">
-                      {h.hukm && getHukmBadge(h.grade, h.hukm)}
+                      {h.hukm && getHukmBadge(h.grade || h.hukmGrade, h.hukm)}
                     </div>
                   </div>
 
-                  {/* Main text & takhrij notes */}
+                  {/* Prominent Arabic Matn Block */}
+                  {h.arabicMatn && (
+                    <div 
+                      className="p-3.5 sm:p-4 rounded-xl bg-emerald-50/60 dark:bg-emerald-950/25 border border-emerald-200/70 dark:border-emerald-900/50 font-arabic text-base sm:text-lg leading-loose text-gray-900 dark:text-gray-100 shadow-2xs" 
+                      dir="rtl"
+                    >
+                      {h.arabicMatn}
+                    </div>
+                  )}
+
+                  {/* Main text & translation/context notes */}
                   <div className="prose dark:prose-invert text-xs sm:text-sm text-gray-800 dark:text-gray-200 leading-relaxed">
-                    <MarkdownContent content={h.body} />
+                    <MarkdownContent content={h.body || h.explanation || h.rawItem} />
                   </div>
 
                   {/* Hadith Metadata Grid */}
-                  {(h.sourceBook || h.takhrijNote) && (
+                  {(h.sourceBook || (h.sources && h.sources.length > 0) || h.takhrijNote || h.rawTakhrij) && (
                     <div className="pt-2.5 border-t border-gray-200/60 dark:border-gray-700/50 grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
-                      {h.sourceBook && (
+                      {(h.sourceBook || (h.sources && h.sources.length > 0)) && (
                         <div className="flex items-center gap-1.5 text-gray-600 dark:text-gray-400">
                           <BookOpen className="w-3.5 h-3.5 text-teal-600 dark:text-teal-400 shrink-0" />
-                          <span><strong>উৎস:</strong> {h.sourceBook}</span>
+                          <span><strong>উৎস:</strong> {h.sourceBook || h.sources.join(', ')}</span>
                         </div>
                       )}
-                      {h.takhrijNote && (
+                      {(h.takhrijNote || h.rawTakhrij) && (
                         <div className="flex items-center gap-1.5 text-gray-600 dark:text-gray-400">
                           <BookCheck className="w-3.5 h-3.5 text-teal-600 dark:text-teal-400 shrink-0" />
-                          <span><strong>তাখরীজ:</strong> {h.takhrijNote}</span>
+                          <span><strong>তাখরীজ:</strong> {h.takhrijNote || h.rawTakhrij}</span>
                         </div>
                       )}
                     </div>
@@ -196,7 +206,7 @@ export default function HadithTakhrijSection({
                 <thead>
                   <tr className="bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 font-bold border-b border-gray-200 dark:border-gray-600">
                     <th className="py-2.5 px-3 w-12 text-center">নং</th>
-                    <th className="py-2.5 px-3 w-40">উৎস গ্রন্থ</th>
+                    <th className="py-2.5 px-3 w-48">উৎস ও শিরোনাম</th>
                     <th className="py-2.5 px-3">হাদীস বিবরণ ও সারসংক্ষেপ</th>
                     <th className="py-2.5 px-3 w-32">হুকুম / মান</th>
                   </tr>
@@ -208,15 +218,25 @@ export default function HadithTakhrijSection({
                         {toBn(idx + 1)}
                       </td>
                       <td className="py-2.5 px-3 font-semibold text-gray-800 dark:text-gray-200">
-                        {h.sourceBook || h.cleanTitle || '—'}
+                        <div className="font-bold text-teal-700 dark:text-teal-400">
+                          {h.sourceBook || (h.sources && h.sources.length > 0 ? h.sources.join(', ') : '—')}
+                        </div>
+                        <div className="text-[11px] text-gray-600 dark:text-gray-400 mt-0.5">
+                          {h.cleanTitle || h.title}
+                        </div>
                       </td>
                       <td className="py-2.5 px-3 text-gray-700 dark:text-gray-300">
+                        {h.arabicMatn && (
+                          <div className="font-arabic text-sm text-gray-900 dark:text-gray-100 mb-1.5 p-1.5 bg-gray-50 dark:bg-gray-800 rounded-sm" dir="rtl">
+                            {h.arabicMatn.length > 120 ? h.arabicMatn.slice(0, 120) + '...' : h.arabicMatn}
+                          </div>
+                        )}
                         <div className="prose dark:prose-invert line-clamp-3 text-xs">
-                          <MarkdownContent content={h.body} />
+                          <MarkdownContent content={h.body || h.explanation || h.rawItem} />
                         </div>
                       </td>
                       <td className="py-2.5 px-3">
-                        {getHukmBadge(h.grade, h.hukm)}
+                        {getHukmBadge(h.grade || h.hukmGrade, h.hukm)}
                       </td>
                     </tr>
                   ))}
