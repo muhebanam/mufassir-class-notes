@@ -33,38 +33,110 @@ export function normalizeQuranBrackets(text) {
     .join('\n');
 }
 
+// Count ONLY actual Arabic base letters (excludes harakat U+064B..U+065F, U+0670, waqf marks, tatweel)
+const BASE_AR_RE = /[\u0621-\u063A\u0641-\u064A\u0671-\u06D3]/g;
+const BN_RE = /[\u0980-\u09FF]/g;
+const EN_RE = /[A-Za-z]/g;
+
+function countScripts(text) {
+  if (!text) return { arBase: 0, bnCount: 0, enCount: 0 };
+  return {
+    arBase: (text.match(BASE_AR_RE) || []).length,
+    bnCount: (text.match(BN_RE) || []).length,
+    enCount: (text.match(EN_RE) || []).length,
+  };
+}
+
+function splitMixedLinesWithBr(el) {
+  const children = Array.from(el.childNodes);
+  if (!children.some(n => n.nodeType === 1 && n.tagName === 'BR')) return false;
+
+  const { arBase, bnCount } = countScripts(el.textContent || '');
+  if (arBase < 3 || bnCount === 0) return false;
+
+  // Group childNodes into segments split by <br>
+  const segments = [];
+  let current = [];
+  for (const node of children) {
+    if (node.nodeType === 1 && node.tagName === 'BR') {
+      segments.push(current);
+      current = [];
+    } else {
+      current.push(node);
+    }
+  }
+  if (current.length > 0) segments.push(current);
+
+  if (segments.length <= 1) return false;
+
+  // Check if at least one segment is purely Arabic
+  let hasPureArabicLine = false;
+  const processed = segments.map(segNodes => {
+    const segText = segNodes.map(n => n.textContent || '').join('').trim();
+    const counts = countScripts(segText);
+    const isPureAr = counts.arBase >= 3 && counts.bnCount === 0 && counts.enCount <= 2;
+    if (isPureAr) hasPureArabicLine = true;
+    return { segNodes, segText, isPureAr };
+  });
+
+  if (!hasPureArabicLine) return false;
+
+  const frag = document.createDocumentFragment();
+  processed.forEach(({ segNodes, segText, isPureAr }) => {
+    if (!segText) return;
+    const span = document.createElement('span');
+    if (isPureAr) {
+      span.className = 'ar-block-line font-arabic';
+      span.dir = 'rtl';
+      span.lang = 'ar';
+    } else {
+      span.className = 'bn-line';
+      span.dir = 'ltr';
+    }
+    segNodes.forEach(n => span.appendChild(n));
+    frag.appendChild(span);
+  });
+
+  el.innerHTML = '';
+  el.appendChild(frag);
+  return true;
+}
+
 function wrapArabic(root) {
   if (!root) return;
 
-  // 1. Style inline code tags containing Arabic text
+  // 1. Style inline code tags containing strictly Arabic text
   root.querySelectorAll('code').forEach(cd => {
     const text = cd.textContent || '';
-    const arReg = getArabicRegex();
-    const m = text.match(arReg);
-    if (m && m.join('').replace(/\s+/g, '').length >= text.replace(/\s+/g, '').length * 0.6) {
+    const { arBase, bnCount, enCount } = countScripts(text);
+    if (arBase >= 1 && bnCount === 0 && enCount === 0) {
       cd.dir = 'rtl';
       cd.lang = 'ar';
       cd.classList.add('ar-code', 'font-amiri');
     }
   });
 
-  // 2. Automatically apply .ar-block, dir="rtl", and text-right to paragraphs, lists, headings, and quotes
-  // consisting primarily or purely of Arabic text so they start from the right
-  const blockSelectors = 'p, blockquote, li, div, h1, h2, h3, h4, h5, h6, td, th';
+  // 2a. Split <p> or <li> elements containing <br>-separated Arabic quote + Bengali translation lines
+  root.querySelectorAll('p, li').forEach(el => {
+    splitMixedLinesWithBr(el);
+  });
+
+  // 2b. Apply .ar-block / .table-cell-arabic ONLY to strictly Arabic blocks (ZERO Bengali prose)
+  const blockSelectors = 'p, li, div, h1, h2, h3, h4, h5, h6, td, th';
   root.querySelectorAll(blockSelectors).forEach(el => {
     if (el.tagName === 'DIV' && el.querySelector('p, blockquote, table, ul, ol')) return;
+    if (el.querySelector('.ar-block-line')) return;
     const t = el.textContent || '';
     if (!t.trim()) return;
 
-    const arLetters = (t.match(/[\u0600-\u06FF\u0750-\u077F\uFB50-\uFDFF\uFE70-\uFEFF]/g) || []).length;
-    const bnLetters = (t.match(/[\u0980-\u09FF]/g) || []).length;
-    const enLetters = (t.match(/[a-zA-Z]/g) || []).length;
-    const nonWsLen = t.replace(/\s+/g, '').length;
-
-    // Purely or primarily Arabic:
-    // Has >= 3 Arabic letters, Arabic letters exceed Bengali + English, and Arabic >= 35% of non-whitespace
-    if (arLetters >= 3 && arLetters > (bnLetters + enLetters) && (arLetters / nonWsLen >= 0.35)) {
-      el.classList.add('ar-block', 'font-arabic', 'text-right');
+    const { arBase, bnCount, enCount } = countScripts(t);
+    const minAr = (el.tagName === 'TD' || el.tagName === 'TH') ? 1 : 2;
+    if (arBase >= minAr && bnCount === 0 && enCount <= 2) {
+      if (el.tagName === 'TD' || el.tagName === 'TH') {
+        el.classList.add('table-cell-arabic');
+      } else {
+        el.classList.add('ar-block', 'font-arabic', 'text-right');
+      }
       el.dir = 'rtl';
       el.lang = 'ar';
       el.style.textAlign = 'right';
@@ -72,7 +144,19 @@ function wrapArabic(root) {
     }
   });
 
-  // Orient entire lists where list items are Arabic
+  // 2c. Apply .ar-quote ONLY to blockquotes that are 100% Arabic (no Bengali text inside)
+  root.querySelectorAll('blockquote').forEach(bq => {
+    const t = bq.textContent || '';
+    if (!t.trim()) return;
+    const { arBase, bnCount, enCount } = countScripts(t);
+    if (arBase >= 3 && bnCount === 0 && enCount <= 2) {
+      bq.classList.add('ar-quote');
+      bq.dir = 'rtl';
+      bq.lang = 'ar';
+    }
+  });
+
+  // Orient entire lists where all list items are strictly Arabic
   root.querySelectorAll('ul, ol').forEach(list => {
     const items = list.querySelectorAll(':scope > li');
     if (items.length > 0 && Array.from(items).every(li => li.classList.contains('ar-block'))) {
@@ -83,15 +167,14 @@ function wrapArabic(root) {
     }
   });
 
-  // 3. TreeWalker for text nodes to isolate Arabic inside <bdi class="ar">
-  // ONLY for Arabic text embedded inside non-RTL (Bengali/English) contexts.
-  // If the parent is already an RTL or pure Arabic block, do NOT fragment text into <bdi> isolates.
+  // 3. TreeWalker for text nodes to isolate inline Arabic inside <bdi class="ar">
+  // ONLY for Arabic phrases embedded inside non-RTL (Bengali/English) contexts.
   const w = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
   const nodes = [];
   while (w.nextNode()) nodes.push(w.currentNode);
 
   for (const n of nodes) {
-    if (n.parentElement?.closest('bdi.ar, code, pre, [dir="rtl"], .ar-block, .uthmani-text, .font-arabic')) continue;
+    if (n.parentElement?.closest('bdi.ar, code, pre, [dir="rtl"], .ar-block, .ar-block-line, .ar-quote, .table-cell-arabic, .uthmani-text, .font-arabic')) continue;
     const t = n.nodeValue;
     if (!t) continue;
     const AR = getArabicRegex();

@@ -152,8 +152,8 @@ body.dark {
 /* Arabic typography inside prose & inline components */
 .ar, bdi.ar {
   font-family: 'Amiri', 'Scheherazade New', 'Traditional Arabic', 'Simplified Arabic', 'Segoe UI', serif !important;
-  font-size: 1.25em;
-  line-height: 2.2;
+  font-size: 1.12em;
+  line-height: 1.85;
   direction: rtl;
   unicode-bidi: isolate;
   display: inline;
@@ -165,21 +165,27 @@ body.dark {
   font-variant-ligatures: normal;
 }
 
-/* Standalone Arabic block - strictly right aligned and RTL */
+.prose td .ar, .prose th .ar,
+.prose td bdi.ar, .prose th bdi.ar {
+  font-size: 1.08em;
+  line-height: 1.7;
+}
+
+/* Standalone Arabic block & split Arabic quote line - strictly right aligned and RTL */
 .ar-block,
 p.ar-block,
-blockquote.ar-block,
 li.ar-block,
 div.ar-block,
 h1.ar-block, h2.ar-block, h3.ar-block, h4.ar-block, h5.ar-block, h6.ar-block,
-[dir="rtl"].ar-block {
+[dir="rtl"].ar-block,
+.ar-block-line {
   display: block;
   text-align: right !important;
   direction: rtl !important;
   font-family: 'Amiri', 'Scheherazade New', 'Traditional Arabic', 'Simplified Arabic', 'Segoe UI', serif !important;
-  font-size: 1.25em;
-  line-height: 2.25;
-  margin: 0.6em 0;
+  font-size: 1.2em;
+  line-height: 2.1;
+  margin: 0.35em 0 0.5em;
   word-break: normal !important;
   overflow-wrap: break-word !important;
   hyphens: none !important;
@@ -187,10 +193,32 @@ h1.ar-block, h2.ar-block, h3.ar-block, h4.ar-block, h5.ar-block, h6.ar-block,
   font-variant-ligatures: normal;
 }
 
-blockquote.ar-block {
+/* Bengali translation line inside a mixed Arabic+Bengali quote */
+.bn-line {
+  display: block;
+  text-align: left;
+  direction: ltr;
+  font-size: 1em;
+  line-height: 1.85;
+  margin-top: 0.25em;
+}
+
+/* Prevent nested font-size compounding inside Arabic blocks */
+.ar-block .ar-block,
+.ar-block .ar,
+.ar-block bdi.ar,
+.ar-block-line .ar,
+.ar-block-line bdi.ar,
+.ar-quote .ar-block,
+.ar-quote .ar,
+.ar-quote bdi.ar {
+  font-size: 1em !important;
+}
+
+blockquote.ar-quote {
   border-left: none !important;
   border-right: 4px solid var(--accent) !important;
-  padding: 0.9em 1.2em 0.9em 0.6em !important;
+  padding: 0.9em 1.2em 0.9em 0.8em !important;
   text-align: right !important;
   direction: rtl !important;
 }
@@ -259,19 +287,38 @@ code.ar-code, .ar-code {
   color: var(--ink);
 }
 
-.prose h3 {
-  font-size: 1.25rem;
+.prose h2 {
+  font-size: 1.3rem;
   font-weight: 700;
-  margin: 1.8em 0 0.6em;
+  margin: 1.8em 0 0.7em;
+  padding-bottom: 0.35em;
+  border-bottom: 1.5px solid var(--line);
+}
+
+.prose h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 1.5em 0 0.6em;
   padding-left: 0.7em;
   border-left: 4px solid var(--accent);
 }
 
 .prose h4 {
-  font-size: 1.1rem;
+  font-size: 1.06rem;
   font-weight: 600;
-  margin: 1.3em 0 0.4em;
+  margin: 1.2em 0 0.4em;
   color: var(--accent);
+}
+
+.prose a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 600;
+}
+
+.prose a:hover {
+  opacity: 0.85;
 }
 
 .prose ul, .prose ol {

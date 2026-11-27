@@ -17,15 +17,25 @@ export default function SurahScopeView({
     return String(num).replace(/[0-9]/g, d => bn[d]);
   };
 
+  // Strip redundant file-level preamble (# Title, Ruku Nav, Quick Index) already shown in Hero/Cards
+  const cleanedIntro = useMemo(() => {
+    const raw = surahMeta?.intro || '';
+    if (!raw) return '';
+    const firstH2 = raw.search(/^##\s+/m);
+    if (firstH2 !== -1) {
+      return raw.slice(firstH2).trim();
+    }
+    return raw;
+  }, [surahMeta?.intro]);
+
   // Extract ## headings from intro markdown for Quick Index navigation
   const introChapters = useMemo(() => {
-    const raw = surahMeta?.intro || '';
-    const matches = [...raw.matchAll(/^##\s+(.+)$/gm)];
+    const matches = [...cleanedIntro.matchAll(/^##\s+(.+)$/gm)];
     return matches.map((m, idx) => ({
       idx,
       label: m[1].replace(/[*`]/g, '').trim()
     }));
-  }, [surahMeta?.intro]);
+  }, [cleanedIntro]);
 
   const scrollToIntroChapter = (idx) => {
     if (!introContainerRef.current) return;
@@ -115,12 +125,12 @@ export default function SurahScopeView({
 
         {/* Quick Jump Index for Surah Chapters */}
         {introChapters.length > 1 && (
-          <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-1 pb-2 border-b border-gray-100 dark:border-gray-700/60 font-bengali">
+          <div className="flex flex-wrap items-center gap-1.5 py-1 pb-2.5 border-b border-gray-100 dark:border-gray-700/60 font-bengali">
             {introChapters.map((ch) => (
               <button
                 key={ch.idx}
                 onClick={() => scrollToIntroChapter(ch.idx)}
-                className="px-2.5 py-1 rounded-lg text-xs font-medium bg-gray-100 dark:bg-gray-700/60 hover:bg-emerald-100 dark:hover:bg-emerald-900/40 text-gray-700 dark:text-gray-200 hover:text-emerald-800 dark:hover:text-emerald-300 transition shrink-0 whitespace-nowrap"
+                className="px-2.5 py-1 rounded-lg text-xs font-medium bg-gray-100 dark:bg-gray-700/60 hover:bg-emerald-100 dark:hover:bg-emerald-900/40 text-gray-700 dark:text-gray-200 hover:text-emerald-800 dark:hover:text-emerald-300 transition shrink-0"
               >
                 {ch.label}
               </button>
@@ -132,8 +142,8 @@ export default function SurahScopeView({
           ref={introContainerRef}
           className="prose dark:prose-invert font-bengali leading-relaxed text-gray-800 dark:text-gray-200 text-sm sm:text-base space-y-3 [&_h2]:scroll-mt-28"
         >
-          {surahMeta.intro ? (
-            <MarkdownContent content={surahMeta.intro} />
+          {cleanedIntro ? (
+            <MarkdownContent content={cleanedIntro} />
           ) : (
             <p>
               সূরা {surahNameBn} পবিত্র কুরআনের {toBn(surahId)}তম সূরা। এতে মোট {toBn(surahMeta.ruku_count || surahInfo?.ruku_count || 1)}টি রুকু এবং {toBn(surahMeta.ayah_count || surahInfo?.ayah_count || 1)}টি আয়াত রয়েছে।
