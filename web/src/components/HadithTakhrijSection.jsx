@@ -180,7 +180,7 @@ export default function HadithTakhrijSection({
                       className="p-3.5 sm:p-4 rounded-xl bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-200/60 dark:border-emerald-900/40 font-bengali text-sm sm:text-base leading-relaxed text-gray-800 dark:text-gray-200 shadow-2xs" 
                       dir="ltr"
                     >
-                      <MarkdownContent content={h.narrativeMatn} />
+                      <MarkdownContent content={h.narrativeMatn} className="[&_p]:mb-0" />
                     </div>
                   )}
 

@@ -119,7 +119,7 @@ export default function AyahScopeView({
   }
 
   const handleCopyAyah = () => {
-    const copyText = `${ayah.text_uthmani}\n\nঅনুবাদ: ${ayah.translation}\n(সূরা ${surahInfo?.name_bn || 'আন-নূর'}, আয়াত ${ayah.ayah})`;
+    const copyText = `${ayah.text_uthmani}\n\nঅনুবাদ: ${ayah.translation}\n(সূরা ${surahInfo?.name_bn || toBn(ayah.surah)}, আয়াত ${ayah.ayah})`;
     navigator.clipboard.writeText(copyText).then(() => {
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
@@ -171,7 +171,7 @@ export default function AyahScopeView({
         {/* Breadcrumb info + Status Badge */}
         <div className="flex flex-wrap items-center gap-2 text-xs sm:text-sm font-bengali">
           <span className="font-bold text-gray-900 dark:text-gray-100">
-            সূরা {surahInfo?.name_bn || 'আন-নূর'}
+            সূরা {surahInfo?.name_bn || toBn(ayah.surah)}
           </span>
           <span className="text-gray-400">•</span>
           <span className="text-gray-600 dark:text-gray-300">
@@ -604,7 +604,7 @@ export default function AyahScopeView({
                     <div className="flex items-center gap-2 pb-2 border-b border-gray-100 dark:border-gray-700">
                       <Compass className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
                       <h4 className="font-bold text-sm sm:text-base text-gray-900 dark:text-gray-100">
-                        ০১. ভূমিকা ও মাকাসিদ (সূরা আন-নূর, রুকু {toBn(rukuInfo.ruku_id)})
+                        ০১. ভূমিকা ও মাকাসিদ (সূরা {surahInfo?.name_bn || toBn(ayah.surah)}, রুকু {toBn(rukuInfo.ruku_id)})
                       </h4>
                     </div>
                     {thematic.makasid?.summary && (

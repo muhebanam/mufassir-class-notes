@@ -186,12 +186,11 @@ export function parseHadithTakhrij(rawText) {
       const bnChars = (bqText.match(/[\u0980-\u09FF]/g) || []).length;
       const arChars = (bqText.match(/[\u0621-\u064A]/g) || []).length;
 
-      if (arChars >= 6 && bnChars === 0) {
+      // Only treat as Arabic Matn when there is no substantial Bengali prose and Bengali doesn't outweigh Arabic
+      if (arChars >= 6 && bnChars < 3 && arChars > bnChars) {
         arabicMatn = bqText;
-      } else if (bnChars >= 3) {
+      } else {
         narrativeMatn = bqText;
-      } else if (arChars >= 6) {
-        arabicMatn = bqText;
       }
     } else {
       // Check inline Arabic quote

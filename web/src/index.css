@@ -435,7 +435,7 @@ pre.ar-tafsir-card,
   direction: rtl !important;
   text-align: right !important;
   text-align-last: right !important;
-  white-space: pre-line !important;
+  white-space: normal !important;
   overflow-wrap: break-word !important;
   word-break: normal !important;
   font-family: 'Amiri', 'Scheherazade New', 'Traditional Arabic', serif !important;
@@ -460,7 +460,7 @@ code.ar-tafsir-code {
   direction: rtl !important;
   text-align: right !important;
   text-align-last: right !important;
-  white-space: pre-line !important;
+  white-space: normal !important;
   overflow-wrap: break-word !important;
   word-break: normal !important;
   font-family: 'Amiri', 'Scheherazade New', 'Traditional Arabic', serif !important;

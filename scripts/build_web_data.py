@@ -118,9 +118,10 @@ def extract_ruku_outline(ruku_obj, sec0_raw="", intro_ruku_desc="", ayahs_list=N
     if not summary:
         summary = plain_markdown(makasid_content, limit=220)
 
-    # 2. Subtopics from Section 0 bullets (before সিয়াক-সিবাক / নাযম)
+    # 2. Subtopics from Section 0.1 bullets (strictly stop before ০.২ / ঐতিহাসিক / সিয়াক / নাযম / সংযোগ)
     subtopics = []
-    sec0_pre = re.split(r'(?m)^###\s+.*(?:সিয়াক|নাযম|সংযোগ)', makasid_content)[0]
+    sec0_pre = re.split(r'(?m)^###\s+(?!০\.১\b)', makasid_content.lstrip())[0]
+    sec0_pre = re.split(r'(?m)^###\s+.*(?:সিয়াক|নাযম|সংযোগ|ঐতিহাসিক|স্থানিক|প্রেক্ষাপট)', sec0_pre)[0]
     for line in sec0_pre.splitlines():
         s_line = line.strip()
         m_item = re.match(r'^(?:[-*]|\d+\.)\s+(?:\*\*([^*]+)\*\*:?\s*(.*)|([^:]+):\s*(.*))$', s_line)
@@ -133,7 +134,7 @@ def extract_ruku_outline(ruku_obj, sec0_raw="", intro_ruku_desc="", ayahs_list=N
             head = plain_markdown(m_item.group(3), limit=100).rstrip(':').strip()
             rest = plain_markdown(m_item.group(4), limit=120)
 
-        if not head or head.startswith(("পূর্ববর্তী", "পরবর্তী", "সূত্র", "নাযমুল")):
+        if not head or head.startswith(("পূর্ববর্তী", "পরবর্তী", "সূত্র", "নাযমুল", "নাযিলের", "স্থান", "পটভূমি", "সময়কাল", "অবতীর্ণের")):
             continue
         if head in ("কেন্দ্রীয় বক্তব্য", "সারসংক্ষেপ"):
             continue
