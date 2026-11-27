@@ -510,11 +510,20 @@ def parse_ruku_markdown(md_text, surah_id, ruku_idx, ayah_start, ayah_end, tanzi
 
     missing_comp = [a for a in range(ayah_start, ayah_end + 1) if a not in comparative_map or not comparative_map[a].strip()]
     if missing_comp:
-        c_subs, c_covs = parse_section_ayah_subsections(comp_part, ruku_ayah_texts, ayah_start=ayah_start, ayah_end=ayah_end, fallback_to_whole=False, return_covers=True)
+        c_subs, c_covs = parse_section_ayah_subsections(comp_part, ruku_ayah_texts, ayah_start=ayah_start, ayah_end=ayah_end, fallback_to_whole=True, return_covers=True)
         for ma in missing_comp:
-            if ma in c_subs:
+            if ma in c_subs and c_subs[ma].strip():
                 comparative_map[ma] = c_subs[ma]
                 comparative_covers_map[ma] = c_covs.get(ma)
+
+    # Fallback to ruku-level comparative tafsir if still missing
+    still_missing_comp = [a for a in range(ayah_start, ayah_end + 1) if a not in comparative_map or not comparative_map[a].strip()]
+    if still_missing_comp and comp_part.strip():
+        comp_clean = clean_pipeline_artifacts(comp_part.strip())
+        whole_prefix = f"*[উৎস: আয়াত {to_bn(ayah_start)}–{to_bn(ayah_end)}-এর রুকুভিত্তিক সামগ্রিক তুলনামূলক তাফসীর]*\n\n"
+        for ma in still_missing_comp:
+            comparative_map[ma] = whole_prefix + comp_clean
+            comparative_covers_map[ma] = [ayah_start, ayah_end]
 
     # Fallbacks for missing jalalayn
     missing_ayahs = [a for a in range(ayah_start, ayah_end + 1) if a not in jalalayn_map or not jalalayn_map[a].strip()]

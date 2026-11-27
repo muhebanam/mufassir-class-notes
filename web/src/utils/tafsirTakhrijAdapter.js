@@ -177,12 +177,20 @@ export function parseHadithTakhrij(rawText) {
       inlineContent = (titleMatch[2] || '').trim();
     }
 
-    // 2. Arabic Matn (capture entire blockquote line/multi-line including colons, ﷺ, and Quran brackets)
+    // 2. Arabic Matn & Narrative Matn
     let arabicMatn = '';
+    let narrativeMatn = '';
     const bqMatch = cleanChunk.match(/(?:^|\n)\s*>\s*([^\n]+(?:\n\s*>\s*[^\n]+)*)/);
     if (bqMatch && bqMatch[1]) {
       const bqText = bqMatch[1].replace(/\n\s*>\s*/g, ' ').trim();
-      if (/[\u0600-\u06FF]{6,}/.test(bqText)) {
+      const bnChars = (bqText.match(/[\u0980-\u09FF]/g) || []).length;
+      const arChars = (bqText.match(/[\u0621-\u064A]/g) || []).length;
+
+      if (arChars >= 6 && bnChars === 0) {
+        arabicMatn = bqText;
+      } else if (bnChars >= 3) {
+        narrativeMatn = bqText;
+      } else if (arChars >= 6) {
         arabicMatn = bqText;
       }
     } else {
@@ -277,6 +285,7 @@ export function parseHadithTakhrij(rawText) {
       title,
       cleanTitle,
       arabicMatn,
+      narrativeMatn,
       rawTakhrij,
       takhrijNote,
       sources: detectedSources,

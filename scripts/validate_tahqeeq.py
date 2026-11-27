@@ -126,16 +126,17 @@ def validate_word_entry(
             elif qac_index is not None:
                 key = f"{surah}:{ayah}"
                 expected_roots = qac_index.get(key)
-                norm_root = normalize_root(root)
-                matches_qac = (
-                    norm_root in expected_roots
-                    or ("ا" + norm_root) in expected_roots
-                    or (norm_root.lstrip("ا") in expected_roots)
-                )
-                if expected_roots and not matches_qac:
-                    warnings.append(
-                        f"{loc} ({word}) মূলবর্ণ '{root}' QAC ডেটাসেটে আয়াত {key}-এর মূলবর্ণ তালিকায় পাওয়া যায়নি।"
+                if expected_roots:
+                    norm_root = normalize_root(root)
+                    matches_qac = (
+                        norm_root in expected_roots
+                        or ("ا" + norm_root) in expected_roots
+                        or (norm_root.lstrip("ا") in expected_roots)
                     )
+                    if not matches_qac:
+                        warnings.append(
+                            f"{loc} ({word}) মূলবর্ণ '{root}' QAC ডেটাসেটে আয়াত {key}-এর মূলবর্ণ তালিকায় পাওয়া যায়নি।"
+                        )
 
         bab = morph.get("bab")
         if isinstance(bab, str) and bab.strip() and not HARAKAT_RE.search(bab):

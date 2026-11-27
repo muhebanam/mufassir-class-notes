@@ -303,7 +303,7 @@ export default function ThematicView({ rukuData, surahInfo, onSwitchToAyahStudy 
                   </div>
 
                   {/* Section Content */}
-                  <div className="prose font-bengali leading-relaxed text-gray-800 dark:text-gray-200">
+                  <div className="prose max-w-none w-full font-bengali leading-relaxed text-gray-800 dark:text-gray-200">
                     {renderSectionContent(item)}
                   </div>
                 </section>
@@ -313,7 +313,7 @@ export default function ThematicView({ rukuData, surahInfo, onSwitchToAyahStudy 
         </div>
       ) : (
         /* Single Chapter Tabbed View */
-        <div className="max-w-[740px] mx-auto space-y-5">
+        <div className="w-full max-w-5xl mx-auto space-y-5">
           {/* Chapter Selector Dropdown / Pills */}
           <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar pb-2">
             {sections.map((item) => {
@@ -354,7 +354,7 @@ export default function ThematicView({ rukuData, surahInfo, onSwitchToAyahStudy 
                   </span>
                 </div>
 
-                <div className="prose font-bengali leading-relaxed text-gray-800 dark:text-gray-200">
+                <div className="prose max-w-none w-full font-bengali leading-relaxed text-gray-800 dark:text-gray-200">
                   {renderSectionContent(currentItem)}
                 </div>
               </div>

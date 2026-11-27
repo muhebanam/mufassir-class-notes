@@ -56,9 +56,20 @@ def arabic_token_match(word_clean, ayah_tokens):
     """
     Robust word-level token matcher that prevents false-positive substring matches
     by testing against tokens and stripping standard Arabic grammatical prefixes.
+    Also handles multi-word compound phrases and consonantal skeleton variations.
     """
     if not word_clean:
         return False
+    
+    # 0. Check multi-word phrase matching
+    w_parts = word_clean.split()
+    if len(w_parts) > 1:
+        joined_ayah = " ".join(ayah_tokens)
+        if word_clean in joined_ayah:
+            return True
+        if all(arabic_token_match(p, ayah_tokens) for p in w_parts if len(p) > 1):
+            return True
+
     w_clean = re.sub(r'\s+', '', word_clean)
     if not w_clean:
         return False
@@ -67,7 +78,7 @@ def arabic_token_match(word_clean, ayah_tokens):
     if w_clean in ayah_tokens:
         return True
 
-    # 2. Prefix stripping (و, ف, ب, ل, ال, وال, فال, بال, لل)
+    # 2. Prefix stripping (و, ف, ب, ل, ال, وال, فال, بال, لل, كال, فل)
     prefixes = ['ال', 'و', 'ف', 'ب', 'ل', 'وال', 'فال', 'بال', 'لل', 'كال', 'فل']
     for tok in ayah_tokens:
         if tok == w_clean:
@@ -76,6 +87,12 @@ def arabic_token_match(word_clean, ayah_tokens):
             if tok.startswith(p) and tok[len(p):] == w_clean:
                 return True
             if w_clean.startswith(p) and w_clean[len(p):] == tok:
+                return True
+        # Consonantal skeleton match (length >= 3)
+        if len(w_clean) >= 3 and len(tok) >= 3:
+            w_skel = re.sub(r'[اويءؤئـ]', '', w_clean)
+            tok_skel = re.sub(r'[اويءؤئـ]', '', tok)
+            if w_skel and len(w_skel) >= 3 and w_skel == tok_skel:
                 return True
     return False
 

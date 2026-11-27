@@ -149,10 +149,51 @@ function wrapArabic(root) {
     const t = bq.textContent || '';
     if (!t.trim()) return;
     const { arBase, bnCount, enCount } = countScripts(t);
-    if (arBase >= 3 && bnCount === 0 && enCount <= 2) {
+    if (arBase >= 3 && bnCount === 0 && enCount <= 4) {
       bq.classList.add('ar-quote');
       bq.dir = 'rtl';
       bq.lang = 'ar';
+      bq.style.direction = 'rtl';
+      bq.style.textAlign = 'right';
+    }
+  });
+
+  // 2d. Handle Arabic code blocks (e.g. ```arabic ...)
+  root.querySelectorAll('pre').forEach(pre => {
+    const code = pre.querySelector('code');
+    const text = (code || pre).textContent || '';
+    const { arBase, bnCount, enCount } = countScripts(text);
+    const isArabicCode = code?.classList.contains('language-arabic');
+
+    if (isArabicCode || (arBase >= 10 && bnCount === 0 && enCount <= 5)) {
+      const paragraphs = text
+        .split(/\n\s*\n+/)
+        .map(p => p.trim())
+        .filter(Boolean);
+
+      if (paragraphs.length > 0) {
+        const container = document.createElement('div');
+        container.className = 'ar-tafsir-container space-y-3 my-4 w-full';
+        container.dir = 'rtl';
+        container.lang = 'ar';
+
+        paragraphs.forEach(para => {
+          const item = document.createElement('div');
+          item.className = 'ar-tafsir-item font-arabic';
+          item.dir = 'rtl';
+          item.lang = 'ar';
+          item.textContent = para;
+          container.appendChild(item);
+        });
+
+        pre.replaceWith(container);
+      } else {
+        pre.classList.add('ar-tafsir-card', 'font-arabic');
+        pre.dir = 'rtl';
+        pre.lang = 'ar';
+        pre.style.direction = 'rtl';
+        pre.style.textAlign = 'right';
+      }
     }
   });
 
@@ -248,7 +289,7 @@ export default function MarkdownContent({ content, inline = false, className = "
   const fontClass = hasArabicFont ? '' : 'font-bengali';
   return (
     <Tag
-      className={`prose ${fontClass} leading-relaxed transition-colors ${className}`}
+      className={`prose max-w-none w-full ${fontClass} leading-relaxed transition-colors ${className}`}
       dangerouslySetInnerHTML={{ __html: html }}
     />
   );

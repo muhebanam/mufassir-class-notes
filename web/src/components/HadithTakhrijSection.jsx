@@ -164,13 +164,23 @@ export default function HadithTakhrijSection({
                     </div>
                   </div>
 
-                  {/* Prominent Arabic Matn Block */}
+                  {/* Prominent Authentic Arabic Matn Block */}
                   {h.arabicMatn && (
                     <div 
-                      className="p-3.5 sm:p-4 rounded-xl bg-emerald-50/60 dark:bg-emerald-950/25 border border-emerald-200/70 dark:border-emerald-900/50 font-arabic text-base sm:text-lg leading-loose text-gray-900 dark:text-gray-100 shadow-2xs" 
+                      className="p-3.5 sm:p-4 rounded-xl bg-emerald-50/60 dark:bg-emerald-950/25 border border-emerald-200/70 dark:border-emerald-900/50 font-arabic text-base sm:text-lg leading-loose text-gray-900 dark:text-gray-100 shadow-2xs text-right" 
                       dir="rtl"
                     >
                       {h.arabicMatn}
+                    </div>
+                  )}
+
+                  {/* Highlighted Bengali Narrative Riwayah Box */}
+                  {h.narrativeMatn && (
+                    <div 
+                      className="p-3.5 sm:p-4 rounded-xl bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-200/60 dark:border-emerald-900/40 font-bengali text-sm sm:text-base leading-relaxed text-gray-800 dark:text-gray-200 shadow-2xs" 
+                      dir="ltr"
+                    >
+                      <MarkdownContent content={h.narrativeMatn} />
                     </div>
                   )}
 

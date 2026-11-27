@@ -116,7 +116,7 @@ export default function RukuScopeView({
 
     if (item.sec?.content || item.sec?.summary) {
       return (
-        <div className="prose font-bengali text-sm sm:text-base leading-relaxed text-gray-800 dark:text-gray-200 space-y-3">
+        <div className="prose max-w-none w-full font-bengali text-sm sm:text-base leading-relaxed text-gray-800 dark:text-gray-200 space-y-3">
           <MarkdownContent content={item.sec.content || item.sec.summary} />
         </div>
       );

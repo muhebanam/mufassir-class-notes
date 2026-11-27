@@ -224,13 +224,21 @@ h1.ar-block, h2.ar-block, h3.ar-block, h4.ar-block, h5.ar-block, h6.ar-block,
   font-size: 1em !important;
 }
 
-blockquote.ar-quote {
+blockquote.ar-quote,
+blockquote[dir="rtl"],
+.prose blockquote[dir="rtl"],
+.prose blockquote.ar-quote {
   border-left: none !important;
   border-right: 4px solid var(--accent) !important;
   padding: 0.9em 1.2em 0.9em 0.8em !important;
   text-align: right !important;
   text-align-last: right !important;
   direction: rtl !important;
+  font-family: 'Amiri', 'Scheherazade New', 'Traditional Arabic', serif !important;
+  font-size: 1.22rem !important;
+  line-height: 2.2 !important;
+  width: 100% !important;
+  max-width: 100% !important;
 }
 
 /* Prevent cursive letters breaking mid-word across all containers */
@@ -277,6 +285,7 @@ code.ar-code, .ar-code {
 
 .prose {
   width: 100%;
+  max-width: none !important;
   font-size: 1.06rem;
   line-height: 1.9;
   color: var(--ink);
@@ -286,7 +295,8 @@ code.ar-code, .ar-code {
 .prose ul,
 .prose ol,
 .prose blockquote {
-  max-width: 72ch;
+  max-width: 100% !important;
+  width: 100%;
 }
 
 .prose p {
@@ -382,6 +392,85 @@ code.ar-code, .ar-code {
   font-style: normal;
   text-align: justify;
   text-align-last: left;
+  width: 100%;
+  max-width: 100% !important;
+}
+
+/* --------------------------------------------------------------------------
+   Arabic Preformatted & Tafsir Cards (e.g. ```arabic ...)
+   -------------------------------------------------------------------------- */
+.ar-tafsir-container {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.85rem !important;
+  width: 100% !important;
+  margin: 1.25rem 0 !important;
+}
+
+.ar-tafsir-item {
+  display: block !important;
+  direction: rtl !important;
+  text-align: right !important;
+  text-align-last: right !important;
+  white-space: normal !important;
+  overflow-wrap: break-word !important;
+  word-break: normal !important;
+  font-family: 'Amiri', 'Scheherazade New', 'Traditional Arabic', serif !important;
+  font-size: 1.25rem !important;
+  line-height: 2.3 !important;
+  padding: 1.15rem 1.4rem !important;
+  border-radius: 0.85rem !important;
+  background-color: var(--quote-bg, #f8f6f0) !important;
+  border: 1px solid var(--line, #e2e8f0) !important;
+  color: var(--ink, #1e293b) !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.prose pre.ar-tafsir-card,
+.prose pre:has(code.language-arabic),
+pre.ar-tafsir-card,
+.ar-tafsir-card {
+  display: block !important;
+  direction: rtl !important;
+  text-align: right !important;
+  text-align-last: right !important;
+  white-space: pre-line !important;
+  overflow-wrap: break-word !important;
+  word-break: normal !important;
+  font-family: 'Amiri', 'Scheherazade New', 'Traditional Arabic', serif !important;
+  font-size: 1.25rem !important;
+  line-height: 2.3 !important;
+  padding: 1.25rem 1.5rem !important;
+  border-radius: 1rem !important;
+  background-color: var(--quote-bg, #f8f6f0) !important;
+  border: 1px solid var(--line, #e2e8f0) !important;
+  color: var(--ink, #1e293b) !important;
+  margin: 1.25rem 0 !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  overflow-x: hidden !important;
+}
+
+.prose pre.ar-tafsir-card code,
+.prose pre:has(code.language-arabic) code,
+code.language-arabic,
+code.ar-tafsir-code {
+  display: block !important;
+  direction: rtl !important;
+  text-align: right !important;
+  text-align-last: right !important;
+  white-space: pre-line !important;
+  overflow-wrap: break-word !important;
+  word-break: normal !important;
+  font-family: 'Amiri', 'Scheherazade New', 'Traditional Arabic', serif !important;
+  font-size: 1.25rem !important;
+  line-height: 2.3 !important;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  color: inherit !important;
+  width: 100% !important;
 }
 
 /* Inverted prose for dark containers */

@@ -1,0 +1,2593 @@
+[
+  {
+    "verse_key": "25-1",
+    "word_count": 9,
+    "words": [
+      {
+        "word_id": 46230,
+        "word_order_in_verse": 1,
+        "word_raw": "تَبَارَكَ",
+        "plain_text_raw": "تَبَارَكَ",
+        "root_token_raw": "/برك/"
+      },
+      {
+        "word_id": 46231,
+        "word_order_in_verse": 2,
+        "word_raw": "الَّذِي",
+        "plain_text_raw": "ٱلَّذِي",
+        "root_token_raw": "/الذي/"
+      },
+      {
+        "word_id": 46232,
+        "word_order_in_verse": 3,
+        "word_raw": "نَزَّلَ",
+        "plain_text_raw": "نَزَّلَ",
+        "root_token_raw": "/نزل/"
+      },
+      {
+        "word_id": 46233,
+        "word_order_in_verse": 4,
+        "word_raw": "الْفُرْقَانَ",
+        "plain_text_raw": "ٱلْفُرْقَانَ",
+        "root_token_raw": "/فرق/"
+      },
+      {
+        "word_id": 46234,
+        "word_order_in_verse": 5,
+        "word_raw": "عَلَى",
+        "plain_text_raw": "عَلَىٰ",
+        "root_token_raw": "/على/"
+      },
+      {
+        "word_id": 46235,
+        "word_order_in_verse": 6,
+        "word_raw": "عَبْدِهِ",
+        "plain_text_raw": "عَبْدِهِۦ",
+        "root_token_raw": "/عبد/"
+      },
+      {
+        "word_id": 46236,
+        "word_order_in_verse": 7,
+        "word_raw": "لِيَكُونَ",
+        "plain_text_raw": "لِيَكُونَ",
+        "root_token_raw": "/كون/"
+      },
+      {
+        "word_id": 46237,
+        "word_order_in_verse": 8,
+        "word_raw": "لِلْعَالَمِينَ",
+        "plain_text_raw": "لِلْعَٰلَمِينَ",
+        "root_token_raw": "/علم/"
+      },
+      {
+        "word_id": 46238,
+        "word_order_in_verse": 9,
+        "word_raw": "نَذِيرًا",
+        "plain_text_raw": "نَذِيرًا",
+        "root_token_raw": "/نذر/"
+      }
+    ]
+  },
+  {
+    "verse_key": "25-2",
+    "word_count": 19,
+    "words": [
+      {
+        "word_id": 46239,
+        "word_order_in_verse": 1,
+        "word_raw": "الَّذِي",
+        "plain_text_raw": "ٱلَّذِي",
+        "root_token_raw": "/الذي/"
+      },
+      {
+        "word_id": 46240,
+        "word_order_in_verse": 2,
+        "word_raw": "لَهُ",
+        "plain_text_raw": "لَهُۥ",
+        "root_token_raw": "/ل/"
+      },
+      {
+        "word_id": 46241,
+        "word_order_in_verse": 3,
+        "word_raw": "مُلْكُ",
+        "plain_text_raw": "مُلْكُ",
+        "root_token_raw": "/ملك/"
+      },
+      {
+        "word_id": 46242,
+        "word_order_in_verse": 4,
+        "word_raw": "السَّمَاوَاتِ",
+        "plain_text_raw": "ٱلسَّمَٰوَٰتِ",
+        "root_token_raw": "/سمو/"
+      },
+      {
+        "word_id": 46243,
+        "word_order_in_verse": 5,
+        "word_raw": "وَالْأَرْضِ",
+        "plain_text_raw": "وَٱلْأَرْضِ",
+        "root_token_raw": "/أرض/"
+      },
+      {
+        "word_id": 46244,
+        "word_order_in_verse": 6,
+        "word_raw": "وَلَمْ",
+        "plain_text_raw": "وَلَمْ",
+        "root_token_raw": "/لم/"
+      },
+      {
+        "word_id": 46245,
+        "word_order_in_verse": 7,
+        "word_raw": "يَتَّخِذْ",
+        "plain_text_raw": "يَتَّخِذْ",
+        "root_token_raw": "/أخذ/"
+      },
+      {
+        "word_id": 46246,
+        "word_order_in_verse": 8,
+        "word_raw": "وَلَدًا",
+        "plain_text_raw": "وَلَدࣰا",
+        "root_token_raw": "/ولد/"
+      },
+      {
+        "word_id": 46247,
+        "word_order_in_verse": 9,
+        "word_raw": "وَلَمْ",
+        "plain_text_raw": "وَلَمْ",
+        "root_token_raw": "/لم/"
+      },
+      {
+        "word_id": 46248,
+        "word_order_in_verse": 10,
+        "word_raw": "يَكُنْ",
+        "plain_text_raw": "يَكُن",
+        "root_token_raw": "/كون/"
+      },
+      {
+        "word_id": 46249,
+        "word_order_in_verse": 11,
+        "word_raw": "لَهُ",
+        "plain_text_raw": "لَّهُۥ",
+        "root_token_raw": "/ل/"
+      },
+      {
+        "word_id": 46250,
+        "word_order_in_verse": 12,
+        "word_raw": "شَرِيكٌ",
+        "plain_text_raw": "شَرِيكࣱ",
+        "root_token_raw": "/شرك/"
+      },
+      {
+        "word_id": 46251,
+        "word_order_in_verse": 13,
+        "word_raw": "فِي",
+        "plain_text_raw": "فِي",
+        "root_token_raw": "/في/"
+      },
+      {
+        "word_id": 46252,
+        "word_order_in_verse": 14,
+        "word_raw": "الْمُلْكِ",
+        "plain_text_raw": "ٱلْمُلْكِ",
+        "root_token_raw": "/ملك/"
+      },
+      {
+        "word_id": 46253,
+        "word_order_in_verse": 15,
+        "word_raw": "وَخَلَقَ",
+        "plain_text_raw": "وَخَلَقَ",
+        "root_token_raw": "/خلق/"
+      },
+      {
+        "word_id": 46254,
+        "word_order_in_verse": 16,
+        "word_raw": "كُلَّ",
+        "plain_text_raw": "كُلَّ",
+        "root_token_raw": "/كلل/"
+      },
+      {
+        "word_id": 46255,
+        "word_order_in_verse": 17,
+        "word_raw": "شَيْءٍ",
+        "plain_text_raw": "شَيْءࣲ",
+        "root_token_raw": "/شيأ/"
+      },
+      {
+        "word_id": 46256,
+        "word_order_in_verse": 18,
+        "word_raw": "فَقَدَّرَهُ",
+        "plain_text_raw": "فَقَدَّرَهُۥ",
+        "root_token_raw": "/قدر/"
+      },
+      {
+        "word_id": 46257,
+        "word_order_in_verse": 19,
+        "word_raw": "تَقْدِيرًا",
+        "plain_text_raw": "تَقْدِيرࣰا",
+        "root_token_raw": "/قدر/"
+      }
+    ]
+  },
+  {
+    "verse_key": "25-3",
+    "word_count": 22,
+    "words": [
+      {
+        "word_id": 46258,
+        "word_order_in_verse": 1,
+        "word_raw": "وَاتَّخَذُوا",
+        "plain_text_raw": "وَٱتَّخَذُوا۟",
+        "root_token_raw": "/أخذ/"
+      },
+      {
+        "word_id": 46259,
+        "word_order_in_verse": 2,
+        "word_raw": "مِنْ",
+        "plain_text_raw": "مِن",
+        "root_token_raw": "/مِن/"
+      },
+      {
+        "word_id": 46260,
+        "word_order_in_verse": 3,
+        "word_raw": "دُونِهِ",
+        "plain_text_raw": "دُونِهِۦٓ",
+        "root_token_raw": "/دون/"
+      },
+      {
+        "word_id": 46261,
+        "word_order_in_verse": 4,
+        "word_raw": "آلِهَةً",
+        "plain_text_raw": "ءَالِهَةࣰ",
+        "root_token_raw": "/أله/"
+      },
+      {
+        "word_id": 46262,
+        "word_order_in_verse": 5,
+        "word_raw": "لَا",
+        "plain_text_raw": "لَّا",
+        "root_token_raw": "/لا/"
+      },
+      {
+        "word_id": 46263,
+        "word_order_in_verse": 6,
+        "word_raw": "يَخْلُقُونَ",
+        "plain_text_raw": "يَخْلُقُونَ",
+        "root_token_raw": "/خلق/"
+      },
+      {
+        "word_id": 46264,
+        "word_order_in_verse": 7,
+        "word_raw": "شَيْئًا",
+        "plain_text_raw": "شَيْـࣰٔا",
+        "root_token_raw": "/شيأ/"
+      },
+      {
+        "word_id": 46265,
+        "word_order_in_verse": 8,
+        "word_raw": "وَهُمْ",
+        "plain_text_raw": "وَهُمْ",
+        "root_token_raw": "/هم/"
+      },
+      {
+        "word_id": 46266,
+        "word_order_in_verse": 9,
+        "word_raw": "يُخْلَقُونَ",
+        "plain_text_raw": "يُخْلَقُونَ",
+        "root_token_raw": "/خلق/"
+      },
+      {
+        "word_id": 46267,
+        "word_order_in_verse": 10,
+        "word_raw": "وَلَا",
+        "plain_text_raw": "وَلَا",
+        "root_token_raw": "/لا/"
+      },
+      {
+        "word_id": 46268,
+        "word_order_in_verse": 11,
+        "word_raw": "يَمْلِكُونَ",
+        "plain_text_raw": "يَمْلِكُونَ",
+        "root_token_raw": "/ملك/"
+      },
+      {
+        "word_id": 46269,
+        "word_order_in_verse": 12,
+        "word_raw": "لِأَنْفُسِهِمْ",
+        "plain_text_raw": "لِأَنفُسِهِمْ",
+        "root_token_raw": "/نفس/"
+      },
+      {
+        "word_id": 46270,
+        "word_order_in_verse": 13,
+        "word_raw": "ضَرًّا",
+        "plain_text_raw": "ضَرࣰّا",
+        "root_token_raw": "/ضرر/"
+      },
+      {
+        "word_id": 46271,
+        "word_order_in_verse": 14,
+        "word_raw": "وَلَا",
+        "plain_text_raw": "وَلَا",
+        "root_token_raw": "/لا/"
+      },
+      {
+        "word_id": 46272,
+        "word_order_in_verse": 15,
+        "word_raw": "نَفْعًا",
+        "plain_text_raw": "نَفْعࣰا",
+        "root_token_raw": "/نفع/"
+      },
+      {
+        "word_id": 46273,
+        "word_order_in_verse": 16,
+        "word_raw": "وَلَا",
+        "plain_text_raw": "وَلَا",
+        "root_token_raw": "/لا/"
+      },
+      {
+        "word_id": 46274,
+        "word_order_in_verse": 17,
+        "word_raw": "يَمْلِكُونَ",
+        "plain_text_raw": "يَمْلِكُونَ",
+        "root_token_raw": "/ملك/"
+      },
+      {
+        "word_id": 46275,
+        "word_order_in_verse": 18,
+        "word_raw": "مَوْتًا",
+        "plain_text_raw": "مَوْتࣰا",
+        "root_token_raw": "/موت/"
+      },
+      {
+        "word_id": 46276,
+        "word_order_in_verse": 19,
+        "word_raw": "وَلَا",
+        "plain_text_raw": "وَلَا",
+        "root_token_raw": "/لا/"
+      },
+      {
+        "word_id": 46277,
+        "word_order_in_verse": 20,
+        "word_raw": "حَيَاةً",
+        "plain_text_raw": "حَيَوٰةࣰ",
+        "root_token_raw": "/حيي/"
+      },
+      {
+        "word_id": 46278,
+        "word_order_in_verse": 21,
+        "word_raw": "وَلَا",
+        "plain_text_raw": "وَلَا",
+        "root_token_raw": "/لا/"
+      },
+      {
+        "word_id": 46279,
+        "word_order_in_verse": 22,
+        "word_raw": "نُشُورًا",
+        "plain_text_raw": "نُشُورࣰا",
+        "root_token_raw": "/نشر/"
+      }
+    ]
+  },
+  {
+    "verse_key": "25-4",
+    "word_count": 16,
+    "words": [
+      {
+        "word_id": 46280,
+        "word_order_in_verse": 1,
+        "word_raw": "وَقَالَ",
+        "plain_text_raw": "وَقَالَ",
+        "root_token_raw": "/قول/"
+      },
+      {
+        "word_id": 46281,
+        "word_order_in_verse": 2,
+        "word_raw": "الَّذِينَ",
+        "plain_text_raw": "ٱلَّذِينَ",
+        "root_token_raw": "/الذي/"
+      },
+      {
+        "word_id": 46282,
+        "word_order_in_verse": 3,
+        "word_raw": "كَفَرُوا",
+        "plain_text_raw": "كَفَرُوٓا۟",
+        "root_token_raw": "/كفر/"
+      },
+      {
+        "word_id": 46283,
+        "word_order_in_verse": 4,
+        "word_raw": "إِنْ",
+        "plain_text_raw": "إِنْ",
+        "root_token_raw": "/إن/"
+      },
+      {
+        "word_id": 46284,
+        "word_order_in_verse": 5,
+        "word_raw": "هَذَا",
+        "plain_text_raw": "هَٰذَآ",
+        "root_token_raw": "/ذا/"
+      },
+      {
+        "word_id": 46285,
+        "word_order_in_verse": 6,
+        "word_raw": "إِلَّا",
+        "plain_text_raw": "إِلَّآ",
+        "root_token_raw": "/إلا/"
+      },
+      {
+        "word_id": 46286,
+        "word_order_in_verse": 7,
+        "word_raw": "إِفْكٌ",
+        "plain_text_raw": "إِفْكٌ",
+        "root_token_raw": "/أفك/"
+      },
+      {
+        "word_id": 46287,
+        "word_order_in_verse": 8,
+        "word_raw": "افْتَرَاهُ",
+        "plain_text_raw": "ٱفْتَرَىٰهُ",
+        "root_token_raw": "/فري/"
+      },
+      {
+        "word_id": 46288,
+        "word_order_in_verse": 9,
+        "word_raw": "وَأَعَانَهُ",
+        "plain_text_raw": "وَأَعَانَهُۥ",
+        "root_token_raw": "/عون/"
+      },
+      {
+        "word_id": 46289,
+        "word_order_in_verse": 10,
+        "word_raw": "عَلَيْهِ",
+        "plain_text_raw": "عَلَيْهِ",
+        "root_token_raw": "/على/"
+      },
+      {
+        "word_id": 46290,
+        "word_order_in_verse": 11,
+        "word_raw": "قَوْمٌ",
+        "plain_text_raw": "قَوْمٌ",
+        "root_token_raw": "/قوم/"
+      },
+      {
+        "word_id": 46291,
+        "word_order_in_verse": 12,
+        "word_raw": "آخَرُونَ",
+        "plain_text_raw": "ءَاخَرُونَۖ",
+        "root_token_raw": "/أخر/"
+      },
+      {
+        "word_id": 46292,
+        "word_order_in_verse": 13,
+        "word_raw": "فَقَدْ",
+        "plain_text_raw": "فَقَدْ",
+        "root_token_raw": "/قد/"
+      },
+      {
+        "word_id": 46293,
+        "word_order_in_verse": 14,
+        "word_raw": "جَاءُوا",
+        "plain_text_raw": "جَآءُو",
+        "root_token_raw": "/جيأ/"
+      },
+      {
+        "word_id": 46294,
+        "word_order_in_verse": 15,
+        "word_raw": "ظُلْمًا",
+        "plain_text_raw": "ظُلْمࣰا",
+        "root_token_raw": "/ظلم/"
+      },
+      {
+        "word_id": 46295,
+        "word_order_in_verse": 16,
+        "word_raw": "وَزُورًا",
+        "plain_text_raw": "وَزُورࣰا",
+        "root_token_raw": "/زور/"
+      }
+    ]
+  },
+  {
+    "verse_key": "25-5",
+    "word_count": 9,
+    "words": [
+      {
+        "word_id": 46296,
+        "word_order_in_verse": 1,
+        "word_raw": "وَقَالُوا",
+        "plain_text_raw": "وَقَالُوٓا۟",
+        "root_token_raw": "/قول/"
+      },
+      {
+        "word_id": 46297,
+        "word_order_in_verse": 2,
+        "word_raw": "أَسَاطِيرُ",
+        "plain_text_raw": "أَسَٰطِيرُ",
+        "root_token_raw": "/سطر/"
+      },
+      {
+        "word_id": 46298,
+        "word_order_in_verse": 3,
+        "word_raw": "الْأَوَّلِينَ",
+        "plain_text_raw": "ٱلْأَوَّلِينَ",
+        "root_token_raw": "/أول/"
+      },
+      {
+        "word_id": 46299,
+        "word_order_in_verse": 4,
+        "word_raw": "اكْتَتَبَهَا",
+        "plain_text_raw": "ٱكْتَتَبَهَا",
+        "root_token_raw": "/كتب/"
+      },
+      {
+        "word_id": 46300,
+        "word_order_in_verse": 5,
+        "word_raw": "فَهِيَ",
+        "plain_text_raw": "فَهِيَ",
+        "root_token_raw": "/هي/"
+      },
+      {
+        "word_id": 46301,
+        "word_order_in_verse": 6,
+        "word_raw": "تُمْلَى",
+        "plain_text_raw": "تُمْلَىٰ",
+        "root_token_raw": "/ملي/"
+      },
+      {
+        "word_id": 46302,
+        "word_order_in_verse": 7,
+        "word_raw": "عَلَيْهِ",
+        "plain_text_raw": "عَلَيْهِ",
+        "root_token_raw": "/على/"
+      },
+      {
+        "word_id": 46303,
+        "word_order_in_verse": 8,
+        "word_raw": "بُكْرَةً",
+        "plain_text_raw": "بُكْرَةࣰ",
+        "root_token_raw": "/بكر/"
+      },
+      {
+        "word_id": 46304,
+        "word_order_in_verse": 9,
+        "word_raw": "وَأَصِيلًا",
+        "plain_text_raw": "وَأَصِيلࣰا",
+        "root_token_raw": "/أصل/"
+      }
+    ]
+  },
+  {
+    "verse_key": "25-6",
+    "word_count": 12,
+    "words": [
+      {
+        "word_id": 46305,
+        "word_order_in_verse": 1,
+        "word_raw": "قُلْ",
+        "plain_text_raw": "قُلْ",
+        "root_token_raw": "/قول/"
+      },
+      {
+        "word_id": 46306,
+        "word_order_in_verse": 2,
+        "word_raw": "أَنْزَلَهُ",
+        "plain_text_raw": "أَنزَلَهُ",
+        "root_token_raw": "/نزل/"
+      },
+      {
+        "word_id": 46307,
+        "word_order_in_verse": 3,
+        "word_raw": "الَّذِي",
+        "plain_text_raw": "ٱلَّذِي",
+        "root_token_raw": "/الذي/"
+      },
+      {
+        "word_id": 46308,
+        "word_order_in_verse": 4,
+        "word_raw": "يَعْلَمُ",
+        "plain_text_raw": "يَعْلَمُ",
+        "root_token_raw": "/علم/"
+      },
+      {
+        "word_id": 46309,
+        "word_order_in_verse": 5,
+        "word_raw": "السِّرَّ",
+        "plain_text_raw": "ٱلسِّرَّ",
+        "root_token_raw": "/سرر/"
+      },
+      {
+        "word_id": 46310,
+        "word_order_in_verse": 6,
+        "word_raw": "فِي",
+        "plain_text_raw": "فِي",
+        "root_token_raw": "/في/"
+      },
+      {
+        "word_id": 46311,
+        "word_order_in_verse": 7,
+        "word_raw": "السَّمَاوَاتِ",
+        "plain_text_raw": "ٱلسَّمَٰوَٰتِ",
+        "root_token_raw": "/سمو/"
+      },
+      {
+        "word_id": 46312,
+        "word_order_in_verse": 8,
+        "word_raw": "وَالْأَرْضِ",
+        "plain_text_raw": "وَٱلْأَرْضِۚ",
+        "root_token_raw": "/أرض/"
+      },
+      {
+        "word_id": 46313,
+        "word_order_in_verse": 9,
+        "word_raw": "إِنَّهُ",
+        "plain_text_raw": "إِنَّهُۥ",
+        "root_token_raw": "/إنّ/"
+      },
+      {
+        "word_id": 46314,
+        "word_order_in_verse": 10,
+        "word_raw": "كَانَ",
+        "plain_text_raw": "كَانَ",
+        "root_token_raw": "/كون/"
+      },
+      {
+        "word_id": 46315,
+        "word_order_in_verse": 11,
+        "word_raw": "غَفُورًا",
+        "plain_text_raw": "غَفُورࣰا",
+        "root_token_raw": "/غفر/"
+      },
+      {
+        "word_id": 46316,
+        "word_order_in_verse": 12,
+        "word_raw": "رَحِيمًا",
+        "plain_text_raw": "رَّحِيمࣰا",
+        "root_token_raw": "/رحم/"
+      }
+    ]
+  },
+  {
+    "verse_key": "25-7",
+    "word_count": 16,
+    "words": [
+      {
+        "word_id": 46317,
+        "word_order_in_verse": 1,
+        "word_raw": "وَقَالُوا",
+        "plain_text_raw": "وَقَالُوا۟",
+        "root_token_raw": "/قول/"
+      },
+      {
+        "word_id": 46318,
+        "word_order_in_verse": 2,
+        "word_raw": "مَا",
+        "plain_text_raw": "مَالِ",
+        "root_token_raw": "/ما/"
+      },
+      {
+        "word_id": 46319,
+        "word_order_in_verse": 3,
+        "word_raw": "لِهَذَا",
+        "plain_text_raw": "هَٰذَا",
+        "root_token_raw": "/ذا/"
+      },
+      {
+        "word_id": 46320,
+        "word_order_in_verse": 4,
+        "word_raw": "الرَّسُولِ",
+        "plain_text_raw": "ٱلرَّسُولِ",
+        "root_token_raw": "/رسل/"
+      },
+      {
+        "word_id": 46321,
+        "word_order_in_verse": 5,
+        "word_raw": "يَأْكُلُ",
+        "plain_text_raw": "يَأْكُلُ",
+        "root_token_raw": "/أكل/"
+      },
+      {
+        "word_id": 46322,
+        "word_order_in_verse": 6,
+        "word_raw": "الطَّعَامَ",
+        "plain_text_raw": "ٱلطَّعَامَ",
+        "root_token_raw": "/طعم/"
+      },
+      {
+        "word_id": 46323,
+        "word_order_in_verse": 7,
+        "word_raw": "وَيَمْشِي",
+        "plain_text_raw": "وَيَمْشِي",
+        "root_token_raw": "/مشي/"
+      },
+      {
+        "word_id": 46324,
+        "word_order_in_verse": 8,
+        "word_raw": "فِي",
+        "plain_text_raw": "فِي",
+        "root_token_raw": "/في/"
+      },
+      {
+        "word_id": 46325,
+        "word_order_in_verse": 9,
+        "word_raw": "الْأَسْوَاقِ",
+        "plain_text_raw": "ٱلْأَسْوَاقِ",
+        "root_token_raw": "/سوق/"
+      },
+      {
+        "word_id": 46326,
+        "word_order_in_verse": 10,
+        "word_raw": "لَوْلَا",
+        "plain_text_raw": "لَوْلَآ",
+        "root_token_raw": "/لولا/"
+      },
+      {
+        "word_id": 46327,
+        "word_order_in_verse": 11,
+        "word_raw": "أُنْزِلَ",
+        "plain_text_raw": "أُنزِلَ",
+        "root_token_raw": "/نزل/"
+      },
+      {
+        "word_id": 46328,
+        "word_order_in_verse": 12,
+        "word_raw": "إِلَيْهِ",
+        "plain_text_raw": "إِلَيْهِ",
+        "root_token_raw": "/إلى/"
+      },
+      {
+        "word_id": 46329,
+        "word_order_in_verse": 13,
+        "word_raw": "مَلَكٌ",
+        "plain_text_raw": "مَلَكࣱ",
+        "root_token_raw": "/ألك/"
+      },
+      {
+        "word_id": 46330,
+        "word_order_in_verse": 14,
+        "word_raw": "فَيَكُونَ",
+        "plain_text_raw": "فَيَكُونَ",
+        "root_token_raw": "/كون/"
+      },
+      {
+        "word_id": 46331,
+        "word_order_in_verse": 15,
+        "word_raw": "مَعَهُ",
+        "plain_text_raw": "مَعَهُۥ",
+        "root_token_raw": "/مع/"
+      },
+      {
+        "word_id": 46332,
+        "word_order_in_verse": 16,
+        "word_raw": "نَذِيرًا",
+        "plain_text_raw": "نَذِيرًا",
+        "root_token_raw": "/نذر/"
+      }
+    ]
+  },
+  {
+    "verse_key": "25-8",
+    "word_count": 17,
+    "words": [
+      {
+        "word_id": 46333,
+        "word_order_in_verse": 1,
+        "word_raw": "أَوْ",
+        "plain_text_raw": "أَوْ",
+        "root_token_raw": "/أو/"
+      },
+      {
+        "word_id": 46334,
+        "word_order_in_verse": 2,
+        "word_raw": "يُلْقَى",
+        "plain_text_raw": "يُلْقَىٰٓ",
+        "root_token_raw": "/لقي/"
+      },
+      {
+        "word_id": 46335,
+        "word_order_in_verse": 3,
+        "word_raw": "إِلَيْهِ",
+        "plain_text_raw": "إِلَيْهِ",
+        "root_token_raw": "/إلى/"
+      },
+      {
+        "word_id": 46336,
+        "word_order_in_verse": 4,
+        "word_raw": "كَنْزٌ",
+        "plain_text_raw": "كَنزٌ",
+        "root_token_raw": "/كنز/"
+      },
+      {
+        "word_id": 46337,
+        "word_order_in_verse": 5,
+        "word_raw": "أَوْ",
+        "plain_text_raw": "أَوْ",
+        "root_token_raw": "/أو/"
+      },
+      {
+        "word_id": 46338,
+        "word_order_in_verse": 6,
+        "word_raw": "تَكُونُ",
+        "plain_text_raw": "تَكُونُ",
+        "root_token_raw": "/كون/"
+      },
+      {
+        "word_id": 46339,
+        "word_order_in_verse": 7,
+        "word_raw": "لَهُ",
+        "plain_text_raw": "لَهُۥ",
+        "root_token_raw": "/ل/"
+      },
+      {
+        "word_id": 46340,
+        "word_order_in_verse": 8,
+        "word_raw": "جَنَّةٌ",
+        "plain_text_raw": "جَنَّةࣱ",
+        "root_token_raw": "/جنن/"
+      },
+      {
+        "word_id": 46341,
+        "word_order_in_verse": 9,
+        "word_raw": "يَأْكُلُ",
+        "plain_text_raw": "يَأْكُلُ",
+        "root_token_raw": "/أكل/"
+      },
+      {
+        "word_id": 46342,
+        "word_order_in_verse": 10,
+        "word_raw": "مِنْهَا",
+        "plain_text_raw": "مِنْهَاۚ",
+        "root_token_raw": "/مِن/"
+      },
+      {
+        "word_id": 46343,
+        "word_order_in_verse": 11,
+        "word_raw": "وَقَالَ",
+        "plain_text_raw": "وَقَالَ",
+        "root_token_raw": "/قول/"
+      },
+      {
+        "word_id": 46344,
+        "word_order_in_verse": 12,
+        "word_raw": "الظَّالِمُونَ",
+        "plain_text_raw": "ٱلظَّٰلِمُونَ",
+        "root_token_raw": "/ظلم/"
+      },
+      {
+        "word_id": 46345,
+        "word_order_in_verse": 13,
+        "word_raw": "إِنْ",
+        "plain_text_raw": "إِن",
+        "root_token_raw": "/إن/"
+      },
+      {
+        "word_id": 46346,
+        "word_order_in_verse": 14,
+        "word_raw": "تَتَّبِعُونَ",
+        "plain_text_raw": "تَتَّبِعُونَ",
+        "root_token_raw": "/تبع/"
+      },
+      {
+        "word_id": 46347,
+        "word_order_in_verse": 15,
+        "word_raw": "إِلَّا",
+        "plain_text_raw": "إِلَّا",
+        "root_token_raw": "/إلا/"
+      },
+      {
+        "word_id": 46348,
+        "word_order_in_verse": 16,
+        "word_raw": "رَجُلًا",
+        "plain_text_raw": "رَجُلࣰا",
+        "root_token_raw": "/رجل/"
+      },
+      {
+        "word_id": 46349,
+        "word_order_in_verse": 17,
+        "word_raw": "مَسْحُورًا",
+        "plain_text_raw": "مَّسْحُورًا",
+        "root_token_raw": "/سحر/"
+      }
+    ]
+  },
+  {
+    "verse_key": "25-9",
+    "word_count": 9,
+    "words": [
+      {
+        "word_id": 46350,
+        "word_order_in_verse": 1,
+        "word_raw": "انْظُرْ",
+        "plain_text_raw": "ٱنظُرْ",
+        "root_token_raw": "/نظر/"
+      },
+      {
+        "word_id": 46351,
+        "word_order_in_verse": 2,
+        "word_raw": "كَيْفَ",
+        "plain_text_raw": "كَيْفَ",
+        "root_token_raw": "/كيف/"
+      },
+      {
+        "word_id": 46352,
+        "word_order_in_verse": 3,
+        "word_raw": "ضَرَبُوا",
+        "plain_text_raw": "ضَرَبُوا۟",
+        "root_token_raw": "/ضرب/"
+      },
+      {
+        "word_id": 46353,
+        "word_order_in_verse": 4,
+        "word_raw": "لَكَ",
+        "plain_text_raw": "لَكَ",
+        "root_token_raw": "/ل/"
+      },
+      {
+        "word_id": 46354,
+        "word_order_in_verse": 5,
+        "word_raw": "الْأَمْثَالَ",
+        "plain_text_raw": "ٱلْأَمْثَٰلَ",
+        "root_token_raw": "/مثل/"
+      },
+      {
+        "word_id": 46355,
+        "word_order_in_verse": 6,
+        "word_raw": "فَضَلُّوا",
+        "plain_text_raw": "فَضَلُّوا۟",
+        "root_token_raw": "/ضلل/"
+      },
+      {
+        "word_id": 46356,
+        "word_order_in_verse": 7,
+        "word_raw": "فَلَا",
+        "plain_text_raw": "فَلَا",
+        "root_token_raw": "/لا/"
+      },
+      {
+        "word_id": 46357,
+        "word_order_in_verse": 8,
+        "word_raw": "يَسْتَطِيعُونَ",
+        "plain_text_raw": "يَسْتَطِيعُونَ",
+        "root_token_raw": "/طوع/"
+      },
+      {
+        "word_id": 46358,
+        "word_order_in_verse": 9,
+        "word_raw": "سَبِيلًا",
+        "plain_text_raw": "سَبِيلࣰا",
+        "root_token_raw": "/سبل/"
+      }
+    ]
+  },
+  {
+    "verse_key": "25-10",
+    "word_count": 17,
+    "words": [
+      {
+        "word_id": 46359,
+        "word_order_in_verse": 1,
+        "word_raw": "تَبَارَكَ",
+        "plain_text_raw": "تَبَارَكَ",
+        "root_token_raw": "/برك/"
+      },
+      {
+        "word_id": 46360,
+        "word_order_in_verse": 2,
+        "word_raw": "الَّذِي",
+        "plain_text_raw": "ٱلَّذِيٓ",
+        "root_token_raw": "/الذي/"
+      },
+      {
+        "word_id": 46361,
+        "word_order_in_verse": 3,
+        "word_raw": "إِنْ",
+        "plain_text_raw": "إِن",
+        "root_token_raw": "/إن/"
+      },
+      {
+        "word_id": 46362,
+        "word_order_in_verse": 4,
+        "word_raw": "شَاءَ",
+        "plain_text_raw": "شَآءَ",
+        "root_token_raw": "/شيأ/"
+      },
+      {
+        "word_id": 46363,
+        "word_order_in_verse": 5,
+        "word_raw": "جَعَلَ",
+        "plain_text_raw": "جَعَلَ",
+        "root_token_raw": "/جعل/"
+      },
+      {
+        "word_id": 46364,
+        "word_order_in_verse": 6,
+        "word_raw": "لَكَ",
+        "plain_text_raw": "لَكَ",
+        "root_token_raw": "/ل/"
+      },
+      {
+        "word_id": 46365,
+        "word_order_in_verse": 7,
+        "word_raw": "خَيْرًا",
+        "plain_text_raw": "خَيْرࣰا",
+        "root_token_raw": "/خير/"
+      },
+      {
+        "word_id": 46366,
+        "word_order_in_verse": 8,
+        "word_raw": "مِنْ",
+        "plain_text_raw": "مِّن",
+        "root_token_raw": "/مِن/"
+      },
+      {
+        "word_id": 46367,
+        "word_order_in_verse": 9,
+        "word_raw": "ذَلِكَ",
+        "plain_text_raw": "ذَٰلِكَ",
+        "root_token_raw": "/ذا/"
+      },
+      {
+        "word_id": 46368,
+        "word_order_in_verse": 10,
+        "word_raw": "جَنَّاتٍ",
+        "plain_text_raw": "جَنَّٰتࣲ",
+        "root_token_raw": "/جنن/"
+      },
+      {
+        "word_id": 46369,
+        "word_order_in_verse": 11,
+        "word_raw": "تَجْرِي",
+        "plain_text_raw": "تَجْرِي",
+        "root_token_raw": "/جري/"
+      },
+      {
+        "word_id": 46370,
+        "word_order_in_verse": 12,
+        "word_raw": "مِنْ",
+        "plain_text_raw": "مِن",
+        "root_token_raw": "/مِن/"
+      },
+      {
+        "word_id": 46371,
+        "word_order_in_verse": 13,
+        "word_raw": "تَحْتِهَا",
+        "plain_text_raw": "تَحْتِهَا",
+        "root_token_raw": "/تحت/"
+      },
+      {
+        "word_id": 46372,
+        "word_order_in_verse": 14,
+        "word_raw": "الْأَنْهَارُ",
+        "plain_text_raw": "ٱلْأَنْهَٰرُ",
+        "root_token_raw": "/نهر/"
+      },
+      {
+        "word_id": 46373,
+        "word_order_in_verse": 15,
+        "word_raw": "وَيَجْعَلْ",
+        "plain_text_raw": "وَيَجْعَل",
+        "root_token_raw": "/جعل/"
+      },
+      {
+        "word_id": 46374,
+        "word_order_in_verse": 16,
+        "word_raw": "لَكَ",
+        "plain_text_raw": "لَّكَ",
+        "root_token_raw": "/ل/"
+      },
+      {
+        "word_id": 46375,
+        "word_order_in_verse": 17,
+        "word_raw": "قُصُورًا",
+        "plain_text_raw": "قُصُورَۢا",
+        "root_token_raw": "/قصر/"
+      }
+    ]
+  },
+  {
+    "verse_key": "25-11",
+    "word_count": 8,
+    "words": [
+      {
+        "word_id": 46376,
+        "word_order_in_verse": 1,
+        "word_raw": "بَلْ",
+        "plain_text_raw": "بَلْ",
+        "root_token_raw": "/بل/"
+      },
+      {
+        "word_id": 46377,
+        "word_order_in_verse": 2,
+        "word_raw": "كَذَّبُوا",
+        "plain_text_raw": "كَذَّبُوا۟",
+        "root_token_raw": "/كذب/"
+      },
+      {
+        "word_id": 46378,
+        "word_order_in_verse": 3,
+        "word_raw": "بِالسَّاعَةِ",
+        "plain_text_raw": "بِٱلسَّاعَةِۖ",
+        "root_token_raw": "/سوع/"
+      },
+      {
+        "word_id": 46379,
+        "word_order_in_verse": 4,
+        "word_raw": "وَأَعْتَدْنَا",
+        "plain_text_raw": "وَأَعْتَدْنَا",
+        "root_token_raw": "/عتد/"
+      },
+      {
+        "word_id": 46380,
+        "word_order_in_verse": 5,
+        "word_raw": "لِمَنْ",
+        "plain_text_raw": "لِمَن",
+        "root_token_raw": "/مَن/"
+      },
+      {
+        "word_id": 46381,
+        "word_order_in_verse": 6,
+        "word_raw": "كَذَّبَ",
+        "plain_text_raw": "كَذَّبَ",
+        "root_token_raw": "/كذب/"
+      },
+      {
+        "word_id": 46382,
+        "word_order_in_verse": 7,
+        "word_raw": "بِالسَّاعَةِ",
+        "plain_text_raw": "بِٱلسَّاعَةِ",
+        "root_token_raw": "/سوع/"
+      },
+      {
+        "word_id": 46383,
+        "word_order_in_verse": 8,
+        "word_raw": "سَعِيرًا",
+        "plain_text_raw": "سَعِيرًا",
+        "root_token_raw": "/سعر/"
+      }
+    ]
+  },
+  {
+    "verse_key": "25-12",
+    "word_count": 9,
+    "words": [
+      {
+        "word_id": 46384,
+        "word_order_in_verse": 1,
+        "word_raw": "إِذَا",
+        "plain_text_raw": "إِذَا",
+        "root_token_raw": "/إذا/"
+      },
+      {
+        "word_id": 46385,
+        "word_order_in_verse": 2,
+        "word_raw": "رَأَتْهُمْ",
+        "plain_text_raw": "رَأَتْهُم",
+        "root_token_raw": "/رأي/"
+      },
+      {
+        "word_id": 46386,
+        "word_order_in_verse": 3,
+        "word_raw": "مِنْ",
+        "plain_text_raw": "مِّن",
+        "root_token_raw": "/مِن/"
+      },
+      {
+        "word_id": 46387,
+        "word_order_in_verse": 4,
+        "word_raw": "مَكَانٍ",
+        "plain_text_raw": "مَّكَانِۭ",
+        "root_token_raw": "/كون/"
+      },
+      {
+        "word_id": 46388,
+        "word_order_in_verse": 5,
+        "word_raw": "بَعِيدٍ",
+        "plain_text_raw": "بَعِيدࣲ",
+        "root_token_raw": "/بعد/"
+      },
+      {
+        "word_id": 46389,
+        "word_order_in_verse": 6,
+        "word_raw": "سَمِعُوا",
+        "plain_text_raw": "سَمِعُوا۟",
+        "root_token_raw": "/سمع/"
+      },
+      {
+        "word_id": 46390,
+        "word_order_in_verse": 7,
+        "word_raw": "لَهَا",
+        "plain_text_raw": "لَهَا",
+        "root_token_raw": "/ل/"
+      },
+      {
+        "word_id": 46391,
+        "word_order_in_verse": 8,
+        "word_raw": "تَغَيُّظًا",
+        "plain_text_raw": "تَغَيُّظࣰا",
+        "root_token_raw": "/غيظ/"
+      },
+      {
+        "word_id": 46392,
+        "word_order_in_verse": 9,
+        "word_raw": "وَزَفِيرًا",
+        "plain_text_raw": "وَزَفِيرࣰا",
+        "root_token_raw": "/زفر/"
+      }
+    ]
+  },
+  {
+    "verse_key": "25-13",
+    "word_count": 9,
+    "words": [
+      {
+        "word_id": 46393,
+        "word_order_in_verse": 1,
+        "word_raw": "وَإِذَا",
+        "plain_text_raw": "وَإِذَآ",
+        "root_token_raw": "/إذا/"
+      },
+      {
+        "word_id": 46394,
+        "word_order_in_verse": 2,
+        "word_raw": "أُلْقُوا",
+        "plain_text_raw": "أُلْقُوا۟",
+        "root_token_raw": "/لقي/"
+      },
+      {
+        "word_id": 46395,
+        "word_order_in_verse": 3,
+        "word_raw": "مِنْهَا",
+        "plain_text_raw": "مِنْهَا",
+        "root_token_raw": "/مِن/"
+      },
+      {
+        "word_id": 46396,
+        "word_order_in_verse": 4,
+        "word_raw": "مَكَانًا",
+        "plain_text_raw": "مَكَانࣰا",
+        "root_token_raw": "/كون/"
+      },
+      {
+        "word_id": 46397,
+        "word_order_in_verse": 5,
+        "word_raw": "ضَيِّقًا",
+        "plain_text_raw": "ضَيِّقࣰا",
+        "root_token_raw": "/ضيق/"
+      },
+      {
+        "word_id": 46398,
+        "word_order_in_verse": 6,
+        "word_raw": "مُقَرَّنِينَ",
+        "plain_text_raw": "مُّقَرَّنِينَ",
+        "root_token_raw": "/قرن/"
+      },
+      {
+        "word_id": 46399,
+        "word_order_in_verse": 7,
+        "word_raw": "دَعَوْا",
+        "plain_text_raw": "دَعَوْا۟",
+        "root_token_raw": "/دعو/"
+      },
+      {
+        "word_id": 46400,
+        "word_order_in_verse": 8,
+        "word_raw": "هُنَالِكَ",
+        "plain_text_raw": "هُنَالِكَ",
+        "root_token_raw": "/هنا/"
+      },
+      {
+        "word_id": 46401,
+        "word_order_in_verse": 9,
+        "word_raw": "ثُبُورًا",
+        "plain_text_raw": "ثُبُورࣰا",
+        "root_token_raw": "/ثبر/"
+      }
+    ]
+  },
+  {
+    "verse_key": "25-14",
+    "word_count": 8,
+    "words": [
+      {
+        "word_id": 46402,
+        "word_order_in_verse": 1,
+        "word_raw": "لَا",
+        "plain_text_raw": "لَّا",
+        "root_token_raw": "/لا/"
+      },
+      {
+        "word_id": 46403,
+        "word_order_in_verse": 2,
+        "word_raw": "تَدْعُوا",
+        "plain_text_raw": "تَدْعُوا۟",
+        "root_token_raw": "/دعو/"
+      },
+      {
+        "word_id": 46404,
+        "word_order_in_verse": 3,
+        "word_raw": "الْيَوْمَ",
+        "plain_text_raw": "ٱلْيَوْمَ",
+        "root_token_raw": "/يوم/"
+      },
+      {
+        "word_id": 46405,
+        "word_order_in_verse": 4,
+        "word_raw": "ثُبُورًا",
+        "plain_text_raw": "ثُبُورࣰا",
+        "root_token_raw": "/ثبر/"
+      },
+      {
+        "word_id": 46406,
+        "word_order_in_verse": 5,
+        "word_raw": "وَاحِدًا",
+        "plain_text_raw": "وَٰحِدࣰا",
+        "root_token_raw": "/وحد/"
+      },
+      {
+        "word_id": 46407,
+        "word_order_in_verse": 6,
+        "word_raw": "وَادْعُوا",
+        "plain_text_raw": "وَٱدْعُوا۟",
+        "root_token_raw": "/دعو/"
+      },
+      {
+        "word_id": 46408,
+        "word_order_in_verse": 7,
+        "word_raw": "ثُبُورًا",
+        "plain_text_raw": "ثُبُورࣰا",
+        "root_token_raw": "/ثبر/"
+      },
+      {
+        "word_id": 46409,
+        "word_order_in_verse": 8,
+        "word_raw": "كَثِيرًا",
+        "plain_text_raw": "كَثِيرࣰا",
+        "root_token_raw": "/كثر/"
+      }
+    ]
+  },
+  {
+    "verse_key": "25-15",
+    "word_count": 13,
+    "words": [
+      {
+        "word_id": 46410,
+        "word_order_in_verse": 1,
+        "word_raw": "قُلْ",
+        "plain_text_raw": "قُلْ",
+        "root_token_raw": "/قول/"
+      },
+      {
+        "word_id": 46411,
+        "word_order_in_verse": 2,
+        "word_raw": "أَذَلِكَ",
+        "plain_text_raw": "أَذَٰلِكَ",
+        "root_token_raw": "/ذا/"
+      },
+      {
+        "word_id": 46412,
+        "word_order_in_verse": 3,
+        "word_raw": "خَيْرٌ",
+        "plain_text_raw": "خَيْرٌ",
+        "root_token_raw": "/خير/"
+      },
+      {
+        "word_id": 46413,
+        "word_order_in_verse": 4,
+        "word_raw": "أَمْ",
+        "plain_text_raw": "أَمْ",
+        "root_token_raw": "/أم/"
+      },
+      {
+        "word_id": 46414,
+        "word_order_in_verse": 5,
+        "word_raw": "جَنَّةُ",
+        "plain_text_raw": "جَنَّةُ",
+        "root_token_raw": "/جنن/"
+      },
+      {
+        "word_id": 46415,
+        "word_order_in_verse": 6,
+        "word_raw": "الْخُلْدِ",
+        "plain_text_raw": "ٱلْخُلْدِ",
+        "root_token_raw": "/خلد/"
+      },
+      {
+        "word_id": 46416,
+        "word_order_in_verse": 7,
+        "word_raw": "الَّتِي",
+        "plain_text_raw": "ٱلَّتِي",
+        "root_token_raw": "/التي/"
+      },
+      {
+        "word_id": 46417,
+        "word_order_in_verse": 8,
+        "word_raw": "وُعِدَ",
+        "plain_text_raw": "وُعِدَ",
+        "root_token_raw": "/وعد/"
+      },
+      {
+        "word_id": 46418,
+        "word_order_in_verse": 9,
+        "word_raw": "الْمُتَّقُونَ",
+        "plain_text_raw": "ٱلْمُتَّقُونَۚ",
+        "root_token_raw": "/وقي/"
+      },
+      {
+        "word_id": 46419,
+        "word_order_in_verse": 10,
+        "word_raw": "كَانَتْ",
+        "plain_text_raw": "كَانَتْ",
+        "root_token_raw": "/كون/"
+      },
+      {
+        "word_id": 46420,
+        "word_order_in_verse": 11,
+        "word_raw": "لَهُمْ",
+        "plain_text_raw": "لَهُمْ",
+        "root_token_raw": "/ل/"
+      },
+      {
+        "word_id": 46421,
+        "word_order_in_verse": 12,
+        "word_raw": "جَزَاءً",
+        "plain_text_raw": "جَزَآءࣰ",
+        "root_token_raw": "/جزي/"
+      },
+      {
+        "word_id": 46422,
+        "word_order_in_verse": 13,
+        "word_raw": "وَمَصِيرًا",
+        "plain_text_raw": "وَمَصِيرࣰا",
+        "root_token_raw": "/صير/"
+      }
+    ]
+  },
+  {
+    "verse_key": "25-16",
+    "word_count": 10,
+    "words": [
+      {
+        "word_id": 46423,
+        "word_order_in_verse": 1,
+        "word_raw": "لَهُمْ",
+        "plain_text_raw": "لَّهُمْ",
+        "root_token_raw": "/ل/"
+      },
+      {
+        "word_id": 46424,
+        "word_order_in_verse": 2,
+        "word_raw": "فِيهَا",
+        "plain_text_raw": "فِيهَا",
+        "root_token_raw": "/في/"
+      },
+      {
+        "word_id": 46425,
+        "word_order_in_verse": 3,
+        "word_raw": "مَا",
+        "plain_text_raw": "مَا",
+        "root_token_raw": "/ما/"
+      },
+      {
+        "word_id": 46426,
+        "word_order_in_verse": 4,
+        "word_raw": "يَشَاءُونَ",
+        "plain_text_raw": "يَشَآءُونَ",
+        "root_token_raw": "/شيأ/"
+      },
+      {
+        "word_id": 46427,
+        "word_order_in_verse": 5,
+        "word_raw": "خَالِدِينَ",
+        "plain_text_raw": "خَٰلِدِينَۚ",
+        "root_token_raw": "/خلد/"
+      },
+      {
+        "word_id": 46428,
+        "word_order_in_verse": 6,
+        "word_raw": "كَانَ",
+        "plain_text_raw": "كَانَ",
+        "root_token_raw": "/كون/"
+      },
+      {
+        "word_id": 46429,
+        "word_order_in_verse": 7,
+        "word_raw": "عَلَى",
+        "plain_text_raw": "عَلَىٰ",
+        "root_token_raw": "/على/"
+      },
+      {
+        "word_id": 46430,
+        "word_order_in_verse": 8,
+        "word_raw": "رَبِّكَ",
+        "plain_text_raw": "رَبِّكَ",
+        "root_token_raw": "/ربب/"
+      },
+      {
+        "word_id": 46431,
+        "word_order_in_verse": 9,
+        "word_raw": "وَعْدًا",
+        "plain_text_raw": "وَعْدࣰا",
+        "root_token_raw": "/وعد/"
+      },
+      {
+        "word_id": 46432,
+        "word_order_in_verse": 10,
+        "word_raw": "مَسْئُولًا",
+        "plain_text_raw": "مَّسْـُٔولࣰا",
+        "root_token_raw": "/سأل/"
+      }
+    ]
+  },
+  {
+    "verse_key": "25-17",
+    "word_count": 16,
+    "words": [
+      {
+        "word_id": 46433,
+        "word_order_in_verse": 1,
+        "word_raw": "وَيَوْمَ",
+        "plain_text_raw": "وَيَوْمَ",
+        "root_token_raw": "/يوم/"
+      },
+      {
+        "word_id": 46434,
+        "word_order_in_verse": 2,
+        "word_raw": "يَحْشُرُهُمْ",
+        "plain_text_raw": "يَحْشُرُهُمْ",
+        "root_token_raw": "/حشر/"
+      },
+      {
+        "word_id": 46435,
+        "word_order_in_verse": 3,
+        "word_raw": "وَمَا",
+        "plain_text_raw": "وَمَا",
+        "root_token_raw": "/ما/"
+      },
+      {
+        "word_id": 46436,
+        "word_order_in_verse": 4,
+        "word_raw": "يَعْبُدُونَ",
+        "plain_text_raw": "يَعْبُدُونَ",
+        "root_token_raw": "/عبد/"
+      },
+      {
+        "word_id": 46437,
+        "word_order_in_verse": 5,
+        "word_raw": "مِنْ",
+        "plain_text_raw": "مِن",
+        "root_token_raw": "/مِن/"
+      },
+      {
+        "word_id": 46438,
+        "word_order_in_verse": 6,
+        "word_raw": "دُونِ",
+        "plain_text_raw": "دُونِ",
+        "root_token_raw": "/دون/"
+      },
+      {
+        "word_id": 46439,
+        "word_order_in_verse": 7,
+        "word_raw": "اللَّهِ",
+        "plain_text_raw": "ٱللَّهِ",
+        "root_token_raw": "/أله/"
+      },
+      {
+        "word_id": 46440,
+        "word_order_in_verse": 8,
+        "word_raw": "فَيَقُولُ",
+        "plain_text_raw": "فَيَقُولُ",
+        "root_token_raw": "/قول/"
+      },
+      {
+        "word_id": 46441,
+        "word_order_in_verse": 9,
+        "word_raw": "أَأَنْتُمْ",
+        "plain_text_raw": "ءَأَنتُمْ",
+        "root_token_raw": "/أنتم/"
+      },
+      {
+        "word_id": 46442,
+        "word_order_in_verse": 10,
+        "word_raw": "أَضْلَلْتُمْ",
+        "plain_text_raw": "أَضْلَلْتُمْ",
+        "root_token_raw": "/ضلل/"
+      },
+      {
+        "word_id": 46443,
+        "word_order_in_verse": 11,
+        "word_raw": "عِبَادِي",
+        "plain_text_raw": "عِبَادِي",
+        "root_token_raw": "/عبد/"
+      },
+      {
+        "word_id": 46444,
+        "word_order_in_verse": 12,
+        "word_raw": "هَؤُلَاءِ",
+        "plain_text_raw": "هَٰٓؤُلَآءِ",
+        "root_token_raw": "/أولاء/"
+      },
+      {
+        "word_id": 46445,
+        "word_order_in_verse": 13,
+        "word_raw": "أَمْ",
+        "plain_text_raw": "أَمْ",
+        "root_token_raw": "/أم/"
+      },
+      {
+        "word_id": 46446,
+        "word_order_in_verse": 14,
+        "word_raw": "هُمْ",
+        "plain_text_raw": "هُمْ",
+        "root_token_raw": "/هم/"
+      },
+      {
+        "word_id": 46447,
+        "word_order_in_verse": 15,
+        "word_raw": "ضَلُّوا",
+        "plain_text_raw": "ضَلُّوا۟",
+        "root_token_raw": "/ضلل/"
+      },
+      {
+        "word_id": 46448,
+        "word_order_in_verse": 16,
+        "word_raw": "السَّبِيلَ",
+        "plain_text_raw": "ٱلسَّبِيلَ",
+        "root_token_raw": "/سبل/"
+      }
+    ]
+  },
+  {
+    "verse_key": "25-18",
+    "word_count": 21,
+    "words": [
+      {
+        "word_id": 46449,
+        "word_order_in_verse": 1,
+        "word_raw": "قَالُوا",
+        "plain_text_raw": "قَالُوا۟",
+        "root_token_raw": "/قول/"
+      },
+      {
+        "word_id": 46450,
+        "word_order_in_verse": 2,
+        "word_raw": "سُبْحَانَكَ",
+        "plain_text_raw": "سُبْحَٰنَكَ",
+        "root_token_raw": "/سبح/"
+      },
+      {
+        "word_id": 46451,
+        "word_order_in_verse": 3,
+        "word_raw": "مَا",
+        "plain_text_raw": "مَا",
+        "root_token_raw": "/ما/"
+      },
+      {
+        "word_id": 46452,
+        "word_order_in_verse": 4,
+        "word_raw": "كَانَ",
+        "plain_text_raw": "كَانَ",
+        "root_token_raw": "/كون/"
+      },
+      {
+        "word_id": 46453,
+        "word_order_in_verse": 5,
+        "word_raw": "يَنْبَغِي",
+        "plain_text_raw": "يَنۢبَغِي",
+        "root_token_raw": "/بغي/"
+      },
+      {
+        "word_id": 46454,
+        "word_order_in_verse": 6,
+        "word_raw": "لَنَا",
+        "plain_text_raw": "لَنَآ",
+        "root_token_raw": "/ل/"
+      },
+      {
+        "word_id": 46455,
+        "word_order_in_verse": 7,
+        "word_raw": "أَنْ",
+        "plain_text_raw": "أَن",
+        "root_token_raw": "/أن/"
+      },
+      {
+        "word_id": 46456,
+        "word_order_in_verse": 8,
+        "word_raw": "نَتَّخِذَ",
+        "plain_text_raw": "نَّتَّخِذَ",
+        "root_token_raw": "/أخذ/"
+      },
+      {
+        "word_id": 46457,
+        "word_order_in_verse": 9,
+        "word_raw": "مِنْ",
+        "plain_text_raw": "مِن",
+        "root_token_raw": "/مِن/"
+      },
+      {
+        "word_id": 46458,
+        "word_order_in_verse": 10,
+        "word_raw": "دُونِكَ",
+        "plain_text_raw": "دُونِكَ",
+        "root_token_raw": "/دون/"
+      },
+      {
+        "word_id": 46459,
+        "word_order_in_verse": 11,
+        "word_raw": "مِنْ",
+        "plain_text_raw": "مِنْ",
+        "root_token_raw": "/مِن/"
+      },
+      {
+        "word_id": 46460,
+        "word_order_in_verse": 12,
+        "word_raw": "أَوْلِيَاءَ",
+        "plain_text_raw": "أَوْلِيَآءَ",
+        "root_token_raw": "/ولي/"
+      },
+      {
+        "word_id": 46461,
+        "word_order_in_verse": 13,
+        "word_raw": "وَلَكِنْ",
+        "plain_text_raw": "وَلَٰكِن",
+        "root_token_raw": "/لكن/"
+      },
+      {
+        "word_id": 46462,
+        "word_order_in_verse": 14,
+        "word_raw": "مَتَّعْتَهُمْ",
+        "plain_text_raw": "مَّتَّعْتَهُمْ",
+        "root_token_raw": "/متع/"
+      },
+      {
+        "word_id": 46463,
+        "word_order_in_verse": 15,
+        "word_raw": "وَآبَاءَهُمْ",
+        "plain_text_raw": "وَءَابَآءَهُمْ",
+        "root_token_raw": "/أبو/"
+      },
+      {
+        "word_id": 46464,
+        "word_order_in_verse": 16,
+        "word_raw": "حَتَّى",
+        "plain_text_raw": "حَتَّىٰ",
+        "root_token_raw": "/حتى/"
+      },
+      {
+        "word_id": 46465,
+        "word_order_in_verse": 17,
+        "word_raw": "نَسُوا",
+        "plain_text_raw": "نَسُوا۟",
+        "root_token_raw": "/نسي/"
+      },
+      {
+        "word_id": 46466,
+        "word_order_in_verse": 18,
+        "word_raw": "الذِّكْرَ",
+        "plain_text_raw": "ٱلذِّكْرَ",
+        "root_token_raw": "/ذكر/"
+      },
+      {
+        "word_id": 46467,
+        "word_order_in_verse": 19,
+        "word_raw": "وَكَانُوا",
+        "plain_text_raw": "وَكَانُوا۟",
+        "root_token_raw": "/كون/"
+      },
+      {
+        "word_id": 46468,
+        "word_order_in_verse": 20,
+        "word_raw": "قَوْمًا",
+        "plain_text_raw": "قَوْمَۢا",
+        "root_token_raw": "/قوم/"
+      },
+      {
+        "word_id": 46469,
+        "word_order_in_verse": 21,
+        "word_raw": "بُورًا",
+        "plain_text_raw": "بُورࣰا",
+        "root_token_raw": "/بور/"
+      }
+    ]
+  },
+  {
+    "verse_key": "25-19",
+    "word_count": 15,
+    "words": [
+      {
+        "word_id": 46470,
+        "word_order_in_verse": 1,
+        "word_raw": "فَقَدْ",
+        "plain_text_raw": "فَقَدْ",
+        "root_token_raw": "/قد/"
+      },
+      {
+        "word_id": 46471,
+        "word_order_in_verse": 2,
+        "word_raw": "كَذَّبُوكُمْ",
+        "plain_text_raw": "كَذَّبُوكُم",
+        "root_token_raw": "/كذب/"
+      },
+      {
+        "word_id": 46472,
+        "word_order_in_verse": 3,
+        "word_raw": "بِمَا",
+        "plain_text_raw": "بِمَا",
+        "root_token_raw": "/ما/"
+      },
+      {
+        "word_id": 46473,
+        "word_order_in_verse": 4,
+        "word_raw": "تَقُولُونَ",
+        "plain_text_raw": "تَقُولُونَ",
+        "root_token_raw": "/قول/"
+      },
+      {
+        "word_id": 46474,
+        "word_order_in_verse": 5,
+        "word_raw": "فَمَا",
+        "plain_text_raw": "فَمَا",
+        "root_token_raw": "/ما/"
+      },
+      {
+        "word_id": 46475,
+        "word_order_in_verse": 6,
+        "word_raw": "تَسْتَطِيعُونَ",
+        "plain_text_raw": "تَسْتَطِيعُونَ",
+        "root_token_raw": "/طوع/"
+      },
+      {
+        "word_id": 46476,
+        "word_order_in_verse": 7,
+        "word_raw": "صَرْفًا",
+        "plain_text_raw": "صَرْفࣰا",
+        "root_token_raw": "/صرف/"
+      },
+      {
+        "word_id": 46477,
+        "word_order_in_verse": 8,
+        "word_raw": "وَلَا",
+        "plain_text_raw": "وَلَا",
+        "root_token_raw": "/لا/"
+      },
+      {
+        "word_id": 46478,
+        "word_order_in_verse": 9,
+        "word_raw": "نَصْرًا",
+        "plain_text_raw": "نَصْرࣰاۚ",
+        "root_token_raw": "/نصر/"
+      },
+      {
+        "word_id": 46479,
+        "word_order_in_verse": 10,
+        "word_raw": "وَمَنْ",
+        "plain_text_raw": "وَمَن",
+        "root_token_raw": "/مَن/"
+      },
+      {
+        "word_id": 46480,
+        "word_order_in_verse": 11,
+        "word_raw": "يَظْلِمْ",
+        "plain_text_raw": "يَظْلِم",
+        "root_token_raw": "/ظلم/"
+      },
+      {
+        "word_id": 46481,
+        "word_order_in_verse": 12,
+        "word_raw": "مِنْكُمْ",
+        "plain_text_raw": "مِّنكُمْ",
+        "root_token_raw": "/مِن/"
+      },
+      {
+        "word_id": 46482,
+        "word_order_in_verse": 13,
+        "word_raw": "نُذِقْهُ",
+        "plain_text_raw": "نُذِقْهُ",
+        "root_token_raw": "/ذوق/"
+      },
+      {
+        "word_id": 46483,
+        "word_order_in_verse": 14,
+        "word_raw": "عَذَابًا",
+        "plain_text_raw": "عَذَابࣰا",
+        "root_token_raw": "/عذب/"
+      },
+      {
+        "word_id": 46484,
+        "word_order_in_verse": 15,
+        "word_raw": "كَبِيرًا",
+        "plain_text_raw": "كَبِيرࣰا",
+        "root_token_raw": "/كبر/"
+      }
+    ]
+  },
+  {
+    "verse_key": "25-20",
+    "word_count": 20,
+    "words": [
+      {
+        "word_id": 46485,
+        "word_order_in_verse": 1,
+        "word_raw": "وَمَا",
+        "plain_text_raw": "وَمَآ",
+        "root_token_raw": "/ما/"
+      },
+      {
+        "word_id": 46486,
+        "word_order_in_verse": 2,
+        "word_raw": "أَرْسَلْنَا",
+        "plain_text_raw": "أَرْسَلْنَا",
+        "root_token_raw": "/رسل/"
+      },
+      {
+        "word_id": 46487,
+        "word_order_in_verse": 3,
+        "word_raw": "قَبْلَكَ",
+        "plain_text_raw": "قَبْلَكَ",
+        "root_token_raw": "/قبل/"
+      },
+      {
+        "word_id": 46488,
+        "word_order_in_verse": 4,
+        "word_raw": "مِنَ",
+        "plain_text_raw": "مِنَ",
+        "root_token_raw": "/مِن/"
+      },
+      {
+        "word_id": 46489,
+        "word_order_in_verse": 5,
+        "word_raw": "الْمُرْسَلِينَ",
+        "plain_text_raw": "ٱلْمُرْسَلِينَ",
+        "root_token_raw": "/رسل/"
+      },
+      {
+        "word_id": 46490,
+        "word_order_in_verse": 6,
+        "word_raw": "إِلَّا",
+        "plain_text_raw": "إِلَّآ",
+        "root_token_raw": "/إلا/"
+      },
+      {
+        "word_id": 46491,
+        "word_order_in_verse": 7,
+        "word_raw": "إِنَّهُمْ",
+        "plain_text_raw": "إِنَّهُمْ",
+        "root_token_raw": "/إنّ/"
+      },
+      {
+        "word_id": 46492,
+        "word_order_in_verse": 8,
+        "word_raw": "لَيَأْكُلُونَ",
+        "plain_text_raw": "لَيَأْكُلُونَ",
+        "root_token_raw": "/أكل/"
+      },
+      {
+        "word_id": 46493,
+        "word_order_in_verse": 9,
+        "word_raw": "الطَّعَامَ",
+        "plain_text_raw": "ٱلطَّعَامَ",
+        "root_token_raw": "/طعم/"
+      },
+      {
+        "word_id": 46494,
+        "word_order_in_verse": 10,
+        "word_raw": "وَيَمْشُونَ",
+        "plain_text_raw": "وَيَمْشُونَ",
+        "root_token_raw": "/مشي/"
+      },
+      {
+        "word_id": 46495,
+        "word_order_in_verse": 11,
+        "word_raw": "فِي",
+        "plain_text_raw": "فِي",
+        "root_token_raw": "/في/"
+      },
+      {
+        "word_id": 46496,
+        "word_order_in_verse": 12,
+        "word_raw": "الْأَسْوَاقِ",
+        "plain_text_raw": "ٱلْأَسْوَاقِۗ",
+        "root_token_raw": "/سوق/"
+      },
+      {
+        "word_id": 46497,
+        "word_order_in_verse": 13,
+        "word_raw": "وَجَعَلْنَا",
+        "plain_text_raw": "وَجَعَلْنَا",
+        "root_token_raw": "/جعل/"
+      },
+      {
+        "word_id": 46498,
+        "word_order_in_verse": 14,
+        "word_raw": "بَعْضَكُمْ",
+        "plain_text_raw": "بَعْضَكُمْ",
+        "root_token_raw": "/بعض/"
+      },
+      {
+        "word_id": 46499,
+        "word_order_in_verse": 15,
+        "word_raw": "لِبَعْضٍ",
+        "plain_text_raw": "لِبَعْضࣲ",
+        "root_token_raw": "/بعض/"
+      },
+      {
+        "word_id": 46500,
+        "word_order_in_verse": 16,
+        "word_raw": "فِتْنَةً",
+        "plain_text_raw": "فِتْنَةً",
+        "root_token_raw": "/فتن/"
+      },
+      {
+        "word_id": 46501,
+        "word_order_in_verse": 17,
+        "word_raw": "أَتَصْبِرُونَ",
+        "plain_text_raw": "أَتَصْبِرُونَۗ",
+        "root_token_raw": "/صبر/"
+      },
+      {
+        "word_id": 46502,
+        "word_order_in_verse": 18,
+        "word_raw": "وَكَانَ",
+        "plain_text_raw": "وَكَانَ",
+        "root_token_raw": "/كون/"
+      },
+      {
+        "word_id": 46503,
+        "word_order_in_verse": 19,
+        "word_raw": "رَبُّكَ",
+        "plain_text_raw": "رَبُّكَ",
+        "root_token_raw": "/ربب/"
+      },
+      {
+        "word_id": 46504,
+        "word_order_in_verse": 20,
+        "word_raw": "بَصِيرًا",
+        "plain_text_raw": "بَصِيرࣰا",
+        "root_token_raw": "/بصر/"
+      }
+    ]
+  },
+  {
+    "verse_key": "25-21",
+    "word_count": 19,
+    "words": [
+      {
+        "word_id": 46505,
+        "word_order_in_verse": 1,
+        "word_raw": "وَقَالَ",
+        "plain_text_raw": "۞ وَقَالَ",
+        "root_token_raw": "/قول/"
+      },
+      {
+        "word_id": 46506,
+        "word_order_in_verse": 2,
+        "word_raw": "الَّذِينَ",
+        "plain_text_raw": "ٱلَّذِينَ",
+        "root_token_raw": "/الذي/"
+      },
+      {
+        "word_id": 46507,
+        "word_order_in_verse": 3,
+        "word_raw": "لَا",
+        "plain_text_raw": "لَا",
+        "root_token_raw": "/لا/"
+      },
+      {
+        "word_id": 46508,
+        "word_order_in_verse": 4,
+        "word_raw": "يَرْجُونَ",
+        "plain_text_raw": "يَرْجُونَ",
+        "root_token_raw": "/رجو/"
+      },
+      {
+        "word_id": 46509,
+        "word_order_in_verse": 5,
+        "word_raw": "لِقَاءَنَا",
+        "plain_text_raw": "لِقَآءَنَا",
+        "root_token_raw": "/لقي/"
+      },
+      {
+        "word_id": 46510,
+        "word_order_in_verse": 6,
+        "word_raw": "لَوْلَا",
+        "plain_text_raw": "لَوْلَآ",
+        "root_token_raw": "/لولا/"
+      },
+      {
+        "word_id": 46511,
+        "word_order_in_verse": 7,
+        "word_raw": "أُنْزِلَ",
+        "plain_text_raw": "أُنزِلَ",
+        "root_token_raw": "/نزل/"
+      },
+      {
+        "word_id": 46512,
+        "word_order_in_verse": 8,
+        "word_raw": "عَلَيْنَا",
+        "plain_text_raw": "عَلَيْنَا",
+        "root_token_raw": "/على/"
+      },
+      {
+        "word_id": 46513,
+        "word_order_in_verse": 9,
+        "word_raw": "الْمَلَائِكَةُ",
+        "plain_text_raw": "ٱلْمَلَٰٓئِكَةُ",
+        "root_token_raw": "/ألك/"
+      },
+      {
+        "word_id": 46514,
+        "word_order_in_verse": 10,
+        "word_raw": "أَوْ",
+        "plain_text_raw": "أَوْ",
+        "root_token_raw": "/أو/"
+      },
+      {
+        "word_id": 46515,
+        "word_order_in_verse": 11,
+        "word_raw": "نَرَى",
+        "plain_text_raw": "نَرَىٰ",
+        "root_token_raw": "/رأي/"
+      },
+      {
+        "word_id": 46516,
+        "word_order_in_verse": 12,
+        "word_raw": "رَبَّنَا",
+        "plain_text_raw": "رَبَّنَاۗ",
+        "root_token_raw": "/ربب/"
+      },
+      {
+        "word_id": 46517,
+        "word_order_in_verse": 13,
+        "word_raw": "لَقَدِ",
+        "plain_text_raw": "لَقَدِ",
+        "root_token_raw": "/قد/"
+      },
+      {
+        "word_id": 46518,
+        "word_order_in_verse": 14,
+        "word_raw": "اسْتَكْبَرُوا",
+        "plain_text_raw": "ٱسْتَكْبَرُوا۟",
+        "root_token_raw": "/كبر/"
+      },
+      {
+        "word_id": 46519,
+        "word_order_in_verse": 15,
+        "word_raw": "فِي",
+        "plain_text_raw": "فِيٓ",
+        "root_token_raw": "/في/"
+      },
+      {
+        "word_id": 46520,
+        "word_order_in_verse": 16,
+        "word_raw": "أَنْفُسِهِمْ",
+        "plain_text_raw": "أَنفُسِهِمْ",
+        "root_token_raw": "/نفس/"
+      },
+      {
+        "word_id": 46521,
+        "word_order_in_verse": 17,
+        "word_raw": "وَعَتَوْا",
+        "plain_text_raw": "وَعَتَوْ",
+        "root_token_raw": "/عتو/"
+      },
+      {
+        "word_id": 46522,
+        "word_order_in_verse": 18,
+        "word_raw": "عُتُوًّا",
+        "plain_text_raw": "عُتُوࣰّا",
+        "root_token_raw": "/عتو/"
+      },
+      {
+        "word_id": 46523,
+        "word_order_in_verse": 19,
+        "word_raw": "كَبِيرًا",
+        "plain_text_raw": "كَبِيرࣰا",
+        "root_token_raw": "/كبر/"
+      }
+    ]
+  },
+  {
+    "verse_key": "25-22",
+    "word_count": 10,
+    "words": [
+      {
+        "word_id": 46524,
+        "word_order_in_verse": 1,
+        "word_raw": "يَوْمَ",
+        "plain_text_raw": "يَوْمَ",
+        "root_token_raw": "/يوم/"
+      },
+      {
+        "word_id": 46525,
+        "word_order_in_verse": 2,
+        "word_raw": "يَرَوْنَ",
+        "plain_text_raw": "يَرَوْنَ",
+        "root_token_raw": "/رأي/"
+      },
+      {
+        "word_id": 46526,
+        "word_order_in_verse": 3,
+        "word_raw": "الْمَلَائِكَةَ",
+        "plain_text_raw": "ٱلْمَلَٰٓئِكَةَ",
+        "root_token_raw": "/ألك/"
+      },
+      {
+        "word_id": 46527,
+        "word_order_in_verse": 4,
+        "word_raw": "لَا",
+        "plain_text_raw": "لَا",
+        "root_token_raw": "/لا/"
+      },
+      {
+        "word_id": 46528,
+        "word_order_in_verse": 5,
+        "word_raw": "بُشْرَى",
+        "plain_text_raw": "بُشْرَىٰ",
+        "root_token_raw": "/بشر/"
+      },
+      {
+        "word_id": 46529,
+        "word_order_in_verse": 6,
+        "word_raw": "يَوْمَئِذٍ",
+        "plain_text_raw": "يَوْمَئِذࣲ",
+        "root_token_raw": "/يوم/إذ/"
+      },
+      {
+        "word_id": 46530,
+        "word_order_in_verse": 7,
+        "word_raw": "لِلْمُجْرِمِينَ",
+        "plain_text_raw": "لِّلْمُجْرِمِينَ",
+        "root_token_raw": "/جرم/"
+      },
+      {
+        "word_id": 46531,
+        "word_order_in_verse": 8,
+        "word_raw": "وَيَقُولُونَ",
+        "plain_text_raw": "وَيَقُولُونَ",
+        "root_token_raw": "/قول/"
+      },
+      {
+        "word_id": 46532,
+        "word_order_in_verse": 9,
+        "word_raw": "حِجْرًا",
+        "plain_text_raw": "حِجْرࣰا",
+        "root_token_raw": "/حجر/"
+      },
+      {
+        "word_id": 46533,
+        "word_order_in_verse": 10,
+        "word_raw": "مَحْجُورًا",
+        "plain_text_raw": "مَّحْجُورࣰا",
+        "root_token_raw": "/حجر/"
+      }
+    ]
+  },
+  {
+    "verse_key": "25-23",
+    "word_count": 9,
+    "words": [
+      {
+        "word_id": 46534,
+        "word_order_in_verse": 1,
+        "word_raw": "وَقَدِمْنَا",
+        "plain_text_raw": "وَقَدِمْنَآ",
+        "root_token_raw": "/قدم/"
+      },
+      {
+        "word_id": 46535,
+        "word_order_in_verse": 2,
+        "word_raw": "إِلَى",
+        "plain_text_raw": "إِلَىٰ",
+        "root_token_raw": "/إلى/"
+      },
+      {
+        "word_id": 46536,
+        "word_order_in_verse": 3,
+        "word_raw": "مَا",
+        "plain_text_raw": "مَا",
+        "root_token_raw": "/ما/"
+      },
+      {
+        "word_id": 46537,
+        "word_order_in_verse": 4,
+        "word_raw": "عَمِلُوا",
+        "plain_text_raw": "عَمِلُوا۟",
+        "root_token_raw": "/عمل/"
+      },
+      {
+        "word_id": 46538,
+        "word_order_in_verse": 5,
+        "word_raw": "مِنْ",
+        "plain_text_raw": "مِنْ",
+        "root_token_raw": "/مِن/"
+      },
+      {
+        "word_id": 46539,
+        "word_order_in_verse": 6,
+        "word_raw": "عَمَلٍ",
+        "plain_text_raw": "عَمَلࣲ",
+        "root_token_raw": "/عمل/"
+      },
+      {
+        "word_id": 46540,
+        "word_order_in_verse": 7,
+        "word_raw": "فَجَعَلْنَاهُ",
+        "plain_text_raw": "فَجَعَلْنَٰهُ",
+        "root_token_raw": "/جعل/"
+      },
+      {
+        "word_id": 46541,
+        "word_order_in_verse": 8,
+        "word_raw": "هَبَاءً",
+        "plain_text_raw": "هَبَآءࣰ",
+        "root_token_raw": "/هبو/"
+      },
+      {
+        "word_id": 46542,
+        "word_order_in_verse": 9,
+        "word_raw": "مَنْثُورًا",
+        "plain_text_raw": "مَّنثُورًا",
+        "root_token_raw": "/نثر/"
+      }
+    ]
+  },
+  {
+    "verse_key": "25-24",
+    "word_count": 7,
+    "words": [
+      {
+        "word_id": 46543,
+        "word_order_in_verse": 1,
+        "word_raw": "أَصْحَابُ",
+        "plain_text_raw": "أَصْحَٰبُ",
+        "root_token_raw": "/صحب/"
+      },
+      {
+        "word_id": 46544,
+        "word_order_in_verse": 2,
+        "word_raw": "الْجَنَّةِ",
+        "plain_text_raw": "ٱلْجَنَّةِ",
+        "root_token_raw": "/جنن/"
+      },
+      {
+        "word_id": 46545,
+        "word_order_in_verse": 3,
+        "word_raw": "يَوْمَئِذٍ",
+        "plain_text_raw": "يَوْمَئِذٍ",
+        "root_token_raw": "/يوم/إذ/"
+      },
+      {
+        "word_id": 46546,
+        "word_order_in_verse": 4,
+        "word_raw": "خَيْرٌ",
+        "plain_text_raw": "خَيْرࣱ",
+        "root_token_raw": "/خير/"
+      },
+      {
+        "word_id": 46547,
+        "word_order_in_verse": 5,
+        "word_raw": "مُسْتَقَرًّا",
+        "plain_text_raw": "مُّسْتَقَرࣰّا",
+        "root_token_raw": "/قرر/"
+      },
+      {
+        "word_id": 46548,
+        "word_order_in_verse": 6,
+        "word_raw": "وَأَحْسَنُ",
+        "plain_text_raw": "وَأَحْسَنُ",
+        "root_token_raw": "/حسن/"
+      },
+      {
+        "word_id": 46549,
+        "word_order_in_verse": 7,
+        "word_raw": "مَقِيلًا",
+        "plain_text_raw": "مَقِيلࣰا",
+        "root_token_raw": "/قيل/"
+      }
+    ]
+  },
+  {
+    "verse_key": "25-25",
+    "word_count": 7,
+    "words": [
+      {
+        "word_id": 46550,
+        "word_order_in_verse": 1,
+        "word_raw": "وَيَوْمَ",
+        "plain_text_raw": "وَيَوْمَ",
+        "root_token_raw": "/يوم/"
+      },
+      {
+        "word_id": 46551,
+        "word_order_in_verse": 2,
+        "word_raw": "تَشَقَّقُ",
+        "plain_text_raw": "تَشَقَّقُ",
+        "root_token_raw": "/شقق/"
+      },
+      {
+        "word_id": 46552,
+        "word_order_in_verse": 3,
+        "word_raw": "السَّمَاءُ",
+        "plain_text_raw": "ٱلسَّمَآءُ",
+        "root_token_raw": "/سمو/"
+      },
+      {
+        "word_id": 46553,
+        "word_order_in_verse": 4,
+        "word_raw": "بِالْغَمَامِ",
+        "plain_text_raw": "بِٱلْغَمَٰمِ",
+        "root_token_raw": "/غمم/"
+      },
+      {
+        "word_id": 46554,
+        "word_order_in_verse": 5,
+        "word_raw": "وَنُزِّلَ",
+        "plain_text_raw": "وَنُزِّلَ",
+        "root_token_raw": "/نزل/"
+      },
+      {
+        "word_id": 46555,
+        "word_order_in_verse": 6,
+        "word_raw": "الْمَلَائِكَةُ",
+        "plain_text_raw": "ٱلْمَلَٰٓئِكَةُ",
+        "root_token_raw": "/ألك/"
+      },
+      {
+        "word_id": 46556,
+        "word_order_in_verse": 7,
+        "word_raw": "تَنْزِيلًا",
+        "plain_text_raw": "تَنزِيلًا",
+        "root_token_raw": "/نزل/"
+      }
+    ]
+  },
+  {
+    "verse_key": "25-26",
+    "word_count": 9,
+    "words": [
+      {
+        "word_id": 46557,
+        "word_order_in_verse": 1,
+        "word_raw": "الْمُلْكُ",
+        "plain_text_raw": "ٱلْمُلْكُ",
+        "root_token_raw": "/ملك/"
+      },
+      {
+        "word_id": 46558,
+        "word_order_in_verse": 2,
+        "word_raw": "يَوْمَئِذٍ",
+        "plain_text_raw": "يَوْمَئِذٍ",
+        "root_token_raw": "/يوم/إذ/"
+      },
+      {
+        "word_id": 46559,
+        "word_order_in_verse": 3,
+        "word_raw": "الْحَقُّ",
+        "plain_text_raw": "ٱلْحَقُّ",
+        "root_token_raw": "/حقق/"
+      },
+      {
+        "word_id": 46560,
+        "word_order_in_verse": 4,
+        "word_raw": "لِلرَّحْمَنِ",
+        "plain_text_raw": "لِلرَّحْمَٰنِۚ",
+        "root_token_raw": "/رحم/"
+      },
+      {
+        "word_id": 46561,
+        "word_order_in_verse": 5,
+        "word_raw": "وَكَانَ",
+        "plain_text_raw": "وَكَانَ",
+        "root_token_raw": "/كون/"
+      },
+      {
+        "word_id": 46562,
+        "word_order_in_verse": 6,
+        "word_raw": "يَوْمًا",
+        "plain_text_raw": "يَوْمًا",
+        "root_token_raw": "/يوم/"
+      },
+      {
+        "word_id": 46563,
+        "word_order_in_verse": 7,
+        "word_raw": "عَلَى",
+        "plain_text_raw": "عَلَى",
+        "root_token_raw": "/على/"
+      },
+      {
+        "word_id": 46564,
+        "word_order_in_verse": 8,
+        "word_raw": "الْكَافِرِينَ",
+        "plain_text_raw": "ٱلْكَٰفِرِينَ",
+        "root_token_raw": "/كفر/"
+      },
+      {
+        "word_id": 46565,
+        "word_order_in_verse": 9,
+        "word_raw": "عَسِيرًا",
+        "plain_text_raw": "عَسِيرࣰا",
+        "root_token_raw": "/عسر/"
+      }
+    ]
+  },
+  {
+    "verse_key": "25-27",
+    "word_count": 11,
+    "words": [
+      {
+        "word_id": 46566,
+        "word_order_in_verse": 1,
+        "word_raw": "وَيَوْمَ",
+        "plain_text_raw": "وَيَوْمَ",
+        "root_token_raw": "/يوم/"
+      },
+      {
+        "word_id": 46567,
+        "word_order_in_verse": 2,
+        "word_raw": "يَعَضُّ",
+        "plain_text_raw": "يَعَضُّ",
+        "root_token_raw": "/عضض/"
+      },
+      {
+        "word_id": 46568,
+        "word_order_in_verse": 3,
+        "word_raw": "الظَّالِمُ",
+        "plain_text_raw": "ٱلظَّالِمُ",
+        "root_token_raw": "/ظلم/"
+      },
+      {
+        "word_id": 46569,
+        "word_order_in_verse": 4,
+        "word_raw": "عَلَى",
+        "plain_text_raw": "عَلَىٰ",
+        "root_token_raw": "/على/"
+      },
+      {
+        "word_id": 46570,
+        "word_order_in_verse": 5,
+        "word_raw": "يَدَيْهِ",
+        "plain_text_raw": "يَدَيْهِ",
+        "root_token_raw": "/يدي/"
+      },
+      {
+        "word_id": 46571,
+        "word_order_in_verse": 6,
+        "word_raw": "يَقُولُ",
+        "plain_text_raw": "يَقُولُ",
+        "root_token_raw": "/قول/"
+      },
+      {
+        "word_id": 46572,
+        "word_order_in_verse": 7,
+        "word_raw": "يَالَيْتَنِي",
+        "plain_text_raw": "يَٰلَيْتَنِي",
+        "root_token_raw": "/يا/ليت/"
+      },
+      {
+        "word_id": 46573,
+        "word_order_in_verse": 8,
+        "word_raw": "اتَّخَذْتُ",
+        "plain_text_raw": "ٱتَّخَذْتُ",
+        "root_token_raw": "/أخذ/"
+      },
+      {
+        "word_id": 46574,
+        "word_order_in_verse": 9,
+        "word_raw": "مَعَ",
+        "plain_text_raw": "مَعَ",
+        "root_token_raw": "/مع/"
+      },
+      {
+        "word_id": 46575,
+        "word_order_in_verse": 10,
+        "word_raw": "الرَّسُولِ",
+        "plain_text_raw": "ٱلرَّسُولِ",
+        "root_token_raw": "/رسل/"
+      },
+      {
+        "word_id": 46576,
+        "word_order_in_verse": 11,
+        "word_raw": "سَبِيلًا",
+        "plain_text_raw": "سَبِيلࣰا",
+        "root_token_raw": "/سبل/"
+      }
+    ]
+  }
+]
