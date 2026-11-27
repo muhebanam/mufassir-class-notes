@@ -141,7 +141,7 @@ export function parseHadithTakhrij(rawText) {
 
   // Smart splitting:
   // Split on section headers `### ` OR top-level item bullets `- **` that are NOT metadata tags
-  const itemSplitRegex = /\n(?=###\s+|-\s+\*\*(?!(?:তাখরীজ|মুহাদ্দিস|হুকুম|মান|উৎস|গ্রন্থসূত্র|অনুবাদ|তাৎপর্য|ব্যাখ্যা|সনদ|গ্রন্থ|নোট)\b))/i;
+  const itemSplitRegex = /\n(?=###\s+|-\s+\*\*(?!(?:তাখরীজ|মুহাদ্দিস|হুকুম|মান|উৎস|গ্রন্থসূত্র|অনুবাদ|তাৎপর্য|ব্যাখ্যা|সনদ|গ্রন্থ|নোট)))/i;
 
   let rawChunks = fullText.split(itemSplitRegex);
   let chunks = [];
@@ -212,7 +212,7 @@ export function parseHadithTakhrij(rawText) {
 
     // Extract Hadith Numbers or Vol/Page
     let numbers = '';
-    const numMatch = rawTakhrij.match(/(?:হাদীস\s*(?:নং)?\s*[:\s]*|নং\s*)(\*{0,2}[0-9٠-٩/–-]+\*{0,2})/i);
+    const numMatch = rawTakhrij.match(/(?:হাদীস\s*(?:নং)?\s*[:\s]*|নং\s*)(\*{0,2}[0-9٠-٩০-৯/–-]+\*{0,2})/i);
     if (numMatch && numMatch[1]) {
       numbers = numMatch[1].replace(/\*/g, '').trim();
     }
