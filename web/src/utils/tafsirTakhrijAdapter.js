@@ -17,7 +17,16 @@ const KNOWN_HADITH_BOOKS = [
   { key: 'hakim', name_bn: 'মুস্তাদরাক হাকিম', regex: /মুস্তাদরাক[েএ]?\s+হাকিম|হাকিম/i, badgeColor: 'rose' },
   { key: 'bayhaqi', name_bn: 'সুনানে কুবরা লিল-বাইহাকী', regex: /বায়হাকী|বাইহাকী/i, badgeColor: 'slate' },
   { key: 'shafii', name_bn: 'কিতাবুল উম্ম (ইমাম শাফিঈ)', regex: /আল-উম্ম|ইমাম\s+শাফিঈ/i, badgeColor: 'emerald' },
-  { key: 'ibn_abi_shaybah', name_bn: 'মুসান্নাফে ইবনে আবি শাইবাহ', regex: /ইবনে\s+আবি\s+শাইবাহ/i, badgeColor: 'slate' },
+  { key: 'ibn_abi_shaybah', name_bn: 'মুসান্নাফে ইবনে আবি শাইবাহ', regex: /ইবনে\s+আব[ূী]\s+শাইবাহ|আবী\s+শায়বাহ/i, badgeColor: 'slate' },
+  { key: 'tabarani', name_bn: 'আল-মু‘জাম (তাবারানী)', regex: /তাবারানী/i, badgeColor: 'indigo' },
+  { key: 'bazzar', name_bn: 'মুসনাদে বাযযার', regex: /বাযযার/i, badgeColor: 'amber' },
+  { key: 'darimi', name_bn: 'সুনানে দারিমী', regex: /দারিমী/i, badgeColor: 'cyan' },
+  { key: 'abdur_razzaq', name_bn: 'মুসান্নাফে আব্দুর রাযযাক', regex: /আব্দুর\s+রাযযাক/i, badgeColor: 'slate' },
+  { key: 'tabari', name_bn: 'তাফসীরে তাবারী (ইবনে জারীর)', regex: /তাবারী|ইবনে\s+জারীর/i, badgeColor: 'blue' },
+  { key: 'wahidi', name_bn: 'আসবাবুন নুযূল (আল-ওয়াহিদী)', regex: /ওয়াহিদী|ওয়াহিদী|আসবাবুন\s+নুযূল/i, badgeColor: 'rose' },
+  { key: 'lubab', name_bn: 'লুবাবুন নুকূল (সুয়ূতী)', regex: /লুবাবুন\s+নুকূল|লুবাব/i, badgeColor: 'teal' },
+  { key: 'wadiei', name_bn: 'আস-সহীহুল মুসনাদ (আল-ওয়াদিঈ)', regex: /ওয়াদিঈ|ওয়াদিঈ|আস-সহীহুল\s+মুসনাদ/i, badgeColor: 'emerald' },
+  { key: 'adab_mufrad', name_bn: 'আল-আদাবুল মুফরাদ (বুখারী)', regex: /আদাবুল\s+মুফরাদ/i, badgeColor: 'emerald' },
 ];
 
 /**
