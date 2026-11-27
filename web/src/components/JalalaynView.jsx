@@ -105,7 +105,7 @@ export default function JalalaynView({
               <BookMarked className="w-4 h-4 text-amber-600 dark:text-amber-400" />
               <span>তাফসীরুল জালালাইন: মূল আরবি ইবারত (متن تفسير الجلالين)</span>
             </span>
-            <span className="text-[11px] font-arabic font-bold" dir="rtl">
+            <span className="text-[11px] font-bengali font-bold">
               {parsed.scholar}
             </span>
           </div>

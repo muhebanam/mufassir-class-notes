@@ -234,21 +234,21 @@ export default function TahqeeqTable({ words = [], ayahNumber = null, compact = 
                 {hasNotes && (
                   <div className="pt-2 border-t border-gray-200/60 dark:border-gray-700/60 space-y-2 text-xs">
                     {item.taleel_or_irab && (
-                      <div className="p-2.5 rounded-xl bg-white dark:bg-gray-900/50 border border-gray-200/70 dark:border-gray-700/60 leading-relaxed text-gray-700 dark:text-gray-300">
+                      <div className="p-2.5 rounded-xl bg-white dark:bg-gray-900/50 border border-gray-200/70 dark:border-gray-700/60 leading-relaxed text-gray-700 dark:text-gray-300 bn-justify">
                         <strong className="text-emerald-800 dark:text-emerald-400 mr-1.5">তালীল / ইরাব:</strong>
                         <span>{item.taleel_or_irab}</span>
                       </div>
                     )}
 
                     {item['আভিধানিক অর্থ ও ভাষাতাত্ত্বিক সূত্র'] && (
-                      <div className="p-2.5 rounded-xl bg-white dark:bg-gray-900/50 border border-gray-200/70 dark:border-gray-700/60 leading-relaxed text-gray-700 dark:text-gray-300">
+                      <div className="p-2.5 rounded-xl bg-white dark:bg-gray-900/50 border border-gray-200/70 dark:border-gray-700/60 leading-relaxed text-gray-700 dark:text-gray-300 bn-justify">
                         <strong className="text-gray-800 dark:text-gray-200 mr-1.5">ভাষাতাত্ত্বিক সূত্র:</strong>
                         <span>{item['আভিধানিক অর্থ ও ভাষাতাত্ত্বিক সূত্র']}</span>
                       </div>
                     )}
 
                     {item.classical_notes && item.classical_notes.map((cn, cIdx) => (
-                      <div key={cIdx} className="p-2.5 rounded-xl bg-amber-50/70 dark:bg-amber-950/20 border border-amber-200/50 dark:border-amber-800/30 text-[11px] leading-relaxed">
+                      <div key={cIdx} className="p-2.5 rounded-xl bg-amber-50/70 dark:bg-amber-950/20 border border-amber-200/50 dark:border-amber-800/30 text-[11px] leading-relaxed bn-justify">
                         <strong className="text-amber-900 dark:text-amber-300 font-bold mr-1.5">
                           {cn.scholar_or_book}:
                         </strong>

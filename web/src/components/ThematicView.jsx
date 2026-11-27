@@ -234,7 +234,7 @@ export default function ThematicView({ rukuData, surahInfo, onSwitchToAyahStudy 
             <Bookmark className="w-4 h-4 text-emerald-700 dark:text-emerald-400" />
             <span>রুকুর কেন্দ্রীয় ভাব ও মূল সারসংক্ষেপ (Executive Abstract)</span>
           </div>
-          <div className="text-xs sm:text-sm leading-relaxed text-gray-800 dark:text-gray-200 font-bengali">
+          <div className="text-xs sm:text-sm leading-relaxed text-gray-800 dark:text-gray-200 font-bengali bn-justify">
             এই রুকুতে ওহীর প্রামাণিকতা, তাওহীদের গভীর তত্ত্ব, শরয়ী বিধানের হিকমত এবং আখেরাতের প্রতিদানের শাস্ত্রীয় রূপরেখা নিখুঁতভাবে উপস্থাপিত হয়েছে। নিম্নোক্ত অধ্যায়সমূহে প্রামাণ্য সনদের ভিত্তিতে প্রতিটি আয়াতের বিশদ ব্যাখ্যা বিশ্লেষিত হলো।
           </div>
         </div>

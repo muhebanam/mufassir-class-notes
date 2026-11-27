@@ -641,7 +641,7 @@ export default function AyahScopeView({
                       </div>
                     </div>
                     {thematic.ahkam?.intro && (
-                      <p className="text-xs sm:text-sm text-gray-700 dark:text-gray-300 leading-relaxed italic">
+                      <p className="text-xs sm:text-sm text-gray-700 dark:text-gray-300 leading-relaxed italic bn-justify">
                         {thematic.ahkam.intro}
                       </p>
                     )}

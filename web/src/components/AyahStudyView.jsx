@@ -256,7 +256,7 @@ export default function AyahStudyView({
               <span>নির্বাচিত আয়াত {toBn(ayah.ayah)}-এর বঙ্গানুবাদ:</span>
               <span className="text-[10px] text-gray-500 dark:text-gray-400">নিচে শাস্ত্রীয় গবেষণা ট্যাবসমূহ দেখুন</span>
             </div>
-            <p className="text-xs sm:text-sm text-gray-800 dark:text-gray-200 font-bengali leading-relaxed">
+            <p className="text-xs sm:text-sm text-gray-800 dark:text-gray-200 font-bengali leading-relaxed bn-justify">
               {ayah.translation}
             </p>
           </div>
@@ -314,7 +314,7 @@ export default function AyahStudyView({
 
                 {/* Fluent Bengali Translation */}
                 <div 
-                  className="text-gray-800 dark:text-gray-100 font-medium leading-relaxed font-bengali"
+                  className="text-gray-800 dark:text-gray-100 font-medium leading-relaxed font-bengali bn-justify"
                   style={{ fontSize: `${bengaliFontSize}px` }}
                 >
                   <span className="text-emerald-700 dark:text-emerald-400 font-bold mr-1.5">
@@ -329,7 +329,7 @@ export default function AyahStudyView({
                     <span className="font-bold text-gray-800 dark:text-gray-200 block text-xs font-bengali">
                       শব্দানুগ অনুবাদ:
                     </span>
-                    <div className="leading-relaxed font-bengali text-xs">
+                    <div className="leading-relaxed font-bengali text-xs bn-justify">
                       {ayah.word_translation}
                     </div>
                   </div>
@@ -352,7 +352,7 @@ export default function AyahStudyView({
 
               {/* Fluent Translation */}
               <div 
-                className="text-gray-800 dark:text-gray-100 font-medium leading-relaxed pt-3 border-t border-gray-100 dark:border-gray-700/60 font-bengali"
+                className="text-gray-800 dark:text-gray-100 font-medium leading-relaxed pt-3 border-t border-gray-100 dark:border-gray-700/60 font-bengali bn-justify"
                 style={{ fontSize: `${bengaliFontSize}px` }}
               >
                 <span className="text-emerald-700 dark:text-emerald-400 font-bold mr-1.5">({toBn(ayah.ayah)})</span>
@@ -363,7 +363,7 @@ export default function AyahStudyView({
               {ayah.word_translation && (
                 <div className="mt-3 text-xs sm:text-sm text-gray-600 dark:text-gray-300 bg-gray-50 dark:bg-gray-700/40 p-3 rounded-xl border border-gray-100 dark:border-gray-700">
                   <span className="font-bold text-gray-800 dark:text-gray-200 block mb-1 text-xs">শব্দানুগ অর্থ:</span>
-                  {ayah.word_translation}
+                  <div className="leading-relaxed bn-justify">{ayah.word_translation}</div>
                 </div>
               )}
             </div>
@@ -542,7 +542,7 @@ export default function AyahStudyView({
                           <span className="font-bold text-amber-900 dark:text-amber-300 block font-bengali">
                             তালীল ও তারকীব / ই'রাব:
                           </span>
-                          <p className="text-gray-800 dark:text-gray-200 leading-relaxed font-bengali">
+                          <p className="text-gray-800 dark:text-gray-200 leading-relaxed font-bengali bn-justify">
                             {t.taleel_or_irab}
                           </p>
                         </div>
@@ -554,7 +554,7 @@ export default function AyahStudyView({
                           <span className="font-bold text-emerald-800 dark:text-emerald-400 block font-bengali">
                             লুগাত ও ব্যুৎপত্তিগত তাৎপর্য:
                           </span>
-                          <p className="text-gray-700 dark:text-gray-300 leading-relaxed font-bengali">
+                          <p className="text-gray-700 dark:text-gray-300 leading-relaxed font-bengali bn-justify">
                             {t.lexical_depth_bn}
                           </p>
                         </div>
@@ -575,7 +575,7 @@ export default function AyahStudyView({
                                 <span className="font-bold text-blue-900 dark:text-blue-300 block font-bengali">
                                   📖 {cn.scholar_or_book}
                                 </span>
-                                <p className="text-gray-800 dark:text-gray-200 mt-1 leading-relaxed italic font-bengali">
+                                <p className="text-gray-800 dark:text-gray-200 mt-1 leading-relaxed italic font-bengali bn-justify">
                                   "{cn.note}"
                                 </p>
                               </div>

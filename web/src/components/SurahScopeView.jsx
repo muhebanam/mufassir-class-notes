@@ -209,7 +209,7 @@ export default function SurahScopeView({
                 <h4 className="font-bold text-sm text-gray-900 dark:text-gray-100 font-bengali group-hover:text-emerald-700 dark:group-hover:text-emerald-400 transition-colors">
                   রুকু {toBn(r.ruku_id)}: {r.title || `রুকু ${toBn(r.ruku_id)}-এর বিধানাবলি`}
                 </h4>
-                <p className="text-xs text-gray-600 dark:text-gray-300 font-bengali mt-1.5 line-clamp-3 leading-relaxed">
+                <p className="text-xs text-gray-600 dark:text-gray-300 font-bengali mt-1.5 line-clamp-3 leading-relaxed bn-justify">
                   {r.summary || `মোট ${toBn(r.ayah_count)}টি আয়াতের তাফসীর, ফিকহী নীতিমালা ও শাব্দিক তাহকীক।`}
                 </p>
 

@@ -140,7 +140,7 @@ export default function WordInspectorModal({ word, ayahNumber, onClose }) {
               {t.taleel_or_irab && (
                 <div className="p-3.5 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-200/60 dark:border-gray-700 text-xs leading-relaxed space-y-1">
                   <span className="font-bold text-gray-900 dark:text-gray-100 block">তালীল ও ইরাব:</span>
-                  <p className="text-gray-700 dark:text-gray-300">{t.taleel_or_irab}</p>
+                  <p className="text-gray-700 dark:text-gray-300 bn-justify">{t.taleel_or_irab}</p>
                 </div>
               )}
 
@@ -151,7 +151,7 @@ export default function WordInspectorModal({ word, ayahNumber, onClose }) {
                     শাস্ত্রীয় প্রামাণ্য উদ্ধৃতি:
                   </span>
                   {t.classical_notes.map((cn, cIdx) => (
-                    <div key={cIdx} className="p-3 rounded-xl bg-amber-50/70 dark:bg-amber-950/20 border border-amber-200/60 dark:border-amber-800/40 text-xs leading-relaxed">
+                    <div key={cIdx} className="p-3 rounded-xl bg-amber-50/70 dark:bg-amber-950/20 border border-amber-200/60 dark:border-amber-800/40 text-xs leading-relaxed bn-justify">
                       <strong className="text-amber-900 dark:text-amber-300 block mb-0.5">
                         {cn.scholar_or_book}:
                       </strong>
@@ -183,7 +183,7 @@ export default function WordInspectorModal({ word, ayahNumber, onClose }) {
               {m['আভিধানিক অর্থ ও ভাষাতাত্ত্বিক সূত্র'] && (
                 <div className="p-3 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-200/70 dark:border-gray-700">
                   <span className="text-gray-500 dark:text-gray-400 block text-[11px] mb-1">ভাষাতাত্ত্বিক ব্যাখ্যা:</span>
-                  <p className="leading-relaxed text-gray-700 dark:text-gray-300">
+                  <p className="leading-relaxed text-gray-700 dark:text-gray-300 bn-justify">
                     {m['আভিধানিক অর্থ ও ভাষাতাত্ত্বিক সূত্র']}
                   </p>
                 </div>

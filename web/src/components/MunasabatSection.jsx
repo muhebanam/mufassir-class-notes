@@ -60,7 +60,7 @@ export default function MunasabatSection({ munasabat, ayahNumber = null, prevAya
                   {prevAyah ? `পূর্ববর্তী আয়াত (${toBn(prevAyah)})-এর সাথে সংযোগ:` : 'পূর্ববর্তী প্রসঙ্গের সাথে যোগসূত্র (ربط الآية بما قبلها):'}
                 </span>
               </div>
-              <p className="text-gray-700 dark:text-gray-300 leading-relaxed pl-5">
+              <p className="text-gray-700 dark:text-gray-300 leading-relaxed pl-5 bn-justify">
                 {munasabat.prev_ayah_link}
               </p>
             </div>
@@ -75,7 +75,7 @@ export default function MunasabatSection({ munasabat, ayahNumber = null, prevAya
                   {ayahNumber ? `আয়াত ${toBn(ayahNumber)}-এর কেন্দ্রীয় বক্তব্য ও মূল হিকমত (محور الآية):` : 'আলোচ্য আয়াতের কেন্দ্রীয় তাৎপর্য:'}
                 </span>
               </div>
-              <p className="text-gray-800 dark:text-gray-200 leading-relaxed pl-5 font-medium">
+              <p className="text-gray-800 dark:text-gray-200 leading-relaxed pl-5 font-medium bn-justify">
                 {munasabat.current_ayah_focus}
               </p>
             </div>
@@ -90,7 +90,7 @@ export default function MunasabatSection({ munasabat, ayahNumber = null, prevAya
                   {nextAyah ? `পরবর্তী আয়াত (${toBn(nextAyah)})-এর সাথে উত্তরণ ও সংযোগ:` : 'পরবর্তী প্রসঙ্গের সাথে সংযোগ (ربط الآية بما بعدها):'}
                 </span>
               </div>
-              <p className="text-gray-700 dark:text-gray-300 leading-relaxed pl-5">
+              <p className="text-gray-700 dark:text-gray-300 leading-relaxed pl-5 bn-justify">
                 {munasabat.next_ayah_link}
               </p>
             </div>

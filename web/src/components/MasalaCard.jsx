@@ -55,7 +55,7 @@ export default function MasalaCard({ card, index }) {
               হানাফী মাযহাব (الحنفية)
             </span>
           </div>
-          <div className="text-sm text-gray-800 dark:text-gray-200 font-bengali leading-relaxed">
+          <div className="text-sm text-gray-800 dark:text-gray-200 font-bengali leading-relaxed bn-justify">
             <MarkdownContent inline content={card.hanafi || "—"} />
           </div>
         </div>
@@ -67,7 +67,7 @@ export default function MasalaCard({ card, index }) {
               মালিকী মাযহাব (المالكية)
             </span>
           </div>
-          <div className="text-sm text-gray-800 dark:text-gray-200 font-bengali leading-relaxed">
+          <div className="text-sm text-gray-800 dark:text-gray-200 font-bengali leading-relaxed bn-justify">
             <MarkdownContent inline content={card.maliki || "—"} />
           </div>
         </div>
@@ -79,7 +79,7 @@ export default function MasalaCard({ card, index }) {
               শাফিঈ মাযহাব (الشافعية)
             </span>
           </div>
-          <div className="text-sm text-gray-800 dark:text-gray-200 font-bengali leading-relaxed">
+          <div className="text-sm text-gray-800 dark:text-gray-200 font-bengali leading-relaxed bn-justify">
             <MarkdownContent inline content={card.shafii || "—"} />
           </div>
         </div>
@@ -91,7 +91,7 @@ export default function MasalaCard({ card, index }) {
               হাম্বলী মাযহাব (الحنابلة)
             </span>
           </div>
-          <div className="text-sm text-gray-800 dark:text-gray-200 font-bengali leading-relaxed">
+          <div className="text-sm text-gray-800 dark:text-gray-200 font-bengali leading-relaxed bn-justify">
             <MarkdownContent inline content={card.hanbali || "—"} />
           </div>
         </div>

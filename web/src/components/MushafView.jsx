@@ -115,7 +115,7 @@ export default function MushafView({
             </div>
 
             {/* Translation */}
-            <div className="text-gray-800 dark:text-gray-200 text-xs sm:text-sm leading-relaxed bg-gray-50 dark:bg-gray-700/40 p-3.5 rounded-xl border border-gray-100 dark:border-gray-700 font-bengali">
+            <div className="text-gray-800 dark:text-gray-200 text-xs sm:text-sm leading-relaxed bg-gray-50 dark:bg-gray-700/40 p-3.5 rounded-xl border border-gray-100 dark:border-gray-700 font-bengali bn-justify">
               <span className="font-bold text-emerald-700 dark:text-emerald-400 mr-1.5">অনুবাদ:</span>
               {activeSheetAyah.translation}
             </div>

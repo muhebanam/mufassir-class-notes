@@ -55,7 +55,7 @@ export function parseJalalayn(rawText, ayahText = '') {
 
   // 3. Extract Bengali Translation & Commentary (Sharh)
   let bengaliSharh = '';
-  const bnMatch = str.match(/(?:-\s+\*\*(?:বঙ্গানুবাদ|টীকা|ব্যাখ্যা|অনুবাদ)[^*]*\*\*[:\s]*)([\s\S]+)/);
+  const bnMatch = str.match(/(?:-\s+\*\*(?:(?:পূর্ণাঙ্গ|সহজ|সার্বিক)\s+)?(?:বঙ্গানুবাদ|টীকা|ব্যাখ্যা|অনুবাদ)[^*]*\*\*[:\s]*)([\s\S]+)/);
   if (bnMatch) {
     bengaliSharh = bnMatch[1].replace(/\[src:[^\]]+\]/g, '').trim();
   } else {

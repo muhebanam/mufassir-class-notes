@@ -88,10 +88,10 @@ export default function AuthorModal({ isOpen, onClose }) {
             <ShieldCheck className="w-4 h-4" />
             <span>স্বত্বাধিকার ও কপিরাইট বিধান</span>
           </div>
-          <p className="leading-relaxed">
+          <p className="leading-relaxed bn-justify">
             তাফসীরুল জালালাইন বঙ্গানুবাদ ও প্রামাণ্য তাহকীক — সর্বস্বত্ব সংরক্ষিত: <strong>মুফতী মুহাম্মাদ মুহিব্বুল্লাহ</strong>।
           </p>
-          <p className="text-[11px] text-amber-900/80 dark:text-amber-300/80 leading-relaxed">
+          <p className="text-[11px] text-amber-900/80 dark:text-amber-300/80 leading-relaxed bn-justify">
             দ্বীনি গবেষণা, ক্লাসে শিক্ষাদান ও দাওয়াতী প্রচারের স্বার্থে তথ্যসূত্র ও অনুবাদকের নাম উল্লেখসহ উন্মুক্ত ব্যবহার করা যাবে।
           </p>
         </div>

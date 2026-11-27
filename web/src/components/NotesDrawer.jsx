@@ -189,7 +189,7 @@ export default function NotesDrawer({ isOpen, onClose, onSelectAyahFromNote }) {
                       </div>
                     </div>
                   ) : (
-                    <p className="text-gray-800 dark:text-gray-200 whitespace-pre-wrap leading-relaxed">
+                    <p className="text-gray-800 dark:text-gray-200 whitespace-pre-wrap leading-relaxed bn-justify">
                       {n.text}
                     </p>
                   )}

@@ -113,6 +113,7 @@ body.dark {
   color: var(--quran-color, var(--ink));
   direction: rtl;
   text-align: right;
+  text-align-last: right;
   word-spacing: 0.12em;
   line-height: 2.2 !important;
   word-break: normal !important;
@@ -181,6 +182,7 @@ h1.ar-block, h2.ar-block, h3.ar-block, h4.ar-block, h5.ar-block, h6.ar-block,
 .ar-block-line {
   display: block;
   text-align: right !important;
+  text-align-last: right !important;
   direction: rtl !important;
   font-family: 'Amiri', 'Scheherazade New', 'Traditional Arabic', 'Simplified Arabic', 'Segoe UI', serif !important;
   font-size: 1.2em;
@@ -196,11 +198,18 @@ h1.ar-block, h2.ar-block, h3.ar-block, h4.ar-block, h5.ar-block, h6.ar-block,
 /* Bengali translation line inside a mixed Arabic+Bengali quote */
 .bn-line {
   display: block;
-  text-align: left;
+  text-align: justify;
+  text-align-last: left;
   direction: ltr;
   font-size: 1em;
   line-height: 1.85;
   margin-top: 0.25em;
+}
+
+/* Justify with last line aligned left (for Bengali prose & reading blocks) */
+.bn-justify {
+  text-align: justify;
+  text-align-last: left;
 }
 
 /* Prevent nested font-size compounding inside Arabic blocks */
@@ -220,6 +229,7 @@ blockquote.ar-quote {
   border-right: 4px solid var(--accent) !important;
   padding: 0.9em 1.2em 0.9em 0.8em !important;
   text-align: right !important;
+  text-align-last: right !important;
   direction: rtl !important;
 }
 
@@ -281,6 +291,19 @@ code.ar-code, .ar-code {
 
 .prose p {
   margin-bottom: 1.15em;
+  text-align: justify;
+  text-align-last: left;
+}
+
+.prose p.ar-block,
+.prose li.ar-block,
+.prose [dir="rtl"],
+.prose .text-center {
+  text-align-last: auto;
+}
+
+.prose p.text-center {
+  text-align: center;
 }
 
 .prose h1, .prose h2, .prose h3, .prose h4 {
@@ -328,6 +351,8 @@ code.ar-code, .ar-code {
 
 .prose li {
   margin-bottom: 0.45em;
+  text-align: justify;
+  text-align-last: left;
 }
 
 .prose strong {
@@ -343,6 +368,8 @@ code.ar-code, .ar-code {
   border-radius: 12px;
   padding: 1.1em 1.3em;
   margin: 1.2em 0;
+  text-align: justify;
+  text-align-last: left;
 }
 
 /* Blockquote & Hadith / Ayah citation styling */
@@ -353,6 +380,8 @@ code.ar-code, .ar-code {
   border-left: 4px solid var(--accent);
   border-radius: 8px;
   font-style: normal;
+  text-align: justify;
+  text-align-last: left;
 }
 
 /* Inverted prose for dark containers */
@@ -378,6 +407,14 @@ code.ar-code, .ar-code {
   border: 1px solid var(--line);
   padding: 8px 12px;
   text-align: left;
+}
+
+.prose th p,
+.prose td p,
+.prose th li,
+.prose td li {
+  text-align: left;
+  text-align-last: left;
 }
 
 @media (max-width: 640px) {
