@@ -777,8 +777,8 @@ def parse_ruku_markdown(md_text, surah_id, ruku_idx, ayah_start, ayah_end, tanzi
                         if part.startswith("উৎস:") or "উৎস:" in part:
                             src_str = re.sub(r"^.*?উৎস:\s*", "", part)
                             sources.extend([src.strip() for src in src_str.split(";") if src.strip()])
-                        elif re.search(r"^\s*(?:\*\*)?\s*(?:তারজীহ|অগ্রগণ্য মত)\s*(?:\*\*)?\s*[:：]", part):
-                            clean_t = re.sub(r"^\s*(?:\*\*)?\s*(?:তারজীহ|অগ্রগণ্য মত)\s*(?:\*\*)?\s*[:：]\s*(?:\*\*)?\s*", "", part)
+                        elif re.search(r"^\s*(?:\*\*)?\s*(?:(?:জমহুর\s+)?তারজীহ|অগ্রগণ্য মত)(?:\s*\([^)]+\))?\s*(?:\*\*)?\s*[:：]", part):
+                            clean_t = re.sub(r"^\s*(?:\*\*)?\s*(?:(?:জমহুর\s+)?তারজীহ|অগ্রগণ্য মত)(?:\s*\([^)]+\))?\s*(?:\*\*)?\s*[:：]\s*(?:\*\*)?\s*", "", part)
                             tarjih = clean_t
                         elif re.search(r"^\s*(?:\*\*)?\s*(?:সমসাময়িক উদাহরণ|সমসাময়িক প্রয়োগ|সমসাময়িক বাস্তব প্রয়োগ)\s*(?:\*\*)?\s*[:：]", part):
                             clean_c = re.sub(r"^\s*(?:\*\*)?\s*(?:সমসাময়িক উদাহরণ|সমসাময়িক প্রয়োগ|সমসাময়িক বাস্তব প্রয়োগ)\s*(?:\*\*)?\s*[:：]\s*(?:\*\*)?\s*", "", part)
