@@ -8,6 +8,7 @@ Usage: python scripts/harvest_bahouth_roots.py [--surah 25] [--retry-failed]
 """
 
 import argparse
+import json
 import sys
 from pathlib import Path
 
