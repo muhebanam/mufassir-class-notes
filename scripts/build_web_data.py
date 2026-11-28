@@ -757,13 +757,16 @@ def parse_ruku_markdown(md_text, surah_id, ruku_idx, ayah_start, ayah_end, tanzi
                     ev = cols[5] if len(cols) > 5 else ""
 
                     ayah_nums = []
-                    m_ay = re.search(r"(?:আয়াত|আয়াত)\s+([০-৯\d\s–—\-]+)", title)
+                    m_ay = re.search(r"(?:আয়াত|আয়াত)\s+([০-৯\d\s–—\-,]+)", title)
                     if m_ay:
-                        nums = [int(n) for n in re.findall(r"\d+", to_en(m_ay.group(1)))]
+                        raw_ay_str = m_ay.group(1)
+                        nums = [int(n) for n in re.findall(r"\d+", to_en(raw_ay_str))]
                         if len(nums) == 1:
                             ayah_nums = [nums[0]]
-                        elif len(nums) >= 2:
+                        elif any(sep in raw_ay_str for sep in ["–", "—", "-"]):
                             ayah_nums = list(range(min(nums[0], nums[1]), max(nums[0], nums[1]) + 1))
+                        else:
+                            ayah_nums = sorted(list(set(nums)))
 
                     ev_parts = re.split(r"<br\s*/?>|\n", ev)
                     sources = []
