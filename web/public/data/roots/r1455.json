@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "ياسين",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 37,
+      "ayah": 130,
+      "verse_key": "37-130",
+      "text_raw": "سَلَامٌ عَلَى إِلْ يَاسِينَ",
+      "page_number": 451,
+      "word_count": 4,
+      "letter_count": 14
+    }
+  ]
+}

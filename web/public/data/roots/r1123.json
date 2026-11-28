@@ -1,0 +1,25 @@
+{
+  "schema_version": "1",
+  "root_ar": "لبد",
+  "count": 2,
+  "verses": [
+    {
+      "surah": 72,
+      "ayah": 19,
+      "verse_key": "72-19",
+      "text_raw": "وَأَنَّهُ لَمَّا قَامَ عَبْدُ اللَّهِ يَدْعُوهُ كَادُوا يَكُونُونَ عَلَيْهِ لِبَدًا",
+      "page_number": 573,
+      "word_count": 10,
+      "letter_count": 41
+    },
+    {
+      "surah": 90,
+      "ayah": 6,
+      "verse_key": "90-6",
+      "text_raw": "يَقُولُ أَهْلَكْتُ مَالًا لُبَدًا",
+      "page_number": 594,
+      "word_count": 4,
+      "letter_count": 17
+    }
+  ]
+}

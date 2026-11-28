@@ -1,0 +1,25 @@
+{
+  "schema_version": "1",
+  "root_ar": "سين",
+  "count": 2,
+  "verses": [
+    {
+      "surah": 23,
+      "ayah": 20,
+      "verse_key": "23-20",
+      "text_raw": "وَشَجَرَةً تَخْرُجُ مِنْ طُورِ سَيْنَاءَ تَنْبُتُ بِالدُّهْنِ وَصِبْغٍ لِلْآكِلِينَ",
+      "page_number": 343,
+      "word_count": 9,
+      "letter_count": 40
+    },
+    {
+      "surah": 95,
+      "ayah": 2,
+      "verse_key": "95-2",
+      "text_raw": "وَطُورِ سِينِينَ",
+      "page_number": 597,
+      "word_count": 2,
+      "letter_count": 9
+    }
+  ]
+}

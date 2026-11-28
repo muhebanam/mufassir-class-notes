@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "كبد",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 90,
+      "ayah": 4,
+      "verse_key": "90-4",
+      "text_raw": "لَقَدْ خَلَقْنَا الْإِنْسَانَ فِي كَبَدٍ",
+      "page_number": 594,
+      "word_count": 5,
+      "letter_count": 20
+    }
+  ]
+}

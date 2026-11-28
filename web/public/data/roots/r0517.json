@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "رهو",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 44,
+      "ayah": 24,
+      "verse_key": "44-24",
+      "text_raw": "وَاتْرُكْ الْبَحْرَ رَهْوًا إِنَّهُمْ جُنْدٌ مُغْرَقُونَ",
+      "page_number": 497,
+      "word_count": 6,
+      "letter_count": 27
+    }
+  ]
+}

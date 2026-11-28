@@ -1,0 +1,43 @@
+{
+  "schema_version": "1",
+  "root_ar": "كوب",
+  "count": 4,
+  "verses": [
+    {
+      "surah": 43,
+      "ayah": 71,
+      "verse_key": "43-71",
+      "text_raw": "يُطَافُ عَلَيْهِمْ بِصِحَافٍ مِنْ ذَهَبٍ وَأَكْوَابٍ وَفِيهَا مَا تَشْتَهِيهِ الْأَنْفُسُ وَتَلَذُّ الْأَعْيُنُ وَأَنْتُمْ فِيهَا خَالِدُونَ",
+      "page_number": 494,
+      "word_count": 15,
+      "letter_count": 69
+    },
+    {
+      "surah": 56,
+      "ayah": 18,
+      "verse_key": "56-18",
+      "text_raw": "بِأَكْوَابٍ وَأَبَارِيقَ وَكَأْسٍ مِنْ مَعِينٍ",
+      "page_number": 535,
+      "word_count": 5,
+      "letter_count": 23
+    },
+    {
+      "surah": 76,
+      "ayah": 15,
+      "verse_key": "76-15",
+      "text_raw": "وَيُطَافُ عَلَيْهِمْ بِآنِيَةٍ مِنْ فِضَّةٍ وَأَكْوَابٍ كَانَتْ قَوَارِيرَا",
+      "page_number": 579,
+      "word_count": 8,
+      "letter_count": 37
+    },
+    {
+      "surah": 88,
+      "ayah": 14,
+      "verse_key": "88-14",
+      "text_raw": "وَأَكْوَابٌ مَوْضُوعَةٌ",
+      "page_number": 592,
+      "word_count": 2,
+      "letter_count": 12
+    }
+  ]
+}

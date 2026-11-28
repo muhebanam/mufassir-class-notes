@@ -1,0 +1,25 @@
+{
+  "schema_version": "1",
+  "root_ar": "خنس",
+  "count": 2,
+  "verses": [
+    {
+      "surah": 81,
+      "ayah": 15,
+      "verse_key": "81-15",
+      "text_raw": "فَلَا أُقْسِمُ بِالْخُنَّسِ",
+      "page_number": 586,
+      "word_count": 3,
+      "letter_count": 13
+    },
+    {
+      "surah": 114,
+      "ayah": 4,
+      "verse_key": "114-4",
+      "text_raw": "مِنْ شَرِّ الْوَسْوَاسِ الْخَنَّاسِ",
+      "page_number": 604,
+      "word_count": 4,
+      "letter_count": 17
+    }
+  ]
+}

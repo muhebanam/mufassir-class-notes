@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "لفظ",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 50,
+      "ayah": 18,
+      "verse_key": "50-18",
+      "text_raw": "مَا يَلْفِظُ مِنْ قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ",
+      "page_number": 519,
+      "word_count": 8,
+      "letter_count": 26
+    }
+  ]
+}

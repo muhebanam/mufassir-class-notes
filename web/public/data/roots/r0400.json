@@ -1,0 +1,52 @@
+{
+  "schema_version": "1",
+  "root_ar": "خيب",
+  "count": 5,
+  "verses": [
+    {
+      "surah": 3,
+      "ayah": 127,
+      "verse_key": "3-127",
+      "text_raw": "لِيَقْطَعَ طَرَفًا مِنْ الَّذِينَ كَفَرُوا أَوْ يَكْبِتَهُمْ فَيَنْقَلِبُوا خَائِبِينَ",
+      "page_number": 66,
+      "word_count": 9,
+      "letter_count": 43
+    },
+    {
+      "surah": 14,
+      "ayah": 15,
+      "verse_key": "14-15",
+      "text_raw": "وَاسْتَفْتَحُوا وَخَابَ كُلُّ جَبَّارٍ عَنِيدٍ",
+      "page_number": 257,
+      "word_count": 5,
+      "letter_count": 23
+    },
+    {
+      "surah": 20,
+      "ayah": 61,
+      "verse_key": "20-61",
+      "text_raw": "قَالَ لَهُمْ مُوسَى وَيْلَكُمْ لَا تَفْتَرُوا عَلَى اللَّهِ كَذِبًا فَيُسْحِتَكُمْ بِعَذَابٍ وَقَدْ خَابَ مَنْ افْتَرَى",
+      "page_number": 315,
+      "word_count": 15,
+      "letter_count": 59
+    },
+    {
+      "surah": 20,
+      "ayah": 111,
+      "verse_key": "20-111",
+      "text_raw": "وَعَنَتِ الْوُجُوهُ لِلْحَيِّ الْقَيُّومِ وَقَدْ خَابَ مَنْ حَمَلَ ظُلْمًا",
+      "page_number": 319,
+      "word_count": 9,
+      "letter_count": 35
+    },
+    {
+      "surah": 91,
+      "ayah": 10,
+      "verse_key": "91-10",
+      "text_raw": "وَقَدْ خَابَ مَنْ دَسَّاهَا",
+      "page_number": 595,
+      "word_count": 4,
+      "letter_count": 13
+    }
+  ]
+}

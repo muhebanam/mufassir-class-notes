@@ -1,0 +1,25 @@
+{
+  "schema_version": "1",
+  "root_ar": "لظي",
+  "count": 2,
+  "verses": [
+    {
+      "surah": 70,
+      "ayah": 15,
+      "verse_key": "70-15",
+      "text_raw": "كَلَّا إِنَّهَا لَظَى",
+      "page_number": 569,
+      "word_count": 3,
+      "letter_count": 10
+    },
+    {
+      "surah": 92,
+      "ayah": 14,
+      "verse_key": "92-14",
+      "text_raw": "فَأَنْذَرْتُكُمْ نَارًا تَلَظَّى",
+      "page_number": 596,
+      "word_count": 3,
+      "letter_count": 16
+    }
+  ]
+}

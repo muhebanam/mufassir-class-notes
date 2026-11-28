@@ -1,0 +1,25 @@
+{
+  "schema_version": "1",
+  "root_ar": "عتل",
+  "count": 2,
+  "verses": [
+    {
+      "surah": 44,
+      "ayah": 47,
+      "verse_key": "44-47",
+      "text_raw": "خُذُوهُ فَاعْتِلُوهُ إِلَى سَوَاءِ الْجَحِيمِ",
+      "page_number": 498,
+      "word_count": 5,
+      "letter_count": 24
+    },
+    {
+      "surah": 68,
+      "ayah": 13,
+      "verse_key": "68-13",
+      "text_raw": "عُتُلٍّ بَعْدَ ذَلِكَ زَنِيمٍ",
+      "page_number": 564,
+      "word_count": 4,
+      "letter_count": 13
+    }
+  ]
+}

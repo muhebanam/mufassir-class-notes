@@ -1,0 +1,43 @@
+{
+  "schema_version": "1",
+  "root_ar": "دهن",
+  "count": 4,
+  "verses": [
+    {
+      "surah": 23,
+      "ayah": 20,
+      "verse_key": "23-20",
+      "text_raw": "وَشَجَرَةً تَخْرُجُ مِنْ طُورِ سَيْنَاءَ تَنْبُتُ بِالدُّهْنِ وَصِبْغٍ لِلْآكِلِينَ",
+      "page_number": 343,
+      "word_count": 9,
+      "letter_count": 40
+    },
+    {
+      "surah": 55,
+      "ayah": 37,
+      "verse_key": "55-37",
+      "text_raw": "فَإِذَا انْشَقَّتْ السَّمَاءُ فَكَانَتْ وَرْدَةً كَالدِّهَانِ",
+      "page_number": 532,
+      "word_count": 6,
+      "letter_count": 31
+    },
+    {
+      "surah": 56,
+      "ayah": 81,
+      "verse_key": "56-81",
+      "text_raw": "أَفَبِهَذَا الْحَدِيثِ أَنْتُمْ مُدْهِنُونَ",
+      "page_number": 537,
+      "word_count": 4,
+      "letter_count": 22
+    },
+    {
+      "surah": 68,
+      "ayah": 9,
+      "verse_key": "68-9",
+      "text_raw": "وَدُّوا لَوْ تُدْهِنُ فَيُدْهِنُونَ",
+      "page_number": 564,
+      "word_count": 4,
+      "letter_count": 17
+    }
+  ]
+}

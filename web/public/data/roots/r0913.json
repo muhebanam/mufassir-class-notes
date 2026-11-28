@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "غصص",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 73,
+      "ayah": 13,
+      "verse_key": "73-13",
+      "text_raw": "وَطَعَامًا ذَا غُصَّةٍ وَعَذَابًا أَلِيمًا",
+      "page_number": 574,
+      "word_count": 5,
+      "letter_count": 22
+    }
+  ]
+}

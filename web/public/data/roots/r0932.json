@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "غول",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 37,
+      "ayah": 47,
+      "verse_key": "37-47",
+      "text_raw": "لَا فِيهَا غَوْلٌ وَلَا هُمْ عَنْهَا يُنْزَفُونَ",
+      "page_number": 447,
+      "word_count": 7,
+      "letter_count": 24
+    }
+  ]
+}

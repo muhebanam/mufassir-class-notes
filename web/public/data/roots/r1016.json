@@ -1,0 +1,52 @@
+{
+  "schema_version": "1",
+  "root_ar": "قرع",
+  "count": 5,
+  "verses": [
+    {
+      "surah": 13,
+      "ayah": 31,
+      "verse_key": "13-31",
+      "text_raw": "وَلَوْ أَنَّ قُرْآنًا سُيِّرَتْ بِهِ الْجِبَالُ أَوْ قُطِّعَتْ بِهِ الْأَرْضُ أَوْ كُلِّمَ بِهِ الْمَوْتَى بَلْ لِلَّهِ الْأَمْرُ جَمِيعًا أَفَلَمْ يَيْأَسْ الَّذِينَ آمَنُوا أَنْ لَوْ يَشَاءُ اللَّهُ",
+      "page_number": 253,
+      "word_count": 51,
+      "letter_count": 193
+    },
+    {
+      "surah": 69,
+      "ayah": 4,
+      "verse_key": "69-4",
+      "text_raw": "كَذَّبَتْ ثَمُودُ وَعَادٌ بِالْقَارِعَةِ",
+      "page_number": 566,
+      "word_count": 4,
+      "letter_count": 20
+    },
+    {
+      "surah": 101,
+      "ayah": 1,
+      "verse_key": "101-1",
+      "text_raw": "الْقَارِعَةُ",
+      "page_number": 600,
+      "word_count": 1,
+      "letter_count": 7
+    },
+    {
+      "surah": 101,
+      "ayah": 2,
+      "verse_key": "101-2",
+      "text_raw": "مَا الْقَارِعَةُ",
+      "page_number": 600,
+      "word_count": 2,
+      "letter_count": 9
+    },
+    {
+      "surah": 101,
+      "ayah": 3,
+      "verse_key": "101-3",
+      "text_raw": "وَمَا أَدْرَاكَ مَا الْقَارِعَةُ",
+      "page_number": 600,
+      "word_count": 4,
+      "letter_count": 17
+    }
+  ]
+}

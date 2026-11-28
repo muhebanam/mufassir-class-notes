@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "هاء",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 69,
+      "ayah": 19,
+      "verse_key": "69-19",
+      "text_raw": "فَأَمَّا مَنْ أُوتِيَ كِتَابَهُ بِيَمِينِهِ فَيَقُولُ هَاؤُمُ اقْرَءُوا كِتَابِيَهْ",
+      "page_number": 567,
+      "word_count": 9,
+      "letter_count": 42
+    }
+  ]
+}

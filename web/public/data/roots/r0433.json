@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "دهق",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 78,
+      "ayah": 34,
+      "verse_key": "78-34",
+      "text_raw": "وَكَأْسًا دِهَاقًا",
+      "page_number": 583,
+      "word_count": 2,
+      "letter_count": 10
+    }
+  ]
+}

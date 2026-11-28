@@ -1,0 +1,43 @@
+{
+  "schema_version": "1",
+  "root_ar": "سدر",
+  "count": 4,
+  "verses": [
+    {
+      "surah": 34,
+      "ayah": 16,
+      "verse_key": "34-16",
+      "text_raw": "فَأَعْرَضُوا فَأَرْسَلْنَا عَلَيْهِمْ سَيْلَ الْعَرِمِ وَبَدَّلْنَاهُمْ بِجَنَّتَيْهِمْ جَنَّتَيْنِ ذَوَاتَيْ أُكُلٍ خَمْطٍ وَأَثْلٍ وَشَيْءٍ مِنْ سِدْرٍ قَلِيلٍ",
+      "page_number": 430,
+      "word_count": 16,
+      "letter_count": 75
+    },
+    {
+      "surah": 53,
+      "ayah": 14,
+      "verse_key": "53-14",
+      "text_raw": "عِنْدَ سِدْرَةِ الْمُنْتَهَى",
+      "page_number": 526,
+      "word_count": 3,
+      "letter_count": 14
+    },
+    {
+      "surah": 53,
+      "ayah": 16,
+      "verse_key": "53-16",
+      "text_raw": "إِذْ يَغْشَى السِّدْرَةَ مَا يَغْشَى",
+      "page_number": 526,
+      "word_count": 5,
+      "letter_count": 18
+    },
+    {
+      "surah": 56,
+      "ayah": 28,
+      "verse_key": "56-28",
+      "text_raw": "فِي سِدْرٍ مَخْضُودٍ",
+      "page_number": 535,
+      "word_count": 3,
+      "letter_count": 10
+    }
+  ]
+}

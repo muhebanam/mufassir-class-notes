@@ -1,0 +1,43 @@
+{
+  "schema_version": "1",
+  "root_ar": "كرب",
+  "count": 4,
+  "verses": [
+    {
+      "surah": 6,
+      "ayah": 64,
+      "verse_key": "6-64",
+      "text_raw": "قُلْ اللَّهُ يُنَجِّيكُمْ مِنْهَا وَمِنْ كُلِّ كَرْبٍ ثُمَّ أَنْتُمْ تُشْرِكُونَ",
+      "page_number": 135,
+      "word_count": 10,
+      "letter_count": 36
+    },
+    {
+      "surah": 21,
+      "ayah": 76,
+      "verse_key": "21-76",
+      "text_raw": "وَنُوحًا إِذْ نَادَى مِنْ قَبْلُ فَاسْتَجَبْنَا لَهُ فَنَجَّيْنَاهُ وَأَهْلَهُ مِنْ الْكَرْبِ الْعَظِيمِ",
+      "page_number": 328,
+      "word_count": 12,
+      "letter_count": 51
+    },
+    {
+      "surah": 37,
+      "ayah": 76,
+      "verse_key": "37-76",
+      "text_raw": "وَنَجَّيْنَاهُ وَأَهْلَهُ مِنْ الْكَرْبِ الْعَظِيمِ",
+      "page_number": 448,
+      "word_count": 5,
+      "letter_count": 25
+    },
+    {
+      "surah": 37,
+      "ayah": 115,
+      "verse_key": "37-115",
+      "text_raw": "وَنَجَّيْنَاهُمَا وَقَوْمَهُمَا مِنْ الْكَرْبِ الْعَظِيمِ",
+      "page_number": 450,
+      "word_count": 5,
+      "letter_count": 29
+    }
+  ]
+}

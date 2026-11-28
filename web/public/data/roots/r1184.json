@@ -1,0 +1,43 @@
+{
+  "schema_version": "1",
+  "root_ar": "مجد",
+  "count": 4,
+  "verses": [
+    {
+      "surah": 11,
+      "ayah": 73,
+      "verse_key": "11-73",
+      "text_raw": "قَالُوا أَتَعْجَبِينَ مِنْ أَمْرِ اللَّهِ رَحْمَةُ اللَّهِ وَبَرَكَاتُهُ عَلَيْكُمْ أَهْلَ الْبَيْتِ إِنَّهُ حَمِيدٌ مَجِيدٌ",
+      "page_number": 230,
+      "word_count": 14,
+      "letter_count": 60
+    },
+    {
+      "surah": 50,
+      "ayah": 1,
+      "verse_key": "50-1",
+      "text_raw": "ق وَالْقُرْآنِ الْمَجِيدِ",
+      "page_number": 518,
+      "word_count": 3,
+      "letter_count": 14
+    },
+    {
+      "surah": 85,
+      "ayah": 15,
+      "verse_key": "85-15",
+      "text_raw": "ذُو الْعَرْشِ الْمَجِيدُ",
+      "page_number": 590,
+      "word_count": 3,
+      "letter_count": 13
+    },
+    {
+      "surah": 85,
+      "ayah": 21,
+      "verse_key": "85-21",
+      "text_raw": "بَلْ هُوَ قُرْآنٌ مَجِيدٌ",
+      "page_number": 590,
+      "word_count": 4,
+      "letter_count": 12
+    }
+  ]
+}

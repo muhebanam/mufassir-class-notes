@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "فيل",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 105,
+      "ayah": 1,
+      "verse_key": "105-1",
+      "text_raw": "أَلَمْ تَرَ كَيْفَ فَعَلَ رَبُّكَ بِأَصْحَابِ الْفِيلِ",
+      "page_number": 601,
+      "word_count": 7,
+      "letter_count": 25
+    }
+  ]
+}

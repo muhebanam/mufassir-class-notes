@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "هلع",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 70,
+      "ayah": 19,
+      "verse_key": "70-19",
+      "text_raw": "إِنَّ الْإِنْسَانَ خُلِقَ هَلُوعًا",
+      "page_number": 569,
+      "word_count": 4,
+      "letter_count": 17
+    }
+  ]
+}

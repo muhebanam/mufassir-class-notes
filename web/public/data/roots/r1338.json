@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "هجع",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 51,
+      "ayah": 17,
+      "verse_key": "51-17",
+      "text_raw": "كَانُوا قَلِيلًا مِنْ اللَّيْلِ مَا يَهْجَعُونَ",
+      "page_number": 521,
+      "word_count": 6,
+      "letter_count": 25
+    }
+  ]
+}

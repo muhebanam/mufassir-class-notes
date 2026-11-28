@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "طمم",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 79,
+      "ayah": 34,
+      "verse_key": "79-34",
+      "text_raw": "فَإِذَا جَاءَتْ الطَّامَّةُ الْكُبْرَى",
+      "page_number": 584,
+      "word_count": 4,
+      "letter_count": 20
+    }
+  ]
+}

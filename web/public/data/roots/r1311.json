@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "نقع",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 100,
+      "ayah": 4,
+      "verse_key": "100-4",
+      "text_raw": "فَأَثَرْنَ بِهِ نَقْعًا",
+      "page_number": 599,
+      "word_count": 3,
+      "letter_count": 11
+    }
+  ]
+}

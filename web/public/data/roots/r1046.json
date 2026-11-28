@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "قمح",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 36,
+      "ayah": 8,
+      "verse_key": "36-8",
+      "text_raw": "إِنَّا جَعَلْنَا فِي أَعْنَاقِهِمْ أَغْلَالًا فَهِيَ إِلَى الْأَذْقَانِ فَهُمْ مُقْمَحُونَ",
+      "page_number": 440,
+      "word_count": 10,
+      "letter_count": 45
+    }
+  ]
+}

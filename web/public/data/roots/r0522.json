@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "روم",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 30,
+      "ayah": 2,
+      "verse_key": "30-2",
+      "text_raw": "غُلِبَتِ الرُّومُ",
+      "page_number": 404,
+      "word_count": 2,
+      "letter_count": 9
+    }
+  ]
+}

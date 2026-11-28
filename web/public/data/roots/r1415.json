@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "وقب",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 113,
+      "ayah": 3,
+      "verse_key": "113-3",
+      "text_raw": "وَمِنْ شَرِّ غَاسِقٍ إِذَا وَقَبَ",
+      "page_number": 604,
+      "word_count": 5,
+      "letter_count": 15
+    }
+  ]
+}

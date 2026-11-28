@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "شفه",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 90,
+      "ayah": 9,
+      "verse_key": "90-9",
+      "text_raw": "وَلِسَانًا وَشَفَتَيْنِ",
+      "page_number": 594,
+      "word_count": 2,
+      "letter_count": 12
+    }
+  ]
+}

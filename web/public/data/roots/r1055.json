@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "قوس",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 53,
+      "ayah": 9,
+      "verse_key": "53-9",
+      "text_raw": "فَكَانَ قَابَ قَوْسَيْنِ أَوْ أَدْنَى",
+      "page_number": 526,
+      "word_count": 5,
+      "letter_count": 18
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "شوب",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 37,
+      "ayah": 67,
+      "verse_key": "37-67",
+      "text_raw": "ثُمَّ إِنَّ لَهُمْ عَلَيْهَا لَشَوْبًا مِنْ حَمِيمٍ",
+      "page_number": 448,
+      "word_count": 7,
+      "letter_count": 23
+    }
+  ]
+}

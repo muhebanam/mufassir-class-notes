@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "دسر",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 54,
+      "ayah": 13,
+      "verse_key": "54-13",
+      "text_raw": "وَحَمَلْنَاهُ عَلَى ذَاتِ أَلْوَاحٍ وَدُسُرٍ",
+      "page_number": 529,
+      "word_count": 5,
+      "letter_count": 22
+    }
+  ]
+}

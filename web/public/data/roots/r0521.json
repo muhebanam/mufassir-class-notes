@@ -1,0 +1,34 @@
+{
+  "schema_version": "1",
+  "root_ar": "روغ",
+  "count": 3,
+  "verses": [
+    {
+      "surah": 37,
+      "ayah": 91,
+      "verse_key": "37-91",
+      "text_raw": "فَرَاغَ إِلَى آلِهَتِهِمْ فَقَالَ أَلَا تَأْكُلُونَ",
+      "page_number": 449,
+      "word_count": 6,
+      "letter_count": 26
+    },
+    {
+      "surah": 37,
+      "ayah": 93,
+      "verse_key": "37-93",
+      "text_raw": "فَرَاغَ عَلَيْهِمْ ضَرْبًا بِالْيَمِينِ",
+      "page_number": 449,
+      "word_count": 4,
+      "letter_count": 20
+    },
+    {
+      "surah": 51,
+      "ayah": 26,
+      "verse_key": "51-26",
+      "text_raw": "فَرَاغَ إِلَى أَهْلِهِ فَجَاءَ بِعِجْلٍ سَمِينٍ",
+      "page_number": 521,
+      "word_count": 6,
+      "letter_count": 23
+    }
+  ]
+}

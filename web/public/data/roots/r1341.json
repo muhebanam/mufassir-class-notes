@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "هرب",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 72,
+      "ayah": 12,
+      "verse_key": "72-12",
+      "text_raw": "وَأَنَّا ظَنَنَّا أَنْ لَنْ نُعْجِزَ اللَّهَ فِي الْأَرْضِ وَلَنْ نُعْجِزَهُ هَرَبًا",
+      "page_number": 572,
+      "word_count": 11,
+      "letter_count": 39
+    }
+  ]
+}

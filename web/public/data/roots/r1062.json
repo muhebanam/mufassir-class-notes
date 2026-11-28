@@ -1,0 +1,61 @@
+{
+  "schema_version": "1",
+  "root_ar": "كأس",
+  "count": 6,
+  "verses": [
+    {
+      "surah": 37,
+      "ayah": 45,
+      "verse_key": "37-45",
+      "text_raw": "يُطَافُ عَلَيْهِمْ بِكَأْسٍ مِنْ مَعِينٍ",
+      "page_number": 447,
+      "word_count": 5,
+      "letter_count": 19
+    },
+    {
+      "surah": 52,
+      "ayah": 23,
+      "verse_key": "52-23",
+      "text_raw": "يَتَنَازَعُونَ فِيهَا كَأْسًا لَا لَغْوٌ فِيهَا وَلَا تَأْثِيمٌ",
+      "page_number": 524,
+      "word_count": 8,
+      "letter_count": 33
+    },
+    {
+      "surah": 56,
+      "ayah": 18,
+      "verse_key": "56-18",
+      "text_raw": "بِأَكْوَابٍ وَأَبَارِيقَ وَكَأْسٍ مِنْ مَعِينٍ",
+      "page_number": 535,
+      "word_count": 5,
+      "letter_count": 23
+    },
+    {
+      "surah": 76,
+      "ayah": 5,
+      "verse_key": "76-5",
+      "text_raw": "إِنَّ الْأَبْرَارَ يَشْرَبُونَ مِنْ كَأْسٍ كَانَ مِزَاجُهَا كَافُورًا",
+      "page_number": 578,
+      "word_count": 8,
+      "letter_count": 35
+    },
+    {
+      "surah": 76,
+      "ayah": 17,
+      "verse_key": "76-17",
+      "text_raw": "وَيُسْقَوْنَ فِيهَا كَأْسًا كَانَ مِزَاجُهَا زَنْجَبِيلًا",
+      "page_number": 579,
+      "word_count": 6,
+      "letter_count": 30
+    },
+    {
+      "surah": 78,
+      "ayah": 34,
+      "verse_key": "78-34",
+      "text_raw": "وَكَأْسًا دِهَاقًا",
+      "page_number": 583,
+      "word_count": 2,
+      "letter_count": 10
+    }
+  ]
+}

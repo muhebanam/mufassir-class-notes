@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "قطط",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 38,
+      "ayah": 16,
+      "verse_key": "38-16",
+      "text_raw": "وَقَالُوا رَبَّنَا عَجِّلْ لَنَا قِطَّنَا قَبْلَ يَوْمِ الْحِسَابِ",
+      "page_number": 453,
+      "word_count": 8,
+      "letter_count": 32
+    }
+  ]
+}

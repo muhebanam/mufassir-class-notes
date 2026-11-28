@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "عزو",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 70,
+      "ayah": 37,
+      "verse_key": "70-37",
+      "text_raw": "عَنْ الْيَمِينِ وَعَنْ الشِّمَالِ عِزِينَ",
+      "page_number": 569,
+      "word_count": 5,
+      "letter_count": 21
+    }
+  ]
+}

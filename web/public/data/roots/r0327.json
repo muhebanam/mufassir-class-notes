@@ -1,0 +1,70 @@
+{
+  "schema_version": "1",
+  "root_ar": "حم",
+  "count": 7,
+  "verses": [
+    {
+      "surah": 40,
+      "ayah": 1,
+      "verse_key": "40-1",
+      "text_raw": "حم",
+      "page_number": 467,
+      "word_count": 1,
+      "letter_count": 2
+    },
+    {
+      "surah": 41,
+      "ayah": 1,
+      "verse_key": "41-1",
+      "text_raw": "حم",
+      "page_number": 477,
+      "word_count": 1,
+      "letter_count": 2
+    },
+    {
+      "surah": 42,
+      "ayah": 1,
+      "verse_key": "42-1",
+      "text_raw": "حم",
+      "page_number": 483,
+      "word_count": 1,
+      "letter_count": 2
+    },
+    {
+      "surah": 43,
+      "ayah": 1,
+      "verse_key": "43-1",
+      "text_raw": "حم",
+      "page_number": 489,
+      "word_count": 1,
+      "letter_count": 2
+    },
+    {
+      "surah": 44,
+      "ayah": 1,
+      "verse_key": "44-1",
+      "text_raw": "حم",
+      "page_number": 496,
+      "word_count": 1,
+      "letter_count": 2
+    },
+    {
+      "surah": 45,
+      "ayah": 1,
+      "verse_key": "45-1",
+      "text_raw": "حم",
+      "page_number": 499,
+      "word_count": 1,
+      "letter_count": 2
+    },
+    {
+      "surah": 46,
+      "ayah": 1,
+      "verse_key": "46-1",
+      "text_raw": "حم",
+      "page_number": 502,
+      "word_count": 1,
+      "letter_count": 2
+    }
+  ]
+}

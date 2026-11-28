@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "كنس",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 81,
+      "ayah": 16,
+      "verse_key": "81-16",
+      "text_raw": "الْجَوَارِ الْكُنَّسِ",
+      "page_number": 586,
+      "word_count": 2,
+      "letter_count": 11
+    }
+  ]
+}

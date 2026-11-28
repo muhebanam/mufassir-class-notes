@@ -1,0 +1,34 @@
+{
+  "schema_version": "1",
+  "root_ar": "نضد",
+  "count": 3,
+  "verses": [
+    {
+      "surah": 11,
+      "ayah": 82,
+      "verse_key": "11-82",
+      "text_raw": "فَلَمَّا جَاءَ أَمْرُنَا جَعَلْنَا عَالِيَهَا سَافِلَهَا وَأَمْطَرْنَا عَلَيْهَا حِجَارَةً مِنْ سِجِّيلٍ مَنْضُودٍ",
+      "page_number": 231,
+      "word_count": 12,
+      "letter_count": 57
+    },
+    {
+      "surah": 50,
+      "ayah": 10,
+      "verse_key": "50-10",
+      "text_raw": "وَالنَّخْلَ بَاسِقَاتٍ لَهَا طَلْعٌ نَضِيدٌ",
+      "page_number": 518,
+      "word_count": 5,
+      "letter_count": 22
+    },
+    {
+      "surah": 56,
+      "ayah": 29,
+      "verse_key": "56-29",
+      "text_raw": "وَطَلْحٍ مَنْضُودٍ",
+      "page_number": 535,
+      "word_count": 2,
+      "letter_count": 9
+    }
+  ]
+}

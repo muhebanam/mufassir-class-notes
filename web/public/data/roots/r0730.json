@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "صفن",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 38,
+      "ayah": 31,
+      "verse_key": "38-31",
+      "text_raw": "إِذْ عُرِضَ عَلَيْهِ بِالْعَشِيِّ الصَّافِنَاتُ الْجِيَادُ",
+      "page_number": 455,
+      "word_count": 6,
+      "letter_count": 29
+    }
+  ]
+}

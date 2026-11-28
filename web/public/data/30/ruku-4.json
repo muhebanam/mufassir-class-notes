@@ -509,41 +509,53 @@
       "cards": [
         {
           "title": "**৩২**",
+          "ayahs": [],
           "hanafi": "**فَرَّقُوا دِينَهُمْ**",
           "maliki": "**হামযাহ ও কিসাঈ**",
           "shafii": "আলিফ সহ: ﴿فَارَقُوا دِينَهُمْ﴾",
           "hanbali": "তারা নিজেদের সত্য দ্বীনকে সম্পূর্ণ পরিত্যাগ করেছে—এই অর্থ স্পষ্টকরণ।",
           "consensus": false,
+          "tarjih": null,
+          "contemporary": [],
           "daleel": [],
           "sources": []
         },
         {
           "title": "**৩২**",
+          "ayahs": [],
           "hanafi": "**فَرَّقُوا دِينَهُمْ**",
           "maliki": "**জমহুর ক্বারীগণ**",
           "shafii": "তাশদীদ সহ: ﴿فَرَّقُوا دِينَهُمْ﴾",
           "hanbali": "দ্বীনের ঐক্য বিনষ্ট করে খণ্ড-বিখণ্ড করার মারাত্মক প্রবণতা নির্দেশক।",
           "consensus": false,
+          "tarjih": null,
+          "contemporary": [],
           "daleel": [],
           "sources": []
         },
         {
           "title": "**৩৯**",
+          "ayahs": [],
           "hanafi": "**لِيَرْبُوَ**",
           "maliki": "**ইবনে কাছীর**",
           "shafii": "খিতাবের তা সহ: ﴿لِتُرْبُوا﴾",
           "hanbali": "দানকারী বা বিনিয়োগকারীদের সরাসরি সম্বোধন করে সম্পদের বৃদ্ধি খোঁজার চেষ্টা নির্দেশক।",
           "consensus": false,
+          "tarjih": null,
+          "contemporary": [],
           "daleel": [],
           "sources": []
         },
         {
           "title": "**৩৯**",
+          "ayahs": [],
           "hanafi": "**لِيَرْبُوَ**",
           "maliki": "**জমহুর ক্বারীগণ**",
           "shafii": "গায়েবের ইয়া সহ: ﴿لِيَرْبُوَ﴾",
           "hanbali": "সম্পদে বাহ্যিক বৃদ্ধি ঘটার দৃশ্য রূপায়ন।",
           "consensus": false,
+          "tarjih": null,
+          "contemporary": [],
           "daleel": [],
           "sources": []
         }

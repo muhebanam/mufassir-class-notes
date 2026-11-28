@@ -1,0 +1,43 @@
+{
+  "schema_version": "1",
+  "root_ar": "صبب",
+  "count": 4,
+  "verses": [
+    {
+      "surah": 22,
+      "ayah": 19,
+      "verse_key": "22-19",
+      "text_raw": "هَذَانِ خَصْمَانِ اخْتَصَمُوا فِي رَبِّهِمْ فَالَّذِينَ كَفَرُوا قُطِّعَتْ لَهُمْ ثِيَابٌ مِنْ نَارٍ يُصَبُّ مِنْ فَوْقِ رُءُوسِهِمْ الْحَمِيمُ",
+      "page_number": 334,
+      "word_count": 17,
+      "letter_count": 69
+    },
+    {
+      "surah": 44,
+      "ayah": 48,
+      "verse_key": "44-48",
+      "text_raw": "ثُمَّ صُبُّوا فَوْقَ رَأْسِهِ مِنْ عَذَابِ الْحَمِيمِ",
+      "page_number": 498,
+      "word_count": 7,
+      "letter_count": 25
+    },
+    {
+      "surah": 80,
+      "ayah": 25,
+      "verse_key": "80-25",
+      "text_raw": "أَنَّا صَبَبْنَا الْمَاءَ صَبًّا",
+      "page_number": 585,
+      "word_count": 4,
+      "letter_count": 16
+    },
+    {
+      "surah": 89,
+      "ayah": 13,
+      "verse_key": "89-13",
+      "text_raw": "فَصَبَّ عَلَيْهِمْ رَبُّكَ سَوْطَ عَذَابٍ",
+      "page_number": 593,
+      "word_count": 5,
+      "letter_count": 18
+    }
+  ]
+}

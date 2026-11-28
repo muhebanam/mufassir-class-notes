@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "كند",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 100,
+      "ayah": 6,
+      "verse_key": "100-6",
+      "text_raw": "إِنَّ الْإِنْسَانَ لِرَبِّهِ لَكَنُودٌ",
+      "page_number": 600,
+      "word_count": 4,
+      "letter_count": 18
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "ن",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 68,
+      "ayah": 1,
+      "verse_key": "68-1",
+      "text_raw": "ن وَالْقَلَمِ وَمَا يَسْطُرُونَ",
+      "page_number": 564,
+      "word_count": 4,
+      "letter_count": 16
+    }
+  ]
+}

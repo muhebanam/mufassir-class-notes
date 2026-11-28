@@ -1,0 +1,304 @@
+{
+  "schema_version": "1",
+  "root_ar": "كلا",
+  "count": 33,
+  "verses": [
+    {
+      "surah": 19,
+      "ayah": 79,
+      "verse_key": "19-79",
+      "text_raw": "كَلَّا سَنَكْتُبُ مَا يَقُولُ وَنَمُدُّ لَهُ مِنْ الْعَذَابِ مَدًّا",
+      "page_number": 311,
+      "word_count": 9,
+      "letter_count": 31
+    },
+    {
+      "surah": 19,
+      "ayah": 82,
+      "verse_key": "19-82",
+      "text_raw": "كَلَّا سَيَكْفُرُونَ بِعِبَادَتِهِمْ وَيَكُونُونَ عَلَيْهِمْ ضِدًّا",
+      "page_number": 311,
+      "word_count": 6,
+      "letter_count": 33
+    },
+    {
+      "surah": 23,
+      "ayah": 100,
+      "verse_key": "23-100",
+      "text_raw": "لَعَلِّي أَعْمَلُ صَالِحًا فِيمَا تَرَكْتُ كَلَّا إِنَّهَا كَلِمَةٌ هُوَ قَائِلُهَا وَمِنْ وَرَائِهِمْ بَرْزَخٌ إِلَى يَوْمِ يُبْعَثُونَ",
+      "page_number": 348,
+      "word_count": 16,
+      "letter_count": 65
+    },
+    {
+      "surah": 26,
+      "ayah": 15,
+      "verse_key": "26-15",
+      "text_raw": "قَالَ كَلَّا فَاذْهَبَا بِآيَاتِنَا إِنَّا مَعَكُمْ مُسْتَمِعُونَ",
+      "page_number": 367,
+      "word_count": 7,
+      "letter_count": 33
+    },
+    {
+      "surah": 26,
+      "ayah": 62,
+      "verse_key": "26-62",
+      "text_raw": "قَالَ كَلَّا إِنَّ مَعِيَ رَبِّي سَيَهْدِينِ",
+      "page_number": 370,
+      "word_count": 6,
+      "letter_count": 20
+    },
+    {
+      "surah": 34,
+      "ayah": 27,
+      "verse_key": "34-27",
+      "text_raw": "قُلْ أَرُونِيَ الَّذِينَ أَلْحَقْتُمْ بِهِ شُرَكَاءَ كَلَّا بَلْ هُوَ اللَّهُ الْعَزِيزُ الْحَكِيمُ",
+      "page_number": 431,
+      "word_count": 12,
+      "letter_count": 48
+    },
+    {
+      "surah": 70,
+      "ayah": 15,
+      "verse_key": "70-15",
+      "text_raw": "كَلَّا إِنَّهَا لَظَى",
+      "page_number": 569,
+      "word_count": 3,
+      "letter_count": 10
+    },
+    {
+      "surah": 70,
+      "ayah": 39,
+      "verse_key": "70-39",
+      "text_raw": "كَلَّا إِنَّا خَلَقْنَاهُمْ مِمَّا يَعْلَمُونَ",
+      "page_number": 569,
+      "word_count": 5,
+      "letter_count": 22
+    },
+    {
+      "surah": 74,
+      "ayah": 16,
+      "verse_key": "74-16",
+      "text_raw": "كَلَّا إِنَّهُ كَانَ لِآيَاتِنَا عَنِيدًا",
+      "page_number": 575,
+      "word_count": 5,
+      "letter_count": 21
+    },
+    {
+      "surah": 74,
+      "ayah": 32,
+      "verse_key": "74-32",
+      "text_raw": "كَلَّا وَالْقَمَرِ",
+      "page_number": 576,
+      "word_count": 2,
+      "letter_count": 9
+    },
+    {
+      "surah": 74,
+      "ayah": 53,
+      "verse_key": "74-53",
+      "text_raw": "كَلَّا بَلْ لَا يَخَافُونَ الْآخِرَةَ",
+      "page_number": 577,
+      "word_count": 5,
+      "letter_count": 19
+    },
+    {
+      "surah": 74,
+      "ayah": 54,
+      "verse_key": "74-54",
+      "text_raw": "كَلَّا إِنَّهُ تَذْكِرَةٌ",
+      "page_number": 577,
+      "word_count": 3,
+      "letter_count": 11
+    },
+    {
+      "surah": 75,
+      "ayah": 11,
+      "verse_key": "75-11",
+      "text_raw": "كَلَّا لَا وَزَرَ",
+      "page_number": 577,
+      "word_count": 3,
+      "letter_count": 8
+    },
+    {
+      "surah": 75,
+      "ayah": 20,
+      "verse_key": "75-20",
+      "text_raw": "كَلَّا بَلْ تُحِبُّونَ الْعَاجِلَةَ",
+      "page_number": 578,
+      "word_count": 4,
+      "letter_count": 17
+    },
+    {
+      "surah": 75,
+      "ayah": 26,
+      "verse_key": "75-26",
+      "text_raw": "كَلَّا إِذَا بَلَغَتِ التَّرَاقِيَ",
+      "page_number": 578,
+      "word_count": 4,
+      "letter_count": 17
+    },
+    {
+      "surah": 78,
+      "ayah": 4,
+      "verse_key": "78-4",
+      "text_raw": "كَلَّا سَيَعْلَمُونَ",
+      "page_number": 582,
+      "word_count": 2,
+      "letter_count": 10
+    },
+    {
+      "surah": 78,
+      "ayah": 5,
+      "verse_key": "78-5",
+      "text_raw": "ثُمَّ كَلَّا سَيَعْلَمُونَ",
+      "page_number": 582,
+      "word_count": 3,
+      "letter_count": 12
+    },
+    {
+      "surah": 80,
+      "ayah": 11,
+      "verse_key": "80-11",
+      "text_raw": "كَلَّا إِنَّهَا تَذْكِرَةٌ",
+      "page_number": 585,
+      "word_count": 3,
+      "letter_count": 12
+    },
+    {
+      "surah": 80,
+      "ayah": 23,
+      "verse_key": "80-23",
+      "text_raw": "كَلَّا لَمَّا يَقْضِ مَا أَمَرَهُ",
+      "page_number": 585,
+      "word_count": 5,
+      "letter_count": 15
+    },
+    {
+      "surah": 82,
+      "ayah": 9,
+      "verse_key": "82-9",
+      "text_raw": "كَلَّا بَلْ تُكَذِّبُونَ بِالدِّينِ",
+      "page_number": 587,
+      "word_count": 4,
+      "letter_count": 17
+    },
+    {
+      "surah": 83,
+      "ayah": 7,
+      "verse_key": "83-7",
+      "text_raw": "كَلَّا إِنَّ كِتَابَ الْفُجَّارِ لَفِي سِجِّينٍ",
+      "page_number": 588,
+      "word_count": 6,
+      "letter_count": 22
+    },
+    {
+      "surah": 83,
+      "ayah": 14,
+      "verse_key": "83-14",
+      "text_raw": "كَلَّا بَلْ رَانَ عَلَى قُلُوبِهِمْ مَا كَانُوا يَكْسِبُونَ",
+      "page_number": 588,
+      "word_count": 8,
+      "letter_count": 30
+    },
+    {
+      "surah": 83,
+      "ayah": 15,
+      "verse_key": "83-15",
+      "text_raw": "كَلَّا إِنَّهُمْ عَنْ رَبِّهِمْ يَوْمَئِذٍ لَمَحْجُوبُونَ",
+      "page_number": 588,
+      "word_count": 6,
+      "letter_count": 26
+    },
+    {
+      "surah": 83,
+      "ayah": 18,
+      "verse_key": "83-18",
+      "text_raw": "كَلَّا إِنَّ كِتَابَ الْأَبْرَارِ لَفِي عِلِّيِّينَ",
+      "page_number": 588,
+      "word_count": 6,
+      "letter_count": 24
+    },
+    {
+      "surah": 89,
+      "ayah": 17,
+      "verse_key": "89-17",
+      "text_raw": "كَلَّا بَلْ لَا تُكْرِمُونَ الْيَتِيمَ",
+      "page_number": 593,
+      "word_count": 5,
+      "letter_count": 19
+    },
+    {
+      "surah": 89,
+      "ayah": 21,
+      "verse_key": "89-21",
+      "text_raw": "كَلَّا إِذَا دُكَّتِ الْأَرْضُ دَكًّا دَكًّا",
+      "page_number": 593,
+      "word_count": 6,
+      "letter_count": 20
+    },
+    {
+      "surah": 96,
+      "ayah": 6,
+      "verse_key": "96-6",
+      "text_raw": "كَلَّا إِنَّ الْإِنْسَانَ لَيَطْغَى",
+      "page_number": 597,
+      "word_count": 4,
+      "letter_count": 17
+    },
+    {
+      "surah": 96,
+      "ayah": 15,
+      "verse_key": "96-15",
+      "text_raw": "كَلَّا لَئِنْ لَمْ يَنْتَهِ لَنَسْفَعَنْ بِالنَّاصِيَةِ",
+      "page_number": 598,
+      "word_count": 6,
+      "letter_count": 26
+    },
+    {
+      "surah": 96,
+      "ayah": 19,
+      "verse_key": "96-19",
+      "text_raw": "كَلَّا لَا تُطِعْهُ وَاسْجُدْ وَاقْتَرِبْ",
+      "page_number": 598,
+      "word_count": 5,
+      "letter_count": 20
+    },
+    {
+      "surah": 102,
+      "ayah": 3,
+      "verse_key": "102-3",
+      "text_raw": "كَلَّا سَوْفَ تَعْلَمُونَ",
+      "page_number": 600,
+      "word_count": 3,
+      "letter_count": 12
+    },
+    {
+      "surah": 102,
+      "ayah": 4,
+      "verse_key": "102-4",
+      "text_raw": "ثُمَّ كَلَّا سَوْفَ تَعْلَمُونَ",
+      "page_number": 600,
+      "word_count": 4,
+      "letter_count": 14
+    },
+    {
+      "surah": 102,
+      "ayah": 5,
+      "verse_key": "102-5",
+      "text_raw": "كَلَّا لَوْ تَعْلَمُونَ عِلْمَ الْيَقِينِ",
+      "page_number": 600,
+      "word_count": 5,
+      "letter_count": 20
+    },
+    {
+      "surah": 104,
+      "ayah": 4,
+      "verse_key": "104-4",
+      "text_raw": "كَلَّا لَيُنْبَذَنَّ فِي الْحُطَمَةِ",
+      "page_number": 601,
+      "word_count": 4,
+      "letter_count": 17
+    }
+  ]
+}

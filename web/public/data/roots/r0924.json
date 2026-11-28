@@ -1,0 +1,25 @@
+{
+  "schema_version": "1",
+  "root_ar": "غلي",
+  "count": 2,
+  "verses": [
+    {
+      "surah": 44,
+      "ayah": 45,
+      "verse_key": "44-45",
+      "text_raw": "كَالْمُهْلِ يَغْلِي فِي الْبُطُونِ",
+      "page_number": 498,
+      "word_count": 4,
+      "letter_count": 18
+    },
+    {
+      "surah": 44,
+      "ayah": 46,
+      "verse_key": "44-46",
+      "text_raw": "كَغَلْيِ الْحَمِيمِ",
+      "page_number": 498,
+      "word_count": 2,
+      "letter_count": 10
+    }
+  ]
+}

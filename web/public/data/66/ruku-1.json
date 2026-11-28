@@ -2587,21 +2587,27 @@
       "cards": [
         {
           "title": "**খাদ্য/পানীয় হারাম ঘোষণা**",
+          "ayahs": [],
           "hanafi": "কসম গণ্য হবে, ভঙ্গ করলে কাফফারা প্রযোজ্য",
           "maliki": "কসম গণ্য হবে ও কাফফারা ওয়াজিব",
           "shafii": "কসম গণ্য হবে ও কাফফারা ওয়াজিব",
           "hanbali": "কসম গণ্য হবে ও কাফফারা ওয়াজিব",
           "consensus": false,
+          "tarjih": null,
+          "contemporary": [],
           "daleel": [],
           "sources": []
         },
         {
           "title": "**কসমের কাফফারা**",
+          "ayahs": [],
           "hanafi": "১০ মিসকীনকে আহার/বস্ত্র, অপারকতায় ৩ দিন সিয়াম",
           "maliki": "একই রূপ",
           "shafii": "একই রূপ",
           "hanbali": "একই রূপ",
           "consensus": false,
+          "tarjih": null,
+          "contemporary": [],
           "daleel": [],
           "sources": []
         }

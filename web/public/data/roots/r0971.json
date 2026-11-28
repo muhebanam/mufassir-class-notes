@@ -1,0 +1,34 @@
+{
+  "schema_version": "1",
+  "root_ar": "فقد",
+  "count": 3,
+  "verses": [
+    {
+      "surah": 12,
+      "ayah": 71,
+      "verse_key": "12-71",
+      "text_raw": "قَالُوا وَأَقْبَلُوا عَلَيْهِمْ مَاذَا تَفْقِدُونَ",
+      "page_number": 244,
+      "word_count": 5,
+      "letter_count": 27
+    },
+    {
+      "surah": 12,
+      "ayah": 72,
+      "verse_key": "12-72",
+      "text_raw": "قَالُوا نَفْقِدُ صُوَاعَ الْمَلِكِ وَلِمَنْ جَاءَ بِهِ حِمْلُ بَعِيرٍ وَأَنَا بِهِ زَعِيمٌ",
+      "page_number": 244,
+      "word_count": 12,
+      "letter_count": 44
+    },
+    {
+      "surah": 27,
+      "ayah": 20,
+      "verse_key": "27-20",
+      "text_raw": "وَتَفَقَّدَ الطَّيْرَ فَقَالَ مَا لِيَ لَا أَرَى الْهُدْهُدَ أَمْ كَانَ مِنْ الْغَائِبِينَ",
+      "page_number": 378,
+      "word_count": 12,
+      "letter_count": 44
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "رحق",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 83,
+      "ayah": 25,
+      "verse_key": "83-25",
+      "text_raw": "يُسْقَوْنَ مِنْ رَحِيقٍ مَخْتُومٍ",
+      "page_number": 588,
+      "word_count": 4,
+      "letter_count": 16
+    }
+  ]
+}

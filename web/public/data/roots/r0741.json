@@ -1,0 +1,25 @@
+{
+  "schema_version": "1",
+  "root_ar": "صهر",
+  "count": 2,
+  "verses": [
+    {
+      "surah": 22,
+      "ayah": 20,
+      "verse_key": "22-20",
+      "text_raw": "يُصْهَرُ بِهِ مَا فِي بُطُونِهِمْ وَالْجُلُودُ",
+      "page_number": 334,
+      "word_count": 6,
+      "letter_count": 23
+    },
+    {
+      "surah": 25,
+      "ayah": 54,
+      "verse_key": "25-54",
+      "text_raw": "وَهُوَ الَّذِي خَلَقَ مِنْ الْمَاءِ بَشَرًا فَجَعَلَهُ نَسَبًا وَصِهْرًا وَكَانَ رَبُّكَ قَدِيرًا",
+      "page_number": 364,
+      "word_count": 12,
+      "letter_count": 47
+    }
+  ]
+}

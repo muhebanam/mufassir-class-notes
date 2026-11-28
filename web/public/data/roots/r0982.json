@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "فني",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 55,
+      "ayah": 26,
+      "verse_key": "55-26",
+      "text_raw": "كُلُّ مَنْ عَلَيْهَا فَانٍ",
+      "page_number": 532,
+      "word_count": 4,
+      "letter_count": 12
+    }
+  ]
+}

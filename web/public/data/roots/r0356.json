@@ -1,0 +1,25 @@
+{
+  "schema_version": "1",
+  "root_ar": "خدد",
+  "count": 2,
+  "verses": [
+    {
+      "surah": 31,
+      "ayah": 18,
+      "verse_key": "31-18",
+      "text_raw": "وَلَا تُصَعِّرْ خَدَّكَ لِلنَّاسِ وَلَا تَمْشِ فِي الْأَرْضِ مَرَحًا إِنَّ اللَّهَ لَا يُحِبُّ كُلَّ مُخْتَالٍ فَخُورٍ",
+      "page_number": 412,
+      "word_count": 16,
+      "letter_count": 54
+    },
+    {
+      "surah": 85,
+      "ayah": 4,
+      "verse_key": "85-4",
+      "text_raw": "قُتِلَ أَصْحَابُ الْأُخْدُودِ",
+      "page_number": 590,
+      "word_count": 3,
+      "letter_count": 15
+    }
+  ]
+}

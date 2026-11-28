@@ -1,0 +1,34 @@
+{
+  "schema_version": "1",
+  "root_ar": "همز",
+  "count": 3,
+  "verses": [
+    {
+      "surah": 23,
+      "ayah": 97,
+      "verse_key": "23-97",
+      "text_raw": "وَقُلْ رَبِّ أَعُوذُ بِكَ مِنْ هَمَزَاتِ الشَّيَاطِينِ",
+      "page_number": 348,
+      "word_count": 7,
+      "letter_count": 26
+    },
+    {
+      "surah": 68,
+      "ayah": 11,
+      "verse_key": "68-11",
+      "text_raw": "هَمَّازٍ مَشَّاءٍ بِنَمِيمٍ",
+      "page_number": 564,
+      "word_count": 3,
+      "letter_count": 13
+    },
+    {
+      "surah": 104,
+      "ayah": 1,
+      "verse_key": "104-1",
+      "text_raw": "وَيْلٌ لِكُلِّ هُمَزَةٍ لُمَزَةٍ",
+      "page_number": 601,
+      "word_count": 4,
+      "letter_count": 14
+    }
+  ]
+}

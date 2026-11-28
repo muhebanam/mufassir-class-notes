@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "كفت",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 77,
+      "ayah": 25,
+      "verse_key": "77-25",
+      "text_raw": "أَلَمْ نَجْعَلْ الْأَرْضَ كِفَاتًا",
+      "page_number": 581,
+      "word_count": 4,
+      "letter_count": 17
+    }
+  ]
+}

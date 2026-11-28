@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "كدح",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 84,
+      "ayah": 6,
+      "verse_key": "84-6",
+      "text_raw": "يَاأَيُّهَا الْإِنْسَانُ إِنَّكَ كَادِحٌ إِلَى رَبِّكَ كَدْحًا فَمُلَاقِيهِ",
+      "page_number": 589,
+      "word_count": 8,
+      "letter_count": 37
+    }
+  ]
+}

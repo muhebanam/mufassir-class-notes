@@ -1,0 +1,25 @@
+{
+  "schema_version": "1",
+  "root_ar": "دعع",
+  "count": 2,
+  "verses": [
+    {
+      "surah": 52,
+      "ayah": 13,
+      "verse_key": "52-13",
+      "text_raw": "يَوْمَ يُدَعُّونَ إِلَى نَارِ جَهَنَّمَ دَعًّا",
+      "page_number": 523,
+      "word_count": 6,
+      "letter_count": 21
+    },
+    {
+      "surah": 107,
+      "ayah": 2,
+      "verse_key": "107-2",
+      "text_raw": "فَذَلِكَ الَّذِي يَدُعُّ الْيَتِيمَ",
+      "page_number": 602,
+      "word_count": 4,
+      "letter_count": 17
+    }
+  ]
+}

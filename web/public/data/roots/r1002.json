@@ -1,0 +1,25 @@
+{
+  "schema_version": "1",
+  "root_ar": "قحم",
+  "count": 2,
+  "verses": [
+    {
+      "surah": 38,
+      "ayah": 59,
+      "verse_key": "38-59",
+      "text_raw": "هَذَا فَوْجٌ مُقْتَحِمٌ مَعَكُمْ لَا مَرْحَبًا بِهِمْ إِنَّهُمْ صَالُو النَّارِ",
+      "page_number": 456,
+      "word_count": 10,
+      "letter_count": 38
+    },
+    {
+      "surah": 90,
+      "ayah": 11,
+      "verse_key": "90-11",
+      "text_raw": "فَلَا اقْتَحَمَ الْعَقَبَةَ",
+      "page_number": 594,
+      "word_count": 3,
+      "letter_count": 14
+    }
+  ]
+}

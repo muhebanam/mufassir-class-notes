@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "رخو",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 38,
+      "ayah": 36,
+      "verse_key": "38-36",
+      "text_raw": "فَسَخَّرْنَا لَهُ الرِّيحَ تَجْرِي بِأَمْرِهِ رُخَاءً حَيْثُ أَصَابَ",
+      "page_number": 455,
+      "word_count": 8,
+      "letter_count": 33
+    }
+  ]
+}

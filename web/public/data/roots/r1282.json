@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "نشط",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 79,
+      "ayah": 2,
+      "verse_key": "79-2",
+      "text_raw": "وَالنَّاشِطَاتِ نَشْطًا",
+      "page_number": 583,
+      "word_count": 2,
+      "letter_count": 13
+    }
+  ]
+}

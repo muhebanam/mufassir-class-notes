@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "زمل",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 73,
+      "ayah": 1,
+      "verse_key": "73-1",
+      "text_raw": "يَاأَيُّهَا الْمُزَّمِّلُ",
+      "page_number": 574,
+      "word_count": 2,
+      "letter_count": 12
+    }
+  ]
+}

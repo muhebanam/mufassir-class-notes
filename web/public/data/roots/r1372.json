@@ -1,0 +1,34 @@
+{
+  "schema_version": "1",
+  "root_ar": "وتد",
+  "count": 3,
+  "verses": [
+    {
+      "surah": 38,
+      "ayah": 12,
+      "verse_key": "38-12",
+      "text_raw": "كَذَّبَتْ قَبْلَهُمْ قَوْمُ نُوحٍ وَعَادٌ وَفِرْعَوْنُ ذُو الْأَوْتَادِ",
+      "page_number": 453,
+      "word_count": 8,
+      "letter_count": 34
+    },
+    {
+      "surah": 78,
+      "ayah": 7,
+      "verse_key": "78-7",
+      "text_raw": "وَالْجِبَالَ أَوْتَادًا",
+      "page_number": 582,
+      "word_count": 2,
+      "letter_count": 13
+    },
+    {
+      "surah": 89,
+      "ayah": 10,
+      "verse_key": "89-10",
+      "text_raw": "وَفِرْعَوْنَ ذِي الْأَوْتَادِ",
+      "page_number": 593,
+      "word_count": 3,
+      "letter_count": 15
+    }
+  ]
+}

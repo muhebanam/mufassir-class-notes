@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "صمد",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 112,
+      "ayah": 2,
+      "verse_key": "112-2",
+      "text_raw": "اللَّهُ الصَّمَدُ",
+      "page_number": 604,
+      "word_count": 2,
+      "letter_count": 9
+    }
+  ]
+}

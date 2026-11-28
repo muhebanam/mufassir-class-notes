@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "قعر",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 54,
+      "ayah": 20,
+      "verse_key": "54-20",
+      "text_raw": "تَنْزِعُ النَّاسَ كَأَنَّهُمْ أَعْجَازُ نَخْلٍ مُنْقَعِرٍ",
+      "page_number": 529,
+      "word_count": 6,
+      "letter_count": 27
+    }
+  ]
+}

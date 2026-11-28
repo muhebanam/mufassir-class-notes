@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "لوت",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 53,
+      "ayah": 19,
+      "verse_key": "53-19",
+      "text_raw": "أَفَرَأَيْتُمْ اللَّاتَ وَالْعُزَّى",
+      "page_number": 526,
+      "word_count": 3,
+      "letter_count": 18
+    }
+  ]
+}

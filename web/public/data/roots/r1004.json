@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "قدح",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 100,
+      "ayah": 2,
+      "verse_key": "100-2",
+      "text_raw": "فَالْمُورِيَاتِ قَدْحًا",
+      "page_number": 599,
+      "word_count": 2,
+      "letter_count": 13
+    }
+  ]
+}

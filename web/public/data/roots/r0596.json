@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "سفع",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 96,
+      "ayah": 15,
+      "verse_key": "96-15",
+      "text_raw": "كَلَّا لَئِنْ لَمْ يَنْتَهِ لَنَسْفَعَنْ بِالنَّاصِيَةِ",
+      "page_number": 598,
+      "word_count": 6,
+      "letter_count": 26
+    }
+  ]
+}

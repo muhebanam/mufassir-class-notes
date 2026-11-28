@@ -1,0 +1,34 @@
+{
+  "schema_version": "1",
+  "root_ar": "ردف",
+  "count": 3,
+  "verses": [
+    {
+      "surah": 8,
+      "ayah": 9,
+      "verse_key": "8-9",
+      "text_raw": "إِذْ تَسْتَغِيثُونَ رَبَّكُمْ فَاسْتَجَابَ لَكُمْ أَنِّي مُمِدُّكُمْ بِأَلْفٍ مِنْ الْمَلَائِكَةِ مُرْدِفِينَ",
+      "page_number": 178,
+      "word_count": 11,
+      "letter_count": 52
+    },
+    {
+      "surah": 27,
+      "ayah": 72,
+      "verse_key": "27-72",
+      "text_raw": "قُلْ عَسَى أَنْ يَكُونَ رَدِفَ لَكُمْ بَعْضُ الَّذِي تَسْتَعْجِلُونَ",
+      "page_number": 383,
+      "word_count": 9,
+      "letter_count": 32
+    },
+    {
+      "surah": 79,
+      "ayah": 7,
+      "verse_key": "79-7",
+      "text_raw": "تَتْبَعُهَا الرَّادِفَةُ",
+      "page_number": 583,
+      "word_count": 2,
+      "letter_count": 13
+    }
+  ]
+}

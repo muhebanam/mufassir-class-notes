@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "وفض",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 70,
+      "ayah": 43,
+      "verse_key": "70-43",
+      "text_raw": "يَوْمَ يَخْرُجُونَ مِنْ الْأَجْدَاثِ سِرَاعًا كَأَنَّهُمْ إِلَى نُصُبٍ يُوفِضُونَ",
+      "page_number": 570,
+      "word_count": 9,
+      "letter_count": 40
+    }
+  ]
+}

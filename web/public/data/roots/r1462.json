@@ -1,0 +1,25 @@
+{
+  "schema_version": "1",
+  "root_ar": "يسع",
+  "count": 2,
+  "verses": [
+    {
+      "surah": 6,
+      "ayah": 86,
+      "verse_key": "6-86",
+      "text_raw": "وَإِسْمَاعِيلَ وَالْيَسَعَ وَيُونُسَ وَلُوطًا وَكُلًّا فَضَّلْنَا عَلَى الْعَالَمِينَ",
+      "page_number": 138,
+      "word_count": 8,
+      "letter_count": 44
+    },
+    {
+      "surah": 38,
+      "ayah": 48,
+      "verse_key": "38-48",
+      "text_raw": "وَاذْكُرْ إِسْمَاعِيلَ وَالْيَسَعَ وَذَا الْكِفْلِ وَكُلٌّ مِنْ الْأَخْيَارِ",
+      "page_number": 456,
+      "word_count": 8,
+      "letter_count": 38
+    }
+  ]
+}

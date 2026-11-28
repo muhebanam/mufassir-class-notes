@@ -1,0 +1,34 @@
+{
+  "schema_version": "1",
+  "root_ar": "هطع",
+  "count": 3,
+  "verses": [
+    {
+      "surah": 14,
+      "ayah": 43,
+      "verse_key": "14-43",
+      "text_raw": "مُهْطِعِينَ مُقْنِعِي رُءُوسِهِمْ لَا يَرْتَدُّ إِلَيْهِمْ طَرْفُهُمْ وَأَفْئِدَتُهُمْ هَوَاءٌ",
+      "page_number": 261,
+      "word_count": 9,
+      "letter_count": 45
+    },
+    {
+      "surah": 54,
+      "ayah": 8,
+      "verse_key": "54-8",
+      "text_raw": "مُهْطِعِينَ إِلَى الدَّاعِ يَقُولُ الْكَافِرُونَ هَذَا يَوْمٌ عَسِرٌ",
+      "page_number": 529,
+      "word_count": 8,
+      "letter_count": 35
+    },
+    {
+      "surah": 70,
+      "ayah": 36,
+      "verse_key": "70-36",
+      "text_raw": "فَمَالِ الَّذِينَ كَفَرُوا قِبَلَكَ مُهْطِعِينَ",
+      "page_number": 569,
+      "word_count": 5,
+      "letter_count": 24
+    }
+  ]
+}

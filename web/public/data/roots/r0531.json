@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "زرب",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 88,
+      "ayah": 16,
+      "verse_key": "88-16",
+      "text_raw": "وَزَرَابِيُّ مَبْثُوثَةٌ",
+      "page_number": 592,
+      "word_count": 2,
+      "letter_count": 12
+    }
+  ]
+}

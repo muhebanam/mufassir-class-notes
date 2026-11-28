@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "نوش",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 34,
+      "ayah": 52,
+      "verse_key": "34-52",
+      "text_raw": "وَقَالُوا آمَنَّا بِهِ وَأَنَّى لَهُمْ التَّنَاوُشُ مِنْ مَكَانٍ بَعِيدٍ",
+      "page_number": 434,
+      "word_count": 9,
+      "letter_count": 36
+    }
+  ]
+}

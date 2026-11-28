@@ -402,41 +402,53 @@
       "cards": [
         {
           "title": "**১**",
+          "ayahs": [],
           "hanafi": "**الم**",
           "maliki": "**আবূ জা‘ফর**",
           "shafii": "সাকত সহ: «أَلِفْ - لَامْ - مِيمْ»",
           "hanbali": "প্রতিটি হরফের স্বতন্ত্র মু‘জিযা প্রকাশ।",
           "consensus": false,
+          "tarjih": null,
+          "contemporary": [],
           "daleel": [],
           "sources": []
         },
         {
           "title": "**২–৩**",
+          "ayahs": [],
           "hanafi": "**غُلِبَتِ ... سَيَغْلِبُونَ**",
           "maliki": "**দশ ক্বারীগণ**",
           "shafii": "মাজহূল ও মা‘রূফ রূপ",
           "hanbali": "রোমানদের পরাজয় ও পুনর্বিজয়ের অকাট্য ঐশী ভবিষ্যদ্বাণী।",
           "consensus": false,
+          "tarjih": null,
+          "contemporary": [],
           "daleel": [],
           "sources": []
         },
         {
           "title": "**১০**",
+          "ayahs": [],
           "hanafi": "**عَاقِبَةَ**",
           "maliki": "**‘আসিম, ইবনে ‘আমির, ইয়াকূব**",
           "shafii": "নসব সহ: ﴿عَاقِبَةَ﴾",
           "hanbali": "খবর হিসেবে মানসূব; শাস্তির ভয়াবহতার ওপর তাকীদ।",
           "consensus": false,
+          "tarjih": null,
+          "contemporary": [],
           "daleel": [],
           "sources": []
         },
         {
           "title": "**১০**",
+          "ayahs": [],
           "hanafi": "**عَاقِبَةَ**",
           "maliki": "**জমহুর ক্বারীগণ**",
           "shafii": "রফ‘ সহ: ﴿عَاقِبَةُ﴾",
           "hanbali": "ইসমে কান হিসেবে মারফূ‘; পরিণামের অনিবার্যতার প্রকাশ।",
           "consensus": false,
+          "tarjih": null,
+          "contemporary": [],
           "daleel": [],
           "sources": []
         }

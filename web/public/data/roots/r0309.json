@@ -1,0 +1,34 @@
+{
+  "schema_version": "1",
+  "root_ar": "حضض",
+  "count": 3,
+  "verses": [
+    {
+      "surah": 69,
+      "ayah": 34,
+      "verse_key": "69-34",
+      "text_raw": "وَلَا يَحُضُّ عَلَى طَعَامِ الْمِسْكِينِ",
+      "page_number": 567,
+      "word_count": 5,
+      "letter_count": 20
+    },
+    {
+      "surah": 89,
+      "ayah": 18,
+      "verse_key": "89-18",
+      "text_raw": "وَلَا تَحَاضُّونَ عَلَى طَعَامِ الْمِسْكِينِ",
+      "page_number": 593,
+      "word_count": 5,
+      "letter_count": 23
+    },
+    {
+      "surah": 107,
+      "ayah": 3,
+      "verse_key": "107-3",
+      "text_raw": "وَلَا يَحُضُّ عَلَى طَعَامِ الْمِسْكِينِ",
+      "page_number": 602,
+      "word_count": 5,
+      "letter_count": 20
+    }
+  ]
+}

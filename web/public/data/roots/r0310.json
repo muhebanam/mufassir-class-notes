@@ -1,0 +1,25 @@
+{
+  "schema_version": "1",
+  "root_ar": "حطب",
+  "count": 2,
+  "verses": [
+    {
+      "surah": 72,
+      "ayah": 15,
+      "verse_key": "72-15",
+      "text_raw": "وَأَمَّا الْقَاسِطُونَ فَكَانُوا لِجَهَنَّمَ حَطَبًا",
+      "page_number": 573,
+      "word_count": 5,
+      "letter_count": 27
+    },
+    {
+      "surah": 111,
+      "ayah": 4,
+      "verse_key": "111-4",
+      "text_raw": "وَامْرَأَتُهُ حَمَّالَةَ الْحَطَبِ",
+      "page_number": 603,
+      "word_count": 3,
+      "letter_count": 17
+    }
+  ]
+}

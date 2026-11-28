@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "كدي",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 53,
+      "ayah": 34,
+      "verse_key": "53-34",
+      "text_raw": "وَأَعْطَى قَلِيلًا وَأَكْدَى",
+      "page_number": 527,
+      "word_count": 3,
+      "letter_count": 15
+    }
+  ]
+}

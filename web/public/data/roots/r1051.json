@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "قني",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 53,
+      "ayah": 48,
+      "verse_key": "53-48",
+      "text_raw": "وَأَنَّهُ هُوَ أَغْنَى وَأَقْنَى",
+      "page_number": 528,
+      "word_count": 4,
+      "letter_count": 15
+    }
+  ]
+}

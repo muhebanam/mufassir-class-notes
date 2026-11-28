@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "سمد",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 53,
+      "ayah": 61,
+      "verse_key": "53-61",
+      "text_raw": "وَأَنْتُمْ سَامِدُونَ",
+      "page_number": 528,
+      "word_count": 2,
+      "letter_count": 11
+    }
+  ]
+}

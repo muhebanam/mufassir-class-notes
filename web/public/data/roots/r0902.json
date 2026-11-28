@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "غدق",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 72,
+      "ayah": 16,
+      "verse_key": "72-16",
+      "text_raw": "وَأَلَّوْ اسْتَقَامُوا عَلَى الطَّرِيقَةِ لَأَسْقَيْنَاهُمْ مَاءً غَدَقًا",
+      "page_number": 573,
+      "word_count": 7,
+      "letter_count": 38
+    }
+  ]
+}

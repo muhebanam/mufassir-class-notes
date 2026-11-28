@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "نضخ",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 55,
+      "ayah": 66,
+      "verse_key": "55-66",
+      "text_raw": "فِيهِمَا عَيْنَانِ نَضَّاخَتَانِ",
+      "page_number": 533,
+      "word_count": 3,
+      "letter_count": 17
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": "1",
+  "root_ar": "قطف",
+  "count": 2,
+  "verses": [
+    {
+      "surah": 69,
+      "ayah": 23,
+      "verse_key": "69-23",
+      "text_raw": "قُطُوفُهَا دَانِيَةٌ",
+      "page_number": 567,
+      "word_count": 2,
+      "letter_count": 11
+    },
+    {
+      "surah": 76,
+      "ayah": 14,
+      "verse_key": "76-14",
+      "text_raw": "وَدَانِيَةً عَلَيْهِمْ ظِلَالُهَا وَذُلِّلَتْ قُطُوفُهَا تَذْلِيلًا",
+      "page_number": 579,
+      "word_count": 6,
+      "letter_count": 34
+    }
+  ]
+}

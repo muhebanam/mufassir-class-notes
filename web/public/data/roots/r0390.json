@@ -1,0 +1,25 @@
+{
+  "schema_version": "1",
+  "root_ar": "خمد",
+  "count": 2,
+  "verses": [
+    {
+      "surah": 21,
+      "ayah": 15,
+      "verse_key": "21-15",
+      "text_raw": "فَمَا زَالَتْ تِلْكَ دَعْوَاهُمْ حَتَّى جَعَلْنَاهُمْ حَصِيدًا خَامِدِينَ",
+      "page_number": 323,
+      "word_count": 8,
+      "letter_count": 37
+    },
+    {
+      "surah": 36,
+      "ayah": 29,
+      "verse_key": "36-29",
+      "text_raw": "إِنْ كَانَتْ إِلَّا صَيْحَةً وَاحِدَةً فَإِذَا هُمْ خَامِدُونَ",
+      "page_number": 442,
+      "word_count": 8,
+      "letter_count": 30
+    }
+  ]
+}

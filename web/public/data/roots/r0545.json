@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "زنم",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 68,
+      "ayah": 13,
+      "verse_key": "68-13",
+      "text_raw": "عُتُلٍّ بَعْدَ ذَلِكَ زَنِيمٍ",
+      "page_number": 564,
+      "word_count": 4,
+      "letter_count": 13
+    }
+  ]
+}

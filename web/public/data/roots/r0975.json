@@ -1,0 +1,25 @@
+{
+  "schema_version": "1",
+  "root_ar": "فكك",
+  "count": 2,
+  "verses": [
+    {
+      "surah": 90,
+      "ayah": 13,
+      "verse_key": "90-13",
+      "text_raw": "فَكُّ رَقَبَةٍ",
+      "page_number": 594,
+      "word_count": 2,
+      "letter_count": 6
+    },
+    {
+      "surah": 98,
+      "ayah": 1,
+      "verse_key": "98-1",
+      "text_raw": "لَمْ يَكُنْ الَّذِينَ كَفَرُوا مِنْ أَهْلِ الْكِتَابِ وَالْمُشْرِكِينَ مُنْفَكِّينَ حَتَّى تَأْتِيَهُمْ الْبَيِّنَةُ",
+      "page_number": 598,
+      "word_count": 12,
+      "letter_count": 56
+    }
+  ]
+}

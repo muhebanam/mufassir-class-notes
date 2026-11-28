@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "وهي",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 69,
+      "ayah": 16,
+      "verse_key": "69-16",
+      "text_raw": "وَانْشَقَّتِ السَّمَاءُ فَهِيَ يَوْمَئِذٍ وَاهِيَةٌ",
+      "page_number": 567,
+      "word_count": 5,
+      "letter_count": 25
+    }
+  ]
+}

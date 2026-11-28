@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "دحو",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 79,
+      "ayah": 30,
+      "verse_key": "79-30",
+      "text_raw": "وَالْأَرْضَ بَعْدَ ذَلِكَ دَحَاهَا",
+      "page_number": 584,
+      "word_count": 4,
+      "letter_count": 17
+    }
+  ]
+}

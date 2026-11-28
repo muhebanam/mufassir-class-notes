@@ -1,0 +1,25 @@
+{
+  "schema_version": "1",
+  "root_ar": "كهن",
+  "count": 2,
+  "verses": [
+    {
+      "surah": 52,
+      "ayah": 29,
+      "verse_key": "52-29",
+      "text_raw": "فَذَكِّرْ فَمَا أَنْتَ بِنِعْمَةِ رَبِّكَ بِكَاهِنٍ وَلَا مَجْنُونٍ",
+      "page_number": 524,
+      "word_count": 8,
+      "letter_count": 31
+    },
+    {
+      "surah": 69,
+      "ayah": 42,
+      "verse_key": "69-42",
+      "text_raw": "وَلَا بِقَوْلِ كَاهِنٍ قَلِيلًا مَا تَذَكَّرُونَ",
+      "page_number": 568,
+      "word_count": 6,
+      "letter_count": 24
+    }
+  ]
+}

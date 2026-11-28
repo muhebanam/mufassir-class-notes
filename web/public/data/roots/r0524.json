@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "رين",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 83,
+      "ayah": 14,
+      "verse_key": "83-14",
+      "text_raw": "كَلَّا بَلْ رَانَ عَلَى قُلُوبِهِمْ مَا كَانُوا يَكْسِبُونَ",
+      "page_number": 588,
+      "word_count": 8,
+      "letter_count": 30
+    }
+  ]
+}

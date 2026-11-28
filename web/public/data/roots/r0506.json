@@ -1,0 +1,34 @@
+{
+  "schema_version": "1",
+  "root_ar": "ركض",
+  "count": 3,
+  "verses": [
+    {
+      "surah": 21,
+      "ayah": 12,
+      "verse_key": "21-12",
+      "text_raw": "فَلَمَّا أَحَسُّوا بَأْسَنَا إِذَا هُمْ مِنْهَا يَرْكُضُونَ",
+      "page_number": 323,
+      "word_count": 7,
+      "letter_count": 29
+    },
+    {
+      "surah": 21,
+      "ayah": 13,
+      "verse_key": "21-13",
+      "text_raw": "لَا تَرْكُضُوا وَارْجِعُوا إِلَى مَا أُتْرِفْتُمْ فِيهِ وَمَسَاكِنِكُمْ لَعَلَّكُمْ تُسْأَلُونَ",
+      "page_number": 323,
+      "word_count": 10,
+      "letter_count": 48
+    },
+    {
+      "surah": 38,
+      "ayah": 42,
+      "verse_key": "38-42",
+      "text_raw": "ارْكُضْ بِرِجْلِكَ هَذَا مُغْتَسَلٌ بَارِدٌ وَشَرَابٌ",
+      "page_number": 455,
+      "word_count": 6,
+      "letter_count": 26
+    }
+  ]
+}

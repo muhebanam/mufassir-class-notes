@@ -1,0 +1,34 @@
+{
+  "schema_version": "1",
+  "root_ar": "عري",
+  "count": 3,
+  "verses": [
+    {
+      "surah": 20,
+      "ayah": 118,
+      "verse_key": "20-118",
+      "text_raw": "إِنَّ لَكَ أَلَّا تَجُوعَ فِيهَا وَلَا تَعْرَى",
+      "page_number": 320,
+      "word_count": 7,
+      "letter_count": 22
+    },
+    {
+      "surah": 37,
+      "ayah": 145,
+      "verse_key": "37-145",
+      "text_raw": "فَنَبَذْنَاهُ بِالْعَرَاءِ وَهُوَ سَقِيمٌ",
+      "page_number": 451,
+      "word_count": 4,
+      "letter_count": 21
+    },
+    {
+      "surah": 68,
+      "ayah": 49,
+      "verse_key": "68-49",
+      "text_raw": "لَوْلَا أَنْ تَدَارَكَهُ نِعْمَةٌ مِنْ رَبِّهِ لَنُبِذَ بِالْعَرَاءِ وَهُوَ مَذْمُومٌ",
+      "page_number": 566,
+      "word_count": 10,
+      "letter_count": 40
+    }
+  ]
+}

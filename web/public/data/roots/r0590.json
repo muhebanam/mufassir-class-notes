@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "سطح",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 88,
+      "ayah": 20,
+      "verse_key": "88-20",
+      "text_raw": "وَإِلَى الْأَرْضِ كَيْفَ سُطِحَتْ",
+      "page_number": 592,
+      "word_count": 4,
+      "letter_count": 16
+    }
+  ]
+}

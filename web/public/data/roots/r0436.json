@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "دهي",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 54,
+      "ayah": 46,
+      "verse_key": "54-46",
+      "text_raw": "بَلْ السَّاعَةُ مَوْعِدُهُمْ وَالسَّاعَةُ أَدْهَى وَأَمَرُّ",
+      "page_number": 530,
+      "word_count": 6,
+      "letter_count": 29
+    }
+  ]
+}

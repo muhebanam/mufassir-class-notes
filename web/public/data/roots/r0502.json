@@ -1,0 +1,34 @@
+{
+  "schema_version": "1",
+  "root_ar": "رقم",
+  "count": 3,
+  "verses": [
+    {
+      "surah": 18,
+      "ayah": 9,
+      "verse_key": "18-9",
+      "text_raw": "أَمْ حَسِبْتَ أَنَّ أَصْحَابَ الْكَهْفِ وَالرَّقِيمِ كَانُوا مِنْ آيَاتِنَا عَجَبًا",
+      "page_number": 294,
+      "word_count": 10,
+      "letter_count": 42
+    },
+    {
+      "surah": 83,
+      "ayah": 9,
+      "verse_key": "83-9",
+      "text_raw": "كِتَابٌ مَرْقُومٌ",
+      "page_number": 588,
+      "word_count": 2,
+      "letter_count": 9
+    },
+    {
+      "surah": 83,
+      "ayah": 20,
+      "verse_key": "83-20",
+      "text_raw": "كِتَابٌ مَرْقُومٌ",
+      "page_number": 588,
+      "word_count": 2,
+      "letter_count": 9
+    }
+  ]
+}

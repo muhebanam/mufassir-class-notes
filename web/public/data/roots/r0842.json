@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "عسق",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 42,
+      "ayah": 2,
+      "verse_key": "42-2",
+      "text_raw": "عسق",
+      "page_number": 483,
+      "word_count": 1,
+      "letter_count": 3
+    }
+  ]
+}

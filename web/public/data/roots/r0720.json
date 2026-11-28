@@ -1,0 +1,34 @@
+{
+  "schema_version": "1",
+  "root_ar": "صرم",
+  "count": 3,
+  "verses": [
+    {
+      "surah": 68,
+      "ayah": 17,
+      "verse_key": "68-17",
+      "text_raw": "إِنَّا بَلَوْنَاهُمْ كَمَا بَلَوْنَا أَصْحَابَ الْجَنَّةِ إِذْ أَقْسَمُوا لَيَصْرِمُنَّهَا مُصْبِحِينَ",
+      "page_number": 565,
+      "word_count": 10,
+      "letter_count": 50
+    },
+    {
+      "surah": 68,
+      "ayah": 20,
+      "verse_key": "68-20",
+      "text_raw": "فَأَصْبَحَتْ كَالصَّرِيمِ",
+      "page_number": 565,
+      "word_count": 2,
+      "letter_count": 13
+    },
+    {
+      "surah": 68,
+      "ayah": 22,
+      "verse_key": "68-22",
+      "text_raw": "أَنْ اغْدُوا عَلَى حَرْثِكُمْ إِنْ كُنْتُمْ صَارِمِينَ",
+      "page_number": 565,
+      "word_count": 7,
+      "letter_count": 27
+    }
+  ]
+}

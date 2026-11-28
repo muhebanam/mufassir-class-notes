@@ -1,0 +1,25 @@
+{
+  "schema_version": "1",
+  "root_ar": "وصب",
+  "count": 2,
+  "verses": [
+    {
+      "surah": 16,
+      "ayah": 52,
+      "verse_key": "16-52",
+      "text_raw": "وَلَهُ مَا فِي السَّمَاوَاتِ وَالْأَرْضِ وَلَهُ الدِّينُ وَاصِبًا أَفَغَيْرَ اللَّهِ تَتَّقُونَ",
+      "page_number": 272,
+      "word_count": 11,
+      "letter_count": 48
+    },
+    {
+      "surah": 37,
+      "ayah": 9,
+      "verse_key": "37-9",
+      "text_raw": "دُحُورًا وَلَهُمْ عَذَابٌ وَاصِبٌ",
+      "page_number": 446,
+      "word_count": 4,
+      "letter_count": 17
+    }
+  ]
+}

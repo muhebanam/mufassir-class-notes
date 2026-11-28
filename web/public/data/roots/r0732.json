@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "صكك",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 51,
+      "ayah": 29,
+      "verse_key": "51-29",
+      "text_raw": "فَأَقْبَلَتِ امْرَأَتُهُ فِي صَرَّةٍ فَصَكَّتْ وَجْهَهَا وَقَالَتْ عَجُوزٌ عَقِيمٌ",
+      "page_number": 521,
+      "word_count": 9,
+      "letter_count": 39
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "سوط",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 89,
+      "ayah": 13,
+      "verse_key": "89-13",
+      "text_raw": "فَصَبَّ عَلَيْهِمْ رَبُّكَ سَوْطَ عَذَابٍ",
+      "page_number": 593,
+      "word_count": 5,
+      "letter_count": 18
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "ص",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 38,
+      "ayah": 1,
+      "verse_key": "38-1",
+      "text_raw": "ص وَالْقُرْآنِ ذِي الذِّكْرِ",
+      "page_number": 453,
+      "word_count": 4,
+      "letter_count": 15
+    }
+  ]
+}

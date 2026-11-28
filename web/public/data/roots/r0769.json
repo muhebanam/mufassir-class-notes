@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "طحو",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 91,
+      "ayah": 6,
+      "verse_key": "91-6",
+      "text_raw": "وَالْأَرْضِ وَمَا طَحَاهَا",
+      "page_number": 595,
+      "word_count": 3,
+      "letter_count": 14
+    }
+  ]
+}

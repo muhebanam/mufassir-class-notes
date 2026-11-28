@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "غطش",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 79,
+      "ayah": 29,
+      "verse_key": "79-29",
+      "text_raw": "وَأَغْطَشَ لَيْلَهَا وَأَخْرَجَ ضُحَاهَا",
+      "page_number": 584,
+      "word_count": 4,
+      "letter_count": 20
+    }
+  ]
+}

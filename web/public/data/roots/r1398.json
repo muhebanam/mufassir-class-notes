@@ -1,0 +1,25 @@
+{
+  "schema_version": "1",
+  "root_ar": "وسق",
+  "count": 2,
+  "verses": [
+    {
+      "surah": 84,
+      "ayah": 17,
+      "verse_key": "84-17",
+      "text_raw": "وَاللَّيْلِ وَمَا وَسَقَ",
+      "page_number": 589,
+      "word_count": 3,
+      "letter_count": 12
+    },
+    {
+      "surah": 84,
+      "ayah": 18,
+      "verse_key": "84-18",
+      "text_raw": "وَالْقَمَرِ إِذَا اتَّسَقَ",
+      "page_number": 589,
+      "word_count": 3,
+      "letter_count": 13
+    }
+  ]
+}

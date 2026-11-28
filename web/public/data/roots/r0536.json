@@ -1,0 +1,34 @@
+{
+  "schema_version": "1",
+  "root_ar": "زقم",
+  "count": 3,
+  "verses": [
+    {
+      "surah": 37,
+      "ayah": 62,
+      "verse_key": "37-62",
+      "text_raw": "أَذَلِكَ خَيْرٌ نُزُلًا أَمْ شَجَرَةُ الزَّقُّومِ",
+      "page_number": 448,
+      "word_count": 6,
+      "letter_count": 23
+    },
+    {
+      "surah": 44,
+      "ayah": 43,
+      "verse_key": "44-43",
+      "text_raw": "إِنَّ شَجَرَةَ الزَّقُّومِ",
+      "page_number": 498,
+      "word_count": 3,
+      "letter_count": 12
+    },
+    {
+      "surah": 56,
+      "ayah": 52,
+      "verse_key": "56-52",
+      "text_raw": "لَآكِلُونَ مِنْ شَجَرٍ مِنْ زَقُّومٍ",
+      "page_number": 536,
+      "word_count": 5,
+      "letter_count": 17
+    }
+  ]
+}

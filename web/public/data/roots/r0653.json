@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "شتو",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 106,
+      "ayah": 2,
+      "verse_key": "106-2",
+      "text_raw": "إِيلَافِهِمْ رِحْلَةَ الشِّتَاءِ وَالصَّيْفِ",
+      "page_number": 602,
+      "word_count": 4,
+      "letter_count": 23
+    }
+  ]
+}

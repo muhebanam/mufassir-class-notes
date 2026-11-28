@@ -1,0 +1,52 @@
+{
+  "schema_version": "1",
+  "root_ar": "زجر",
+  "count": 5,
+  "verses": [
+    {
+      "surah": 37,
+      "ayah": 2,
+      "verse_key": "37-2",
+      "text_raw": "فَالزَّاجِرَاتِ زَجْرًا",
+      "page_number": 446,
+      "word_count": 2,
+      "letter_count": 13
+    },
+    {
+      "surah": 37,
+      "ayah": 19,
+      "verse_key": "37-19",
+      "text_raw": "فَإِنَّمَا هِيَ زَجْرَةٌ وَاحِدَةٌ فَإِذَا هُمْ يَنْظُرُونَ",
+      "page_number": 446,
+      "word_count": 7,
+      "letter_count": 28
+    },
+    {
+      "surah": 54,
+      "ayah": 4,
+      "verse_key": "54-4",
+      "text_raw": "وَلَقَدْ جَاءَهُمْ مِنْ الْأَنْبَاءِ مَا فِيهِ مُزْدَجَرٌ",
+      "page_number": 528,
+      "word_count": 7,
+      "letter_count": 28
+    },
+    {
+      "surah": 54,
+      "ayah": 9,
+      "verse_key": "54-9",
+      "text_raw": "كَذَّبَتْ قَبْلَهُمْ قَوْمُ نُوحٍ فَكَذَّبُوا عَبْدَنَا وَقَالُوا مَجْنُونٌ وَازْدُجِرَ",
+      "page_number": 529,
+      "word_count": 9,
+      "letter_count": 43
+    },
+    {
+      "surah": 79,
+      "ayah": 13,
+      "verse_key": "79-13",
+      "text_raw": "فَإِنَّمَا هِيَ زَجْرَةٌ وَاحِدَةٌ",
+      "page_number": 583,
+      "word_count": 4,
+      "letter_count": 16
+    }
+  ]
+}

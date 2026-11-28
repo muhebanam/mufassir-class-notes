@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "حيد",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 50,
+      "ayah": 19,
+      "verse_key": "50-19",
+      "text_raw": "وَجَاءَتْ سَكْرَةُ الْمَوْتِ بِالْحَقِّ ذَلِكَ مَا كُنْتَ مِنْهُ تَحِيدُ",
+      "page_number": 519,
+      "word_count": 9,
+      "letter_count": 34
+    }
+  ]
+}

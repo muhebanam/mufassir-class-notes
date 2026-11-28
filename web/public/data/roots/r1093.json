@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "كفو",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 112,
+      "ayah": 4,
+      "verse_key": "112-4",
+      "text_raw": "وَلَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ",
+      "page_number": 604,
+      "word_count": 5,
+      "letter_count": 15
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": "1",
+  "root_ar": "دسس",
+  "count": 2,
+  "verses": [
+    {
+      "surah": 16,
+      "ayah": 59,
+      "verse_key": "16-59",
+      "text_raw": "يَتَوَارَى مِنْ الْقَوْمِ مِنْ سُوءِ مَا بُشِّرَ بِهِ أَيُمْسِكُهُ عَلَى هُونٍ أَمْ يَدُسُّهُ فِي التُّرَابِ أَلَا سَاءَ مَا يَحْكُمُونَ",
+      "page_number": 273,
+      "word_count": 19,
+      "letter_count": 65
+    },
+    {
+      "surah": 91,
+      "ayah": 10,
+      "verse_key": "91-10",
+      "text_raw": "وَقَدْ خَابَ مَنْ دَسَّاهَا",
+      "page_number": 595,
+      "word_count": 4,
+      "letter_count": 13
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "دمدم",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 91,
+      "ayah": 14,
+      "verse_key": "91-14",
+      "text_raw": "فَكَذَّبُوهُ فَعَقَرُوهَا فَدَمْدَمَ عَلَيْهِمْ رَبُّهُمْ بِذَنْبِهِمْ فَسَوَّاهَا",
+      "page_number": 595,
+      "word_count": 7,
+      "letter_count": 39
+    }
+  ]
+}

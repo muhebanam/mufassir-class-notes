@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "نمم",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 68,
+      "ayah": 11,
+      "verse_key": "68-11",
+      "text_raw": "هَمَّازٍ مَشَّاءٍ بِنَمِيمٍ",
+      "page_number": 564,
+      "word_count": 3,
+      "letter_count": 13
+    }
+  ]
+}

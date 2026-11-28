@@ -1,0 +1,34 @@
+{
+  "schema_version": "1",
+  "root_ar": "سلسل",
+  "count": 3,
+  "verses": [
+    {
+      "surah": 40,
+      "ayah": 71,
+      "verse_key": "40-71",
+      "text_raw": "إِذْ الْأَغْلَالُ فِي أَعْنَاقِهِمْ وَالسَّلَاسِلُ يُسْحَبُونَ",
+      "page_number": 475,
+      "word_count": 6,
+      "letter_count": 32
+    },
+    {
+      "surah": 69,
+      "ayah": 32,
+      "verse_key": "69-32",
+      "text_raw": "ثُمَّ فِي سِلْسِلَةٍ ذَرْعُهَا سَبْعُونَ ذِرَاعًا فَاسْلُكُوهُ",
+      "page_number": 567,
+      "word_count": 7,
+      "letter_count": 31
+    },
+    {
+      "surah": 76,
+      "ayah": 4,
+      "verse_key": "76-4",
+      "text_raw": "إِنَّا أَعْتَدْنَا لِلْكَافِرِينَ سَلَاسِلَ وَأَغْلَالًا وَسَعِيرًا",
+      "page_number": 578,
+      "word_count": 6,
+      "letter_count": 35
+    }
+  ]
+}

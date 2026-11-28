@@ -1,0 +1,25 @@
+{
+  "schema_version": "1",
+  "root_ar": "نزف",
+  "count": 2,
+  "verses": [
+    {
+      "surah": 37,
+      "ayah": 47,
+      "verse_key": "37-47",
+      "text_raw": "لَا فِيهَا غَوْلٌ وَلَا هُمْ عَنْهَا يُنْزَفُونَ",
+      "page_number": 447,
+      "word_count": 7,
+      "letter_count": 24
+    },
+    {
+      "surah": 56,
+      "ayah": 19,
+      "verse_key": "56-19",
+      "text_raw": "لَا يُصَدَّعُونَ عَنْهَا وَلَا يُنْزِفُونَ",
+      "page_number": 535,
+      "word_count": 5,
+      "letter_count": 21
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "طفف",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 83,
+      "ayah": 1,
+      "verse_key": "83-1",
+      "text_raw": "وَيْلٌ لِلْمُطَفِّفِينَ",
+      "page_number": 587,
+      "word_count": 2,
+      "letter_count": 11
+    }
+  ]
+}

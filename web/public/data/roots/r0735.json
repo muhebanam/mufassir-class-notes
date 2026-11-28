@@ -1,0 +1,43 @@
+{
+  "schema_version": "1",
+  "root_ar": "صلصل",
+  "count": 4,
+  "verses": [
+    {
+      "surah": 15,
+      "ayah": 26,
+      "verse_key": "15-26",
+      "text_raw": "وَلَقَدْ خَلَقْنَا الْإِنْسَانَ مِنْ صَلْصَالٍ مِنْ حَمَإٍ مَسْنُونٍ",
+      "page_number": 263,
+      "word_count": 8,
+      "letter_count": 33
+    },
+    {
+      "surah": 15,
+      "ayah": 28,
+      "verse_key": "15-28",
+      "text_raw": "وَإِذْ قَالَ رَبُّكَ لِلْمَلَائِكَةِ إِنِّي خَالِقٌ بَشَرًا مِنْ صَلْصَالٍ مِنْ حَمَإٍ مَسْنُونٍ",
+      "page_number": 263,
+      "word_count": 12,
+      "letter_count": 45
+    },
+    {
+      "surah": 15,
+      "ayah": 33,
+      "verse_key": "15-33",
+      "text_raw": "قَالَ لَمْ أَكُنْ لِأَسْجُدَ لِبَشَرٍ خَلَقْتَهُ مِنْ صَلْصَالٍ مِنْ حَمَإٍ مَسْنُونٍ",
+      "page_number": 264,
+      "word_count": 11,
+      "letter_count": 39
+    },
+    {
+      "surah": 55,
+      "ayah": 14,
+      "verse_key": "55-14",
+      "text_raw": "خَلَقَ الْإِنْسَانَ مِنْ صَلْصَالٍ كَالْفَخَّارِ",
+      "page_number": 531,
+      "word_count": 5,
+      "letter_count": 24
+    }
+  ]
+}

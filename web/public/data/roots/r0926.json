@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "غمز",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 83,
+      "ayah": 30,
+      "verse_key": "83-30",
+      "text_raw": "وَإِذَا مَرُّوا بِهِمْ يَتَغَامَزُونَ",
+      "page_number": 588,
+      "word_count": 4,
+      "letter_count": 19
+    }
+  ]
+}

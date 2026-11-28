@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "ضيز",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 53,
+      "ayah": 22,
+      "verse_key": "53-22",
+      "text_raw": "تِلْكَ إِذًا قِسْمَةٌ ضِيزَى",
+      "page_number": 526,
+      "word_count": 4,
+      "letter_count": 14
+    }
+  ]
+}

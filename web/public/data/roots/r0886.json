@@ -1,0 +1,25 @@
+{
+  "schema_version": "1",
+  "root_ar": "عهن",
+  "count": 2,
+  "verses": [
+    {
+      "surah": 70,
+      "ayah": 9,
+      "verse_key": "70-9",
+      "text_raw": "وَتَكُونُ الْجِبَالُ كَالْعِهْنِ",
+      "page_number": 568,
+      "word_count": 3,
+      "letter_count": 17
+    },
+    {
+      "surah": 101,
+      "ayah": 5,
+      "verse_key": "101-5",
+      "text_raw": "وَتَكُونُ الْجِبَالُ كَالْعِهْنِ الْمَنْفُوشِ",
+      "page_number": 600,
+      "word_count": 4,
+      "letter_count": 24
+    }
+  ]
+}

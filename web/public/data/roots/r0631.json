@@ -1,0 +1,25 @@
+{
+  "schema_version": "1",
+  "root_ar": "سهو",
+  "count": 2,
+  "verses": [
+    {
+      "surah": 51,
+      "ayah": 11,
+      "verse_key": "51-11",
+      "text_raw": "الَّذِينَ هُمْ فِي غَمْرَةٍ سَاهُونَ",
+      "page_number": 521,
+      "word_count": 5,
+      "letter_count": 18
+    },
+    {
+      "surah": 107,
+      "ayah": 5,
+      "verse_key": "107-5",
+      "text_raw": "الَّذِينَ هُمْ عَنْ صَلَاتِهِمْ سَاهُونَ",
+      "page_number": 602,
+      "word_count": 5,
+      "letter_count": 20
+    }
+  ]
+}

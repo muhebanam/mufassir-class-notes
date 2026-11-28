@@ -1,6 +1,25 @@
 {
   "schema_version": "1",
-  "root_ar": "مِن/ما",
-  "count": 0,
-  "verses": []
+  "root_ar": "جني",
+  "count": 2,
+  "verses": [
+    {
+      "surah": 19,
+      "ayah": 25,
+      "verse_key": "19-25",
+      "text_raw": "وَهُزِّي إِلَيْكِ بِجِذْعِ النَّخْلَةِ تُسَاقِطْ عَلَيْكِ رُطَبًا جَنِيًّا",
+      "page_number": 306,
+      "word_count": 8,
+      "letter_count": 35
+    },
+    {
+      "surah": 55,
+      "ayah": 54,
+      "verse_key": "55-54",
+      "text_raw": "مُتَّكِئِينَ عَلَى فُرُشٍ بَطَائِنُهَا مِنْ إِسْتَبْرَقٍ وَجَنَى الْجَنَّتَيْنِ دَانٍ",
+      "page_number": 533,
+      "word_count": 9,
+      "letter_count": 41
+    }
+  ]
 }

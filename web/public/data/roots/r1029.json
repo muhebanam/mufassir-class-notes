@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "قضب",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 80,
+      "ayah": 28,
+      "verse_key": "80-28",
+      "text_raw": "وَعِنَبًا وَقَضْبًا",
+      "page_number": 585,
+      "word_count": 2,
+      "letter_count": 10
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "schema_version": "1",
+  "root_ar": "هنأ",
+  "count": 4,
+  "verses": [
+    {
+      "surah": 4,
+      "ayah": 4,
+      "verse_key": "4-4",
+      "text_raw": "وَآتُوا النِّسَاءَ صَدُقَاتِهِنَّ نِحْلَةً فَإِنْ طِبْنَ لَكُمْ عَنْ شَيْءٍ مِنْهُ نَفْسًا فَكُلُوهُ هَنِيئًا مَرِيئًا",
+      "page_number": 77,
+      "word_count": 14,
+      "letter_count": 58
+    },
+    {
+      "surah": 52,
+      "ayah": 19,
+      "verse_key": "52-19",
+      "text_raw": "كُلُوا وَاشْرَبُوا هَنِيئًا بِمَا كُنْتُمْ تَعْمَلُونَ",
+      "page_number": 524,
+      "word_count": 6,
+      "letter_count": 29
+    },
+    {
+      "surah": 69,
+      "ayah": 24,
+      "verse_key": "69-24",
+      "text_raw": "كُلُوا وَاشْرَبُوا هَنِيئًا بِمَا أَسْلَفْتُمْ فِي الْأَيَّامِ الْخَالِيَةِ",
+      "page_number": 567,
+      "word_count": 8,
+      "letter_count": 40
+    },
+    {
+      "surah": 77,
+      "ayah": 43,
+      "verse_key": "77-43",
+      "text_raw": "كُلُوا وَاشْرَبُوا هَنِيئًا بِمَا كُنْتُمْ تَعْمَلُونَ",
+      "page_number": 581,
+      "word_count": 6,
+      "letter_count": 29
+    }
+  ]
+}

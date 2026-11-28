@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "سنم",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 83,
+      "ayah": 27,
+      "verse_key": "83-27",
+      "text_raw": "وَمِزَاجُهُ مِنْ تَسْنِيمٍ",
+      "page_number": 588,
+      "word_count": 3,
+      "letter_count": 13
+    }
+  ]
+}

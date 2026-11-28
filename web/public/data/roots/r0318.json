@@ -1,0 +1,25 @@
+{
+  "schema_version": "1",
+  "root_ar": "حقب",
+  "count": 2,
+  "verses": [
+    {
+      "surah": 18,
+      "ayah": 60,
+      "verse_key": "18-60",
+      "text_raw": "وَإِذْ قَالَ مُوسَى لِفَتَاهُ لَا أَبْرَحُ حَتَّى أَبْلُغَ مَجْمَعَ الْبَحْرَيْنِ أَوْ أَمْضِيَ حُقُبًا",
+      "page_number": 300,
+      "word_count": 13,
+      "letter_count": 49
+    },
+    {
+      "surah": 78,
+      "ayah": 23,
+      "verse_key": "78-23",
+      "text_raw": "لَابِثِينَ فِيهَا أَحْقَابًا",
+      "page_number": 582,
+      "word_count": 3,
+      "letter_count": 16
+    }
+  ]
+}

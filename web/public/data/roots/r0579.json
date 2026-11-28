@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "سدي",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 75,
+      "ayah": 36,
+      "verse_key": "75-36",
+      "text_raw": "أَيَحْسَبُ الْإِنْسَانُ أَنْ يُتْرَكَ سُدًى",
+      "page_number": 578,
+      "word_count": 5,
+      "letter_count": 21
+    }
+  ]
+}

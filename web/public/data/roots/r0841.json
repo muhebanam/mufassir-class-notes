@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "عسعس",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 81,
+      "ayah": 17,
+      "verse_key": "81-17",
+      "text_raw": "وَاللَّيْلِ إِذَا عَسْعَسَ",
+      "page_number": 586,
+      "word_count": 3,
+      "letter_count": 13
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "دفق",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 86,
+      "ayah": 6,
+      "verse_key": "86-6",
+      "text_raw": "خُلِقَ مِنْ مَاءٍ دَافِقٍ",
+      "page_number": 591,
+      "word_count": 4,
+      "letter_count": 12
+    }
+  ]
+}

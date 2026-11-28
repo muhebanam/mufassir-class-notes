@@ -1,0 +1,25 @@
+{
+  "schema_version": "1",
+  "root_ar": "وسم",
+  "count": 2,
+  "verses": [
+    {
+      "surah": 15,
+      "ayah": 75,
+      "verse_key": "15-75",
+      "text_raw": "إِنَّ فِي ذَلِكَ لَآيَاتٍ لِلْمُتَوَسِّمِينَ",
+      "page_number": 266,
+      "word_count": 5,
+      "letter_count": 21
+    },
+    {
+      "surah": 68,
+      "ayah": 16,
+      "verse_key": "68-16",
+      "text_raw": "سَنَسِمُهُ عَلَى الْخُرْطُومِ",
+      "page_number": 564,
+      "word_count": 3,
+      "letter_count": 15
+    }
+  ]
+}

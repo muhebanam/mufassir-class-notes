@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "سغب",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 90,
+      "ayah": 14,
+      "verse_key": "90-14",
+      "text_raw": "أَوْ إِطْعَامٌ فِي يَوْمٍ ذِي مَسْغَبَةٍ",
+      "page_number": 594,
+      "word_count": 6,
+      "letter_count": 19
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": "1",
+  "root_ar": "سقم",
+  "count": 2,
+  "verses": [
+    {
+      "surah": 37,
+      "ayah": 89,
+      "verse_key": "37-89",
+      "text_raw": "فَقَالَ إِنِّي سَقِيمٌ",
+      "page_number": 449,
+      "word_count": 3,
+      "letter_count": 11
+    },
+    {
+      "surah": 37,
+      "ayah": 145,
+      "verse_key": "37-145",
+      "text_raw": "فَنَبَذْنَاهُ بِالْعَرَاءِ وَهُوَ سَقِيمٌ",
+      "page_number": 451,
+      "word_count": 4,
+      "letter_count": 21
+    }
+  ]
+}

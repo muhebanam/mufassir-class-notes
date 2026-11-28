@@ -1,0 +1,25 @@
+{
+  "schema_version": "1",
+  "root_ar": "عطل",
+  "count": 2,
+  "verses": [
+    {
+      "surah": 22,
+      "ayah": 45,
+      "verse_key": "22-45",
+      "text_raw": "فَكَأَيِّنْ مِنْ قَرْيَةٍ أَهْلَكْنَاهَا وَهِيَ ظَالِمَةٌ فَهِيَ خَاوِيَةٌ عَلَى عُرُوشِهَا وَبِئْرٍ مُعَطَّلَةٍ وَقَصْرٍ مَشِيدٍ",
+      "page_number": 337,
+      "word_count": 14,
+      "letter_count": 61
+    },
+    {
+      "surah": 81,
+      "ayah": 4,
+      "verse_key": "81-4",
+      "text_raw": "وَإِذَا الْعِشَارُ عُطِّلَتْ",
+      "page_number": 586,
+      "word_count": 3,
+      "letter_count": 14
+    }
+  ]
+}

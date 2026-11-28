@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "طس",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 27,
+      "ayah": 1,
+      "verse_key": "27-1",
+      "text_raw": "طس تِلْكَ آيَاتُ الْقُرْآنِ وَكِتَابٍ مُبِينٍ",
+      "page_number": 377,
+      "word_count": 6,
+      "letter_count": 24
+    }
+  ]
+}

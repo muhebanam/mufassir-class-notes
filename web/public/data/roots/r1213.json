@@ -1,0 +1,52 @@
+{
+  "schema_version": "1",
+  "root_ar": "معن",
+  "count": 5,
+  "verses": [
+    {
+      "surah": 23,
+      "ayah": 50,
+      "verse_key": "23-50",
+      "text_raw": "وَجَعَلْنَا ابْنَ مَرْيَمَ وَأُمَّهُ آيَةً وَآوَيْنَاهُمَا إِلَى رَبْوَةٍ ذَاتِ قَرَارٍ وَمَعِينٍ",
+      "page_number": 345,
+      "word_count": 11,
+      "letter_count": 48
+    },
+    {
+      "surah": 37,
+      "ayah": 45,
+      "verse_key": "37-45",
+      "text_raw": "يُطَافُ عَلَيْهِمْ بِكَأْسٍ مِنْ مَعِينٍ",
+      "page_number": 447,
+      "word_count": 5,
+      "letter_count": 19
+    },
+    {
+      "surah": 56,
+      "ayah": 18,
+      "verse_key": "56-18",
+      "text_raw": "بِأَكْوَابٍ وَأَبَارِيقَ وَكَأْسٍ مِنْ مَعِينٍ",
+      "page_number": 535,
+      "word_count": 5,
+      "letter_count": 23
+    },
+    {
+      "surah": 67,
+      "ayah": 30,
+      "verse_key": "67-30",
+      "text_raw": "قُلْ أَرَأَيْتُمْ إِنْ أَصْبَحَ مَاؤُكُمْ غَوْرًا فَمَنْ يَأْتِيكُمْ بِمَاءٍ مَعِينٍ",
+      "page_number": 564,
+      "word_count": 10,
+      "letter_count": 40
+    },
+    {
+      "surah": 107,
+      "ayah": 7,
+      "verse_key": "107-7",
+      "text_raw": "وَيَمْنَعُونَ الْمَاعُونَ",
+      "page_number": 602,
+      "word_count": 2,
+      "letter_count": 14
+    }
+  ]
+}

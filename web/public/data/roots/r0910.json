@@ -1,0 +1,43 @@
+{
+  "schema_version": "1",
+  "root_ar": "غسق",
+  "count": 4,
+  "verses": [
+    {
+      "surah": 17,
+      "ayah": 78,
+      "verse_key": "17-78",
+      "text_raw": "أَقِمْ الصَّلَاةَ لِدُلُوكِ الشَّمْسِ إِلَى غَسَقِ اللَّيْلِ وَقُرْآنَ الْفَجْرِ إِنَّ قُرْآنَ الْفَجْرِ كَانَ مَشْهُودًا",
+      "page_number": 290,
+      "word_count": 14,
+      "letter_count": 60
+    },
+    {
+      "surah": 38,
+      "ayah": 57,
+      "verse_key": "38-57",
+      "text_raw": "هَذَا فَلْيَذُوقُوهُ حَمِيمٌ وَغَسَّاقٌ",
+      "page_number": 456,
+      "word_count": 4,
+      "letter_count": 20
+    },
+    {
+      "surah": 78,
+      "ayah": 25,
+      "verse_key": "78-25",
+      "text_raw": "إِلَّا حَمِيمًا وَغَسَّاقًا",
+      "page_number": 582,
+      "word_count": 3,
+      "letter_count": 14
+    },
+    {
+      "surah": 113,
+      "ayah": 3,
+      "verse_key": "113-3",
+      "text_raw": "وَمِنْ شَرِّ غَاسِقٍ إِذَا وَقَبَ",
+      "page_number": 604,
+      "word_count": 5,
+      "letter_count": 15
+    }
+  ]
+}

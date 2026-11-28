@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "قرش",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 106,
+      "ayah": 1,
+      "verse_key": "106-1",
+      "text_raw": "لِإِيلَافِ قُرَيْشٍ",
+      "page_number": 602,
+      "word_count": 2,
+      "letter_count": 10
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "مناة",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 53,
+      "ayah": 20,
+      "verse_key": "53-20",
+      "text_raw": "وَمَنَاةَ الثَّالِثَةَ الْأُخْرَى",
+      "page_number": 526,
+      "word_count": 3,
+      "letter_count": 18
+    }
+  ]
+}

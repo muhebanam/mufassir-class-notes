@@ -1,0 +1,25 @@
+{
+  "schema_version": "1",
+  "root_ar": "مور",
+  "count": 2,
+  "verses": [
+    {
+      "surah": 52,
+      "ayah": 9,
+      "verse_key": "52-9",
+      "text_raw": "يَوْمَ تَمُورُ السَّمَاءُ مَوْرًا",
+      "page_number": 523,
+      "word_count": 4,
+      "letter_count": 17
+    },
+    {
+      "surah": 67,
+      "ayah": 16,
+      "verse_key": "67-16",
+      "text_raw": "أَأَمِنْتُمْ مَنْ فِي السَّمَاءِ أَنْ يَخْسِفَ بِكُمْ الْأَرْضَ فَإِذَا هِيَ تَمُورُ",
+      "page_number": 563,
+      "word_count": 11,
+      "letter_count": 40
+    }
+  ]
+}

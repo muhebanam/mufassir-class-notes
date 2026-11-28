@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "نوص",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 38,
+      "ayah": 3,
+      "verse_key": "38-3",
+      "text_raw": "كَمْ أَهْلَكْنَا مِنْ قَبْلِهِمْ مِنْ قَرْنٍ فَنَادَوْا وَلَاتَ حِينَ مَنَاصٍ",
+      "page_number": 453,
+      "word_count": 10,
+      "letter_count": 37
+    }
+  ]
+}

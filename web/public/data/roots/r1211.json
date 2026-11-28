@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "مطو",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 75,
+      "ayah": 33,
+      "verse_key": "75-33",
+      "text_raw": "ثُمَّ ذَهَبَ إِلَى أَهْلِهِ يَتَمَطَّى",
+      "page_number": 578,
+      "word_count": 5,
+      "letter_count": 17
+    }
+  ]
+}

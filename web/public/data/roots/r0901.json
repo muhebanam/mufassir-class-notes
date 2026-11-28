@@ -1,0 +1,25 @@
+{
+  "schema_version": "1",
+  "root_ar": "غثو",
+  "count": 2,
+  "verses": [
+    {
+      "surah": 23,
+      "ayah": 41,
+      "verse_key": "23-41",
+      "text_raw": "فَأَخَذَتْهُمْ الصَّيْحَةُ بِالْحَقِّ فَجَعَلْنَاهُمْ غُثَاءً فَبُعْدًا لِلْقَوْمِ الظَّالِمِينَ",
+      "page_number": 344,
+      "word_count": 8,
+      "letter_count": 48
+    },
+    {
+      "surah": 87,
+      "ayah": 5,
+      "verse_key": "87-5",
+      "text_raw": "فَجَعَلَهُ غُثَاءً أَحْوَى",
+      "page_number": 591,
+      "word_count": 3,
+      "letter_count": 13
+    }
+  ]
+}

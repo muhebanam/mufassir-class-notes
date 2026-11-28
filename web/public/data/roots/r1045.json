@@ -1,0 +1,25 @@
+{
+  "schema_version": "1",
+  "root_ar": "قلي",
+  "count": 2,
+  "verses": [
+    {
+      "surah": 26,
+      "ayah": 168,
+      "verse_key": "26-168",
+      "text_raw": "قَالَ إِنِّي لِعَمَلِكُمْ مِنْ الْقَالِينَ",
+      "page_number": 374,
+      "word_count": 5,
+      "letter_count": 21
+    },
+    {
+      "surah": 93,
+      "ayah": 3,
+      "verse_key": "93-3",
+      "text_raw": "مَا وَدَّعَكَ رَبُّكَ وَمَا قَلَى",
+      "page_number": 596,
+      "word_count": 5,
+      "letter_count": 15
+    }
+  ]
+}
