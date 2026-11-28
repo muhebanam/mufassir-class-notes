@@ -420,6 +420,54 @@ class TestValidators(Base):
         b, e = parse_output(ok, ["1", "2"], ["A"])
         self.assertTrue(any("BLOCK:2 নেই" in x for x in e))
 
+    def test_v_ahkam_rules(self):
+        from jalalayn_pipeline.validate import VCtx, validate_task
+        proj, *_ = self.ready()
+        v = VCtx(sid=112, ayat_text={1: "", 2: "", 3: "", 4: ""}, quran=proj.quran, corpus_sk=[],
+                 allowed_ids={"S1"}, id_roles={"S1": "fiqh"}, source_numbers={"1", "2", "3", "4"},
+                 qids_by_ayah={}, author=jalalayn_author(112), a0=1, a1=4)
+
+        # 1. প্রযোজ্য নয় পাস করবে
+        na_parts = {
+            "RUKU": {
+                "SEC7_IKHTILAF": "প্রযোজ্য নয় — কোনো প্রধান মতভেদ নেই।",
+                "SEC8_AHKAM": "প্রযোজ্য নয় — কোনো ব্যবহারিক ফিকহ নেই।"
+            }
+        }
+        self.assertEqual(validate_task("ruku-ikhtilaf-ahkam", na_parts, v, ["RUKU"]), [])
+
+        # 2. বৈধ টেবিল পাস করবে
+        valid_table = (
+            "| মাসআলা | হানাফী | মালিকী | শাফিঈ | হাম্বলী | প্রধান দলীল ও প্রামাণ্য উৎস |\n"
+            "| :--- | :--- | :--- | :--- | :--- | :--- |\n"
+            "| **আল্লাহর একত্বে বিশ্বাস (আয়াত ১)** | ফরজ | ফরজ | ফরজ | ফরজ | দলীল [src:S1]<br>**তারজীহ:** ওয়াজিব<br>**সমসাময়িক উদাহরণ:** শিরকমুক্ত ঈমান<br>উৎস: *কুরতুবী* |\n"
+        )
+        ok_parts = {
+            "RUKU": {
+                "SEC7_IKHTILAF": "### মুখাতাব\nপ্রত্যক্ষ সম্বোধন।\n\n### মতভেদ\nবিস্তারিত মতভেদ ও তারজীহ।",
+                "SEC8_AHKAM": valid_table
+            }
+        }
+        self.assertEqual(validate_task("ruku-ikhtilaf-ahkam", ok_parts, v, ["RUKU"]), [])
+
+        # 3. আয়াত নম্বর বাদ পড়লে এরর দেবে
+        no_ayah_table = valid_table.replace("(আয়াত ১)", "")
+        bad_parts1 = {"RUKU": {"SEC7_IKHTILAF": "মুখাতাব ও তারজীহ বিশ্লেষণ।", "SEC8_AHKAM": no_ayah_table}}
+        errs1 = validate_task("ruku-ikhtilaf-ahkam", bad_parts1, v, ["RUKU"])
+        self.assertTrue(any("আয়াত" in e for e in errs1))
+
+        # 4. রুকুর বাইরের আয়াত নম্বর দিলে এরর দেবে (রুকু ১-৪, দিয়েছে ৯৯)
+        out_range_table = valid_table.replace("(আয়াত ১)", "(আয়াত ৯৯)")
+        bad_parts2 = {"RUKU": {"SEC7_IKHTILAF": "মুখাতাব ও তারজীহ বিশ্লেষণ।", "SEC8_AHKAM": out_range_table}}
+        errs2 = validate_task("ruku-ikhtilaf-ahkam", bad_parts2, v, ["RUKU"])
+        self.assertTrue(any("বাইরের আয়াত" in e for e in errs2))
+
+        # 5. সমসাময়িক উদাহরণ না থাকলে এরর দেবে
+        no_contemp_table = valid_table.replace("**সমসাময়িক উদাহরণ:**", "**অন্যান্য:**")
+        bad_parts3 = {"RUKU": {"SEC7_IKHTILAF": "মুখাতাব ও তারজীহ বিশ্লেষণ।", "SEC8_AHKAM": no_contemp_table}}
+        errs3 = validate_task("ruku-ikhtilaf-ahkam", bad_parts3, v, ["RUKU"])
+        self.assertTrue(any("সমসাময়িক" in e for e in errs3))
+
 
 if __name__ == "__main__":
     unittest.main()

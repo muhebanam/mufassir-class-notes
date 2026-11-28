@@ -1,0 +1,25 @@
+{
+  "schema_version": "1",
+  "root_ar": "رسس",
+  "count": 2,
+  "verses": [
+    {
+      "surah": 25,
+      "ayah": 38,
+      "verse_key": "25-38",
+      "text_raw": "وَعَادًا وَثَمُودَ وَأَصْحَابَ الرَّسِّ وَقُرُونًا بَيْنَ ذَلِكَ كَثِيرًا",
+      "page_number": 363,
+      "word_count": 8,
+      "letter_count": 37
+    },
+    {
+      "surah": 50,
+      "ayah": 12,
+      "verse_key": "50-12",
+      "text_raw": "كَذَّبَتْ قَبْلَهُمْ قَوْمُ نُوحٍ وَأَصْحَابُ الرَّسِّ وَثَمُودُ",
+      "page_number": 518,
+      "word_count": 7,
+      "letter_count": 30
+    }
+  ]
+}

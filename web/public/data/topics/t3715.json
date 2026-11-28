@@ -1,0 +1,25 @@
+{
+  "schema_version": "1",
+  "topic_id": 3715,
+  "count": 2,
+  "verses": [
+    {
+      "surah": 25,
+      "ayah": 61,
+      "verse_key": "25-61",
+      "text_raw": "تَبَارَكَ الَّذِي جَعَلَ فِي السَّمَاءِ بُرُوجًا وَجَعَلَ فِيهَا سِرَاجًا وَقَمَرًا مُنِيرًا",
+      "page_number": 365,
+      "word_count": 11,
+      "letter_count": 48
+    },
+    {
+      "surah": 71,
+      "ayah": 16,
+      "verse_key": "71-16",
+      "text_raw": "وَجَعَلَ الْقَمَرَ فِيهِنَّ نُورًا وَجَعَلَ الشَّمْسَ سِرَاجًا",
+      "page_number": 571,
+      "word_count": 7,
+      "letter_count": 31
+    }
+  ]
+}

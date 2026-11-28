@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "topic_id": 3614,
+  "count": 1,
+  "verses": [
+    {
+      "surah": 25,
+      "ayah": 12,
+      "verse_key": "25-12",
+      "text_raw": "إِذَا رَأَتْهُمْ مِنْ مَكَانٍ بَعِيدٍ سَمِعُوا لَهَا تَغَيُّظًا وَزَفِيرًا",
+      "page_number": 361,
+      "word_count": 9,
+      "letter_count": 37
+    }
+  ]
+}

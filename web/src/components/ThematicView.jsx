@@ -2,11 +2,12 @@ import React, { useState, useEffect, useRef } from 'react';
 import { 
   Scale, Feather, GitCompare, BookMarked, Sparkles, 
   HelpCircle, BookOpen, Layers, CheckCircle2,
-  Compass, FileText, ArrowRight, List, BookCheck, Bookmark
+  Compass, FileText, ArrowRight, List, BookCheck, Bookmark, Tag, Globe, Target
 } from 'lucide-react';
 import { toBn } from '../utils/helpers';
-import MarkdownContent, { normalizeQuranBrackets } from './MarkdownContent';
+import MarkdownContent, { normalizeQuranBrackets, escapeQiraatMarkers } from './MarkdownContent';
 import MasalaCard from './MasalaCard';
+import BahouthTopics from './BahouthTopics';
 
 export default function ThematicView({ rukuData, surahInfo, onSwitchToAyahStudy }) {
   // Mode: 'continuous' (Journal Article with Sticky TOC) or 'tabbed' (Single chapter focus)
@@ -18,6 +19,7 @@ export default function ThematicView({ rukuData, surahInfo, onSwitchToAyahStudy 
     { id: 'makasid', label: 'ভূমিকা ও মাকাসিদ', num: '০০', icon: Compass, sec: rukuData?.thematic_topics?.makasid },
     { id: 'irab', label: 'ই\'রাব ও নাহব', num: '০৩', icon: FileText, sec: rukuData?.thematic_topics?.irab_full },
     { id: 'qiraat', label: '১০ কিরাআত সারণি', num: '০৪', icon: BookOpen, sec: rukuData?.thematic_topics?.qiraat_full },
+    { id: 'bahouth_topics', label: 'বাহাউথ থিমেটিক', num: '০৪ক', icon: Tag, sec: rukuData?.thematic_topics?.bahouth_topics },
     { id: 'jalalayn', label: 'তুলনামূলক তাফসীর', num: '০৫', icon: BookMarked, sec: rukuData?.thematic_topics?.tafsir_comparative },
     { id: 'hadith', label: 'শানে নুযূল ও হাদীস', num: '০৬', icon: Sparkles, sec: rukuData?.thematic_topics?.hadith },
     { id: 'ikhtilaf', label: 'মতভেদ ও তারজীহ', num: '০৭', icon: GitCompare, sec: rukuData?.thematic_topics?.ikhtilaf },
@@ -108,7 +110,7 @@ export default function ThematicView({ rukuData, surahInfo, onSwitchToAyahStudy 
                     </td>
                     <td className="px-3.5 py-2.5 leading-relaxed font-arabic text-right" dir="rtl">
                       <span className="font-arabic text-sm sm:text-base leading-loose" dir="rtl">
-                        {row['কিরাআতের পাঠভেদ ও নিয়ম (অবিকৃত মূল পাঠ)'] || ''}
+                        {escapeQiraatMarkers(normalizeQuranBrackets(row['কিরাআতের পাঠভেদ ও নিয়ম (অবিকৃত মূল পাঠ)'] || ''))}
                       </span>
                     </td>
                   </tr>
@@ -152,6 +154,23 @@ export default function ThematicView({ rukuData, surahInfo, onSwitchToAyahStudy 
       return renderQiraatSection(item.sec);
     }
 
+    if (item.id === 'bahouth_topics') {
+      // Aggregate topics from all ayahs in this ruku for thematic view
+      const rukuAyahs = rukuData?.ayahs || [];
+      const allTopics = rukuAyahs.flatMap(a => a.topics || []);
+      // Deduplicate by topic_id
+      const uniqueTopics = Object.values(
+        allTopics.reduce((acc, t) => {
+          const key = t.topic_id;
+          if (!acc[key] || (t.scope === 'global' && acc[key].scope === 'local')) {
+            acc[key] = t;
+          }
+          return acc;
+        }, {})
+      );
+      return <BahouthTopics ayah={{ topics: uniqueTopics }} />;
+    }
+
     if (item.sec?.content) {
       return <MarkdownContent content={item.sec.content} />;
     }
@@ -166,7 +185,7 @@ export default function ThematicView({ rukuData, surahInfo, onSwitchToAyahStudy 
   return (
     <div className="max-w-7xl mx-auto px-3 sm:px-6 py-6">
       {/* 1. Scholarly Paper Header & Layout Switcher */}
-      <div className="max-w-[740px] mx-auto mb-8 space-y-4">
+      <div className="w-full max-w-5xl mx-auto mb-8 space-y-4">
         {/* Ruku Banner */}
         <div className="bg-white dark:bg-gray-800 rounded-3xl p-5 sm:p-7 shadow-xs border border-gray-200/90 dark:border-gray-700 border-l-4 border-l-emerald-600 transition-colors">
           <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
@@ -279,8 +298,8 @@ export default function ThematicView({ rukuData, surahInfo, onSwitchToAyahStudy 
             </nav>
           </aside>
 
-          {/* Main Academic Reading Column (Constrained to 680px-740px) */}
-          <main className="xl:col-span-9 max-w-[740px] mx-auto w-full space-y-10">
+          {/* Main Academic Reading Column */}
+          <main className="xl:col-span-9 w-full max-w-none space-y-10">
             {sections.map((item) => {
               const Icon = item.icon;
               return (

@@ -17,6 +17,9 @@ from utils import (
     load_tanzil, load_ruku_map, load_audit_results, load_author_meta
 )
 
+# Bahouth helpers
+from bahouth_common import normalize_arabic_for_matching as normalize_arabic_bahouth
+
 # Ensure UTF-8 output
 if sys.stdout.encoding != 'utf-8':
     try:
@@ -52,6 +55,102 @@ def plain_markdown(md, limit=280):
     if len(t) <= limit:
         return t
     return t[:limit].rsplit(" ", 1)[0] + "…"
+
+
+def parse_site_word_translation(wbw_text):
+    """
+    Parse the site's word_translation markdown into a list of word dicts.
+    Mirrors web/src/utils/wordByWordParser.js logic.
+    Returns list of {"arabic": str, "meaning_bn": str, "norm": str}
+    """
+    if not wbw_text or not isinstance(wbw_text, str):
+        return []
+    # Regex matches **Arabic** followed by Bengali meaning up to next **Arabic** or end
+    regex = re.compile(r"\*\*([^*]+)\*\*\s*([^*]+?)(?=(?:\s*\*\*[^*]+\*\*|$))")
+    words = []
+    for m in regex.finditer(wbw_text):
+        ar = m.group(1).strip()
+        bn = m.group(2).strip()
+        # Clean leading/trailing punctuation from Bengali meaning
+        bn = re.sub(r"^[-–—:;،,\s\u061B]+", "", bn)
+        bn = re.sub(r"[-–—:;،,\s\u061B]+$", "", bn)
+        bn = bn.strip()
+        if ar:
+            norm = normalize_arabic_bahouth(ar)
+            words.append({"arabic": ar, "meaning_bn": bn, "norm": norm})
+    return words
+
+
+def map_bahouth_words_to_site(site_words, bahouth_data):
+    """
+    Build-time word mapping (T2.2).
+    site_words: list of {"arabic", "meaning_bn", "norm"} from parse_site_word_translation
+    bahouth_data: dict with "words": list of {"word_order_in_verse", "word_raw", "plain_text_raw", "root_token_raw", "word_id"}
+    Returns list of bahouth words with added "match": "text"|"order"|"none"
+    """
+    if not bahouth_data or "words" not in bahouth_data:
+        return []
+    b_words = bahouth_data["words"]
+    if not b_words:
+        return []
+
+    # Normalize bahouth plain_text_raw for matching
+    for bw in b_words:
+        bw["norm"] = normalize_arabic_bahouth(bw.get("plain_text_raw", ""))
+
+    # Strategy 1: exact normalized text match
+    matched = [False] * len(b_words)
+    site_matched = [False] * len(site_words)
+    text_matches = 0
+
+    for i, sw in enumerate(site_words):
+        if not sw["norm"]:
+            continue
+        for j, bw in enumerate(b_words):
+            if matched[j]:
+                continue
+            if bw["norm"] and bw["norm"] == sw["norm"]:
+                bw["match"] = "text"
+                bw["site_meaning_bn"] = sw["meaning_bn"]
+                bw["site_arabic"] = sw["arabic"]
+                matched[j] = True
+                site_matched[i] = True
+                text_matches += 1
+                break
+
+    # Strategy 2: order fallback ONLY if both lists have same length
+    order_matches = 0
+    if len(site_words) == len(b_words):
+        for i, sw in enumerate(site_words):
+            if site_matched[i]:
+                continue
+            # Find first unmatched bahouth word in order
+            for j, bw in enumerate(b_words):
+                if not matched[j]:
+                    bw["match"] = "order"
+                    bw["site_meaning_bn"] = sw["meaning_bn"]
+                    bw["site_arabic"] = sw["arabic"]
+                    matched[j] = True
+                    site_matched[i] = True
+                    order_matches += 1
+                    break
+
+    # Strategy 3: remaining unmatched
+    none_matches = 0
+    for j, bw in enumerate(b_words):
+        if not matched[j]:
+            bw["match"] = "none"
+            none_matches += 1
+
+    # Summary for reporting
+    bw["_match_stats"] = {
+        "text": text_matches,
+        "order": order_matches,
+        "none": none_matches,
+        "site_total": len(site_words),
+        "bahouth_total": len(b_words),
+    }
+    return b_words
 
 
 def parse_surah_intro_metadata(intro_raw, first_ruku_md=""):
@@ -348,11 +447,21 @@ def parse_markdown_table(table_text):
         rows.append(row_dict)
     return rows
 
-def parse_ruku_markdown(md_text, surah_id, ruku_idx, ayah_start, ayah_end, tanzil, s_dir=None, audit_results=None):
+def parse_ruku_markdown(md_text, surah_id, ruku_idx, ayah_start, ayah_end, tanzil, s_dir=None, audit_results=None,
+                        bahouth_meta=None, bahouth_words=None, bahouth_topics=None, bahouth_qiraat=None):
     # 0. Clean redundant backticks surrounding purely Arabic phrases and normalize brackets and links
     md_text = replace_backtick_arabic(md_text)
     md_text = normalize_quran_brackets(md_text)
     md_text = rewrite_markdown_links(md_text, surah_id)
+
+    if bahouth_meta is None:
+        bahouth_meta = {}
+    if bahouth_words is None:
+        bahouth_words = {}
+    if bahouth_topics is None:
+        bahouth_topics = {}
+    if bahouth_qiraat is None:
+        bahouth_qiraat = {}
 
     # 1. Parse Top-level sections (0 to 15)
     pattern = r"(?m)^##\s+([০-৯\d]+)\.\s+(.+?)$"
@@ -579,6 +688,12 @@ def parse_ruku_markdown(md_text, surah_id, ruku_idx, ayah_start, ayah_end, tanzi
         a_irab = irab_map.get(a_num, "")
         a_nuzul = nuzul_map.get(a_num, "")
 
+        # T2.1: Attach Bahouth per-ayah data
+        v_meta = bahouth_meta.get(a_num, {})
+        b_words = bahouth_words.get(a_num, {})
+        b_topics = bahouth_topics.get(a_num, [])
+        b_qiraat_ann = bahouth_qiraat.get(f"{surah_id}-{a_num}", [])
+
         ayah_obj = {
             "surah": surah_id,
             "ruku": ruku_idx,
@@ -597,7 +712,12 @@ def parse_ruku_markdown(md_text, surah_id, ruku_idx, ayah_start, ayah_end, tanzi
             "irab": a_irab,
             "irab_covers": irab_covers_map.get(a_num),
             "shane_nuzul": a_nuzul,
-            "shane_nuzul_covers": nuzul_covers_map.get(a_num)
+            "shane_nuzul_covers": nuzul_covers_map.get(a_num),
+            # Bahouth enrichments
+            "verse_meta": v_meta if v_meta else None,
+            "bahouth_words": b_words if b_words else None,
+            "topics": b_topics if b_topics else None,
+            "qiraat_annotations": b_qiraat_ann if b_qiraat_ann else None,
         }
         ayahs.append(ayah_obj)
 
@@ -636,9 +756,20 @@ def parse_ruku_markdown(md_text, surah_id, ruku_idx, ayah_start, ayah_end, tanzi
                     han = cols[4]
                     ev = cols[5] if len(cols) > 5 else ""
 
+                    ayah_nums = []
+                    m_ay = re.search(r"(?:আয়াত|আয়াত)\s+([০-৯\d\s–—\-]+)", title)
+                    if m_ay:
+                        nums = [int(n) for n in re.findall(r"\d+", to_en(m_ay.group(1)))]
+                        if len(nums) == 1:
+                            ayah_nums = [nums[0]]
+                        elif len(nums) >= 2:
+                            ayah_nums = list(range(min(nums[0], nums[1]), max(nums[0], nums[1]) + 1))
+
                     ev_parts = re.split(r"<br\s*/?>|\n", ev)
                     sources = []
                     daleels = []
+                    tarjih = None
+                    contemporary = []
                     for part in ev_parts:
                         part = part.strip()
                         if not part:
@@ -646,6 +777,12 @@ def parse_ruku_markdown(md_text, surah_id, ruku_idx, ayah_start, ayah_end, tanzi
                         if part.startswith("উৎস:") or "উৎস:" in part:
                             src_str = re.sub(r"^.*?উৎস:\s*", "", part)
                             sources.extend([src.strip() for src in src_str.split(";") if src.strip()])
+                        elif re.search(r"^\s*(?:\*\*)?\s*(?:তারজীহ|অগ্রগণ্য মত)\s*(?:\*\*)?\s*[:：]", part):
+                            clean_t = re.sub(r"^\s*(?:\*\*)?\s*(?:তারজীহ|অগ্রগণ্য মত)\s*(?:\*\*)?\s*[:：]\s*(?:\*\*)?\s*", "", part)
+                            tarjih = clean_t
+                        elif re.search(r"^\s*(?:\*\*)?\s*(?:সমসাময়িক উদাহরণ|সমসাময়িক প্রয়োগ|সমসাময়িক বাস্তব প্রয়োগ)\s*(?:\*\*)?\s*[:：]", part):
+                            clean_c = re.sub(r"^\s*(?:\*\*)?\s*(?:সমসাময়িক উদাহরণ|সমসাময়িক প্রয়োগ|সমসাময়িক বাস্তব প্রয়োগ)\s*(?:\*\*)?\s*[:：]\s*(?:\*\*)?\s*", "", part)
+                            contemporary.append(clean_c)
                         else:
                             daleels.append(part)
 
@@ -658,11 +795,14 @@ def parse_ruku_markdown(md_text, surah_id, ruku_idx, ayah_start, ayah_end, tanzi
 
                     ahkam_cards.append({
                         "title": title,
+                        "ayahs": ayah_nums,
                         "hanafi": h,
                         "maliki": m_op,
                         "shafii": s,
                         "hanbali": han,
                         "consensus": is_consensus,
+                        "tarjih": tarjih,
+                        "contemporary": contemporary,
                         "daleel": daleels,
                         "sources": sources
                     })
@@ -853,6 +993,80 @@ def build_all_web_data(limit_surahs=None):
             "rukus": []
         }
 
+        # ---- T2.1: Load Bahouth per-surah sources ----
+        bahouth_meta = {}
+        bahouth_words = {}
+        bahouth_topics = {}
+        sources_dir = s_dir / "_sources"
+        meta_file = sources_dir / "bahouth_verse_meta.json"
+        if meta_file.exists():
+            try:
+                with open(meta_file, "r", encoding="utf-8") as f:
+                    env = json.load(f)
+                for v in env.get("data", []):
+                    ayah = v.get("ayah_number")
+                    if ayah:
+                        bahouth_meta[ayah] = {
+                            "page_number": v.get("page_number"),
+                            "word_count": v.get("word_count"),
+                            "letter_count": v.get("letter_count"),
+                            "verse_key": v.get("verse_key"),
+                            "text_raw": v.get("text_raw"),
+                        }
+            except Exception as e:
+                print(f"Warning: Failed to load bahouth_verse_meta: {e}")
+
+        words_file = sources_dir / "bahouth_words.json"
+        if words_file.exists():
+            try:
+                with open(words_file, "r", encoding="utf-8") as f:
+                    env = json.load(f)
+                for a in env.get("data", []):
+                    # data format: [{"verse_key": "25-1", "word_count": 9, "words": [...]}]
+                    vkey = a.get("verse_key", "")
+                    if "-" in vkey:
+                        _, ayah_str = vkey.split("-", 1)
+                        try:
+                            ayah = int(ayah_str)
+                            bahouth_words[ayah] = a
+                        except ValueError:
+                            pass
+            except Exception as e:
+                print(f"Warning: Failed to load bahouth_words: {e}")
+
+        topics_file = sources_dir / "bahouth_topics.json"
+        if topics_file.exists():
+            try:
+                with open(topics_file, "r", encoding="utf-8") as f:
+                    env = json.load(f)
+                for vkey, topics in env.get("data", {}).items():
+                    if "-" in vkey:
+                        _, ayah_str = vkey.split("-", 1)
+                        try:
+                            ayah = int(ayah_str)
+                            bahouth_topics[ayah] = topics
+                        except ValueError:
+                            pass
+            except Exception as e:
+                print(f"Warning: Failed to load bahouth_topics: {e}")
+
+        # ---- T2.1: Pre-load Bahouth qiraat annotations from ruku raw files ----
+        # This is a dict: verse_key -> [annotations...]
+        bahouth_qiraat = {}
+        for r_i in range(1, num_r + 1):
+            raw_file = sources_dir / f"ruku_{r_i:02d}_raw.json"
+            if raw_file.exists():
+                try:
+                    with open(raw_file, "r", encoding="utf-8") as f:
+                        raw = json.load(f)
+                    bq = raw.get("bahouth_qiraat", {})
+                    if isinstance(bq, dict):
+                        for vk, val in bq.items():
+                            if isinstance(val, dict) and "annotations" in val:
+                                bahouth_qiraat[vk] = val["annotations"]
+                except Exception:
+                    pass
+
         # Process each ruku
         for r_idx, r_item in enumerate(rukus, 1):
             if isinstance(r_item, dict):
@@ -888,7 +1102,14 @@ def build_all_web_data(limit_surahs=None):
                 continue
 
             md_text = unicodedata.normalize('NFC', r_file.read_text(encoding="utf-8"))
-            ruku_obj = parse_ruku_markdown(md_text, sid, r_idx, a_start, a_end, tanzil, s_dir=s_dir, audit_results=audit_results)
+            ruku_obj = parse_ruku_markdown(
+                md_text, sid, r_idx, a_start, a_end, tanzil,
+                s_dir=s_dir, audit_results=audit_results,
+                bahouth_meta=bahouth_meta,
+                bahouth_words=bahouth_words,
+                bahouth_topics=bahouth_topics,
+                bahouth_qiraat=bahouth_qiraat,
+            )
 
             # Save ruku json with non-destructive preservation of enriched academic data
             # Also load durable enrichments from _sources/ruku_XX_enrichments.json if present
@@ -943,6 +1164,21 @@ def build_all_web_data(limit_surahs=None):
                     a["jalalayn_covers"] = old_a["jalalayn_covers"]
                 if a.get("irab_covers") is None and old_a.get("irab_covers"):
                     a["irab_covers"] = old_a["irab_covers"]
+
+                # T2.2: Build-time word mapping (site word_translation <-> bahouth_words)
+                b_words = a.get("bahouth_words")
+                if b_words:
+                    site_wbw = a.get("word_translation", "")
+                    site_words = parse_site_word_translation(site_wbw)
+                    mapped = map_bahouth_words_to_site(site_words, b_words)
+                    if mapped:
+                        # Attach mapped words with match info; also store stats on ayah for reporting
+                        a["bahouth_words_mapped"] = mapped
+                        # Extract match stats from the last word (where we stored it)
+                        for bw in reversed(mapped):
+                            if "_match_stats" in bw:
+                                a["bahouth_match_stats"] = bw.pop("_match_stats")
+                                break
             with open(ruku_json_path, "w", encoding="utf-8") as rf:
                 json.dump(ruku_obj, rf, ensure_ascii=False, indent=2)
 

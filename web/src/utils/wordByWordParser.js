@@ -151,7 +151,37 @@ export function parseWordByWord(ayah) {
     };
   }
 
-  // 4. Clean fallback when no word-level data is currently present
+  // 4. Fallback: Bahouth words (build-time mapped) - NEW
+  if (ayah.bahouth_words_mapped && Array.isArray(ayah.bahouth_words_mapped) && ayah.bahouth_words_mapped.length > 0) {
+    const words = ayah.bahouth_words_mapped.map((bw, i) => {
+      // Extract root from slash-wrapped token
+      const rootRaw = bw.root_token_raw || '';
+      const root = rootRaw.startsWith('/') && rootRaw.endsWith('/') && rootRaw.length > 2
+        ? rootRaw.slice(1, -1)
+        : rootRaw;
+      return {
+        id: i + 1,
+        arabic: bw.word_raw || bw.plain_text_raw || '',
+        meaning_bn: bw.site_meaning_bn || '',
+        pos: null,
+        root: root || null,
+        hasDeepTahqeeq: false,
+        tahqeeqRef: null,
+        mufradatRef: null,
+        bahouthMatch: bw.match || 'none',
+        bahouthRoot: root || null,
+        bahouthWordId: bw.word_id,
+        bahouthOrder: bw.word_order_in_verse,
+      };
+    });
+    return {
+      isAvailable: true,
+      words,
+      rawText: words.map(w => `**${w.arabic}** ${w.meaning_bn}`).join(' ')
+    };
+  }
+
+  // 5. Clean fallback when no word-level data is currently present
   return {
     isAvailable: false,
     words: [],

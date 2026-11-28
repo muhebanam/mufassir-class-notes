@@ -132,6 +132,19 @@ export default function AyahScopeView({
   const qiraatList = ayah.qiraat || [];
   const thematic = rukuInfo.thematic_topics || {};
 
+  // Relevant Fiqh & Ahkam for this specific ayah (Zero Data Leakage / Derived from Ruku)
+  const ahkamCards = thematic.ahkam?.cards || [];
+  const matchingMasalas = ahkamCards.filter(card => {
+    if (card.ayahs && Array.isArray(card.ayahs) && card.ayahs.includes(ayah.ayah)) return true;
+    const m = (card.title || "").match(/(?:আয়াত|আয়াত)\s+([০-৯\d\s–—\-]+)/);
+    if (m) {
+      const nums = m[1].replace(/[০-৯]/g, d => "০১২৩৪৫৬৭৮৯".indexOf(d)).match(/\d+/g)?.map(Number) || [];
+      if (nums.length === 1 && nums[0] === ayah.ayah) return true;
+      if (nums.length >= 2 && ayah.ayah >= Math.min(nums[0], nums[1]) && ayah.ayah <= Math.max(nums[0], nums[1])) return true;
+    }
+    return false;
+  });
+
   const hasPrev = ayah.ayah > (rukuInfo.ayah_start || 1);
   const hasNext = ayah.ayah < (rukuInfo.ayah_end || 64);
 
@@ -557,6 +570,32 @@ export default function AyahScopeView({
             </div>
 
           </div>
+
+          {/* Ayat-Specific Fiqh & Ahkam Cards (if any) */}
+          {matchingMasalas.length > 0 && (
+            <div id="sec-ayah-ahkam" className="scroll-mt-36 sm:scroll-mt-44 p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-emerald-50/70 via-teal-50/50 to-white dark:from-gray-900 dark:via-emerald-950/20 dark:to-gray-900 border border-emerald-200 dark:border-emerald-800 shadow-xs space-y-4 font-bengali">
+              <div className="flex items-center justify-between border-b border-emerald-100 dark:border-emerald-900/60 pb-3">
+                <div className="flex items-center gap-2.5">
+                  <div className="p-1.5 rounded-lg bg-emerald-600 text-white shrink-0">
+                    <Scale className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-sm sm:text-base text-gray-900 dark:text-gray-100">
+                      এই আয়াতের সংশ্লিষ্ট ফিকহী বিধান ও ৪ মাযহাবের সিদ্ধান্ত
+                    </h4>
+                    <p className="text-[11px] text-gray-500 dark:text-gray-400">
+                      রুকুর অধ্যায় ০৮ থেকে আয়াত {toBn(ayah.ayah)}-এর সাথে সরাসরি সম্পর্কিত {toBn(matchingMasalas.length)}টি ফিকহী মাসআলা
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="space-y-4">
+                {matchingMasalas.map((mCard, mIdx) => (
+                  <MasalaCard key={mIdx} card={mCard} index={mIdx} />
+                ))}
+              </div>
+            </div>
+          )}
 
           {/* GROUP 2: RUKU-LEVEL CONTEXT SECTIONS (COLLAPSIBLE TO PREVENT BLOAT) */}
           <div className="pt-4 border-t-2 border-dashed border-gray-200 dark:border-gray-700 font-bengali">

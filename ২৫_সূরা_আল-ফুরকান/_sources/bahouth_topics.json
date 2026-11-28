@@ -1,0 +1,5273 @@
+{
+  "schema_version": "1",
+  "fetched_at": "2026-11-28T00:19:30.132874+00:00",
+  "server_url": "https://bahouth.tafsir.net/mcp",
+  "data": {
+    "25-1": [
+      {
+        "topic_id": 126,
+        "subcategory_id": 71,
+        "category_id": 13,
+        "title_raw": "توحيد الله تعالى:حمد الله تعالى وتسبيحه والثناء عليه"
+      },
+      {
+        "topic_id": 319,
+        "subcategory_id": 71,
+        "category_id": 13,
+        "title_raw": "توحيد الله تعالى:وحدانيته"
+      },
+      {
+        "topic_id": 362,
+        "subcategory_id": 77,
+        "category_id": 13,
+        "title_raw": "أخلاقه وصفاته"
+      },
+      {
+        "topic_id": 370,
+        "subcategory_id": 77,
+        "category_id": 13,
+        "title_raw": "تأييد رسالته"
+      },
+      {
+        "topic_id": 460,
+        "subcategory_id": 149,
+        "category_id": 17,
+        "title_raw": "أسماء القرآن"
+      },
+      {
+        "topic_id": 463,
+        "subcategory_id": 152,
+        "category_id": 17,
+        "title_raw": "الفرقان"
+      },
+      {
+        "topic_id": 2020,
+        "subcategory_id": 1158,
+        "category_id": 200,
+        "title_raw": "البركة"
+      },
+      {
+        "topic_id": 4970,
+        "subcategory_id": 3879,
+        "category_id": 840,
+        "title_raw": "الفرقان"
+      },
+      {
+        "topic_id": 4971,
+        "subcategory_id": 3880,
+        "category_id": 840,
+        "title_raw": "الفرقان ما أنزل على محمد صلى الله عليه وسلم"
+      },
+      {
+        "topic_id": 5112,
+        "subcategory_id": 4021,
+        "category_id": 870,
+        "title_raw": "القرآن"
+      },
+      {
+        "topic_id": 5119,
+        "subcategory_id": 4028,
+        "category_id": 870,
+        "title_raw": "تنزيله من عند الله بالحق على الرسول [صلى الله عليه وسلم]"
+      },
+      {
+        "topic_id": 5140,
+        "subcategory_id": 4049,
+        "category_id": 870,
+        "title_raw": "قرآن"
+      },
+      {
+        "topic_id": 5172,
+        "subcategory_id": 4077,
+        "category_id": 871,
+        "title_raw": "وصفه ووجوب الإيمان به"
+      },
+      {
+        "topic_id": 5533,
+        "subcategory_id": 4401,
+        "category_id": 939,
+        "title_raw": "الله [منزل الكتاب]"
+      },
+      {
+        "topic_id": 5536,
+        "subcategory_id": 4404,
+        "category_id": 939,
+        "title_raw": "الله جل جلاله"
+      },
+      {
+        "topic_id": 5987,
+        "subcategory_id": 4853,
+        "category_id": 1013,
+        "title_raw": "الناس"
+      },
+      {
+        "topic_id": 5993,
+        "subcategory_id": 4859,
+        "category_id": 1013,
+        "title_raw": "خاتم الانبياء رسول إلى الناس كافة"
+      },
+      {
+        "topic_id": 6652,
+        "subcategory_id": 5511,
+        "category_id": 1144,
+        "title_raw": "البشير النذير"
+      },
+      {
+        "topic_id": 6671,
+        "subcategory_id": 5530,
+        "category_id": 1144,
+        "title_raw": "خاتم الأنبياء محمد صلى الله عليه وسلم"
+      },
+      {
+        "topic_id": 6694,
+        "subcategory_id": 5553,
+        "category_id": 1144,
+        "title_raw": "عموم رسالته إلى الناس كافة"
+      }
+    ],
+    "25-2": [
+      {
+        "topic_id": 78,
+        "subcategory_id": 71,
+        "category_id": 13,
+        "title_raw": "الشرك والمشركون:تنزيه الله جل جلاله عن الشريك"
+      },
+      {
+        "topic_id": 319,
+        "subcategory_id": 71,
+        "category_id": 13,
+        "title_raw": "توحيد الله تعالى:وحدانيته"
+      },
+      {
+        "topic_id": 1065,
+        "subcategory_id": 552,
+        "category_id": 84,
+        "title_raw": "الأرض"
+      },
+      {
+        "topic_id": 1088,
+        "subcategory_id": 575,
+        "category_id": 84,
+        "title_raw": "لله ملك السموات والأرض وما فيهن ومن فيهن"
+      },
+      {
+        "topic_id": 1228,
+        "subcategory_id": 714,
+        "category_id": 111,
+        "title_raw": "شبهه النصاري في اتخاذ الولد لله حاش لله"
+      },
+      {
+        "topic_id": 1582,
+        "subcategory_id": 826,
+        "category_id": 151,
+        "title_raw": "الغيب النفسي:الهوى:القضاء والقدر"
+      },
+      {
+        "topic_id": 5140,
+        "subcategory_id": 4049,
+        "category_id": 870,
+        "title_raw": "قرآن"
+      },
+      {
+        "topic_id": 5536,
+        "subcategory_id": 4404,
+        "category_id": 939,
+        "title_raw": "الله جل جلاله"
+      },
+      {
+        "topic_id": 5552,
+        "subcategory_id": 4420,
+        "category_id": 939,
+        "title_raw": "مالك الملك [له ما في السموات والأرض]"
+      },
+      {
+        "topic_id": 5559,
+        "subcategory_id": 4427,
+        "category_id": 939,
+        "title_raw": "نفي الولد والصاحبة عنه سبحانه"
+      },
+      {
+        "topic_id": 5597,
+        "subcategory_id": 4465,
+        "category_id": 949,
+        "title_raw": "المال"
+      },
+      {
+        "topic_id": 5623,
+        "subcategory_id": 4491,
+        "category_id": 949,
+        "title_raw": "كل عناصر المال ومكوناته مملوكة أصلاً لله"
+      },
+      {
+        "topic_id": 6572,
+        "subcategory_id": 5431,
+        "category_id": 1124,
+        "title_raw": "تملك الأموال"
+      }
+    ],
+    "25-3": [
+      {
+        "topic_id": 73,
+        "subcategory_id": 71,
+        "category_id": 13,
+        "title_raw": "الشرك والمشركون:أصنامهم والتهكم بهم على عبادتها"
+      },
+      {
+        "topic_id": 78,
+        "subcategory_id": 71,
+        "category_id": 13,
+        "title_raw": "الشرك والمشركون:تنزيه الله جل جلاله عن الشريك"
+      },
+      {
+        "topic_id": 319,
+        "subcategory_id": 71,
+        "category_id": 13,
+        "title_raw": "توحيد الله تعالى:وحدانيته"
+      },
+      {
+        "topic_id": 5140,
+        "subcategory_id": 4049,
+        "category_id": 870,
+        "title_raw": "قرآن"
+      },
+      {
+        "topic_id": 5521,
+        "subcategory_id": 4389,
+        "category_id": 939,
+        "title_raw": "استحالة تعدد الآلهة"
+      },
+      {
+        "topic_id": 5536,
+        "subcategory_id": 4404,
+        "category_id": 939,
+        "title_raw": "الله جل جلاله"
+      },
+      {
+        "topic_id": 5767,
+        "subcategory_id": 4634,
+        "category_id": 977,
+        "title_raw": "المشركون"
+      },
+      {
+        "topic_id": 5771,
+        "subcategory_id": 4638,
+        "category_id": 977,
+        "title_raw": "فضح المشركين و تبيان عجز"
+      }
+    ],
+    "25-4": [
+      {
+        "topic_id": 365,
+        "subcategory_id": 77,
+        "category_id": 13,
+        "title_raw": "أقوال الكافرين فيه"
+      },
+      {
+        "topic_id": 1362,
+        "subcategory_id": 806,
+        "category_id": 148,
+        "title_raw": "الافتراء على الله ورسوله"
+      },
+      {
+        "topic_id": 1854,
+        "subcategory_id": 992,
+        "category_id": 179,
+        "title_raw": "الافك"
+      },
+      {
+        "topic_id": 1860,
+        "subcategory_id": 998,
+        "category_id": 179,
+        "title_raw": "زعم الكفار أن ما جاء به الرسول إفك"
+      },
+      {
+        "topic_id": 5112,
+        "subcategory_id": 4021,
+        "category_id": 870,
+        "title_raw": "القرآن"
+      },
+      {
+        "topic_id": 5140,
+        "subcategory_id": 4049,
+        "category_id": 870,
+        "title_raw": "قرآن"
+      },
+      {
+        "topic_id": 5143,
+        "subcategory_id": 4052,
+        "category_id": 870,
+        "title_raw": "مقالات المشركين عن القرآن [قالوا إن الرسول افتراه]"
+      },
+      {
+        "topic_id": 5167,
+        "subcategory_id": 4072,
+        "category_id": 871,
+        "title_raw": "حقيقته وتصديقه للكتب الأوائل"
+      },
+      {
+        "topic_id": 5397,
+        "subcategory_id": 4265,
+        "category_id": 909,
+        "title_raw": "الكذب"
+      },
+      {
+        "topic_id": 5399,
+        "subcategory_id": 4267,
+        "category_id": 909,
+        "title_raw": "نماذج من الأكاذيب"
+      },
+      {
+        "topic_id": 5432,
+        "subcategory_id": 4300,
+        "category_id": 920,
+        "title_raw": "الكفر"
+      },
+      {
+        "topic_id": 5448,
+        "subcategory_id": 4316,
+        "category_id": 920,
+        "title_raw": "مقولاتهم عن الرسالات وإعناتهم المرسلين"
+      },
+      {
+        "topic_id": 5449,
+        "subcategory_id": 4317,
+        "category_id": 920,
+        "title_raw": "مقولاتهم عن القرآن"
+      },
+      {
+        "topic_id": 6671,
+        "subcategory_id": 5530,
+        "category_id": 1144,
+        "title_raw": "خاتم الأنبياء محمد صلى الله عليه وسلم"
+      },
+      {
+        "topic_id": 6674,
+        "subcategory_id": 5533,
+        "category_id": 1144,
+        "title_raw": "دفاع الله عنه وربطه على قلبه"
+      },
+      {
+        "topic_id": 6695,
+        "subcategory_id": 5554,
+        "category_id": 1144,
+        "title_raw": "قالوا [ساحر وشاعر وكاهن ومفتر ويأتي بأساطير الأولين]"
+      },
+      {
+        "topic_id": 7028,
+        "subcategory_id": 5887,
+        "category_id": 1248,
+        "title_raw": "انكار القوم لدعوة الرسول"
+      },
+      {
+        "topic_id": 7032,
+        "subcategory_id": 5891,
+        "category_id": 1248,
+        "title_raw": "محمد رسول الله"
+      }
+    ],
+    "25-5": [
+      {
+        "topic_id": 365,
+        "subcategory_id": 77,
+        "category_id": 13,
+        "title_raw": "أقوال الكافرين فيه"
+      },
+      {
+        "topic_id": 1097,
+        "subcategory_id": 584,
+        "category_id": 87,
+        "title_raw": "الأساطير"
+      },
+      {
+        "topic_id": 1098,
+        "subcategory_id": 585,
+        "category_id": 87,
+        "title_raw": "وصف الكفار للقرآن ولكل ما جاءهم به الأنبياء عليهم السلام"
+      },
+      {
+        "topic_id": 1128,
+        "subcategory_id": 615,
+        "category_id": 91,
+        "title_raw": "الأسطورة"
+      },
+      {
+        "topic_id": 2114,
+        "subcategory_id": 1252,
+        "category_id": 218,
+        "title_raw": "البكرة"
+      },
+      {
+        "topic_id": 5112,
+        "subcategory_id": 4021,
+        "category_id": 870,
+        "title_raw": "القرآن"
+      },
+      {
+        "topic_id": 5140,
+        "subcategory_id": 4049,
+        "category_id": 870,
+        "title_raw": "قرآن"
+      },
+      {
+        "topic_id": 5142,
+        "subcategory_id": 4051,
+        "category_id": 870,
+        "title_raw": "مقالات المشركين عن القرآن [قالوا أساطير الأولين]"
+      },
+      {
+        "topic_id": 5167,
+        "subcategory_id": 4072,
+        "category_id": 871,
+        "title_raw": "حقيقته وتصديقه للكتب الأوائل"
+      },
+      {
+        "topic_id": 5397,
+        "subcategory_id": 4265,
+        "category_id": 909,
+        "title_raw": "الكذب"
+      },
+      {
+        "topic_id": 5399,
+        "subcategory_id": 4267,
+        "category_id": 909,
+        "title_raw": "نماذج من الأكاذيب"
+      },
+      {
+        "topic_id": 6836,
+        "subcategory_id": 5695,
+        "category_id": 1187,
+        "title_raw": "صفات الكافرين"
+      },
+      {
+        "topic_id": 6839,
+        "subcategory_id": 5698,
+        "category_id": 1187,
+        "title_raw": "في علاقتهم مع كتاب الله تعالى"
+      }
+    ],
+    "25-6": [
+      {
+        "topic_id": 313,
+        "subcategory_id": 71,
+        "category_id": 13,
+        "title_raw": "توحيد الله تعالى:علمه جل شأنه"
+      },
+      {
+        "topic_id": 365,
+        "subcategory_id": 77,
+        "category_id": 13,
+        "title_raw": "أقوال الكافرين فيه"
+      },
+      {
+        "topic_id": 465,
+        "subcategory_id": 154,
+        "category_id": 18,
+        "title_raw": "أسماء الله الحسنى"
+      },
+      {
+        "topic_id": 488,
+        "subcategory_id": 177,
+        "category_id": 18,
+        "title_raw": "الرحيم"
+      },
+      {
+        "topic_id": 504,
+        "subcategory_id": 193,
+        "category_id": 18,
+        "title_raw": "الغفور"
+      },
+      {
+        "topic_id": 1065,
+        "subcategory_id": 552,
+        "category_id": 84,
+        "title_raw": "الأرض"
+      },
+      {
+        "topic_id": 1087,
+        "subcategory_id": 574,
+        "category_id": 84,
+        "title_raw": "لا شيء مما فيهما يخفى على الخالق"
+      },
+      {
+        "topic_id": 5112,
+        "subcategory_id": 4021,
+        "category_id": 870,
+        "title_raw": "القرآن"
+      },
+      {
+        "topic_id": 5119,
+        "subcategory_id": 4028,
+        "category_id": 870,
+        "title_raw": "تنزيله من عند الله بالحق على الرسول [صلى الله عليه وسلم]"
+      },
+      {
+        "topic_id": 5140,
+        "subcategory_id": 4049,
+        "category_id": 870,
+        "title_raw": "قرآن"
+      },
+      {
+        "topic_id": 5167,
+        "subcategory_id": 4072,
+        "category_id": 871,
+        "title_raw": "حقيقته وتصديقه للكتب الأوائل"
+      }
+    ],
+    "25-7": [
+      {
+        "topic_id": 94,
+        "subcategory_id": 71,
+        "category_id": 13,
+        "title_raw": "الكافرون:تعنت الكفار واستعجالهم بالعذاب"
+      },
+      {
+        "topic_id": 365,
+        "subcategory_id": 77,
+        "category_id": 13,
+        "title_raw": "أقوال الكافرين فيه"
+      },
+      {
+        "topic_id": 370,
+        "subcategory_id": 77,
+        "category_id": 13,
+        "title_raw": "تأييد رسالته"
+      },
+      {
+        "topic_id": 1884,
+        "subcategory_id": 1022,
+        "category_id": 183,
+        "title_raw": "أكل الرسل للطعام تأكيد لبشريتهم"
+      },
+      {
+        "topic_id": 1898,
+        "subcategory_id": 1036,
+        "category_id": 183,
+        "title_raw": "الاكل"
+      },
+      {
+        "topic_id": 3877,
+        "subcategory_id": 2926,
+        "category_id": 610,
+        "title_raw": "السًوق"
+      },
+      {
+        "topic_id": 3878,
+        "subcategory_id": 2927,
+        "category_id": 610,
+        "title_raw": "انكار الكفار مشى الرسول في الأسواق"
+      },
+      {
+        "topic_id": 4291,
+        "subcategory_id": 3338,
+        "category_id": 709,
+        "title_raw": "أكل الطعام دليل بشرية الرسل"
+      },
+      {
+        "topic_id": 4293,
+        "subcategory_id": 3340,
+        "category_id": 709,
+        "title_raw": "الطعام"
+      },
+      {
+        "topic_id": 5432,
+        "subcategory_id": 4300,
+        "category_id": 920,
+        "title_raw": "الكفر"
+      },
+      {
+        "topic_id": 5448,
+        "subcategory_id": 4316,
+        "category_id": 920,
+        "title_raw": "مقولاتهم عن الرسالات وإعناتهم المرسلين"
+      },
+      {
+        "topic_id": 5811,
+        "subcategory_id": 4678,
+        "category_id": 988,
+        "title_raw": "الملائكة"
+      },
+      {
+        "topic_id": 5821,
+        "subcategory_id": 4688,
+        "category_id": 988,
+        "title_raw": "لا يكون الملك رسولاً إلى الناس"
+      },
+      {
+        "topic_id": 6657,
+        "subcategory_id": 5516,
+        "category_id": 1144,
+        "title_raw": "الرسول البشر"
+      },
+      {
+        "topic_id": 6663,
+        "subcategory_id": 5522,
+        "category_id": 1144,
+        "title_raw": "اليتيم الفقير"
+      },
+      {
+        "topic_id": 6671,
+        "subcategory_id": 5530,
+        "category_id": 1144,
+        "title_raw": "خاتم الأنبياء محمد صلى الله عليه وسلم"
+      },
+      {
+        "topic_id": 6679,
+        "subcategory_id": 5538,
+        "category_id": 1144,
+        "title_raw": "سمات المجتمع الجاهلي قبل [التكاثر القبلي بالغنى والعصبية]"
+      },
+      {
+        "topic_id": 6695,
+        "subcategory_id": 5554,
+        "category_id": 1144,
+        "title_raw": "قالوا [ساحر وشاعر وكاهن ومفتر ويأتي بأساطير الأولين]"
+      },
+      {
+        "topic_id": 6958,
+        "subcategory_id": 5817,
+        "category_id": 1223,
+        "title_raw": "عن سيدنا محمد عليه الصلاة والسلام"
+      }
+    ],
+    "25-8": [
+      {
+        "topic_id": 94,
+        "subcategory_id": 71,
+        "category_id": 13,
+        "title_raw": "الكافرون:تعنت الكفار واستعجالهم بالعذاب"
+      },
+      {
+        "topic_id": 365,
+        "subcategory_id": 77,
+        "category_id": 13,
+        "title_raw": "أقوال الكافرين فيه"
+      },
+      {
+        "topic_id": 370,
+        "subcategory_id": 77,
+        "category_id": 13,
+        "title_raw": "تأييد رسالته"
+      },
+      {
+        "topic_id": 3812,
+        "subcategory_id": 2861,
+        "category_id": 591,
+        "title_raw": "السحر [ما يؤدي إلى أمور خارقة للمألوف]"
+      },
+      {
+        "topic_id": 3816,
+        "subcategory_id": 2865,
+        "category_id": 591,
+        "title_raw": "زعم الكفار أن الرسول مسحور"
+      },
+      {
+        "topic_id": 4410,
+        "subcategory_id": 3457,
+        "category_id": 731,
+        "title_raw": "الظالمون [المكذبون للرسل]"
+      },
+      {
+        "topic_id": 4414,
+        "subcategory_id": 3461,
+        "category_id": 731,
+        "title_raw": "الظلم"
+      },
+      {
+        "topic_id": 5478,
+        "subcategory_id": 4346,
+        "category_id": 924,
+        "title_raw": "الكنز"
+      },
+      {
+        "topic_id": 6958,
+        "subcategory_id": 5817,
+        "category_id": 1223,
+        "title_raw": "عن سيدنا محمد عليه الصلاة والسلام"
+      }
+    ],
+    "25-9": [
+      {
+        "topic_id": 94,
+        "subcategory_id": 71,
+        "category_id": 13,
+        "title_raw": "الكافرون:تعنت الكفار واستعجالهم بالعذاب"
+      },
+      {
+        "topic_id": 365,
+        "subcategory_id": 77,
+        "category_id": 13,
+        "title_raw": "أقوال الكافرين فيه"
+      },
+      {
+        "topic_id": 370,
+        "subcategory_id": 77,
+        "category_id": 13,
+        "title_raw": "تأييد رسالته"
+      },
+      {
+        "topic_id": 6663,
+        "subcategory_id": 5522,
+        "category_id": 1144,
+        "title_raw": "اليتيم الفقير"
+      },
+      {
+        "topic_id": 6671,
+        "subcategory_id": 5530,
+        "category_id": 1144,
+        "title_raw": "خاتم الأنبياء محمد صلى الله عليه وسلم"
+      },
+      {
+        "topic_id": 6958,
+        "subcategory_id": 5817,
+        "category_id": 1223,
+        "title_raw": "عن سيدنا محمد عليه الصلاة والسلام"
+      }
+    ],
+    "25-10": [
+      {
+        "topic_id": 126,
+        "subcategory_id": 71,
+        "category_id": 13,
+        "title_raw": "توحيد الله تعالى:حمد الله تعالى وتسبيحه والثناء عليه"
+      },
+      {
+        "topic_id": 316,
+        "subcategory_id": 71,
+        "category_id": 13,
+        "title_raw": "توحيد الله تعالى:مشيئته"
+      },
+      {
+        "topic_id": 370,
+        "subcategory_id": 77,
+        "category_id": 13,
+        "title_raw": "تأييد رسالته"
+      },
+      {
+        "topic_id": 383,
+        "subcategory_id": 77,
+        "category_id": 13,
+        "title_raw": "مخاطبة الله إياه"
+      },
+      {
+        "topic_id": 1569,
+        "subcategory_id": 826,
+        "category_id": 151,
+        "title_raw": "الجنة:صفاتها"
+      },
+      {
+        "topic_id": 2020,
+        "subcategory_id": 1158,
+        "category_id": 200,
+        "title_raw": "البركة"
+      },
+      {
+        "topic_id": 5245,
+        "subcategory_id": 4150,
+        "category_id": 886,
+        "title_raw": "القصر"
+      },
+      {
+        "topic_id": 6237,
+        "subcategory_id": 5102,
+        "category_id": 1066,
+        "title_raw": "النهر"
+      },
+      {
+        "topic_id": 6240,
+        "subcategory_id": 5105,
+        "category_id": 1066,
+        "title_raw": "بعض ما سخر الله لحياة العباد في الأرض"
+      },
+      {
+        "topic_id": 6958,
+        "subcategory_id": 5817,
+        "category_id": 1223,
+        "title_raw": "عن سيدنا محمد عليه الصلاة والسلام"
+      }
+    ],
+    "25-11": [
+      {
+        "topic_id": 111,
+        "subcategory_id": 71,
+        "category_id": 13,
+        "title_raw": "الملحدون المنكرون ليوم البعث"
+      },
+      {
+        "topic_id": 535,
+        "subcategory_id": 224,
+        "category_id": 19,
+        "title_raw": "أسماء أخرى"
+      },
+      {
+        "topic_id": 536,
+        "subcategory_id": 225,
+        "category_id": 19,
+        "title_raw": "أسماء النار"
+      },
+      {
+        "topic_id": 1589,
+        "subcategory_id": 826,
+        "category_id": 151,
+        "title_raw": "النار:أسماؤها:السعير"
+      },
+      {
+        "topic_id": 1605,
+        "subcategory_id": 826,
+        "category_id": 151,
+        "title_raw": "النار:أصحابها"
+      },
+      {
+        "topic_id": 1606,
+        "subcategory_id": 826,
+        "category_id": 151,
+        "title_raw": "النار:صفاتها"
+      },
+      {
+        "topic_id": 1675,
+        "subcategory_id": 831,
+        "category_id": 151,
+        "title_raw": "إثباته"
+      },
+      {
+        "topic_id": 2546,
+        "subcategory_id": 1681,
+        "category_id": 321,
+        "title_raw": "الجنة"
+      },
+      {
+        "topic_id": 2569,
+        "subcategory_id": 1704,
+        "category_id": 321,
+        "title_raw": "لا يستوي أصحاب النار وأصحاب الجنة"
+      },
+      {
+        "topic_id": 3676,
+        "subcategory_id": 2725,
+        "category_id": 543,
+        "title_raw": "الساعة"
+      },
+      {
+        "topic_id": 3678,
+        "subcategory_id": 2727,
+        "category_id": 543,
+        "title_raw": "تكذيب الكفار بها وعقابهم"
+      },
+      {
+        "topic_id": 6958,
+        "subcategory_id": 5817,
+        "category_id": 1223,
+        "title_raw": "عن سيدنا محمد عليه الصلاة والسلام"
+      }
+    ],
+    "25-12": [
+      {
+        "topic_id": 1605,
+        "subcategory_id": 826,
+        "category_id": 151,
+        "title_raw": "النار:أصحابها"
+      },
+      {
+        "topic_id": 1606,
+        "subcategory_id": 826,
+        "category_id": 151,
+        "title_raw": "النار:صفاتها"
+      },
+      {
+        "topic_id": 3612,
+        "subcategory_id": 2661,
+        "category_id": 525,
+        "title_raw": "الزفير"
+      },
+      {
+        "topic_id": 3614,
+        "subcategory_id": 2663,
+        "category_id": 525,
+        "title_raw": "صوت جهنم عند رؤية الكفار"
+      },
+      {
+        "topic_id": 7224,
+        "subcategory_id": 6082,
+        "category_id": 1297,
+        "title_raw": "أبوبها-وقودها-أنكالها-طعامها-شرابها"
+      },
+      {
+        "topic_id": 7225,
+        "subcategory_id": 6082,
+        "category_id": 1297,
+        "title_raw": "وصف النار"
+      }
+    ],
+    "25-13": [
+      {
+        "topic_id": 1605,
+        "subcategory_id": 826,
+        "category_id": 151,
+        "title_raw": "النار:أصحابها"
+      },
+      {
+        "topic_id": 1606,
+        "subcategory_id": 826,
+        "category_id": 151,
+        "title_raw": "النار:صفاتها"
+      },
+      {
+        "topic_id": 6612,
+        "subcategory_id": 5471,
+        "category_id": 1134,
+        "title_raw": "حال الكافرين في النار"
+      },
+      {
+        "topic_id": 6614,
+        "subcategory_id": 5473,
+        "category_id": 1134,
+        "title_raw": "مواقف مخزية للكافرين"
+      }
+    ],
+    "25-14": [
+      {
+        "topic_id": 1605,
+        "subcategory_id": 826,
+        "category_id": 151,
+        "title_raw": "النار:أصحابها"
+      },
+      {
+        "topic_id": 1606,
+        "subcategory_id": 826,
+        "category_id": 151,
+        "title_raw": "النار:صفاتها"
+      }
+    ],
+    "25-15": [
+      {
+        "topic_id": 426,
+        "subcategory_id": 115,
+        "category_id": 15,
+        "title_raw": "أسماء الجنة"
+      },
+      {
+        "topic_id": 428,
+        "subcategory_id": 117,
+        "category_id": 15,
+        "title_raw": "أسماء تبدأ بجنة"
+      },
+      {
+        "topic_id": 1554,
+        "subcategory_id": 826,
+        "category_id": 151,
+        "title_raw": "الجنة:أسماؤها:جنة الخلد"
+      },
+      {
+        "topic_id": 1568,
+        "subcategory_id": 826,
+        "category_id": 151,
+        "title_raw": "الجنة:أصحابها"
+      },
+      {
+        "topic_id": 1571,
+        "subcategory_id": 826,
+        "category_id": 151,
+        "title_raw": "الخلود:الخلود في النعيم"
+      },
+      {
+        "topic_id": 1605,
+        "subcategory_id": 826,
+        "category_id": 151,
+        "title_raw": "النار:أصحابها"
+      },
+      {
+        "topic_id": 1689,
+        "subcategory_id": 831,
+        "category_id": 151,
+        "title_raw": "جزاء العمل الحسن"
+      },
+      {
+        "topic_id": 2331,
+        "subcategory_id": 1466,
+        "category_id": 271,
+        "title_raw": "التقوى"
+      },
+      {
+        "topic_id": 2336,
+        "subcategory_id": 1471,
+        "category_id": 271,
+        "title_raw": "حسن مثوبتهم في الآخرة"
+      },
+      {
+        "topic_id": 2546,
+        "subcategory_id": 1681,
+        "category_id": 321,
+        "title_raw": "الجنة"
+      },
+      {
+        "topic_id": 2564,
+        "subcategory_id": 1699,
+        "category_id": 321,
+        "title_raw": "صنوف الجنات [جنة الخلد]"
+      },
+      {
+        "topic_id": 2570,
+        "subcategory_id": 1705,
+        "category_id": 321,
+        "title_raw": "لهم فيها ما يشاءون"
+      },
+      {
+        "topic_id": 4746,
+        "subcategory_id": 3700,
+        "category_id": 780,
+        "title_raw": "العمل المفضي إلى النجاح"
+      },
+      {
+        "topic_id": 4908,
+        "subcategory_id": 3817,
+        "category_id": 818,
+        "title_raw": "الجنة"
+      }
+    ],
+    "25-16": [
+      {
+        "topic_id": 1568,
+        "subcategory_id": 826,
+        "category_id": 151,
+        "title_raw": "الجنة:أصحابها"
+      },
+      {
+        "topic_id": 4746,
+        "subcategory_id": 3700,
+        "category_id": 780,
+        "title_raw": "العمل المفضي إلى النجاح"
+      },
+      {
+        "topic_id": 4908,
+        "subcategory_id": 3817,
+        "category_id": 818,
+        "title_raw": "الجنة"
+      },
+      {
+        "topic_id": 6396,
+        "subcategory_id": 5261,
+        "category_id": 1096,
+        "title_raw": "إن وعد الله حق"
+      },
+      {
+        "topic_id": 6398,
+        "subcategory_id": 5263,
+        "category_id": 1096,
+        "title_raw": "الوعد"
+      }
+    ],
+    "25-17": [
+      {
+        "topic_id": 92,
+        "subcategory_id": 71,
+        "category_id": 13,
+        "title_raw": "الكافرون:تخلي المتبوعين عن الأتباع"
+      },
+      {
+        "topic_id": 684,
+        "subcategory_id": 373,
+        "category_id": 60,
+        "title_raw": "ابن السبيل"
+      },
+      {
+        "topic_id": 685,
+        "subcategory_id": 374,
+        "category_id": 60,
+        "title_raw": "ما يهدى إليه الإنسان من طريقي الخير أو الشر"
+      },
+      {
+        "topic_id": 1681,
+        "subcategory_id": 831,
+        "category_id": 151,
+        "title_raw": "الحشر"
+      },
+      {
+        "topic_id": 2792,
+        "subcategory_id": 1884,
+        "category_id": 354,
+        "title_raw": "الحشر"
+      },
+      {
+        "topic_id": 2795,
+        "subcategory_id": 1887,
+        "category_id": 354,
+        "title_raw": "ما يقال للمشركين عند الحشر عن شركائهم"
+      },
+      {
+        "topic_id": 4909,
+        "subcategory_id": 3818,
+        "category_id": 818,
+        "title_raw": "الحساب واليوم الاخر"
+      }
+    ],
+    "25-18": [
+      {
+        "topic_id": 92,
+        "subcategory_id": 71,
+        "category_id": 13,
+        "title_raw": "الكافرون:تخلي المتبوعين عن الأتباع"
+      },
+      {
+        "topic_id": 2280,
+        "subcategory_id": 1415,
+        "category_id": 257,
+        "title_raw": "التسبيح"
+      },
+      {
+        "topic_id": 2292,
+        "subcategory_id": 1427,
+        "category_id": 257,
+        "title_raw": "صيغ من التسابيح [سبحانك]"
+      },
+      {
+        "topic_id": 4909,
+        "subcategory_id": 3818,
+        "category_id": 818,
+        "title_raw": "الحساب واليوم الاخر"
+      },
+      {
+        "topic_id": 6079,
+        "subcategory_id": 4944,
+        "category_id": 1037,
+        "title_raw": "النسيان"
+      },
+      {
+        "topic_id": 6082,
+        "subcategory_id": 4947,
+        "category_id": 1037,
+        "title_raw": "طول الأمد والنسيان"
+      },
+      {
+        "topic_id": 6277,
+        "subcategory_id": 5142,
+        "category_id": 1071,
+        "title_raw": "الذين اتخذوا من دون الله أولياء وسوء عواقبهم"
+      },
+      {
+        "topic_id": 6289,
+        "subcategory_id": 5154,
+        "category_id": 1071,
+        "title_raw": "الولي والأولياء"
+      }
+    ],
+    "25-19": [
+      {
+        "topic_id": 3330,
+        "subcategory_id": 2379,
+        "category_id": 454,
+        "title_raw": "الذنب"
+      },
+      {
+        "topic_id": 3333,
+        "subcategory_id": 2382,
+        "category_id": 454,
+        "title_raw": "الذنوب سبب المصائب"
+      },
+      {
+        "topic_id": 4414,
+        "subcategory_id": 3461,
+        "category_id": 731,
+        "title_raw": "الظلم"
+      },
+      {
+        "topic_id": 4422,
+        "subcategory_id": 3469,
+        "category_id": 731,
+        "title_raw": "جزاء الظالمين"
+      },
+      {
+        "topic_id": 4423,
+        "subcategory_id": 3470,
+        "category_id": 731,
+        "title_raw": "الخذلان والاهلاك"
+      },
+      {
+        "topic_id": 4909,
+        "subcategory_id": 3818,
+        "category_id": 818,
+        "title_raw": "الحساب واليوم الاخر"
+      }
+    ],
+    "25-20": [
+      {
+        "topic_id": 232,
+        "subcategory_id": 71,
+        "category_id": 13,
+        "title_raw": "توحيد الله تعالى:صفات الله تعالى:بصيراً"
+      },
+      {
+        "topic_id": 465,
+        "subcategory_id": 154,
+        "category_id": 18,
+        "title_raw": "أسماء الله الحسنى"
+      },
+      {
+        "topic_id": 473,
+        "subcategory_id": 162,
+        "category_id": 18,
+        "title_raw": "البصير"
+      },
+      {
+        "topic_id": 1884,
+        "subcategory_id": 1022,
+        "category_id": 183,
+        "title_raw": "أكل الرسل للطعام تأكيد لبشريتهم"
+      },
+      {
+        "topic_id": 1898,
+        "subcategory_id": 1036,
+        "category_id": 183,
+        "title_raw": "الاكل"
+      },
+      {
+        "topic_id": 3470,
+        "subcategory_id": 2519,
+        "category_id": 479,
+        "title_raw": "الرسالة والرسل"
+      },
+      {
+        "topic_id": 3479,
+        "subcategory_id": 2528,
+        "category_id": 479,
+        "title_raw": "السنن العامة للرسل [كونهم بشراً من البشر]"
+      },
+      {
+        "topic_id": 3877,
+        "subcategory_id": 2926,
+        "category_id": 610,
+        "title_raw": "السًوق"
+      },
+      {
+        "topic_id": 3878,
+        "subcategory_id": 2927,
+        "category_id": 610,
+        "title_raw": "انكار الكفار مشى الرسول في الأسواق"
+      },
+      {
+        "topic_id": 4291,
+        "subcategory_id": 3338,
+        "category_id": 709,
+        "title_raw": "أكل الطعام دليل بشرية الرسل"
+      },
+      {
+        "topic_id": 4293,
+        "subcategory_id": 3340,
+        "category_id": 709,
+        "title_raw": "الطعام"
+      },
+      {
+        "topic_id": 4939,
+        "subcategory_id": 3848,
+        "category_id": 824,
+        "title_raw": "الفتنة"
+      },
+      {
+        "topic_id": 5532,
+        "subcategory_id": 4400,
+        "category_id": 939,
+        "title_raw": "الله [مرسل الرسل]"
+      },
+      {
+        "topic_id": 5536,
+        "subcategory_id": 4404,
+        "category_id": 939,
+        "title_raw": "الله جل جلاله"
+      },
+      {
+        "topic_id": 5811,
+        "subcategory_id": 4678,
+        "category_id": 988,
+        "title_raw": "الملائكة"
+      },
+      {
+        "topic_id": 5821,
+        "subcategory_id": 4688,
+        "category_id": 988,
+        "title_raw": "لا يكون الملك رسولاً إلى الناس"
+      },
+      {
+        "topic_id": 6657,
+        "subcategory_id": 5516,
+        "category_id": 1144,
+        "title_raw": "الرسول البشر"
+      },
+      {
+        "topic_id": 6671,
+        "subcategory_id": 5530,
+        "category_id": 1144,
+        "title_raw": "خاتم الأنبياء محمد صلى الله عليه وسلم"
+      },
+      {
+        "topic_id": 6782,
+        "subcategory_id": 5641,
+        "category_id": 1174,
+        "title_raw": "الفتنة"
+      },
+      {
+        "topic_id": 6958,
+        "subcategory_id": 5817,
+        "category_id": 1223,
+        "title_raw": "عن سيدنا محمد عليه الصلاة والسلام"
+      },
+      {
+        "topic_id": 7028,
+        "subcategory_id": 5887,
+        "category_id": 1248,
+        "title_raw": "انكار القوم لدعوة الرسول"
+      },
+      {
+        "topic_id": 7032,
+        "subcategory_id": 5891,
+        "category_id": 1248,
+        "title_raw": "محمد رسول الله"
+      }
+    ],
+    "25-21": [
+      {
+        "topic_id": 1372,
+        "subcategory_id": 806,
+        "category_id": 148,
+        "title_raw": "التكبر"
+      },
+      {
+        "topic_id": 1617,
+        "subcategory_id": 828,
+        "category_id": 151,
+        "title_raw": "الرجاء بالله جل وعلا"
+      },
+      {
+        "topic_id": 1755,
+        "subcategory_id": 893,
+        "category_id": 162,
+        "title_raw": "الاجرام والمجرمون"
+      },
+      {
+        "topic_id": 1759,
+        "subcategory_id": 897,
+        "category_id": 162,
+        "title_raw": "المجرمون هم [المعادون لأنبياء الله ورسله]"
+      },
+      {
+        "topic_id": 1760,
+        "subcategory_id": 898,
+        "category_id": 162,
+        "title_raw": "المجرمون هم [المكذبون بآيات الله والمستكبرون على الحق]"
+      },
+      {
+        "topic_id": 2345,
+        "subcategory_id": 1480,
+        "category_id": 273,
+        "title_raw": "التكبر"
+      },
+      {
+        "topic_id": 3347,
+        "subcategory_id": 2396,
+        "category_id": 457,
+        "title_raw": "الرجاء"
+      },
+      {
+        "topic_id": 3349,
+        "subcategory_id": 2398,
+        "category_id": 457,
+        "title_raw": "انعدام الرجاء وأثره في السلوك وفي المصير"
+      },
+      {
+        "topic_id": 4921,
+        "subcategory_id": 3830,
+        "category_id": 818,
+        "title_raw": "ملائكة"
+      }
+    ],
+    "25-22": [
+      {
+        "topic_id": 3755,
+        "subcategory_id": 2804,
+        "category_id": 570,
+        "title_raw": "السقي"
+      },
+      {
+        "topic_id": 4921,
+        "subcategory_id": 3830,
+        "category_id": 818,
+        "title_raw": "ملائكة"
+      }
+    ],
+    "25-23": [
+      {
+        "topic_id": 100,
+        "subcategory_id": 71,
+        "category_id": 13,
+        "title_raw": "الكافرون:عمل الكفار لا ينفعهم يوم القيامة"
+      },
+      {
+        "topic_id": 104,
+        "subcategory_id": 71,
+        "category_id": 13,
+        "title_raw": "الكافرون:نتيجة عمل الكفار"
+      },
+      {
+        "topic_id": 116,
+        "subcategory_id": 71,
+        "category_id": 13,
+        "title_raw": "توحيد الله تعالى:إنذار من لا يعترف بتوحيد الله تعالى بالانتقام"
+      }
+    ],
+    "25-24": [
+      {
+        "topic_id": 1568,
+        "subcategory_id": 826,
+        "category_id": 151,
+        "title_raw": "الجنة:أصحابها"
+      },
+      {
+        "topic_id": 1631,
+        "subcategory_id": 829,
+        "category_id": 151,
+        "title_raw": "ما أعده الله لهم"
+      },
+      {
+        "topic_id": 1632,
+        "subcategory_id": 829,
+        "category_id": 151,
+        "title_raw": "وعده إياهم"
+      },
+      {
+        "topic_id": 2546,
+        "subcategory_id": 1681,
+        "category_id": 321,
+        "title_raw": "الجنة"
+      },
+      {
+        "topic_id": 2547,
+        "subcategory_id": 1682,
+        "category_id": 321,
+        "title_raw": "الجنة حسنت مستقراً ومقاماً"
+      },
+      {
+        "topic_id": 4909,
+        "subcategory_id": 3818,
+        "category_id": 818,
+        "title_raw": "الحساب واليوم الاخر"
+      }
+    ],
+    "25-25": [
+      {
+        "topic_id": 1414,
+        "subcategory_id": 806,
+        "category_id": 148,
+        "title_raw": "شهادة الزور"
+      },
+      {
+        "topic_id": 1674,
+        "subcategory_id": 831,
+        "category_id": 151,
+        "title_raw": "أهواله"
+      },
+      {
+        "topic_id": 1937,
+        "subcategory_id": 1075,
+        "category_id": 185,
+        "title_raw": "الانشقاق"
+      },
+      {
+        "topic_id": 1940,
+        "subcategory_id": 1078,
+        "category_id": 185,
+        "title_raw": "حالة السماء يوم القيامة"
+      },
+      {
+        "topic_id": 3468,
+        "subcategory_id": 2517,
+        "category_id": 479,
+        "title_raw": "الرسالات [للتبشير والإنذار]"
+      },
+      {
+        "topic_id": 3470,
+        "subcategory_id": 2519,
+        "category_id": 479,
+        "title_raw": "الرسالة والرسل"
+      },
+      {
+        "topic_id": 4884,
+        "subcategory_id": 3793,
+        "category_id": 811,
+        "title_raw": "الغمام"
+      },
+      {
+        "topic_id": 4909,
+        "subcategory_id": 3818,
+        "category_id": 818,
+        "title_raw": "الحساب واليوم الاخر"
+      },
+      {
+        "topic_id": 4921,
+        "subcategory_id": 3830,
+        "category_id": 818,
+        "title_raw": "ملائكة"
+      }
+    ],
+    "25-26": [
+      {
+        "topic_id": 465,
+        "subcategory_id": 154,
+        "category_id": 18,
+        "title_raw": "أسماء الله الحسنى"
+      },
+      {
+        "topic_id": 487,
+        "subcategory_id": 176,
+        "category_id": 18,
+        "title_raw": "الرحمن"
+      },
+      {
+        "topic_id": 539,
+        "subcategory_id": 228,
+        "category_id": 20,
+        "title_raw": "أسماء اليوم الآخر"
+      },
+      {
+        "topic_id": 554,
+        "subcategory_id": 243,
+        "category_id": 20,
+        "title_raw": "يوم الفصل"
+      },
+      {
+        "topic_id": 4568,
+        "subcategory_id": 3615,
+        "category_id": 756,
+        "title_raw": "العسر"
+      },
+      {
+        "topic_id": 4570,
+        "subcategory_id": 3617,
+        "category_id": 756,
+        "title_raw": "اليوم العسير"
+      },
+      {
+        "topic_id": 4909,
+        "subcategory_id": 3818,
+        "category_id": 818,
+        "title_raw": "الحساب واليوم الاخر"
+      },
+      {
+        "topic_id": 4921,
+        "subcategory_id": 3830,
+        "category_id": 818,
+        "title_raw": "ملائكة"
+      },
+      {
+        "topic_id": 5523,
+        "subcategory_id": 4391,
+        "category_id": 939,
+        "title_raw": "الرحمن، الرحيم، الرءوف، الغفور"
+      },
+      {
+        "topic_id": 5536,
+        "subcategory_id": 4404,
+        "category_id": 939,
+        "title_raw": "الله جل جلاله"
+      },
+      {
+        "topic_id": 5552,
+        "subcategory_id": 4420,
+        "category_id": 939,
+        "title_raw": "مالك الملك [له ما في السموات والأرض]"
+      },
+      {
+        "topic_id": 6572,
+        "subcategory_id": 5431,
+        "category_id": 1124,
+        "title_raw": "تملك الأموال"
+      }
+    ],
+    "25-27": [
+      {
+        "topic_id": 105,
+        "subcategory_id": 71,
+        "category_id": 13,
+        "title_raw": "الكافرون:ندم الكفار"
+      },
+      {
+        "topic_id": 2792,
+        "subcategory_id": 1884,
+        "category_id": 354,
+        "title_raw": "الحشر"
+      },
+      {
+        "topic_id": 4414,
+        "subcategory_id": 3461,
+        "category_id": 731,
+        "title_raw": "الظلم"
+      },
+      {
+        "topic_id": 4422,
+        "subcategory_id": 3469,
+        "category_id": 731,
+        "title_raw": "جزاء الظالمين"
+      },
+      {
+        "topic_id": 4909,
+        "subcategory_id": 3818,
+        "category_id": 818,
+        "title_raw": "الحساب واليوم الاخر"
+      },
+      {
+        "topic_id": 5892,
+        "subcategory_id": 4758,
+        "category_id": 1003,
+        "title_raw": "الموادة على الباطل لا تغني من الله شيئاً"
+      },
+      {
+        "topic_id": 5893,
+        "subcategory_id": 4759,
+        "category_id": 1003,
+        "title_raw": "المودة"
+      },
+      {
+        "topic_id": 6893,
+        "subcategory_id": 5752,
+        "category_id": 1201,
+        "title_raw": "العض"
+      }
+    ],
+    "25-28": [
+      {
+        "topic_id": 105,
+        "subcategory_id": 71,
+        "category_id": 13,
+        "title_raw": "الكافرون:ندم الكفار"
+      },
+      {
+        "topic_id": 4909,
+        "subcategory_id": 3818,
+        "category_id": 818,
+        "title_raw": "الحساب واليوم الاخر"
+      },
+      {
+        "topic_id": 4912,
+        "subcategory_id": 3821,
+        "category_id": 818,
+        "title_raw": "الشيطان"
+      }
+    ],
+    "25-29": [
+      {
+        "topic_id": 105,
+        "subcategory_id": 71,
+        "category_id": 13,
+        "title_raw": "الكافرون:ندم الكفار"
+      },
+      {
+        "topic_id": 1574,
+        "subcategory_id": 826,
+        "category_id": 151,
+        "title_raw": "الشيطان:سلوكه الشيطاني"
+      },
+      {
+        "topic_id": 1576,
+        "subcategory_id": 826,
+        "category_id": 151,
+        "title_raw": "الشيطان:وسوسته"
+      },
+      {
+        "topic_id": 2941,
+        "subcategory_id": 2033,
+        "category_id": 386,
+        "title_raw": "الخذلان"
+      },
+      {
+        "topic_id": 4042,
+        "subcategory_id": 3090,
+        "category_id": 644,
+        "title_raw": "الشيطان"
+      },
+      {
+        "topic_id": 4044,
+        "subcategory_id": 3092,
+        "category_id": 644,
+        "title_raw": "وساوس الشيطان"
+      },
+      {
+        "topic_id": 4909,
+        "subcategory_id": 3818,
+        "category_id": 818,
+        "title_raw": "الحساب واليوم الاخر"
+      },
+      {
+        "topic_id": 4912,
+        "subcategory_id": 3821,
+        "category_id": 818,
+        "title_raw": "الشيطان"
+      }
+    ],
+    "25-30": [
+      {
+        "topic_id": 4909,
+        "subcategory_id": 3818,
+        "category_id": 818,
+        "title_raw": "الحساب واليوم الاخر"
+      },
+      {
+        "topic_id": 5112,
+        "subcategory_id": 4021,
+        "category_id": 870,
+        "title_raw": "القرآن"
+      },
+      {
+        "topic_id": 5124,
+        "subcategory_id": 4033,
+        "category_id": 870,
+        "title_raw": "شكاة الرسول من هجر القرآن"
+      },
+      {
+        "topic_id": 5167,
+        "subcategory_id": 4072,
+        "category_id": 871,
+        "title_raw": "حقيقته وتصديقه للكتب الأوائل"
+      },
+      {
+        "topic_id": 5170,
+        "subcategory_id": 4075,
+        "category_id": 871,
+        "title_raw": "هجره"
+      },
+      {
+        "topic_id": 6270,
+        "subcategory_id": 5135,
+        "category_id": 1070,
+        "title_raw": "الهجر"
+      },
+      {
+        "topic_id": 6272,
+        "subcategory_id": 5137,
+        "category_id": 1070,
+        "title_raw": "شكاة الرسول من هجر القوم للقرآن"
+      }
+    ],
+    "25-31": [
+      {
+        "topic_id": 129,
+        "subcategory_id": 71,
+        "category_id": 13,
+        "title_raw": "توحيد الله تعالى:ربوبيته جل وعلا"
+      },
+      {
+        "topic_id": 220,
+        "subcategory_id": 71,
+        "category_id": 13,
+        "title_raw": "توحيد الله تعالى:صفات الله تعالى:النصير"
+      },
+      {
+        "topic_id": 222,
+        "subcategory_id": 71,
+        "category_id": 13,
+        "title_raw": "توحيد الله تعالى:صفات الله تعالى:الهادي"
+      },
+      {
+        "topic_id": 372,
+        "subcategory_id": 77,
+        "category_id": 13,
+        "title_raw": "تسليته وتثبيته"
+      },
+      {
+        "topic_id": 383,
+        "subcategory_id": 77,
+        "category_id": 13,
+        "title_raw": "مخاطبة الله إياه"
+      },
+      {
+        "topic_id": 1520,
+        "subcategory_id": 823,
+        "category_id": 151,
+        "title_raw": "لكل نبي عدو"
+      },
+      {
+        "topic_id": 4494,
+        "subcategory_id": 3541,
+        "category_id": 746,
+        "title_raw": "العدوان"
+      },
+      {
+        "topic_id": 4499,
+        "subcategory_id": 3546,
+        "category_id": 746,
+        "title_raw": "عداوة المبطلين لأهل الهدى والحق"
+      },
+      {
+        "topic_id": 5167,
+        "subcategory_id": 4072,
+        "category_id": 871,
+        "title_raw": "حقيقته وتصديقه للكتب الأوائل"
+      },
+      {
+        "topic_id": 5536,
+        "subcategory_id": 4404,
+        "category_id": 939,
+        "title_raw": "الله جل جلاله"
+      },
+      {
+        "topic_id": 5545,
+        "subcategory_id": 4413,
+        "category_id": 939,
+        "title_raw": "سنن الله في خلقه [أن ينصر من ينصرونه]"
+      },
+      {
+        "topic_id": 6325,
+        "subcategory_id": 5190,
+        "category_id": 1081,
+        "title_raw": "إن هدى الله هو الهدى"
+      },
+      {
+        "topic_id": 6339,
+        "subcategory_id": 5204,
+        "category_id": 1081,
+        "title_raw": "الهدى [نقيض الضلال]"
+      }
+    ],
+    "25-32": [
+      {
+        "topic_id": 383,
+        "subcategory_id": 77,
+        "category_id": 13,
+        "title_raw": "مخاطبة الله إياه"
+      },
+      {
+        "topic_id": 1579,
+        "subcategory_id": 826,
+        "category_id": 151,
+        "title_raw": "الغيب النفسي:الفؤاد"
+      },
+      {
+        "topic_id": 2410,
+        "subcategory_id": 1545,
+        "category_id": 294,
+        "title_raw": "الثبات"
+      },
+      {
+        "topic_id": 2411,
+        "subcategory_id": 1546,
+        "category_id": 295,
+        "title_raw": "الثبات والتثبيت"
+      },
+      {
+        "topic_id": 2412,
+        "subcategory_id": 1547,
+        "category_id": 295,
+        "title_raw": "تثبيت الله للرسول في مواجهته للكفرة"
+      },
+      {
+        "topic_id": 5112,
+        "subcategory_id": 4021,
+        "category_id": 870,
+        "title_raw": "القرآن"
+      },
+      {
+        "topic_id": 5140,
+        "subcategory_id": 4049,
+        "category_id": 870,
+        "title_raw": "قرآن"
+      },
+      {
+        "topic_id": 5146,
+        "subcategory_id": 4055,
+        "category_id": 870,
+        "title_raw": "مقالات المشركين عن القرآن [قالوا لولا نزل عليه جملة]"
+      },
+      {
+        "topic_id": 5167,
+        "subcategory_id": 4072,
+        "category_id": 871,
+        "title_raw": "حقيقته وتصديقه للكتب الأوائل"
+      },
+      {
+        "topic_id": 5332,
+        "subcategory_id": 4200,
+        "category_id": 894,
+        "title_raw": "أحواله الإيمانية"
+      },
+      {
+        "topic_id": 5334,
+        "subcategory_id": 4202,
+        "category_id": 894,
+        "title_raw": "القلب"
+      },
+      {
+        "topic_id": 5533,
+        "subcategory_id": 4401,
+        "category_id": 939,
+        "title_raw": "الله [منزل الكتاب]"
+      },
+      {
+        "topic_id": 5536,
+        "subcategory_id": 4404,
+        "category_id": 939,
+        "title_raw": "الله جل جلاله"
+      },
+      {
+        "topic_id": 6671,
+        "subcategory_id": 5530,
+        "category_id": 1144,
+        "title_raw": "خاتم الأنبياء محمد صلى الله عليه وسلم"
+      },
+      {
+        "topic_id": 6674,
+        "subcategory_id": 5533,
+        "category_id": 1144,
+        "title_raw": "دفاع الله عنه وربطه على قلبه"
+      },
+      {
+        "topic_id": 7028,
+        "subcategory_id": 5887,
+        "category_id": 1248,
+        "title_raw": "انكار القوم لدعوة الرسول"
+      },
+      {
+        "topic_id": 7032,
+        "subcategory_id": 5891,
+        "category_id": 1248,
+        "title_raw": "محمد رسول الله"
+      }
+    ],
+    "25-33": [
+      {
+        "topic_id": 383,
+        "subcategory_id": 77,
+        "category_id": 13,
+        "title_raw": "مخاطبة الله إياه"
+      },
+      {
+        "topic_id": 1783,
+        "subcategory_id": 921,
+        "category_id": 163,
+        "title_raw": "الله أحسن كل شيء خلقه"
+      },
+      {
+        "topic_id": 2782,
+        "subcategory_id": 1874,
+        "category_id": 352,
+        "title_raw": "الأحسن كل ما صدر عن الله"
+      },
+      {
+        "topic_id": 2784,
+        "subcategory_id": 1876,
+        "category_id": 352,
+        "title_raw": "الحسنة"
+      },
+      {
+        "topic_id": 3149,
+        "subcategory_id": 2237,
+        "category_id": 430,
+        "title_raw": "ضرب المثل"
+      },
+      {
+        "topic_id": 5157,
+        "subcategory_id": 4065,
+        "category_id": 871,
+        "title_raw": "ضرب الله الأمثال للناس"
+      },
+      {
+        "topic_id": 5172,
+        "subcategory_id": 4077,
+        "category_id": 871,
+        "title_raw": "وصفه ووجوب الإيمان به"
+      },
+      {
+        "topic_id": 5258,
+        "subcategory_id": 4163,
+        "category_id": 888,
+        "title_raw": "أمثال"
+      }
+    ],
+    "25-34": [
+      {
+        "topic_id": 98,
+        "subcategory_id": 71,
+        "category_id": 13,
+        "title_raw": "الكافرون:صفات الكفار"
+      },
+      {
+        "topic_id": 1605,
+        "subcategory_id": 826,
+        "category_id": 151,
+        "title_raw": "النار:أصحابها"
+      },
+      {
+        "topic_id": 2463,
+        "subcategory_id": 1598,
+        "category_id": 307,
+        "title_raw": "الجحيم"
+      },
+      {
+        "topic_id": 2466,
+        "subcategory_id": 1601,
+        "category_id": 307,
+        "title_raw": "كيف يساق أصحاب النار إليها"
+      },
+      {
+        "topic_id": 2792,
+        "subcategory_id": 1884,
+        "category_id": 354,
+        "title_raw": "الحشر"
+      },
+      {
+        "topic_id": 2796,
+        "subcategory_id": 1888,
+        "category_id": 354,
+        "title_raw": "هكذا يحشر المجرمون"
+      },
+      {
+        "topic_id": 4016,
+        "subcategory_id": 3065,
+        "category_id": 639,
+        "title_raw": "الشر"
+      },
+      {
+        "topic_id": 4025,
+        "subcategory_id": 3073,
+        "category_id": 639,
+        "title_raw": "شر الناس عند الله [المحشورون على وجوههم]"
+      },
+      {
+        "topic_id": 4250,
+        "subcategory_id": 3297,
+        "category_id": 699,
+        "title_raw": "الأضلون [المحشورون على وجوههم إلى جهنم]"
+      },
+      {
+        "topic_id": 4263,
+        "subcategory_id": 3310,
+        "category_id": 699,
+        "title_raw": "الضلال والضالون"
+      },
+      {
+        "topic_id": 6358,
+        "subcategory_id": 5223,
+        "category_id": 1084,
+        "title_raw": "المحشورون على وجوههم إلى جهنم"
+      },
+      {
+        "topic_id": 6359,
+        "subcategory_id": 5224,
+        "category_id": 1084,
+        "title_raw": "الوجه"
+      },
+      {
+        "topic_id": 6612,
+        "subcategory_id": 5471,
+        "category_id": 1134,
+        "title_raw": "حال الكافرين في النار"
+      }
+    ],
+    "25-35": [
+      {
+        "topic_id": 1022,
+        "subcategory_id": 509,
+        "category_id": 77,
+        "title_raw": "أساس الأخوة الود والمؤازرة"
+      },
+      {
+        "topic_id": 1024,
+        "subcategory_id": 511,
+        "category_id": 77,
+        "title_raw": "الأخوة"
+      },
+      {
+        "topic_id": 1610,
+        "subcategory_id": 827,
+        "category_id": 151,
+        "title_raw": "الكتب المقدسة"
+      },
+      {
+        "topic_id": 5303,
+        "subcategory_id": 4185,
+        "category_id": 888,
+        "title_raw": "موسى عليه السلام وفرعون"
+      },
+      {
+        "topic_id": 5533,
+        "subcategory_id": 4401,
+        "category_id": 939,
+        "title_raw": "الله [منزل الكتاب]"
+      },
+      {
+        "topic_id": 5536,
+        "subcategory_id": 4404,
+        "category_id": 939,
+        "title_raw": "الله جل جلاله"
+      },
+      {
+        "topic_id": 6371,
+        "subcategory_id": 5236,
+        "category_id": 1088,
+        "title_raw": "الوزارة والوزير"
+      },
+      {
+        "topic_id": 6372,
+        "subcategory_id": 5237,
+        "category_id": 1088,
+        "title_raw": "هارون وزيراً لموسى عليهما السلام"
+      },
+      {
+        "topic_id": 6373,
+        "subcategory_id": 5238,
+        "category_id": 1089,
+        "title_raw": "الوزير"
+      },
+      {
+        "topic_id": 7031,
+        "subcategory_id": 5890,
+        "category_id": 1248,
+        "title_raw": "تهديد المشركين باالعذاب"
+      },
+      {
+        "topic_id": 7032,
+        "subcategory_id": 5891,
+        "category_id": 1248,
+        "title_raw": "محمد رسول الله"
+      },
+      {
+        "topic_id": 7147,
+        "subcategory_id": 6005,
+        "category_id": 1282,
+        "title_raw": "إيتاؤه الكتاب والآيات والسلطان المبين"
+      },
+      {
+        "topic_id": 7161,
+        "subcategory_id": 6019,
+        "category_id": 1282,
+        "title_raw": "موسى عليه السلام"
+      },
+      {
+        "topic_id": 7171,
+        "subcategory_id": 6029,
+        "category_id": 1283,
+        "title_raw": "موسى المكلف بالدعوة"
+      },
+      {
+        "topic_id": 7172,
+        "subcategory_id": 6030,
+        "category_id": 1283,
+        "title_raw": "موسى و هارون"
+      },
+      {
+        "topic_id": 7206,
+        "subcategory_id": 6064,
+        "category_id": 1291,
+        "title_raw": "هارون عليه السلام"
+      },
+      {
+        "topic_id": 7207,
+        "subcategory_id": 6065,
+        "category_id": 1291,
+        "title_raw": "وزير موسى وصاحبه"
+      }
+    ],
+    "25-36": [
+      {
+        "topic_id": 3173,
+        "subcategory_id": 2253,
+        "category_id": 434,
+        "title_raw": "الدمار"
+      },
+      {
+        "topic_id": 3175,
+        "subcategory_id": 2255,
+        "category_id": 434,
+        "title_raw": "عقاب المكذبين بآيات الله والمفسدين في الأرض"
+      },
+      {
+        "topic_id": 5303,
+        "subcategory_id": 4185,
+        "category_id": 888,
+        "title_raw": "موسى عليه السلام وفرعون"
+      }
+    ],
+    "25-37": [
+      {
+        "topic_id": 18,
+        "subcategory_id": 18,
+        "category_id": 7,
+        "title_raw": "آيات الله في الكون وفي الخلق"
+      },
+      {
+        "topic_id": 19,
+        "subcategory_id": 19,
+        "category_id": 7,
+        "title_raw": "آيات الله في الكون وفي الناس"
+      },
+      {
+        "topic_id": 570,
+        "subcategory_id": 259,
+        "category_id": 24,
+        "title_raw": "أصحاب الرس"
+      },
+      {
+        "topic_id": 1136,
+        "subcategory_id": 623,
+        "category_id": 94,
+        "title_raw": "أصحاب الرس [إهلاكهم بما كذبو الرسل]"
+      },
+      {
+        "topic_id": 1144,
+        "subcategory_id": 631,
+        "category_id": 94,
+        "title_raw": "الأصحاب"
+      },
+      {
+        "topic_id": 4414,
+        "subcategory_id": 3461,
+        "category_id": 731,
+        "title_raw": "الظلم"
+      },
+      {
+        "topic_id": 4422,
+        "subcategory_id": 3469,
+        "category_id": 731,
+        "title_raw": "جزاء الظالمين"
+      },
+      {
+        "topic_id": 4508,
+        "subcategory_id": 3555,
+        "category_id": 747,
+        "title_raw": "العذاب"
+      },
+      {
+        "topic_id": 4514,
+        "subcategory_id": 3561,
+        "category_id": 747,
+        "title_raw": "العذاب الأليم [عذاب الظلمة]"
+      },
+      {
+        "topic_id": 4832,
+        "subcategory_id": 3742,
+        "category_id": 796,
+        "title_raw": "الغرق"
+      },
+      {
+        "topic_id": 4833,
+        "subcategory_id": 3743,
+        "category_id": 796,
+        "title_raw": "بعض عذاب الله للمخالفين عن أمره"
+      },
+      {
+        "topic_id": 5304,
+        "subcategory_id": 4185,
+        "category_id": 888,
+        "title_raw": "نوح عليه السلام"
+      },
+      {
+        "topic_id": 5323,
+        "subcategory_id": 4191,
+        "category_id": 888,
+        "title_raw": "قوم نوح"
+      },
+      {
+        "topic_id": 7182,
+        "subcategory_id": 6040,
+        "category_id": 1288,
+        "title_raw": "تنفيذ وعد الله تعالى و إغراق أهل الأرض جميعاً"
+      },
+      {
+        "topic_id": 7185,
+        "subcategory_id": 6043,
+        "category_id": 1288,
+        "title_raw": "نوح"
+      },
+      {
+        "topic_id": 7192,
+        "subcategory_id": 6050,
+        "category_id": 1289,
+        "title_raw": "صاروا مثلاً وعبرة"
+      },
+      {
+        "topic_id": 7194,
+        "subcategory_id": 6052,
+        "category_id": 1289,
+        "title_raw": "نوح عليه السلام"
+      }
+    ],
+    "25-38": [
+      {
+        "topic_id": 5112,
+        "subcategory_id": 4021,
+        "category_id": 870,
+        "title_raw": "القرآن"
+      },
+      {
+        "topic_id": 5129,
+        "subcategory_id": 4038,
+        "category_id": 870,
+        "title_raw": "ضرب الأمثال فيه ولماذا [مثل الطغاة المفسدين في الأرض]"
+      },
+      {
+        "topic_id": 5252,
+        "subcategory_id": 4157,
+        "category_id": 888,
+        "title_raw": "أصحاب الرس"
+      },
+      {
+        "topic_id": 5269,
+        "subcategory_id": 4173,
+        "category_id": 888,
+        "title_raw": "العبر التاريخية في أنباء القرى"
+      },
+      {
+        "topic_id": 5272,
+        "subcategory_id": 4176,
+        "category_id": 888,
+        "title_raw": "ثمود (قوم صالح)"
+      },
+      {
+        "topic_id": 5278,
+        "subcategory_id": 4181,
+        "category_id": 888,
+        "title_raw": "عاد (قوم هود)"
+      },
+      {
+        "topic_id": 6579,
+        "subcategory_id": 5438,
+        "category_id": 1125,
+        "title_raw": "ثمود"
+      },
+      {
+        "topic_id": 6580,
+        "subcategory_id": 5439,
+        "category_id": 1125,
+        "title_raw": "ضرب المثل بهم وجعلهم أحاديث"
+      },
+      {
+        "topic_id": 6824,
+        "subcategory_id": 5683,
+        "category_id": 1184,
+        "title_raw": "القوم يعقرون الناقة ويؤخذون بالصيحة"
+      },
+      {
+        "topic_id": 6826,
+        "subcategory_id": 5685,
+        "category_id": 1184,
+        "title_raw": "صالح عليه السلام"
+      },
+      {
+        "topic_id": 7216,
+        "subcategory_id": 6074,
+        "category_id": 1294,
+        "title_raw": "أصبحوا كغيرهم من المستكبرين على الحق مثلاً وعبرة"
+      },
+      {
+        "topic_id": 7221,
+        "subcategory_id": 6079,
+        "category_id": 1294,
+        "title_raw": "هود عليه السلام"
+      }
+    ],
+    "25-39": [
+      {
+        "topic_id": 2190,
+        "subcategory_id": 1328,
+        "category_id": 236,
+        "title_raw": "التباب والتبار"
+      },
+      {
+        "topic_id": 2193,
+        "subcategory_id": 1331,
+        "category_id": 236,
+        "title_raw": "مصير عبدة الأوثان ومكذبي الرسل"
+      },
+      {
+        "topic_id": 5269,
+        "subcategory_id": 4173,
+        "category_id": 888,
+        "title_raw": "العبر التاريخية في أنباء القرى"
+      },
+      {
+        "topic_id": 5278,
+        "subcategory_id": 4181,
+        "category_id": 888,
+        "title_raw": "عاد (قوم هود)"
+      }
+    ],
+    "25-40": [
+      {
+        "topic_id": 98,
+        "subcategory_id": 71,
+        "category_id": 13,
+        "title_raw": "الكافرون:صفات الكفار"
+      },
+      {
+        "topic_id": 3347,
+        "subcategory_id": 2396,
+        "category_id": 457,
+        "title_raw": "الرجاء"
+      },
+      {
+        "topic_id": 3349,
+        "subcategory_id": 2398,
+        "category_id": 457,
+        "title_raw": "انعدام الرجاء وأثره في السلوك وفي المصير"
+      },
+      {
+        "topic_id": 5269,
+        "subcategory_id": 4173,
+        "category_id": 888,
+        "title_raw": "العبر التاريخية في أنباء القرى"
+      },
+      {
+        "topic_id": 5787,
+        "subcategory_id": 4654,
+        "category_id": 983,
+        "title_raw": "أكثره في القرآن مطر السوء"
+      },
+      {
+        "topic_id": 5788,
+        "subcategory_id": 4655,
+        "category_id": 983,
+        "title_raw": "المطر"
+      }
+    ],
+    "25-41": [
+      {
+        "topic_id": 365,
+        "subcategory_id": 77,
+        "category_id": 13,
+        "title_raw": "أقوال الكافرين فيه"
+      },
+      {
+        "topic_id": 6311,
+        "subcategory_id": 5176,
+        "category_id": 1078,
+        "title_raw": "الاستهزاء بالرسل طبيعة الكفرة"
+      },
+      {
+        "topic_id": 6313,
+        "subcategory_id": 5178,
+        "category_id": 1078,
+        "title_raw": "الهزء والاستهزاء"
+      },
+      {
+        "topic_id": 6327,
+        "subcategory_id": 5192,
+        "category_id": 1081,
+        "title_raw": "اتباع الهوى يضل عن اتباع الحق"
+      },
+      {
+        "topic_id": 6340,
+        "subcategory_id": 5205,
+        "category_id": 1081,
+        "title_raw": "الهوى"
+      },
+      {
+        "topic_id": 6671,
+        "subcategory_id": 5530,
+        "category_id": 1144,
+        "title_raw": "خاتم الأنبياء محمد صلى الله عليه وسلم"
+      },
+      {
+        "topic_id": 6674,
+        "subcategory_id": 5533,
+        "category_id": 1144,
+        "title_raw": "دفاع الله عنه وربطه على قلبه"
+      },
+      {
+        "topic_id": 6958,
+        "subcategory_id": 5817,
+        "category_id": 1223,
+        "title_raw": "عن سيدنا محمد عليه الصلاة والسلام"
+      },
+      {
+        "topic_id": 7028,
+        "subcategory_id": 5887,
+        "category_id": 1248,
+        "title_raw": "انكار القوم لدعوة الرسول"
+      },
+      {
+        "topic_id": 7032,
+        "subcategory_id": 5891,
+        "category_id": 1248,
+        "title_raw": "محمد رسول الله"
+      }
+    ],
+    "25-42": [
+      {
+        "topic_id": 365,
+        "subcategory_id": 77,
+        "category_id": 13,
+        "title_raw": "أقوال الكافرين فيه"
+      },
+      {
+        "topic_id": 4253,
+        "subcategory_id": 3300,
+        "category_id": 699,
+        "title_raw": "الضالون [الذين يتبعون أهواءهم ضالون]"
+      },
+      {
+        "topic_id": 4263,
+        "subcategory_id": 3310,
+        "category_id": 699,
+        "title_raw": "الضلال والضالون"
+      },
+      {
+        "topic_id": 6834,
+        "subcategory_id": 5693,
+        "category_id": 1187,
+        "title_raw": "تهديدهم"
+      },
+      {
+        "topic_id": 6836,
+        "subcategory_id": 5695,
+        "category_id": 1187,
+        "title_raw": "صفات الكافرين"
+      },
+      {
+        "topic_id": 6958,
+        "subcategory_id": 5817,
+        "category_id": 1223,
+        "title_raw": "عن سيدنا محمد عليه الصلاة والسلام"
+      }
+    ],
+    "25-43": [
+      {
+        "topic_id": 98,
+        "subcategory_id": 71,
+        "category_id": 13,
+        "title_raw": "الكافرون:صفات الكفار"
+      },
+      {
+        "topic_id": 383,
+        "subcategory_id": 77,
+        "category_id": 13,
+        "title_raw": "مخاطبة الله إياه"
+      },
+      {
+        "topic_id": 1248,
+        "subcategory_id": 734,
+        "category_id": 116,
+        "title_raw": "الأنعام"
+      },
+      {
+        "topic_id": 1253,
+        "subcategory_id": 739,
+        "category_id": 116,
+        "title_raw": "تشبيه الضالين الغافلين بالأنعام"
+      },
+      {
+        "topic_id": 3138,
+        "subcategory_id": 2230,
+        "category_id": 429,
+        "title_raw": "الدعوة"
+      },
+      {
+        "topic_id": 3142,
+        "subcategory_id": 2234,
+        "category_id": 429,
+        "title_raw": "عقبات أمام الدعوة [غلبة الهوى على المدعوين]"
+      },
+      {
+        "topic_id": 4599,
+        "subcategory_id": 3645,
+        "category_id": 769,
+        "title_raw": "الذين لا يعقلون كما يراهم القرآن"
+      },
+      {
+        "topic_id": 4600,
+        "subcategory_id": 3646,
+        "category_id": 769,
+        "title_raw": "العقل"
+      },
+      {
+        "topic_id": 6958,
+        "subcategory_id": 5817,
+        "category_id": 1223,
+        "title_raw": "عن سيدنا محمد عليه الصلاة والسلام"
+      }
+    ],
+    "25-44": [
+      {
+        "topic_id": 93,
+        "subcategory_id": 71,
+        "category_id": 13,
+        "title_raw": "الكافرون:تشبيههم بالموتى والصم والبكم والعمي"
+      },
+      {
+        "topic_id": 98,
+        "subcategory_id": 71,
+        "category_id": 13,
+        "title_raw": "الكافرون:صفات الكفار"
+      },
+      {
+        "topic_id": 103,
+        "subcategory_id": 71,
+        "category_id": 13,
+        "title_raw": "الكافرون:مثال من لا يستجيب لله"
+      },
+      {
+        "topic_id": 383,
+        "subcategory_id": 77,
+        "category_id": 13,
+        "title_raw": "مخاطبة الله إياه"
+      },
+      {
+        "topic_id": 684,
+        "subcategory_id": 373,
+        "category_id": 60,
+        "title_raw": "ابن السبيل"
+      },
+      {
+        "topic_id": 685,
+        "subcategory_id": 374,
+        "category_id": 60,
+        "title_raw": "ما يهدى إليه الإنسان من طريقي الخير أو الشر"
+      },
+      {
+        "topic_id": 1248,
+        "subcategory_id": 734,
+        "category_id": 116,
+        "title_raw": "الأنعام"
+      },
+      {
+        "topic_id": 4178,
+        "subcategory_id": 3225,
+        "category_id": 676,
+        "title_raw": "الصمم"
+      },
+      {
+        "topic_id": 4251,
+        "subcategory_id": 3298,
+        "category_id": 699,
+        "title_raw": "الأضلون [من أصبح كالأنعام لا يعقل ولا يدرك الحق]"
+      },
+      {
+        "topic_id": 4263,
+        "subcategory_id": 3310,
+        "category_id": 699,
+        "title_raw": "الضلال والضالون"
+      },
+      {
+        "topic_id": 5977,
+        "subcategory_id": 4843,
+        "category_id": 1013,
+        "title_raw": "أكثر الناس لا يعقلون"
+      },
+      {
+        "topic_id": 5987,
+        "subcategory_id": 4853,
+        "category_id": 1013,
+        "title_raw": "الناس"
+      },
+      {
+        "topic_id": 6671,
+        "subcategory_id": 5530,
+        "category_id": 1144,
+        "title_raw": "خاتم الأنبياء محمد صلى الله عليه وسلم"
+      },
+      {
+        "topic_id": 6674,
+        "subcategory_id": 5533,
+        "category_id": 1144,
+        "title_raw": "دفاع الله عنه وربطه على قلبه"
+      }
+    ],
+    "25-45": [
+      {
+        "topic_id": 129,
+        "subcategory_id": 71,
+        "category_id": 13,
+        "title_raw": "توحيد الله تعالى:ربوبيته جل وعلا"
+      },
+      {
+        "topic_id": 319,
+        "subcategory_id": 71,
+        "category_id": 13,
+        "title_raw": "توحيد الله تعالى:وحدانيته"
+      },
+      {
+        "topic_id": 3970,
+        "subcategory_id": 3019,
+        "category_id": 632,
+        "title_raw": "الشمس"
+      },
+      {
+        "topic_id": 3972,
+        "subcategory_id": 3021,
+        "category_id": 632,
+        "title_raw": "ضياؤها"
+      },
+      {
+        "topic_id": 4383,
+        "subcategory_id": 3430,
+        "category_id": 729,
+        "title_raw": "الظل"
+      },
+      {
+        "topic_id": 4386,
+        "subcategory_id": 3433,
+        "category_id": 729,
+        "title_raw": "مد الظل من آيات الله"
+      },
+      {
+        "topic_id": 5490,
+        "subcategory_id": 4358,
+        "category_id": 928,
+        "title_raw": "آيات أرضيه"
+      }
+    ],
+    "25-46": [
+      {
+        "topic_id": 319,
+        "subcategory_id": 71,
+        "category_id": 13,
+        "title_raw": "توحيد الله تعالى:وحدانيته"
+      },
+      {
+        "topic_id": 5490,
+        "subcategory_id": 4358,
+        "category_id": 928,
+        "title_raw": "آيات أرضيه"
+      }
+    ],
+    "25-47": [
+      {
+        "topic_id": 319,
+        "subcategory_id": 71,
+        "category_id": 13,
+        "title_raw": "توحيد الله تعالى:وحدانيته"
+      },
+      {
+        "topic_id": 5490,
+        "subcategory_id": 4358,
+        "category_id": 928,
+        "title_raw": "آيات أرضيه"
+      },
+      {
+        "topic_id": 5572,
+        "subcategory_id": 4440,
+        "category_id": 944,
+        "title_raw": "الليل"
+      },
+      {
+        "topic_id": 5574,
+        "subcategory_id": 4442,
+        "category_id": 945,
+        "title_raw": "الليل للإنسان سكن والنهار معاش"
+      },
+      {
+        "topic_id": 5575,
+        "subcategory_id": 4443,
+        "category_id": 945,
+        "title_raw": "الليل والنهار"
+      },
+      {
+        "topic_id": 6230,
+        "subcategory_id": 5095,
+        "category_id": 1065,
+        "title_raw": "النهار عمل والليل سكن"
+      },
+      {
+        "topic_id": 6231,
+        "subcategory_id": 5096,
+        "category_id": 1065,
+        "title_raw": "النهار والليل"
+      },
+      {
+        "topic_id": 6260,
+        "subcategory_id": 5125,
+        "category_id": 1068,
+        "title_raw": "النوم"
+      },
+      {
+        "topic_id": 6263,
+        "subcategory_id": 5128,
+        "category_id": 1068,
+        "title_raw": "بعض نعم الله على الإنسان"
+      }
+    ],
+    "25-48": [
+      {
+        "topic_id": 319,
+        "subcategory_id": 71,
+        "category_id": 13,
+        "title_raw": "توحيد الله تعالى:وحدانيته"
+      },
+      {
+        "topic_id": 910,
+        "subcategory_id": 477,
+        "category_id": 76,
+        "title_raw": "باب إزالة النجاسة"
+      },
+      {
+        "topic_id": 917,
+        "subcategory_id": 477,
+        "category_id": 76,
+        "title_raw": "طهورية الماء"
+      },
+      {
+        "topic_id": 1065,
+        "subcategory_id": 552,
+        "category_id": 84,
+        "title_raw": "الأرض"
+      },
+      {
+        "topic_id": 1080,
+        "subcategory_id": 567,
+        "category_id": 84,
+        "title_raw": "تسخيرهما وما فيهما لصالح الإنسان"
+      },
+      {
+        "topic_id": 3541,
+        "subcategory_id": 2590,
+        "category_id": 502,
+        "title_raw": "الرياح"
+      },
+      {
+        "topic_id": 3553,
+        "subcategory_id": 2602,
+        "category_id": 505,
+        "title_raw": "الريح"
+      },
+      {
+        "topic_id": 3558,
+        "subcategory_id": 2607,
+        "category_id": 505,
+        "title_raw": "دفعها للسحاب وأثرها في إنزال المطر"
+      },
+      {
+        "topic_id": 4698,
+        "subcategory_id": 3682,
+        "category_id": 777,
+        "title_raw": "الريح"
+      },
+      {
+        "topic_id": 5490,
+        "subcategory_id": 4358,
+        "category_id": 928,
+        "title_raw": "آيات أرضيه"
+      },
+      {
+        "topic_id": 5536,
+        "subcategory_id": 4404,
+        "category_id": 939,
+        "title_raw": "الله جل جلاله"
+      },
+      {
+        "topic_id": 5554,
+        "subcategory_id": 4422,
+        "category_id": 939,
+        "title_raw": "مرسل الرياح ومنزل الغيث"
+      },
+      {
+        "topic_id": 5568,
+        "subcategory_id": 4436,
+        "category_id": 940,
+        "title_raw": "نعم الله تعالى علينا"
+      },
+      {
+        "topic_id": 5697,
+        "subcategory_id": 4564,
+        "category_id": 966,
+        "title_raw": "إنزاله من االسماء"
+      },
+      {
+        "topic_id": 5700,
+        "subcategory_id": 4567,
+        "category_id": 966,
+        "title_raw": "الماء"
+      },
+      {
+        "topic_id": 5860,
+        "subcategory_id": 4727,
+        "category_id": 994,
+        "title_raw": "المنكرون للبعث"
+      },
+      {
+        "topic_id": 5861,
+        "subcategory_id": 4728,
+        "category_id": 994,
+        "title_raw": "رد الله تعالى عليهم"
+      },
+      {
+        "topic_id": 6237,
+        "subcategory_id": 5102,
+        "category_id": 1066,
+        "title_raw": "النهر"
+      },
+      {
+        "topic_id": 6240,
+        "subcategory_id": 5105,
+        "category_id": 1066,
+        "title_raw": "بعض ما سخر الله لحياة العباد في الأرض"
+      },
+      {
+        "topic_id": 6451,
+        "subcategory_id": 5315,
+        "category_id": 1110,
+        "title_raw": "رد الله تعالى عليهم"
+      }
+    ],
+    "25-49": [
+      {
+        "topic_id": 319,
+        "subcategory_id": 71,
+        "category_id": 13,
+        "title_raw": "توحيد الله تعالى:وحدانيته"
+      },
+      {
+        "topic_id": 1248,
+        "subcategory_id": 734,
+        "category_id": 116,
+        "title_raw": "الأنعام"
+      },
+      {
+        "topic_id": 3755,
+        "subcategory_id": 2804,
+        "category_id": 570,
+        "title_raw": "السقي"
+      },
+      {
+        "topic_id": 5490,
+        "subcategory_id": 4358,
+        "category_id": 928,
+        "title_raw": "آيات أرضيه"
+      },
+      {
+        "topic_id": 5568,
+        "subcategory_id": 4436,
+        "category_id": 940,
+        "title_raw": "نعم الله تعالى علينا"
+      }
+    ],
+    "25-50": [
+      {
+        "topic_id": 319,
+        "subcategory_id": 71,
+        "category_id": 13,
+        "title_raw": "توحيد الله تعالى:وحدانيته"
+      },
+      {
+        "topic_id": 2085,
+        "subcategory_id": 1223,
+        "category_id": 211,
+        "title_raw": "البعثة"
+      },
+      {
+        "topic_id": 2093,
+        "subcategory_id": 1231,
+        "category_id": 211,
+        "title_raw": "لماذا بعث الله الرسل"
+      },
+      {
+        "topic_id": 2264,
+        "subcategory_id": 1399,
+        "category_id": 251,
+        "title_raw": "التذكير والذكرى"
+      },
+      {
+        "topic_id": 2266,
+        "subcategory_id": 1401,
+        "category_id": 251,
+        "title_raw": "لماذا التذكر"
+      },
+      {
+        "topic_id": 5140,
+        "subcategory_id": 4049,
+        "category_id": 870,
+        "title_raw": "قرآن"
+      },
+      {
+        "topic_id": 5492,
+        "subcategory_id": 4360,
+        "category_id": 928,
+        "title_raw": "تدبير الله للأمم والدنيا"
+      },
+      {
+        "topic_id": 5979,
+        "subcategory_id": 4845,
+        "category_id": 1013,
+        "title_raw": "أكثرهم لا يؤمنون"
+      },
+      {
+        "topic_id": 5981,
+        "subcategory_id": 4847,
+        "category_id": 1013,
+        "title_raw": "أكثرهم مشركون وكافرون"
+      },
+      {
+        "topic_id": 5987,
+        "subcategory_id": 4853,
+        "category_id": 1013,
+        "title_raw": "الناس"
+      }
+    ],
+    "25-51": [
+      {
+        "topic_id": 316,
+        "subcategory_id": 71,
+        "category_id": 13,
+        "title_raw": "توحيد الله تعالى:مشيئته"
+      },
+      {
+        "topic_id": 383,
+        "subcategory_id": 77,
+        "category_id": 13,
+        "title_raw": "مخاطبة الله إياه"
+      },
+      {
+        "topic_id": 5140,
+        "subcategory_id": 4049,
+        "category_id": 870,
+        "title_raw": "قرآن"
+      },
+      {
+        "topic_id": 5492,
+        "subcategory_id": 4360,
+        "category_id": 928,
+        "title_raw": "تدبير الله للأمم والدنيا"
+      }
+    ],
+    "25-52": [
+      {
+        "topic_id": 101,
+        "subcategory_id": 71,
+        "category_id": 13,
+        "title_raw": "الكافرون:متابعة الكفر"
+      },
+      {
+        "topic_id": 106,
+        "subcategory_id": 71,
+        "category_id": 13,
+        "title_raw": "الكافرون:وجود الإعراض عن الكفار"
+      },
+      {
+        "topic_id": 382,
+        "subcategory_id": 77,
+        "category_id": 13,
+        "title_raw": "مآثره وخصائصه لله"
+      },
+      {
+        "topic_id": 383,
+        "subcategory_id": 77,
+        "category_id": 13,
+        "title_raw": "مخاطبة الله إياه"
+      },
+      {
+        "topic_id": 4278,
+        "subcategory_id": 3325,
+        "category_id": 706,
+        "title_raw": "الطاعة"
+      },
+      {
+        "topic_id": 4280,
+        "subcategory_id": 3327,
+        "category_id": 706,
+        "title_raw": "لا طاعة للمشركين والمنافقين والخارجين عن أمر الله"
+      },
+      {
+        "topic_id": 5109,
+        "subcategory_id": 4018,
+        "category_id": 870,
+        "title_raw": "اعتباره إيجابية السلوك منهج بناء المسلم الملتزم"
+      },
+      {
+        "topic_id": 5112,
+        "subcategory_id": 4021,
+        "category_id": 870,
+        "title_raw": "القرآن"
+      },
+      {
+        "topic_id": 5140,
+        "subcategory_id": 4049,
+        "category_id": 870,
+        "title_raw": "قرآن"
+      },
+      {
+        "topic_id": 5430,
+        "subcategory_id": 4298,
+        "category_id": 920,
+        "title_raw": "الأمر بجهادهم وبالشدة عليهم"
+      },
+      {
+        "topic_id": 5431,
+        "subcategory_id": 4299,
+        "category_id": 920,
+        "title_raw": "التحذير من طاعة الكفار"
+      },
+      {
+        "topic_id": 5432,
+        "subcategory_id": 4300,
+        "category_id": 920,
+        "title_raw": "الكفر"
+      },
+      {
+        "topic_id": 5492,
+        "subcategory_id": 4360,
+        "category_id": 928,
+        "title_raw": "تدبير الله للأمم والدنيا"
+      },
+      {
+        "topic_id": 6905,
+        "subcategory_id": 5764,
+        "category_id": 1209,
+        "title_raw": "علاقة المسلمين بغير"
+      }
+    ],
+    "25-53": [
+      {
+        "topic_id": 319,
+        "subcategory_id": 71,
+        "category_id": 13,
+        "title_raw": "توحيد الله تعالى:وحدانيته"
+      },
+      {
+        "topic_id": 1966,
+        "subcategory_id": 1104,
+        "category_id": 191,
+        "title_raw": "البحار"
+      },
+      {
+        "topic_id": 1968,
+        "subcategory_id": 1106,
+        "category_id": 192,
+        "title_raw": "الحاجز بين البحرين"
+      },
+      {
+        "topic_id": 2010,
+        "subcategory_id": 1148,
+        "category_id": 197,
+        "title_raw": "البرزخ"
+      },
+      {
+        "topic_id": 2011,
+        "subcategory_id": 1149,
+        "category_id": 197,
+        "title_raw": "الحاجز بين البحرين"
+      },
+      {
+        "topic_id": 2660,
+        "subcategory_id": 1752,
+        "category_id": 332,
+        "title_raw": "الحاجز"
+      },
+      {
+        "topic_id": 4694,
+        "subcategory_id": 3682,
+        "category_id": 777,
+        "title_raw": "البحر"
+      },
+      {
+        "topic_id": 4704,
+        "subcategory_id": 3682,
+        "category_id": 777,
+        "title_raw": "الغيث"
+      },
+      {
+        "topic_id": 4959,
+        "subcategory_id": 3868,
+        "category_id": 833,
+        "title_raw": "الفرات"
+      },
+      {
+        "topic_id": 5490,
+        "subcategory_id": 4358,
+        "category_id": 928,
+        "title_raw": "آيات أرضيه"
+      },
+      {
+        "topic_id": 5833,
+        "subcategory_id": 4700,
+        "category_id": 989,
+        "title_raw": "الملح"
+      },
+      {
+        "topic_id": 6237,
+        "subcategory_id": 5102,
+        "category_id": 1066,
+        "title_raw": "النهر"
+      },
+      {
+        "topic_id": 6242,
+        "subcategory_id": 5107,
+        "category_id": 1066,
+        "title_raw": "حاجز بين النهر والبحر"
+      }
+    ],
+    "25-54": [
+      {
+        "topic_id": 129,
+        "subcategory_id": 71,
+        "category_id": 13,
+        "title_raw": "توحيد الله تعالى:ربوبيته جل وعلا"
+      },
+      {
+        "topic_id": 304,
+        "subcategory_id": 71,
+        "category_id": 13,
+        "title_raw": "توحيد الله تعالى:صفات الله تعالى:قديراً"
+      },
+      {
+        "topic_id": 318,
+        "subcategory_id": 71,
+        "category_id": 13,
+        "title_raw": "توحيد الله تعالى:وجوده"
+      },
+      {
+        "topic_id": 319,
+        "subcategory_id": 71,
+        "category_id": 13,
+        "title_raw": "توحيد الله تعالى:وحدانيته"
+      },
+      {
+        "topic_id": 465,
+        "subcategory_id": 154,
+        "category_id": 18,
+        "title_raw": "أسماء الله الحسنى"
+      },
+      {
+        "topic_id": 510,
+        "subcategory_id": 199,
+        "category_id": 18,
+        "title_raw": "القدير"
+      },
+      {
+        "topic_id": 1439,
+        "subcategory_id": 807,
+        "category_id": 149,
+        "title_raw": "تكوينها"
+      },
+      {
+        "topic_id": 4179,
+        "subcategory_id": 3226,
+        "category_id": 677,
+        "title_raw": "الصهر"
+      },
+      {
+        "topic_id": 4918,
+        "subcategory_id": 3827,
+        "category_id": 818,
+        "title_raw": "خلق آدم والإنسان"
+      },
+      {
+        "topic_id": 5490,
+        "subcategory_id": 4358,
+        "category_id": 928,
+        "title_raw": "آيات أرضيه"
+      },
+      {
+        "topic_id": 5527,
+        "subcategory_id": 4395,
+        "category_id": 939,
+        "title_raw": "القدير المقتدر، القوي القهار"
+      },
+      {
+        "topic_id": 5536,
+        "subcategory_id": 4404,
+        "category_id": 939,
+        "title_raw": "الله جل جلاله"
+      },
+      {
+        "topic_id": 5693,
+        "subcategory_id": 4560,
+        "category_id": 966,
+        "title_raw": "أصل الحياة في كل كائن حي"
+      },
+      {
+        "topic_id": 5700,
+        "subcategory_id": 4567,
+        "category_id": 966,
+        "title_raw": "الماء"
+      },
+      {
+        "topic_id": 5703,
+        "subcategory_id": 4570,
+        "category_id": 966,
+        "title_raw": "خلق الإنسان منه"
+      },
+      {
+        "topic_id": 6065,
+        "subcategory_id": 4931,
+        "category_id": 1033,
+        "title_raw": "النسب"
+      },
+      {
+        "topic_id": 6067,
+        "subcategory_id": 4933,
+        "category_id": 1033,
+        "title_raw": "ما ينتج عن المصاهرة من صلة"
+      },
+      {
+        "topic_id": 6211,
+        "subcategory_id": 5076,
+        "category_id": 1061,
+        "title_raw": "النكاح"
+      },
+      {
+        "topic_id": 6215,
+        "subcategory_id": 5080,
+        "category_id": 1061,
+        "title_raw": "فطرة الله التي فطر الخلق عليها"
+      }
+    ],
+    "25-55": [
+      {
+        "topic_id": 78,
+        "subcategory_id": 71,
+        "category_id": 13,
+        "title_raw": "الشرك والمشركون:تنزيه الله جل جلاله عن الشريك"
+      },
+      {
+        "topic_id": 98,
+        "subcategory_id": 71,
+        "category_id": 13,
+        "title_raw": "الكافرون:صفات الكفار"
+      },
+      {
+        "topic_id": 5767,
+        "subcategory_id": 4634,
+        "category_id": 977,
+        "title_raw": "المشركون"
+      },
+      {
+        "topic_id": 5771,
+        "subcategory_id": 4638,
+        "category_id": 977,
+        "title_raw": "فضح المشركين و تبيان عجز"
+      },
+      {
+        "topic_id": 6836,
+        "subcategory_id": 5695,
+        "category_id": 1187,
+        "title_raw": "صفات الكافرين"
+      },
+      {
+        "topic_id": 6837,
+        "subcategory_id": 5696,
+        "category_id": 1187,
+        "title_raw": "في علاقتهم مع الله"
+      }
+    ],
+    "25-56": [
+      {
+        "topic_id": 362,
+        "subcategory_id": 77,
+        "category_id": 13,
+        "title_raw": "أخلاقه وصفاته"
+      },
+      {
+        "topic_id": 370,
+        "subcategory_id": 77,
+        "category_id": 13,
+        "title_raw": "تأييد رسالته"
+      },
+      {
+        "topic_id": 380,
+        "subcategory_id": 77,
+        "category_id": 13,
+        "title_raw": "طبيعة رسالته"
+      },
+      {
+        "topic_id": 5532,
+        "subcategory_id": 4400,
+        "category_id": 939,
+        "title_raw": "الله [مرسل الرسل]"
+      },
+      {
+        "topic_id": 5536,
+        "subcategory_id": 4404,
+        "category_id": 939,
+        "title_raw": "الله جل جلاله"
+      },
+      {
+        "topic_id": 5597,
+        "subcategory_id": 4465,
+        "category_id": 949,
+        "title_raw": "المال"
+      },
+      {
+        "topic_id": 5633,
+        "subcategory_id": 4501,
+        "category_id": 949,
+        "title_raw": "ملاحظات حول المال [لم يأخذه الانبياء أجراً على الدعوة]"
+      },
+      {
+        "topic_id": 6652,
+        "subcategory_id": 5511,
+        "category_id": 1144,
+        "title_raw": "البشير النذير"
+      },
+      {
+        "topic_id": 6671,
+        "subcategory_id": 5530,
+        "category_id": 1144,
+        "title_raw": "خاتم الأنبياء محمد صلى الله عليه وسلم"
+      },
+      {
+        "topic_id": 6958,
+        "subcategory_id": 5817,
+        "category_id": 1223,
+        "title_raw": "عن سيدنا محمد عليه الصلاة والسلام"
+      },
+      {
+        "topic_id": 7030,
+        "subcategory_id": 5889,
+        "category_id": 1248,
+        "title_raw": "تثبيت االرسول"
+      },
+      {
+        "topic_id": 7032,
+        "subcategory_id": 5891,
+        "category_id": 1248,
+        "title_raw": "محمد رسول الله"
+      }
+    ],
+    "25-57": [
+      {
+        "topic_id": 370,
+        "subcategory_id": 77,
+        "category_id": 13,
+        "title_raw": "تأييد رسالته"
+      },
+      {
+        "topic_id": 737,
+        "subcategory_id": 426,
+        "category_id": 71,
+        "title_raw": "الأجر"
+      },
+      {
+        "topic_id": 745,
+        "subcategory_id": 434,
+        "category_id": 71,
+        "title_raw": "الذين أجرهم على الله [الأنبياء والرسل عليهم السلام]"
+      },
+      {
+        "topic_id": 1518,
+        "subcategory_id": 823,
+        "category_id": 151,
+        "title_raw": "لا أجر لهم على التبليغ"
+      },
+      {
+        "topic_id": 6671,
+        "subcategory_id": 5530,
+        "category_id": 1144,
+        "title_raw": "خاتم الأنبياء محمد صلى الله عليه وسلم"
+      },
+      {
+        "topic_id": 6698,
+        "subcategory_id": 5557,
+        "category_id": 1144,
+        "title_raw": "لم يسأل على الرسالة أجراً"
+      },
+      {
+        "topic_id": 6958,
+        "subcategory_id": 5817,
+        "category_id": 1223,
+        "title_raw": "عن سيدنا محمد عليه الصلاة والسلام"
+      }
+    ],
+    "25-58": [
+      {
+        "topic_id": 126,
+        "subcategory_id": 71,
+        "category_id": 13,
+        "title_raw": "توحيد الله تعالى:حمد الله تعالى وتسبيحه والثناء عليه"
+      },
+      {
+        "topic_id": 157,
+        "subcategory_id": 71,
+        "category_id": 13,
+        "title_raw": "توحيد الله تعالى:صفات الله تعالى:الحي"
+      },
+      {
+        "topic_id": 465,
+        "subcategory_id": 154,
+        "category_id": 18,
+        "title_raw": "أسماء الله الحسنى"
+      },
+      {
+        "topic_id": 482,
+        "subcategory_id": 171,
+        "category_id": 18,
+        "title_raw": "الحي"
+      },
+      {
+        "topic_id": 484,
+        "subcategory_id": 173,
+        "category_id": 18,
+        "title_raw": "الخبير"
+      },
+      {
+        "topic_id": 1615,
+        "subcategory_id": 828,
+        "category_id": 151,
+        "title_raw": "التوكل عليه جل وعلا"
+      },
+      {
+        "topic_id": 2280,
+        "subcategory_id": 1415,
+        "category_id": 257,
+        "title_raw": "التسبيح"
+      },
+      {
+        "topic_id": 2281,
+        "subcategory_id": 1416,
+        "category_id": 257,
+        "title_raw": "الرسل وأتباعهم مأمورون بتسبيح الله"
+      },
+      {
+        "topic_id": 2396,
+        "subcategory_id": 1531,
+        "category_id": 288,
+        "title_raw": "التوكل على الله"
+      },
+      {
+        "topic_id": 4743,
+        "subcategory_id": 3700,
+        "category_id": 780,
+        "title_raw": "التوكل"
+      },
+      {
+        "topic_id": 4752,
+        "subcategory_id": 3701,
+        "category_id": 780,
+        "title_raw": "اقتراف الذنوب"
+      },
+      {
+        "topic_id": 5885,
+        "subcategory_id": 4751,
+        "category_id": 1001,
+        "title_raw": "سبحان الحي الذي لا يموت"
+      },
+      {
+        "topic_id": 6671,
+        "subcategory_id": 5530,
+        "category_id": 1144,
+        "title_raw": "خاتم الأنبياء محمد صلى الله عليه وسلم"
+      },
+      {
+        "topic_id": 6674,
+        "subcategory_id": 5533,
+        "category_id": 1144,
+        "title_raw": "دفاع الله عنه وربطه على قلبه"
+      },
+      {
+        "topic_id": 6877,
+        "subcategory_id": 5736,
+        "category_id": 1200,
+        "title_raw": "اذكار"
+      },
+      {
+        "topic_id": 6958,
+        "subcategory_id": 5817,
+        "category_id": 1223,
+        "title_raw": "عن سيدنا محمد عليه الصلاة والسلام"
+      }
+    ],
+    "25-59": [
+      {
+        "topic_id": 318,
+        "subcategory_id": 71,
+        "category_id": 13,
+        "title_raw": "توحيد الله تعالى:وجوده"
+      },
+      {
+        "topic_id": 319,
+        "subcategory_id": 71,
+        "category_id": 13,
+        "title_raw": "توحيد الله تعالى:وحدانيته"
+      },
+      {
+        "topic_id": 465,
+        "subcategory_id": 154,
+        "category_id": 18,
+        "title_raw": "أسماء الله الحسنى"
+      },
+      {
+        "topic_id": 487,
+        "subcategory_id": 176,
+        "category_id": 18,
+        "title_raw": "الرحمن"
+      },
+      {
+        "topic_id": 1065,
+        "subcategory_id": 552,
+        "category_id": 84,
+        "title_raw": "الأرض"
+      },
+      {
+        "topic_id": 1072,
+        "subcategory_id": 559,
+        "category_id": 84,
+        "title_raw": "الله خالقهما بالحق"
+      },
+      {
+        "topic_id": 1084,
+        "subcategory_id": 571,
+        "category_id": 84,
+        "title_raw": "خلقهما في ستة أيام"
+      },
+      {
+        "topic_id": 4917,
+        "subcategory_id": 3826,
+        "category_id": 818,
+        "title_raw": "بدء الخلق"
+      },
+      {
+        "topic_id": 6716,
+        "subcategory_id": 5575,
+        "category_id": 1148,
+        "title_raw": "خلق الأرض"
+      },
+      {
+        "topic_id": 6897,
+        "subcategory_id": 5756,
+        "category_id": 1203,
+        "title_raw": "عرش الله"
+      }
+    ],
+    "25-60": [
+      {
+        "topic_id": 344,
+        "subcategory_id": 75,
+        "category_id": 13,
+        "title_raw": "أداء الصلاة:سجدات التلاوة"
+      },
+      {
+        "topic_id": 845,
+        "subcategory_id": 471,
+        "category_id": 76,
+        "title_raw": "آدابه وأحكامه:(سجدة مستحبة)"
+      },
+      {
+        "topic_id": 2353,
+        "subcategory_id": 1488,
+        "category_id": 278,
+        "title_raw": "آيات سجدات التلاوة"
+      },
+      {
+        "topic_id": 2357,
+        "subcategory_id": 1492,
+        "category_id": 278,
+        "title_raw": "التلاوة"
+      },
+      {
+        "topic_id": 3693,
+        "subcategory_id": 2742,
+        "category_id": 550,
+        "title_raw": "السجود"
+      },
+      {
+        "topic_id": 3694,
+        "subcategory_id": 2743,
+        "category_id": 550,
+        "title_raw": "امتناع الكفرة عن السجود للخالق"
+      },
+      {
+        "topic_id": 4917,
+        "subcategory_id": 3826,
+        "category_id": 818,
+        "title_raw": "بدء الخلق"
+      },
+      {
+        "topic_id": 5099,
+        "subcategory_id": 4008,
+        "category_id": 870,
+        "title_raw": "آداب صحبة القرآن وبعض خصائصه [سجود التلاوة عند بعض آياته]"
+      },
+      {
+        "topic_id": 5112,
+        "subcategory_id": 4021,
+        "category_id": 870,
+        "title_raw": "القرآن"
+      },
+      {
+        "topic_id": 5168,
+        "subcategory_id": 4073,
+        "category_id": 871,
+        "title_raw": "سجدات التلاوة"
+      },
+      {
+        "topic_id": 5432,
+        "subcategory_id": 4300,
+        "category_id": 920,
+        "title_raw": "الكفر"
+      },
+      {
+        "topic_id": 5442,
+        "subcategory_id": 4310,
+        "category_id": 920,
+        "title_raw": "سمات الكفرة [المنطق العاجز/حجتهم داحضة]"
+      },
+      {
+        "topic_id": 5523,
+        "subcategory_id": 4391,
+        "category_id": 939,
+        "title_raw": "الرحمن، الرحيم، الرءوف، الغفور"
+      },
+      {
+        "topic_id": 5536,
+        "subcategory_id": 4404,
+        "category_id": 939,
+        "title_raw": "الله جل جلاله"
+      },
+      {
+        "topic_id": 6774,
+        "subcategory_id": 5633,
+        "category_id": 1170,
+        "title_raw": "سجود التلاوة"
+      }
+    ],
+    "25-61": [
+      {
+        "topic_id": 126,
+        "subcategory_id": 71,
+        "category_id": 13,
+        "title_raw": "توحيد الله تعالى:حمد الله تعالى وتسبيحه والثناء عليه"
+      },
+      {
+        "topic_id": 319,
+        "subcategory_id": 71,
+        "category_id": 13,
+        "title_raw": "توحيد الله تعالى:وحدانيته"
+      },
+      {
+        "topic_id": 2032,
+        "subcategory_id": 1170,
+        "category_id": 201,
+        "title_raw": "البروج"
+      },
+      {
+        "topic_id": 2033,
+        "subcategory_id": 1171,
+        "category_id": 201,
+        "title_raw": "منازل في السماء لا تنالها الشياطين"
+      },
+      {
+        "topic_id": 3714,
+        "subcategory_id": 2763,
+        "category_id": 558,
+        "title_raw": "السراج"
+      },
+      {
+        "topic_id": 3715,
+        "subcategory_id": 2764,
+        "category_id": 558,
+        "title_raw": "تسمية الشمس به"
+      },
+      {
+        "topic_id": 3974,
+        "subcategory_id": 3023,
+        "category_id": 633,
+        "title_raw": "الشمس ضياء [نجم] والقمر نور [كوكب]"
+      },
+      {
+        "topic_id": 3976,
+        "subcategory_id": 3025,
+        "category_id": 633,
+        "title_raw": "الشمس والقمر"
+      },
+      {
+        "topic_id": 5359,
+        "subcategory_id": 4227,
+        "category_id": 897,
+        "title_raw": "القمر"
+      },
+      {
+        "topic_id": 5361,
+        "subcategory_id": 4229,
+        "category_id": 897,
+        "title_raw": "القمر نور والشمس ضياء"
+      },
+      {
+        "topic_id": 5491,
+        "subcategory_id": 4359,
+        "category_id": 928,
+        "title_raw": "آيات كونية"
+      },
+      {
+        "topic_id": 6253,
+        "subcategory_id": 5118,
+        "category_id": 1067,
+        "title_raw": "القمر نور والشمس سراج"
+      },
+      {
+        "topic_id": 6256,
+        "subcategory_id": 5121,
+        "category_id": 1067,
+        "title_raw": "النور"
+      }
+    ],
+    "25-62": [
+      {
+        "topic_id": 2264,
+        "subcategory_id": 1399,
+        "category_id": 251,
+        "title_raw": "التذكير والذكرى"
+      },
+      {
+        "topic_id": 2266,
+        "subcategory_id": 1401,
+        "category_id": 251,
+        "title_raw": "لماذا التذكر"
+      },
+      {
+        "topic_id": 4709,
+        "subcategory_id": 3682,
+        "category_id": 777,
+        "title_raw": "حركة الأرض"
+      },
+      {
+        "topic_id": 5490,
+        "subcategory_id": 4358,
+        "category_id": 928,
+        "title_raw": "آيات أرضيه"
+      },
+      {
+        "topic_id": 5491,
+        "subcategory_id": 4359,
+        "category_id": 928,
+        "title_raw": "آيات كونية"
+      },
+      {
+        "topic_id": 5572,
+        "subcategory_id": 4440,
+        "category_id": 944,
+        "title_raw": "الليل"
+      },
+      {
+        "topic_id": 5574,
+        "subcategory_id": 4442,
+        "category_id": 945,
+        "title_raw": "الليل للإنسان سكن والنهار معاش"
+      },
+      {
+        "topic_id": 5575,
+        "subcategory_id": 4443,
+        "category_id": 945,
+        "title_raw": "الليل والنهار"
+      },
+      {
+        "topic_id": 6231,
+        "subcategory_id": 5096,
+        "category_id": 1065,
+        "title_raw": "النهار والليل"
+      },
+      {
+        "topic_id": 6232,
+        "subcategory_id": 5097,
+        "category_id": 1065,
+        "title_raw": "حركتهما وفق سنة كونية"
+      },
+      {
+        "topic_id": 6816,
+        "subcategory_id": 5675,
+        "category_id": 1181,
+        "title_raw": "شكر الله"
+      }
+    ],
+    "25-63": [
+      {
+        "topic_id": 465,
+        "subcategory_id": 154,
+        "category_id": 18,
+        "title_raw": "أسماء الله الحسنى"
+      },
+      {
+        "topic_id": 487,
+        "subcategory_id": 176,
+        "category_id": 18,
+        "title_raw": "الرحمن"
+      },
+      {
+        "topic_id": 1065,
+        "subcategory_id": 552,
+        "category_id": 84,
+        "title_raw": "الأرض"
+      },
+      {
+        "topic_id": 1075,
+        "subcategory_id": 562,
+        "category_id": 84,
+        "title_raw": "النهي عن الاستعلاء في الأرض"
+      },
+      {
+        "topic_id": 1333,
+        "subcategory_id": 805,
+        "category_id": 148,
+        "title_raw": "السلوك الحسن"
+      },
+      {
+        "topic_id": 1345,
+        "subcategory_id": 805,
+        "category_id": 148,
+        "title_raw": "دفع السئية بالحسنة"
+      },
+      {
+        "topic_id": 1346,
+        "subcategory_id": 805,
+        "category_id": 148,
+        "title_raw": "روح السلام"
+      },
+      {
+        "topic_id": 1347,
+        "subcategory_id": 805,
+        "category_id": 148,
+        "title_raw": "سلامة القلب"
+      },
+      {
+        "topic_id": 1372,
+        "subcategory_id": 806,
+        "category_id": 148,
+        "title_raw": "التكبر"
+      },
+      {
+        "topic_id": 1480,
+        "subcategory_id": 815,
+        "category_id": 149,
+        "title_raw": "التحية والسلام وأذب الضيافة"
+      },
+      {
+        "topic_id": 1486,
+        "subcategory_id": 815,
+        "category_id": 149,
+        "title_raw": "العفو والصفح وكظم الغيظ"
+      },
+      {
+        "topic_id": 1629,
+        "subcategory_id": 829,
+        "category_id": 151,
+        "title_raw": "صفات المؤمنين"
+      },
+      {
+        "topic_id": 1631,
+        "subcategory_id": 829,
+        "category_id": 151,
+        "title_raw": "ما أعده الله لهم"
+      },
+      {
+        "topic_id": 1632,
+        "subcategory_id": 829,
+        "category_id": 151,
+        "title_raw": "وعده إياهم"
+      },
+      {
+        "topic_id": 1717,
+        "subcategory_id": 855,
+        "category_id": 157,
+        "title_raw": "وصف المؤمنون"
+      },
+      {
+        "topic_id": 2254,
+        "subcategory_id": 1389,
+        "category_id": 248,
+        "title_raw": "التحية و السلام"
+      },
+      {
+        "topic_id": 2345,
+        "subcategory_id": 1480,
+        "category_id": 273,
+        "title_raw": "التكبر"
+      },
+      {
+        "topic_id": 2373,
+        "subcategory_id": 1508,
+        "category_id": 285,
+        "title_raw": "التواضع"
+      },
+      {
+        "topic_id": 2637,
+        "subcategory_id": 1729,
+        "category_id": 325,
+        "title_raw": "الجهل والجهالة"
+      },
+      {
+        "topic_id": 2638,
+        "subcategory_id": 1730,
+        "category_id": 325,
+        "title_raw": "النهي عن مخالطة الجاهلين"
+      },
+      {
+        "topic_id": 3024,
+        "subcategory_id": 2116,
+        "category_id": 405,
+        "title_raw": "الخطاب"
+      },
+      {
+        "topic_id": 3148,
+        "subcategory_id": 2237,
+        "category_id": 430,
+        "title_raw": "دفع السيئة بالحسنة"
+      },
+      {
+        "topic_id": 3192,
+        "subcategory_id": 2270,
+        "category_id": 438,
+        "title_raw": "وجوب التساهل معهم (مع غير المحاربين)"
+      },
+      {
+        "topic_id": 4452,
+        "subcategory_id": 3499,
+        "category_id": 737,
+        "title_raw": "العبادة والعبودية"
+      },
+      {
+        "topic_id": 4455,
+        "subcategory_id": 3502,
+        "category_id": 737,
+        "title_raw": "سمات ومقومات عباد الرحمن [الإعراض عن أهل الجهالة]"
+      },
+      {
+        "topic_id": 4456,
+        "subcategory_id": 3503,
+        "category_id": 737,
+        "title_raw": "سمات ومقومات عباد الرحمن [التواضع لله]"
+      },
+      {
+        "topic_id": 4724,
+        "subcategory_id": 3690,
+        "category_id": 777,
+        "title_raw": "ذم الجهل والجاهلين"
+      },
+      {
+        "topic_id": 4741,
+        "subcategory_id": 3700,
+        "category_id": 780,
+        "title_raw": "التواضع"
+      },
+      {
+        "topic_id": 4749,
+        "subcategory_id": 3700,
+        "category_id": 780,
+        "title_raw": "حسن السلوك"
+      },
+      {
+        "topic_id": 5107,
+        "subcategory_id": 4016,
+        "category_id": 870,
+        "title_raw": "اعتبار الوسطية منهج الأمة في قيادة الناس والحياة"
+      },
+      {
+        "topic_id": 5112,
+        "subcategory_id": 4021,
+        "category_id": 870,
+        "title_raw": "القرآن"
+      },
+      {
+        "topic_id": 5523,
+        "subcategory_id": 4391,
+        "category_id": 939,
+        "title_raw": "الرحمن، الرحيم، الرءوف، الغفور"
+      },
+      {
+        "topic_id": 5536,
+        "subcategory_id": 4404,
+        "category_id": 939,
+        "title_raw": "الله جل جلاله"
+      },
+      {
+        "topic_id": 6842,
+        "subcategory_id": 5701,
+        "category_id": 1188,
+        "title_raw": "أخلاق حسنة أخرى"
+      },
+      {
+        "topic_id": 6849,
+        "subcategory_id": 5708,
+        "category_id": 1188,
+        "title_raw": "صفات المؤمنين"
+      }
+    ],
+    "25-64": [
+      {
+        "topic_id": 342,
+        "subcategory_id": 75,
+        "category_id": 13,
+        "title_raw": "أداء الصلاة:السجود"
+      },
+      {
+        "topic_id": 1629,
+        "subcategory_id": 829,
+        "category_id": 151,
+        "title_raw": "صفات المؤمنين"
+      },
+      {
+        "topic_id": 1631,
+        "subcategory_id": 829,
+        "category_id": 151,
+        "title_raw": "ما أعده الله لهم"
+      },
+      {
+        "topic_id": 1632,
+        "subcategory_id": 829,
+        "category_id": 151,
+        "title_raw": "وعده إياهم"
+      },
+      {
+        "topic_id": 1717,
+        "subcategory_id": 855,
+        "category_id": 157,
+        "title_raw": "وصف المؤمنون"
+      },
+      {
+        "topic_id": 4452,
+        "subcategory_id": 3499,
+        "category_id": 737,
+        "title_raw": "العبادة والعبودية"
+      },
+      {
+        "topic_id": 4463,
+        "subcategory_id": 3510,
+        "category_id": 737,
+        "title_raw": "سمات ومقومات عباد الرحمن [دوام عبادتهم لله]"
+      },
+      {
+        "topic_id": 6848,
+        "subcategory_id": 5707,
+        "category_id": 1188,
+        "title_raw": "حبهم لله تعالى و إلتزامهم لأوامره"
+      },
+      {
+        "topic_id": 6849,
+        "subcategory_id": 5708,
+        "category_id": 1188,
+        "title_raw": "صفات المؤمنين"
+      }
+    ],
+    "25-65": [
+      {
+        "topic_id": 351,
+        "subcategory_id": 75,
+        "category_id": 13,
+        "title_raw": "الدعاء:المأثور من الدعاء"
+      },
+      {
+        "topic_id": 1031,
+        "subcategory_id": 518,
+        "category_id": 78,
+        "title_raw": "الأدعية"
+      },
+      {
+        "topic_id": 1032,
+        "subcategory_id": 519,
+        "category_id": 78,
+        "title_raw": "الأدعية الواردة في القرآن الكريم"
+      },
+      {
+        "topic_id": 1605,
+        "subcategory_id": 826,
+        "category_id": 151,
+        "title_raw": "النار:أصحابها"
+      },
+      {
+        "topic_id": 1629,
+        "subcategory_id": 829,
+        "category_id": 151,
+        "title_raw": "صفات المؤمنين"
+      },
+      {
+        "topic_id": 1631,
+        "subcategory_id": 829,
+        "category_id": 151,
+        "title_raw": "ما أعده الله لهم"
+      },
+      {
+        "topic_id": 1632,
+        "subcategory_id": 829,
+        "category_id": 151,
+        "title_raw": "وعده إياهم"
+      },
+      {
+        "topic_id": 1717,
+        "subcategory_id": 855,
+        "category_id": 157,
+        "title_raw": "وصف المؤمنون"
+      },
+      {
+        "topic_id": 3233,
+        "subcategory_id": 2282,
+        "category_id": 440,
+        "title_raw": "الدعاء"
+      },
+      {
+        "topic_id": 3259,
+        "subcategory_id": 2308,
+        "category_id": 440,
+        "title_raw": "صور من دعوات المؤمنين"
+      },
+      {
+        "topic_id": 4452,
+        "subcategory_id": 3499,
+        "category_id": 737,
+        "title_raw": "العبادة والعبودية"
+      },
+      {
+        "topic_id": 4457,
+        "subcategory_id": 3504,
+        "category_id": 737,
+        "title_raw": "سمات ومقومات عباد الرحمن [الخائفون أبداً من عذاب الله]"
+      },
+      {
+        "topic_id": 6882,
+        "subcategory_id": 5741,
+        "category_id": 1200,
+        "title_raw": "الدعاء من القرآن والاستجابة"
+      }
+    ],
+    "25-66": [
+      {
+        "topic_id": 1605,
+        "subcategory_id": 826,
+        "category_id": 151,
+        "title_raw": "النار:أصحابها"
+      },
+      {
+        "topic_id": 1629,
+        "subcategory_id": 829,
+        "category_id": 151,
+        "title_raw": "صفات المؤمنين"
+      },
+      {
+        "topic_id": 1631,
+        "subcategory_id": 829,
+        "category_id": 151,
+        "title_raw": "ما أعده الله لهم"
+      },
+      {
+        "topic_id": 1632,
+        "subcategory_id": 829,
+        "category_id": 151,
+        "title_raw": "وعده إياهم"
+      },
+      {
+        "topic_id": 1717,
+        "subcategory_id": 855,
+        "category_id": 157,
+        "title_raw": "وصف المؤمنون"
+      },
+      {
+        "topic_id": 6882,
+        "subcategory_id": 5741,
+        "category_id": 1200,
+        "title_raw": "الدعاء من القرآن والاستجابة"
+      }
+    ],
+    "25-67": [
+      {
+        "topic_id": 337,
+        "subcategory_id": 74,
+        "category_id": 13,
+        "title_raw": "الزكاة والصدقات"
+      },
+      {
+        "topic_id": 843,
+        "subcategory_id": 469,
+        "category_id": 76,
+        "title_raw": "الزنا"
+      },
+      {
+        "topic_id": 1326,
+        "subcategory_id": 805,
+        "category_id": 148,
+        "title_raw": "الاعتدال في الأمور"
+      },
+      {
+        "topic_id": 1358,
+        "subcategory_id": 806,
+        "category_id": 148,
+        "title_raw": "الإسراف"
+      },
+      {
+        "topic_id": 1363,
+        "subcategory_id": 806,
+        "category_id": 148,
+        "title_raw": "البخل"
+      },
+      {
+        "topic_id": 1369,
+        "subcategory_id": 806,
+        "category_id": 148,
+        "title_raw": "التبذير"
+      },
+      {
+        "topic_id": 1629,
+        "subcategory_id": 829,
+        "category_id": 151,
+        "title_raw": "صفات المؤمنين"
+      },
+      {
+        "topic_id": 1631,
+        "subcategory_id": 829,
+        "category_id": 151,
+        "title_raw": "ما أعده الله لهم"
+      },
+      {
+        "topic_id": 1632,
+        "subcategory_id": 829,
+        "category_id": 151,
+        "title_raw": "وعده إياهم"
+      },
+      {
+        "topic_id": 1717,
+        "subcategory_id": 855,
+        "category_id": 157,
+        "title_raw": "وصف المؤمنون"
+      },
+      {
+        "topic_id": 2204,
+        "subcategory_id": 1342,
+        "category_id": 238,
+        "title_raw": "التبذير و التبديد"
+      },
+      {
+        "topic_id": 3719,
+        "subcategory_id": 2768,
+        "category_id": 560,
+        "title_raw": "التوازن بين الإسراف والتقتير"
+      },
+      {
+        "topic_id": 3720,
+        "subcategory_id": 2769,
+        "category_id": 560,
+        "title_raw": "السرف"
+      },
+      {
+        "topic_id": 4452,
+        "subcategory_id": 3499,
+        "category_id": 737,
+        "title_raw": "العبادة والعبودية"
+      },
+      {
+        "topic_id": 4459,
+        "subcategory_id": 3506,
+        "category_id": 737,
+        "title_raw": "سمات ومقومات عباد الرحمن [المتوسطون بين الاسراف والتقتير]"
+      },
+      {
+        "topic_id": 4742,
+        "subcategory_id": 3700,
+        "category_id": 780,
+        "title_raw": "التوسط في العمل"
+      },
+      {
+        "topic_id": 5107,
+        "subcategory_id": 4016,
+        "category_id": 870,
+        "title_raw": "اعتبار الوسطية منهج الأمة في قيادة الناس والحياة"
+      },
+      {
+        "topic_id": 5112,
+        "subcategory_id": 4021,
+        "category_id": 870,
+        "title_raw": "القرآن"
+      },
+      {
+        "topic_id": 5597,
+        "subcategory_id": 4465,
+        "category_id": 949,
+        "title_raw": "المال"
+      },
+      {
+        "topic_id": 5608,
+        "subcategory_id": 4476,
+        "category_id": 949,
+        "title_raw": "ضوابط التصرف في المال [الاعتدال في إنفاقه بين الإسراف والتقتير]"
+      },
+      {
+        "topic_id": 6187,
+        "subcategory_id": 5052,
+        "category_id": 1057,
+        "title_raw": "النفقة والانفاق"
+      },
+      {
+        "topic_id": 6199,
+        "subcategory_id": 5064,
+        "category_id": 1057,
+        "title_raw": "وسطية الإنفاق بين الإسراف والتقتير"
+      },
+      {
+        "topic_id": 6546,
+        "subcategory_id": 5410,
+        "category_id": 1124,
+        "title_raw": "إنفاقها"
+      },
+      {
+        "topic_id": 6554,
+        "subcategory_id": 5418,
+        "category_id": 1124,
+        "title_raw": "الزكاة"
+      },
+      {
+        "topic_id": 6844,
+        "subcategory_id": 5703,
+        "category_id": 1188,
+        "title_raw": "إقامتهم الصلاة و إيتائهم الزكاة و إنفاقهم في سبيل الله تعالى"
+      },
+      {
+        "topic_id": 6849,
+        "subcategory_id": 5708,
+        "category_id": 1188,
+        "title_raw": "صفات المؤمنين"
+      },
+      {
+        "topic_id": 7054,
+        "subcategory_id": 5912,
+        "category_id": 1256,
+        "title_raw": "الإسراف"
+      }
+    ],
+    "25-68": [
+      {
+        "topic_id": 843,
+        "subcategory_id": 469,
+        "category_id": 76,
+        "title_raw": "الزنا"
+      },
+      {
+        "topic_id": 1629,
+        "subcategory_id": 829,
+        "category_id": 151,
+        "title_raw": "صفات المؤمنين"
+      },
+      {
+        "topic_id": 1631,
+        "subcategory_id": 829,
+        "category_id": 151,
+        "title_raw": "ما أعده الله لهم"
+      },
+      {
+        "topic_id": 1632,
+        "subcategory_id": 829,
+        "category_id": 151,
+        "title_raw": "وعده إياهم"
+      },
+      {
+        "topic_id": 1717,
+        "subcategory_id": 855,
+        "category_id": 157,
+        "title_raw": "وصف المؤمنون"
+      },
+      {
+        "topic_id": 1730,
+        "subcategory_id": 868,
+        "category_id": 159,
+        "title_raw": "الاثم"
+      },
+      {
+        "topic_id": 1732,
+        "subcategory_id": 870,
+        "category_id": 159,
+        "title_raw": "الزنا وقتل النفس بغير الحق"
+      },
+      {
+        "topic_id": 3633,
+        "subcategory_id": 2682,
+        "category_id": 532,
+        "title_raw": "الزنى"
+      },
+      {
+        "topic_id": 3640,
+        "subcategory_id": 2689,
+        "category_id": 532,
+        "title_raw": "مدح المتعففين عنه"
+      },
+      {
+        "topic_id": 4452,
+        "subcategory_id": 3499,
+        "category_id": 737,
+        "title_raw": "العبادة والعبودية"
+      },
+      {
+        "topic_id": 4461,
+        "subcategory_id": 3508,
+        "category_id": 737,
+        "title_raw": "سمات ومقومات عباد الرحمن [المخلصون توحيداً]"
+      },
+      {
+        "topic_id": 4465,
+        "subcategory_id": 3512,
+        "category_id": 737,
+        "title_raw": "سمات ومقومات عباد الرحمن [لا يقتلون النفس المحرمة ولا يزنون]"
+      },
+      {
+        "topic_id": 4782,
+        "subcategory_id": 3701,
+        "category_id": 780,
+        "title_raw": "القتل والقتال:قتل النفس التي حرم الله"
+      },
+      {
+        "topic_id": 5536,
+        "subcategory_id": 4404,
+        "category_id": 939,
+        "title_raw": "الله جل جلاله"
+      },
+      {
+        "topic_id": 5537,
+        "subcategory_id": 4405,
+        "category_id": 939,
+        "title_raw": "النهي القاطع عن الشرك بالله"
+      },
+      {
+        "topic_id": 6843,
+        "subcategory_id": 5702,
+        "category_id": 1188,
+        "title_raw": "إجتنابهم الفواحش و النواهي"
+      },
+      {
+        "topic_id": 6848,
+        "subcategory_id": 5707,
+        "category_id": 1188,
+        "title_raw": "حبهم لله تعالى و إلتزامهم لأوامره"
+      },
+      {
+        "topic_id": 6849,
+        "subcategory_id": 5708,
+        "category_id": 1188,
+        "title_raw": "صفات المؤمنين"
+      }
+    ],
+    "25-69": [
+      {
+        "topic_id": 539,
+        "subcategory_id": 228,
+        "category_id": 20,
+        "title_raw": "أسماء اليوم الآخر"
+      },
+      {
+        "topic_id": 555,
+        "subcategory_id": 244,
+        "category_id": 20,
+        "title_raw": "يوم القيامة"
+      },
+      {
+        "topic_id": 843,
+        "subcategory_id": 469,
+        "category_id": 76,
+        "title_raw": "الزنا"
+      },
+      {
+        "topic_id": 1570,
+        "subcategory_id": 826,
+        "category_id": 151,
+        "title_raw": "الخلود:الخلود في العذاب"
+      },
+      {
+        "topic_id": 1631,
+        "subcategory_id": 829,
+        "category_id": 151,
+        "title_raw": "ما أعده الله لهم"
+      },
+      {
+        "topic_id": 1632,
+        "subcategory_id": 829,
+        "category_id": 151,
+        "title_raw": "وعده إياهم"
+      },
+      {
+        "topic_id": 1717,
+        "subcategory_id": 855,
+        "category_id": 157,
+        "title_raw": "وصف المؤمنون"
+      }
+    ],
+    "25-70": [
+      {
+        "topic_id": 49,
+        "subcategory_id": 49,
+        "category_id": 9,
+        "title_raw": "المعصية"
+      },
+      {
+        "topic_id": 465,
+        "subcategory_id": 154,
+        "category_id": 18,
+        "title_raw": "أسماء الله الحسنى"
+      },
+      {
+        "topic_id": 488,
+        "subcategory_id": 177,
+        "category_id": 18,
+        "title_raw": "الرحيم"
+      },
+      {
+        "topic_id": 504,
+        "subcategory_id": 193,
+        "category_id": 18,
+        "title_raw": "الغفور"
+      },
+      {
+        "topic_id": 843,
+        "subcategory_id": 469,
+        "category_id": 76,
+        "title_raw": "الزنا"
+      },
+      {
+        "topic_id": 1524,
+        "subcategory_id": 824,
+        "category_id": 151,
+        "title_raw": "الإيمان والعمل"
+      },
+      {
+        "topic_id": 1527,
+        "subcategory_id": 824,
+        "category_id": 151,
+        "title_raw": "التوبة"
+      },
+      {
+        "topic_id": 1631,
+        "subcategory_id": 829,
+        "category_id": 151,
+        "title_raw": "ما أعده الله لهم"
+      },
+      {
+        "topic_id": 1632,
+        "subcategory_id": 829,
+        "category_id": 151,
+        "title_raw": "وعده إياهم"
+      },
+      {
+        "topic_id": 1700,
+        "subcategory_id": 838,
+        "category_id": 157,
+        "title_raw": "أن يصدق العمل ما وقر في القلب"
+      },
+      {
+        "topic_id": 1704,
+        "subcategory_id": 842,
+        "category_id": 157,
+        "title_raw": "الإيمان والمؤمنون"
+      },
+      {
+        "topic_id": 1717,
+        "subcategory_id": 855,
+        "category_id": 157,
+        "title_raw": "وصف المؤمنون"
+      },
+      {
+        "topic_id": 2376,
+        "subcategory_id": 1511,
+        "category_id": 286,
+        "title_raw": "التوبة"
+      },
+      {
+        "topic_id": 2380,
+        "subcategory_id": 1515,
+        "category_id": 286,
+        "title_raw": "شرط قبول التوبة [الإقلاع عن المعصية وإصلاح العمل]"
+      },
+      {
+        "topic_id": 2779,
+        "subcategory_id": 1871,
+        "category_id": 351,
+        "title_raw": "الحسنات و السيئات"
+      },
+      {
+        "topic_id": 2780,
+        "subcategory_id": 1872,
+        "category_id": 351,
+        "title_raw": "تكفير الحسنات للسيئات"
+      },
+      {
+        "topic_id": 2784,
+        "subcategory_id": 1876,
+        "category_id": 352,
+        "title_raw": "الحسنة"
+      },
+      {
+        "topic_id": 2785,
+        "subcategory_id": 1877,
+        "category_id": 352,
+        "title_raw": "الذين يبدل الله سيئاتهم حسنات"
+      },
+      {
+        "topic_id": 4733,
+        "subcategory_id": 3698,
+        "category_id": 780,
+        "title_raw": "العمل"
+      },
+      {
+        "topic_id": 4791,
+        "subcategory_id": 3702,
+        "category_id": 780,
+        "title_raw": "العمل قرين الايمان ودليله وعلامته"
+      },
+      {
+        "topic_id": 5805,
+        "subcategory_id": 4672,
+        "category_id": 986,
+        "title_raw": "المعصية"
+      },
+      {
+        "topic_id": 6743,
+        "subcategory_id": 5602,
+        "category_id": 1160,
+        "title_raw": "رحمة الله"
+      }
+    ],
+    "25-71": [
+      {
+        "topic_id": 843,
+        "subcategory_id": 469,
+        "category_id": 76,
+        "title_raw": "الزنا"
+      },
+      {
+        "topic_id": 1524,
+        "subcategory_id": 824,
+        "category_id": 151,
+        "title_raw": "الإيمان والعمل"
+      },
+      {
+        "topic_id": 1527,
+        "subcategory_id": 824,
+        "category_id": 151,
+        "title_raw": "التوبة"
+      },
+      {
+        "topic_id": 1631,
+        "subcategory_id": 829,
+        "category_id": 151,
+        "title_raw": "ما أعده الله لهم"
+      },
+      {
+        "topic_id": 1632,
+        "subcategory_id": 829,
+        "category_id": 151,
+        "title_raw": "وعده إياهم"
+      },
+      {
+        "topic_id": 1717,
+        "subcategory_id": 855,
+        "category_id": 157,
+        "title_raw": "وصف المؤمنون"
+      },
+      {
+        "topic_id": 2376,
+        "subcategory_id": 1511,
+        "category_id": 286,
+        "title_raw": "التوبة"
+      },
+      {
+        "topic_id": 2380,
+        "subcategory_id": 1515,
+        "category_id": 286,
+        "title_raw": "شرط قبول التوبة [الإقلاع عن المعصية وإصلاح العمل]"
+      }
+    ],
+    "25-72": [
+      {
+        "topic_id": 103,
+        "subcategory_id": 71,
+        "category_id": 13,
+        "title_raw": "الكافرون:مثال من لا يستجيب لله"
+      },
+      {
+        "topic_id": 843,
+        "subcategory_id": 469,
+        "category_id": 76,
+        "title_raw": "الزنا"
+      },
+      {
+        "topic_id": 1322,
+        "subcategory_id": 805,
+        "category_id": 148,
+        "title_raw": "الإعراض عن اللغو"
+      },
+      {
+        "topic_id": 1416,
+        "subcategory_id": 806,
+        "category_id": 148,
+        "title_raw": "لغو القول"
+      },
+      {
+        "topic_id": 1631,
+        "subcategory_id": 829,
+        "category_id": 151,
+        "title_raw": "ما أعده الله لهم"
+      },
+      {
+        "topic_id": 1632,
+        "subcategory_id": 829,
+        "category_id": 151,
+        "title_raw": "وعده إياهم"
+      },
+      {
+        "topic_id": 1717,
+        "subcategory_id": 855,
+        "category_id": 157,
+        "title_raw": "وصف المؤمنون"
+      },
+      {
+        "topic_id": 3668,
+        "subcategory_id": 2717,
+        "category_id": 541,
+        "title_raw": "الزًور"
+      },
+      {
+        "topic_id": 3998,
+        "subcategory_id": 3047,
+        "category_id": 637,
+        "title_raw": "الشهادة"
+      },
+      {
+        "topic_id": 4005,
+        "subcategory_id": 3054,
+        "category_id": 637,
+        "title_raw": "شهادات مرفوضة [شهادة الزور]"
+      },
+      {
+        "topic_id": 4452,
+        "subcategory_id": 3499,
+        "category_id": 737,
+        "title_raw": "العبادة والعبودية"
+      },
+      {
+        "topic_id": 4462,
+        "subcategory_id": 3509,
+        "category_id": 737,
+        "title_raw": "سمات ومقومات عباد الرحمن [المعرضون عن اللغو]"
+      },
+      {
+        "topic_id": 4464,
+        "subcategory_id": 3511,
+        "category_id": 737,
+        "title_raw": "سمات ومقومات عباد الرحمن [لا يشهدون الزور]"
+      },
+      {
+        "topic_id": 4636,
+        "subcategory_id": 3657,
+        "category_id": 773,
+        "title_raw": "الشهادة:شهادة الزور"
+      },
+      {
+        "topic_id": 5514,
+        "subcategory_id": 4382,
+        "category_id": 937,
+        "title_raw": "الإعراض عن اللغو صفة عباد الرحمن"
+      },
+      {
+        "topic_id": 5516,
+        "subcategory_id": 4384,
+        "category_id": 937,
+        "title_raw": "اللغو"
+      },
+      {
+        "topic_id": 6842,
+        "subcategory_id": 5701,
+        "category_id": 1188,
+        "title_raw": "أخلاق حسنة أخرى"
+      },
+      {
+        "topic_id": 6843,
+        "subcategory_id": 5702,
+        "category_id": 1188,
+        "title_raw": "إجتنابهم الفواحش و النواهي"
+      },
+      {
+        "topic_id": 6849,
+        "subcategory_id": 5708,
+        "category_id": 1188,
+        "title_raw": "صفات المؤمنين"
+      }
+    ],
+    "25-73": [
+      {
+        "topic_id": 3,
+        "subcategory_id": 3,
+        "category_id": 1,
+        "title_raw": "الآية [الجملة من القرآن]"
+      },
+      {
+        "topic_id": 93,
+        "subcategory_id": 71,
+        "category_id": 13,
+        "title_raw": "الكافرون:تشبيههم بالموتى والصم والبكم والعمي"
+      },
+      {
+        "topic_id": 843,
+        "subcategory_id": 469,
+        "category_id": 76,
+        "title_raw": "الزنا"
+      },
+      {
+        "topic_id": 1631,
+        "subcategory_id": 829,
+        "category_id": 151,
+        "title_raw": "ما أعده الله لهم"
+      },
+      {
+        "topic_id": 1632,
+        "subcategory_id": 829,
+        "category_id": 151,
+        "title_raw": "وعده إياهم"
+      },
+      {
+        "topic_id": 1717,
+        "subcategory_id": 855,
+        "category_id": 157,
+        "title_raw": "وصف المؤمنون"
+      },
+      {
+        "topic_id": 2264,
+        "subcategory_id": 1399,
+        "category_id": 251,
+        "title_raw": "التذكير والذكرى"
+      },
+      {
+        "topic_id": 2268,
+        "subcategory_id": 1403,
+        "category_id": 251,
+        "title_raw": "من الذي ينتفع بالتذكير"
+      },
+      {
+        "topic_id": 3668,
+        "subcategory_id": 2717,
+        "category_id": 541,
+        "title_raw": "الزًور"
+      },
+      {
+        "topic_id": 3669,
+        "subcategory_id": 2718,
+        "category_id": 541,
+        "title_raw": "النهي عنه لغواً وشهادة"
+      },
+      {
+        "topic_id": 4178,
+        "subcategory_id": 3225,
+        "category_id": 676,
+        "title_raw": "الصمم"
+      },
+      {
+        "topic_id": 4452,
+        "subcategory_id": 3499,
+        "category_id": 737,
+        "title_raw": "العبادة والعبودية"
+      },
+      {
+        "topic_id": 4460,
+        "subcategory_id": 3507,
+        "category_id": 737,
+        "title_raw": "سمات ومقومات عباد الرحمن [المحسنون ذكرهم لله]"
+      },
+      {
+        "topic_id": 4797,
+        "subcategory_id": 3707,
+        "category_id": 781,
+        "title_raw": "العمى"
+      },
+      {
+        "topic_id": 5164,
+        "subcategory_id": 4070,
+        "category_id": 871,
+        "title_raw": "الأمر بتلاوته"
+      },
+      {
+        "topic_id": 6266,
+        "subcategory_id": 5131,
+        "category_id": 1069,
+        "title_raw": "الراسخون في العلم يستوهبون ربهم"
+      },
+      {
+        "topic_id": 6267,
+        "subcategory_id": 5132,
+        "category_id": 1069,
+        "title_raw": "الهبة"
+      },
+      {
+        "topic_id": 6848,
+        "subcategory_id": 5707,
+        "category_id": 1188,
+        "title_raw": "حبهم لله تعالى و إلتزامهم لأوامره"
+      },
+      {
+        "topic_id": 6849,
+        "subcategory_id": 5708,
+        "category_id": 1188,
+        "title_raw": "صفات المؤمنين"
+      }
+    ],
+    "25-74": [
+      {
+        "topic_id": 351,
+        "subcategory_id": 75,
+        "category_id": 13,
+        "title_raw": "الدعاء:المأثور من الدعاء"
+      },
+      {
+        "topic_id": 843,
+        "subcategory_id": 469,
+        "category_id": 76,
+        "title_raw": "الزنا"
+      },
+      {
+        "topic_id": 1031,
+        "subcategory_id": 518,
+        "category_id": 78,
+        "title_raw": "الأدعية"
+      },
+      {
+        "topic_id": 1032,
+        "subcategory_id": 519,
+        "category_id": 78,
+        "title_raw": "الأدعية الواردة في القرآن الكريم"
+      },
+      {
+        "topic_id": 1106,
+        "subcategory_id": 593,
+        "category_id": 89,
+        "title_raw": "الأسرة"
+      },
+      {
+        "topic_id": 1108,
+        "subcategory_id": 595,
+        "category_id": 89,
+        "title_raw": "الأسرة الصالحة قرة عين الرجل"
+      },
+      {
+        "topic_id": 1631,
+        "subcategory_id": 829,
+        "category_id": 151,
+        "title_raw": "ما أعده الله لهم"
+      },
+      {
+        "topic_id": 1632,
+        "subcategory_id": 829,
+        "category_id": 151,
+        "title_raw": "وعده إياهم"
+      },
+      {
+        "topic_id": 1717,
+        "subcategory_id": 855,
+        "category_id": 157,
+        "title_raw": "وصف المؤمنون"
+      },
+      {
+        "topic_id": 3233,
+        "subcategory_id": 2282,
+        "category_id": 440,
+        "title_raw": "الدعاء"
+      },
+      {
+        "topic_id": 3259,
+        "subcategory_id": 2308,
+        "category_id": 440,
+        "title_raw": "صور من دعوات المؤمنين"
+      },
+      {
+        "topic_id": 3316,
+        "subcategory_id": 2365,
+        "category_id": 451,
+        "title_raw": "الدعاء بالصلاح للذرية"
+      },
+      {
+        "topic_id": 3317,
+        "subcategory_id": 2366,
+        "category_id": 451,
+        "title_raw": "الذرية"
+      },
+      {
+        "topic_id": 4452,
+        "subcategory_id": 3499,
+        "category_id": 737,
+        "title_raw": "العبادة والعبودية"
+      },
+      {
+        "topic_id": 4458,
+        "subcategory_id": 3505,
+        "category_id": 737,
+        "title_raw": "سمات ومقومات عباد الرحمن [الراجون فضل الله]"
+      },
+      {
+        "topic_id": 6882,
+        "subcategory_id": 5741,
+        "category_id": 1200,
+        "title_raw": "الدعاء من القرآن والاستجابة"
+      },
+      {
+        "topic_id": 6996,
+        "subcategory_id": 5855,
+        "category_id": 1232,
+        "title_raw": "قرة العين"
+      }
+    ],
+    "25-75": [
+      {
+        "topic_id": 696,
+        "subcategory_id": 385,
+        "category_id": 64,
+        "title_raw": "الآخرة"
+      },
+      {
+        "topic_id": 698,
+        "subcategory_id": 387,
+        "category_id": 64,
+        "title_raw": "الآخرة هي دار الجزاء"
+      },
+      {
+        "topic_id": 843,
+        "subcategory_id": 469,
+        "category_id": 76,
+        "title_raw": "الزنا"
+      },
+      {
+        "topic_id": 1334,
+        "subcategory_id": 805,
+        "category_id": 148,
+        "title_raw": "الصبر"
+      },
+      {
+        "topic_id": 1480,
+        "subcategory_id": 815,
+        "category_id": 149,
+        "title_raw": "التحية والسلام وأذب الضيافة"
+      },
+      {
+        "topic_id": 1631,
+        "subcategory_id": 829,
+        "category_id": 151,
+        "title_raw": "ما أعده الله لهم"
+      },
+      {
+        "topic_id": 1632,
+        "subcategory_id": 829,
+        "category_id": 151,
+        "title_raw": "وعده إياهم"
+      },
+      {
+        "topic_id": 1717,
+        "subcategory_id": 855,
+        "category_id": 157,
+        "title_raw": "وصف المؤمنون"
+      },
+      {
+        "topic_id": 2244,
+        "subcategory_id": 1379,
+        "category_id": 247,
+        "title_raw": "التحية"
+      },
+      {
+        "topic_id": 2247,
+        "subcategory_id": 1382,
+        "category_id": 247,
+        "title_raw": "تحية أهل الجنة السلام"
+      },
+      {
+        "topic_id": 2546,
+        "subcategory_id": 1681,
+        "category_id": 321,
+        "title_raw": "الجنة"
+      },
+      {
+        "topic_id": 2547,
+        "subcategory_id": 1682,
+        "category_id": 321,
+        "title_raw": "الجنة حسنت مستقراً ومقاماً"
+      },
+      {
+        "topic_id": 2551,
+        "subcategory_id": 1686,
+        "category_id": 321,
+        "title_raw": "تحية أهلها السلام ولا يسمعون غيره"
+      },
+      {
+        "topic_id": 4062,
+        "subcategory_id": 3110,
+        "category_id": 652,
+        "title_raw": "الصبر"
+      },
+      {
+        "topic_id": 4070,
+        "subcategory_id": 3118,
+        "category_id": 652,
+        "title_raw": "مثوبة الصابرين"
+      },
+      {
+        "topic_id": 6589,
+        "subcategory_id": 5448,
+        "category_id": 1130,
+        "title_raw": "الجزاء"
+      },
+      {
+        "topic_id": 6590,
+        "subcategory_id": 5449,
+        "category_id": 1130,
+        "title_raw": "الجزاء على قدر العمل"
+      },
+      {
+        "topic_id": 6597,
+        "subcategory_id": 5456,
+        "category_id": 1131,
+        "title_raw": "جزاء المؤمنين"
+      },
+      {
+        "topic_id": 6598,
+        "subcategory_id": 5457,
+        "category_id": 1131,
+        "title_raw": "جزاؤهم بعد الحساب"
+      },
+      {
+        "topic_id": 6615,
+        "subcategory_id": 5474,
+        "category_id": 1135,
+        "title_raw": "حال المؤمنين في الجنة"
+      },
+      {
+        "topic_id": 6912,
+        "subcategory_id": 5771,
+        "category_id": 1213,
+        "title_raw": "غرف الجنة"
+      }
+    ],
+    "25-76": [
+      {
+        "topic_id": 1334,
+        "subcategory_id": 805,
+        "category_id": 148,
+        "title_raw": "الصبر"
+      },
+      {
+        "topic_id": 1571,
+        "subcategory_id": 826,
+        "category_id": 151,
+        "title_raw": "الخلود:الخلود في النعيم"
+      },
+      {
+        "topic_id": 1631,
+        "subcategory_id": 829,
+        "category_id": 151,
+        "title_raw": "ما أعده الله لهم"
+      },
+      {
+        "topic_id": 1632,
+        "subcategory_id": 829,
+        "category_id": 151,
+        "title_raw": "وعده إياهم"
+      },
+      {
+        "topic_id": 1717,
+        "subcategory_id": 855,
+        "category_id": 157,
+        "title_raw": "وصف المؤمنون"
+      }
+    ],
+    "25-77": [
+      {
+        "topic_id": 350,
+        "subcategory_id": 75,
+        "category_id": 13,
+        "title_raw": "الدعاء:الحث على الدعاء"
+      },
+      {
+        "topic_id": 1031,
+        "subcategory_id": 518,
+        "category_id": 78,
+        "title_raw": "الأدعية"
+      },
+      {
+        "topic_id": 1033,
+        "subcategory_id": 520,
+        "category_id": 78,
+        "title_raw": "الحث على الدعاء"
+      },
+      {
+        "topic_id": 1717,
+        "subcategory_id": 855,
+        "category_id": 157,
+        "title_raw": "وصف المؤمنون"
+      }
+    ]
+  }
+}

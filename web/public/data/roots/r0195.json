@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "root_ar": "فسر",
+  "count": 1,
+  "verses": [
+    {
+      "surah": 25,
+      "ayah": 33,
+      "verse_key": "25-33",
+      "text_raw": "وَلَا يَأْتُونَكَ بِمَثَلٍ إِلَّا جِئْنَاكَ بِالْحَقِّ وَأَحْسَنَ تَفْسِيرًا",
+      "page_number": 363,
+      "word_count": 8,
+      "letter_count": 37
+    }
+  ]
+}

@@ -46,6 +46,223 @@
       ],
       "shane_nuzul": "### আয়াত ৩৫: মুসা-হারুনের দৃষ্টান্ত\n\n**স্বতন্ত্র শানে নুযূল:** ওয়াহিদী (আসবাবুন নুযূল), সুয়ূতী (লুবাবুন নুকূল) ও আল-ওয়াদিঈ (আস-সহীহুল মুসনাদ)-এ এই আয়াতের জন্য স্বতন্ত্র কোনো শানে নুযূল বর্ণিত হয়নি। এটি মাক্কী সূরার সিয়াক-সিবাকভিত্তিক আয়াত। নীতি ৩ অনুযায়ী এখানে কোনো অনুমাননির্ভর ঘটনা আরোপ করা হয়নি; কেবল প্রাসঙ্গিক যাচাইকৃত তাফসীরুল মা'সূরের ধারা ও নাযমুল কুরআন (অধ্যায় ২ ও ১২-এ) উপস্থাপিত।",
       "shane_nuzul_covers": null,
+      "verse_meta": {
+        "page_number": 363,
+        "word_count": 9,
+        "letter_count": 42,
+        "verse_key": "25-35",
+        "text_raw": "وَلَقَدْ آتَيْنَا مُوسَى الْكِتَابَ وَجَعَلْنَا مَعَهُ أَخَاهُ هَارُونَ وَزِيرًا"
+      },
+      "bahouth_words": {
+        "verse_key": "25-35",
+        "word_count": 9,
+        "words": [
+          {
+            "word_id": 46648,
+            "word_order_in_verse": 1,
+            "word_raw": "وَلَقَدْ",
+            "plain_text_raw": "وَلَقَدْ",
+            "root_token_raw": "/قد/",
+            "norm": "ولقد",
+            "match": "text",
+            "site_meaning_bn": "আর অবশ্যই；",
+            "site_arabic": "وَلَقَدْ"
+          },
+          {
+            "word_id": 46649,
+            "word_order_in_verse": 2,
+            "word_raw": "آتَيْنَا",
+            "plain_text_raw": "ءَاتَيْنَا",
+            "root_token_raw": "/أتي/",
+            "norm": "ءاتينا",
+            "match": "order",
+            "site_meaning_bn": "আমরা দিয়েছিলাম；",
+            "site_arabic": "آتَيْنَا"
+          },
+          {
+            "word_id": 46650,
+            "word_order_in_verse": 3,
+            "word_raw": "مُوسَى",
+            "plain_text_raw": "مُوسَى",
+            "root_token_raw": "/موسى/",
+            "norm": "موسي",
+            "match": "text",
+            "site_meaning_bn": "মূসাকে；",
+            "site_arabic": "مُوسَى"
+          },
+          {
+            "word_id": 46651,
+            "word_order_in_verse": 4,
+            "word_raw": "الْكِتَابَ",
+            "plain_text_raw": "ٱلْكِتَٰبَ",
+            "root_token_raw": "/كتب/",
+            "norm": "الكتب",
+            "match": "order",
+            "site_meaning_bn": "কিতাব (তাওরাত)；",
+            "site_arabic": "الْكِتَابَ"
+          },
+          {
+            "word_id": 46652,
+            "word_order_in_verse": 5,
+            "word_raw": "وَجَعَلْنَا",
+            "plain_text_raw": "وَجَعَلْنَا",
+            "root_token_raw": "/جعل/",
+            "norm": "وجعلنا",
+            "match": "text",
+            "site_meaning_bn": "এবং আমরা বানিয়েছিলাম；",
+            "site_arabic": "وَجَعَلْنَا"
+          },
+          {
+            "word_id": 46653,
+            "word_order_in_verse": 6,
+            "word_raw": "مَعَهُ",
+            "plain_text_raw": "مَعَهُۥٓ",
+            "root_token_raw": "/مع/",
+            "norm": "معهۥٓ",
+            "match": "order",
+            "site_meaning_bn": "তার সাথে；",
+            "site_arabic": "مَعَهُ"
+          },
+          {
+            "word_id": 46654,
+            "word_order_in_verse": 7,
+            "word_raw": "أَخَاهُ",
+            "plain_text_raw": "أَخَاهُ",
+            "root_token_raw": "/أخو/",
+            "norm": "اخاه",
+            "match": "text",
+            "site_meaning_bn": "তার ভাই；",
+            "site_arabic": "أَخَاهُ"
+          },
+          {
+            "word_id": 46655,
+            "word_order_in_verse": 8,
+            "word_raw": "هَارُونَ",
+            "plain_text_raw": "هَٰرُونَ",
+            "root_token_raw": "/هارون/",
+            "norm": "هرون",
+            "match": "order",
+            "site_meaning_bn": "হারূনকে；",
+            "site_arabic": "هَارُونَ"
+          },
+          {
+            "word_id": 46656,
+            "word_order_in_verse": 9,
+            "word_raw": "وَزِيرًا",
+            "plain_text_raw": "وَزِيرࣰا",
+            "root_token_raw": "/وزر/",
+            "norm": "وزيرࣰا",
+            "match": "order",
+            "site_meaning_bn": "সাহায্যকারী উযীর।",
+            "site_arabic": "وَزِيرًا"
+          }
+        ]
+      },
+      "topics": [
+        {
+          "topic_id": 1022,
+          "subcategory_id": 509,
+          "category_id": 77,
+          "title_raw": "أساس الأخوة الود والمؤازرة"
+        },
+        {
+          "topic_id": 1024,
+          "subcategory_id": 511,
+          "category_id": 77,
+          "title_raw": "الأخوة"
+        },
+        {
+          "topic_id": 1610,
+          "subcategory_id": 827,
+          "category_id": 151,
+          "title_raw": "الكتب المقدسة"
+        },
+        {
+          "topic_id": 5303,
+          "subcategory_id": 4185,
+          "category_id": 888,
+          "title_raw": "موسى عليه السلام وفرعون"
+        },
+        {
+          "topic_id": 5533,
+          "subcategory_id": 4401,
+          "category_id": 939,
+          "title_raw": "الله [منزل الكتاب]"
+        },
+        {
+          "topic_id": 5536,
+          "subcategory_id": 4404,
+          "category_id": 939,
+          "title_raw": "الله جل جلاله"
+        },
+        {
+          "topic_id": 6371,
+          "subcategory_id": 5236,
+          "category_id": 1088,
+          "title_raw": "الوزارة والوزير"
+        },
+        {
+          "topic_id": 6372,
+          "subcategory_id": 5237,
+          "category_id": 1088,
+          "title_raw": "هارون وزيراً لموسى عليهما السلام"
+        },
+        {
+          "topic_id": 6373,
+          "subcategory_id": 5238,
+          "category_id": 1089,
+          "title_raw": "الوزير"
+        },
+        {
+          "topic_id": 7031,
+          "subcategory_id": 5890,
+          "category_id": 1248,
+          "title_raw": "تهديد المشركين باالعذاب"
+        },
+        {
+          "topic_id": 7032,
+          "subcategory_id": 5891,
+          "category_id": 1248,
+          "title_raw": "محمد رسول الله"
+        },
+        {
+          "topic_id": 7147,
+          "subcategory_id": 6005,
+          "category_id": 1282,
+          "title_raw": "إيتاؤه الكتاب والآيات والسلطان المبين"
+        },
+        {
+          "topic_id": 7161,
+          "subcategory_id": 6019,
+          "category_id": 1282,
+          "title_raw": "موسى عليه السلام"
+        },
+        {
+          "topic_id": 7171,
+          "subcategory_id": 6029,
+          "category_id": 1283,
+          "title_raw": "موسى المكلف بالدعوة"
+        },
+        {
+          "topic_id": 7172,
+          "subcategory_id": 6030,
+          "category_id": 1283,
+          "title_raw": "موسى و هارون"
+        },
+        {
+          "topic_id": 7206,
+          "subcategory_id": 6064,
+          "category_id": 1291,
+          "title_raw": "هارون عليه السلام"
+        },
+        {
+          "topic_id": 7207,
+          "subcategory_id": 6065,
+          "category_id": 1291,
+          "title_raw": "وزير موسى وصاحبه"
+        }
+      ],
+      "qiraat_annotations": null,
       "tahqeeq": [
         {
           "word": "وَزِيرًا",
@@ -100,6 +317,114 @@
             "analysis_bn": "ইবনে আশূর দেখান ‘القصة الأولى: قصة موسى’—‘جعلنا لكل نبي عدوا’-এর পর নবীদের সফলতার দৃষ্টান্ত উপস্থাপন।"
           }
         ]
+      },
+      "bahouth_words_mapped": [
+        {
+          "word_id": 46648,
+          "word_order_in_verse": 1,
+          "word_raw": "وَلَقَدْ",
+          "plain_text_raw": "وَلَقَدْ",
+          "root_token_raw": "/قد/",
+          "norm": "ولقد",
+          "match": "text",
+          "site_meaning_bn": "আর অবশ্যই；",
+          "site_arabic": "وَلَقَدْ"
+        },
+        {
+          "word_id": 46649,
+          "word_order_in_verse": 2,
+          "word_raw": "آتَيْنَا",
+          "plain_text_raw": "ءَاتَيْنَا",
+          "root_token_raw": "/أتي/",
+          "norm": "ءاتينا",
+          "match": "order",
+          "site_meaning_bn": "আমরা দিয়েছিলাম；",
+          "site_arabic": "آتَيْنَا"
+        },
+        {
+          "word_id": 46650,
+          "word_order_in_verse": 3,
+          "word_raw": "مُوسَى",
+          "plain_text_raw": "مُوسَى",
+          "root_token_raw": "/موسى/",
+          "norm": "موسي",
+          "match": "text",
+          "site_meaning_bn": "মূসাকে；",
+          "site_arabic": "مُوسَى"
+        },
+        {
+          "word_id": 46651,
+          "word_order_in_verse": 4,
+          "word_raw": "الْكِتَابَ",
+          "plain_text_raw": "ٱلْكِتَٰبَ",
+          "root_token_raw": "/كتب/",
+          "norm": "الكتب",
+          "match": "order",
+          "site_meaning_bn": "কিতাব (তাওরাত)；",
+          "site_arabic": "الْكِتَابَ"
+        },
+        {
+          "word_id": 46652,
+          "word_order_in_verse": 5,
+          "word_raw": "وَجَعَلْنَا",
+          "plain_text_raw": "وَجَعَلْنَا",
+          "root_token_raw": "/جعل/",
+          "norm": "وجعلنا",
+          "match": "text",
+          "site_meaning_bn": "এবং আমরা বানিয়েছিলাম；",
+          "site_arabic": "وَجَعَلْنَا"
+        },
+        {
+          "word_id": 46653,
+          "word_order_in_verse": 6,
+          "word_raw": "مَعَهُ",
+          "plain_text_raw": "مَعَهُۥٓ",
+          "root_token_raw": "/مع/",
+          "norm": "معهۥٓ",
+          "match": "order",
+          "site_meaning_bn": "তার সাথে；",
+          "site_arabic": "مَعَهُ"
+        },
+        {
+          "word_id": 46654,
+          "word_order_in_verse": 7,
+          "word_raw": "أَخَاهُ",
+          "plain_text_raw": "أَخَاهُ",
+          "root_token_raw": "/أخو/",
+          "norm": "اخاه",
+          "match": "text",
+          "site_meaning_bn": "তার ভাই；",
+          "site_arabic": "أَخَاهُ"
+        },
+        {
+          "word_id": 46655,
+          "word_order_in_verse": 8,
+          "word_raw": "هَارُونَ",
+          "plain_text_raw": "هَٰرُونَ",
+          "root_token_raw": "/هارون/",
+          "norm": "هرون",
+          "match": "order",
+          "site_meaning_bn": "হারূনকে；",
+          "site_arabic": "هَارُونَ"
+        },
+        {
+          "word_id": 46656,
+          "word_order_in_verse": 9,
+          "word_raw": "وَزِيرًا",
+          "plain_text_raw": "وَزِيرࣰا",
+          "root_token_raw": "/وزر/",
+          "norm": "وزيرࣰا",
+          "match": "order",
+          "site_meaning_bn": "সাহায্যকারী উযীর।",
+          "site_arabic": "وَزِيرًا"
+        }
+      ],
+      "bahouth_match_stats": {
+        "text": 4,
+        "order": 5,
+        "none": 0,
+        "site_total": 9,
+        "bahouth_total": 9
       }
     },
     {
@@ -139,6 +464,125 @@
       ],
       "shane_nuzul": "### আয়াত ৩৬: মুসার কওমের ধ্বংস\n\n**স্বতন্ত্র শানে নুযূল:** ওয়াহিদী (আসবাবুন নুযূল), সুয়ূতী (লুবাবুন নুকূল) ও আল-ওয়াদিঈ (আস-সহীহুল মুসনাদ)-এ এই আয়াতের জন্য স্বতন্ত্র কোনো শানে নুযূল বর্ণিত হয়নি। এটি মাক্কী সূরার সিয়াক-সিবাকভিত্তিক আয়াত। নীতি ৩ অনুযায়ী এখানে কোনো অনুমাননির্ভর ঘটনা আরোপ করা হয়নি; কেবল প্রাসঙ্গিক যাচাইকৃত তাফসীরুল মা'সূরের ধারা ও নাযমুল কুরআন (অধ্যায় ২ ও ১২-এ) উপস্থাপিত।",
       "shane_nuzul_covers": null,
+      "verse_meta": {
+        "page_number": 363,
+        "word_count": 9,
+        "letter_count": 49,
+        "verse_key": "25-36",
+        "text_raw": "فَقُلْنَا اذْهَبَا إِلَى الْقَوْمِ الَّذِينَ كَذَّبُوا بِآيَاتِنَا فَدَمَّرْنَاهُمْ تَدْمِيرًا"
+      },
+      "bahouth_words": {
+        "verse_key": "25-36",
+        "word_count": 9,
+        "words": [
+          {
+            "word_id": 46657,
+            "word_order_in_verse": 1,
+            "word_raw": "فَقُلْنَا",
+            "plain_text_raw": "فَقُلْنَا",
+            "root_token_raw": "/قول/",
+            "norm": "فقلنا",
+            "match": "text",
+            "site_meaning_bn": "অতঃপর আমরা বলেছিলাম；",
+            "site_arabic": "فَقُلْنَا"
+          },
+          {
+            "word_id": 46658,
+            "word_order_in_verse": 2,
+            "word_raw": "اذْهَبَا",
+            "plain_text_raw": "ٱذْهَبَآ",
+            "root_token_raw": "/ذهب/",
+            "norm": "اذهبآ",
+            "match": "none"
+          },
+          {
+            "word_id": 46659,
+            "word_order_in_verse": 3,
+            "word_raw": "إِلَى",
+            "plain_text_raw": "إِلَى",
+            "root_token_raw": "/إلى/",
+            "norm": "الي",
+            "match": "none"
+          },
+          {
+            "word_id": 46660,
+            "word_order_in_verse": 4,
+            "word_raw": "الْقَوْمِ",
+            "plain_text_raw": "ٱلْقَوْمِ",
+            "root_token_raw": "/قوم/",
+            "norm": "القوم",
+            "match": "none"
+          },
+          {
+            "word_id": 46661,
+            "word_order_in_verse": 5,
+            "word_raw": "الَّذِينَ",
+            "plain_text_raw": "ٱلَّذِينَ",
+            "root_token_raw": "/الذي/",
+            "norm": "الذين",
+            "match": "text",
+            "site_meaning_bn": "যারা；",
+            "site_arabic": "الَّذِينَ"
+          },
+          {
+            "word_id": 46662,
+            "word_order_in_verse": 6,
+            "word_raw": "كَذَّبُوا",
+            "plain_text_raw": "كَذَّبُوا۟",
+            "root_token_raw": "/كذب/",
+            "norm": "كذبوا۟",
+            "match": "none"
+          },
+          {
+            "word_id": 46663,
+            "word_order_in_verse": 7,
+            "word_raw": "بِآيَاتِنَا",
+            "plain_text_raw": "بِـَٔايَٰتِنَا",
+            "root_token_raw": "/أيي/",
+            "norm": "بٔايتنا",
+            "match": "none"
+          },
+          {
+            "word_id": 46664,
+            "word_order_in_verse": 8,
+            "word_raw": "فَدَمَّرْنَاهُمْ",
+            "plain_text_raw": "فَدَمَّرْنَٰهُمْ",
+            "root_token_raw": "/دمر/",
+            "norm": "فدمرنهم",
+            "match": "none"
+          },
+          {
+            "word_id": 46665,
+            "word_order_in_verse": 9,
+            "word_raw": "تَدْمِيرًا",
+            "plain_text_raw": "تَدْمِيرࣰا",
+            "root_token_raw": "/دمر/",
+            "norm": "تدميرࣰا",
+            "match": "none"
+          }
+        ]
+      },
+      "topics": [
+        {
+          "topic_id": 3173,
+          "subcategory_id": 2253,
+          "category_id": 434,
+          "title_raw": "الدمار"
+        },
+        {
+          "topic_id": 3175,
+          "subcategory_id": 2255,
+          "category_id": 434,
+          "title_raw": "عقاب المكذبين بآيات الله والمفسدين في الأرض"
+        },
+        {
+          "topic_id": 5303,
+          "subcategory_id": 4185,
+          "category_id": 888,
+          "title_raw": "موسى عليه السلام وفرعون"
+        }
+      ],
+      "qiraat_annotations": null,
       "tahqeeq": [
         {
           "word": "فَدَمَّرْنَاهُمْ",
@@ -193,6 +637,100 @@
             "analysis_bn": "ইবনে আশূর দেখান এটি মুসা-কাহিনির সমাপ্তি—মিথ্যাবাদী কওমের ধ্বংস দিয়ে নবীর সাহায্য প্রতিষ্ঠিত।"
           }
         ]
+      },
+      "bahouth_words_mapped": [
+        {
+          "word_id": 46657,
+          "word_order_in_verse": 1,
+          "word_raw": "فَقُلْنَا",
+          "plain_text_raw": "فَقُلْنَا",
+          "root_token_raw": "/قول/",
+          "norm": "فقلنا",
+          "match": "text",
+          "site_meaning_bn": "অতঃপর আমরা বলেছিলাম；",
+          "site_arabic": "فَقُلْنَا"
+        },
+        {
+          "word_id": 46658,
+          "word_order_in_verse": 2,
+          "word_raw": "اذْهَبَا",
+          "plain_text_raw": "ٱذْهَبَآ",
+          "root_token_raw": "/ذهب/",
+          "norm": "اذهبآ",
+          "match": "none"
+        },
+        {
+          "word_id": 46659,
+          "word_order_in_verse": 3,
+          "word_raw": "إِلَى",
+          "plain_text_raw": "إِلَى",
+          "root_token_raw": "/إلى/",
+          "norm": "الي",
+          "match": "none"
+        },
+        {
+          "word_id": 46660,
+          "word_order_in_verse": 4,
+          "word_raw": "الْقَوْمِ",
+          "plain_text_raw": "ٱلْقَوْمِ",
+          "root_token_raw": "/قوم/",
+          "norm": "القوم",
+          "match": "none"
+        },
+        {
+          "word_id": 46661,
+          "word_order_in_verse": 5,
+          "word_raw": "الَّذِينَ",
+          "plain_text_raw": "ٱلَّذِينَ",
+          "root_token_raw": "/الذي/",
+          "norm": "الذين",
+          "match": "text",
+          "site_meaning_bn": "যারা；",
+          "site_arabic": "الَّذِينَ"
+        },
+        {
+          "word_id": 46662,
+          "word_order_in_verse": 6,
+          "word_raw": "كَذَّبُوا",
+          "plain_text_raw": "كَذَّبُوا۟",
+          "root_token_raw": "/كذب/",
+          "norm": "كذبوا۟",
+          "match": "none"
+        },
+        {
+          "word_id": 46663,
+          "word_order_in_verse": 7,
+          "word_raw": "بِآيَاتِنَا",
+          "plain_text_raw": "بِـَٔايَٰتِنَا",
+          "root_token_raw": "/أيي/",
+          "norm": "بٔايتنا",
+          "match": "none"
+        },
+        {
+          "word_id": 46664,
+          "word_order_in_verse": 8,
+          "word_raw": "فَدَمَّرْنَاهُمْ",
+          "plain_text_raw": "فَدَمَّرْنَٰهُمْ",
+          "root_token_raw": "/دمر/",
+          "norm": "فدمرنهم",
+          "match": "none"
+        },
+        {
+          "word_id": 46665,
+          "word_order_in_verse": 9,
+          "word_raw": "تَدْمِيرًا",
+          "plain_text_raw": "تَدْمِيرࣰا",
+          "root_token_raw": "/دمر/",
+          "norm": "تدميرࣰا",
+          "match": "none"
+        }
+      ],
+      "bahouth_match_stats": {
+        "text": 2,
+        "order": 0,
+        "none": 7,
+        "site_total": 8,
+        "bahouth_total": 9
       }
     },
     {
@@ -220,6 +758,247 @@
       "irab_covers": null,
       "shane_nuzul": "### আয়াত ৩৭: নুহের কওমের ধ্বংস\n\n**স্বতন্ত্র শানে নুযূল:** ওয়াহিদী (আসবাবুন নুযূল), সুয়ূতী (লুবাবুন নুকূল) ও আল-ওয়াদিঈ (আস-সহীহুল মুসনাদ)-এ এই আয়াতের জন্য স্বতন্ত্র কোনো শানে নুযূল বর্ণিত হয়নি। এটি মাক্কী সূরার সিয়াক-সিবাকভিত্তিক আয়াত। নীতি ৩ অনুযায়ী এখানে কোনো অনুমাননির্ভর ঘটনা আরোপ করা হয়নি; কেবল প্রাসঙ্গিক যাচাইকৃত তাফসীরুল মা'সূরের ধারা ও নাযমুল কুরআন (অধ্যায় ২ ও ১২-এ) উপস্থাপিত।",
       "shane_nuzul_covers": null,
+      "verse_meta": {
+        "page_number": 363,
+        "word_count": 13,
+        "letter_count": 69,
+        "verse_key": "25-37",
+        "text_raw": "وَقَوْمَ نُوحٍ لَمَّا كَذَّبُوا الرُّسُلَ أَغْرَقْنَاهُمْ وَجَعَلْنَاهُمْ لِلنَّاسِ آيَةً وَأَعْتَدْنَا لِلظَّالِمِينَ عَذَابًا أَلِيمًا"
+      },
+      "bahouth_words": {
+        "verse_key": "25-37",
+        "word_count": 13,
+        "words": [
+          {
+            "word_id": 46666,
+            "word_order_in_verse": 1,
+            "word_raw": "وَقَوْمَ",
+            "plain_text_raw": "وَقَوْمَ",
+            "root_token_raw": "/قوم/",
+            "norm": "وقوم",
+            "match": "none"
+          },
+          {
+            "word_id": 46667,
+            "word_order_in_verse": 2,
+            "word_raw": "نُوحٍ",
+            "plain_text_raw": "نُوحࣲ",
+            "root_token_raw": "/نوح/",
+            "norm": "نوحࣲ",
+            "match": "none"
+          },
+          {
+            "word_id": 46668,
+            "word_order_in_verse": 3,
+            "word_raw": "لَمَّا",
+            "plain_text_raw": "لَّمَّا",
+            "root_token_raw": "/لما/",
+            "norm": "لما",
+            "match": "text",
+            "site_meaning_bn": "যখন；",
+            "site_arabic": "لَمَّا"
+          },
+          {
+            "word_id": 46669,
+            "word_order_in_verse": 4,
+            "word_raw": "كَذَّبُوا",
+            "plain_text_raw": "كَذَّبُوا۟",
+            "root_token_raw": "/كذب/",
+            "norm": "كذبوا۟",
+            "match": "none"
+          },
+          {
+            "word_id": 46670,
+            "word_order_in_verse": 5,
+            "word_raw": "الرُّسُلَ",
+            "plain_text_raw": "ٱلرُّسُلَ",
+            "root_token_raw": "/رسل/",
+            "norm": "الرسل",
+            "match": "none"
+          },
+          {
+            "word_id": 46671,
+            "word_order_in_verse": 6,
+            "word_raw": "أَغْرَقْنَاهُمْ",
+            "plain_text_raw": "أَغْرَقْنَٰهُمْ",
+            "root_token_raw": "/غرق/",
+            "norm": "اغرقنهم",
+            "match": "none"
+          },
+          {
+            "word_id": 46672,
+            "word_order_in_verse": 7,
+            "word_raw": "وَجَعَلْنَاهُمْ",
+            "plain_text_raw": "وَجَعَلْنَٰهُمْ",
+            "root_token_raw": "/جعل/",
+            "norm": "وجعلنهم",
+            "match": "none"
+          },
+          {
+            "word_id": 46673,
+            "word_order_in_verse": 8,
+            "word_raw": "لِلنَّاسِ",
+            "plain_text_raw": "لِلنَّاسِ",
+            "root_token_raw": "/نوس/",
+            "norm": "للناس",
+            "match": "text",
+            "site_meaning_bn": "মানুষের জন্য；",
+            "site_arabic": "لِلنَّاسِ"
+          },
+          {
+            "word_id": 46674,
+            "word_order_in_verse": 9,
+            "word_raw": "آيَةً",
+            "plain_text_raw": "ءَايَةࣰۖ",
+            "root_token_raw": "/أيي/",
+            "norm": "ءايهࣰۖ",
+            "match": "none"
+          },
+          {
+            "word_id": 46675,
+            "word_order_in_verse": 10,
+            "word_raw": "وَأَعْتَدْنَا",
+            "plain_text_raw": "وَأَعْتَدْنَا",
+            "root_token_raw": "/عتد/",
+            "norm": "واعتدنا",
+            "match": "text",
+            "site_meaning_bn": "এবং আমরা প্রস্তুত রেখেছি；",
+            "site_arabic": "وَأَعْتَدْنَا"
+          },
+          {
+            "word_id": 46676,
+            "word_order_in_verse": 11,
+            "word_raw": "لِلظَّالِمِينَ",
+            "plain_text_raw": "لِلظَّٰلِمِينَ",
+            "root_token_raw": "/ظلم/",
+            "norm": "للظلمين",
+            "match": "none"
+          },
+          {
+            "word_id": 46677,
+            "word_order_in_verse": 12,
+            "word_raw": "عَذَابًا",
+            "plain_text_raw": "عَذَابًا",
+            "root_token_raw": "/عذب/",
+            "norm": "عذابا",
+            "match": "none"
+          },
+          {
+            "word_id": 46678,
+            "word_order_in_verse": 13,
+            "word_raw": "أَلِيمًا",
+            "plain_text_raw": "أَلِيمࣰا",
+            "root_token_raw": "/ألم/",
+            "norm": "اليمࣰا",
+            "match": "none"
+          }
+        ]
+      },
+      "topics": [
+        {
+          "topic_id": 18,
+          "subcategory_id": 18,
+          "category_id": 7,
+          "title_raw": "آيات الله في الكون وفي الخلق"
+        },
+        {
+          "topic_id": 19,
+          "subcategory_id": 19,
+          "category_id": 7,
+          "title_raw": "آيات الله في الكون وفي الناس"
+        },
+        {
+          "topic_id": 570,
+          "subcategory_id": 259,
+          "category_id": 24,
+          "title_raw": "أصحاب الرس"
+        },
+        {
+          "topic_id": 1136,
+          "subcategory_id": 623,
+          "category_id": 94,
+          "title_raw": "أصحاب الرس [إهلاكهم بما كذبو الرسل]"
+        },
+        {
+          "topic_id": 1144,
+          "subcategory_id": 631,
+          "category_id": 94,
+          "title_raw": "الأصحاب"
+        },
+        {
+          "topic_id": 4414,
+          "subcategory_id": 3461,
+          "category_id": 731,
+          "title_raw": "الظلم"
+        },
+        {
+          "topic_id": 4422,
+          "subcategory_id": 3469,
+          "category_id": 731,
+          "title_raw": "جزاء الظالمين"
+        },
+        {
+          "topic_id": 4508,
+          "subcategory_id": 3555,
+          "category_id": 747,
+          "title_raw": "العذاب"
+        },
+        {
+          "topic_id": 4514,
+          "subcategory_id": 3561,
+          "category_id": 747,
+          "title_raw": "العذاب الأليم [عذاب الظلمة]"
+        },
+        {
+          "topic_id": 4832,
+          "subcategory_id": 3742,
+          "category_id": 796,
+          "title_raw": "الغرق"
+        },
+        {
+          "topic_id": 4833,
+          "subcategory_id": 3743,
+          "category_id": 796,
+          "title_raw": "بعض عذاب الله للمخالفين عن أمره"
+        },
+        {
+          "topic_id": 5304,
+          "subcategory_id": 4185,
+          "category_id": 888,
+          "title_raw": "نوح عليه السلام"
+        },
+        {
+          "topic_id": 5323,
+          "subcategory_id": 4191,
+          "category_id": 888,
+          "title_raw": "قوم نوح"
+        },
+        {
+          "topic_id": 7182,
+          "subcategory_id": 6040,
+          "category_id": 1288,
+          "title_raw": "تنفيذ وعد الله تعالى و إغراق أهل الأرض جميعاً"
+        },
+        {
+          "topic_id": 7185,
+          "subcategory_id": 6043,
+          "category_id": 1288,
+          "title_raw": "نوح"
+        },
+        {
+          "topic_id": 7192,
+          "subcategory_id": 6050,
+          "category_id": 1289,
+          "title_raw": "صاروا مثلاً وعبرة"
+        },
+        {
+          "topic_id": 7194,
+          "subcategory_id": 6052,
+          "category_id": 1289,
+          "title_raw": "نوح عليه السلام"
+        }
+      ],
+      "qiraat_annotations": null,
       "tahqeeq": [
         {
           "word": "أَغْرَقْنَاهُمْ",
@@ -274,6 +1053,138 @@
             "analysis_bn": "ইবনে আশূর দেখান ‘القصة الثانية: قصة نوح’—মিথ্যাবাদী জাতির ধ্বংসের ধারাবাহিক দৃষ্টান্ত।"
           }
         ]
+      },
+      "bahouth_words_mapped": [
+        {
+          "word_id": 46666,
+          "word_order_in_verse": 1,
+          "word_raw": "وَقَوْمَ",
+          "plain_text_raw": "وَقَوْمَ",
+          "root_token_raw": "/قوم/",
+          "norm": "وقوم",
+          "match": "none"
+        },
+        {
+          "word_id": 46667,
+          "word_order_in_verse": 2,
+          "word_raw": "نُوحٍ",
+          "plain_text_raw": "نُوحࣲ",
+          "root_token_raw": "/نوح/",
+          "norm": "نوحࣲ",
+          "match": "none"
+        },
+        {
+          "word_id": 46668,
+          "word_order_in_verse": 3,
+          "word_raw": "لَمَّا",
+          "plain_text_raw": "لَّمَّا",
+          "root_token_raw": "/لما/",
+          "norm": "لما",
+          "match": "text",
+          "site_meaning_bn": "যখন；",
+          "site_arabic": "لَمَّا"
+        },
+        {
+          "word_id": 46669,
+          "word_order_in_verse": 4,
+          "word_raw": "كَذَّبُوا",
+          "plain_text_raw": "كَذَّبُوا۟",
+          "root_token_raw": "/كذب/",
+          "norm": "كذبوا۟",
+          "match": "none"
+        },
+        {
+          "word_id": 46670,
+          "word_order_in_verse": 5,
+          "word_raw": "الرُّسُلَ",
+          "plain_text_raw": "ٱلرُّسُلَ",
+          "root_token_raw": "/رسل/",
+          "norm": "الرسل",
+          "match": "none"
+        },
+        {
+          "word_id": 46671,
+          "word_order_in_verse": 6,
+          "word_raw": "أَغْرَقْنَاهُمْ",
+          "plain_text_raw": "أَغْرَقْنَٰهُمْ",
+          "root_token_raw": "/غرق/",
+          "norm": "اغرقنهم",
+          "match": "none"
+        },
+        {
+          "word_id": 46672,
+          "word_order_in_verse": 7,
+          "word_raw": "وَجَعَلْنَاهُمْ",
+          "plain_text_raw": "وَجَعَلْنَٰهُمْ",
+          "root_token_raw": "/جعل/",
+          "norm": "وجعلنهم",
+          "match": "none"
+        },
+        {
+          "word_id": 46673,
+          "word_order_in_verse": 8,
+          "word_raw": "لِلنَّاسِ",
+          "plain_text_raw": "لِلنَّاسِ",
+          "root_token_raw": "/نوس/",
+          "norm": "للناس",
+          "match": "text",
+          "site_meaning_bn": "মানুষের জন্য；",
+          "site_arabic": "لِلنَّاسِ"
+        },
+        {
+          "word_id": 46674,
+          "word_order_in_verse": 9,
+          "word_raw": "آيَةً",
+          "plain_text_raw": "ءَايَةࣰۖ",
+          "root_token_raw": "/أيي/",
+          "norm": "ءايهࣰۖ",
+          "match": "none"
+        },
+        {
+          "word_id": 46675,
+          "word_order_in_verse": 10,
+          "word_raw": "وَأَعْتَدْنَا",
+          "plain_text_raw": "وَأَعْتَدْنَا",
+          "root_token_raw": "/عتد/",
+          "norm": "واعتدنا",
+          "match": "text",
+          "site_meaning_bn": "এবং আমরা প্রস্তুত রেখেছি；",
+          "site_arabic": "وَأَعْتَدْنَا"
+        },
+        {
+          "word_id": 46676,
+          "word_order_in_verse": 11,
+          "word_raw": "لِلظَّالِمِينَ",
+          "plain_text_raw": "لِلظَّٰلِمِينَ",
+          "root_token_raw": "/ظلم/",
+          "norm": "للظلمين",
+          "match": "none"
+        },
+        {
+          "word_id": 46677,
+          "word_order_in_verse": 12,
+          "word_raw": "عَذَابًا",
+          "plain_text_raw": "عَذَابًا",
+          "root_token_raw": "/عذب/",
+          "norm": "عذابا",
+          "match": "none"
+        },
+        {
+          "word_id": 46678,
+          "word_order_in_verse": 13,
+          "word_raw": "أَلِيمًا",
+          "plain_text_raw": "أَلِيمࣰا",
+          "root_token_raw": "/ألم/",
+          "norm": "اليمࣰا",
+          "match": "none"
+        }
+      ],
+      "bahouth_match_stats": {
+        "text": 3,
+        "order": 0,
+        "none": 10,
+        "site_total": 10,
+        "bahouth_total": 13
       }
     },
     {
@@ -325,6 +1236,166 @@
       "irab_covers": null,
       "shane_nuzul": "### আয়াত ৩৮: হিজরের ধ্বংসাবশেষ\n> «لَا تَدْخُلُوا عَلَى هَؤُلَاءِ الْمُعَذَّبِينَ إِلَّا أَنْ تَكُونُوا بَاكِينَ»\n- **তাখরীজ:** সহীহ বুখারী, হাদীস নং ৪৩৩; সহীহ মুসলিম, হাদীস নং ২৯৮০।\n- **মুহাদ্দিসদের হুকুম:** মুত্তাফাক্ব আলাইহ (সর্বোচ্চ সহীহ)।\n- **উৎস:** ``\n\n**স্বতন্ত্র শানে নুযূল:** বর্ণিত হয়নি; আয়াত ৩৮-এর আদ-সামূদের ধ্বংস-প্রসঙ্গে প্রাসঙ্গিক।",
       "shane_nuzul_covers": null,
+      "verse_meta": {
+        "page_number": 363,
+        "word_count": 8,
+        "letter_count": 37,
+        "verse_key": "25-38",
+        "text_raw": "وَعَادًا وَثَمُودَ وَأَصْحَابَ الرَّسِّ وَقُرُونًا بَيْنَ ذَلِكَ كَثِيرًا"
+      },
+      "bahouth_words": {
+        "verse_key": "25-38",
+        "word_count": 8,
+        "words": [
+          {
+            "word_id": 46679,
+            "word_order_in_verse": 1,
+            "word_raw": "وَعَادًا",
+            "plain_text_raw": "وَعَادࣰا",
+            "root_token_raw": "/عاد/",
+            "norm": "وعادࣰا",
+            "match": "none"
+          },
+          {
+            "word_id": 46680,
+            "word_order_in_verse": 2,
+            "word_raw": "وَثَمُودَ",
+            "plain_text_raw": "وَثَمُودَا۟",
+            "root_token_raw": "/ثمود/",
+            "norm": "وثمودا۟",
+            "match": "none"
+          },
+          {
+            "word_id": 46681,
+            "word_order_in_verse": 3,
+            "word_raw": "وَأَصْحَابَ",
+            "plain_text_raw": "وَأَصْحَٰبَ",
+            "root_token_raw": "/صحب/",
+            "norm": "واصحب",
+            "match": "none"
+          },
+          {
+            "word_id": 46682,
+            "word_order_in_verse": 4,
+            "word_raw": "الرَّسِّ",
+            "plain_text_raw": "ٱلرَّسِّ",
+            "root_token_raw": "/رسس/",
+            "norm": "الرس",
+            "match": "none"
+          },
+          {
+            "word_id": 46683,
+            "word_order_in_verse": 5,
+            "word_raw": "وَقُرُونًا",
+            "plain_text_raw": "وَقُرُونَۢا",
+            "root_token_raw": "/قرن/",
+            "norm": "وقرونۢا",
+            "match": "none"
+          },
+          {
+            "word_id": 46684,
+            "word_order_in_verse": 6,
+            "word_raw": "بَيْنَ",
+            "plain_text_raw": "بَيْنَ",
+            "root_token_raw": "/بين/",
+            "norm": "بين",
+            "match": "none"
+          },
+          {
+            "word_id": 46685,
+            "word_order_in_verse": 7,
+            "word_raw": "ذَلِكَ",
+            "plain_text_raw": "ذَٰلِكَ",
+            "root_token_raw": "/ذا/",
+            "norm": "ذلك",
+            "match": "none"
+          },
+          {
+            "word_id": 46686,
+            "word_order_in_verse": 8,
+            "word_raw": "كَثِيرًا",
+            "plain_text_raw": "كَثِيرࣰا",
+            "root_token_raw": "/كثر/",
+            "norm": "كثيرࣰا",
+            "match": "none"
+          }
+        ]
+      },
+      "topics": [
+        {
+          "topic_id": 5112,
+          "subcategory_id": 4021,
+          "category_id": 870,
+          "title_raw": "القرآن"
+        },
+        {
+          "topic_id": 5129,
+          "subcategory_id": 4038,
+          "category_id": 870,
+          "title_raw": "ضرب الأمثال فيه ولماذا [مثل الطغاة المفسدين في الأرض]"
+        },
+        {
+          "topic_id": 5252,
+          "subcategory_id": 4157,
+          "category_id": 888,
+          "title_raw": "أصحاب الرس"
+        },
+        {
+          "topic_id": 5269,
+          "subcategory_id": 4173,
+          "category_id": 888,
+          "title_raw": "العبر التاريخية في أنباء القرى"
+        },
+        {
+          "topic_id": 5272,
+          "subcategory_id": 4176,
+          "category_id": 888,
+          "title_raw": "ثمود (قوم صالح)"
+        },
+        {
+          "topic_id": 5278,
+          "subcategory_id": 4181,
+          "category_id": 888,
+          "title_raw": "عاد (قوم هود)"
+        },
+        {
+          "topic_id": 6579,
+          "subcategory_id": 5438,
+          "category_id": 1125,
+          "title_raw": "ثمود"
+        },
+        {
+          "topic_id": 6580,
+          "subcategory_id": 5439,
+          "category_id": 1125,
+          "title_raw": "ضرب المثل بهم وجعلهم أحاديث"
+        },
+        {
+          "topic_id": 6824,
+          "subcategory_id": 5683,
+          "category_id": 1184,
+          "title_raw": "القوم يعقرون الناقة ويؤخذون بالصيحة"
+        },
+        {
+          "topic_id": 6826,
+          "subcategory_id": 5685,
+          "category_id": 1184,
+          "title_raw": "صالح عليه السلام"
+        },
+        {
+          "topic_id": 7216,
+          "subcategory_id": 6074,
+          "category_id": 1294,
+          "title_raw": "أصبحوا كغيرهم من المستكبرين على الحق مثلاً وعبرة"
+        },
+        {
+          "topic_id": 7221,
+          "subcategory_id": 6079,
+          "category_id": 1294,
+          "title_raw": "هود عليه السلام"
+        }
+      ],
+      "qiraat_annotations": null,
       "tahqeeq": [
         {
           "word": "الرَّسِّ",
@@ -379,6 +1450,87 @@
             "analysis_bn": "ইবনে আশূর দেখান ‘عطف على جملة ولقد آتينا موسى’—মিথ্যাবাদী জাতির ধারাবাহিক ধ্বংস-দৃষ্টান্ত।"
           }
         ]
+      },
+      "bahouth_words_mapped": [
+        {
+          "word_id": 46679,
+          "word_order_in_verse": 1,
+          "word_raw": "وَعَادًا",
+          "plain_text_raw": "وَعَادࣰا",
+          "root_token_raw": "/عاد/",
+          "norm": "وعادࣰا",
+          "match": "none"
+        },
+        {
+          "word_id": 46680,
+          "word_order_in_verse": 2,
+          "word_raw": "وَثَمُودَ",
+          "plain_text_raw": "وَثَمُودَا۟",
+          "root_token_raw": "/ثمود/",
+          "norm": "وثمودا۟",
+          "match": "none"
+        },
+        {
+          "word_id": 46681,
+          "word_order_in_verse": 3,
+          "word_raw": "وَأَصْحَابَ",
+          "plain_text_raw": "وَأَصْحَٰبَ",
+          "root_token_raw": "/صحب/",
+          "norm": "واصحب",
+          "match": "none"
+        },
+        {
+          "word_id": 46682,
+          "word_order_in_verse": 4,
+          "word_raw": "الرَّسِّ",
+          "plain_text_raw": "ٱلرَّسِّ",
+          "root_token_raw": "/رسس/",
+          "norm": "الرس",
+          "match": "none"
+        },
+        {
+          "word_id": 46683,
+          "word_order_in_verse": 5,
+          "word_raw": "وَقُرُونًا",
+          "plain_text_raw": "وَقُرُونَۢا",
+          "root_token_raw": "/قرن/",
+          "norm": "وقرونۢا",
+          "match": "none"
+        },
+        {
+          "word_id": 46684,
+          "word_order_in_verse": 6,
+          "word_raw": "بَيْنَ",
+          "plain_text_raw": "بَيْنَ",
+          "root_token_raw": "/بين/",
+          "norm": "بين",
+          "match": "none"
+        },
+        {
+          "word_id": 46685,
+          "word_order_in_verse": 7,
+          "word_raw": "ذَلِكَ",
+          "plain_text_raw": "ذَٰلِكَ",
+          "root_token_raw": "/ذا/",
+          "norm": "ذلك",
+          "match": "none"
+        },
+        {
+          "word_id": 46686,
+          "word_order_in_verse": 8,
+          "word_raw": "كَثِيرًا",
+          "plain_text_raw": "كَثِيرࣰا",
+          "root_token_raw": "/كثر/",
+          "norm": "كثيرࣰا",
+          "match": "none"
+        }
+      ],
+      "bahouth_match_stats": {
+        "text": 0,
+        "order": 0,
+        "none": 8,
+        "site_total": 6,
+        "bahouth_total": 8
       }
     },
     {
@@ -415,6 +1567,111 @@
       "irab_covers": null,
       "shane_nuzul": "### আয়াত ৩৯: ধ্বংস-দৃষ্টান্তের সারসংক্ষেপ\n\n**স্বতন্ত্র শানে নুযূল:** ওয়াহিদী (আসবাবুন নুযূল), সুয়ূতী (লুবাবুন নুকূল) ও আল-ওয়াদিঈ (আস-সহীহুল মুসনাদ)-এ এই আয়াতের জন্য স্বতন্ত্র কোনো শানে নুযূল বর্ণিত হয়নি। এটি মাক্কী সূরার সিয়াক-সিবাকভিত্তিক আয়াত। নীতি ৩ অনুযায়ী এখানে কোনো অনুমাননির্ভর ঘটনা আরোপ করা হয়নি; কেবল প্রাসঙ্গিক যাচাইকৃত তাফসীরুল মা'সূরের ধারা ও নাযমুল কুরআন (অধ্যায় ২ ও ১২-এ) উপস্থাপিত।",
       "shane_nuzul_covers": null,
+      "verse_meta": {
+        "page_number": 363,
+        "word_count": 7,
+        "letter_count": 33,
+        "verse_key": "25-39",
+        "text_raw": "وَكُلًّا ضَرَبْنَا لَهُ الْأَمْثَالَ وَكُلًّا تَبَّرْنَا تَتْبِيرًا"
+      },
+      "bahouth_words": {
+        "verse_key": "25-39",
+        "word_count": 7,
+        "words": [
+          {
+            "word_id": 46687,
+            "word_order_in_verse": 1,
+            "word_raw": "وَكُلًّا",
+            "plain_text_raw": "وَكُلࣰّا",
+            "root_token_raw": "/كلل/",
+            "norm": "وكلࣰا",
+            "match": "none"
+          },
+          {
+            "word_id": 46688,
+            "word_order_in_verse": 2,
+            "word_raw": "ضَرَبْنَا",
+            "plain_text_raw": "ضَرَبْنَا",
+            "root_token_raw": "/ضرب/",
+            "norm": "ضربنا",
+            "match": "none"
+          },
+          {
+            "word_id": 46689,
+            "word_order_in_verse": 3,
+            "word_raw": "لَهُ",
+            "plain_text_raw": "لَهُ",
+            "root_token_raw": "/ل/",
+            "norm": "له",
+            "match": "none"
+          },
+          {
+            "word_id": 46690,
+            "word_order_in_verse": 4,
+            "word_raw": "الْأَمْثَالَ",
+            "plain_text_raw": "ٱلْأَمْثَٰلَۖ",
+            "root_token_raw": "/مثل/",
+            "norm": "الامثلۖ",
+            "match": "none"
+          },
+          {
+            "word_id": 46691,
+            "word_order_in_verse": 5,
+            "word_raw": "وَكُلًّا",
+            "plain_text_raw": "وَكُلࣰّا",
+            "root_token_raw": "/كلل/",
+            "norm": "وكلࣰا",
+            "match": "none"
+          },
+          {
+            "word_id": 46692,
+            "word_order_in_verse": 6,
+            "word_raw": "تَبَّرْنَا",
+            "plain_text_raw": "تَبَّرْنَا",
+            "root_token_raw": "/تبر/",
+            "norm": "تبرنا",
+            "match": "text",
+            "site_meaning_bn": "আমরা নিশ্চিহ্ন করেছিলাম；",
+            "site_arabic": "تَبَّرْنَا"
+          },
+          {
+            "word_id": 46693,
+            "word_order_in_verse": 7,
+            "word_raw": "تَتْبِيرًا",
+            "plain_text_raw": "تَتْبِيرࣰا",
+            "root_token_raw": "/تبر/",
+            "norm": "تتبيرࣰا",
+            "match": "none"
+          }
+        ]
+      },
+      "topics": [
+        {
+          "topic_id": 2190,
+          "subcategory_id": 1328,
+          "category_id": 236,
+          "title_raw": "التباب والتبار"
+        },
+        {
+          "topic_id": 2193,
+          "subcategory_id": 1331,
+          "category_id": 236,
+          "title_raw": "مصير عبدة الأوثان ومكذبي الرسل"
+        },
+        {
+          "topic_id": 5269,
+          "subcategory_id": 4173,
+          "category_id": 888,
+          "title_raw": "العبر التاريخية في أنباء القرى"
+        },
+        {
+          "topic_id": 5278,
+          "subcategory_id": 4181,
+          "category_id": 888,
+          "title_raw": "عاد (قوم هود)"
+        }
+      ],
+      "qiraat_annotations": null,
       "tahqeeq": [
         {
           "word": "تَبَّرْنَا",
@@ -469,6 +1726,80 @@
             "analysis_bn": "ইবনে আশূর দেখান পূর্বের ধ্বংস-দৃষ্টান্তের সারসংক্ষেপ—কুরাইশকে সতর্ক করে তাদের শিক্ষা গ্রহণে বাধ্য করা।"
           }
         ]
+      },
+      "bahouth_words_mapped": [
+        {
+          "word_id": 46687,
+          "word_order_in_verse": 1,
+          "word_raw": "وَكُلًّا",
+          "plain_text_raw": "وَكُلࣰّا",
+          "root_token_raw": "/كلل/",
+          "norm": "وكلࣰا",
+          "match": "none"
+        },
+        {
+          "word_id": 46688,
+          "word_order_in_verse": 2,
+          "word_raw": "ضَرَبْنَا",
+          "plain_text_raw": "ضَرَبْنَا",
+          "root_token_raw": "/ضرب/",
+          "norm": "ضربنا",
+          "match": "none"
+        },
+        {
+          "word_id": 46689,
+          "word_order_in_verse": 3,
+          "word_raw": "لَهُ",
+          "plain_text_raw": "لَهُ",
+          "root_token_raw": "/ل/",
+          "norm": "له",
+          "match": "none"
+        },
+        {
+          "word_id": 46690,
+          "word_order_in_verse": 4,
+          "word_raw": "الْأَمْثَالَ",
+          "plain_text_raw": "ٱلْأَمْثَٰلَۖ",
+          "root_token_raw": "/مثل/",
+          "norm": "الامثلۖ",
+          "match": "none"
+        },
+        {
+          "word_id": 46691,
+          "word_order_in_verse": 5,
+          "word_raw": "وَكُلًّا",
+          "plain_text_raw": "وَكُلࣰّا",
+          "root_token_raw": "/كلل/",
+          "norm": "وكلࣰا",
+          "match": "none"
+        },
+        {
+          "word_id": 46692,
+          "word_order_in_verse": 6,
+          "word_raw": "تَبَّرْنَا",
+          "plain_text_raw": "تَبَّرْنَا",
+          "root_token_raw": "/تبر/",
+          "norm": "تبرنا",
+          "match": "text",
+          "site_meaning_bn": "আমরা নিশ্চিহ্ন করেছিলাম；",
+          "site_arabic": "تَبَّرْنَا"
+        },
+        {
+          "word_id": 46693,
+          "word_order_in_verse": 7,
+          "word_raw": "تَتْبِيرًا",
+          "plain_text_raw": "تَتْبِيرࣰا",
+          "root_token_raw": "/تبر/",
+          "norm": "تتبيرࣰا",
+          "match": "none"
+        }
+      ],
+      "bahouth_match_stats": {
+        "text": 1,
+        "order": 0,
+        "none": 6,
+        "site_total": 6,
+        "bahouth_total": 7
       }
     },
     {
@@ -510,6 +1841,206 @@
       "irab_covers": null,
       "shane_nuzul": "### আয়াত ৪০: সদুমের ধ্বংসাবশেষ\n\n**স্বতন্ত্র শানে নুযূল:** ওয়াহিদী (আসবাবুন নুযূল), সুয়ূতী (লুবাবুন নুকূল) ও আল-ওয়াদিঈ (আস-সহীহুল মুসনাদ)-এ এই আয়াতের জন্য স্বতন্ত্র কোনো শানে নুযূল বর্ণিত হয়নি। এটি মাক্কী সূরার সিয়াক-সিবাকভিত্তিক আয়াত। নীতি ৩ অনুযায়ী এখানে কোনো অনুমাননির্ভর ঘটনা আরোপ করা হয়নি; কেবল প্রাসঙ্গিক যাচাইকৃত তাফসীরুল মা'সূরের ধারা ও নাযমুল কুরআন (অধ্যায় ২ ও ১২-এ) উপস্থাপিত।",
       "shane_nuzul_covers": null,
+      "verse_meta": {
+        "page_number": 363,
+        "word_count": 16,
+        "letter_count": 69,
+        "verse_key": "25-40",
+        "text_raw": "وَلَقَدْ أَتَوْا عَلَى الْقَرْيَةِ الَّتِي أُمْطِرَتْ مَطَرَ السَّوْءِ أَفَلَمْ يَكُونُوا يَرَوْنَهَا بَلْ كَانُوا لَا يَرْجُونَ نُشُورًا"
+      },
+      "bahouth_words": {
+        "verse_key": "25-40",
+        "word_count": 16,
+        "words": [
+          {
+            "word_id": 46694,
+            "word_order_in_verse": 1,
+            "word_raw": "وَلَقَدْ",
+            "plain_text_raw": "وَلَقَدْ",
+            "root_token_raw": "/قد/",
+            "norm": "ولقد",
+            "match": "none"
+          },
+          {
+            "word_id": 46695,
+            "word_order_in_verse": 2,
+            "word_raw": "أَتَوْا",
+            "plain_text_raw": "أَتَوْا۟",
+            "root_token_raw": "/أتي/",
+            "norm": "اتوا۟",
+            "match": "none"
+          },
+          {
+            "word_id": 46696,
+            "word_order_in_verse": 3,
+            "word_raw": "عَلَى",
+            "plain_text_raw": "عَلَى",
+            "root_token_raw": "/على/",
+            "norm": "علي",
+            "match": "none"
+          },
+          {
+            "word_id": 46697,
+            "word_order_in_verse": 4,
+            "word_raw": "الْقَرْيَةِ",
+            "plain_text_raw": "ٱلْقَرْيَةِ",
+            "root_token_raw": "/قري/",
+            "norm": "القريه",
+            "match": "none"
+          },
+          {
+            "word_id": 46698,
+            "word_order_in_verse": 5,
+            "word_raw": "الَّتِي",
+            "plain_text_raw": "ٱلَّتِيٓ",
+            "root_token_raw": "/التي/",
+            "norm": "التيٓ",
+            "match": "none"
+          },
+          {
+            "word_id": 46699,
+            "word_order_in_verse": 6,
+            "word_raw": "أُمْطِرَتْ",
+            "plain_text_raw": "أُمْطِرَتْ",
+            "root_token_raw": "/مطر/",
+            "norm": "امطرت",
+            "match": "text",
+            "site_meaning_bn": "বর্ষিত হয়েছিল；",
+            "site_arabic": "أُمْطِرَتْ"
+          },
+          {
+            "word_id": 46700,
+            "word_order_in_verse": 7,
+            "word_raw": "مَطَرَ",
+            "plain_text_raw": "مَطَرَ",
+            "root_token_raw": "/مطر/",
+            "norm": "مطر",
+            "match": "none"
+          },
+          {
+            "word_id": 46701,
+            "word_order_in_verse": 8,
+            "word_raw": "السَّوْءِ",
+            "plain_text_raw": "ٱلسَّوْءِۚ",
+            "root_token_raw": "/سوأ/",
+            "norm": "السوءۚ",
+            "match": "none"
+          },
+          {
+            "word_id": 46702,
+            "word_order_in_verse": 9,
+            "word_raw": "أَفَلَمْ",
+            "plain_text_raw": "أَفَلَمْ",
+            "root_token_raw": "/لم/",
+            "norm": "افلم",
+            "match": "none"
+          },
+          {
+            "word_id": 46703,
+            "word_order_in_verse": 10,
+            "word_raw": "يَكُونُوا",
+            "plain_text_raw": "يَكُونُوا۟",
+            "root_token_raw": "/كون/",
+            "norm": "يكونوا۟",
+            "match": "none"
+          },
+          {
+            "word_id": 46704,
+            "word_order_in_verse": 11,
+            "word_raw": "يَرَوْنَهَا",
+            "plain_text_raw": "يَرَوْنَهَاۚ",
+            "root_token_raw": "/رأي/",
+            "norm": "يرونهاۚ",
+            "match": "none"
+          },
+          {
+            "word_id": 46705,
+            "word_order_in_verse": 12,
+            "word_raw": "بَلْ",
+            "plain_text_raw": "بَلْ",
+            "root_token_raw": "/بل/",
+            "norm": "بل",
+            "match": "text",
+            "site_meaning_bn": "বরং；",
+            "site_arabic": "بَلْ"
+          },
+          {
+            "word_id": 46706,
+            "word_order_in_verse": 13,
+            "word_raw": "كَانُوا",
+            "plain_text_raw": "كَانُوا۟",
+            "root_token_raw": "/كون/",
+            "norm": "كانوا۟",
+            "match": "none"
+          },
+          {
+            "word_id": 46707,
+            "word_order_in_verse": 14,
+            "word_raw": "لَا",
+            "plain_text_raw": "لَا",
+            "root_token_raw": "/لا/",
+            "norm": "لا",
+            "match": "none"
+          },
+          {
+            "word_id": 46708,
+            "word_order_in_verse": 15,
+            "word_raw": "يَرْجُونَ",
+            "plain_text_raw": "يَرْجُونَ",
+            "root_token_raw": "/رجو/",
+            "norm": "يرجون",
+            "match": "none"
+          },
+          {
+            "word_id": 46709,
+            "word_order_in_verse": 16,
+            "word_raw": "نُشُورًا",
+            "plain_text_raw": "نُشُورࣰا",
+            "root_token_raw": "/نشر/",
+            "norm": "نشورࣰا",
+            "match": "none"
+          }
+        ]
+      },
+      "topics": [
+        {
+          "topic_id": 98,
+          "subcategory_id": 71,
+          "category_id": 13,
+          "title_raw": "الكافرون:صفات الكفار"
+        },
+        {
+          "topic_id": 3347,
+          "subcategory_id": 2396,
+          "category_id": 457,
+          "title_raw": "الرجاء"
+        },
+        {
+          "topic_id": 3349,
+          "subcategory_id": 2398,
+          "category_id": 457,
+          "title_raw": "انعدام الرجاء وأثره في السلوك وفي المصير"
+        },
+        {
+          "topic_id": 5269,
+          "subcategory_id": 4173,
+          "category_id": 888,
+          "title_raw": "العبر التاريخية في أنباء القرى"
+        },
+        {
+          "topic_id": 5787,
+          "subcategory_id": 4654,
+          "category_id": 983,
+          "title_raw": "أكثره في القرآن مطر السوء"
+        },
+        {
+          "topic_id": 5788,
+          "subcategory_id": 4655,
+          "category_id": 983,
+          "title_raw": "المطر"
+        }
+      ],
+      "qiraat_annotations": null,
       "tahqeeq": [
         {
           "word": "مَطَرَ السَّوْءِ",
@@ -564,6 +2095,163 @@
             "analysis_bn": "ইবনে আশূর দেখান ‘لما كان سوق خبر قوم نوح’—সদুমের ধ্বংসাবশেষ কুরাইশের চোখের সামনেই, তবু তারা অস্বীকার করে।"
           }
         ]
+      },
+      "bahouth_words_mapped": [
+        {
+          "word_id": 46694,
+          "word_order_in_verse": 1,
+          "word_raw": "وَلَقَدْ",
+          "plain_text_raw": "وَلَقَدْ",
+          "root_token_raw": "/قد/",
+          "norm": "ولقد",
+          "match": "none"
+        },
+        {
+          "word_id": 46695,
+          "word_order_in_verse": 2,
+          "word_raw": "أَتَوْا",
+          "plain_text_raw": "أَتَوْا۟",
+          "root_token_raw": "/أتي/",
+          "norm": "اتوا۟",
+          "match": "none"
+        },
+        {
+          "word_id": 46696,
+          "word_order_in_verse": 3,
+          "word_raw": "عَلَى",
+          "plain_text_raw": "عَلَى",
+          "root_token_raw": "/على/",
+          "norm": "علي",
+          "match": "none"
+        },
+        {
+          "word_id": 46697,
+          "word_order_in_verse": 4,
+          "word_raw": "الْقَرْيَةِ",
+          "plain_text_raw": "ٱلْقَرْيَةِ",
+          "root_token_raw": "/قري/",
+          "norm": "القريه",
+          "match": "none"
+        },
+        {
+          "word_id": 46698,
+          "word_order_in_verse": 5,
+          "word_raw": "الَّتِي",
+          "plain_text_raw": "ٱلَّتِيٓ",
+          "root_token_raw": "/التي/",
+          "norm": "التيٓ",
+          "match": "none"
+        },
+        {
+          "word_id": 46699,
+          "word_order_in_verse": 6,
+          "word_raw": "أُمْطِرَتْ",
+          "plain_text_raw": "أُمْطِرَتْ",
+          "root_token_raw": "/مطر/",
+          "norm": "امطرت",
+          "match": "text",
+          "site_meaning_bn": "বর্ষিত হয়েছিল；",
+          "site_arabic": "أُمْطِرَتْ"
+        },
+        {
+          "word_id": 46700,
+          "word_order_in_verse": 7,
+          "word_raw": "مَطَرَ",
+          "plain_text_raw": "مَطَرَ",
+          "root_token_raw": "/مطر/",
+          "norm": "مطر",
+          "match": "none"
+        },
+        {
+          "word_id": 46701,
+          "word_order_in_verse": 8,
+          "word_raw": "السَّوْءِ",
+          "plain_text_raw": "ٱلسَّوْءِۚ",
+          "root_token_raw": "/سوأ/",
+          "norm": "السوءۚ",
+          "match": "none"
+        },
+        {
+          "word_id": 46702,
+          "word_order_in_verse": 9,
+          "word_raw": "أَفَلَمْ",
+          "plain_text_raw": "أَفَلَمْ",
+          "root_token_raw": "/لم/",
+          "norm": "افلم",
+          "match": "none"
+        },
+        {
+          "word_id": 46703,
+          "word_order_in_verse": 10,
+          "word_raw": "يَكُونُوا",
+          "plain_text_raw": "يَكُونُوا۟",
+          "root_token_raw": "/كون/",
+          "norm": "يكونوا۟",
+          "match": "none"
+        },
+        {
+          "word_id": 46704,
+          "word_order_in_verse": 11,
+          "word_raw": "يَرَوْنَهَا",
+          "plain_text_raw": "يَرَوْنَهَاۚ",
+          "root_token_raw": "/رأي/",
+          "norm": "يرونهاۚ",
+          "match": "none"
+        },
+        {
+          "word_id": 46705,
+          "word_order_in_verse": 12,
+          "word_raw": "بَلْ",
+          "plain_text_raw": "بَلْ",
+          "root_token_raw": "/بل/",
+          "norm": "بل",
+          "match": "text",
+          "site_meaning_bn": "বরং；",
+          "site_arabic": "بَلْ"
+        },
+        {
+          "word_id": 46706,
+          "word_order_in_verse": 13,
+          "word_raw": "كَانُوا",
+          "plain_text_raw": "كَانُوا۟",
+          "root_token_raw": "/كون/",
+          "norm": "كانوا۟",
+          "match": "none"
+        },
+        {
+          "word_id": 46707,
+          "word_order_in_verse": 14,
+          "word_raw": "لَا",
+          "plain_text_raw": "لَا",
+          "root_token_raw": "/لا/",
+          "norm": "لا",
+          "match": "none"
+        },
+        {
+          "word_id": 46708,
+          "word_order_in_verse": 15,
+          "word_raw": "يَرْجُونَ",
+          "plain_text_raw": "يَرْجُونَ",
+          "root_token_raw": "/رجو/",
+          "norm": "يرجون",
+          "match": "none"
+        },
+        {
+          "word_id": 46709,
+          "word_order_in_verse": 16,
+          "word_raw": "نُشُورًا",
+          "plain_text_raw": "نُشُورࣰا",
+          "root_token_raw": "/نشر/",
+          "norm": "نشورࣰا",
+          "match": "none"
+        }
+      ],
+      "bahouth_match_stats": {
+        "text": 2,
+        "order": 0,
+        "none": 14,
+        "site_total": 11,
+        "bahouth_total": 16
       }
     },
     {
@@ -603,6 +2291,187 @@
         41,
         42
       ],
+      "verse_meta": {
+        "page_number": 363,
+        "word_count": 11,
+        "letter_count": 44,
+        "verse_key": "25-41",
+        "text_raw": "وَإِذَا رَأَوْكَ إِنْ يَتَّخِذُونَكَ إِلَّا هُزُوًا أَهَذَا الَّذِي بَعَثَ اللَّهُ رَسُولًا"
+      },
+      "bahouth_words": {
+        "verse_key": "25-41",
+        "word_count": 11,
+        "words": [
+          {
+            "word_id": 46710,
+            "word_order_in_verse": 1,
+            "word_raw": "وَإِذَا",
+            "plain_text_raw": "وَإِذَا",
+            "root_token_raw": "/إذا/",
+            "norm": "واذا",
+            "match": "none"
+          },
+          {
+            "word_id": 46711,
+            "word_order_in_verse": 2,
+            "word_raw": "رَأَوْكَ",
+            "plain_text_raw": "رَأَوْكَ",
+            "root_token_raw": "/رأي/",
+            "norm": "راوك",
+            "match": "none"
+          },
+          {
+            "word_id": 46712,
+            "word_order_in_verse": 3,
+            "word_raw": "إِنْ",
+            "plain_text_raw": "إِن",
+            "root_token_raw": "/إن/",
+            "norm": "ان",
+            "match": "none"
+          },
+          {
+            "word_id": 46713,
+            "word_order_in_verse": 4,
+            "word_raw": "يَتَّخِذُونَكَ",
+            "plain_text_raw": "يَتَّخِذُونَكَ",
+            "root_token_raw": "/أخذ/",
+            "norm": "يتخذونك",
+            "match": "none"
+          },
+          {
+            "word_id": 46714,
+            "word_order_in_verse": 5,
+            "word_raw": "إِلَّا",
+            "plain_text_raw": "إِلَّا",
+            "root_token_raw": "/إلا/",
+            "norm": "الا",
+            "match": "none"
+          },
+          {
+            "word_id": 46715,
+            "word_order_in_verse": 6,
+            "word_raw": "هُزُوًا",
+            "plain_text_raw": "هُزُوًا",
+            "root_token_raw": "/هزأ/",
+            "norm": "هزوا",
+            "match": "none"
+          },
+          {
+            "word_id": 46716,
+            "word_order_in_verse": 7,
+            "word_raw": "أَهَذَا",
+            "plain_text_raw": "أَهَٰذَا",
+            "root_token_raw": "/ذا/",
+            "norm": "اهذا",
+            "match": "text",
+            "site_meaning_bn": "এ-ই কি সে；",
+            "site_arabic": "أَهَذَا"
+          },
+          {
+            "word_id": 46717,
+            "word_order_in_verse": 8,
+            "word_raw": "الَّذِي",
+            "plain_text_raw": "ٱلَّذِي",
+            "root_token_raw": "/الذي/",
+            "norm": "الذي",
+            "match": "text",
+            "site_meaning_bn": "যাকে；",
+            "site_arabic": "الَّذِي"
+          },
+          {
+            "word_id": 46718,
+            "word_order_in_verse": 9,
+            "word_raw": "بَعَثَ",
+            "plain_text_raw": "بَعَثَ",
+            "root_token_raw": "/بعث/",
+            "norm": "بعث",
+            "match": "none"
+          },
+          {
+            "word_id": 46719,
+            "word_order_in_verse": 10,
+            "word_raw": "اللَّهُ",
+            "plain_text_raw": "ٱللَّهُ",
+            "root_token_raw": "/أله/",
+            "norm": "الله",
+            "match": "none"
+          },
+          {
+            "word_id": 46720,
+            "word_order_in_verse": 11,
+            "word_raw": "رَسُولًا",
+            "plain_text_raw": "رَسُولًا",
+            "root_token_raw": "/رسل/",
+            "norm": "رسولا",
+            "match": "text",
+            "site_meaning_bn": "রাসূলরূপে?",
+            "site_arabic": "رَسُولًا"
+          }
+        ]
+      },
+      "topics": [
+        {
+          "topic_id": 365,
+          "subcategory_id": 77,
+          "category_id": 13,
+          "title_raw": "أقوال الكافرين فيه"
+        },
+        {
+          "topic_id": 6311,
+          "subcategory_id": 5176,
+          "category_id": 1078,
+          "title_raw": "الاستهزاء بالرسل طبيعة الكفرة"
+        },
+        {
+          "topic_id": 6313,
+          "subcategory_id": 5178,
+          "category_id": 1078,
+          "title_raw": "الهزء والاستهزاء"
+        },
+        {
+          "topic_id": 6327,
+          "subcategory_id": 5192,
+          "category_id": 1081,
+          "title_raw": "اتباع الهوى يضل عن اتباع الحق"
+        },
+        {
+          "topic_id": 6340,
+          "subcategory_id": 5205,
+          "category_id": 1081,
+          "title_raw": "الهوى"
+        },
+        {
+          "topic_id": 6671,
+          "subcategory_id": 5530,
+          "category_id": 1144,
+          "title_raw": "خاتم الأنبياء محمد صلى الله عليه وسلم"
+        },
+        {
+          "topic_id": 6674,
+          "subcategory_id": 5533,
+          "category_id": 1144,
+          "title_raw": "دفاع الله عنه وربطه على قلبه"
+        },
+        {
+          "topic_id": 6958,
+          "subcategory_id": 5817,
+          "category_id": 1223,
+          "title_raw": "عن سيدنا محمد عليه الصلاة والسلام"
+        },
+        {
+          "topic_id": 7028,
+          "subcategory_id": 5887,
+          "category_id": 1248,
+          "title_raw": "انكار القوم لدعوة الرسول"
+        },
+        {
+          "topic_id": 7032,
+          "subcategory_id": 5891,
+          "category_id": 1248,
+          "title_raw": "محمد رسول الله"
+        }
+      ],
+      "qiraat_annotations": null,
       "tahqeeq": [
         {
           "word": "هُزُوًا",
@@ -657,6 +2526,120 @@
             "analysis_bn": "ইবনে আশূর দেখান এটি কাফিরদের মৌখিক বিদ্বেষের নতুন প্রকাশ—রাসূলকে ব্যঙ্গ করে তারা নিজেদের অন্ধত্ব প্রমাণ করে।"
           }
         ]
+      },
+      "bahouth_words_mapped": [
+        {
+          "word_id": 46710,
+          "word_order_in_verse": 1,
+          "word_raw": "وَإِذَا",
+          "plain_text_raw": "وَإِذَا",
+          "root_token_raw": "/إذا/",
+          "norm": "واذا",
+          "match": "none"
+        },
+        {
+          "word_id": 46711,
+          "word_order_in_verse": 2,
+          "word_raw": "رَأَوْكَ",
+          "plain_text_raw": "رَأَوْكَ",
+          "root_token_raw": "/رأي/",
+          "norm": "راوك",
+          "match": "none"
+        },
+        {
+          "word_id": 46712,
+          "word_order_in_verse": 3,
+          "word_raw": "إِنْ",
+          "plain_text_raw": "إِن",
+          "root_token_raw": "/إن/",
+          "norm": "ان",
+          "match": "none"
+        },
+        {
+          "word_id": 46713,
+          "word_order_in_verse": 4,
+          "word_raw": "يَتَّخِذُونَكَ",
+          "plain_text_raw": "يَتَّخِذُونَكَ",
+          "root_token_raw": "/أخذ/",
+          "norm": "يتخذونك",
+          "match": "none"
+        },
+        {
+          "word_id": 46714,
+          "word_order_in_verse": 5,
+          "word_raw": "إِلَّا",
+          "plain_text_raw": "إِلَّا",
+          "root_token_raw": "/إلا/",
+          "norm": "الا",
+          "match": "none"
+        },
+        {
+          "word_id": 46715,
+          "word_order_in_verse": 6,
+          "word_raw": "هُزُوًا",
+          "plain_text_raw": "هُزُوًا",
+          "root_token_raw": "/هزأ/",
+          "norm": "هزوا",
+          "match": "none"
+        },
+        {
+          "word_id": 46716,
+          "word_order_in_verse": 7,
+          "word_raw": "أَهَذَا",
+          "plain_text_raw": "أَهَٰذَا",
+          "root_token_raw": "/ذا/",
+          "norm": "اهذا",
+          "match": "text",
+          "site_meaning_bn": "এ-ই কি সে；",
+          "site_arabic": "أَهَذَا"
+        },
+        {
+          "word_id": 46717,
+          "word_order_in_verse": 8,
+          "word_raw": "الَّذِي",
+          "plain_text_raw": "ٱلَّذِي",
+          "root_token_raw": "/الذي/",
+          "norm": "الذي",
+          "match": "text",
+          "site_meaning_bn": "যাকে；",
+          "site_arabic": "الَّذِي"
+        },
+        {
+          "word_id": 46718,
+          "word_order_in_verse": 9,
+          "word_raw": "بَعَثَ",
+          "plain_text_raw": "بَعَثَ",
+          "root_token_raw": "/بعث/",
+          "norm": "بعث",
+          "match": "none"
+        },
+        {
+          "word_id": 46719,
+          "word_order_in_verse": 10,
+          "word_raw": "اللَّهُ",
+          "plain_text_raw": "ٱللَّهُ",
+          "root_token_raw": "/أله/",
+          "norm": "الله",
+          "match": "none"
+        },
+        {
+          "word_id": 46720,
+          "word_order_in_verse": 11,
+          "word_raw": "رَسُولًا",
+          "plain_text_raw": "رَسُولًا",
+          "root_token_raw": "/رسل/",
+          "norm": "رسولا",
+          "match": "text",
+          "site_meaning_bn": "রাসূলরূপে?",
+          "site_arabic": "رَسُولًا"
+        }
+      ],
+      "bahouth_match_stats": {
+        "text": 3,
+        "order": 0,
+        "none": 8,
+        "site_total": 7,
+        "bahouth_total": 11
       }
     },
     {
@@ -702,6 +2685,217 @@
         41,
         42
       ],
+      "verse_meta": {
+        "page_number": 363,
+        "word_count": 17,
+        "letter_count": 68,
+        "verse_key": "25-42",
+        "text_raw": "إِنْ كَادَ لَيُضِلُّنَا عَنْ آلِهَتِنَا لَوْلَا أَنْ صَبَرْنَا عَلَيْهَا وَسَوْفَ يَعْلَمُونَ حِينَ يَرَوْنَ الْعَذَابَ مَنْ أَضَلُّ سَبِيلًا"
+      },
+      "bahouth_words": {
+        "verse_key": "25-42",
+        "word_count": 17,
+        "words": [
+          {
+            "word_id": 46721,
+            "word_order_in_verse": 1,
+            "word_raw": "إِنْ",
+            "plain_text_raw": "إِن",
+            "root_token_raw": "/إن/",
+            "norm": "ان",
+            "match": "none"
+          },
+          {
+            "word_id": 46722,
+            "word_order_in_verse": 2,
+            "word_raw": "كَادَ",
+            "plain_text_raw": "كَادَ",
+            "root_token_raw": "/كود/",
+            "norm": "كاد",
+            "match": "none"
+          },
+          {
+            "word_id": 46723,
+            "word_order_in_verse": 3,
+            "word_raw": "لَيُضِلُّنَا",
+            "plain_text_raw": "لَيُضِلُّنَا",
+            "root_token_raw": "/ضلل/",
+            "norm": "ليضلنا",
+            "match": "text",
+            "site_meaning_bn": "আমাদের পথভ্রষ্ট করেই ফেলেছিল；",
+            "site_arabic": "لَيُضِلُّنَا"
+          },
+          {
+            "word_id": 46724,
+            "word_order_in_verse": 4,
+            "word_raw": "عَنْ",
+            "plain_text_raw": "عَنْ",
+            "root_token_raw": "/عن/",
+            "norm": "عن",
+            "match": "none"
+          },
+          {
+            "word_id": 46725,
+            "word_order_in_verse": 5,
+            "word_raw": "آلِهَتِنَا",
+            "plain_text_raw": "ءَالِهَتِنَا",
+            "root_token_raw": "/أله/",
+            "norm": "ءالهتنا",
+            "match": "none"
+          },
+          {
+            "word_id": 46726,
+            "word_order_in_verse": 6,
+            "word_raw": "لَوْلَا",
+            "plain_text_raw": "لَوْلَآ",
+            "root_token_raw": "/لولا/",
+            "norm": "لولآ",
+            "match": "none"
+          },
+          {
+            "word_id": 46727,
+            "word_order_in_verse": 7,
+            "word_raw": "أَنْ",
+            "plain_text_raw": "أَن",
+            "root_token_raw": "/أن/",
+            "norm": "ان",
+            "match": "none"
+          },
+          {
+            "word_id": 46728,
+            "word_order_in_verse": 8,
+            "word_raw": "صَبَرْنَا",
+            "plain_text_raw": "صَبَرْنَا",
+            "root_token_raw": "/صبر/",
+            "norm": "صبرنا",
+            "match": "none"
+          },
+          {
+            "word_id": 46729,
+            "word_order_in_verse": 9,
+            "word_raw": "عَلَيْهَا",
+            "plain_text_raw": "عَلَيْهَاۚ",
+            "root_token_raw": "/على/",
+            "norm": "عليهاۚ",
+            "match": "none"
+          },
+          {
+            "word_id": 46730,
+            "word_order_in_verse": 10,
+            "word_raw": "وَسَوْفَ",
+            "plain_text_raw": "وَسَوْفَ",
+            "root_token_raw": "/سوف/",
+            "norm": "وسوف",
+            "match": "none"
+          },
+          {
+            "word_id": 46731,
+            "word_order_in_verse": 11,
+            "word_raw": "يَعْلَمُونَ",
+            "plain_text_raw": "يَعْلَمُونَ",
+            "root_token_raw": "/علم/",
+            "norm": "يعلمون",
+            "match": "none"
+          },
+          {
+            "word_id": 46732,
+            "word_order_in_verse": 12,
+            "word_raw": "حِينَ",
+            "plain_text_raw": "حِينَ",
+            "root_token_raw": "/حين/",
+            "norm": "حين",
+            "match": "text",
+            "site_meaning_bn": "যখন；",
+            "site_arabic": "حِينَ"
+          },
+          {
+            "word_id": 46733,
+            "word_order_in_verse": 13,
+            "word_raw": "يَرَوْنَ",
+            "plain_text_raw": "يَرَوْنَ",
+            "root_token_raw": "/رأي/",
+            "norm": "يرون",
+            "match": "none"
+          },
+          {
+            "word_id": 46734,
+            "word_order_in_verse": 14,
+            "word_raw": "الْعَذَابَ",
+            "plain_text_raw": "ٱلْعَذَابَ",
+            "root_token_raw": "/عذب/",
+            "norm": "العذاب",
+            "match": "none"
+          },
+          {
+            "word_id": 46735,
+            "word_order_in_verse": 15,
+            "word_raw": "مَنْ",
+            "plain_text_raw": "مَنْ",
+            "root_token_raw": "/مَن/",
+            "norm": "من",
+            "match": "none"
+          },
+          {
+            "word_id": 46736,
+            "word_order_in_verse": 16,
+            "word_raw": "أَضَلُّ",
+            "plain_text_raw": "أَضَلُّ",
+            "root_token_raw": "/ضلل/",
+            "norm": "اضل",
+            "match": "none"
+          },
+          {
+            "word_id": 46737,
+            "word_order_in_verse": 17,
+            "word_raw": "سَبِيلًا",
+            "plain_text_raw": "سَبِيلًا",
+            "root_token_raw": "/سبل/",
+            "norm": "سبيلا",
+            "match": "text",
+            "site_meaning_bn": "পথের দিক হতে।",
+            "site_arabic": "سَبِيلًا"
+          }
+        ]
+      },
+      "topics": [
+        {
+          "topic_id": 365,
+          "subcategory_id": 77,
+          "category_id": 13,
+          "title_raw": "أقوال الكافرين فيه"
+        },
+        {
+          "topic_id": 4253,
+          "subcategory_id": 3300,
+          "category_id": 699,
+          "title_raw": "الضالون [الذين يتبعون أهواءهم ضالون]"
+        },
+        {
+          "topic_id": 4263,
+          "subcategory_id": 3310,
+          "category_id": 699,
+          "title_raw": "الضلال والضالون"
+        },
+        {
+          "topic_id": 6834,
+          "subcategory_id": 5693,
+          "category_id": 1187,
+          "title_raw": "تهديدهم"
+        },
+        {
+          "topic_id": 6836,
+          "subcategory_id": 5695,
+          "category_id": 1187,
+          "title_raw": "صفات الكافرين"
+        },
+        {
+          "topic_id": 6958,
+          "subcategory_id": 5817,
+          "category_id": 1223,
+          "title_raw": "عن سيدنا محمد عليه الصلاة والسلام"
+        }
+      ],
+      "qiraat_annotations": null,
       "tahqeeq": [
         {
           "word": "لَيُضِلُّنَا",
@@ -756,6 +2950,174 @@
             "analysis_bn": "ইবনে আশূর দেখান কাফিরদের যুক্তি নিজেই তাদের অন্ধত্বের প্রমাণ—তারা সত্য জেনেও ভ্রান্ত উপাস্যকে আঁকড়ে ধরে।"
           }
         ]
+      },
+      "bahouth_words_mapped": [
+        {
+          "word_id": 46721,
+          "word_order_in_verse": 1,
+          "word_raw": "إِنْ",
+          "plain_text_raw": "إِن",
+          "root_token_raw": "/إن/",
+          "norm": "ان",
+          "match": "none"
+        },
+        {
+          "word_id": 46722,
+          "word_order_in_verse": 2,
+          "word_raw": "كَادَ",
+          "plain_text_raw": "كَادَ",
+          "root_token_raw": "/كود/",
+          "norm": "كاد",
+          "match": "none"
+        },
+        {
+          "word_id": 46723,
+          "word_order_in_verse": 3,
+          "word_raw": "لَيُضِلُّنَا",
+          "plain_text_raw": "لَيُضِلُّنَا",
+          "root_token_raw": "/ضلل/",
+          "norm": "ليضلنا",
+          "match": "text",
+          "site_meaning_bn": "আমাদের পথভ্রষ্ট করেই ফেলেছিল；",
+          "site_arabic": "لَيُضِلُّنَا"
+        },
+        {
+          "word_id": 46724,
+          "word_order_in_verse": 4,
+          "word_raw": "عَنْ",
+          "plain_text_raw": "عَنْ",
+          "root_token_raw": "/عن/",
+          "norm": "عن",
+          "match": "none"
+        },
+        {
+          "word_id": 46725,
+          "word_order_in_verse": 5,
+          "word_raw": "آلِهَتِنَا",
+          "plain_text_raw": "ءَالِهَتِنَا",
+          "root_token_raw": "/أله/",
+          "norm": "ءالهتنا",
+          "match": "none"
+        },
+        {
+          "word_id": 46726,
+          "word_order_in_verse": 6,
+          "word_raw": "لَوْلَا",
+          "plain_text_raw": "لَوْلَآ",
+          "root_token_raw": "/لولا/",
+          "norm": "لولآ",
+          "match": "none"
+        },
+        {
+          "word_id": 46727,
+          "word_order_in_verse": 7,
+          "word_raw": "أَنْ",
+          "plain_text_raw": "أَن",
+          "root_token_raw": "/أن/",
+          "norm": "ان",
+          "match": "none"
+        },
+        {
+          "word_id": 46728,
+          "word_order_in_verse": 8,
+          "word_raw": "صَبَرْنَا",
+          "plain_text_raw": "صَبَرْنَا",
+          "root_token_raw": "/صبر/",
+          "norm": "صبرنا",
+          "match": "none"
+        },
+        {
+          "word_id": 46729,
+          "word_order_in_verse": 9,
+          "word_raw": "عَلَيْهَا",
+          "plain_text_raw": "عَلَيْهَاۚ",
+          "root_token_raw": "/على/",
+          "norm": "عليهاۚ",
+          "match": "none"
+        },
+        {
+          "word_id": 46730,
+          "word_order_in_verse": 10,
+          "word_raw": "وَسَوْفَ",
+          "plain_text_raw": "وَسَوْفَ",
+          "root_token_raw": "/سوف/",
+          "norm": "وسوف",
+          "match": "none"
+        },
+        {
+          "word_id": 46731,
+          "word_order_in_verse": 11,
+          "word_raw": "يَعْلَمُونَ",
+          "plain_text_raw": "يَعْلَمُونَ",
+          "root_token_raw": "/علم/",
+          "norm": "يعلمون",
+          "match": "none"
+        },
+        {
+          "word_id": 46732,
+          "word_order_in_verse": 12,
+          "word_raw": "حِينَ",
+          "plain_text_raw": "حِينَ",
+          "root_token_raw": "/حين/",
+          "norm": "حين",
+          "match": "text",
+          "site_meaning_bn": "যখন；",
+          "site_arabic": "حِينَ"
+        },
+        {
+          "word_id": 46733,
+          "word_order_in_verse": 13,
+          "word_raw": "يَرَوْنَ",
+          "plain_text_raw": "يَرَوْنَ",
+          "root_token_raw": "/رأي/",
+          "norm": "يرون",
+          "match": "none"
+        },
+        {
+          "word_id": 46734,
+          "word_order_in_verse": 14,
+          "word_raw": "الْعَذَابَ",
+          "plain_text_raw": "ٱلْعَذَابَ",
+          "root_token_raw": "/عذب/",
+          "norm": "العذاب",
+          "match": "none"
+        },
+        {
+          "word_id": 46735,
+          "word_order_in_verse": 15,
+          "word_raw": "مَنْ",
+          "plain_text_raw": "مَنْ",
+          "root_token_raw": "/مَن/",
+          "norm": "من",
+          "match": "none"
+        },
+        {
+          "word_id": 46736,
+          "word_order_in_verse": 16,
+          "word_raw": "أَضَلُّ",
+          "plain_text_raw": "أَضَلُّ",
+          "root_token_raw": "/ضلل/",
+          "norm": "اضل",
+          "match": "none"
+        },
+        {
+          "word_id": 46737,
+          "word_order_in_verse": 17,
+          "word_raw": "سَبِيلًا",
+          "plain_text_raw": "سَبِيلًا",
+          "root_token_raw": "/سبل/",
+          "norm": "سبيلا",
+          "match": "text",
+          "site_meaning_bn": "পথের দিক হতে।",
+          "site_arabic": "سَبِيلًا"
+        }
+      ],
+      "bahouth_match_stats": {
+        "text": 3,
+        "order": 0,
+        "none": 14,
+        "site_total": 10,
+        "bahouth_total": 17
       }
     },
     {
@@ -792,6 +3154,165 @@
       "irab_covers": null,
       "shane_nuzul": "### আয়াত ৪৩: প্রবৃত্তি-পূজা ও জাহান্নাম-জান্নাতের বেষ্টন\n> «حُفَّتِ الْجَنَّةُ بِالْمَكَارِهِ، وَحُفَّتِ النَّارُ بِالشَّهَوَاتِ»\n- **তাখরীজ:** সহীহ বুখারী, হাদীস নং ৬৪৮৭; সহীহ মুসলিম, হাদীস নং ২৮২২।\n- **মুহাদ্দিসদের হুকুম:** মুত্তাফাক্ব আলাইহ (সর্বোচ্চ সহীহ)।\n- **উৎস:** ``\n\n**স্বতন্ত্র শানে নুযূল:** বর্ণিত হয়নি; আয়াত ৪৩-এর ‘প্রবৃত্তি-পূজা’-র প্রসঙ্গে প্রাসঙ্গিক সহীহ হাদীস।",
       "shane_nuzul_covers": null,
+      "verse_meta": {
+        "page_number": 363,
+        "word_count": 9,
+        "letter_count": 37,
+        "verse_key": "25-43",
+        "text_raw": "أَرَأَيْتَ مَنْ اتَّخَذَ إِلَهَهُ هَوَاهُ أَفَأَنْتَ تَكُونُ عَلَيْهِ وَكِيلًا"
+      },
+      "bahouth_words": {
+        "verse_key": "25-43",
+        "word_count": 9,
+        "words": [
+          {
+            "word_id": 46738,
+            "word_order_in_verse": 1,
+            "word_raw": "أَرَأَيْتَ",
+            "plain_text_raw": "أَرَءَيْتَ",
+            "root_token_raw": "/رأي/",
+            "norm": "ارءيت",
+            "match": "none"
+          },
+          {
+            "word_id": 46739,
+            "word_order_in_verse": 2,
+            "word_raw": "مَنِ",
+            "plain_text_raw": "مَنِ",
+            "root_token_raw": "/مَن/",
+            "norm": "من",
+            "match": "none"
+          },
+          {
+            "word_id": 46740,
+            "word_order_in_verse": 3,
+            "word_raw": "اتَّخَذَ",
+            "plain_text_raw": "ٱتَّخَذَ",
+            "root_token_raw": "/أخذ/",
+            "norm": "اتخذ",
+            "match": "none"
+          },
+          {
+            "word_id": 46741,
+            "word_order_in_verse": 4,
+            "word_raw": "إِلَهَهُ",
+            "plain_text_raw": "إِلَٰهَهُۥ",
+            "root_token_raw": "/أله/",
+            "norm": "الههۥ",
+            "match": "none"
+          },
+          {
+            "word_id": 46742,
+            "word_order_in_verse": 5,
+            "word_raw": "هَوَاهُ",
+            "plain_text_raw": "هَوَىٰهُ",
+            "root_token_raw": "/هوي/",
+            "norm": "هويه",
+            "match": "none"
+          },
+          {
+            "word_id": 46743,
+            "word_order_in_verse": 6,
+            "word_raw": "أَفَأَنْتَ",
+            "plain_text_raw": "أَفَأَنتَ",
+            "root_token_raw": "/أنت/",
+            "norm": "افانت",
+            "match": "text",
+            "site_meaning_bn": "তবে কি আপনি；",
+            "site_arabic": "أَفَأَنْتَ"
+          },
+          {
+            "word_id": 46744,
+            "word_order_in_verse": 7,
+            "word_raw": "تَكُونُ",
+            "plain_text_raw": "تَكُونُ",
+            "root_token_raw": "/كون/",
+            "norm": "تكون",
+            "match": "text",
+            "site_meaning_bn": "হবেন；",
+            "site_arabic": "تَكُونُ"
+          },
+          {
+            "word_id": 46745,
+            "word_order_in_verse": 8,
+            "word_raw": "عَلَيْهِ",
+            "plain_text_raw": "عَلَيْهِ",
+            "root_token_raw": "/على/",
+            "norm": "عليه",
+            "match": "text",
+            "site_meaning_bn": "তার ওপর；",
+            "site_arabic": "عَلَيْهِ"
+          },
+          {
+            "word_id": 46746,
+            "word_order_in_verse": 9,
+            "word_raw": "وَكِيلًا",
+            "plain_text_raw": "وَكِيلًا",
+            "root_token_raw": "/وكل/",
+            "norm": "وكيلا",
+            "match": "text",
+            "site_meaning_bn": "দায়িত্বশীল ও কর্মবিধায়ক?",
+            "site_arabic": "وَكِيلًا"
+          }
+        ]
+      },
+      "topics": [
+        {
+          "topic_id": 98,
+          "subcategory_id": 71,
+          "category_id": 13,
+          "title_raw": "الكافرون:صفات الكفار"
+        },
+        {
+          "topic_id": 383,
+          "subcategory_id": 77,
+          "category_id": 13,
+          "title_raw": "مخاطبة الله إياه"
+        },
+        {
+          "topic_id": 1248,
+          "subcategory_id": 734,
+          "category_id": 116,
+          "title_raw": "الأنعام"
+        },
+        {
+          "topic_id": 1253,
+          "subcategory_id": 739,
+          "category_id": 116,
+          "title_raw": "تشبيه الضالين الغافلين بالأنعام"
+        },
+        {
+          "topic_id": 3138,
+          "subcategory_id": 2230,
+          "category_id": 429,
+          "title_raw": "الدعوة"
+        },
+        {
+          "topic_id": 3142,
+          "subcategory_id": 2234,
+          "category_id": 429,
+          "title_raw": "عقبات أمام الدعوة [غلبة الهوى على المدعوين]"
+        },
+        {
+          "topic_id": 4599,
+          "subcategory_id": 3645,
+          "category_id": 769,
+          "title_raw": "الذين لا يعقلون كما يراهم القرآن"
+        },
+        {
+          "topic_id": 4600,
+          "subcategory_id": 3646,
+          "category_id": 769,
+          "title_raw": "العقل"
+        },
+        {
+          "topic_id": 6958,
+          "subcategory_id": 5817,
+          "category_id": 1223,
+          "title_raw": "عن سيدنا محمد عليه الصلاة والسلام"
+        }
+      ],
+      "qiraat_annotations": null,
       "tahqeeq": [
         {
           "word": "هَوَاهُ",
@@ -839,6 +3360,104 @@
             "analysis_bn": "ইবনে আশূর দেখান ‘استفهام إنكاري’—প্রবৃত্তিপূজারীর নিন্দা; রাসূলের দায়িত্ব কেবল পৌঁছানো, জবাবদিহি নয়।"
           }
         ]
+      },
+      "bahouth_words_mapped": [
+        {
+          "word_id": 46738,
+          "word_order_in_verse": 1,
+          "word_raw": "أَرَأَيْتَ",
+          "plain_text_raw": "أَرَءَيْتَ",
+          "root_token_raw": "/رأي/",
+          "norm": "ارءيت",
+          "match": "none"
+        },
+        {
+          "word_id": 46739,
+          "word_order_in_verse": 2,
+          "word_raw": "مَنِ",
+          "plain_text_raw": "مَنِ",
+          "root_token_raw": "/مَن/",
+          "norm": "من",
+          "match": "none"
+        },
+        {
+          "word_id": 46740,
+          "word_order_in_verse": 3,
+          "word_raw": "اتَّخَذَ",
+          "plain_text_raw": "ٱتَّخَذَ",
+          "root_token_raw": "/أخذ/",
+          "norm": "اتخذ",
+          "match": "none"
+        },
+        {
+          "word_id": 46741,
+          "word_order_in_verse": 4,
+          "word_raw": "إِلَهَهُ",
+          "plain_text_raw": "إِلَٰهَهُۥ",
+          "root_token_raw": "/أله/",
+          "norm": "الههۥ",
+          "match": "none"
+        },
+        {
+          "word_id": 46742,
+          "word_order_in_verse": 5,
+          "word_raw": "هَوَاهُ",
+          "plain_text_raw": "هَوَىٰهُ",
+          "root_token_raw": "/هوي/",
+          "norm": "هويه",
+          "match": "none"
+        },
+        {
+          "word_id": 46743,
+          "word_order_in_verse": 6,
+          "word_raw": "أَفَأَنْتَ",
+          "plain_text_raw": "أَفَأَنتَ",
+          "root_token_raw": "/أنت/",
+          "norm": "افانت",
+          "match": "text",
+          "site_meaning_bn": "তবে কি আপনি；",
+          "site_arabic": "أَفَأَنْتَ"
+        },
+        {
+          "word_id": 46744,
+          "word_order_in_verse": 7,
+          "word_raw": "تَكُونُ",
+          "plain_text_raw": "تَكُونُ",
+          "root_token_raw": "/كون/",
+          "norm": "تكون",
+          "match": "text",
+          "site_meaning_bn": "হবেন；",
+          "site_arabic": "تَكُونُ"
+        },
+        {
+          "word_id": 46745,
+          "word_order_in_verse": 8,
+          "word_raw": "عَلَيْهِ",
+          "plain_text_raw": "عَلَيْهِ",
+          "root_token_raw": "/على/",
+          "norm": "عليه",
+          "match": "text",
+          "site_meaning_bn": "তার ওপর；",
+          "site_arabic": "عَلَيْهِ"
+        },
+        {
+          "word_id": 46746,
+          "word_order_in_verse": 9,
+          "word_raw": "وَكِيلًا",
+          "plain_text_raw": "وَكِيلًا",
+          "root_token_raw": "/وكل/",
+          "norm": "وكيلا",
+          "match": "text",
+          "site_meaning_bn": "দায়িত্বশীল ও কর্মবিধায়ক?",
+          "site_arabic": "وَكِيلًا"
+        }
+      ],
+      "bahouth_match_stats": {
+        "text": 4,
+        "order": 0,
+        "none": 5,
+        "site_total": 8,
+        "bahouth_total": 9
       }
     },
     {
@@ -890,6 +3509,243 @@
       "irab_covers": null,
       "shane_nuzul": "### আয়াত ৪৪: কাফিরদের বিবেচনার অভাব\n\n**স্বতন্ত্র শানে নুযূল:** ওয়াহিদী (আসবাবুন নুযূল), সুয়ূতী (লুবাবুন নুকূল) ও আল-ওয়াদিঈ (আস-সহীহুল মুসনাদ)-এ এই আয়াতের জন্য স্বতন্ত্র কোনো শানে নুযূল বর্ণিত হয়নি। এটি মাক্কী সূরার সিয়াক-সিবাকভিত্তিক আয়াত। নীতি ৩ অনুযায়ী এখানে কোনো অনুমাননির্ভর ঘটনা আরোপ করা হয়নি; কেবল প্রাসঙ্গিক যাচাইকৃত তাফসীরুল মা'সূরের ধারা ও নাযমুল কুরআন (অধ্যায় ২ ও ১২-এ) উপস্থাপিত।",
       "shane_nuzul_covers": null,
+      "verse_meta": {
+        "page_number": 364,
+        "word_count": 15,
+        "letter_count": 55,
+        "verse_key": "25-44",
+        "text_raw": "أَمْ تَحْسَبُ أَنَّ أَكْثَرَهُمْ يَسْمَعُونَ أَوْ يَعْقِلُونَ إِنْ هُمْ إِلَّا كَالْأَنْعَامِ بَلْ هُمْ أَضَلُّ سَبِيلًا"
+      },
+      "bahouth_words": {
+        "verse_key": "25-44",
+        "word_count": 15,
+        "words": [
+          {
+            "word_id": 46747,
+            "word_order_in_verse": 1,
+            "word_raw": "أَمْ",
+            "plain_text_raw": "أَمْ",
+            "root_token_raw": "/أم/",
+            "norm": "ام",
+            "match": "none"
+          },
+          {
+            "word_id": 46748,
+            "word_order_in_verse": 2,
+            "word_raw": "تَحْسَبُ",
+            "plain_text_raw": "تَحْسَبُ",
+            "root_token_raw": "/حسب/",
+            "norm": "تحسب",
+            "match": "none"
+          },
+          {
+            "word_id": 46749,
+            "word_order_in_verse": 3,
+            "word_raw": "أَنَّ",
+            "plain_text_raw": "أَنَّ",
+            "root_token_raw": "/أنّ/",
+            "norm": "ان",
+            "match": "none"
+          },
+          {
+            "word_id": 46750,
+            "word_order_in_verse": 4,
+            "word_raw": "أَكْثَرَهُمْ",
+            "plain_text_raw": "أَكْثَرَهُمْ",
+            "root_token_raw": "/كثر/",
+            "norm": "اكثرهم",
+            "match": "none"
+          },
+          {
+            "word_id": 46751,
+            "word_order_in_verse": 5,
+            "word_raw": "يَسْمَعُونَ",
+            "plain_text_raw": "يَسْمَعُونَ",
+            "root_token_raw": "/سمع/",
+            "norm": "يسمعون",
+            "match": "text",
+            "site_meaning_bn": "শুনে অনুধাবন করে；",
+            "site_arabic": "يَسْمَعُونَ"
+          },
+          {
+            "word_id": 46752,
+            "word_order_in_verse": 6,
+            "word_raw": "أَوْ",
+            "plain_text_raw": "أَوْ",
+            "root_token_raw": "/أو/",
+            "norm": "او",
+            "match": "none"
+          },
+          {
+            "word_id": 46753,
+            "word_order_in_verse": 7,
+            "word_raw": "يَعْقِلُونَ",
+            "plain_text_raw": "يَعْقِلُونَۚ",
+            "root_token_raw": "/عقل/",
+            "norm": "يعقلونۚ",
+            "match": "none"
+          },
+          {
+            "word_id": 46754,
+            "word_order_in_verse": 8,
+            "word_raw": "إِنْ",
+            "plain_text_raw": "إِنْ",
+            "root_token_raw": "/إن/",
+            "norm": "ان",
+            "match": "none"
+          },
+          {
+            "word_id": 46755,
+            "word_order_in_verse": 9,
+            "word_raw": "هُمْ",
+            "plain_text_raw": "هُمْ",
+            "root_token_raw": "/هم/",
+            "norm": "هم",
+            "match": "none"
+          },
+          {
+            "word_id": 46756,
+            "word_order_in_verse": 10,
+            "word_raw": "إِلَّا",
+            "plain_text_raw": "إِلَّا",
+            "root_token_raw": "/إلا/",
+            "norm": "الا",
+            "match": "none"
+          },
+          {
+            "word_id": 46757,
+            "word_order_in_verse": 11,
+            "word_raw": "كَالْأَنْعَامِ",
+            "plain_text_raw": "كَٱلْأَنْعَٰمِ",
+            "root_token_raw": "/نعم/",
+            "norm": "كالانعم",
+            "match": "none"
+          },
+          {
+            "word_id": 46758,
+            "word_order_in_verse": 12,
+            "word_raw": "بَلْ",
+            "plain_text_raw": "بَلْ",
+            "root_token_raw": "/بل/",
+            "norm": "بل",
+            "match": "none"
+          },
+          {
+            "word_id": 46759,
+            "word_order_in_verse": 13,
+            "word_raw": "هُمْ",
+            "plain_text_raw": "هُمْ",
+            "root_token_raw": "/هم/",
+            "norm": "هم",
+            "match": "none"
+          },
+          {
+            "word_id": 46760,
+            "word_order_in_verse": 14,
+            "word_raw": "أَضَلُّ",
+            "plain_text_raw": "أَضَلُّ",
+            "root_token_raw": "/ضلل/",
+            "norm": "اضل",
+            "match": "none"
+          },
+          {
+            "word_id": 46761,
+            "word_order_in_verse": 15,
+            "word_raw": "سَبِيلًا",
+            "plain_text_raw": "سَبِيلًا",
+            "root_token_raw": "/سبل/",
+            "norm": "سبيلا",
+            "match": "none"
+          }
+        ]
+      },
+      "topics": [
+        {
+          "topic_id": 93,
+          "subcategory_id": 71,
+          "category_id": 13,
+          "title_raw": "الكافرون:تشبيههم بالموتى والصم والبكم والعمي"
+        },
+        {
+          "topic_id": 98,
+          "subcategory_id": 71,
+          "category_id": 13,
+          "title_raw": "الكافرون:صفات الكفار"
+        },
+        {
+          "topic_id": 103,
+          "subcategory_id": 71,
+          "category_id": 13,
+          "title_raw": "الكافرون:مثال من لا يستجيب لله"
+        },
+        {
+          "topic_id": 383,
+          "subcategory_id": 77,
+          "category_id": 13,
+          "title_raw": "مخاطبة الله إياه"
+        },
+        {
+          "topic_id": 684,
+          "subcategory_id": 373,
+          "category_id": 60,
+          "title_raw": "ابن السبيل"
+        },
+        {
+          "topic_id": 685,
+          "subcategory_id": 374,
+          "category_id": 60,
+          "title_raw": "ما يهدى إليه الإنسان من طريقي الخير أو الشر"
+        },
+        {
+          "topic_id": 1248,
+          "subcategory_id": 734,
+          "category_id": 116,
+          "title_raw": "الأنعام"
+        },
+        {
+          "topic_id": 4178,
+          "subcategory_id": 3225,
+          "category_id": 676,
+          "title_raw": "الصمم"
+        },
+        {
+          "topic_id": 4251,
+          "subcategory_id": 3298,
+          "category_id": 699,
+          "title_raw": "الأضلون [من أصبح كالأنعام لا يعقل ولا يدرك الحق]"
+        },
+        {
+          "topic_id": 4263,
+          "subcategory_id": 3310,
+          "category_id": 699,
+          "title_raw": "الضلال والضالون"
+        },
+        {
+          "topic_id": 5977,
+          "subcategory_id": 4843,
+          "category_id": 1013,
+          "title_raw": "أكثر الناس لا يعقلون"
+        },
+        {
+          "topic_id": 5987,
+          "subcategory_id": 4853,
+          "category_id": 1013,
+          "title_raw": "الناس"
+        },
+        {
+          "topic_id": 6671,
+          "subcategory_id": 5530,
+          "category_id": 1144,
+          "title_raw": "خاتم الأنبياء محمد صلى الله عليه وسلم"
+        },
+        {
+          "topic_id": 6674,
+          "subcategory_id": 5533,
+          "category_id": 1144,
+          "title_raw": "دفاع الله عنه وربطه على قلبه"
+        }
+      ],
+      "qiraat_annotations": null,
       "tahqeeq": [
         {
           "word": "كَالْأَنْعَامِ",
@@ -944,6 +3800,152 @@
             "analysis_bn": "ইবনে আশূর দেখান ‘أم’ দিয়ে বিভ্রান্তির তুলনা—কাফিররা শুনলেও বোঝে না, তাই পশুর চেয়েও অধিক পথভ্রষ্ট।"
           }
         ]
+      },
+      "bahouth_words_mapped": [
+        {
+          "word_id": 46747,
+          "word_order_in_verse": 1,
+          "word_raw": "أَمْ",
+          "plain_text_raw": "أَمْ",
+          "root_token_raw": "/أم/",
+          "norm": "ام",
+          "match": "none"
+        },
+        {
+          "word_id": 46748,
+          "word_order_in_verse": 2,
+          "word_raw": "تَحْسَبُ",
+          "plain_text_raw": "تَحْسَبُ",
+          "root_token_raw": "/حسب/",
+          "norm": "تحسب",
+          "match": "none"
+        },
+        {
+          "word_id": 46749,
+          "word_order_in_verse": 3,
+          "word_raw": "أَنَّ",
+          "plain_text_raw": "أَنَّ",
+          "root_token_raw": "/أنّ/",
+          "norm": "ان",
+          "match": "none"
+        },
+        {
+          "word_id": 46750,
+          "word_order_in_verse": 4,
+          "word_raw": "أَكْثَرَهُمْ",
+          "plain_text_raw": "أَكْثَرَهُمْ",
+          "root_token_raw": "/كثر/",
+          "norm": "اكثرهم",
+          "match": "none"
+        },
+        {
+          "word_id": 46751,
+          "word_order_in_verse": 5,
+          "word_raw": "يَسْمَعُونَ",
+          "plain_text_raw": "يَسْمَعُونَ",
+          "root_token_raw": "/سمع/",
+          "norm": "يسمعون",
+          "match": "text",
+          "site_meaning_bn": "শুনে অনুধাবন করে；",
+          "site_arabic": "يَسْمَعُونَ"
+        },
+        {
+          "word_id": 46752,
+          "word_order_in_verse": 6,
+          "word_raw": "أَوْ",
+          "plain_text_raw": "أَوْ",
+          "root_token_raw": "/أو/",
+          "norm": "او",
+          "match": "none"
+        },
+        {
+          "word_id": 46753,
+          "word_order_in_verse": 7,
+          "word_raw": "يَعْقِلُونَ",
+          "plain_text_raw": "يَعْقِلُونَۚ",
+          "root_token_raw": "/عقل/",
+          "norm": "يعقلونۚ",
+          "match": "none"
+        },
+        {
+          "word_id": 46754,
+          "word_order_in_verse": 8,
+          "word_raw": "إِنْ",
+          "plain_text_raw": "إِنْ",
+          "root_token_raw": "/إن/",
+          "norm": "ان",
+          "match": "none"
+        },
+        {
+          "word_id": 46755,
+          "word_order_in_verse": 9,
+          "word_raw": "هُمْ",
+          "plain_text_raw": "هُمْ",
+          "root_token_raw": "/هم/",
+          "norm": "هم",
+          "match": "none"
+        },
+        {
+          "word_id": 46756,
+          "word_order_in_verse": 10,
+          "word_raw": "إِلَّا",
+          "plain_text_raw": "إِلَّا",
+          "root_token_raw": "/إلا/",
+          "norm": "الا",
+          "match": "none"
+        },
+        {
+          "word_id": 46757,
+          "word_order_in_verse": 11,
+          "word_raw": "كَالْأَنْعَامِ",
+          "plain_text_raw": "كَٱلْأَنْعَٰمِ",
+          "root_token_raw": "/نعم/",
+          "norm": "كالانعم",
+          "match": "none"
+        },
+        {
+          "word_id": 46758,
+          "word_order_in_verse": 12,
+          "word_raw": "بَلْ",
+          "plain_text_raw": "بَلْ",
+          "root_token_raw": "/بل/",
+          "norm": "بل",
+          "match": "none"
+        },
+        {
+          "word_id": 46759,
+          "word_order_in_verse": 13,
+          "word_raw": "هُمْ",
+          "plain_text_raw": "هُمْ",
+          "root_token_raw": "/هم/",
+          "norm": "هم",
+          "match": "none"
+        },
+        {
+          "word_id": 46760,
+          "word_order_in_verse": 14,
+          "word_raw": "أَضَلُّ",
+          "plain_text_raw": "أَضَلُّ",
+          "root_token_raw": "/ضلل/",
+          "norm": "اضل",
+          "match": "none"
+        },
+        {
+          "word_id": 46761,
+          "word_order_in_verse": 15,
+          "word_raw": "سَبِيلًا",
+          "plain_text_raw": "سَبِيلًا",
+          "root_token_raw": "/سبل/",
+          "norm": "سبيلا",
+          "match": "none"
+        }
+      ],
+      "bahouth_match_stats": {
+        "text": 1,
+        "order": 0,
+        "none": 14,
+        "site_total": 8,
+        "bahouth_total": 15
       }
     }
   ],
@@ -1037,11 +4039,14 @@
       "cards": [
         {
           "title": "**ধ্বংসপ্রাপ্ত কওমের জনপদে পর্যটনের হুকুম**",
+          "ayahs": [],
           "hanafi": "বিনোদনের উদ্দেশ্যে যাওয়া মাকরূহ; কেবল ভয় ও ইবরতের উদ্দেশ্যে ক্রন্দনরত অবস্থায় জায়েয।",
           "maliki": "নিছক আমোদ-প্রমোদে যাওয়া নিষিদ্ধ; শিক্ষণীয় উদ্দেশ্যে দ্রুত অতিক্রম করা সুন্নাত।",
           "shafii": "ক্রন্দন ও খুশূ ছাড়া প্রবেশ করা মাকরূহে তাহরীমী; পানি ও খাদ্য গ্রহণ বর্জনীয়।",
           "hanbali": "সেখানে দীর্ঘ অবস্থান করা নিষিদ্ধ; দ্রুত অতিক্রম করা এবং আল্লাহর পানাহ চাওয়া ওয়াজিব।",
           "consensus": false,
+          "tarjih": null,
+          "contemporary": [],
           "daleel": [
             "সমস্ত ফুক্বাহায়ে কিরাম একমত যে আযাবগ্রস্ত জনপদে অবহেলাভরে পর্যটন নিষিদ্ধ, ক্রন্দনরত অবস্থায় যাওয়া বিধেয় (সহীহ বুখারী ৪৩৩)।"
           ],
@@ -1049,11 +4054,14 @@
         },
         {
           "title": "**কুপ্রবৃত্তির অনুসরণ ও ফতোয়া প্রদান**",
+          "ayahs": [],
           "hanafi": "প্রবৃত্তির অনুকূলে শরীয়তের অপব্যাখ্যা করা হারাম ও কবীরা গোনাহ।",
           "maliki": "প্রবৃত্তির দাসত্ব করে ইজতিহাদ করা বাতিল ও অগ্রহণযোগ্য।",
           "shafii": "নফস বা খেয়ালখুশিমতো শরয়ী হুকুম পরিবর্তন কুফরী বা ফাসেক্বী।",
           "hanbali": "মনগড়া রায় দিয়ে আল্লাহর বিধান অগ্রাহ্য করা চরম বিদ‘আত ও পথভ্রষ্টতা।",
           "consensus": false,
+          "tarjih": null,
+          "contemporary": [],
           "daleel": [
             "৪ মাযহাবের ঐকমত্য: শরীয়তকে প্রবৃত্তির অনুগামী করা সম্পূর্ণ হারাম (দলীল: ২৫:৪৩)।"
           ],
@@ -1061,11 +4069,14 @@
         },
         {
           "title": "**হারূন (আ.)-এর মতো কাউকে উযীর/সহকারী বানানো**",
+          "ayahs": [],
           "hanafi": "দ্বীন ও রাষ্ট্রের গুরুদায়িত্বে যোগ্য ও বিশ্বস্ত সহকারী গ্রহণ করা মুস্তাহাব ও সুন্নাত।",
           "maliki": "শাসক ও নেতৃবৃন্দের জন্য একজন যোগ্য উপদেষ্টা রাখা সুন্নাত।",
           "shafii": "খলীফা ও প্রশাসকের জন্য সৎ উযীর ও বিশ্বস্ত মু‘আওয়িন রাখা ওয়াজিব।",
           "hanbali": "সৎ উপদেষ্টার সাহচর্য গ্রহণ করা মুস্তাহাব আমল ও নবুওয়াতী তরীকা।",
           "consensus": false,
+          "tarjih": null,
+          "contemporary": [],
           "daleel": [
             "সমস্ত উলামার মতে কল্যাণকর্মে উপযুক্ত সহকারী গ্রহণ করা সুন্নাত (দলীল: ২৫:৩৫)।"
           ],

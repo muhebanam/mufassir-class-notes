@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "topic_id": 5129,
+  "count": 1,
+  "verses": [
+    {
+      "surah": 25,
+      "ayah": 38,
+      "verse_key": "25-38",
+      "text_raw": "وَعَادًا وَثَمُودَ وَأَصْحَابَ الرَّسِّ وَقُرُونًا بَيْنَ ذَلِكَ كَثِيرًا",
+      "page_number": 363,
+      "word_count": 8,
+      "letter_count": 37
+    }
+  ]
+}

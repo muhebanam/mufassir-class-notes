@@ -1,0 +1,34 @@
+{
+  "schema_version": "1",
+  "topic_id": 5170,
+  "count": 3,
+  "verses": [
+    {
+      "surah": 25,
+      "ayah": 30,
+      "verse_key": "25-30",
+      "text_raw": "وَقَالَ الرَّسُولُ يَارَبِّ إِنَّ قَوْمِي اتَّخَذُوا هَذَا الْقُرْآنَ مَهْجُورًا",
+      "page_number": 362,
+      "word_count": 9,
+      "letter_count": 41
+    },
+    {
+      "surah": 43,
+      "ayah": 88,
+      "verse_key": "43-88",
+      "text_raw": "وَقِيلِهِ يَارَبِّ إِنَّ هَؤُلَاءِ قَوْمٌ لَا يُؤْمِنُونَ",
+      "page_number": 495,
+      "word_count": 7,
+      "letter_count": 27
+    },
+    {
+      "surah": 43,
+      "ayah": 89,
+      "verse_key": "43-89",
+      "text_raw": "فَاصْفَحْ عَنْهُمْ وَقُلْ سَلَامٌ فَسَوْفَ يَعْلَمُونَ",
+      "page_number": 495,
+      "word_count": 6,
+      "letter_count": 26
+    }
+  ]
+}

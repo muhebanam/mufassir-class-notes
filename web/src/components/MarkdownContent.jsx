@@ -33,6 +33,17 @@ export function normalizeQuranBrackets(text) {
     .join('\n');
 }
 
+/**
+ * Escapes @ markers in Arabic qiraat text to prevent markdown rendering issues.
+ * @ markers in qiraat text indicate special reading marks (e.g., @ for madd, hamzah, etc.)
+ * We wrap them in zero-width spaces to prevent markdown interpretation while preserving display.
+ */
+export function escapeQiraatMarkers(text) {
+  if (!text || typeof text !== 'string') return text;
+  // Replace @ with zero-width space + @ + zero-width space to prevent markdown parsing
+  return text.replace(/@/g, '\u200B@\u200B');
+}
+
 // Count ONLY actual Arabic base letters (excludes harakat U+064B..U+065F, U+0670, waqf marks, tatweel)
 const BASE_AR_RE = /[\u0621-\u063A\u0641-\u064A\u0671-\u06D3]/g;
 const BN_RE = /[\u0980-\u09FF]/g;
@@ -182,7 +193,12 @@ function wrapArabic(root) {
           item.className = 'ar-tafsir-item font-arabic';
           item.dir = 'rtl';
           item.lang = 'ar';
-          item.textContent = para;
+          // Highlight Quranic words in bold emerald inside Tafsir commentary
+          const formatted = para.replace(
+            /\uFD3F([^\uFD3E]+)\uFD3E/g,
+            '<span class="text-emerald-700 dark:text-emerald-400 font-bold font-quran">\uFD3F$1\uFD3E</span>'
+          );
+          item.innerHTML = formatted;
           container.appendChild(item);
         });
 
@@ -263,7 +279,7 @@ export function renderMarkdown(src, { inline = false } = {}) {
   if (typeof document !== 'undefined') {
     const frag = DOMPurify.sanitize(html, {
       RETURN_DOM_FRAGMENT: true,
-      ADD_TAGS: ['bdi', 'span', 'br', 'table', 'thead', 'tbody', 'tr', 'th', 'td', 'blockquote', 'div', 'code'],
+      ADD_TAGS: ['bdi', 'span', 'br', 'table', 'thead', 'tbody', 'tr', 'th', 'td', 'blockquote', 'div', 'code', 'pre'],
       ADD_ATTR: ['dir', 'lang', 'class', 'target', 'rel', 'href'],
     });
     const box = document.createElement('div');
@@ -274,7 +290,7 @@ export function renderMarkdown(src, { inline = false } = {}) {
   }
 
   return DOMPurify.sanitize(html, {
-    ADD_TAGS: ['bdi', 'span', 'br', 'table', 'thead', 'tbody', 'tr', 'th', 'td', 'blockquote', 'div', 'code'],
+    ADD_TAGS: ['bdi', 'span', 'br', 'table', 'thead', 'tbody', 'tr', 'th', 'td', 'blockquote', 'div', 'code', 'pre'],
     ADD_ATTR: ['dir', 'lang', 'class', 'target', 'rel', 'href'],
   });
 }

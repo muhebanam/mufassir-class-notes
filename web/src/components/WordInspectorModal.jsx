@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
-import { X, Sparkles, BookOpen, Layers, ExternalLink, Bookmark } from 'lucide-react';
+import { X, Sparkles, BookOpen, Layers, ExternalLink, Bookmark, Database, ChevronRight } from 'lucide-react';
 
-export default function WordInspectorModal({ word, ayahNumber, onClose }) {
+export default function WordInspectorModal({ word, ayahNumber, onClose, onOpenRootConcordance }) {
   // Listen for Escape key to dismiss
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -23,6 +23,8 @@ export default function WordInspectorModal({ word, ayahNumber, onClose }) {
   const morph = t?.morphology || {};
   const isVerb = t?.word_type === 'فعل';
   const hasClassicalNotes = t?.classical_notes && t.classical_notes.length > 0;
+  const bahouthRoot = word.bahouthRoot;
+  const hasBahouthRoot = bahouthRoot && bahouthRoot !== morph.root;
 
   return (
     <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 bg-black/50 backdrop-blur-xs transition-opacity duration-200">
@@ -89,6 +91,17 @@ export default function WordInspectorModal({ word, ayahNumber, onClose }) {
                     </strong>
                   </div>
                 )}
+                {hasBahouthRoot && (
+                  <div className="p-2.5 rounded-xl bg-amber-50/70 dark:bg-amber-950/20 border border-amber-200/60 dark:border-amber-800/40">
+                    <span className="text-amber-600 dark:text-amber-400 block text-[11px] flex items-center gap-1">
+                      বাহাউথ মূল
+                      <Database className="w-2.5 h-2.5" />
+                    </span>
+                    <strong className="font-arabic text-sm text-amber-800 dark:text-amber-200 block mt-0.5" dir="rtl">
+                      {bahouthRoot}
+                    </strong>
+                  </div>
+                )}
                 {morph.bab && (
                   <div className="p-2.5 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-200/70 dark:border-gray-700">
                     <span className="text-gray-500 dark:text-gray-400 block text-[11px]">বাব (باب)</span>
@@ -106,6 +119,18 @@ export default function WordInspectorModal({ word, ayahNumber, onClose }) {
                   </div>
                 )}
               </div>
+
+              {/* All Verses Button (Bahouth Concordance) */}
+              {hasBahouthRoot && onOpenRootConcordance && (
+                <button
+                  onClick={() => onOpenRootConcordance(bahouthRoot)}
+                  className="w-full mt-3 px-3 py-2 rounded-xl bg-amber-100 dark:bg-amber-950/30 border border-amber-200/60 dark:border-amber-800/40 text-amber-800 dark:text-amber-200 font-bengali text-xs font-semibold flex items-center justify-center gap-2 hover:bg-amber-200 dark:hover:bg-amber-950/50 transition"
+                >
+                  <Database className="w-4 h-4" />
+                  <span>সকল আয়াত দেখুন (বাহাউথ সমানুপাতিক)</span>
+                  <ChevronRight className="w-3.5 h-3.5" />
+                </button>
+              )}
 
               {/* Verb Details: Sighah, Bahas, Masdar */}
               {isVerb && (

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Volume2, BookOpen, ShieldCheck } from 'lucide-react';
-import MarkdownContent, { normalizeQuranBrackets } from './MarkdownContent';
+import MarkdownContent, { normalizeQuranBrackets, escapeQiraatMarkers } from './MarkdownContent';
 
 export default function QiraatTable({ tableData = [], title = "১০ মুতাওয়াতির কিরাআত পাঠভেদ সারণি" }) {
   const toBn = (num) => {
@@ -87,7 +87,7 @@ export default function QiraatTable({ tableData = [], title = "১০ মুত�
                   {/* Text & Rules */}
                   <td className="px-4 py-3 text-right table-cell-arabic" dir="rtl">
                     <span className="font-arabic text-sm sm:text-base text-gray-900 dark:text-gray-100 leading-loose" dir="rtl">
-                      {ruleStr}
+                      {escapeQiraatMarkers(normalizeQuranBrackets(ruleStr))}
                     </span>
                   </td>
                 </tr>
@@ -134,7 +134,7 @@ export default function QiraatTable({ tableData = [], title = "১০ মুত�
 
               <div className="bg-emerald-50/50 dark:bg-emerald-950/20 p-2.5 rounded-lg text-right table-cell-arabic" dir="rtl">
                 <span className="font-arabic text-sm text-gray-900 dark:text-gray-100 leading-relaxed" dir="rtl">
-                  {ruleStr}
+                  {escapeQiraatMarkers(normalizeQuranBrackets(ruleStr))}
                 </span>
               </div>
             </div>

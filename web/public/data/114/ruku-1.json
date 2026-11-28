@@ -101,6 +101,25 @@
         1,
         6
       ],
+      "verse_meta": null,
+      "bahouth_words": null,
+      "topics": null,
+      "qiraat_annotations": [
+        {
+          "word_id": 77413,
+          "word_order_in_verse": 1,
+          "position": 2,
+          "text_id": 28,
+          "raw_text": "@ورش عن نافع/قرأ بالنقل وصلاً ووقفا.@خلف عن حمزة/قرأ بالسكت وعدمه وصلاً، ووقف بالسكت، والنقل، وتركهما.@خلاد عن حمزة/قرأ بترك السكت وصلاً، ووقف بالنقل والتحقيق.@باقي الرواة/قرؤوا بترك السكت مع تحقيق الهمزة وصلاً ووقفا."
+        },
+        {
+          "word_id": 77416,
+          "word_order_in_verse": 4,
+          "position": 1,
+          "text_id": 23,
+          "raw_text": "@الدوري عن أبي عمرو/قرأ بالإمالة بلا خلاف عنه.@باقي الرواة/قرؤوا بالفتح بلا خلاف عنه."
+        }
+      ],
       "tahqeeq": [
         {
           "word": "قُلْ",
@@ -258,6 +277,18 @@
         1,
         6
       ],
+      "verse_meta": null,
+      "bahouth_words": null,
+      "topics": null,
+      "qiraat_annotations": [
+        {
+          "word_id": 77418,
+          "word_order_in_verse": 2,
+          "position": 1,
+          "text_id": 23,
+          "raw_text": "@الدوري عن أبي عمرو/قرأ بالإمالة بلا خلاف عنه.@باقي الرواة/قرؤوا بالفتح بلا خلاف عنه."
+        }
+      ],
       "tahqeeq": [
         {
           "word": "مَلِكِ",
@@ -343,6 +374,18 @@
         1,
         6
       ],
+      "verse_meta": null,
+      "bahouth_words": null,
+      "topics": null,
+      "qiraat_annotations": [
+        {
+          "word_id": 77420,
+          "word_order_in_verse": 2,
+          "position": 1,
+          "text_id": 23,
+          "raw_text": "@الدوري عن أبي عمرو/قرأ بالإمالة بلا خلاف عنه.@باقي الرواة/قرؤوا بالفتح بلا خلاف عنه."
+        }
+      ],
       "tahqeeq": [
         {
           "word": "إِلَـٰهِ",
@@ -423,6 +466,10 @@
         1,
         6
       ],
+      "verse_meta": null,
+      "bahouth_words": null,
+      "topics": null,
+      "qiraat_annotations": null,
       "tahqeeq": [
         {
           "word": "شَرِّ",
@@ -559,6 +606,18 @@
         1,
         6
       ],
+      "verse_meta": null,
+      "bahouth_words": null,
+      "topics": null,
+      "qiraat_annotations": [
+        {
+          "word_id": 77429,
+          "word_order_in_verse": 5,
+          "position": 1,
+          "text_id": 23,
+          "raw_text": "@الدوري عن أبي عمرو/قرأ بالإمالة بلا خلاف عنه.@باقي الرواة/قرؤوا بالفتح بلا خلاف عنه."
+        }
+      ],
       "tahqeeq": [
         {
           "word": "يُوَسْوِسُ",
@@ -679,6 +738,25 @@
       "shane_nuzul_covers": [
         1,
         6
+      ],
+      "verse_meta": null,
+      "bahouth_words": null,
+      "topics": null,
+      "qiraat_annotations": [
+        {
+          "word_id": 77431,
+          "word_order_in_verse": 2,
+          "position": 1,
+          "text_id": 21,
+          "raw_text": "@الكسائي/قرأ بإمالة هاء التأنيث وقفا.@باقي الرواة/قرؤوا بفتح هاء التأنيث."
+        },
+        {
+          "word_id": 77432,
+          "word_order_in_verse": 3,
+          "position": 1,
+          "text_id": 23,
+          "raw_text": "@الدوري عن أبي عمرو/قرأ بالإمالة بلا خلاف عنه.@باقي الرواة/قرؤوا بالفتح بلا خلاف عنه."
+        }
       ],
       "tahqeeq": [
         {

@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "topic_id": 5124,
+  "count": 1,
+  "verses": [
+    {
+      "surah": 25,
+      "ayah": 30,
+      "verse_key": "25-30",
+      "text_raw": "وَقَالَ الرَّسُولُ يَارَبِّ إِنَّ قَوْمِي اتَّخَذُوا هَذَا الْقُرْآنَ مَهْجُورًا",
+      "page_number": 362,
+      "word_count": 9,
+      "letter_count": 41
+    }
+  ]
+}

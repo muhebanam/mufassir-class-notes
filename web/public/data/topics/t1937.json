@@ -1,0 +1,61 @@
+{
+  "schema_version": "1",
+  "topic_id": 1937,
+  "count": 6,
+  "verses": [
+    {
+      "surah": 25,
+      "ayah": 25,
+      "verse_key": "25-25",
+      "text_raw": "وَيَوْمَ تَشَقَّقُ السَّمَاءُ بِالْغَمَامِ وَنُزِّلَ الْمَلَائِكَةُ تَنْزِيلًا",
+      "page_number": 362,
+      "word_count": 7,
+      "letter_count": 39
+    },
+    {
+      "surah": 50,
+      "ayah": 44,
+      "verse_key": "50-44",
+      "text_raw": "يَوْمَ تَشَقَّقُ الْأَرْضُ عَنْهُمْ سِرَاعًا ذَلِكَ حَشْرٌ عَلَيْنَا يَسِيرٌ",
+      "page_number": 520,
+      "word_count": 9,
+      "letter_count": 36
+    },
+    {
+      "surah": 54,
+      "ayah": 1,
+      "verse_key": "54-1",
+      "text_raw": "اقْتَرَبَتِ السَّاعَةُ وَانْشَقَّ الْقَمَرُ",
+      "page_number": 528,
+      "word_count": 4,
+      "letter_count": 22
+    },
+    {
+      "surah": 55,
+      "ayah": 37,
+      "verse_key": "55-37",
+      "text_raw": "فَإِذَا انْشَقَّتْ السَّمَاءُ فَكَانَتْ وَرْدَةً كَالدِّهَانِ",
+      "page_number": 532,
+      "word_count": 6,
+      "letter_count": 31
+    },
+    {
+      "surah": 69,
+      "ayah": 15,
+      "verse_key": "69-15",
+      "text_raw": "فَيَوْمَئِذٍ وَقَعَتِ الْوَاقِعَةُ",
+      "page_number": 567,
+      "word_count": 3,
+      "letter_count": 17
+    },
+    {
+      "surah": 84,
+      "ayah": 1,
+      "verse_key": "84-1",
+      "text_raw": "إِذَا السَّمَاءُ انْشَقَّتْ",
+      "page_number": 589,
+      "word_count": 3,
+      "letter_count": 14
+    }
+  ]
+}

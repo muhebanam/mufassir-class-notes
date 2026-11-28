@@ -1,10 +1,11 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useRef } from 'react';
 import { 
   Languages, LayoutGrid, Table, Copy, Check, Sparkles, 
-  Eye, Info, ChevronRight, Palette
+  Eye, Info, ChevronRight, Palette, Database
 } from 'lucide-react';
 import { parseWordByWord } from '../utils/wordByWordParser';
 import WordInspectorModal from './WordInspectorModal';
+import RootConcordanceModal from './RootConcordanceModal';
 
 export default function WordByWordSection({
   ayah,
@@ -12,10 +13,11 @@ export default function WordByWordSection({
   bengaliFontSize = 16,
   arabicLineHeight = 2.2
 }) {
-  const [viewMode, setViewMode] = useState('tiles'); // 'tiles' or 'table'
+  const [viewMode, setViewMode] = useState('tiles');
   const [showPosColors, setShowPosColors] = useState(false);
   const [selectedWord, setSelectedWord] = useState(null);
   const [copied, setCopied] = useState(false);
+  const [rootConcordance, setRootConcordance] = useState(null); // {rootAr, rootId, verses}
 
   // Parse word-by-word data safely via our central adapter
   const parsedData = useMemo(() => {
@@ -38,6 +40,30 @@ export default function WordByWordSection({
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     });
+  };
+
+  // Root Concordance cache and fetch
+  const rootCache = useRef(new Map());
+  
+  const openRootConcordance = async (rootAr) => {
+    if (rootCache.current.has(rootAr)) {
+      setRootConcordance(rootCache.current.get(rootAr));
+      return;
+    }
+    // Lookup root_id from index
+    try {
+      const idxRes = await fetch('/data/roots/index.json');
+      const idx = await idxRes.json();
+      const entry = idx.roots?.[rootAr];
+      if (!entry) return;
+      const { id: rootId } = entry;
+      const res = await fetch(`/data/roots/${rootId}.json`);
+      const data = await res.json();
+      rootCache.current.set(rootAr, data);
+      setRootConcordance(data);
+    } catch (e) {
+      console.error('Failed to load root concordance:', e);
+    }
   };
 
   if (!parsedData.isAvailable || parsedData.words.length === 0) {
@@ -171,6 +197,12 @@ export default function WordByWordSection({
             const posClass = getPosClasses(w.pos);
             const isSelected = selectedWord?.id === w.id;
 
+            // Determine root display: tahqeeq/mufradat root takes precedence, bahouth as fallback
+            const primaryRoot = w.root; // from tahqeeq/mufradat
+            const bahouthRoot = w.bahouthRoot;
+            const showBahouthRoot = bahouthRoot && bahouthRoot !== primaryRoot;
+            const rootToShow = primaryRoot || bahouthRoot;
+
             return (
               <div
                 key={w.id}
@@ -199,6 +231,34 @@ export default function WordByWordSection({
                 >
                   {w.arabic}
                 </div>
+
+                {/* Root Chip (Primary + Bahouth if mismatch) */}
+                {rootToShow && (
+                  <div className="mt-1.5 flex items-center justify-center gap-1">
+                    {primaryRoot && (
+                      <span className="px-1.5 py-0.5 rounded text-[10px] font-bold bg-emerald-100 dark:bg-emerald-900/40 text-emerald-800 dark:text-emerald-200 font-arabic" dir="rtl" title="তাহকীক/মুফরদাত মূল">
+                        {primaryRoot}
+                      </span>
+                    )}
+                    {showBahouthRoot && (
+                      <span 
+                        className="px-1.5 py-0.5 rounded text-[10px] font-bold bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-200 font-arabic cursor-pointer hover:bg-amber-200 transition" 
+                        dir="rtl" 
+                        title={`বাহাউথ মূল: ${bahouthRoot}`}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          // Open Root Concordance Modal
+                          // We need root_id from bahouth data - fetch from index
+                          // For now, trigger a fetch
+                          openRootConcordance(bahouthRoot);
+                        }}
+                      >
+                        {bahouthRoot}
+                        <Database className="w-2.5 h-2.5 ml-0.5" />
+                      </span>
+                    )}
+                  </div>
+                )}
 
                 {/* Bottom: Bengali Meaning */}
                 <div 
@@ -278,6 +338,15 @@ export default function WordByWordSection({
           word={selectedWord}
           ayahNumber={ayah?.ayah}
           onClose={() => setSelectedWord(null)}
+          onOpenRootConcordance={openRootConcordance}
+        />
+      )}
+
+      {/* 5. Root Concordance Modal (lazy-loaded) */}
+      {rootConcordance && (
+        <RootConcordanceModal
+          rootData={rootConcordance}
+          onClose={() => setRootConcordance(null)}
         />
       )}
     </div>

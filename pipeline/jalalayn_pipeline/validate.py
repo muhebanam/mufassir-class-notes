@@ -46,6 +46,8 @@ class VCtx:
     strict_numbers: bool = True
     min_quote_letters: int = 6
     reader_names: list = field(default_factory=list)
+    a0: int = 1
+    a1: int = 999
 
 
 # ---------- পার্সিং ----------
@@ -414,8 +416,20 @@ def _v_ahkam(k, parts, v):
             if len(c) != 6:
                 errs.append(f"সারিতে ৬টি সেল চাই, পেয়েছি {len(c)}: {c[0][:30]}")
                 continue
+            # কলাম ১: মাসআলার শিরোনামে '(আয়াত N)' উল্লেখ ও রেঞ্জ যাচাই
+            m_ay = re.search(r"(?:আয়াত|আয়াত)\s+([০-৯\d\s–—\-]+)", c[0])
+            if not m_ay:
+                errs.append(f"মাসআলার শিরোনামে '(আয়াত N)' উল্লেখ চাই: {c[0][:30]}")
+            else:
+                ay_nums = [int(n) for n in re.findall(r"\d+", to_en(m_ay.group(1)))]
+                out_of_range = [n for n in ay_nums if n < v.a0 or n > v.a1]
+                if out_of_range:
+                    errs.append(f"মাসআলার আয়াতে রুকুর বাইরের আয়াত ({', '.join(map(str, out_of_range))}) দেওয়া হয়েছে (অনুমোদিত: {to_bn(v.a0)}–{to_bn(v.a1)}): {c[0][:30]}")
+            # কলাম ৬: দলীল, তারজীহ/সমসাময়িক ও উৎস যাচাই
             if "<br>" not in c[5] or "উৎস:" not in c[5]:
                 errs.append(f"শেষ কলামে '<br>উৎস: …' চাই: {c[0][:30]}")
+            if "সমসাময়িক" not in c[5]:
+                errs.append(f"শেষ কলামে 'সমসাময়িক উদাহরণ/প্রয়োগ' চাই: {c[0][:30]}")
     errs += check_common(s8, v)
     return errs
 

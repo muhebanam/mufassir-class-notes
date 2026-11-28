@@ -3,12 +3,13 @@ import {
   BookOpen, ChevronDown, ChevronUp, Copy, Check, Bookmark, 
   BookmarkCheck, Languages, Compass, Volume2, 
   FileText, ArrowLeft, ArrowRight, Share2, Columns, Rows,
-  Sparkles, Layers
+  Sparkles, Layers, Tag, Globe, Target
 } from 'lucide-react';
 import { toBn, copyToClipboard } from '../utils/helpers';
-import MarkdownContent, { normalizeQuranBrackets } from './MarkdownContent';
+import MarkdownContent, { normalizeQuranBrackets, escapeQiraatMarkers } from './MarkdownContent';
 import CornerOrnament from './CornerOrnament';
 import { saveAyahNote, getAyahNote, toggleBookmark, isBookmarked } from '../utils/db';
+import BahouthTopics from './BahouthTopics';
 
 export default function AyahStudyView({
   ayah,
@@ -103,6 +104,7 @@ export default function AyahStudyView({
     { id: 'mufradat', label: 'মুফরাদাত ও সরফ', icon: Languages, count: (ayah.tahqeeq?.length || ayah.mufradat?.length), available: !!((ayah.tahqeeq && ayah.tahqeeq.length > 0) || (ayah.mufradat && ayah.mufradat.length > 0)) },
     { id: 'irab', label: 'ই\'রাব ও তারকীব', icon: Compass, count: null, available: !!ayah.irab },
     { id: 'qiraat', label: '১০ কিরাআত পাঠভেদ', icon: Volume2, count: ayah.qiraat?.length, available: !!(ayah.qiraat && ayah.qiraat.length > 0) },
+    { id: 'bahouth_topics', label: 'বাহাউথ বিষয়', icon: Tag, count: ayah.topics?.length, available: !!(ayah.topics && ayah.topics.length > 0) },
     { id: 'nuzul', label: 'শানে নুযূল ও তাখরীজ', icon: Sparkles, count: null, available: !!ayah.nuzul },
     { id: 'notes', label: 'ক্লাস নোট', icon: FileText, count: noteText ? '১' : null, available: true },
   ];
@@ -659,7 +661,7 @@ export default function AyahStudyView({
                         </td>
                         <td className="px-3 py-2 font-arabic text-right leading-relaxed" dir="rtl">
                           <span className="font-arabic text-sm sm:text-base leading-loose" dir="rtl">
-                            {q['কিরাআতের পাঠভেদ ও নিয়ম (অবিকৃত মূল পাঠ)'] || q['নিয়ম'] || ''}
+                            {escapeQiraatMarkers(normalizeQuranBrackets(q['কিরাআতের পাঠভেদ ও নিয়ম (অবিকৃত মূল পাঠ)'] || q['নিয়ম'] || ''))}
                           </span>
                         </td>
                       </tr>
@@ -670,7 +672,18 @@ export default function AyahStudyView({
             </div>
           )}
 
-          {/* TAB 5: Shan-e-Nuzul */}
+          {/* TAB 5: Bahouth Topics */}
+          {(expandAll || activeTab === 'bahouth_topics') && ayah.topics && ayah.topics.length > 0 && (
+            <div className="space-y-3 mb-6 last:mb-0">
+              <div className="flex items-center gap-2 pb-2 border-b border-gray-100 dark:border-gray-700 font-bold text-amber-900 dark:text-amber-300 text-sm sm:text-base">
+                <Tag className="w-4 h-4 text-amber-600" />
+                <span>বাহাউথ থিমেটিক শনাক্তকরণ ({toBn(ayah.topics.length)}টি বিষয় — মাদীনা মুনাওয়ারা প্রামাণ্য)</span>
+              </div>
+              <BahouthTopics ayah={ayah} />
+            </div>
+          )}
+
+          {/* TAB 6: Shan-e-Nuzul */}
           {(expandAll || activeTab === 'nuzul') && ayah.nuzul && (
             <div className="space-y-3 mb-6 last:mb-0">
               <div className="flex items-center gap-2 pb-2 border-b border-gray-100 dark:border-gray-700 font-bold text-teal-900 dark:text-teal-300 text-sm sm:text-base">

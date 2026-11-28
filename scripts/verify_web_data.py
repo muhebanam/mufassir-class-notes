@@ -14,6 +14,12 @@ Verifies:
    - genuine content mismatches (must be 0)
 6. Shan-e-Nuzul & Irab cross-ayah collision detection.
 7. Ruku status match against audit_results.json.
+8. Bahouth enrichment verification (T2.4):
+   - words coverage per surah
+   - roots index ↔ file integrity (count == len(verses))
+   - round-trip: root R concordance ↔ per-ayah bahouth_words
+   - unexpected empty roots (non-fatal for particles)
+   - topics integration
 """
 
 import json
@@ -285,6 +291,152 @@ def verify():
         raise AssertionError("Irab duplication detected.")
     else:
         print("✓ Irab Mapping: Verified zero unmapped cross-ayah text collision.")
+
+    # ========== T2.4: Bahouth Enrichment Verification ==========
+    print("\n" + "=" * 70)
+    print("BAHOUTH ENRICHMENT VERIFICATION (T2.4)")
+    print("=" * 70)
+
+    # Load roots index and files for round-trip
+    roots_index_f = DATA_DIR / "roots" / "index.json"
+    roots_dir = DATA_DIR / "roots"
+    topics_index_f = DATA_DIR / "topics" / "index.json"
+    topics_dir = DATA_DIR / "topics"
+
+    roots_index = {}
+    if roots_index_f.exists():
+        roots_index = json.loads(roots_index_f.read_text(encoding="utf-8")).get("roots", {})
+
+    topics_index = {}
+    if topics_index_f.exists():
+        topics_index = json.loads(topics_index_f.read_text(encoding="utf-8")).get("topics", {})
+
+    # 8.1 Words coverage per surah (pilot: surah 25)
+    bahouth_words_total = 0
+    bahouth_words_with_root = 0
+    bahouth_words_unexpected_empty = 0
+    bahouth_match_stats = {"text": 0, "order": 0, "none": 0}
+    surahs_with_bahouth = 0
+
+    # 8.2 Roots index integrity
+    roots_index_mismatch = 0
+    roots_file_missing = 0
+
+    # 8.3 Round-trip: root concordance → per-ayah words
+    roundtrip_missing = 0
+    roundtrip_checked = 0
+
+    # 8.4 Topics integration
+    topics_present = 0
+    topics_missing = 0
+
+    for s in surahs:
+        sid = s["id"]
+        s_dir = DATA_DIR / str(sid)
+        if not s_dir.exists():
+            continue
+
+        # Check each ruku file for Bahouth data (surahs.json only has summary, not ruku details)
+        ruku_files = sorted(s_dir.glob("ruku-*.json"))
+        for ruku_f in ruku_files:
+            if not ruku_f.exists():
+                continue
+            r_data = json.loads(ruku_f.read_text(encoding="utf-8"))
+
+            for a in r_data.get("ayahs", []):
+                a_num = a.get("ayah")
+                v_key = f"{sid}-{a_num}"
+
+                # 8.1 Words coverage & match stats
+                b_mapped = a.get("bahouth_words_mapped")
+                if b_mapped:
+                    surahs_with_bahouth += 1
+                    for bw in b_mapped:
+                        bahouth_words_total += 1
+                        root = bw.get("root_token_raw", "")
+                        if root and root not in ("//", "/"):
+                            bahouth_words_with_root += 1
+                        elif root in ("", "//", "/"):
+                            bahouth_words_unexpected_empty += 1
+                    # Match stats
+                    stats = a.get("bahouth_match_stats")
+                    if stats:
+                        for k in ("text", "order", "none"):
+                            if k in stats:
+                                bahouth_match_stats[k] += stats[k]
+
+                roundtrip_warnings = 0
+
+                # 8.3 Round-trip: for each root in this ayah's mapped words, check concordance
+                if b_mapped:
+                    for bw in b_mapped:
+                        root_raw = bw.get("root_token_raw", "")
+                        if not root_raw or root_raw in ("//", "/"):
+                            continue
+                        root_key = root_raw.strip("/")
+                        # Skip compound roots (contain "/") - global concordance may not have all verses
+                        if "/" in root_key:
+                            continue
+                        if root_key in roots_index:
+                            roundtrip_checked += 1
+                            rid_info = roots_index[root_key]
+                            root_file = roots_dir / f"{rid_info['id']}.json"
+                            if root_file.exists():
+                                root_data = json.loads(root_file.read_text(encoding="utf-8"))
+                                verses = root_data.get("verses", [])
+                                # Check if this verse is in the concordance
+                                found = any(v.get("verse_key") == v_key for v in verses)
+                                if not found:
+                                    roundtrip_missing += 1
+                            else:
+                                roots_file_missing += 1
+
+                # 8.4 Topics
+                b_topics = a.get("topics")
+                if b_topics:
+                    topics_present += len(b_topics)
+                    for t in b_topics:
+                        tid = str(t.get("topic_id"))
+                        if tid not in topics_index:
+                            topics_missing += 1
+
+    # 8.2 Roots index integrity check
+    for root_ar, info in roots_index.items():
+        rid = info["id"]
+        count = info["count"]
+        root_file = roots_dir / f"{rid}.json"
+        if root_file.exists():
+            root_data = json.loads(root_file.read_text(encoding="utf-8"))
+            actual = len(root_data.get("verses", []))
+            if count != actual:
+                roots_index_mismatch += 1
+        else:
+            roots_file_missing += 1
+
+    # Warn about compound roots missing from concordance (expected)
+    print(f"  • Round-trip checked (non-compound): {roundtrip_checked}, missing in concordance: {roundtrip_missing}")
+    if roundtrip_missing > 0:
+        print(f"  ⚠ WARNING: {roundtrip_missing} verse-root pairs missing from concordance (compound roots excluded)")
+    print(f"  • Roots index entries: {len(roots_index)}")
+    print(f"  • Roots index mismatch (count != len): {roots_index_mismatch}")
+    print(f"  • Roots files missing: {roots_file_missing}")
+    print(f"  • Topics present: {topics_present}, missing from index: {topics_missing}")
+
+    # Non-fatal warnings for unexpected empty roots
+    if bahouth_words_unexpected_empty > 0:
+        print(f"  ⚠ WARNING: {bahouth_words_unexpected_empty} words have unexpected empty root_token_raw (particles expected some)")
+
+    # Fatal checks
+    if roots_index_mismatch > 0:
+        raise AssertionError(f"Roots index mismatch: {roots_index_mismatch} entries have count != len(verses)")
+    if roots_file_missing > 0:
+        raise AssertionError(f"Roots files missing: {roots_file_missing}")
+    if roundtrip_missing > 0:
+        raise AssertionError(f"Round-trip failure: {roundtrip_missing} verse-root pairs missing from concordance")
+    if topics_missing > 0:
+        raise AssertionError(f"Topics missing from global index: {topics_missing}")
+
+    print("✓ Bahouth enrichment verification passed.")
 
     print("\n" + "=" * 70)
     print("HONEST SCHOLARLY AUDIT STATUS (from audit_results.json):")

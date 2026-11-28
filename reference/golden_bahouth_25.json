@@ -1,0 +1,71 @@
+{
+  "schema_version": "1",
+  "description": "Golden test reference for Surah 25 Bahouth enrichment (Pilot). Hand-verified 5 ayahs.",
+  "source": "Bahouth MCP (https://bahouth.tafsir.net/mcp)",
+  "surah": 25,
+  "ayahs": {
+    "1": {
+      "verse_key": "25-1",
+      "words": [
+        {"order": 1, "word_raw": "تَبَارَكَ", "plain_text_raw": "تَبَارَكَ", "root_token_raw": "/برك/", "match": "text", "site_meaning_bn": "পরম বরকতময় ও মহিমান্বিত"},
+        {"order": 2, "word_raw": "الَّذِي", "plain_text_raw": "الذي", "root_token_raw": "/الذي/", "match": "text", "site_meaning_bn": "যে"},
+        {"order": 3, "word_raw": "نَزَّلَ", "plain_text_raw": "نَزَّلَ", "root_token_raw": "/نزل/", "match": "text", "site_meaning_bn": "নামাজিল করেছে"},
+        {"order": 4, "word_raw": "الْفُرْقَانَ", "plain_text_raw": "الْفُرْقَانَ", "root_token_raw": "/فرق/", "match": "text", "site_meaning_bn": "ফুরকানকে (নির্ণায়ক গ্রন্থকে)"},
+        {"order": 5, "word_raw": "عَلَى", "plain_text_raw": "عَلَى", "root_token_raw": "/على/", "match": "text", "site_meaning_bn": "উপর"},
+        {"order": 6, "word_raw": "عَبْدِهِ", "plain_text_raw": "عَبْدِهِ", "root_token_raw": "/عبد/", "match": "text", "site_meaning_bn": "তার বান্দা"},
+        {"order": 7, "word_raw": "لِيَكُونَ", "plain_text_raw": "لِيَكُونَ", "root_token_raw": "/كون/", "match": "text", "site_meaning_bn": "যাতে সে হয়"},
+        {"order": 8, "word_raw": "لِلْعَالَمِينَ", "plain_text_raw": "لِلْعَالَمِينَ", "root_token_raw": "/علم/", "match": "text", "site_meaning_bn": "সকল জগতের জন্যে"},
+        {"order": 9, "word_raw": "نَذِيرًا", "plain_text_raw": "نَذِيرًا", "root_token_raw": "/نذر/", "match": "text", "site_meaning_bn": "সতর্ককर्तা"}
+      ],
+      "verse_meta": {"page_number": 359, "word_count": 9, "letter_count": 44},
+      "topics_count": 20,
+      "qiraat_annotations_count": 2
+    },
+    "2": {
+      "verse_key": "25-2",
+      "words": [
+        {"order": 1, "word_raw": "الَّذِي", "plain_text_raw": "الذي", "root_token_raw": "/الذي/", "match": "text"},
+        {"order": 2, "word_raw": "لَهُ", "plain_text_raw": "له", "root_token_raw": "/له/", "match": "text"},
+        {"order": 3, "word_raw": "مُلْكُ", "plain_text_raw": "مُلْكُ", "root_token_raw": "/ملك/", "match": "text"},
+        {"order": 4, "word_raw": "السَّمَاوَاتِ", "plain_text_raw": "السَّمَاوَاتِ", "root_token_raw": "/سمو/", "match": "text"},
+        {"order": 5, "word_raw": "وَ", "plain_text_raw": "وَ", "root_token_raw": "/و/", "match": "text"},
+        {"order": 6, "word_raw": "الْأَرْضِ", "plain_text_raw": "الْأَرْضِ", "root_token_raw": "/أرض/", "match": "text"},
+        {"order": 7, "word_raw": "وَمَا", "plain_text_raw": "وَمَا", "root_token_raw": "/ما/", "match": "text"},
+        {"order": 8, "word_raw": "لَمْ", "plain_text_raw": "لَمْ", "root_token_raw": "/لم/", "match": "text"},
+        {"order": 9, "word_raw": "يَتَّخِذْ", "plain_text_raw": "يَتَّخِذْ", "root_token_raw": "/أخو/", "match": "text"},
+        {"order": 10, "word_raw": "وَلَدًا", "plain_text_raw": "وَلَدًا", "root_token_raw": "/ولد/", "match": "text"},
+        {"order": 11, "word_raw": "وَ", "plain_text_raw": "وَ", "root_token_raw": "/و/", "match": "text"},
+        {"order": 12, "word_raw": "خَلَقَ", "plain_text_raw": "خَلَقَ", "root_token_raw": "/خلق/", "match": "text"},
+        {"order": 13, "word_raw": "كُلَّ", "plain_text_raw": "كُلَّ", "root_token_raw": "/كل/", "match": "text"},
+        {"order": 14, "word_raw": "شَيْءٍ", "plain_text_raw": "شَيْءٍ", "root_token_raw": "/شوى/", "match": "text"},
+        {"order": 15, "word_raw": "فَقَدَّرَهُ", "plain_text_raw": "فَقَدَّرَهُ", "root_token_raw": "/قدر/", "match": "text"},
+        {"order": 16, "word_raw": "تَقْدِيرًا", "plain_text_raw": "تَقْدِيرًا", "root_token_raw": "/قدر/", "match": "text"},
+        {"order": 17, "word_raw": "فَهُوَ", "plain_text_raw": "فَهُوَ", "root_token_raw": "/هو/", "match": "text"},
+        {"order": 18, "word_raw": "عَلَى", "plain_text_raw": "عَلَى", "root_token_raw": "/على/", "match": "text"},
+        {"order": 19, "word_raw": "كُلِّ", "plain_text_raw": "كُلِّ", "root_token_raw": "/كل/", "match": "text"},
+        {"order": 20, "word_raw": "شَيْءٍ", "plain_text_raw": "شَيْءٍ", "root_token_raw": "/شوى/", "match": "text"},
+        {"order": 21, "word_raw": "قَدِيرٌ", "plain_text_raw": "قَدِيرٌ", "root_token_raw": "/قدر/", "match": "text"}
+      ],
+      "verse_meta": {"page_number": 359, "word_count": 21, "letter_count": 87},
+      "topics_count": 13
+    },
+    "63": {
+      "verse_key": "25-63",
+      "words_count": 12,
+      "verse_meta": {"page_number": 364, "word_count": 12, "letter_count": 51},
+      "topics_count": 35
+    },
+    "67": {
+      "verse_key": "25-67",
+      "words_count": 27,
+      "verse_meta": {"page_number": 365, "word_count": 27, "letter_count": 108},
+      "topics_count": 27
+    },
+    "77": {
+      "verse_key": "25-77",
+      "words_count": 12,
+      "verse_meta": {"page_number": 368, "word_count": 12, "letter_count": 49},
+      "topics_count": 4
+    }
+  }
+}

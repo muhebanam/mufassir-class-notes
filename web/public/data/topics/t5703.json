@@ -1,0 +1,43 @@
+{
+  "schema_version": "1",
+  "topic_id": 5703,
+  "count": 4,
+  "verses": [
+    {
+      "surah": 25,
+      "ayah": 54,
+      "verse_key": "25-54",
+      "text_raw": "وَهُوَ الَّذِي خَلَقَ مِنْ الْمَاءِ بَشَرًا فَجَعَلَهُ نَسَبًا وَصِهْرًا وَكَانَ رَبُّكَ قَدِيرًا",
+      "page_number": 364,
+      "word_count": 12,
+      "letter_count": 47
+    },
+    {
+      "surah": 32,
+      "ayah": 8,
+      "verse_key": "32-8",
+      "text_raw": "ثُمَّ جَعَلَ نَسْلَهُ مِنْ سُلَالَةٍ مِنْ مَاءٍ مَهِينٍ",
+      "page_number": 415,
+      "word_count": 8,
+      "letter_count": 25
+    },
+    {
+      "surah": 77,
+      "ayah": 20,
+      "verse_key": "77-20",
+      "text_raw": "أَلَمْ نَخْلُقْكُمْ مِنْ مَاءٍ مَهِينٍ",
+      "page_number": 581,
+      "word_count": 5,
+      "letter_count": 18
+    },
+    {
+      "surah": 86,
+      "ayah": 5,
+      "verse_key": "86-5",
+      "text_raw": "فَلْيَنْظُرْ الْإِنْسَانُ مِمَّ خُلِقَ",
+      "page_number": 591,
+      "word_count": 4,
+      "letter_count": 18
+    }
+  ]
+}

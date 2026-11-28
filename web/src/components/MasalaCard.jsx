@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronDown, ChevronUp, BookOpen, Scale, Sparkles } from 'lucide-react';
+import { ChevronDown, ChevronUp, BookOpen, Scale, Sparkles, Globe } from 'lucide-react';
 import MarkdownContent from './MarkdownContent';
 import { toBn } from '../utils/helpers';
 
@@ -39,11 +39,18 @@ export default function MasalaCard({ card, index }) {
             <MarkdownContent inline content={cleanTitle} />
           </h4>
         </div>
-        {badgeText && (
-          <span className={`text-xs px-2.5 py-1 rounded-full border font-semibold shrink-0 self-start sm:self-auto ${badgeColor}`}>
-            {badgeText}
-          </span>
-        )}
+        <div className="flex items-center gap-2 shrink-0 self-start sm:self-auto">
+          {card.ayahs && card.ayahs.length > 0 && (
+            <span className="text-xs px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-700 font-bold shrink-0 font-bengali">
+              আয়াত {card.ayahs.map(toBn).join('–')}
+            </span>
+          )}
+          {badgeText && (
+            <span className={`text-xs px-2.5 py-1 rounded-full border font-semibold shrink-0 ${badgeColor}`}>
+              {badgeText}
+            </span>
+          )}
+        </div>
       </div>
 
       {/* 2x2 Madhhab Grid */}
@@ -96,6 +103,41 @@ export default function MasalaCard({ card, index }) {
           </div>
         </div>
       </div>
+
+      {/* Tarjih Highlight (if present) */}
+      {card.tarjih && (
+        <div className="mx-4 sm:mx-5 mb-4 p-3.5 rounded-xl bg-gradient-to-r from-emerald-50/90 to-teal-50/80 dark:from-emerald-950/30 dark:to-teal-950/20 border border-emerald-200/80 dark:border-emerald-800/60 flex items-start gap-2.5">
+          <div className="p-1 rounded-md bg-emerald-600 text-white shrink-0 mt-0.5">
+            <Scale className="w-3.5 h-3.5" />
+          </div>
+          <div className="space-y-1">
+            <div className="text-xs font-bold text-emerald-800 dark:text-emerald-300 uppercase tracking-wide font-bengali">
+              প্রসিদ্ধ ও ভারসাম্যপূর্ণ তারজীহ (الترجيح)
+            </div>
+            <div className="text-sm text-gray-800 dark:text-gray-200 leading-relaxed font-bengali bn-justify">
+              <MarkdownContent inline content={card.tarjih} />
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Contemporary Applications & Examples (if present) */}
+      {card.contemporary && card.contemporary.length > 0 && (
+        <div className="mx-4 sm:mx-5 mb-4 p-3.5 rounded-xl bg-gradient-to-r from-sky-50/90 to-blue-50/70 dark:from-sky-950/30 dark:to-blue-950/20 border border-sky-200/80 dark:border-sky-800/60 space-y-2">
+          <div className="flex items-center gap-2 text-xs font-bold text-sky-800 dark:text-sky-300 uppercase tracking-wide font-bengali">
+            <Globe className="w-3.5 h-3.5 text-sky-600 dark:text-sky-400" />
+            <span>সমসাময়িক উদাহরণ ও বাস্তব প্রয়োগ (التطبيقات المعاصرة)</span>
+          </div>
+          <div className="space-y-1.5 text-sm text-gray-800 dark:text-gray-200 font-bengali leading-relaxed">
+            {card.contemporary.map((c, cIdx) => (
+              <div key={cIdx} className="flex items-start gap-2">
+                <span className="text-sky-600 dark:text-sky-400 font-bold shrink-0 mt-0.5">•</span>
+                <div className="bn-justify"><MarkdownContent inline content={c} /></div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
 
       {/* Collapsible Daleel & Argument Section */}
       {card.daleel && card.daleel.length > 0 && (

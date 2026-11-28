@@ -69,6 +69,18 @@
       "shane_nuzul_covers": [
         1,
         4
+      ],
+      "verse_meta": null,
+      "bahouth_words": null,
+      "topics": null,
+      "qiraat_annotations": [
+        {
+          "word_id": 77376,
+          "word_order_in_verse": 2,
+          "position": 1,
+          "text_id": 53,
+          "raw_text": "@يعقوب/وقف بهاء السكت باتفاق.@باقي الرواة/وقف بترك هاء السكت."
+        }
       ]
     },
     {
@@ -106,7 +118,11 @@
       "shane_nuzul_covers": [
         1,
         4
-      ]
+      ],
+      "verse_meta": null,
+      "bahouth_words": null,
+      "topics": null,
+      "qiraat_annotations": null
     },
     {
       "surah": 112,
@@ -132,7 +148,11 @@
       "shane_nuzul_covers": [
         1,
         4
-      ]
+      ],
+      "verse_meta": null,
+      "bahouth_words": null,
+      "topics": null,
+      "qiraat_annotations": null
     },
     {
       "surah": 112,
@@ -257,6 +277,32 @@
       "shane_nuzul_covers": [
         1,
         4
+      ],
+      "verse_meta": null,
+      "bahouth_words": null,
+      "topics": null,
+      "qiraat_annotations": [
+        {
+          "word_id": 77388,
+          "word_order_in_verse": 4,
+          "position": 1,
+          "text_id": 2010,
+          "raw_text": "@يعقوب وَخلف العاشر/قرأ بالهمزة، مع سكون الفاء.@حفص عن عاصم/قرأ بإبدال الهمزة واوا في الحالين، مع ضم الفاء.@حمزة/قرأ بالهمزة مع سكون الفاء، ويقف بالنقل، والإبدال واوا على الرسم.@باقي الرواة/قرؤوا بالهمزة مع ضم الفاء."
+        },
+        {
+          "word_id": 77388,
+          "word_order_in_verse": 4,
+          "position": 2,
+          "text_id": 28,
+          "raw_text": "@ورش عن نافع/قرأ بالنقل وصلاً ووقفا.@خلف عن حمزة/قرأ بالسكت وعدمه وصلاً، ووقف بالسكت، والنقل، وتركهما.@خلاد عن حمزة/قرأ بترك السكت وصلاً، ووقف بالنقل والتحقيق.@باقي الرواة/قرؤوا بترك السكت مع تحقيق الهمزة وصلاً ووقفا."
+        },
+        {
+          "word_id": 77389,
+          "word_order_in_verse": 5,
+          "position": 3,
+          "text_id": 8,
+          "raw_text": "@ورش عن نافع وَأبو عمرو وَيعقوب وَابن عامر/فصل بين السورتين بالبسملة، والوصل، والسكت، وله ما بين الآيات من أحكام الوصل.@حمزة وَخلف العاشر/قرأ بالوصل بين السورتين بلا بسملة، وله ما بين الآيات من أحكام الوصل.@باقي الرواة/فصل بالبسملة بين السورتين."
+        }
       ]
     }
   ],

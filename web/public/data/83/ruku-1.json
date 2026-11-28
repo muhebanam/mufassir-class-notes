@@ -48,7 +48,11 @@
       "irab": "",
       "irab_covers": null,
       "shane_nuzul": "*[উৎস: আয়াত ১–৩৬-এর রুকুভিত্তিক সামগ্রিক আলোচনা]*\n\nএই রুকুর আয়াতসমূহ সংশ্লিষ্ট ঐতিহাসিক প্রেক্ষাপট ও সহীহ হাদীসের তাখরীজ অনুযায়ী অবতীর্ণ হয় (`turath:8473`, page: 2912).\n\n---",
-      "shane_nuzul_covers": null
+      "shane_nuzul_covers": null,
+      "verse_meta": null,
+      "bahouth_words": null,
+      "topics": null,
+      "qiraat_annotations": null
     },
     {
       "surah": 83,
@@ -109,7 +113,19 @@
       "irab": "",
       "irab_covers": null,
       "shane_nuzul": "*[উৎস: আয়াত ১–৩৬-এর রুকুভিত্তিক সামগ্রিক আলোচনা]*\n\nএই রুকুর আয়াতসমূহ সংশ্লিষ্ট ঐতিহাসিক প্রেক্ষাপট ও সহীহ হাদীসের তাখরীজ অনুযায়ী অবতীর্ণ হয় (`turath:8473`, page: 2912).\n\n---",
-      "shane_nuzul_covers": null
+      "shane_nuzul_covers": null,
+      "verse_meta": null,
+      "bahouth_words": null,
+      "topics": null,
+      "qiraat_annotations": [
+        {
+          "word_id": 75800,
+          "word_order_in_verse": 5,
+          "position": 1,
+          "text_id": 23,
+          "raw_text": "@الدوري عن أبي عمرو/قرأ بالإمالة بلا خلاف عنه.@باقي الرواة/قرؤوا بالفتح بلا خلاف عنه."
+        }
+      ]
     },
     {
       "surah": 83,
@@ -216,7 +232,40 @@
       "irab": "",
       "irab_covers": null,
       "shane_nuzul": "*[উৎস: আয়াত ১–৩৬-এর রুকুভিত্তিক সামগ্রিক আলোচনা]*\n\nএই রুকুর আয়াতসমূহ সংশ্লিষ্ট ঐতিহাসিক প্রেক্ষাপট ও সহীহ হাদীসের তাখরীজ অনুযায়ী অবতীর্ণ হয় (`turath:8473`, page: 2912).\n\n---",
-      "shane_nuzul_covers": null
+      "shane_nuzul_covers": null,
+      "verse_meta": null,
+      "bahouth_words": null,
+      "topics": null,
+      "qiraat_annotations": [
+        {
+          "word_id": 75802,
+          "word_order_in_verse": 1,
+          "position": 1,
+          "text_id": 3,
+          "raw_text": "@حمزة/قرأ بتحقيق الهمزة وصلاً، ووقف بتسهيل وتحقيق الهمزة.@باقي الرواة/قرؤوا بتحقيق الهمزة وصلاً ووقفا."
+        },
+        {
+          "word_id": 75803,
+          "word_order_in_verse": 2,
+          "position": 2,
+          "text_id": 18,
+          "raw_text": "@قالون عن نافع/قرأ بصلة ميم الجمع وصلاً بخلف عنه.@ورش عن نافع/قرأ بصلة ميم الجمع وصلاً مع الإشباع.@أبو جعفر وَابن كثير/قرأ بصلة ميم الجمع وصلا.@خلف عن حمزة/قرأ بالسكت وعدمه وصلاً ووقفا.@باقي الرواة/قرؤوا بترك السكت، وإسكان ميم الجمع وصلاً ووقفا."
+        },
+        {
+          "word_id": 75805,
+          "word_order_in_verse": 4,
+          "position": 2,
+          "text_id": 7,
+          "raw_text": "@قالون عن نافع/قرأ بصلة ميم الجمع وصلاً بخلف عنه.@أبو جعفر وَابن كثير/قرأ بصلة ميم الجمع وصلا.@باقي الرواة/قرؤوا بترك صلة ميم الجمع."
+        },
+        {
+          "word_id": 75806,
+          "word_order_in_verse": 5,
+          "position": 1,
+          "text_id": 38,
+          "raw_text": "@ورش عن نافع/قرأ بترقيق الراء في الحالين.@باقي الرواة/قرؤوا بتفخيم الراء."
+        }
+      ]
     },
     {
       "surah": 83,
@@ -273,7 +322,26 @@
       "irab": "",
       "irab_covers": null,
       "shane_nuzul": "*[উৎস: আয়াত ১–৩৬-এর রুকুভিত্তিক সামগ্রিক আলোচনা]*\n\nএই রুকুর আয়াতসমূহ সংশ্লিষ্ট ঐতিহাসিক প্রেক্ষাপট ও সহীহ হাদীসের তাখরীজ অনুযায়ী অবতীর্ণ হয় (`turath:8473`, page: 2912).\n\n---",
-      "shane_nuzul_covers": null
+      "shane_nuzul_covers": null,
+      "verse_meta": null,
+      "bahouth_words": null,
+      "topics": null,
+      "qiraat_annotations": [
+        {
+          "word_id": 75809,
+          "word_order_in_verse": 3,
+          "position": 1,
+          "text_id": 15,
+          "raw_text": "@حمزة/قرأ بتحقيق الهمزة وصلاً، ووقف بتسهيل الهمزة مع المد والقصر.@باقي الرواة/قرؤوا بتحقيق الهمزة وصلاً ووقفا."
+        },
+        {
+          "word_id": 75810,
+          "word_order_in_verse": 4,
+          "position": 2,
+          "text_id": 7,
+          "raw_text": "@قالون عن نافع/قرأ بصلة ميم الجمع وصلاً بخلف عنه.@أبو جعفر وَابن كثير/قرأ بصلة ميم الجمع وصلا.@باقي الرواة/قرؤوا بترك صلة ميم الجمع."
+        }
+      ]
     },
     {
       "surah": 83,
@@ -312,7 +380,19 @@
       "irab": "",
       "irab_covers": null,
       "shane_nuzul": "*[উৎস: আয়াত ১–৩৬-এর রুকুভিত্তিক সামগ্রিক আলোচনা]*\n\nএই রুকুর আয়াতসমূহ সংশ্লিষ্ট ঐতিহাসিক প্রেক্ষাপট ও সহীহ হাদীসের তাখরীজ অনুযায়ী অবতীর্ণ হয় (`turath:8473`, page: 2912).\n\n---",
-      "shane_nuzul_covers": null
+      "shane_nuzul_covers": null,
+      "verse_meta": null,
+      "bahouth_words": null,
+      "topics": null,
+      "qiraat_annotations": [
+        {
+          "word_id": 75813,
+          "word_order_in_verse": 2,
+          "position": 2,
+          "text_id": 22,
+          "raw_text": "@خلف عن حمزة/قرأ بالإدغام مع ترك الغنة.@باقي الرواة/قرؤوا بالإدغام مع الغنة."
+        }
+      ]
     },
     {
       "surah": 83,
@@ -338,7 +418,11 @@
       "irab": "",
       "irab_covers": null,
       "shane_nuzul": "*[উৎস: আয়াত ১–৩৬-এর রুকুভিত্তিক সামগ্রিক আলোচনা]*\n\nএই রুকুর আয়াতসমূহ সংশ্লিষ্ট ঐতিহাসিক প্রেক্ষাপট ও সহীহ হাদীসের তাখরীজ অনুযায়ী অবতীর্ণ হয় (`turath:8473`, page: 2912).\n\n---",
-      "shane_nuzul_covers": null
+      "shane_nuzul_covers": null,
+      "verse_meta": null,
+      "bahouth_words": null,
+      "topics": null,
+      "qiraat_annotations": null
     },
     {
       "surah": 83,
@@ -407,7 +491,33 @@
       "irab": "",
       "irab_covers": null,
       "shane_nuzul": "*[উৎস: আয়াত ১–৩৬-এর রুকুভিত্তিক সামগ্রিক আলোচনা]*\n\nএই রুকুর আয়াতসমূহ সংশ্লিষ্ট ঐতিহাসিক প্রেক্ষাপট ও সহীহ হাদীসের তাখরীজ অনুযায়ী অবতীর্ণ হয় (`turath:8473`, page: 2912).\n\n---",
-      "shane_nuzul_covers": null
+      "shane_nuzul_covers": null,
+      "verse_meta": null,
+      "bahouth_words": null,
+      "topics": null,
+      "qiraat_annotations": [
+        {
+          "word_id": 75822,
+          "word_order_in_verse": 4,
+          "position": 1,
+          "text_id": 20,
+          "raw_text": "@ورش عن نافع/قرأ بالتقليل بلا خلاف عنه.@أبو عمرو وَالدوري عن الكسائي/قرأ بالإمالة وصلاً ووقفا.@باقي الرواة/قرؤوا بالفتح بلا خلاف."
+        },
+        {
+          "word_id": 75822,
+          "word_order_in_verse": 4,
+          "position": 2,
+          "text_id": 1,
+          "raw_text": "@السوسي عن أبي عمرو/قرأ بالإدغام الكبير.@باقي الرواة/قرؤوا بالإظهار."
+        },
+        {
+          "word_id": 75824,
+          "word_order_in_verse": 6,
+          "position": 2,
+          "text_id": 22,
+          "raw_text": "@خلف عن حمزة/قرأ بالإدغام مع ترك الغنة.@باقي الرواة/قرؤوا بالإدغام مع الغنة."
+        }
+      ]
     },
     {
       "surah": 83,
@@ -458,7 +568,19 @@
       "irab": "",
       "irab_covers": null,
       "shane_nuzul": "*[উৎস: আয়াত ১–৩৬-এর রুকুভিত্তিক সামগ্রিক আলোচনা]*\n\nএই রুকুর আয়াতসমূহ সংশ্লিষ্ট ঐতিহাসিক প্রেক্ষাপট ও সহীহ হাদীসের তাখরীজ অনুযায়ী অবতীর্ণ হয় (`turath:8473`, page: 2912).\n\n---",
-      "shane_nuzul_covers": null
+      "shane_nuzul_covers": null,
+      "verse_meta": null,
+      "bahouth_words": null,
+      "topics": null,
+      "qiraat_annotations": [
+        {
+          "word_id": 75826,
+          "word_order_in_verse": 2,
+          "position": 1,
+          "text_id": 1866,
+          "raw_text": "@ورش عن نافع/قرأ بالتقليل بلا خلاف عنه.@أبو عمرو وَشعبة عن عاصم وَحمزة وَالكسائي وَخلف العاشر/قرأ بالإمالة بلا خلاف عنه.@ابن ذكوان عن ابن عامر/قرأ بالإمالة بخلف عنه.@باقي الرواة/قرؤوا بالفتح بلا خلاف عنه."
+        }
+      ]
     },
     {
       "surah": 83,
@@ -497,7 +619,19 @@
       "irab": "",
       "irab_covers": null,
       "shane_nuzul": "*[উৎস: আয়াত ১–৩৬-এর রুকুভিত্তিক সামগ্রিক আলোচনা]*\n\nএই রুকুর আয়াতসমূহ সংশ্লিষ্ট ঐতিহাসিক প্রেক্ষাপট ও সহীহ হাদীসের তাখরীজ অনুযায়ী অবতীর্ণ হয় (`turath:8473`, page: 2912).\n\n---",
-      "shane_nuzul_covers": null
+      "shane_nuzul_covers": null,
+      "verse_meta": null,
+      "bahouth_words": null,
+      "topics": null,
+      "qiraat_annotations": [
+        {
+          "word_id": 75830,
+          "word_order_in_verse": 2,
+          "position": 2,
+          "text_id": 22,
+          "raw_text": "@خلف عن حمزة/قرأ بالإدغام مع ترك الغنة.@باقي الرواة/قرؤوا بالإدغام مع الغنة."
+        }
+      ]
     },
     {
       "surah": 83,
@@ -556,7 +690,26 @@
       "irab": "",
       "irab_covers": null,
       "shane_nuzul": "*[উৎস: আয়াত ১–৩৬-এর রুকুভিত্তিক সামগ্রিক আলোচনা]*\n\nএই রুকুর আয়াতসমূহ সংশ্লিষ্ট ঐতিহাসিক প্রেক্ষাপট ও সহীহ হাদীসের তাখরীজ অনুযায়ী অবতীর্ণ হয় (`turath:8473`, page: 2912).\n\n---",
-      "shane_nuzul_covers": null
+      "shane_nuzul_covers": null,
+      "verse_meta": null,
+      "bahouth_words": null,
+      "topics": null,
+      "qiraat_annotations": [
+        {
+          "word_id": 75831,
+          "word_order_in_verse": 1,
+          "position": 2,
+          "text_id": 22,
+          "raw_text": "@خلف عن حمزة/قرأ بالإدغام مع ترك الغنة.@باقي الرواة/قرؤوا بالإدغام مع الغنة."
+        },
+        {
+          "word_id": 75832,
+          "word_order_in_verse": 2,
+          "position": 1,
+          "text_id": 66,
+          "raw_text": "@حمزة/قرأ بتحقيق الهمزة وصلاً، ووقف بتسهيل الهمزة.@باقي الرواة/قرؤوا بتحقيق الهمزة وصلاً ووقفا."
+        }
+      ]
     },
     {
       "surah": 83,
@@ -590,7 +743,11 @@
       "irab": "",
       "irab_covers": null,
       "shane_nuzul": "*[উৎস: আয়াত ১–৩৬-এর রুকুভিত্তিক সামগ্রিক আলোচনা]*\n\nএই রুকুর আয়াতসমূহ সংশ্লিষ্ট ঐতিহাসিক প্রেক্ষাপট ও সহীহ হাদীসের তাখরীজ অনুযায়ী অবতীর্ণ হয় (`turath:8473`, page: 2912).\n\n---",
-      "shane_nuzul_covers": null
+      "shane_nuzul_covers": null,
+      "verse_meta": null,
+      "bahouth_words": null,
+      "topics": null,
+      "qiraat_annotations": null
     },
     {
       "surah": 83,
@@ -677,7 +834,33 @@
       "irab": "",
       "irab_covers": null,
       "shane_nuzul": "*[উৎস: আয়াত ১–৩৬-এর রুকুভিত্তিক সামগ্রিক আলোচনা]*\n\nএই রুকুর আয়াতসমূহ সংশ্লিষ্ট ঐতিহাসিক প্রেক্ষাপট ও সহীহ হাদীসের তাখরীজ অনুযায়ী অবতীর্ণ হয় (`turath:8473`, page: 2912).\n\n---",
-      "shane_nuzul_covers": null
+      "shane_nuzul_covers": null,
+      "verse_meta": null,
+      "bahouth_words": null,
+      "topics": null,
+      "qiraat_annotations": [
+        {
+          "word_id": 75839,
+          "word_order_in_verse": 2,
+          "position": 2,
+          "text_id": 1,
+          "raw_text": "@السوسي عن أبي عمرو/قرأ بالإدغام الكبير.@باقي الرواة/قرؤوا بالإظهار."
+        },
+        {
+          "word_id": 75843,
+          "word_order_in_verse": 6,
+          "position": 2,
+          "text_id": 28,
+          "raw_text": "@ورش عن نافع/قرأ بالنقل وصلاً ووقفا.@خلف عن حمزة/قرأ بالسكت وعدمه وصلاً، ووقف بالسكت، والنقل، وتركهما.@خلاد عن حمزة/قرأ بترك السكت وصلاً، ووقف بالنقل والتحقيق.@باقي الرواة/قرؤوا بترك السكت مع تحقيق الهمزة وصلاً ووقفا."
+        },
+        {
+          "word_id": 75844,
+          "word_order_in_verse": 7,
+          "position": 2,
+          "text_id": 28,
+          "raw_text": "@ورش عن نافع/قرأ بالنقل وصلاً ووقفا.@خلف عن حمزة/قرأ بالسكت وعدمه وصلاً، ووقف بالسكت، والنقل، وتركهما.@خلاد عن حمزة/قرأ بترك السكت وصلاً، ووقف بالنقل والتحقيق.@باقي الرواة/قرؤوا بترك السكت مع تحقيق الهمزة وصلاً ووقفا."
+        }
+      ]
     },
     {
       "surah": 83,
@@ -790,7 +973,47 @@
       "irab": "",
       "irab_covers": null,
       "shane_nuzul": "*[উৎস: আয়াত ১–৩৬-এর রুকুভিত্তিক সামগ্রিক আলোচনা]*\n\nএই রুকুর আয়াতসমূহ সংশ্লিষ্ট ঐতিহাসিক প্রেক্ষাপট ও সহীহ হাদীসের তাখরীজ অনুযায়ী অবতীর্ণ হয় (`turath:8473`, page: 2912).\n\n---",
-      "shane_nuzul_covers": null
+      "shane_nuzul_covers": null,
+      "verse_meta": null,
+      "bahouth_words": null,
+      "topics": null,
+      "qiraat_annotations": [
+        {
+          "word_id": 75846,
+          "word_order_in_verse": 2,
+          "position": 1,
+          "text_id": 37,
+          "raw_text": "@ورش عن نافع/قرأ بالتقليل بخلف عنه.@حمزة وَالكسائي وَخلف العاشر/قرأ بالإمالة بلا خلاف عنه.@باقي الرواة/قرؤوا بترك الإمالة وصلاً ووقفا."
+        },
+        {
+          "word_id": 75847,
+          "word_order_in_verse": 3,
+          "position": 2,
+          "text_id": 39,
+          "raw_text": "@ابن كثير/قرأ بصلة هاء الضمير خلافا لجمهور القراء.@باقي الرواة/قرؤوا بترك الصلة مع قصر الهاء."
+        },
+        {
+          "word_id": 75848,
+          "word_order_in_verse": 4,
+          "position": 1,
+          "text_id": 24,
+          "raw_text": "@ورش عن نافع/قرأ بتثليث مد البدل.@باقي الرواة/قرؤوا بقصر مد البدل."
+        },
+        {
+          "word_id": 75850,
+          "word_order_in_verse": 6,
+          "position": 1,
+          "text_id": 38,
+          "raw_text": "@ورش عن نافع/قرأ بترقيق الراء في الحالين.@باقي الرواة/قرؤوا بتفخيم الراء."
+        },
+        {
+          "word_id": 75851,
+          "word_order_in_verse": 7,
+          "position": 1,
+          "text_id": 31,
+          "raw_text": "@ورش عن نافع/قرأ بالنقل مع ترك السكت.@خلف عن حمزة/قرأ بالسكت وصلاً، ووقف بالسكت والنقل.@خلاد عن حمزة/قرأ بالسكت وعدمه وصلاً، ووقف بالسكت والنقل.@باقي الرواة/قرؤوا بترك السكت مع تحقيق الهمزة وصلاً ووقفا."
+        }
+      ]
     },
     {
       "surah": 83,
@@ -859,7 +1082,33 @@
       "irab": "",
       "irab_covers": null,
       "shane_nuzul": "*[উৎস: আয়াত ১–৩৬-এর রুকুভিত্তিক সামগ্রিক আলোচনা]*\n\nএই রুকুর আয়াতসমূহ সংশ্লিষ্ট ঐতিহাসিক প্রেক্ষাপট ও সহীহ হাদীসের তাখরীজ অনুযায়ী অবতীর্ণ হয় (`turath:8473`, page: 2912).\n\n---",
-      "shane_nuzul_covers": null
+      "shane_nuzul_covers": null,
+      "verse_meta": null,
+      "bahouth_words": null,
+      "topics": null,
+      "qiraat_annotations": [
+        {
+          "word_id": 75853,
+          "word_order_in_verse": 2,
+          "position": 2,
+          "text_id": 1076,
+          "raw_text": "@حفص عن عاصم/قرأ بسكته لطيفة على الكلمة، بلا نفس، بلا خلاف.@باقي الرواة/قرؤوا بترك السكت على الأصل."
+        },
+        {
+          "word_id": 75854,
+          "word_order_in_verse": 3,
+          "position": 1,
+          "text_id": 1957,
+          "raw_text": "@شعبة عن عاصم وَحمزة وَالكسائي وَخلف العاشر/قرأ بالإمالة بلا خلاف عنه.@باقي الرواة/قرؤوا بالفتح بلا خلاف عنه."
+        },
+        {
+          "word_id": 75856,
+          "word_order_in_verse": 5,
+          "position": 2,
+          "text_id": 7,
+          "raw_text": "@قالون عن نافع/قرأ بصلة ميم الجمع وصلاً بخلف عنه.@أبو جعفر وَابن كثير/قرأ بصلة ميم الجمع وصلا.@باقي الرواة/قرؤوا بترك صلة ميم الجمع."
+        }
+      ]
     },
     {
       "surah": 83,
@@ -934,7 +1183,33 @@
       "irab": "",
       "irab_covers": null,
       "shane_nuzul": "*[উৎস: আয়াত ১–৩৬-এর রুকুভিত্তিক সামগ্রিক আলোচনা]*\n\nএই রুকুর আয়াতসমূহ সংশ্লিষ্ট ঐতিহাসিক প্রেক্ষাপট ও সহীহ হাদীসের তাখরীজ অনুযায়ী অবতীর্ণ হয় (`turath:8473`, page: 2912).\n\n---",
-      "shane_nuzul_covers": null
+      "shane_nuzul_covers": null,
+      "verse_meta": null,
+      "bahouth_words": null,
+      "topics": null,
+      "qiraat_annotations": [
+        {
+          "word_id": 75861,
+          "word_order_in_verse": 2,
+          "position": 2,
+          "text_id": 7,
+          "raw_text": "@قالون عن نافع/قرأ بصلة ميم الجمع وصلاً بخلف عنه.@أبو جعفر وَابن كثير/قرأ بصلة ميم الجمع وصلا.@باقي الرواة/قرؤوا بترك صلة ميم الجمع."
+        },
+        {
+          "word_id": 75863,
+          "word_order_in_verse": 4,
+          "position": 2,
+          "text_id": 7,
+          "raw_text": "@قالون عن نافع/قرأ بصلة ميم الجمع وصلاً بخلف عنه.@أبو جعفر وَابن كثير/قرأ بصلة ميم الجمع وصلا.@باقي الرواة/قرؤوا بترك صلة ميم الجمع."
+        },
+        {
+          "word_id": 75864,
+          "word_order_in_verse": 5,
+          "position": 1,
+          "text_id": 66,
+          "raw_text": "@حمزة/قرأ بتحقيق الهمزة وصلاً، ووقف بتسهيل الهمزة.@باقي الرواة/قرؤوا بتحقيق الهمزة وصلاً ووقفا."
+        }
+      ]
     },
     {
       "surah": 83,
@@ -979,7 +1254,19 @@
       "irab": "",
       "irab_covers": null,
       "shane_nuzul": "*[উৎস: আয়াত ১–৩৬-এর রুকুভিত্তিক সামগ্রিক আলোচনা]*\n\nএই রুকুর আয়াতসমূহ সংশ্লিষ্ট ঐতিহাসিক প্রেক্ষাপট ও সহীহ হাদীসের তাখরীজ অনুযায়ী অবতীর্ণ হয় (`turath:8473`, page: 2912).\n\n---",
-      "shane_nuzul_covers": null
+      "shane_nuzul_covers": null,
+      "verse_meta": null,
+      "bahouth_words": null,
+      "topics": null,
+      "qiraat_annotations": [
+        {
+          "word_id": 75867,
+          "word_order_in_verse": 2,
+          "position": 2,
+          "text_id": 7,
+          "raw_text": "@قالون عن نافع/قرأ بصلة ميم الجمع وصلاً بخلف عنه.@أبو جعفر وَابن كثير/قرأ بصلة ميم الجمع وصلا.@باقي الرواة/قرؤوا بترك صلة ميم الجمع."
+        }
+      ]
     },
     {
       "surah": 83,
@@ -1024,7 +1311,19 @@
       "irab": "",
       "irab_covers": null,
       "shane_nuzul": "*[উৎস: আয়াত ১–৩৬-এর রুকুভিত্তিক সামগ্রিক আলোচনা]*\n\nএই রুকুর আয়াতসমূহ সংশ্লিষ্ট ঐতিহাসিক প্রেক্ষাপট ও সহীহ হাদীসের তাখরীজ অনুযায়ী অবতীর্ণ হয় (`turath:8473`, page: 2912).\n\n---",
-      "shane_nuzul_covers": null
+      "shane_nuzul_covers": null,
+      "verse_meta": null,
+      "bahouth_words": null,
+      "topics": null,
+      "qiraat_annotations": [
+        {
+          "word_id": 75874,
+          "word_order_in_verse": 5,
+          "position": 2,
+          "text_id": 7,
+          "raw_text": "@قالون عن نافع/قرأ بصلة ميم الجمع وصلاً بخلف عنه.@أبو جعفر وَابن كثير/قرأ بصلة ميم الجمع وصلا.@باقي الرواة/قرؤوا بترك صلة ميم الجمع."
+        }
+      ]
     },
     {
       "surah": 83,
@@ -1093,7 +1392,26 @@
       "irab": "",
       "irab_covers": null,
       "shane_nuzul": "*[উৎস: আয়াত ১–৩৬-এর রুকুভিত্তিক সামগ্রিক আলোচনা]*\n\nএই রুকুর আয়াতসমূহ সংশ্লিষ্ট ঐতিহাসিক প্রেক্ষাপট ও সহীহ হাদীসের তাখরীজ অনুযায়ী অবতীর্ণ হয় (`turath:8473`, page: 2912).\n\n---",
-      "shane_nuzul_covers": null
+      "shane_nuzul_covers": null,
+      "verse_meta": null,
+      "bahouth_words": null,
+      "topics": null,
+      "qiraat_annotations": [
+        {
+          "word_id": 75880,
+          "word_order_in_verse": 4,
+          "position": 1,
+          "text_id": 416,
+          "raw_text": "@ورش عن نافع/قرأ بالنقل، مع التقليل بلا خلاف.@أبو عمرو وَالكسائي وَخلف العاشر/قرأ بالإمالة في الحالين، مع تحقيق الهمزة.@خلف عن حمزة/قرأ بالتقليل، مع السكت، ووقف بالسكت والنقل.@خلاد عن حمزة/قرأ بالتقليل، مع السكت وعدمه، ووقف بالسكت والنقل.@باقي الرواة/قرؤوا بتحقيق الهمزة، مع الفتح وترك السكت."
+        },
+        {
+          "word_id": 75880,
+          "word_order_in_verse": 4,
+          "position": 2,
+          "text_id": 1,
+          "raw_text": "@السوسي عن أبي عمرو/قرأ بالإدغام الكبير.@باقي الرواة/قرؤوا بالإظهار."
+        }
+      ]
     },
     {
       "surah": 83,
@@ -1144,7 +1462,19 @@
       "irab": "",
       "irab_covers": null,
       "shane_nuzul": "*[উৎস: আয়াত ১–৩৬-এর রুকুভিত্তিক সামগ্রিক আলোচনা]*\n\nএই রুকুর আয়াতসমূহ সংশ্লিষ্ট ঐতিহাসিক প্রেক্ষাপট ও সহীহ হাদীসের তাখরীজ অনুযায়ী অবতীর্ণ হয় (`turath:8473`, page: 2912).\n\n---",
-      "shane_nuzul_covers": null
+      "shane_nuzul_covers": null,
+      "verse_meta": null,
+      "bahouth_words": null,
+      "topics": null,
+      "qiraat_annotations": [
+        {
+          "word_id": 75884,
+          "word_order_in_verse": 2,
+          "position": 1,
+          "text_id": 1866,
+          "raw_text": "@ورش عن نافع/قرأ بالتقليل بلا خلاف عنه.@أبو عمرو وَشعبة عن عاصم وَحمزة وَالكسائي وَخلف العاشر/قرأ بالإمالة بلا خلاف عنه.@ابن ذكوان عن ابن عامر/قرأ بالإمالة بخلف عنه.@باقي الرواة/قرؤوا بالفتح بلا خلاف عنه."
+        }
+      ]
     },
     {
       "surah": 83,
@@ -1183,7 +1513,19 @@
       "irab": "",
       "irab_covers": null,
       "shane_nuzul": "*[উৎস: আয়াত ১–৩৬-এর রুকুভিত্তিক সামগ্রিক আলোচনা]*\n\nএই রুকুর আয়াতসমূহ সংশ্লিষ্ট ঐতিহাসিক প্রেক্ষাপট ও সহীহ হাদীসের তাখরীজ অনুযায়ী অবতীর্ণ হয় (`turath:8473`, page: 2912).\n\n---",
-      "shane_nuzul_covers": null
+      "shane_nuzul_covers": null,
+      "verse_meta": null,
+      "bahouth_words": null,
+      "topics": null,
+      "qiraat_annotations": [
+        {
+          "word_id": 75888,
+          "word_order_in_verse": 2,
+          "position": 2,
+          "text_id": 22,
+          "raw_text": "@خلف عن حمزة/قرأ بالإدغام مع ترك الغنة.@باقي الرواة/قرؤوا بالإدغام مع الغنة."
+        }
+      ]
     },
     {
       "surah": 83,
@@ -1209,7 +1551,11 @@
       "irab": "",
       "irab_covers": null,
       "shane_nuzul": "*[উৎস: আয়াত ১–৩৬-এর রুকুভিত্তিক সামগ্রিক আলোচনা]*\n\nএই রুকুর আয়াতসমূহ সংশ্লিষ্ট ঐতিহাসিক প্রেক্ষাপট ও সহীহ হাদীসের তাখরীজ অনুযায়ী অবতীর্ণ হয় (`turath:8473`, page: 2912).\n\n---",
-      "shane_nuzul_covers": null
+      "shane_nuzul_covers": null,
+      "verse_meta": null,
+      "bahouth_words": null,
+      "topics": null,
+      "qiraat_annotations": null
     },
     {
       "surah": 83,
@@ -1260,7 +1606,19 @@
       "irab": "",
       "irab_covers": null,
       "shane_nuzul": "*[উৎস: আয়াত ১–৩৬-এর রুকুভিত্তিক সামগ্রিক আলোচনা]*\n\nএই রুকুর আয়াতসমূহ সংশ্লিষ্ট ঐতিহাসিক প্রেক্ষাপট ও সহীহ হাদীসের তাখরীজ অনুযায়ী অবতীর্ণ হয় (`turath:8473`, page: 2912).\n\n---",
-      "shane_nuzul_covers": null
+      "shane_nuzul_covers": null,
+      "verse_meta": null,
+      "bahouth_words": null,
+      "topics": null,
+      "qiraat_annotations": [
+        {
+          "word_id": 75892,
+          "word_order_in_verse": 2,
+          "position": 1,
+          "text_id": 31,
+          "raw_text": "@ورش عن نافع/قرأ بالنقل مع ترك السكت.@خلف عن حمزة/قرأ بالسكت وصلاً، ووقف بالسكت والنقل.@خلاد عن حمزة/قرأ بالسكت وعدمه وصلاً، ووقف بالسكت والنقل.@باقي الرواة/قرؤوا بترك السكت مع تحقيق الهمزة وصلاً ووقفا."
+        }
+      ]
     },
     {
       "surah": 83,
@@ -1311,7 +1669,19 @@
       "irab": "",
       "irab_covers": null,
       "shane_nuzul": "*[উৎস: আয়াত ১–৩৬-এর রুকুভিত্তিক সামগ্রিক আলোচনা]*\n\nএই রুকুর আয়াতসমূহ সংশ্লিষ্ট ঐতিহাসিক প্রেক্ষাপট ও সহীহ হাদীসের তাখরীজ অনুযায়ী অবতীর্ণ হয় (`turath:8473`, page: 2912).\n\n---",
-      "shane_nuzul_covers": null
+      "shane_nuzul_covers": null,
+      "verse_meta": null,
+      "bahouth_words": null,
+      "topics": null,
+      "qiraat_annotations": [
+        {
+          "word_id": 75896,
+          "word_order_in_verse": 2,
+          "position": 1,
+          "text_id": 1086,
+          "raw_text": "@ورش عن نافع/قرأ بالنقل مع ترك السكت.@خلف عن حمزة/قرأ بالسكت على (أل)، ووقف بالسكت والنقل، وله في الثانية التسهيل مع المد والقصر.@خلاد عن حمزة/قرأ بالسكت وعدمه على (أل)، ووقف بالسكت والنقل، وله في الثانية التسهيل مع المد والقصر.@باقي الرواة/قرؤوا بترك السكت مع تحقيق الهمزة وصلاً ووقفا."
+        }
+      ]
     },
     {
       "surah": 83,
@@ -1398,7 +1768,40 @@
       "irab": "",
       "irab_covers": null,
       "shane_nuzul": "*[উৎস: আয়াত ১–৩৬-এর রুকুভিত্তিক সামগ্রিক আলোচনা]*\n\nএই রুকুর আয়াতসমূহ সংশ্লিষ্ট ঐতিহাসিক প্রেক্ষাপট ও সহীহ হাদীসের তাখরীজ অনুযায়ী অবতীর্ণ হয় (`turath:8473`, page: 2912).\n\n---",
-      "shane_nuzul_covers": null
+      "shane_nuzul_covers": null,
+      "verse_meta": null,
+      "bahouth_words": null,
+      "topics": null,
+      "qiraat_annotations": [
+        {
+          "word_id": 75898,
+          "word_order_in_verse": 1,
+          "position": 1,
+          "text_id": 1958,
+          "raw_text": "@أبو جعفر وَيعقوب/قرأ بضم التاء، وفتح الراء.@باقي الرواة/قرؤوا بفتح التاء، وكسر الراء."
+        },
+        {
+          "word_id": 75898,
+          "word_order_in_verse": 1,
+          "position": 2,
+          "text_id": 1,
+          "raw_text": "@السوسي عن أبي عمرو/قرأ بالإدغام الكبير.@باقي الرواة/قرؤوا بالإظهار."
+        },
+        {
+          "word_id": 75900,
+          "word_order_in_verse": 3,
+          "position": 2,
+          "text_id": 7,
+          "raw_text": "@قالون عن نافع/قرأ بصلة ميم الجمع وصلاً بخلف عنه.@أبو جعفر وَابن كثير/قرأ بصلة ميم الجمع وصلا.@باقي الرواة/قرؤوا بترك صلة ميم الجمع."
+        },
+        {
+          "word_id": 75901,
+          "word_order_in_verse": 4,
+          "position": 1,
+          "text_id": 1959,
+          "raw_text": "@أبو جعفر وَيعقوب/قرأ بالرفع، مع فتح هاء التأنيث وقفا.@الكسائي/قرأ بالنصب، مع إمالة هاء التأنيث وقفاً بخلف عنه.@باقي الرواة/قرؤوا بالنصب، مع فتح هاء التأنيث وقفا."
+        }
+      ]
     },
     {
       "surah": 83,
@@ -1437,7 +1840,19 @@
       "irab": "",
       "irab_covers": null,
       "shane_nuzul": "*[উৎস: আয়াত ১–৩৬-এর রুকুভিত্তিক সামগ্রিক আলোচনা]*\n\nএই রুকুর আয়াতসমূহ সংশ্লিষ্ট ঐতিহাসিক প্রেক্ষাপট ও সহীহ হাদীসের তাখরীজ অনুযায়ী অবতীর্ণ হয় (`turath:8473`, page: 2912).\n\n---",
-      "shane_nuzul_covers": null
+      "shane_nuzul_covers": null,
+      "verse_meta": null,
+      "bahouth_words": null,
+      "topics": null,
+      "qiraat_annotations": [
+        {
+          "word_id": 75906,
+          "word_order_in_verse": 4,
+          "position": 2,
+          "text_id": 94,
+          "raw_text": "@أبو جعفر/قرأ بالإخفاء عند الغين والخاء مع الغنة.@باقي الرواة/قرؤوا بالإظهار مع ترك الغنة."
+        }
+      ]
     },
     {
       "surah": 83,
@@ -1488,7 +1903,26 @@
       "irab": "",
       "irab_covers": null,
       "shane_nuzul": "*[উৎস: আয়াত ১–৩৬-এর রুকুভিত্তিক সামগ্রিক আলোচনা]*\n\nএই রুকুর আয়াতসমূহ সংশ্লিষ্ট ঐতিহাসিক প্রেক্ষাপট ও সহীহ হাদীসের তাখরীজ অনুযায়ী অবতীর্ণ হয় (`turath:8473`, page: 2912).\n\n---",
-      "shane_nuzul_covers": null
+      "shane_nuzul_covers": null,
+      "verse_meta": null,
+      "bahouth_words": null,
+      "topics": null,
+      "qiraat_annotations": [
+        {
+          "word_id": 75907,
+          "word_order_in_verse": 1,
+          "position": 1,
+          "text_id": 1960,
+          "raw_text": "@الكسائي/قرأ بفتح الخاء، وبعدها ألف، ثم تاء مفتوحة.@باقي الرواة/قرؤوا بكسر الخاء، وبعدها تاء مفتوحة، وألف بعدها."
+        },
+        {
+          "word_id": 75908,
+          "word_order_in_verse": 2,
+          "position": 2,
+          "text_id": 22,
+          "raw_text": "@خلف عن حمزة/قرأ بالإدغام مع ترك الغنة.@باقي الرواة/قرؤوا بالإدغام مع الغنة."
+        }
+      ]
     },
     {
       "surah": 83,
@@ -1514,7 +1948,11 @@
       "irab": "",
       "irab_covers": null,
       "shane_nuzul": "*[উৎস: আয়াত ১–৩৬-এর রুকুভিত্তিক সামগ্রিক আলোচনা]*\n\nএই রুকুর আয়াতসমূহ সংশ্লিষ্ট ঐতিহাসিক প্রেক্ষাপট ও সহীহ হাদীসের তাখরীজ অনুযায়ী অবতীর্ণ হয় (`turath:8473`, page: 2912).\n\n---",
-      "shane_nuzul_covers": null
+      "shane_nuzul_covers": null,
+      "verse_meta": null,
+      "bahouth_words": null,
+      "topics": null,
+      "qiraat_annotations": null
     },
     {
       "surah": 83,
@@ -1565,7 +2003,26 @@
       "irab": "",
       "irab_covers": null,
       "shane_nuzul": "*[উৎস: আয়াত ১–৩৬-এর রুকুভিত্তিক সামগ্রিক আলোচনা]*\n\nএই রুকুর আয়াতসমূহ সংশ্লিষ্ট ঐতিহাসিক প্রেক্ষাপট ও সহীহ হাদীসের তাখরীজ অনুযায়ী অবতীর্ণ হয় (`turath:8473`, page: 2912).\n\n---",
-      "shane_nuzul_covers": null
+      "shane_nuzul_covers": null,
+      "verse_meta": null,
+      "bahouth_words": null,
+      "topics": null,
+      "qiraat_annotations": [
+        {
+          "word_id": 75916,
+          "word_order_in_verse": 1,
+          "position": 2,
+          "text_id": 22,
+          "raw_text": "@خلف عن حمزة/قرأ بالإدغام مع ترك الغنة.@باقي الرواة/قرؤوا بالإدغام مع الغنة."
+        },
+        {
+          "word_id": 75917,
+          "word_order_in_verse": 2,
+          "position": 2,
+          "text_id": 1,
+          "raw_text": "@السوسي عن أبي عمرو/قرأ بالإدغام الكبير.@باقي الرواة/قرؤوا بالإظهار."
+        }
+      ]
     },
     {
       "surah": 83,
@@ -1612,7 +2069,19 @@
       "irab": "",
       "irab_covers": null,
       "shane_nuzul": "*[উৎস: আয়াত ১–৩৬-এর রুকুভিত্তিক সামগ্রিক আলোচনা]*\n\nএই রুকুর আয়াতসমূহ সংশ্লিষ্ট ঐতিহাসিক প্রেক্ষাপট ও সহীহ হাদীসের তাখরীজ অনুযায়ী অবতীর্ণ হয় (`turath:8473`, page: 2912).\n\n---",
-      "shane_nuzul_covers": null
+      "shane_nuzul_covers": null,
+      "verse_meta": null,
+      "bahouth_words": null,
+      "topics": null,
+      "qiraat_annotations": [
+        {
+          "word_id": 75926,
+          "word_order_in_verse": 7,
+          "position": 1,
+          "text_id": 24,
+          "raw_text": "@ورش عن نافع/قرأ بتثليث مد البدل.@باقي الرواة/قرؤوا بقصر مد البدل."
+        }
+      ]
     },
     {
       "surah": 83,
@@ -1677,7 +2146,26 @@
       "irab": "",
       "irab_covers": null,
       "shane_nuzul": "*[উৎস: আয়াত ১–৩৬-এর রুকুভিত্তিক সামগ্রিক আলোচনা]*\n\nএই রুকুর আয়াতসমূহ সংশ্লিষ্ট ঐতিহাসিক প্রেক্ষাপট ও সহীহ হাদীসের তাখরীজ অনুযায়ী অবতীর্ণ হয় (`turath:8473`, page: 2912).\n\n---",
-      "shane_nuzul_covers": null
+      "shane_nuzul_covers": null,
+      "verse_meta": null,
+      "bahouth_words": null,
+      "topics": null,
+      "qiraat_annotations": [
+        {
+          "word_id": 75928,
+          "word_order_in_verse": 1,
+          "position": 1,
+          "text_id": 3,
+          "raw_text": "@حمزة/قرأ بتحقيق الهمزة وصلاً، ووقف بتسهيل وتحقيق الهمزة.@باقي الرواة/قرؤوا بتحقيق الهمزة وصلاً ووقفا."
+        },
+        {
+          "word_id": 75930,
+          "word_order_in_verse": 3,
+          "position": 2,
+          "text_id": 7,
+          "raw_text": "@قالون عن نافع/قرأ بصلة ميم الجمع وصلاً بخلف عنه.@أبو جعفر وَابن كثير/قرأ بصلة ميم الجمع وصلا.@باقي الرواة/قرؤوا بترك صلة ميم الجمع."
+        }
+      ]
     },
     {
       "surah": 83,
@@ -1754,7 +2242,33 @@
       "irab": "",
       "irab_covers": null,
       "shane_nuzul": "*[উৎস: আয়াত ১–৩৬-এর রুকুভিত্তিক সামগ্রিক আলোচনা]*\n\nএই রুকুর আয়াতসমূহ সংশ্লিষ্ট ঐতিহাসিক প্রেক্ষাপট ও সহীহ হাদীসের তাখরীজ অনুযায়ী অবতীর্ণ হয় (`turath:8473`, page: 2912).\n\n---",
-      "shane_nuzul_covers": null
+      "shane_nuzul_covers": null,
+      "verse_meta": null,
+      "bahouth_words": null,
+      "topics": null,
+      "qiraat_annotations": [
+        {
+          "word_id": 75932,
+          "word_order_in_verse": 1,
+          "position": 1,
+          "text_id": 3,
+          "raw_text": "@حمزة/قرأ بتحقيق الهمزة وصلاً، ووقف بتسهيل وتحقيق الهمزة.@باقي الرواة/قرؤوا بتحقيق الهمزة وصلاً ووقفا."
+        },
+        {
+          "word_id": 75935,
+          "word_order_in_verse": 4,
+          "position": 2,
+          "text_id": 127,
+          "raw_text": "@أبو عمرو وَيعقوب/قرأ بكسر الهاء والميم وصلاً، وبكسر الهاء وإسكان الميم وقفا.@حمزة وَالكسائي وَخلف العاشر/قرأ بضم الهاء والميم وصلاً، وبكسر الهاء وإسكان الميم وقفا.@باقي الرواة/قرؤوا بكسر الهاء وضم الميم وصلاً، وبكسر الهاء وإسكان الميم وقفا."
+        },
+        {
+          "word_id": 75937,
+          "word_order_in_verse": 6,
+          "position": 1,
+          "text_id": 1961,
+          "raw_text": "@أبو جعفر وَحفص عن عاصم/قرأ بحذف الألف بعد الفاء.@باقي الرواة/قرؤوا بالألف بعد الفاء."
+        }
+      ]
     },
     {
       "surah": 83,
@@ -1849,7 +2363,40 @@
       "irab": "",
       "irab_covers": null,
       "shane_nuzul": "*[উৎস: আয়াত ১–৩৬-এর রুকুভিত্তিক সামগ্রিক আলোচনা]*\n\nএই রুকুর আয়াতসমূহ সংশ্লিষ্ট ঐতিহাসিক প্রেক্ষাপট ও সহীহ হাদীসের তাখরীজ অনুযায়ী অবতীর্ণ হয় (`turath:8473`, page: 2912).\n\n---",
-      "shane_nuzul_covers": null
+      "shane_nuzul_covers": null,
+      "verse_meta": null,
+      "bahouth_words": null,
+      "topics": null,
+      "qiraat_annotations": [
+        {
+          "word_id": 75938,
+          "word_order_in_verse": 1,
+          "position": 1,
+          "text_id": 3,
+          "raw_text": "@حمزة/قرأ بتحقيق الهمزة وصلاً، ووقف بتسهيل وتحقيق الهمزة.@باقي الرواة/قرؤوا بتحقيق الهمزة وصلاً ووقفا."
+        },
+        {
+          "word_id": 75939,
+          "word_order_in_verse": 2,
+          "position": 1,
+          "text_id": 66,
+          "raw_text": "@حمزة/قرأ بتحقيق الهمزة وصلاً، ووقف بتسهيل الهمزة.@باقي الرواة/قرؤوا بتحقيق الهمزة وصلاً ووقفا."
+        },
+        {
+          "word_id": 75939,
+          "word_order_in_verse": 2,
+          "position": 2,
+          "text_id": 7,
+          "raw_text": "@قالون عن نافع/قرأ بصلة ميم الجمع وصلاً بخلف عنه.@أبو جعفر وَابن كثير/قرأ بصلة ميم الجمع وصلا.@باقي الرواة/قرؤوا بترك صلة ميم الجمع."
+        },
+        {
+          "word_id": 75942,
+          "word_order_in_verse": 5,
+          "position": 1,
+          "text_id": 61,
+          "raw_text": "@هشام عن ابن عامر/قرأ بتحقيق الهمزتين وصلاً، ووقف بتحقيق الهمزة الأولى، وله في الثانية الإبدال مع القصر والتوسط والطول، وتسهيل الهمزة بالروم على المد والقصر.@حمزة/قرأ بتحقيق الهمزتين وصلاً، وله حال الوقف تحقيق وتسهيل الأولى مع المد والقصر، وله في المتطرفة: الإبدال مع القصر والتوسط والمد، وتسهيلها بالروم مع المد والقصر مع كل الوجوه السابقة ويمتنع حال التسهيل المد في الألف الأولى مع قصر الثانية وبالعكس.@باقي الرواة/قرؤوا بتحقيق الهمزتين وصلاً ووقفا."
+        }
+      ]
     },
     {
       "surah": 83,
@@ -1906,7 +2453,26 @@
       "irab": "",
       "irab_covers": null,
       "shane_nuzul": "*[উৎস: আয়াত ১–৩৬-এর রুকুভিত্তিক সামগ্রিক আলোচনা]*\n\nএই রুকুর আয়াতসমূহ সংশ্লিষ্ট ঐতিহাসিক প্রেক্ষাপট ও সহীহ হাদীসের তাখরীজ অনুযায়ী অবতীর্ণ হয় (`turath:8473`, page: 2912).\n\n---",
-      "shane_nuzul_covers": null
+      "shane_nuzul_covers": null,
+      "verse_meta": null,
+      "bahouth_words": null,
+      "topics": null,
+      "qiraat_annotations": [
+        {
+          "word_id": 75946,
+          "word_order_in_verse": 3,
+          "position": 1,
+          "text_id": 6,
+          "raw_text": "@يعقوب وَحمزة/قرأ بضم هاء الضمير وصلاً ووقفا.@باقي الرواة/قرؤوا بكسر هاء الضمير وصلاً ووقفا."
+        },
+        {
+          "word_id": 75946,
+          "word_order_in_verse": 3,
+          "position": 2,
+          "text_id": 7,
+          "raw_text": "@قالون عن نافع/قرأ بصلة ميم الجمع وصلاً بخلف عنه.@أبو جعفر وَابن كثير/قرأ بصلة ميم الجمع وصلا.@باقي الرواة/قرؤوا بترك صلة ميم الجمع."
+        }
+      ]
     },
     {
       "surah": 83,
@@ -1971,7 +2537,26 @@
       "irab": "",
       "irab_covers": null,
       "shane_nuzul": "*[উৎস: আয়াত ১–৩৬-এর রুকুভিত্তিক সামগ্রিক আলোচনা]*\n\nএই রুকুর আয়াতসমূহ সংশ্লিষ্ট ঐতিহাসিক প্রেক্ষাপট ও সহীহ হাদীসের তাখরীজ অনুযায়ী অবতীর্ণ হয় (`turath:8473`, page: 2912).\n\n---",
-      "shane_nuzul_covers": null
+      "shane_nuzul_covers": null,
+      "verse_meta": null,
+      "bahouth_words": null,
+      "topics": null,
+      "qiraat_annotations": [
+        {
+          "word_id": 75950,
+          "word_order_in_verse": 3,
+          "position": 1,
+          "text_id": 24,
+          "raw_text": "@ورش عن نافع/قرأ بتثليث مد البدل.@باقي الرواة/قرؤوا بقصر مد البدل."
+        },
+        {
+          "word_id": 75952,
+          "word_order_in_verse": 5,
+          "position": 1,
+          "text_id": 20,
+          "raw_text": "@ورش عن نافع/قرأ بالتقليل بلا خلاف عنه.@أبو عمرو وَالدوري عن الكسائي/قرأ بالإمالة وصلاً ووقفا.@باقي الرواة/قرؤوا بالفتح بلا خلاف."
+        }
+      ]
     },
     {
       "surah": 83,
@@ -2022,7 +2607,19 @@
       "irab": "",
       "irab_covers": null,
       "shane_nuzul": "*[উৎস: আয়াত ১–৩৬-এর রুকুভিত্তিক সামগ্রিক আলোচনা]*\n\nএই রুকুর আয়াতসমূহ সংশ্লিষ্ট ঐতিহাসিক প্রেক্ষাপট ও সহীহ হাদীসের তাখরীজ অনুযায়ী অবতীর্ণ হয় (`turath:8473`, page: 2912).\n\n---",
-      "shane_nuzul_covers": null
+      "shane_nuzul_covers": null,
+      "verse_meta": null,
+      "bahouth_words": null,
+      "topics": null,
+      "qiraat_annotations": [
+        {
+          "word_id": 75955,
+          "word_order_in_verse": 2,
+          "position": 1,
+          "text_id": 1086,
+          "raw_text": "@ورش عن نافع/قرأ بالنقل مع ترك السكت.@خلف عن حمزة/قرأ بالسكت على (أل)، ووقف بالسكت والنقل، وله في الثانية التسهيل مع المد والقصر.@خلاد عن حمزة/قرأ بالسكت وعدمه على (أل)، ووقف بالسكت والنقل، وله في الثانية التسهيل مع المد والقصر.@باقي الرواة/قرؤوا بترك السكت مع تحقيق الهمزة وصلاً ووقفا."
+        }
+      ]
     },
     {
       "surah": 83,
@@ -2079,7 +2676,26 @@
       "irab": "",
       "irab_covers": null,
       "shane_nuzul": "*[উৎস: আয়াত ১–৩৬-এর রুকুভিত্তিক সামগ্রিক আলোচনা]*\n\nএই রুকুর আয়াতসমূহ সংশ্লিষ্ট ঐতিহাসিক প্রেক্ষাপট ও সহীহ হাদীসের তাখরীজ অনুযায়ী অবতীর্ণ হয় (`turath:8473`, page: 2912).\n\n---",
-      "shane_nuzul_covers": null
+      "shane_nuzul_covers": null,
+      "verse_meta": null,
+      "bahouth_words": null,
+      "topics": null,
+      "qiraat_annotations": [
+        {
+          "word_id": 75957,
+          "word_order_in_verse": 1,
+          "position": 2,
+          "text_id": 1962,
+          "raw_text": "@هشام عن ابن عامر وَحمزة وَالكسائي/أدغم اللام في الثاء.@باقي الرواة/أظهر اللام عند الثاء."
+        },
+        {
+          "word_id": 75962,
+          "word_order_in_verse": 6,
+          "position": 3,
+          "text_id": 8,
+          "raw_text": "@ورش عن نافع وَأبو عمرو وَيعقوب وَابن عامر/فصل بين السورتين بالبسملة، والوصل، والسكت، وله ما بين الآيات من أحكام الوصل.@حمزة وَخلف العاشر/قرأ بالوصل بين السورتين بلا بسملة، وله ما بين الآيات من أحكام الوصل.@باقي الرواة/فصل بالبسملة بين السورتين."
+        }
+      ]
     }
   ],
   "thematic_topics": {

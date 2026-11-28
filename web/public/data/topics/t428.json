@@ -1,0 +1,79 @@
+{
+  "schema_version": "1",
+  "topic_id": 428,
+  "count": 8,
+  "verses": [
+    {
+      "surah": 25,
+      "ayah": 15,
+      "verse_key": "25-15",
+      "text_raw": "قُلْ أَذَلِكَ خَيْرٌ أَمْ جَنَّةُ الْخُلْدِ الَّتِي وُعِدَ الْمُتَّقُونَ كَانَتْ لَهُمْ جَزَاءً وَمَصِيرًا",
+      "page_number": 361,
+      "word_count": 13,
+      "letter_count": 50
+    },
+    {
+      "surah": 26,
+      "ayah": 85,
+      "verse_key": "26-85",
+      "text_raw": "وَاجْعَلْنِي مِنْ وَرَثَةِ جَنَّةِ النَّعِيمِ",
+      "page_number": 371,
+      "word_count": 5,
+      "letter_count": 22
+    },
+    {
+      "surah": 53,
+      "ayah": 13,
+      "verse_key": "53-13",
+      "text_raw": "وَلَقَدْ رَآهُ نَزْلَةً أُخْرَى",
+      "page_number": 526,
+      "word_count": 4,
+      "letter_count": 15
+    },
+    {
+      "surah": 56,
+      "ayah": 88,
+      "verse_key": "56-88",
+      "text_raw": "فَأَمَّا إِنْ كَانَ مِنْ الْمُقَرَّبِينَ",
+      "page_number": 537,
+      "word_count": 5,
+      "letter_count": 19
+    },
+    {
+      "surah": 69,
+      "ayah": 21,
+      "verse_key": "69-21",
+      "text_raw": "فَهُوَ فِي عِيشَةٍ رَاضِيَةٍ",
+      "page_number": 567,
+      "word_count": 4,
+      "letter_count": 14
+    },
+    {
+      "surah": 70,
+      "ayah": 38,
+      "verse_key": "70-38",
+      "text_raw": "أَيَطْمَعُ كُلُّ امْرِئٍ مِنْهُمْ أَنْ يُدْخَلَ جَنَّةَ نَعِيمٍ",
+      "page_number": 569,
+      "word_count": 8,
+      "letter_count": 28
+    },
+    {
+      "surah": 79,
+      "ayah": 41,
+      "verse_key": "79-41",
+      "text_raw": "فَإِنَّ الْجَنَّةَ هِيَ الْمَأْوَى",
+      "page_number": 584,
+      "word_count": 4,
+      "letter_count": 16
+    },
+    {
+      "surah": 88,
+      "ayah": 8,
+      "verse_key": "88-8",
+      "text_raw": "وُجُوهٌ يَوْمَئِذٍ نَاعِمَةٌ",
+      "page_number": 592,
+      "word_count": 3,
+      "letter_count": 14
+    }
+  ]
+}

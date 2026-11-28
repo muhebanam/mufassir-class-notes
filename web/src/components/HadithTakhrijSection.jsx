@@ -177,17 +177,19 @@ export default function HadithTakhrijSection({
                   {/* Highlighted Bengali Narrative Riwayah Box */}
                   {h.narrativeMatn && (
                     <div 
-                      className="p-3.5 sm:p-4 rounded-xl bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-200/60 dark:border-emerald-900/40 font-bengali text-sm sm:text-base leading-relaxed text-gray-800 dark:text-gray-200 shadow-2xs" 
+                      className="p-3.5 sm:p-4 rounded-xl bg-teal-50/50 dark:bg-teal-950/20 border border-teal-200/60 dark:border-teal-900/40 font-bengali text-sm sm:text-base leading-relaxed text-gray-800 dark:text-gray-200 shadow-2xs" 
                       dir="ltr"
                     >
-                      <MarkdownContent content={h.narrativeMatn} className="[&_p]:mb-0" />
+                      <MarkdownContent content={h.narrativeMatn} className="[&_p]:mb-0 font-bengali" />
                     </div>
                   )}
 
                   {/* Main text & translation/context notes */}
-                  <div className="prose dark:prose-invert text-xs sm:text-sm text-gray-800 dark:text-gray-200 leading-relaxed">
-                    <MarkdownContent content={h.body || h.explanation || h.rawItem} />
-                  </div>
+                  {h.body && h.body.trim() !== (h.narrativeMatn || '').trim() && (
+                    <div className="prose dark:prose-invert text-xs sm:text-sm text-gray-800 dark:text-gray-200 leading-relaxed font-bengali">
+                      <MarkdownContent content={h.body} />
+                    </div>
+                  )}
 
                   {/* Hadith Metadata Grid */}
                   {(h.sourceBook || (h.sources && h.sources.length > 0) || h.takhrijNote || h.rawTakhrij) && (

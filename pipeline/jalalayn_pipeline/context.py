@@ -34,7 +34,7 @@ def select_sources(proj: Project, sid: int, rid: int, task: Task, caps: dict) ->
             picked.append(c)
         elif sk == "ruku-makasid-connections" and (b_roles & {"makasid", "topics"} or kind == "bahouth_topics"):
             picked.append(c)
-        elif sk == "ruku-ikhtilaf-ahkam" and (b_roles & {"fiqh", "fatwa"}) and covers(c, ruku_range):
+        elif sk == "ruku-ikhtilaf-ahkam" and (b_roles & {"fiqh", "fatwa", "aqidah", "contemporary", "makasid"}) and covers(c, ruku_range):
             picked.append(c)
         elif sk == "ruku-ulum-balaghat" and (b_roles & {"ulum", "balaghat"}) and covers(c, ruku_range):
             picked.append(c)
@@ -118,6 +118,7 @@ def build(proj: Project, sid: int, rid: int, task: Task, caps: dict, tasks: list
         qids_by_ayah=qids, author=author,
         strict_numbers=cfg.validation["strict_numbers"], min_quote_letters=cfg.validation["min_quote_letters"],
         reader_names=cfg["reader_names"],
+        a0=a0, a1=a1,
     )
     return messages, v, srcs
 

@@ -104,7 +104,8 @@ def audit_ruku(proj: Project, sid: int, rid: int) -> dict:
     v = VCtx(sid=sid, ayat_text={a: q.verse(sid, a) for a in ayat}, quran=q, corpus_sk=[skeleton(t) for t in texts],
              allowed_ids=set(caps), id_roles={}, source_numbers=nums | {str(a) for a in ayat}, qids_by_ayah={},
              author=jalalayn_author(sid), strict_numbers=proj.cfg.validation["strict_numbers"],
-             min_quote_letters=proj.cfg.validation["min_quote_letters"])
+             min_quote_letters=proj.cfg.validation["min_quote_letters"],
+             a0=min(ayat), a1=max(ayat))
     for n in (0, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15):
         body = secs.get(n, "")
         errors += [f"QUOTE(§{n}): {e}" for e in check_quotes(body, v)]

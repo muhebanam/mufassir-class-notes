@@ -1,0 +1,25 @@
+{
+  "schema_version": "1",
+  "topic_id": 4570,
+  "count": 2,
+  "verses": [
+    {
+      "surah": 25,
+      "ayah": 26,
+      "verse_key": "25-26",
+      "text_raw": "الْمُلْكُ يَوْمَئِذٍ الْحَقُّ لِلرَّحْمَنِ وَكَانَ يَوْمًا عَلَى الْكَافِرِينَ عَسِيرًا",
+      "page_number": 362,
+      "word_count": 9,
+      "letter_count": 44
+    },
+    {
+      "surah": 74,
+      "ayah": 8,
+      "verse_key": "74-8",
+      "text_raw": "فَإِذَا نُقِرَ فِي النَّاقُورِ",
+      "page_number": 575,
+      "word_count": 4,
+      "letter_count": 16
+    }
+  ]
+}

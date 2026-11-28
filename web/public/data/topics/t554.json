@@ -1,0 +1,61 @@
+{
+  "schema_version": "1",
+  "topic_id": 554,
+  "count": 6,
+  "verses": [
+    {
+      "surah": 25,
+      "ayah": 26,
+      "verse_key": "25-26",
+      "text_raw": "الْمُلْكُ يَوْمَئِذٍ الْحَقُّ لِلرَّحْمَنِ وَكَانَ يَوْمًا عَلَى الْكَافِرِينَ عَسِيرًا",
+      "page_number": 362,
+      "word_count": 9,
+      "letter_count": 44
+    },
+    {
+      "surah": 37,
+      "ayah": 21,
+      "verse_key": "37-21",
+      "text_raw": "هَذَا يَوْمُ الْفَصْلِ الَّذِي كُنْتُمْ بِهِ تُكَذِّبُونَ",
+      "page_number": 446,
+      "word_count": 7,
+      "letter_count": 27
+    },
+    {
+      "surah": 44,
+      "ayah": 40,
+      "verse_key": "44-40",
+      "text_raw": "إِنَّ يَوْمَ الْفَصْلِ مِيقَاتُهُمْ أَجْمَعِينَ",
+      "page_number": 498,
+      "word_count": 5,
+      "letter_count": 23
+    },
+    {
+      "surah": 77,
+      "ayah": 13,
+      "verse_key": "77-13",
+      "text_raw": "لِيَوْمِ الْفَصْلِ",
+      "page_number": 580,
+      "word_count": 2,
+      "letter_count": 9
+    },
+    {
+      "surah": 77,
+      "ayah": 38,
+      "verse_key": "77-38",
+      "text_raw": "هَذَا يَوْمُ الْفَصْلِ جَمَعْنَاكُمْ وَالْأَوَّلِينَ",
+      "page_number": 581,
+      "word_count": 5,
+      "letter_count": 26
+    },
+    {
+      "surah": 78,
+      "ayah": 17,
+      "verse_key": "78-17",
+      "text_raw": "إِنَّ يَوْمَ الْفَصْلِ كَانَ مِيقَاتًا",
+      "page_number": 582,
+      "word_count": 5,
+      "letter_count": 19
+    }
+  ]
+}

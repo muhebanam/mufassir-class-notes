@@ -76,7 +76,26 @@
       "irab": "",
       "irab_covers": null,
       "shane_nuzul": "*[উৎস: আয়াত ১–৭-এর রুকুভিত্তিক সামগ্রিক আলোচনা]*\n\nআস ইবনে ওয়াইল, আবু সুফিয়ান অথবা মুনাফিকদের প্রসঙ্গে অবতরণ—জালালাইন (`turath:12876`, page: 6898) ও তাবারী (`turath:7798`, page: 16610)-এ উল্লিখিত।\n\n---",
-      "shane_nuzul_covers": null
+      "shane_nuzul_covers": null,
+      "verse_meta": null,
+      "bahouth_words": null,
+      "topics": null,
+      "qiraat_annotations": [
+        {
+          "word_id": 77272,
+          "word_order_in_verse": 1,
+          "position": 1,
+          "text_id": 1106,
+          "raw_text": "@قالون عن نافع وَأبو جعفر/قرأ بتسهيل الهمزة الثانية.@ورش عن نافع/قرأ بتسهيل الهمزة الثانية، وله إبدالها ألفاً مع الإشباع وصلاً، ويمتنع الوقف بوجه الإبدال.@حمزة/قرأ بتسهيل الهمزة الثانية وقفا.@الكسائي/قرأ بإسقاط الهمزة الثانية وصلاً ووقفا.@باقي الرواة/قرؤوا بتحقيق الهمزة في الحالين."
+        },
+        {
+          "word_id": 77274,
+          "word_order_in_verse": 3,
+          "position": 2,
+          "text_id": 1,
+          "raw_text": "@السوسي عن أبي عمرو/قرأ بالإدغام الكبير.@باقي الرواة/قرؤوا بالإظهار."
+        }
+      ]
     },
     {
       "surah": 107,
@@ -110,7 +129,11 @@
       "irab": "",
       "irab_covers": null,
       "shane_nuzul": "*[উৎস: আয়াত ১–৭-এর রুকুভিত্তিক সামগ্রিক আলোচনা]*\n\nআস ইবনে ওয়াইল, আবু সুফিয়ান অথবা মুনাফিকদের প্রসঙ্গে অবতরণ—জালালাইন (`turath:12876`, page: 6898) ও তাবারী (`turath:7798`, page: 16610)-এ উল্লিখিত।\n\n---",
-      "shane_nuzul_covers": null
+      "shane_nuzul_covers": null,
+      "verse_meta": null,
+      "bahouth_words": null,
+      "topics": null,
+      "qiraat_annotations": null
     },
     {
       "surah": 107,
@@ -144,7 +167,11 @@
       "irab": "",
       "irab_covers": null,
       "shane_nuzul": "*[উৎস: আয়াত ১–৭-এর রুকুভিত্তিক সামগ্রিক আলোচনা]*\n\nআস ইবনে ওয়াইল, আবু সুফিয়ান অথবা মুনাফিকদের প্রসঙ্গে অবতরণ—জালালাইন (`turath:12876`, page: 6898) ও তাবারী (`turath:7798`, page: 16610)-এ উল্লিখিত।\n\n---",
-      "shane_nuzul_covers": null
+      "shane_nuzul_covers": null,
+      "verse_meta": null,
+      "bahouth_words": null,
+      "topics": null,
+      "qiraat_annotations": null
     },
     {
       "surah": 107,
@@ -170,7 +197,11 @@
       "irab": "",
       "irab_covers": null,
       "shane_nuzul": "*[উৎস: আয়াত ১–৭-এর রুকুভিত্তিক সামগ্রিক আলোচনা]*\n\nআস ইবনে ওয়াইল, আবু সুফিয়ান অথবা মুনাফিকদের প্রসঙ্গে অবতরণ—জালালাইন (`turath:12876`, page: 6898) ও তাবারী (`turath:7798`, page: 16610)-এ উল্লিখিত।\n\n---",
-      "shane_nuzul_covers": null
+      "shane_nuzul_covers": null,
+      "verse_meta": null,
+      "bahouth_words": null,
+      "topics": null,
+      "qiraat_annotations": null
     },
     {
       "surah": 107,
@@ -253,7 +284,33 @@
       "irab": "",
       "irab_covers": null,
       "shane_nuzul": "*[উৎস: আয়াত ১–৭-এর রুকুভিত্তিক সামগ্রিক আলোচনা]*\n\nআস ইবনে ওয়াইল, আবু সুফিয়ান অথবা মুনাফিকদের প্রসঙ্গে অবতরণ—জালালাইন (`turath:12876`, page: 6898) ও তাবারী (`turath:7798`, page: 16610)-এ উল্লিখিত।\n\n---",
-      "shane_nuzul_covers": null
+      "shane_nuzul_covers": null,
+      "verse_meta": null,
+      "bahouth_words": null,
+      "topics": null,
+      "qiraat_annotations": [
+        {
+          "word_id": 77288,
+          "word_order_in_verse": 2,
+          "position": 2,
+          "text_id": 7,
+          "raw_text": "@قالون عن نافع/قرأ بصلة ميم الجمع وصلاً بخلف عنه.@أبو جعفر وَابن كثير/قرأ بصلة ميم الجمع وصلا.@باقي الرواة/قرؤوا بترك صلة ميم الجمع."
+        },
+        {
+          "word_id": 77290,
+          "word_order_in_verse": 4,
+          "position": 1,
+          "text_id": 13,
+          "raw_text": "@ورش عن نافع/قرأ بتغليظ اللام.@باقي الرواة/قرؤوا بترقيق اللام."
+        },
+        {
+          "word_id": 77290,
+          "word_order_in_verse": 4,
+          "position": 2,
+          "text_id": 7,
+          "raw_text": "@قالون عن نافع/قرأ بصلة ميم الجمع وصلاً بخلف عنه.@أبو جعفر وَابن كثير/قرأ بصلة ميم الجمع وصلا.@باقي الرواة/قرؤوا بترك صلة ميم الجمع."
+        }
+      ]
     },
     {
       "surah": 107,
@@ -324,7 +381,26 @@
       "irab": "",
       "irab_covers": null,
       "shane_nuzul": "*[উৎস: আয়াত ১–৭-এর রুকুভিত্তিক সামগ্রিক আলোচনা]*\n\nআস ইবনে ওয়াইল, আবু সুফিয়ান অথবা মুনাফিকদের প্রসঙ্গে অবতরণ—জালালাইন (`turath:12876`, page: 6898) ও তাবারী (`turath:7798`, page: 16610)-এ উল্লিখিত।\n\n---",
-      "shane_nuzul_covers": null
+      "shane_nuzul_covers": null,
+      "verse_meta": null,
+      "bahouth_words": null,
+      "topics": null,
+      "qiraat_annotations": [
+        {
+          "word_id": 77293,
+          "word_order_in_verse": 2,
+          "position": 2,
+          "text_id": 7,
+          "raw_text": "@قالون عن نافع/قرأ بصلة ميم الجمع وصلاً بخلف عنه.@أبو جعفر وَابن كثير/قرأ بصلة ميم الجمع وصلا.@باقي الرواة/قرؤوا بترك صلة ميم الجمع."
+        },
+        {
+          "word_id": 77294,
+          "word_order_in_verse": 3,
+          "position": 1,
+          "text_id": 97,
+          "raw_text": "@ورش عن نافع/قرأ بتثليث مد البدل، مع تحقيق الهمزة وصلاً ووقفا.@حمزة/قرأ بتحقيق الهمزة وصلاً، ووقف بتسهيل الهمزة مع المد والقصر، مع قصر مد البدل.@باقي الرواة/قرؤوا بتحقيق الهمزة وصلاً ووقفاً، مع قصر مد البدل."
+        }
+      ]
     },
     {
       "surah": 107,
@@ -377,7 +453,19 @@
       "irab": "",
       "irab_covers": null,
       "shane_nuzul": "*[উৎস: আয়াত ১–৭-এর রুকুভিত্তিক সামগ্রিক আলোচনা]*\n\nআস ইবনে ওয়াইল, আবু সুফিয়ান অথবা মুনাফিকদের প্রসঙ্গে অবতরণ—জালালাইন (`turath:12876`, page: 6898) ও তাবারী (`turath:7798`, page: 16610)-এ উল্লিখিত।\n\n---",
-      "shane_nuzul_covers": null
+      "shane_nuzul_covers": null,
+      "verse_meta": null,
+      "bahouth_words": null,
+      "topics": null,
+      "qiraat_annotations": [
+        {
+          "word_id": 77296,
+          "word_order_in_verse": 2,
+          "position": 3,
+          "text_id": 8,
+          "raw_text": "@ورش عن نافع وَأبو عمرو وَيعقوب وَابن عامر/فصل بين السورتين بالبسملة، والوصل، والسكت، وله ما بين الآيات من أحكام الوصل.@حمزة وَخلف العاشر/قرأ بالوصل بين السورتين بلا بسملة، وله ما بين الآيات من أحكام الوصل.@باقي الرواة/فصل بالبسملة بين السورتين."
+        }
+      ]
     }
   ],
   "thematic_topics": {
